@@ -3,7 +3,7 @@ title: "Get"
 linkTitle: "Get"
 weight: 10
 description: >
-  Learn how to get a secrets.
+  Learn how to get a secret.
 ---
 
 ## Information
