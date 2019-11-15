@@ -2,7 +2,7 @@
 title: "Authentication"
 weight: 10
 description: >
-  Learn how to authentication with the CLI.
+  Learn how to authenticate with the CLI.
 ---
 
 To authenticate with Vela, users need to provide the server address and personal token. There are three ways to provide the address and token to the CLI:
@@ -56,7 +56,7 @@ It is recommended to add these to the terminal profile (`~/.bashrc` or `~/.zshrc
 Log in and capture the personal token:
 
 ```sh
-vela --addr https://vela-api.company  ``.com login
+vela --addr https://vela-api.company.com login
 ```
 
 Pass the personal token as a flag argument:
