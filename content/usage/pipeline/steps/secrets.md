@@ -71,4 +71,4 @@ steps:
 
 ### Reference Secret
 
-Vela offers a number of different ways to reference your secrets. To see the full set of options navigate to the [secret reference](/usage/reference/secrets) section.
+Vela offers a number of different ways to reference your secrets. To see the full set of options navigate to the [secret reference](/usage/reference/pipeline/secret/) section.
