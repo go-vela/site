@@ -50,12 +50,41 @@ sudo cp vela /usr/local/bin/
 
 #### cURL
 
+Note: `curl` must be installed differently
+
+##### Command Prompt
+
 ```sh
 # download the binary
-curl -L https://github.com/go-vela/cli/releases/download/v0.1.5/vela_windows_amd64.tar.gz | tar zx
-
+curl -L https://github.com/go-vela/cli/releases/download/v0.1.5/vela_windows_amd64.tar.gz --output vela_windows_amd64.tar.gz
+# unzipping the tarball
+tar xzvf vela_windows_amd64.tar.gz
+cp vela C:\Windows\System32/vela.exe
 # copy binary to $PATH
-sudo cp vela C:\Windows\System32
+copy vela C:\Windows\System32/vela.exe
+```
+
+##### Windows PowerShell
+
+```sh
+# download the binary
+curl https://github.com/go-vela/cli/releases/download/v0.1.5/vela_windows_amd64.tar.gz -OutFile vela_windows_amd64.tar.gz
+# unzipping the tarball
+tar xzvf vela_windows_amd64.tar.gz
+# copy binary to $PATH
+cp vela C:\Windows\System32/vela.exe
+```
+
+##### PowerShell 6 (PowerShell Core)
+
+```sh
+# download the binary
+curl -L https://github.com/go-vela/cli/releases/download/v0.1.5/vela_windows_amd64.tar.gz --output vela_windows_amd64.tar.gz
+# unzipping the tarball
+tar xzvf vela_windows_amd64.tar.gz
+cp vela C:\Windows\System32/vela.exe
+# copy binary to $PATH
+cp vela C:\Windows\System32/vela.exe
 ```
 
 ### From Source
