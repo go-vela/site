@@ -59,7 +59,6 @@ Note: `curl` must be installed differently
 curl -L https://github.com/go-vela/cli/releases/download/v0.1.5/vela_windows_amd64.tar.gz --output vela_windows_amd64.tar.gz
 # unzipping the tarball
 tar xzvf vela_windows_amd64.tar.gz
-cp vela C:\Windows\System32/vela.exe
 # copy binary to $PATH
 copy vela C:\Windows\System32/vela.exe
 ```
@@ -82,7 +81,6 @@ cp vela C:\Windows\System32/vela.exe
 curl -L https://github.com/go-vela/cli/releases/download/v0.1.5/vela_windows_amd64.tar.gz --output vela_windows_amd64.tar.gz
 # unzipping the tarball
 tar xzvf vela_windows_amd64.tar.gz
-cp vela C:\Windows\System32/vela.exe
 # copy binary to $PATH
 cp vela C:\Windows\System32/vela.exe
 ```
