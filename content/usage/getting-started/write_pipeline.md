@@ -54,7 +54,7 @@ Vela automatically clones your repository into a local volume, the workspace, th
 Vela allows you to specify commands that are executed within the default shell inside your build container. By default commands use the root of your repository as the working directory.
 
 ```yaml
-pipeline:
+steps:
   - name build
     image: golang
     commands:
