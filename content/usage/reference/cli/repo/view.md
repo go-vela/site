@@ -47,7 +47,7 @@ $ vela view repo --org github --repo octocat
 
 id: 1
 userid: 1
-owner: github
+org: github
 name: octocat
 fullname: github/octocat
 link: https://github.com/github/octocat

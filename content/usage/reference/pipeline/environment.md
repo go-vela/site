@@ -59,7 +59,7 @@ _`BUILD_TAG` is only populated during tag events._
 | `REPOSITORY_FULL_NAME` | `octocat/hello-world`                        | full name of the repository        |
 | `REPOSITORY_LINK`      | `https://github.com/octocat/hello-world`     | direct url of the repository       |
 | `REPOSITORY_NAME`      | `hello-world`                                | name of the repository             |
-| `REPOSITORY_OWNER`     | `octocat`                                    | owner of the repository            |
+| `REPOSITORY_ORG`       | `octocat`                                    | org of the repository              |
 | `REPOSITORY_PRIVATE`   | `false`                                      | privacy setting for the repository |
 | `REPOSITORY_TIMEOUT`   | `60`                                         | timeout setting for the repository |
 | `REPOSITORY_TRUSTED`   | `false`                                      | trusted setting for the repository |

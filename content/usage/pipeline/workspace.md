@@ -20,7 +20,7 @@ This ensures the code, dependencies, and compiled binaries are persisted and sha
 
 ```sh
 # Syntax
-/home/<source owner>_<source repo name>_<build number>
+/home/<source org>_<source repo>_<build number>
 
 # Example
 /home/octocat_hello-world_1
