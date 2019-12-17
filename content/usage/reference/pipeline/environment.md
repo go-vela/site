@@ -12,26 +12,30 @@ All environment variables specified in the tables below are injected into every 
 
 #### Build Environment Variables
 
-| Key               | Value                                                                                    | Explanation                                                         |
-| ----------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `BUILD_BRANCH`    | `master`                                                                                 | branch from the source commit                                       |
-| `BUILD_CHANNEL`   | `vela`                                                                                   | queue channel the build was published to                            |
-| `BUILD_COMMIT`    | `7fd1a60b01f91b314f59955a4e4d4e80d8edf11d`                                               | commit sha from the source commit                                   |
-| `BUILD_CREATED`   | `1556720958`                                                                             | unix timestamp representing build creation time                     |
-| `BUILD_ENQUEUED`  | `1556730001`                                                                             | unix timestamp representing build enqueue time                      |
-| `BUILD_EVENT`     | `push`                                                                                   | webhook event that triggered the build                              |
-| `BUILD_FINISHED`  | `1556730045`                                                                             | unix timestamp representing build completion time                   |
-| `BUILD_HOST`      | `vela-worker-1`                                                                          | fully qualified domain name of the worker the build was executed on |
-| `BUILD_MESSAGE`   | `New line at end of file.`                                                               | message from the source commit                                      |
-| `BUILD_NUMBER`    | `1`                                                                                      | build number                                                        |
-| `BUILD_PARENT`    | `1`                                                                                      | previous build number                                               |
-| `BUILD_REF`       | `refs/heads/master`                                                                      | reference from the source commit                                    |
-| `BUILD_STARTED`   | `1556730001`                                                                             | unix timestamp representing build start time                        |
-| `BUILD_SOURCE`    | `https://github.com/octocat/hello-world/commit/7fd1a60b01f91b314f59955a4e4d4e80d8edf11d` | link from the source commit                                         |
-| `BUILD_TITLE`     | `Merge pull request #6 from octocat/patch-1`                                             | title from the source commit                                        |
-| `BUILD_WORKSPACE` | `/home/octocat_hello-world_1`                                                            | working directory the build is executed in                          |
-| `BUILD_TAG`       | `v1.0.0`                                                                                 | tag is populated from the source reference                          |
+| Key                  | Value                                                                                    | Explanation                                                         |
+| ---------------------| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `BUILD_AUTHOR`       | `octocat`                                                                                | author from the source commit                                       |
+| `BUILD_AUTHOR_EMAIL` | `octocat@github.com`                                                                     | author email from the source commit                                 |
+| `BUILD_BRANCH`       | `master`                                                                                 | branch from the source commit                                       |
+| `BUILD_CHANNEL`      | `vela`                                                                                   | queue channel the build was published to                            |
+| `BUILD_COMMIT`       | `7fd1a60b01f91b314f59955a4e4d4e80d8edf11d`                                               | commit sha from the source commit                                   |
+| `BUILD_CREATED`      | `1556720958`                                                                             | unix timestamp representing build creation time                     |
+| `BUILD_ENQUEUED`     | `1556730001`                                                                             | unix timestamp representing build enqueue time                      |
+| `BUILD_EVENT`        | `push`                                                                                   | webhook event that triggered the build                              |
+| `BUILD_FINISHED`     | `1556730045`                                                                             | unix timestamp representing build completion time                   |
+| `BUILD_HOST`         | `vela-worker-1`                                                                          | fully qualified domain name of the worker the build was executed on |
+| `BUILD_LINK`         | `https://vela-server.localhost/octocat/hello-world/1`                                    | link to the build in the UI                                         |
+| `BUILD_MESSAGE`      | `New line at end of file.`                                                               | message from the source commit                                      |
+| `BUILD_NUMBER`       | `1`                                                                                      | build number                                                        |
+| `BUILD_PARENT`       | `1`                                                                                      | previous build number                                               |
+| `BUILD_REF`          | `refs/heads/master`                                                                      | reference from the source commit                                    |
+| `BUILD_STARTED`      | `1556730001`                                                                             | unix timestamp representing build start time                        |
+| `BUILD_SOURCE`       | `https://github.com/octocat/hello-world/commit/7fd1a60b01f91b314f59955a4e4d4e80d8edf11d` | link from the source commit                                         |
+| `BUILD_TITLE`        | `Merge pull request #6 from octocat/patch-1`                                             | title from the source commit                                        |
+| `BUILD_WORKSPACE`    | `/home/octocat_hello-world_1`                                                            | working directory the build is executed in                          |
+| `BUILD_TAG`          | `v1.0.0`                                                                                 | tag is populated from the source reference                          |
 
+_`BUILD_LINK` is not populated if Vela is configured to run headless (no UI)._
 _`BUILD_TAG` is only populated during tag events._
 
 #### Vela Environment Variables
@@ -45,7 +49,7 @@ _`BUILD_TAG` is only populated during tag events._
 | `VELA_HOST`      | `vela-worker-1`               | fully qualified domain name of the worker the build was executed on |
 | `VELA_QUEUE`     | `redis`                       | queue build was published to                                        |
 | `VELA_RUNTIME`   | `docker`                      | runtime environment build was executed in                           |
-| `VELA_SOURCE`    | `https://github.com`          | queue channel the build was published to                            |
+| `VELA_SOURCE`    | `github`                      | queue channel the build was published to                            |
 | `VELA_VERSION`   | `v0.1.0`                      | Vela version                                                        |
 | `VELA_WORKSPACE` | `/home/octocat_hello-world_1` | working directory the build is executed in                          |
 | `CI`             | `vela`                        | CI enabled is Vela                                                  |
