@@ -101,7 +101,7 @@ no = 'Sorry to hear that. Please <a href="https://github.com/go-vela/docs/issues
         desc = "Development takes place here!"
 [[params.links.developer]]
 	name = "Slack"
-	url = "https://example.org/slack"
+	url = "https://gophers.slack.com/app_redirect?channel=CNRRKE8KY"
 	icon = "fab fa-slack"
         desc = "Chat with other project developers"
 [[params.links.developer]]
