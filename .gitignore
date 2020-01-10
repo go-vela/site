@@ -4,3 +4,11 @@ resources/
 node_modules/
 tech-doc-hugo
 
+# IntelliJ project folder
+.idea/
+
+# IntelliJ project files
+*.iml
+*.ipr
+*.iws
+*.xml
