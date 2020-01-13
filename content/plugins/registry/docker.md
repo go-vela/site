@@ -1,6 +1,5 @@
 ---
 title: "Docker"
-weight: 5
 ---
 
 ## Description

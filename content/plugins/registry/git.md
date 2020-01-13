@@ -1,6 +1,5 @@
 ---
 title: "Git"
-weight: 5
 ---
 
 ## Description
