@@ -1,7 +1,9 @@
 ---
 title: "CLI"
 linkTitle: "CLI"
-weight: 10
+layout: cli
 description: >
   This section contains the full reference for how to use the Vela CLI.
+menu:
+  main:
 ---
