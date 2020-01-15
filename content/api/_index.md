@@ -1,7 +1,9 @@
 ---
 title: "API"
 linkTitle: "API"
-weight: 15
+layout: api
 description: >
   This section contains the full reference for how to use the Vela API.
+menu:
+  main:
 ---
