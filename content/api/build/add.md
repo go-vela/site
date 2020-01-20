@@ -1,25 +1,24 @@
 ---
-title: "Restart"
-linkTitle: "Restart"
+title: "Add"
+linkTitle: "Add"
 description: >
-  Learn how to rerun a build.
+  Learn how to create a build.
 ---
 
 ## Endpoint
 
 ```
-POST  /api/v1/repos/:org/:repo/builds/:build
+POST  /api/v1/repos/:org/:repo/builds
 ```
 
 ## Parameters
 
 The following parameters are used to configure the endpoint:
 
-| Name    | Description          |
-| ------- | -------------------- |
-| `org`   | name of organization |
-| `repo`  | name of repository   |
-| `build` | number of build      |
+| Name   | Description          |
+| ------ | -------------------- |
+| `org`  | name of organization |
+| `repo` | name of repository   |
 
 ## Permissions
 
@@ -34,22 +33,41 @@ COMING SOON!
 
 ## Sample
 
+#### File
+
+```json
+{
+  "author": "Octokitty",
+  "branch": "master",
+  "commit": "48afb5bdc41ad69bf22588491333f7cf71135163",
+  "clone": "https://github.com/github/octocat.git",
+  "event": "push",
+  "message": "First commit...",
+  "ref": "refs/heads/master",
+  "sender": "Octokitty",
+  "source": "https://github.com/github/octocat/commit/48afb5bdc41ad69bf22588491333f7cf71135163",
+  "title": "push received from https://github.com/github/octocat"
+}
+```
+
 #### Request
 
 ```sh
 curl \
   -X POST \
   -H "Authorization: Bearer <token>" \
-  "http://127.0.0.1:8080/api/v1/repos/github/octocat/builds/1"
+  -H "Content-Type: application/json" \
+  -d "@data.json"
+  "http://127.0.0.1:8080/api/v1/repos/github/octocat/builds"
 ```
 
 #### Response
 
 ```json
 {
-  "id": 2,
+  "id": 1,
   "repo_id": 1,
-  "number": 2,
+  "number": 1,
   "parent": 1,
   "event": "push",
   "status": "created",

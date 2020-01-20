@@ -1,35 +1,59 @@
 ---
 title: "Update"
 linkTitle: "Update"
-weight: 30
 description: >
-  Learn how to update a build.
+  Learn how to modify a build.
 ---
 
 ## Endpoint
 
 ```
-PUT /api/v1/repos/:org/:repo/builds/:build
+PUT  /api/v1/repos/:org/:repo/builds/:build
 ```
 
-| Param | Description           |
-| ----- | --------------------- |
-| org   | Name of organization. |
-| repo  | Name of repository.   |
-| build | Number of build.      |
+## Parameters
+
+The following parameters are used to configure the endpoint:
+
+| Name    | Description          |
+| ------- | -------------------- |
+| `org`   | name of organization |
+| `repo`  | name of repository   |
+| `build` | number of build      |
 
 ## Permissions
 
-Documentation Coming Soon!
+COMING SOON!
 
-## Response codes
+## Responses
 
-| Status Code | Description                                          |
-| ----------- | ---------------------------------------------------- |
-| 200         | Indicates the request has succeeded.                 |
-| 401         | Indicates the user does not have proper permissions. |
+| Status Code | Description                                         |
+| ----------- | --------------------------------------------------- |
+| `200`       | indicates the request has succeeded                 |
+| `401`       | indicates the user does not have proper permissions |
 
-## Example Response Body
+## Sample
+
+#### File
+
+```json
+{
+  "message": "this is an updated message"
+}
+```
+
+#### Request
+
+```sh
+curl \
+  -X PUT \
+  -H "Authorization: Bearer <token>" \
+  -H "Content-Type: application/json" \
+  -d "@data.json"
+  "http://127.0.0.1:8080/api/v1/repos/github/octocat/builds/1"
+```
+
+#### Response
 
 ```json
 {
@@ -48,7 +72,7 @@ Documentation Coming Soon!
   "clone": "https://github.com/github/octocat.git",
   "source": "https://github.com/github/octocat/commit/48afb5bdc41ad69bf22588491333f7cf71135163",
   "title": "push received from https://github.com/github/octocat",
-  "message": "First commit...",
+  "message": "this is an updated message",
   "commit": "48afb5bdc41ad69bf22588491333f7cf71135163",
   "sender": "OctoKitty",
   "author": "OctoKitty",
