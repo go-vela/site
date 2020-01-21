@@ -57,7 +57,7 @@ curl \
   -X POST \
   -H "Authorization: Bearer <token>" \
   -H "Content-Type: application/json" \
-  -d "@data.json"
+  -d "@data.json" \
   "http://127.0.0.1:8080/api/v1/repos/github/octocat/builds"
 ```
 

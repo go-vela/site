@@ -46,5 +46,5 @@ curl \
 #### Response
 
 ```sh
-build github/octocat/1 removed
+Build github/octocat/1 deleted
 ```
