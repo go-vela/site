@@ -1,83 +1,82 @@
 ---
 title: "Get"
 linkTitle: "Get"
-weight: 10
 description: >
-  Learn how to get secrets.
+  Learn how to list secrets.
 ---
 
 ## Endpoint
 
 ```
-GET /api/v1/secrets/:engine/:type/:org/:name
+GET  /api/v1/secrets/:engine/:type/:org/:name
 ```
 
-| Param | Description |
-|---|---|
-| engine | Name of engine. |
-| type | Name of type. |
-| org | Name of organization. |
-| name | Name of repository or team. |
+## Parameters
+
+The following parameters are used to configure the endpoint:
+
+| Name     | Description                  |
+| -------- | ---------------------------- |
+| `engine` | name of engine               |
+| `type`   | name of type of secret       |
+| `org`    | name of organization         |
+| `name`   | name of repository or team   |
 
 ## Permissions
 
-Documentation Coming Soon!
+COMING SOON!
 
-## Response codes
+## Responses
 
-| Status Code | Description |
-|---|---|
-| 200 | Indicates the request has succeeded. |
-| 401 | Indicates the user does not have proper permissions. |
+| Status Code | Description                                         |
+| ----------- | --------------------------------------------------- |
+| `200`       | indicates the request has succeeded                 |
+| `401`       | indicates the user does not have proper permissions |
 
-## Example Response Body
+## Sample
+
+#### Request
+
+```sh
+curl \
+  -X GET \
+  -H "Authorization: Bearer <token>" \
+  "http://127.0.0.1:8080/api/v1/secrets/native/repo/github/octocat"
+```
+
+#### Response
 
 ```json
 [
-	{
-		"id": 1,
-		"org": "github",
-		"repo": "octocat",
-		"team": "",
-		"name": "foo",
-		"value": "",
-		"type": "repo",
-		"images": [
-			"alpine"
-		],
-		"events": [
-			"push"
-		]
-	},
-	{
-		"id": 2,
-		"org": "github",
-		"repo": "*",
-		"team": "",
-		"name": "foo",
-		"value": "",
-		"type": "org",
-		"images": [
-			"alpine"
-		],
-		"events": [
-			"push"
-		]
-	},
-	{
-		"id": 3,
-		"org": "github",
-		"repo": "",
-		"team": "octokitties",
-		"name": "foo",
-		"value": "",
-		"type": "shared",
-		"images": [
-			"alpine"
-		],
-		"events": [
-			"push"
-		]
-	}
+  {
+    "id": 1,
+    "org": "github",
+    "repo": "octocat",
+    "team": "",
+    "name": "foo",
+    "value": null,
+    "type": "repo",
+    "images": [
+      "alpine"
+    ],
+    "events": [
+      "push"
+    ]
+  },
+  {
+    "id": 2,
+    "org": "github",
+    "repo": "octocat",
+    "team": "",
+    "name": "bar",
+    "value": null,
+    "type": "repo",
+    "images": [
+      "alpine"
+    ],
+    "events": [
+      "push"
+    ]
+  }
 ]
 ```

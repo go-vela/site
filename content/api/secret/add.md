@@ -1,14 +1,14 @@
 ---
-title: "Remove"
-linkTitle: "Remove"
+title: "Add"
+linkTitle: "Add"
 description: >
-  Learn how to delete a secret.
+  Learn how to create a secret.
 ---
 
 ## Endpoint
 
 ```
-DELETE  /api/v1/secrets/:engine/:type/:org/:name/:secret
+POST  /api/v1/secrets/:engine/:type/:org/:name
 ```
 
 ## Parameters
@@ -21,7 +21,6 @@ The following parameters are used to configure the endpoint:
 | `type`   | name of type of secret       |
 | `org`    | name of organization         |
 | `name`   | name of repository or team   |
-| `secret` | name of secret               |
 
 ## Permissions
 
@@ -36,17 +35,44 @@ COMING SOON!
 
 ## Sample
 
+#### File
+
+```json
+{
+  "name": "foo",
+  "value": "bar",
+  "images": ["alpine"],
+  "events": ["push"]
+}
+```
+
 #### Request
 
 ```sh
 curl \
-  -X DELETE \
+  -X POST \
   -H "Authorization: Bearer <token>" \
-  "http://127.0.0.1:8080/api/v1/secrets/native/repo/github/octocat/foo"
+  -H "Content-Type: application/json" \
+  -d "@data.json"
+  "http://127.0.0.1:8080/api/v1/secrets/native/repo/github/octocat"
 ```
 
 #### Response
 
 ```json
-Secret repo/github/octocat/foo deleted from native service
+{
+  "id": 1,
+  "org": "github",
+  "repo": "octocat",
+  "team": "",
+  "name": "foo",
+  "value": null,
+  "type": "repo",
+  "images": [
+    "alpine"
+  ],
+  "events": [
+    "push"
+  ]
+}
 ```

@@ -1,51 +1,77 @@
 ---
 title: "Update"
 linkTitle: "Update"
-weight: 30
 description: >
-  Learn how to update a secret.
+  Learn how to modify a secret.
 ---
 
 ## Endpoint
 
 ```
-PUT /api/v1/secrets/:engine/:type/:org/:name/:secret
+PUT  /api/v1/secrets/:engine/:type/:org/:name/:secret
 ```
 
-| Param | Description |
-|---|---|
-| engine | Name of engine. |
-| type | Name of type. |
-| org | Name of organization. |
-| name | Name of repository or team. |
+## Parameters
+
+The following parameters are used to configure the endpoint:
+
+| Name     | Description                  |
+| -------- | ---------------------------- |
+| `engine` | name of engine               |
+| `type`   | name of type of secret       |
+| `org`    | name of organization         |
+| `name`   | name of repository or team   |
+| `secret` | name of secret               |
 
 ## Permissions
 
-Documentation Coming Soon!
+COMING SOON!
 
-## Response codes
+## Responses
 
-| Status Code | Description |
-|---|---|
-| 200 | Indicates the request has succeeded. |
-| 401 | Indicates the user does not have proper permissions. |
+| Status Code | Description                                         |
+| ----------- | --------------------------------------------------- |
+| `200`       | indicates the request has succeeded                 |
+| `401`       | indicates the user does not have proper permissions |
 
-## Example Response Body
+## Sample
+
+#### File
 
 ```json
 {
-	"id": 1,
-	"org": "github",
-	"repo": "octocat",
-	"team": "",
-	"name": "foo",
-	"value": "",
-	"type": "repo",
-	"images": [
-		"alpine"
-	],
-	"events": [
-		"push"
-	]
+  "events": ["push", "tag"]
+}
+```
+
+#### Request
+
+```sh
+curl \
+  -X PUT \
+  -H "Authorization: Bearer <token>" \
+  -H "Content-Type: application/json" \
+  -d "@data.json"
+  "http://127.0.0.1:8080/api/v1/secrets/native/repo/github/octocat/foo"
+```
+
+#### Response
+
+```json
+{
+  "id": 1,
+  "org": "github",
+  "repo": "octocat",
+  "team": "",
+  "name": "foo",
+  "value": "",
+  "type": "repo",
+  "images": [
+    "alpine"
+  ],
+  "events": [
+    "push",
+    "tag"
+  ]
 }
 ```
