@@ -1,24 +1,15 @@
 ---
-title: "View"
-linkTitle: "View"
+title: "Add"
+linkTitle: "Add"
 description: >
-  Learn how to inspect a repo.
+  Learn how to create a repo.
 ---
 
 ## Endpoint
 
 ```
-GET  /api/v1/repos/:org/:repo
+POST  /api/v1/repos
 ```
-
-## Parameters
-
-The following parameters are used to configure the endpoint:
-
-| Name    | Description          |
-| ------- | -------------------- |
-| `org`   | name of organization |
-| `repo`  | name of repository   |
 
 ## Permissions
 
@@ -33,13 +24,26 @@ COMING SOON!
 
 ## Sample
 
+#### File
+
+```json
+{
+  "owner": "github",
+  "name": "octocat",
+  "link": "https://github.com/github/octocat",
+  "clone": "https://github.com/github/octocat.git",
+}
+```
+
 #### Request
 
 ```sh
 curl \
-  -X GET \
+  -X POST \
   -H "Authorization: Bearer <token>" \
-  "http://127.0.0.1:8080/api/v1/repos/github/octocat"
+  -H "Content-Type: application/json" \
+  -d "@data.json" \
+  "http://127.0.0.1:8080/api/v1/repos"
 ```
 
 #### Response
