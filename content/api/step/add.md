@@ -1,14 +1,14 @@
 ---
-title: "Logs"
-linkTitle: "Logs"
+title: "Add"
+linkTitle: "Add"
 description: >
-  Learn how to view step logs.
+  Learn how to create a step.
 ---
 
 ## Endpoint
 
 ```
-GET  /api/v1/repos/:org/:repo/builds/:build/steps/:step/logs
+POST  /api/v1/repos/:org/:repo/builds/:build/steps
 ```
 
 ## Parameters
@@ -20,7 +20,6 @@ The following parameters are used to configure the endpoint:
 | `org`   | name of organization |
 | `repo`  | name of repository   |
 | `build` | number of build      |
-| `step`  | number of step       |
 
 ## Permissions
 
@@ -35,13 +34,24 @@ COMING SOON!
 
 ## Sample
 
+#### File
+
+```json
+{
+  "number": 1,
+  "name": "clone"
+}
+```
+
 #### Request
 
 ```sh
 curl \
-  -X GET \
+  -X POST \
   -H "Authorization: Bearer <token>" \
-  "http://127.0.0.1:8080/api/v1/repos/github/octocat/builds/1/steps/1/logs"
+  -H "Content-Type: application/json" \
+  -d "@data.json" \
+  "http://127.0.0.1:8080/api/v1/repos/github/octocat/builds/1/steps"
 ```
 
 #### Response
@@ -51,7 +61,16 @@ curl \
   "id": 1,
   "build_id": 1,
   "repo_id": 1,
-  "step_id": 1,
-  "data": "SGVsbG8sIFdvcmxkIQ=="
+  "number": 1,
+  "name": "clone",
+  "status": "success",
+  "error": "",
+  "exit_code": 0,
+  "created": 1563475419,
+  "started": 0,
+  "finished": 0,
+  "host": "company.localhost",
+  "runtime": "docker",
+  "distribution": "linux"
 }
 ```

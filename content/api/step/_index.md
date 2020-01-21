@@ -2,7 +2,5 @@
 title: "Step"
 linkTitle: "Step"
 description: >
-  Learn how to use API endpoints for step resources.
+  Learn how to use API endpoints for the step resource.
 ---
-
-Documentation Coming Soon!

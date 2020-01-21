@@ -1,35 +1,49 @@
 ---
 title: "Get"
 linkTitle: "Get"
-weight: 10
 description: >
-  Learn how to get steps.
+  Learn how to list steps.
 ---
 
 ## Endpoint
 
 ```
-GET /api/v1/repos/:org/:repo/builds/:build/steps
+GET  /api/v1/repos/:org/:repo/builds/:build/steps
 ```
 
-| Param | Description           |
-| ----- | --------------------- |
-| org   | Name of organization. |
-| repo  | Name of repository.   |
-| build | Number of build.      |
+## Parameters
+
+The following parameters are used to configure the endpoint:
+
+| Name    | Description          |
+| ------- | -------------------- |
+| `org`   | name of organization |
+| `repo`  | name of repository   |
+| `build` | number of build      |
 
 ## Permissions
 
-Documentation Coming Soon!
+COMING SOON!
 
-## Response codes
+## Responses
 
-| Status Code | Description                                          |
-| ----------- | ---------------------------------------------------- |
-| 200         | Indicates the request has succeeded.                 |
-| 401         | Indicates the user does not have proper permissions. |
+| Status Code | Description                                         |
+| ----------- | --------------------------------------------------- |
+| `200`       | indicates the request has succeeded                 |
+| `401`       | indicates the user does not have proper permissions |
 
-## Example Response Body
+## Sample
+
+#### Request
+
+```sh
+curl \
+  -X GET \
+  -H "Authorization: Bearer <token>" \
+  "http://127.0.0.1:8080/api/v1/repos/github/octocat/builds/1/steps"
+```
+
+#### Response
 
 ```json
 [

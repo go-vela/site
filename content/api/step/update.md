@@ -1,36 +1,60 @@
 ---
 title: "Update"
 linkTitle: "Update"
-weight: 30
 description: >
-  Learn how to update a step.
+  Learn how to modify a step.
 ---
 
 ## Endpoint
 
 ```
-PUT /api/v1/repos/:org/:repo/builds/:build/steps/:step
+PUT  /api/v1/repos/:org/:repo/builds/:build/steps/:step
 ```
 
-| Param | Description           |
-| ----- | --------------------- |
-| org   | Name of organization. |
-| repo  | Name of repository.   |
-| build | Number of build.      |
-| step  | Number of step.       |
+## Parameters
+
+The following parameters are used to configure the endpoint:
+
+| Name    | Description          |
+| ------- | -------------------- |
+| `org`   | name of organization |
+| `repo`  | name of repository   |
+| `build` | number of build      |
+| `step`  | number of step       |
 
 ## Permissions
 
-Documentation Coming Soon!
+COMING SOON!
 
-## Response codes
+## Responses
 
-| Status Code | Description                                          |
-| ----------- | ---------------------------------------------------- |
-| 200         | Indicates the request has succeeded.                 |
-| 401         | Indicates the user does not have proper permissions. |
+| Status Code | Description                                         |
+| ----------- | --------------------------------------------------- |
+| `200`       | indicates the request has succeeded                 |
+| `401`       | indicates the user does not have proper permissions |
 
-## Example Response Body
+## Sample
+
+#### File
+
+```json
+{
+  "status": "failure"
+}
+```
+
+#### Request
+
+```sh
+curl \
+  -X PUT \
+  -H "Authorization: Bearer <token>" \
+  -H "Content-Type: application/json" \
+  -d "@data.json" \
+  "http://127.0.0.1:8080/api/v1/repos/github/octocat/builds/1/steps/1"
+```
+
+#### Response
 
 ```json
 {
@@ -39,7 +63,7 @@ Documentation Coming Soon!
   "repo_id": 1,
   "number": 1,
   "name": "clone",
-  "status": "success",
+  "status": "failure",
   "error": "",
   "exit_code": 0,
   "created": 1563475419,
