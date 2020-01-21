@@ -1,44 +1,57 @@
 ---
 title: "Logs"
 linkTitle: "Logs"
-weight: 20
 description: >
-  Learn how to view service logs.
+  Learn how to view logs for a service.
 ---
 
 ## Endpoint
 
 ```
-GET /api/v1/repos/:org/:repo/builds/:build/services/:service/logs
+GET  /api/v1/repos/:org/:repo/builds/:build/services/:service/logs
 ```
 
-| Param | Description |
-|---|---|
-| org | Name of organization. |
-| repo | Name of repository. |
-| build | Number of build. |
-| service | Number of service. |
+## Parameters
+
+The following parameters are used to configure the endpoint:
+
+| Name      | Description          |
+| --------- | -------------------- |
+| `org`     | name of organization |
+| `repo`    | name of repository   |
+| `build`   | number of build      |
+| `service` | number of service    |
 
 ## Permissions
 
-Documentation Coming Soon!
+COMING SOON!
 
-## Response codes
+## Responses
 
-| Status Code | Description |
-|---|---|
-| 200 | Indicates the request has succeeded. |
-| 401 | Indicates the user does not have proper permissions. |
+| Status Code | Description                                         |
+| ----------- | --------------------------------------------------- |
+| `200`       | indicates the request has succeeded                 |
+| `401`       | indicates the user does not have proper permissions |
 
-## Example Response Body
+## Sample
+
+#### Request
+
+```sh
+curl \
+  -X GET \
+  -H "Authorization: Bearer <token>" \
+  "http://127.0.0.1:8080/api/v1/repos/github/octocat/builds/1/services/1/logs"
+```
+
+#### Response
 
 ```json
 {
-	"id": 1,
-	"build_id": 1,
-	"repo_id": 1,
-	"service_id": 1,
-	"step_id": 1,
-	"data": "SGVsbG8sIFdvcmxkIQ=="
+  "id": 1,
+  "build_id": 1,
+  "repo_id": 1,
+  "service_id": 1,
+  "data": "SGVsbG8sIFdvcmxkIQ=="
 }
 ```

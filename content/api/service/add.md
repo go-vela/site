@@ -1,26 +1,25 @@
 ---
-title: "Update"
-linkTitle: "Update"
+title: "Add"
+linkTitle: "Add"
 description: >
-  Learn how to modify a service.
+  Learn how to create a service.
 ---
 
 ## Endpoint
 
 ```
-PUT  /api/v1/repos/:org/:repo/builds/:build/services/:service
+POST  /api/v1/repos/:org/:repo/builds/:build/services
 ```
 
 ## Parameters
 
 The following parameters are used to configure the endpoint:
 
-| Name      | Description          |
-| --------- | -------------------- |
-| `org`     | name of organization |
-| `repo`    | name of repository   |
-| `build`   | number of build      |
-| `service` | number of service    |
+| Name    | Description          |
+| ------- | -------------------- |
+| `org`   | name of organization |
+| `repo`  | name of repository   |
+| `build` | number of build      |
 
 ## Permissions
 
@@ -39,7 +38,8 @@ COMING SOON!
 
 ```json
 {
-  "status": "failure"
+  "number": 1,
+  "name": "clone"
 }
 ```
 
@@ -47,11 +47,11 @@ COMING SOON!
 
 ```sh
 curl \
-  -X PUT \
+  -X POST \
   -H "Authorization: Bearer <token>" \
   -H "Content-Type: application/json" \
   -d "@data.json" \
-  "http://127.0.0.1:8080/api/v1/repos/github/octocat/builds/1/services/1"
+  "http://127.0.0.1:8080/api/v1/repos/github/octocat/builds/1/services"
 ```
 
 #### Response
@@ -63,7 +63,7 @@ curl \
   "repo_id": 1,
   "number": 1,
   "name": "clone",
-  "status": "failure",
+  "status": "success",
   "error": "",
   "exit_code": 0,
   "created": 1563475419,

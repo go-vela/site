@@ -1,51 +1,63 @@
 ---
 title: "View"
 linkTitle: "View"
-weight: 15
 description: >
-  Learn how to view a service.
+  Learn how to inspect a service.
 ---
 
 ## Endpoint
 
 ```
-GET /api/v1/repos/:org/:repo/builds/:build/services/:service
+GET  /api/v1/repos/:org/:repo/builds/:build/services/:service
 ```
 
-| Param | Description |
-|---|---|
-| org | Name of organization. |
-| repo | Name of repository. |
-| build | Number of build. |
-| service | Number of service. |
+## Parameters
 
+The following parameters are used to configure the endpoint:
 
-`{soon}` - documentation coming soon
+| Name      | Description          |
+| --------- | -------------------- |
+| `org`     | name of organization |
+| `repo`    | name of repository   |
+| `build`   | number of build      |
+| `service` | number of service    |
 
 ## Permissions
 
-Documentation Coming Soon!
+COMING SOON!
 
-## Response codes
+## Responses
 
-| Status Code | Description |
-|---|---|
-| 200 | Everything looks good! |
+| Status Code | Description                                         |
+| ----------- | --------------------------------------------------- |
+| `200`       | indicates the request has succeeded                 |
+| `401`       | indicates the user does not have proper permissions |
 
-## Example Response Body
+## Sample
+
+#### Request
+
+```sh
+curl \
+  -X GET \
+  -H "Authorization: Bearer <token>" \
+  "http://127.0.0.1:8080/api/v1/repos/github/octocat/builds/1/services/1"
+```
+
+#### Response
 
 ```json
 {
-	"id": 1,
-	"build_id": 1,
-	"repo_id": 1,
-	"number": 1,
-	"name": "clone",
-	"status": "success",
-	"error": "",
-	"exit_code": 0,
-	"created": 1563475419,
-	"started": 1563475420,
-	"finished": 1563475421,
+  "id": 1,
+  "build_id": 1,
+  "repo_id": 1,
+  "number": 1,
+  "name": "clone",
+  "status": "success",
+  "error": "",
+  "exit_code": 0,
+  "created": 1563475419,
+  "started": 1563475420,
+  "finished": 1563475421,
 }
 ```

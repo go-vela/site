@@ -2,7 +2,5 @@
 title: "Service"
 linkTitle: "Service"
 description: >
-  Learn how to use API endpoints for service resources.
+  Learn how to use API endpoints for the service resource.
 ---
-
-Documentation Coming Soon!
