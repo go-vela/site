@@ -3,34 +3,40 @@ title: "Validate"
 linkTitle: "Validate"
 weight: 15
 description: >
-  Learn how to validate a yaml file.
+  Learn how to validate a Vela pipeline.
 ---
 
-To validate your vela yaml run `validate` to ensure your pipeline is runnable.
+## Command
 
-## Information
-
-```sh
-DESCRIPTION:
-   Use this command to validate your pipeline
+```
+$ vela validate <arguments...>
 ```
 
-## Flags
+{{% alert color="info" %}}
+For more information, please run `vela validate --help`.
+{{% /alert %}}
 
-n/a
+## Permissions
 
-## Examples
-
-```sh
-EXAMPLES:
- 1. Validate the vela config in current directory.
-    $ vela validate
-```
+COMING SOON!
 
 ## Sample
 
-```
-vela validate
+{{% alert color="warning" %}}
+This section assumes you have already installed and setup the CLI.
 
+To install the CLI, please review the [installation documentation](/docs/cli/install).
+To setup the CLI, please review the [authentication documentation](/docs/cli/authentication).
+{{% /alert %}}
+
+#### Request
+
+```sh
+vela validate
+```
+
+#### Response
+
+```sh
 ".vela.yml" is valid
 ```
