@@ -1,54 +1,52 @@
 ---
 title: "Remove"
 linkTitle: "Remove"
-weight: 15
 description: >
-  Learn how to remove a config.
+  Learn how to delete a config.
 ---
 
-## Information
+## Command
 
-```sh
-NAME:
-   vela remove config - Remove a field or all fields in the config file.
-
-USAGE:
-   vela remove config [command options] [arguments...]
-
-DESCRIPTION:
-   Use this command to remove a field or all fields in the config file.
+```
+$ vela remove config <parameters...> <arguments...>
 ```
 
-## Flags
+{{% alert color="info" %}}
+For more information, you can run `vela remove config --help`.
+{{% /alert %}}
 
-```sh
-OPTIONS:
-   --addr           removes the addr field from the config
-   --token          removes the token field from the config
-   --api-version    removes the api-version field from the config
-   --log-level      removes the log-level field from the config
-   --org            removes the org field from the config
-   --repo           removes the repo field from the config
-   --secret-engine  removes the secret-engine field from the config
-   --secret-type    removes the secret-type field from the config
-```
+## Parameters
 
-## Examples
+The following parameters are used to configure the command:
 
-```sh
-EXAMPLES:
- 1. Remove the CLI config file.
-    $ vela remove config
- 2. Remove the address from the CLI config file.
-    $ vela remove config --address
- 3. Remove the API version from the CLI config file.
-    $ vela remove config --api-version
- 4. Remove the log level from the CLI config file.
-    $ vela remove config --log-level
-```
+| Name            | Description                  | Environment |
+| --------------- | ---------------------------- | ----------- |
+| `addr`          | URL to server                | `N/A`       |
+| `token`         | user token from server       | `N/A`       |
+| `api-version`   | API version for server       | `N/A`       |
+| `log-level`     | change the CLI logging level | `N/A`       |
+| `org`           | name of organization         | `N/A`       |
+| `repo`          | name of repository           | `N/A`       |
+| `secret-engine` | name of secret backend       | `N/A`       |
+| `secret-type`   | name of secret type          | `N/A`       |
+
+## Permissions
+
+COMING SOON!
 
 ## Sample
 
+{{% alert color="warning" %}}
+This section assumes you have already installed and setup the CLI.
+
+To install the CLI, please review the [installation documentation](/docs/cli/install).
+To setup the CLI, please review the [authentication documentation](/docs/cli/authentication).
+{{% /alert %}}
+
+#### Request
+
 ```sh
-$ vela remove config
+vela remove config
 ```
+
+#### Response
