@@ -1,54 +1,58 @@
 ---
 title: "Get"
 linkTitle: "Get"
-weight: 5
 description: >
-  Learn how to get builds.
+  Learn how to list builds.
 ---
 
-## Information
+## Command
 
-```sh
-NAME:
-   vela get build - Display a list of builds
-
-USAGE:
-   vela get build [command options] [arguments...]
-
-DESCRIPTION:
-   Use this command to get a list of builds.
+```
+$ vela get build <parameters...> <arguments...>
 ```
 
-## Flags
+{{% alert color="info" %}}
+For more information, you can run `vela get build --help`.
+{{% /alert %}}
 
-```sh
-OPTIONS:
-   --org value               Provide the organization for the repository [$BUILD_ORG]
-   --repo value              Provide the repository contained within the organization [$BUILD_REPO]
-   --output value, -o value  Print the output in wide, yaml or json format
-```
+## Parameters
 
-## Examples
+The following parameters are used to configure the command:
 
-```sh
-EXAMPLES:
- 1. Get builds for a repository.
-    $ vela get build --org github --repo octocat
- 2. Get builds for a repository with wide view output.
-    $ vela get build --org github --repo octocat --output wide
- 3. Get builds for a repository with yaml output.
-    $ vela get build --org github --repo octocat --output yaml
- 4. Get builds for a repository with json output.
-    $ vela get build --org github --repo octocat --output json
- 5. Get builds for a repository when org and repo config or environment variables are set.
-    $ vela get build
-```
+| Name     | Description          | Environment  |
+| -------- | -------------------- | ------------ |
+| `org`    | name of organization | `BUILD_ORG`  |
+| `repo`   | name of repository   | `BUILD_REPO` |
+| `output` | format the output    | `N/A`        |
+
+{{% alert color="info" %}}
+This command also supports setting the `org` or `repo` parameters via a configuration file.
+
+For more information, please review the [CLI config documentation](/docs/cli/config).
+{{% /alert %}}
+
+## Permissions
+
+COMING SOON!
 
 ## Sample
 
-```sh
-$ vela get build --org github --repo octocat
+{{% alert color="warning" %}}
+This section assumes you have already installed and setup the CLI.
 
+To install the CLI, please review the [installation documentation](/docs/cli/install).
+To setup the CLI, please review the [authentication documentation](/docs/cli/authentication).
+{{% /alert %}}
+
+#### Request
+
+```sh
+vela get build --org github --repo octocat
+```
+
+#### Response
+
+```sh
 NUMBER  STATUS  EVENT   BRANCH  DURATION
 5       failure push    master  45s
 4       failure push    master  50s
