@@ -2,7 +2,7 @@
 title: "Git"
 ---
 
-## Description
+## Overview
 
 {{% alert color="info" %}}
 This plugin is automatically injected into your pipeline for the source repository.

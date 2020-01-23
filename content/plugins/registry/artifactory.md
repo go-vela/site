@@ -2,7 +2,7 @@
 title: "Artifactory"
 ---
 
-## Description
+## Overview
 
 This plugin enables you to manage artifacts in [Artifactory](https://jfrog.com/artifactory/) in a Vela pipeline.
 

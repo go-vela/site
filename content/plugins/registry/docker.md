@@ -2,7 +2,7 @@
 title: "Docker"
 ---
 
-## Description
+## Overview
 
 This plugin enables you to build and publish [Docker](https://www.docker.com/) images in a Vela pipeline.
 
