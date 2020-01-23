@@ -19,7 +19,7 @@ For this example, we'll go over using the UI to add the repo. You can always hea
 1. Click "Add Repositories".
 1. Select the Org from the available list.
 1. Click "Add" next to the repo you would like to add.
-1. Alternatively you can "Add All" repos in an org.
-1. If your repo doesn't exist, try clicking "Refresh List" in the top right.
+   1. Alternatively you can "Add All" repos in an org.
+   1. If your repo doesn't exist, try clicking "Refresh List" in the top right.
 
 Your repo now has the necessary web hook to Vela.
