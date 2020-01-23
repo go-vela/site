@@ -1,51 +1,59 @@
 ---
 title: "View"
 linkTitle: "View"
-weight: 5
 description: >
-  Learn how to view logs.
+  Learn how to inspect logs.
 ---
 
-## Information
+## Command
 
-```sh
-NAME:
-   vela view log - View logs from the provided build or step
-
-USAGE:
-   vela view log [command options] [arguments...]
-
-DESCRIPTION:
-   Use this command to capture the logs from a build or step.
+```
+$ vela view log <parameters...> <arguments...>
 ```
 
-## Flags
+{{% alert color="info" %}}
+For more information, you can run `vela view log --help`.
+{{% /alert %}}
 
-```sh
-OPTIONS:
-   --org value                           Provide the organization for the repository [$BUILD_ORG]
-   --repo value                          Provide the repository contained with the organization [$BUILD_REPO]
-   --build-number value, --number value  Print the output in wide, yaml or json format (default: 0) [$BUILD_NUMBER]
-   --step-name value, --sn value         name for which you want to filter the logs [$LOG_STEP_NAME]
-```
+## Parameters
 
-## Examples
+The following parameters are used to configure the command:
 
-```sh
-EXAMPLES:
- 1. View build logs for a repository.
-    $ vela view log --org github --repo octocat --number 1
- 2. View step logs for a build for a repository.
-    $ vela view log --step validate --org github --repo octocat --number 1
- 3. View build logs for a repository when org and repo config or environment variables are set.
-    $ vela view log --number 1
-```
+| Name     | Description          | Environment    |
+| -------- | -------------------- | -------------- |
+| `org`    | name of organization | `BUILD_ORG`    |
+| `repo`   | name of repository   | `BUILD_REPO`   |
+| `build`  | number of build      | `BUILD_NUMBER` |
+
+{{% alert color="info" %}}
+This command also supports setting the `org` or `repo` parameters via a configuration file.
+
+For more information, please review the [CLI config documentation](/docs/cli/config).
+{{% /alert %}}
+
+## Permissions
+
+COMING SOON!
 
 ## Sample
 
-```sh
-$ vela view log --org github --repo octocat --number 5
+{{% alert color="warning" %}}
+This section assumes you have already installed and setup the CLI.
 
+To install the CLI, please review the [installation documentation](/docs/cli/install).
+
+To setup the CLI, please review the [authentication documentation](/docs/cli/authentication).
+{{% /alert %}}
+
+#### Request
+
+```sh
+$ vela view log --org github --repo octocat --build 5
+```
+
+#### Response
+
+```sh
 $ git init
 Initialized empty Git repository in /home/github_octocat_5/.git/
 $ git remote add origin https://github.com/github/octocat.git
