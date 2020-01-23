@@ -7,7 +7,7 @@ description: >
 ---
 
 {{% alert title="Note:" color="primary" %}}
-You will need _Admin_ access to the repo to be able to activate it in Vela. This is because you need _Admin_ access to be able to add webhooks
+You will need **Admin** access to the repo to be able to activate it in Vela. This is because you need **Admin** access to be able to add webhooks
 to the repo.
 {{% /alert %}}
 
