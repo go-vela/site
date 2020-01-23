@@ -1,12 +1,9 @@
-
 ---
 title: "Plugins"
 linkTitle: "Plugins"
-weight: 20
 layout: plugins
 description: >
-  Here you can find information describing what plugins are and examples on how to use them
+  This section contains the full reference on plugins with Vela.
 menu:
   main:
-    weight: 20
 ---
