@@ -1,57 +1,64 @@
 ---
 title: "Add"
 linkTitle: "Add"
-weight: 5
 description: >
-  Learn how to add a repo.
+  Learn how to create a repo.
 ---
 
-## Information
+## Command
 
-```sh
-NAME:
-   vela add repo - Add a repository
-
-USAGE:
-   vela add repo [command options] [arguments...]
-
-DESCRIPTION:
-   Use this command to add a repository.
+```
+$ vela add repo <parameters...> <arguments...>
 ```
 
-## Flags
+{{% alert color="info" %}}
+For more information, you can run `vela add repo --help`.
+{{% /alert %}}
 
-```sh
-OPTIONS:
-   --org value      Provide the organization for the repository [$REPO_ORG]
-   --repo value     Provide the repository contained with the organization [$REPO_NAME]
-   --link value     Link to repository in source control [$REPO_LINK]
-   --clone value    Clone link to repository in source control [$REPO_CLONE]
-   --timeout value  Allow management of timeouts (default: 60) [$REPO_TIMEOUT]
-   --private        Allow management of private repositories [$REPO_PRIVATE]
-   --trusted        Allow management of trusted repositories [$REPO_TRUSTED]
-   --active         Allow management of activity on repositories [$REPO_ACTIVE]
-   --event value    Allow management of the repository trigger events [$REPO_EVENT]
-```
+## Parameters
 
-## Examples
+The following parameters are used to configure the command:
 
-```sh
-EXAMPLES:
- 1. Add a repository with push and pull request enabled.
-    $ vela add repo --org github --repo octocat --event push --event pull_request
- 2. Add a repository with all event types enabled.
-    $ vela add repo --org github --repo octocat --event push --event pull_request --event tag --event deployment
- 3. Add a repository with a longer build timeout.
-    $ vela add repo --org github --repo octocat --timeout 90
- 4. Add a repository with push and pull request enabled when org and repo config or environment variables are set.
-    $ vela add repo --event push --event pull_request
-```
+| Name      | Description                  | Environment    |
+| --------- | ---------------------------- | -------------- |
+| `org`     | name of organization         | `REPO_ORG`     |
+| `repo`    | name of repository           | `REPO_NAME`    |
+| `link`    | full URL to repository       | `REPO_LINK`    |
+| `clone`   | clone URL to repository      | `REPO_CLONE`   |
+| `timeout` | max time allowed per build   | `REPO_TIMEOUT` |
+| `private` | makes the repository private | `REPO_PRIVATE` |
+| `trusted` | makes the repository trusted | `REPO_TRUSTED` |
+| `event`   | events to trigger repository | `REPO_EVENT`   |
+| `output`  | format the output            | `N/A`          |
+
+{{% alert color="info" %}}
+This command also supports setting the `org` or `repo` parameters via a configuration file.
+
+For more information, please review the [CLI config documentation](/docs/cli/config).
+{{% /alert %}}
+
+## Permissions
+
+COMING SOON!
 
 ## Sample
 
-```sh
-$ vela add repo --org github --repo octocat
+{{% alert color="warning" %}}
+This section assumes you have already installed and setup the CLI.
 
+To install the CLI, please review the [installation documentation](/docs/cli/install).
+
+To setup the CLI, please review the [authentication documentation](/docs/cli/authentication).
+{{% /alert %}}
+
+#### Request
+
+```sh
+vela add repo --org github --repo octocat
+```
+
+#### Response
+
+```sh
 repo "github/octocat" was created
 ```

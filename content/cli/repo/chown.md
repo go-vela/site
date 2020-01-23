@@ -1,43 +1,58 @@
 ---
 title: "Chown"
 linkTitle: "Chown"
-weight: 25
 description: >
-  Learn how to change ownership for a repo.
+  Learn how to change ownership of a repo.
 ---
 
-## Information
+## Command
 
-```sh
-NAME:
-   vela chown - Change the repository ownership
-
-USAGE:
-   vela chown [command options] [arguments...]
-
-CATEGORY:
-   Repository Management
-
-DESCRIPTION:
-   Use this command to change the repository ownership
+```
+$ vela chown repo <parameters...> <arguments...>
 ```
 
-## Flags
+{{% alert color="info" %}}
+For more information, you can run `vela chown repo --help`.
+{{% /alert %}}
 
-```sh
-OPTIONS:
-   --org value   Provide the organization for the repository [$REPO_ORG]
-   --repo value  Provide the repository contained with the organization [$REPO_NAME]
-```
+## Parameters
 
-## Examples
+The following parameters are used to configure the command:
 
-```sh
-EXAMPLES:
- 1. Fix a damaged repository by disabling and enabling."
-  $ vela chown
-```
+| Name     | Description          | Environment |
+| -------- | -------------------- | ----------- |
+| `org`    | name of organization | `REPO_ORG`  |
+| `repo`   | name of repository   | `REPO_NAME` |
+| `output` | format the output    | `N/A`       |
+
+{{% alert color="info" %}}
+This command also supports setting the `org` or `repo` parameters via a configuration file.
+
+For more information, please review the [CLI config documentation](/docs/cli/config).
+{{% /alert %}}
+
+## Permissions
+
+COMING SOON!
 
 ## Sample
 
-Documentation Coming Soon!
+{{% alert color="warning" %}}
+This section assumes you have already installed and setup the CLI.
+
+To install the CLI, please review the [installation documentation](/docs/cli/install).
+
+To setup the CLI, please review the [authentication documentation](/docs/cli/authentication).
+{{% /alert %}}
+
+#### Request
+
+```sh
+vela chown repo --org github --repo octocat
+```
+
+#### Response
+
+```sh
+repo "github/octocat" changed owner
+```

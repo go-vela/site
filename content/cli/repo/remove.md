@@ -1,46 +1,58 @@
 ---
 title: "Remove"
 linkTitle: "Remove"
-weight: 20
 description: >
-  Learn how to remove a repo.
+  Learn how to delete a repo.
 ---
 
-## Information
+## Command
 
-```sh
-NAME:
-   vela remove repo - Remove a repository
-
-USAGE:
-   vela remove repo [command options] [arguments...]
-
-DESCRIPTION:
-   Use this command to remove a repository.
+```
+$ vela remove repo <parameters...> <arguments...>
 ```
 
-## Flags
+{{% alert color="info" %}}
+For more information, you can run `vela remove repo --help`.
+{{% /alert %}}
 
-```sh
-OPTIONS:
-   --org value   Provide the organization for the repository [$REPO_ORG]
-   --repo value  Provide the repository contained with the organization [$REPO_NAME]
-```
+## Parameters
 
-## Examples
+The following parameters are used to configure the command:
 
-```sh
-EXAMPLES:
- 1. Remove a repository.
-    $ vela remove repo --org github --repo octocat
- 2. Remove a repository when org and repo config or environment variables are set.
-    $ vela remove repo
-```
+| Name     | Description          | Environment |
+| -------- | -------------------- | ----------- |
+| `org`    | name of organization | `REPO_ORG`  |
+| `repo`   | name of repository   | `REPO_NAME` |
+| `output` | format the output    | `N/A`       |
+
+{{% alert color="info" %}}
+This command also supports setting the `org` or `repo` parameters via a configuration file.
+
+For more information, please review the [CLI config documentation](/docs/cli/config).
+{{% /alert %}}
+
+## Permissions
+
+COMING SOON!
 
 ## Sample
 
-```sh
-$ vela delete repo --org github --repo octocat
+{{% alert color="warning" %}}
+This section assumes you have already installed and setup the CLI.
 
+To install the CLI, please review the [installation documentation](/docs/cli/install).
+
+To setup the CLI, please review the [authentication documentation](/docs/cli/authentication).
+{{% /alert %}}
+
+#### Request
+
+```sh
+vela remove repo --org github --repo octocat
+```
+
+#### Response
+
+```sh
 repo "github/octocat" was deleted
 ```

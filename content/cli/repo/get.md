@@ -1,50 +1,51 @@
 ---
 title: "Get"
 linkTitle: "Get"
-weight: 10
 description: >
-  Learn how to get repos.
+  Learn how to list repos.
 ---
 
-## Information
+## Command
 
-```sh
-NAME:
-   vela get repo - Display a list of repositories
-
-USAGE:
-   vela get repo [command options] [arguments...]
-
-DESCRIPTION:
-   Use this command to get a list of repositories.
+```
+$ vela get repo <parameters...> <arguments...>
 ```
 
-## Flags
+{{% alert color="info" %}}
+For more information, you can run `vela get repo --help`.
+{{% /alert %}}
 
-```sh
-OPTIONS:
-   --output value, -o value  Print the output in wide, yaml or json format
-```
+## Parameters
 
-## Examples
+The following parameters are used to configure the command:
 
-```sh
-EXAMPLES:
- 1. Get repositories.
-    $ vela get repo
- 2. Get repositories with wide view output.
-    $ vela get repo --output wide
- 3. Get repositories with yaml output.
-    $ vela get repo --output yaml
- 4. Get repositories with json output.
-    $ vela get repo --output json
-```
+| Name     | Description       | Environment |
+| -------- | ----------------- | ----------- |
+| `output` | format the output | `N/A`       |
+
+## Permissions
+
+COMING SOON!
 
 ## Sample
 
-```sh
-$ vela get repo
+{{% alert color="warning" %}}
+This section assumes you have already installed and setup the CLI.
 
+To install the CLI, please review the [installation documentation](/docs/cli/install).
+
+To setup the CLI, please review the [authentication documentation](/docs/cli/authentication).
+{{% /alert %}}
+
+#### Request
+
+```sh
+vela get repo
+```
+
+#### Response
+
+```sh
 ORG/REPO        STATUS  EVENTS             VISIBILITY  BRANCH
 github/octocat  true    push,pull_request  public      master
 ```

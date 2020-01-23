@@ -1,50 +1,59 @@
 ---
 title: "View"
 linkTitle: "View"
-weight: 15
 description: >
-  Learn how to view a repo.
+  Learn how to inspect a repo.
 ---
 
-## Information
+## Command
 
-```sh
-NAME:
-   vela view repo - View details of the provided repository
-
-USAGE:
-   vela view repo [command options] [arguments...]
-
-DESCRIPTION:
-   Use this command to view a repository.
+```
+$ vela view repo <parameters...> <arguments...>
 ```
 
-## Flags
+{{% alert color="info" %}}
+For more information, you can run `vela view repo --help`.
+{{% /alert %}}
 
-```sh
-OPTIONS:
-   --org value               Provide the organization for the repository [$REPO_ORG]
-   --repo value              Provide the repository contained with the organization [$REPO_NAME]
-   --output value, -o value  Print the output in json format
-```
+## Parameters
 
-## Examples
+The following parameters are used to configure the command:
 
-```sh
-EXAMPLES:
- 1. View repository details.
-    $ vela view repo --org github --repo octocat
- 2. View repository details with json output.
-    $ vela view repo --org github --repo octocat --output json
- 3. View repository details when org and repo config or environment variables are set.
-    $ vela view repo
-```
+| Name     | Description          | Environment |
+| -------- | -------------------- | ----------- |
+| `org`    | name of organization | `REPO_ORG`  |
+| `repo`   | name of repository   | `REPO_NAME` |
+| `output` | format the output    | `N/A`       |
+
+{{% alert color="info" %}}
+This command also supports setting the `org` or `repo` parameters via a configuration file.
+
+For more information, please review the [CLI config documentation](/docs/cli/config).
+{{% /alert %}}
+
+## Permissions
+
+COMING SOON!
 
 ## Sample
 
-```sh
-$ vela view repo --org github --repo octocat
+{{% alert color="warning" %}}
+This section assumes you have already installed and setup the CLI.
 
+To install the CLI, please review the [installation documentation](/docs/cli/install).
+
+To setup the CLI, please review the [authentication documentation](/docs/cli/authentication).
+{{% /alert %}}
+
+#### Request
+
+```sh
+vela view repo --org github --repo octocat
+```
+
+#### Response
+
+```sh
 id: 1
 userid: 1
 org: github
