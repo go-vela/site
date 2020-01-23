@@ -1,55 +1,60 @@
 ---
 title: "Get"
 linkTitle: "Get"
-weight: 5
 description: >
-  Learn how to get steps.
+  Learn how to list steps.
 ---
 
-## Information
+## Command
 
-```sh
-NAME:
-   vela get step - Display a list of steps
-
-USAGE:
-   vela get step [command options] [arguments...]
-
-DESCRIPTION:
-   Use this command to get a list of steps.
+```
+$ vela get step <parameters...> <arguments...>
 ```
 
-## Flags
+{{% alert color="info" %}}
+For more information, you can run `vela get step --help`.
+{{% /alert %}}
 
-```sh
-OPTIONS:
-   --org value                                    Provide the organization for the repository [$BUILD_ORG]
-   --repo value                                   Provide the repository contained with the organization [$BUILD_REPO]
-   --build-number value, --build value, -b value  Provide the build number (default: 0) [$BUILD_NUMBER]
-   --output value, -o value                       Print the output in wide, yaml or json format
-```
+## Parameters
 
-## Examples
+The following parameters are used to configure the command:
 
-```sh
-EXAMPLES:
- 1. Get steps for a build.
-    $ vela get step --org github --repo octocat --build-number 1
- 2. Get steps for a build with wide view output.
-    $ vela get step --org github --repo octocat --build-number 1 --output wide
- 3. Get steps for a build with yaml output.
-    $ vela get step --org github --repo octocat --build-number 1 --output yaml
- 4. Get steps for a build with json output.
-    $ vela get step --org github --repo octocat --build-number 1 --output json
- 5. Get steps for a build when org and repo config or environment variables are set.
-    $ vela get step --number 1
-```
+| Name     | Description          | Environment    |
+| -------- | -------------------- | -------------- |
+| `org`    | name of organization | `BUILD_ORG`    |
+| `repo`   | name of repository   | `BUILD_REPO`   |
+| `build`  | number of build      | `BUILD_NUMBER` |
+| `output` | format the output    | `N/A`          |
+
+{{% alert color="info" %}}
+This command also supports setting the `org` or `repo` parameters via a configuration file.
+
+For more information, please review the [CLI config documentation](/docs/cli/config).
+{{% /alert %}}
+
+## Permissions
+
+COMING SOON!
 
 ## Sample
 
-```sh
-$ vela get step --org github --repo octocat --build-number 5
+{{% alert color="warning" %}}
+This section assumes you have already installed and setup the CLI.
 
+To install the CLI, please review the [installation documentation](/docs/cli/install).
+
+To setup the CLI, please review the [authentication documentation](/docs/cli/authentication).
+{{% /alert %}}
+
+#### Request
+
+```sh
+vela get step --org github --repo octocat --build-number 1
+```
+
+#### Response
+
+```sh
 NAME            STATUS  RUNTIME DURATION
 publish         failure         1s
 build           success         17s

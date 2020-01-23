@@ -1,56 +1,65 @@
 ---
 title: "View"
 linkTitle: "View"
-weight: 10
 description: >
-  Learn how to view a step.
+  Learn how to inspect a step.
 ---
 
-## Information
+## Command
 
-```sh
-NAME:
-   vela view step - View details of the provided step
-
-USAGE:
-   vela view step [command options] [arguments...]
-
-DESCRIPTION:
-   Use this command to view a step.
+```
+$ vela view step <parameters...> <arguments...>
 ```
 
-## Flags
+{{% alert color="info" %}}
+For more information, you can run `vela view step --help`.
+{{% /alert %}}
 
-```sh
-OPTIONS:
-   --org value                                    Provide the organization for the repository [$BUILD_ORG]
-   --repo value                                   Provide the repository contained with the organization [$BUILD_REPO]
-   --build-number value, --build value, -b value  Provide the build number (default: 0) [$BUILD_NUMBER]
-   --step-number value, --step value, -s value    Provide the build number (default: 0) [$STEP_NUMBER]
-   --output value, -o value                       Print the output in json format
-```
+## Parameters
 
-## Examples
+The following parameters are used to configure the command:
 
-```sh
-EXAMPLES:
- 1. Get step details for a repository.
-    $ vela view step --org github --repo octocat --build-number 1 --step-number 1
- 2. Get step details for a repository with json output.
-    $ vela view step --org github --repo octocat --build-number 1 --step-number 1 --output json
- 3. Get step details for a repository when org and repo config or environment variables are set.
-    $ vela view step --build-number 1 --step-number 1
-```
+| Name     | Description          | Environment    |
+| -------- | -------------------- | -------------- |
+| `org`    | name of organization | `BUILD_ORG`    |
+| `repo`   | name of repository   | `BUILD_REPO`   |
+| `build`  | number of build      | `BUILD_NUMBER` |
+| `step`   | number of step       | `STEP_NUMBER`  |
+| `output` | format the output    | `N/A`          |
+
+{{% alert color="info" %}}
+This command also supports setting the `org` or `repo` parameters via a configuration file.
+
+For more information, please review the [CLI config documentation](/docs/cli/config).
+{{% /alert %}}
+
+## Permissions
+
+COMING SOON!
 
 ## Sample
 
-```sh
-$ vela view step --org github --repo octocat --build-number 5 --step-number 1
+{{% alert color="warning" %}}
+This section assumes you have already installed and setup the CLI.
 
+To install the CLI, please review the [installation documentation](/docs/cli/install).
+
+To setup the CLI, please review the [authentication documentation](/docs/cli/authentication).
+{{% /alert %}}
+
+#### Request
+
+```sh
+vela view step --org github --repo octocat --build 1 --step 1
+```
+
+#### Response
+
+```sh
 id: 1
-buildid: 5
-repoid: 1
-number: 5
+build_id: 1
+repo_id: 1
+number: 1
 name: clone
 status: success
 error: ""           # Populates when the platform runs into an error with the build
