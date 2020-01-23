@@ -1,106 +1,94 @@
 ---
 title: "Add"
 linkTitle: "Add"
-weight: 5
 description: >
-  Learn how to add a secret.
+  Learn how to create a secret.
 ---
 
-## Information
+## Command
 
-```sh
-NAME:
-   vela add secret - Add a secret
-
-USAGE:
-   vela add secret [command options] [arguments...]
-
-DESCRIPTION:
-   Use this command to add a secret.
+```
+$ vela add secret <parameters...> <arguments...>
 ```
 
-## Flags
+{{% alert color="info" %}}
+For more information, you can run `vela add secret --help`.
+{{% /alert %}}
 
-```sh
-OPTIONS:
-   --engine value              Provide the engine for where the secret to be stored (default: "native") [$SECRET_ENGINE]
-   --type value                Provide the kind of secret to be stored (default: "repo") [$SECRET_TYPE]
-   --org value                 Provide the organization for the repository [$SECRET_ORG]
-   --repo value                Provide the repository contained with the organization [$SECRET_REPO]
-   --team value                Provide the team contained with the organization [$SECRET_TEAM]
-   --name value                Provide the name of the secret [$SECRET_NAME]
-   --value value               Provide the value of the secret [$SECRET_VALUE]
-   --image value               Secret limited to these images [$SECRET_IMAGES]
-   --event value               Secret limited to these events (default: "push") [$SECRET_EVENTS]
-   --filename value, -f value  Filename to use to add the secret or secrets
-```
+## Parameters
 
-## Examples
+The following parameters are used to configure the command:
 
-```sh
-EXAMPLES:
- 1. Add a secret for a repository with push events.
-    $ vela add secret --engine native --type repo --org github --repo octocat --name foo --value bar
- 2. Add a secret for a org with push events.
-    $ vela add secret --engine native --type org --org github --repo '*' --name foo --value bar
- 3. Add a shared secret for the platform
-    $ vela add secret --engine native --type shared --org github --team octokitties --name foo --value bar
- 4. Add a secret for a repository with all event types enabled.
-    $ vela add secret --engine native --type repo --org github --repo octocat --name foo --value bar --event push --event pull_request --event tag --event deployment
- 5. Add a secret from a file.
-    $ vela add secret --engine native --type repo --org github --repo octocat --name foo --value @/path/to/file
- 6. Add a native repo secret with an image whitelist.
-    $ vela add secret --engine native --type repo --org github --repo octocat --name foo --value bar --image alpine --image golang
- 7. Add a repo secret with default native engine or when engine and type environment variables are set.
-  $ vela add secret --org github --repo octocat --name foo --value bar
- 8. Add a secret or secrets from a file
-    $ vela add secret -f secret.yml
-```
+| Name       | Description                       | Environment     |
+| ---------- | --------------------------------- | --------------- |
+| `engine`   | name of engine                    | `SECRET_ENGINE` |
+| `type`     | name of type of secret            | `SECRET_TYPE`   |
+| `org`      | name of organization              | `SECRET_ORG`    |
+| `repo`     | name of repository                | `SECRET_REPO`   |
+| `team`     | name of team                      | `SECRET_TEAM`   |
+| `name`     | name of secret                    | `SECRET_NAME`   |
+| `value`    | value of secret                   | `SECRET_VALUE`  |
+| `image`    | limit secret to specific image(s) | `SECRET_IMAGES` |
+| `event`    | limit secret to specific event(s) | `SECRET_EVENTS` |
+| `filename` | add secret(s) from a file         | `N/A`           |
+
+{{% alert color="info" %}}
+This command also supports setting the `engine`, `type`, `org` or `repo` parameters via a configuration file.
+
+For more information, please review the [CLI config documentation](/docs/cli/config).
+{{% /alert %}}
+
+## Permissions
+
+COMING SOON!
 
 ## Sample
 
-```sh
-$ vela add secret --engine native --type repo --event push --event pull_request --org github --repo octocat --name foo --value bar
+{{% alert color="warning" %}}
+This section assumes you have already installed and setup the CLI.
 
-secret "foo" was addd
+To install the CLI, please review the [installation documentation](/docs/cli/install).
+
+To setup the CLI, please review the [authentication documentation](/docs/cli/authentication).
+{{% /alert %}}
+
+#### Request
+
+```sh
+vela add secret --engine native --type repo --org github --repo octocat --name foo --value bar
 ```
 
-## Secrets from a File
+#### Response
 
-Vela supports creating a single-line or multi-line secret saved in a file.
-
-#### Examples
-_Example CLI command for repo secret type_
 ```sh
-$ vela add secret --engine native --type repo --org github --repo octocat --name foo --value @/path/to/file
-
-$ vela add secret --engine native --type repo --org github --repo octocat --name foo --value @$HOME/some_directory/secret_file_bar.txt
+secret "foo" was added
 ```
 
-_Example CLI command for org secret type_
-```sh
-$ vela add secret --engine native --type org --org github --repo '*' --name foo --value @/path/to/file
+## Advanced
 
-$ vela add secret --engine native --type org --org github --repo '*' --name foo --value @$HOME/some_directory/secret_file_bar.txt
+#### Input From File
+
+Vela supports creating a single-line or multi-line secret from a file using the `@` symbol.
+
+```sh
+# Syntax
+vela add secret --engine native --type repo --org github --repo octocat --name foo --value @/path/to/file
+
+# Example
+vela add secret --engine native --type repo --org github --repo octocat --name foo --value @$HOME/tmp/secret.txt
 ```
 
-_Example CLI command for shared secret type_
-```sh
-$ vela add secret --engine native --type shared --org github --team foobar --name foo --value @/path/to/file
+#### Secrets From File
 
-$ vela add secret --engine native --type shared --org github --team foobar --name foo --value @$HOME/some_directory/secret_file_bar.txt
+Vela supports creating multiple secrets from a file using the `filename` parameter.
+
+```sh
+vela add secret -f secret.yml
 ```
 
-##### Advanced
+##### Single YAML document
 
-_Example CLI command for repo secret type_
-```sh
-$ vela add secret -f secret.yml
-```
-
-_Example secret.yml file for above command_
 ```yaml
-# Option 1
 ---
 metadata:
   api_version: v1
@@ -128,8 +116,9 @@ secrets:
       - pull_request
 ```
 
+##### Multiple YAML document
+
 ```yaml
-# Option 2
 ---
 metadata:
   api_version: v1
@@ -145,12 +134,13 @@ secrets:
     events:
       - push
       - pull_request
+
 ---
 metadata:
   api_version: v1
   engine: vault
 secrets:
-  - org: git
+  - org: github
     team: octokitties
     name: foo1
     value: "@/path/to/file/bar1"

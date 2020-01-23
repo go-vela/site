@@ -1,61 +1,62 @@
 ---
 title: "Get"
 linkTitle: "Get"
-weight: 10
 description: >
-  Learn how to get a secret.
+  Learn how to list secrets.
 ---
 
-## Information
+## Command
 
-```sh
-NAME:
-   vela get secret - Display a list of secrets
-
-USAGE:
-   vela get secret [command options] [arguments...]
-
-DESCRIPTION:
-   Use this command to get a list of secrets.
+```
+$ vela get secret <parameters...> <arguments...>
 ```
 
-## Flags
+{{% alert color="info" %}}
+For more information, you can run `vela get secret --help`.
+{{% /alert %}}
 
-```sh
-OPTIONS:
-   --engine value            Provide the engine for where the secret to be stored (default: "native") [$VELA_SECRET_ENGINE, $SECRET_ENGINE]
-   --type value              Provide the kind of secret to be stored (default: "repo") [$SECRET_TYPE]
-   --org value               Provide the organization for the repository [$SECRET_ORG]
-   --repo value              Provide the repository contained with the organization [$SECRET_REPO]
-   --team value              Provide the team contained with the organization [$SECRET_TEAM]
-   --output value, -o value  Print the output in a yaml or json format
-```
+## Parameters
 
-## Examples
+The following parameters are used to configure the command:
 
-```sh
-EXAMPLES:
- 1. Get repository secrets.
-    $ vela get secret --engine native --type repo --org github --repo octocat
- 2. Get organization secrets.
-    $ vela get secret --engine native --type org --org github --repo '*'
- 3. Get shared secrets.
-    $ vela get secret --engine native --type shared --org github --team octokitties
- 4. Get secrets for a repository with wide view output.
-    $ vela get secret --output wide --engine native --type repo --org github --repo octocat
- 5. Get secrets for a repository with yaml output.
-    $ vela get secret --output yaml --engine native --type repo --org github --repo octocat
- 6. Get secrets for a repository with json output.
-    $ vela get secret --output json --engine native --type repo --org github --repo octocat
- 7. Get repository secrets with default native engine or when engine and type environment variables are set.
-    $ vela get secret --org github --repo octocat
-```
+| Name     | Description            | Environment     |
+| -------- | ---------------------- | --------------- |
+| `engine` | name of engine         | `SECRET_ENGINE` |
+| `type`   | name of type of secret | `SECRET_TYPE`   |
+| `org`    | name of organization   | `SECRET_ORG`    |
+| `repo`   | name of repository     | `SECRET_REPO`   |
+| `team`   | name of team           | `SECRET_TEAM`   |
+| `output` | format the output      | `N/A`           |
+
+{{% alert color="info" %}}
+This command also supports setting the `engine`, `type`, `org` or `repo` parameters via a configuration file.
+
+For more information, please review the [CLI config documentation](/docs/cli/config).
+{{% /alert %}}
+
+## Permissions
+
+COMING SOON!
 
 ## Sample
 
-```sh
-$ vela get secret --engine native --type repo --org github --repo octocat
+{{% alert color="warning" %}}
+This section assumes you have already installed and setup the CLI.
 
+To install the CLI, please review the [installation documentation](/docs/cli/install).
+
+To setup the CLI, please review the [authentication documentation](/docs/cli/authentication).
+{{% /alert %}}
+
+#### Request
+
+```sh
+vela get secret --engine native --type repo --org github --repo octocat
+```
+
+#### Response
+
+```sh
 NAME  ORG             TYPE  EVENTS
 foo   github/octocat  repo  push,pull_request
 ```

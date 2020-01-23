@@ -1,58 +1,63 @@
 ---
 title: "View"
 linkTitle: "View"
-weight: 15
 description: >
-  Learn how to view a secret.
+  Learn how to inspect a secret.
 ---
 
-## Information
+## Command
 
-```sh
-NAME:
-   vela view secret - View details of the provided secret
-
-USAGE:
-   vela view secret [command options] [arguments...]
-
-DESCRIPTION:
-   Use this command to view a secret.
+```
+$ vela view secret <parameters...> <arguments...>
 ```
 
-## Flags
+{{% alert color="info" %}}
+For more information, you can run `vela view secret --help`.
+{{% /alert %}}
 
-```sh
-OPTIONS:
-   --engine value            Provide the engine for where the secret to be stored (default: "native") [$VELA_SECRET_ENGINE, $SECRET_ENGINE]
-   --type value              Provide the kind of secret to be stored (default: "repo") [$SECRET_TYPE]
-   --org value               Provide the organization for the repository [$SECRET_ORG]
-   --repo value              Provide the repository contained with the organization [$SECRET_REPO]
-   --team value              Provide the team contained with the organization [$SECRET_TEAM]
-   --name value              Provide the name of the secret [$SECRET_NAME]
-   --output value, -o value  Print the output in json format
-```
+## Parameters
 
-## Examples
+The following parameters are used to configure the command:
 
-```sh
-EXAMPLES:
- 1. View repository secret details.
-    $ vela view secret --engine native --type repo --org github --repo octocat --name foo
- 2. View organization secret details.
-    $ vela view secret --engine native --type org --org github --repo '*' --name foo
- 3. View shared secret details.
-    $ vela view secret --engine native --type shared --org github --team octokitties --name foo
- 4. View secret details for a repository with json output.
-    $ vela view secret --engine native --type repo --org github --repo octocat --name foo --output json
- 5. View secret details with default native engine or when engine and type environment variables are set.
-    $ vela view secret --org github --repo octocat --name foo
-```
+| Name     | Description            | Environment     |
+| -------- | ---------------------- | --------------- |
+| `engine` | name of engine         | `SECRET_ENGINE` |
+| `type`   | name of type of secret | `SECRET_TYPE`   |
+| `org`    | name of organization   | `SECRET_ORG`    |
+| `repo`   | name of repository     | `SECRET_REPO`   |
+| `team`   | name of team           | `SECRET_TEAM`   |
+| `name`   | name of secret         | `SECRET_NAME`   |
+| `output` | format the output      | `N/A`           |
+
+{{% alert color="info" %}}
+This command also supports setting the `engine`, `type`, `org` or `repo` parameters via a configuration file.
+
+For more information, please review the [CLI config documentation](/docs/cli/config).
+{{% /alert %}}
+
+## Permissions
+
+COMING SOON!
 
 ## Sample
 
-```sh
-$ vela view secret --engine native --type repo --org github --repo octocat --name foo
+{{% alert color="warning" %}}
+This section assumes you have already installed and setup the CLI.
 
+To install the CLI, please review the [installation documentation](/docs/cli/install).
+
+To setup the CLI, please review the [authentication documentation](/docs/cli/authentication).
+{{% /alert %}}
+
+#### Request
+
+```sh
+vela view secret --engine native --type repo --org github --repo octocat --name foo
+```
+
+#### Response
+
+```sh
 id: 1
 org: github
 repo: octocat

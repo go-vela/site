@@ -1,92 +1,153 @@
 ---
 title: "Update"
 linkTitle: "Update"
-weight: 20
 description: >
-  Learn how to update a secret.
+  Learn how to modify a secret.
 ---
 
-## Information
+## Command
 
-```sh
-NAME:
-   vela update secret - Update a secret
-
-USAGE:
-   vela update secret [command options] [arguments...]
-
-DESCRIPTION:
-   Use this command to update a secret.
+```
+$ vela update secret <parameters...> <arguments...>
 ```
 
-## Flags
+{{% alert color="info" %}}
+For more information, you can run `vela update secret --help`.
+{{% /alert %}}
 
-```sh
-OPTIONS:
-   --engine value              Provide the engine for where the secret to be stored (default: "native") [$VELA_SECRET_ENGINE, $SECRET_ENGINE]
-   --type value                Provide the kind of secret to be stored (default: "repo") [$SECRET_TYPE]
-   --org value                 Provide the organization for the repository [$SECRET_ORG]
-   --repo value                Provide the repository contained with the organization [$SECRET_REPO]
-   --team value                Provide the team contained with the organization [$SECRET_TEAM]
-   --name value                Provide the name of the secret [$SECRET_NAME]
-   --value value               Provide the value of the secret [$SECRET_VALUE]
-   --image value               Secret limited to these images [$SECRET_IMAGES]
-   --event value               Secret limited to these events [$SECRET_EVENTS]
-   --filename value, -f value  Filename to use to create the secret or secrets
-```
+## Parameters
 
-## Examples
+The following parameters are used to configure the command:
 
-```sh
-EXAMPLES:
- 1. Update a secret value for a repository.
-    $ vela update secret --engine native --type repo --org github --repo octocat --name foo --value bar
- 2. Update a secret value for a org.
-    $ vela update secret --engine native --type org --org github --repo '*' --name foo --value bar
- 3. Update a shared secret value for the platform.
-    $ vela update secret --engine native --type shared --team octokitties --name foo --value bar
- 4. Update a secret for a repository with all event types enabled.
-    $ vela update secret --engine native --type repo --org github --repo octocat --name foo --event push --event pull_request --event tag --event deployment
- 5. Update a secret from a file.
-    $ vela update secret --engine native --type repo --org github --repo octocat --name foo --value @/path/to/file
- 6. Update a secret for a repository with an image whitelist.
-    $ vela update secret --engine native --type repo --org github --repo octocat --name foo --image alpine --image golang
- 7. Update a repo secret value with default native engine or when engine and type environment variables are set.
-  $ vela update secret --org github --repo octocat --name foo --value bars
- 8. Update with data from a secret file.
-  $ vela update secret -f secret.yml
-```
+| Name       | Description                       | Environment     |
+| ---------- | --------------------------------- | --------------- |
+| `engine`   | name of engine                    | `SECRET_ENGINE` |
+| `type`     | name of type of secret            | `SECRET_TYPE`   |
+| `org`      | name of organization              | `SECRET_ORG`    |
+| `repo`     | name of repository                | `SECRET_REPO`   |
+| `team`     | name of team                      | `SECRET_TEAM`   |
+| `name`     | name of secret                    | `SECRET_NAME`   |
+| `value`    | value of secret                   | `SECRET_VALUE`  |
+| `image`    | limit secret to specific image(s) | `SECRET_IMAGES` |
+| `event`    | limit secret to specific event(s) | `SECRET_EVENTS` |
+| `filename` | add secret(s) from a file         | `N/A`           |
+
+{{% alert color="info" %}}
+This command also supports setting the `engine`, `type`, `org` or `repo` parameters via a configuration file.
+
+For more information, please review the [CLI config documentation](/docs/cli/config).
+{{% /alert %}}
+
+## Permissions
+
+COMING SOON!
 
 ## Sample
 
-```sh
-$ vela update repo --org github --repo octocat --event push --event pull_request --event deployment --name foo
+{{% alert color="warning" %}}
+This section assumes you have already installed and setup the CLI.
 
+To install the CLI, please review the [installation documentation](/docs/cli/install).
+
+To setup the CLI, please review the [authentication documentation](/docs/cli/authentication).
+{{% /alert %}}
+
+#### Request
+
+```sh
+vela update secret --engine native --type repo --org github --repo octocat --name foo --value baz
+```
+
+#### Response
+
+```sh
 secret "foo" was updated
 ```
 
-## Secrets from a File
+## Advanced
 
-Vela supports updating a single-line or multi-line secret saved in a file.
+#### Input From File
 
-#### Examples
-_Example CLI command for repo secret type_
+Vela supports updating a single-line or multi-line secret from a file using the `@` symbol.
+
 ```sh
-$ vela update secret --engine native --type repo --org github --repo octocat --name foo --value @/path/to/file
+# Syntax
+vela update secret --engine native --type repo --org github --repo octocat --name foo --value @/path/to/file
 
-$ vela update secret --engine native --type repo --org github --repo octocat --name foo --value @$HOME/some_directory/secret_file_bar.txt
+# Example
+vela update secret --engine native --type repo --org github --repo octocat --name foo --value @$HOME/tmp/secret.txt
 ```
 
-_Example CLI command for org secret type_
-```sh
-$ vela update secret --engine native --type org --org github --repo '*' --name foo --value @/path/to/file
+#### Secrets From File
 
-$ vela update secret --engine native --type org --org github --repo '*' --name foo --value @$HOME/some_directory/secret_file_bar.txt
+Vela supports updating multiple secrets from a file using the `filename` parameter.
+
+```sh
+vela update secret -f secret.yml
 ```
 
-_Example CLI command for shared secret type_
-```sh
-$ vela update secret --engine native --type shared --org github --team foobar --name foo --value @/path/to/file
+##### Single YAML document
 
-$ vela update secret --engine native --type shared --org github --team foobar --name foo --value @$HOME/some_directory/secret_file_bar.txt
+```yaml
+---
+metadata:
+  api_version: v1
+  engine: native
+secrets:
+  - org: octocat
+    repo: github
+    name: foo
+    value: bar
+    type: repo
+    images:
+      - golang:latest
+    events:
+      - push
+      - pull_request
+  - org: github
+    team: octokitties
+    name: foo1
+    value: "@/path/to/file/bar1"
+    type: shared
+    images:
+      - golang:latest
+    events:
+      - push
+      - pull_request
+```
+
+##### Multiple YAML document
+
+```yaml
+---
+metadata:
+  api_version: v1
+  engine: native
+secrets:
+  - org: github
+    repo: octocat
+    name: foo
+    value: bar
+    type: repo
+    images:
+      - golang:latest
+    events:
+      - push
+      - pull_request
+
+---
+metadata:
+  api_version: v1
+  engine: vault
+secrets:
+  - org: github
+    team: octokitties
+    name: foo1
+    value: "@/path/to/file/bar1"
+    type: shared
+    images:
+      - golang:latest
+    events:
+      - push
+      - pull_request
 ```

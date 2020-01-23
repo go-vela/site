@@ -1,54 +1,61 @@
 ---
 title: "Remove"
 linkTitle: "Remove"
-weight: 25
 description: >
-  Learn how to remove a secret.
+  Learn how to delete a secret.
 ---
 
-## Information
+## Command
 
-```sh
-NAME:
-   vela remove secret - Remove a secret
-
-USAGE:
-   vela remove secret [command options] [arguments...]
-
-DESCRIPTION:
-   Use this command to remove a secret.
+```
+$ vela remove secret <parameters...> <arguments...>
 ```
 
-## Flags
+{{% alert color="info" %}}
+For more information, you can run `vela remove secret --help`.
+{{% /alert %}}
 
-```sh
-OPTIONS:
-   --engine value  Provide the engine for where the secret to be stored (default: "native") [$VELA_SECRET_ENGINE, $SECRET_ENGINE]
-   --type value    Provide the kind of secret to be stored (default: "repo") [$SECRET_TYPE]
-   --org value     Provide the organization for the repository [$SECRET_ORG]
-   --repo value    Provide the repository contained with the organization [$SECRET_REPO]
-   --team value    Provide the team contained with the organization [$SECRET_TEAM]
-   --name value    Provide the name of the secret [$SECRET_NAME]
-```
+## Parameters
 
-## Examples
+The following parameters are used to configure the command:
 
-```sh
-EXAMPLES:
- 1. Remove a secret for a repository.
-    $ vela remove secret --engine native --type repo --org github --repo octocat --name foo
- 2. Remove a secret for a org.
-    $ vela remove secret --engine native --type org --org github --repo '*' --name foo
- 3. Remove a shared secret for the platform.
-    $ vela remove secret --engine native --type shared --org github --team octokitties --name foo
- 4. Remove a repo secret with default native engine or when engine and type environment variables are set.
-    $ vela remove secret --org github --repo octocat --name foo
-```
+| Name     | Description            | Environment     |
+| -------- | ---------------------- | --------------- |
+| `engine` | name of engine         | `SECRET_ENGINE` |
+| `type`   | name of type of secret | `SECRET_TYPE`   |
+| `org`    | name of organization   | `SECRET_ORG`    |
+| `repo`   | name of repository     | `SECRET_REPO`   |
+| `team`   | name of team           | `SECRET_TEAM`   |
+| `name`   | name of secret         | `SECRET_NAME`   |
+
+{{% alert color="info" %}}
+This command also supports setting the `engine`, `type`, `org` or `repo` parameters via a configuration file.
+
+For more information, please review the [CLI config documentation](/docs/cli/config).
+{{% /alert %}}
+
+## Permissions
+
+COMING SOON!
 
 ## Sample
 
-```sh
-$ vela delete repo --org github --repo octocat
+{{% alert color="warning" %}}
+This section assumes you have already installed and setup the CLI.
 
+To install the CLI, please review the [installation documentation](/docs/cli/install).
+
+To setup the CLI, please review the [authentication documentation](/docs/cli/authentication).
+{{% /alert %}}
+
+#### Request
+
+```sh
+vela remove secret --engine native --type repo --org github --repo octocat --name foo
+```
+
+#### Response
+
+```sh
 secret "foo" was deleted
 ```
