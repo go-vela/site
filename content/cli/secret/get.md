@@ -29,7 +29,12 @@ The following parameters are used to configure the command:
 | `output` | format the output      | `N/A`           |
 
 {{% alert color="info" %}}
-This command also supports setting the `engine`, `type`, `org` or `repo` parameters via a configuration file.
+This command also supports setting the following parameters via a configuration file:
+
+* `engine`
+* `type`
+* `org`
+* `repo`
 
 For more information, please review the [CLI config documentation](/docs/cli/config).
 {{% /alert %}}
