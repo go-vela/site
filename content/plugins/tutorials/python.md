@@ -24,15 +24,50 @@ To create a plugin using Python, we'll need to first decide what task we want th
 ```python
 #!/usr/bin/env python
 
-import requests
+import http.client
+import os
+import urlparse
 
-response = requests.request(
-    os.environ['PARAMETER_METHOD'],
-    os.environ['PARAMETER_URL'],
-    data = os.environ['PARAMETER_BODY']
-)
+# import method parameter from environment
+method = os.getenv['PARAMETER_METHOD']
+# import body parameter from environment
+body = os.getenv['PARAMETER_BODY']
+# import url parameter from environment
+url = os.getenv['PARAMETER_URL']
 
-print(response.text.encode('utf8'))
+# check if a method parameter was provided
+if !method:
+    print("no method parameter provided")
+    exit(1)
+
+# check if a body parameter was provided
+if !body:
+    print("no body parameter provided")
+    exit(1)
+
+# check if a url parameter was provided
+if !url:
+    print("no url parameter provided")
+    exit(1)
+
+
+# capture full URI from url
+uri = urlparse(url)
+
+# create new HTTP connection from URL
+conn = http.client.HTTPSConnection(uri.hostname, uri.port)
+
+# create headers to be added to request
+headers = {}
+
+# send HTTP request
+conn.request(method, uri.path, body, headers)
+
+# capture the response
+response = conn.getresponse()
+
+# output the response
+print(response.read().decode("utf-8"))
 ```
 
 ## Image
@@ -44,9 +79,9 @@ FROM python:alpine
 
 RUN apk add --update --no-cache ca-certificates
 
-COPY script.py /bin/script.py
+COPY vela-sample.py /bin/vela-sample.py
 
-ENTRYPOINT ["python", "/bin/script.py"]
+ENTRYPOINT ["python", "/bin/vela-sample.py"]
 ```
 
 ## Publishing
