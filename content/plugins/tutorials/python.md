@@ -35,26 +35,18 @@ response = requests.request(
 print(response.text.encode('utf8'))
 ```
 
-## Executable
-
-Now that we have the script to accomplish our plugin's task, we need to ensure the code is executable for our plugin:
-
-```sh
-chmod +x script.py
-```
-
 ## Image
 
-Once we have the executable needed to accomplish our plugin's task, we need to create a Dockerfile to produce an image. This image should contain our script and be setup to run that script when the plugin is executed:
+Once we have the script needed to accomplish our plugin's task, we need to create a Dockerfile to produce an image. This image should contain our script and be setup to run that script when the plugin is executed:
 
 ```docker
-FROM alpine
+FROM python:alpine
 
-RUN apk add --update --no-cache ca-certificates python
+RUN apk add --update --no-cache ca-certificates
 
 COPY script.py /bin/script.py
 
-ENTRYPOINT ["/bin/script.py"]
+ENTRYPOINT ["python", "/bin/script.py"]
 ```
 
 ## Publishing
