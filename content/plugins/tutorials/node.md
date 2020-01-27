@@ -51,7 +51,7 @@ RUN apk add --update --no-cache ca-certificates
 
 COPY script.js /bin/script.js
 
-ENTRYPOINT ["node", "/bin/node.js"]
+ENTRYPOINT ["node", "/bin/script.js"]
 ```
 
 ## Publishing
