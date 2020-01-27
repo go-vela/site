@@ -54,7 +54,7 @@ RUN apk add --update --no-cache ca-certificates python
 
 COPY script.py /bin/script.py
 
-ENTRYPOINT ["python", "/bin/script.py"]
+ENTRYPOINT ["/bin/script.py"]
 ```
 
 ## Publishing
