@@ -24,7 +24,7 @@ From [Ruby documentation](https://www.ruby-lang.org/en/):
 To create a plugin using Ruby, we'll need to first decide what task we want this plugin to accomplish. For this example, we're going to create a program that makes an HTTP request from the provided input:
 
 ```ruby
-#!/usr/bin/ruby
+#!/usr/bin/env ruby
 
 require 'net/http'
 require 'uri'
@@ -61,7 +61,7 @@ RUN apk add --update --no-cache ca-certificates ruby
 
 COPY script.rb /bin/script.rb
 
-ENTRYPOINT ["ruby", "/bin/script.rb"]
+ENTRYPOINT ["/bin/script.rb"]
 ```
 
 ## Publishing
