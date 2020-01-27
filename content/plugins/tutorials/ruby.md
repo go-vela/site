@@ -86,7 +86,7 @@ To verify that your plugin performs the desired task, you can execute it locally
 
 ```sh
 docker run --rm \
-  -e PARAMETER_BODY="This is a sample Vela plugin written with Go" \
+  -e PARAMETER_BODY="This is a sample Vela plugin written with Ruby" \
   -e PARAMETER_METHOD="POST" \
   -e PARAMETER_URL="http://vela.localhost.com" \
   vela-sample:ruby
@@ -107,5 +107,5 @@ steps:
       url: http://vela.localhost.com
       method: POST
       body: |
-        This is a sample Vela plugin written with Go
+        This is a sample Vela plugin written with Ruby
 ```
