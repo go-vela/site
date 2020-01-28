@@ -8,7 +8,7 @@ description: >
 The below functions are available to operate on the `build` resource.
 
 {{% alert color="warning" %}}
-This section assumes you already know how to authenticate to the API.
+This section assumes you already know how to authenticate with the SDK.
 
-To authenticate to the API, please review the [authentication documentation](/docs/api/authentication).
+To authenticate with the SDK, please review the [authentication documentation](/docs/sdk/authentication).
 {{% /alert %}}
