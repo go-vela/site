@@ -35,22 +35,6 @@ body = os.getenv['PARAMETER_BODY']
 # import url parameter from environment
 url = os.getenv['PARAMETER_URL']
 
-# check if a method parameter was provided
-if !method:
-    print("no method parameter provided")
-    exit(1)
-
-# check if a body parameter was provided
-if !body:
-    print("no body parameter provided")
-    exit(1)
-
-# check if a url parameter was provided
-if !url:
-    print("no url parameter provided")
-    exit(1)
-
-
 # capture full URI from url
 uri = urlparse(url)
 
@@ -69,6 +53,10 @@ response = conn.getresponse()
 # output the response
 print(response.read().decode("utf-8"))
 ```
+
+{{% alert color="info" %}}
+An example of this code is provided in our [python section](https://github.com/go-vela/vela-plugin-tutorials/tree/master/python) of the [go-vela/vela-plugin-tutorials](https://github.com/go-vela/vela-plugin-tutorials) repository.
+{{% /alert %}}
 
 ## Image
 

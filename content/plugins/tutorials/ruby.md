@@ -36,24 +36,6 @@ body = ENV['PARAMETER_BODY']
 # import url parameter from environment
 url = ENV['PARAMETER_URL']
 
-# check if a method parameter was provided
-if method.empty?
-  puts "no method parameter provided"
-  exit(1)
-end
-
-# check if a body parameter was provided
-if body.empty?
-  puts "no body parameter provided"
-  exit(1)
-end
-
-# check if a url parameter was provided
-if url.empty?
-  puts "no url parameter provided"
-  exit(1)
-end
-
 # capture full URI from url
 uri = URI(url)
 
@@ -70,6 +52,10 @@ response = http.send_request(
 # output the response
 puts response.read_body
 ```
+
+{{% alert color="info" %}}
+An example of this code is provided in our [ruby section](https://github.com/go-vela/vela-plugin-tutorials/tree/master/ruby) of the [go-vela/vela-plugin-tutorials](https://github.com/go-vela/vela-plugin-tutorials) repository.
+{{% /alert %}}
 
 ## Image
 

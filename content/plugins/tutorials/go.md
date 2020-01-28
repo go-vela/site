@@ -39,24 +39,6 @@ func main() {
 	// import url parameter from environment
 	url := os.Getenv("PARAMETER_URL")
 
-	// check if a method parameter was provided
-	if len(method) == 0 {
-		fmt.Println("no method paramater provided")
-		os.Exit(1)
-	}
-
-	// check if a body parameter was provided
-	if len(body) == 0 {
-		fmt.Println("no body paramater provided")
-		os.Exit(1)
-	}
-
-	// check if a url parameter was provided
-	if len(url) == 0 {
-		fmt.Println("no url paramater provided")
-		os.Exit(1)
-	}
-
 	// create payload from body
 	payload := strings.NewReader(body)
 
@@ -78,6 +60,10 @@ func main() {
 	fmt.Println(response)
 }
 ```
+
+{{% alert color="info" %}}
+An example of this code is provided in our [go section](https://github.com/go-vela/vela-plugin-tutorials/tree/master/go) of the [go-vela/vela-plugin-tutorials](https://github.com/go-vela/vela-plugin-tutorials) repository.
+{{% /alert %}}
 
 ## Executable
 

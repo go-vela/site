@@ -33,30 +33,16 @@ body=${PARAMETER_BODY}
 # import url parameter from environment
 url=${PARAMETER_URL}
 
-# check if a method parameter was provided
-if [ -z "${method}" ]
-  echo "no method parameter provided"
-  exit 1
-fi
-
-# check if a body parameter was provided
-if [ -z "${body}" ]
-  echo "no body parameter provided"
-  exit 1
-fi
-
-# check if a url parameter was provided
-if [ -z "${url}" ]
-  echo "no url parameter provided"
-  exit 1
-fi
-
 # send curl request from provided input
 curl \
   -X "${method}" \
   -d "${body}" \
   "${url}"
 ```
+
+{{% alert color="info" %}}
+An example of this code is provided in our [bash section](https://github.com/go-vela/vela-plugin-tutorials/tree/master/bash) of the [go-vela/vela-plugin-tutorials](https://github.com/go-vela/vela-plugin-tutorials) repository.
+{{% /alert %}}
 
 ## Image
 
