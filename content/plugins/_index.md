@@ -3,7 +3,7 @@ title: "Plugins"
 linkTitle: "Plugins"
 layout: plugins
 description: >
-  This section contains the full reference on plugins with Vela.
+  This section contains information on how to use Vela plugins.
 menu:
   main:
 ---
