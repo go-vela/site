@@ -22,23 +22,44 @@ From [Node.js documentation](https://nodejs.org/):
 To create a plugin using Node.js, we'll need to first decide what task we want this plugin to accomplish. For this example, we're going to create a program that makes an HTTP request from the provided input:
 
 ```javascript
+#!/usr/bin/env node
+
 const https = require("https");
 const url = require("url");
-const myURL = url.parse(process.env.PARAMETER_URL);
 
+// import method parameter from environment
+const method = process.env.PARAMETER_METHOD;
+// import body parameter from environment
+const body = process.env.PARAMETER_BODY;
+// import url parameter from environment
+const uri = process.env.PARAMETER_URL;
+
+// capture full URL from uri
+const myURL = url.parse(uri);
+
+// create options for HTTP request
 const options = {
-  method: process.env.PARAMETER_METHOD
+  method: method
 };
 
+// create new HTTP request from provided input
 const req = https.request(myURL, options);
 
+// exit immediately if request errors
 req.on("error", () => {
   process.exit(1);
 });
 
+// write body to HTTP request
 req.write(process.env.PARAMETER_BODY);
+
+// send HTTP request
 req.end();
 ```
+
+{{% alert color="info" %}}
+An example of this code is provided in our [node.js section](https://github.com/go-vela/vela-plugin-tutorials/tree/master/node.js) of the [go-vela/vela-plugin-tutorials](https://github.com/go-vela/vela-plugin-tutorials) repository.
+{{% /alert %}}
 
 ## Image
 
@@ -49,9 +70,9 @@ FROM node:alpine
 
 RUN apk add --update --no-cache ca-certificates
 
-COPY script.js /bin/script.js
+COPY vela-sample.js /bin/vela-sample.js
 
-ENTRYPOINT ["node", "/bin/script.js"]
+ENTRYPOINT ["node", "/bin/vela-sample.js"]
 ```
 
 ## Publishing
