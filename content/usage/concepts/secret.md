@@ -6,3 +6,10 @@ description: >
 ---
 
 COMING SOON!
+
+## References
+
+* [API](/docs/api/secret)
+* [CLI](/docs/cli/secret)
+* SDK
+  * [Go](/docs/sdk/go/secret)
