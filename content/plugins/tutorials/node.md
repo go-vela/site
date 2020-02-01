@@ -19,7 +19,9 @@ From [Node.js documentation](https://nodejs.org/):
 
 ## Code
 
-To create a plugin using Node.js, we'll need to first decide what task we want this plugin to accomplish. For this example, we're going to create a program that makes an HTTP request from the provided input:
+To create a plugin using Node.js, we'll need to first decide what task we want this plugin to accomplish.
+
+For this example, we're going to create a program that makes an HTTP request from the provided input:
 
 ```javascript
 #!/usr/bin/env node
@@ -58,12 +60,14 @@ req.end();
 ```
 
 {{% alert color="info" %}}
-An example of this code is provided in our [node.js section](https://github.com/go-vela/vela-plugin-tutorials/tree/master/node.js) of the [go-vela/vela-plugin-tutorials](https://github.com/go-vela/vela-plugin-tutorials) repository.
+An example of this code is provided in our [node.js section](https://github.com/go-vela/vela-tutorials/tree/master/plugins/node.js) of the [go-vela/vela-tutorials](https://github.com/go-vela/vela-tutorials/tree/master/plugins) repository.
 {{% /alert %}}
 
 ## Image
 
-Once we have the executable needed to accomplish our plugin's task, we need to create a Dockerfile to produce an image. This image should contain our script and be setup to run that script when the plugin is executed:
+Once we have the executable needed to accomplish our plugin's task, we need to create a Dockerfile to produce an image.
+
+This image should contain our script and be setup to run that script when the plugin is executed:
 
 ```docker
 FROM node:alpine
@@ -75,16 +79,20 @@ COPY vela-sample.js /bin/vela-sample.js
 ENTRYPOINT ["node", "/bin/vela-sample.js"]
 ```
 
+{{% alert color="info" %}}
+An example of this image is provided in our [target/vela-sample](https://hub.docker.com/r/target/vela-sample) Docker repository.
+{{% /alert %}}
+
 ## Publishing
 
 In order to run our plugin in a pipeline, we'll need to make sure we build and publish it to a Docker registry:
 
 ```sh
 # build the image
-docker build -t vela-sample:node .
+docker build -t target/vela-sample:node .
 
 # publish the image
-docker push vela-sample:node
+docker push target/vela-sample:node
 ```
 
 {{% alert color="info" %}}
@@ -100,7 +108,7 @@ docker run --rm \
   -e PARAMETER_BODY="This is a sample Vela plugin written with Node.js" \
   -e PARAMETER_METHOD="POST" \
   -e PARAMETER_URL="http://vela.localhost.com" \
-  vela-sample:node
+  target/vela-sample:node
 ```
 
 ## Usage
@@ -111,8 +119,8 @@ After publishing your image to a Docker registry, you can then reference it in a
 version: "1"
 
 steps:
-  - name: sample_plugin
-    image: vela-sample:node
+  - name: sample node plugin
+    image: target/vela-sample:node
     pull: true
     parameters:
       url: http://vela.localhost.com

@@ -19,7 +19,9 @@ From [Python documentation](https://www.python.org/):
 
 ## Code
 
-To create a plugin using Python, we'll need to first decide what task we want this plugin to accomplish. For this example, we're going to create a program that makes an HTTP request from the provided input:
+To create a plugin using Python, we'll need to first decide what task we want this plugin to accomplish.
+
+For this example, we're going to create a program that makes an HTTP request from the provided input:
 
 ```python
 #!/usr/bin/env python
@@ -55,12 +57,14 @@ print(response.read().decode("utf-8"))
 ```
 
 {{% alert color="info" %}}
-An example of this code is provided in our [python section](https://github.com/go-vela/vela-plugin-tutorials/tree/master/python) of the [go-vela/vela-plugin-tutorials](https://github.com/go-vela/vela-plugin-tutorials) repository.
+An example of this code is provided in our [python section](https://github.com/go-vela/vela-tutorials/tree/master/plugins/python) of the [go-vela/vela-tutorials](https://github.com/go-vela/vela-tutorials/tree/master/plugins) repository.
 {{% /alert %}}
 
 ## Image
 
-Once we have the script needed to accomplish our plugin's task, we need to create a Dockerfile to produce an image. This image should contain our script and be setup to run that script when the plugin is executed:
+Once we have the script needed to accomplish our plugin's task, we need to create a Dockerfile to produce an image.
+
+This image should contain our script and be setup to run that script when the plugin is executed:
 
 ```docker
 FROM python:alpine
@@ -72,16 +76,20 @@ COPY vela-sample.py /bin/vela-sample.py
 ENTRYPOINT ["python", "/bin/vela-sample.py"]
 ```
 
+{{% alert color="info" %}}
+An example of this image is provided in our [target/vela-sample](https://hub.docker.com/r/target/vela-sample) Docker repository.
+{{% /alert %}}
+
 ## Publishing
 
 In order to run our plugin in a pipeline, we'll need to make sure we build and publish it to a Docker registry:
 
 ```sh
 # build the image
-docker build -t vela-sample:python .
+docker build -t target/vela-sample:python .
 
 # publish the image
-docker push vela-sample:python
+docker push target/vela-sample:python
 ```
 
 {{% alert color="info" %}}
@@ -97,7 +105,7 @@ docker run --rm \
   -e PARAMETER_BODY="This is a sample Vela plugin written with Python" \
   -e PARAMETER_METHOD="POST" \
   -e PARAMETER_URL="http://vela.localhost.com" \
-  vela-sample:python
+  target/vela-sample:python
 ```
 
 ## Usage
@@ -108,8 +116,8 @@ After publishing your image to a Docker registry, you can then reference it in a
 version: "1"
 
 steps:
-  - name: sample_plugin
-    image: vela-sample:python
+  - name: sample python plugin
+    image: target/vela-sample:python
     pull: true
     parameters:
       url: http://vela.localhost.com

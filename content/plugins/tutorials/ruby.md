@@ -21,7 +21,9 @@ From [Ruby documentation](https://www.ruby-lang.org/en/):
 
 ## Code
 
-To create a plugin using Ruby, we'll need to first decide what task we want this plugin to accomplish. For this example, we're going to create a program that makes an HTTP request from the provided input:
+To create a plugin using Ruby, we'll need to first decide what task we want this plugin to accomplish.
+
+For this example, we're going to create a program that makes an HTTP request from the provided input:
 
 ```ruby
 #!/usr/bin/env ruby
@@ -54,12 +56,14 @@ puts response.read_body
 ```
 
 {{% alert color="info" %}}
-An example of this code is provided in our [ruby section](https://github.com/go-vela/vela-plugin-tutorials/tree/master/ruby) of the [go-vela/vela-plugin-tutorials](https://github.com/go-vela/vela-plugin-tutorials) repository.
+An example of this code is provided in our [ruby section](https://github.com/go-vela/vela-tutorials/tree/master/plugins/ruby) of the [go-vela/vela-tutorials](https://github.com/go-vela/vela-tutorials/tree/master/plugins) repository.
 {{% /alert %}}
 
 ## Image
 
-Once we have the script needed to accomplish our plugin's task, we need to create a Dockerfile to produce an image. This image should contain our script and be setup to run that script when the plugin is executed:
+Once we have the script needed to accomplish our plugin's task, we need to create a Dockerfile to produce an image.
+
+This image should contain our script and be setup to run that script when the plugin is executed:
 
 ```docker
 FROM ruby:alpine
@@ -71,16 +75,20 @@ COPY vela-sample.rb /bin/vela-sample.rb
 ENTRYPOINT ["ruby", "/bin/vela-sample.rb"]
 ```
 
+{{% alert color="info" %}}
+An example of this image is provided in our [target/vela-sample](https://hub.docker.com/r/target/vela-sample) Docker repository.
+{{% /alert %}}
+
 ## Publishing
 
 In order to run our plugin in a pipeline, we'll need to make sure we build and publish it to a Docker registry:
 
 ```sh
 # build the image
-docker build -t vela-sample:ruby .
+docker build -t target/vela-sample:ruby .
 
 # publish the image
-docker push vela-sample:ruby
+docker push target/vela-sample:ruby
 ```
 
 {{% alert color="info" %}}
@@ -96,7 +104,7 @@ docker run --rm \
   -e PARAMETER_BODY="This is a sample Vela plugin written with Ruby" \
   -e PARAMETER_METHOD="POST" \
   -e PARAMETER_URL="http://vela.localhost.com" \
-  vela-sample:ruby
+  target/vela-sample:ruby
 ```
 
 ## Usage
@@ -107,8 +115,8 @@ After publishing your image to a Docker registry, you can then reference it in a
 version: "1"
 
 steps:
-  - name: sample_plugin
-    image: vela-sample:ruby
+  - name: sample ruby plugin
+    image: target/vela-sample:ruby
     pull: true
     parameters:
       url: http://vela.localhost.com
