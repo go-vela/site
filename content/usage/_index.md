@@ -6,4 +6,5 @@ description: >
   This section contains information on how to use Vela.
 menu:
   main:
+    weight: 105
 ---

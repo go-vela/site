@@ -6,4 +6,5 @@ description: >
   This section contains information on how to use Vela plugins.
 menu:
   main:
+    weight: 205
 ---

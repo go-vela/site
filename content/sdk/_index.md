@@ -6,4 +6,5 @@ description: >
   This section contains information on how to use the Vela SDKs.
 menu:
   main:
+    weight: 605
 ---
