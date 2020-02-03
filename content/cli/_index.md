@@ -6,5 +6,5 @@ description: >
   This section contains information on how to use the Vela CLI.
 menu:
   main:
-    weight: 505
+    weight: 605
 ---

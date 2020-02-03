@@ -2,7 +2,7 @@
 title: "Pipeline"
 linkTitle: "Pipeline"
 description: >
-  This section contains information on the Vela pipeline components.
+  This section contains information on the pipeline components.
 ---
 
 The `pipeline` component is a list of repeatable, execution instructions for Vela.
