@@ -7,9 +7,9 @@ description: >
 
 The `hook` component is part of the core system components for Vela.
 
-A `hook` is defined as a single, webhook object received from a [repo](/docs/usage/concepts/system/repo) in the source control provider prompting Vela to perform an action.
+A `hook` is defined as a single, webhook object received from a [repo](/docs/concepts/system/repo) in the source control provider prompting Vela to perform an action.
 
-In most cases, processing a hook involves fetching the [pipeline](/docs/usage/concepts/pipeline) from the repo and triggering a [build](/docs/usage/concepts/system/build).
+In most cases, processing a hook involves fetching the [pipeline](/docs/concepts/pipeline) from the repo and triggering a [build](/docs/concepts/system/build).
 
 {{% alert color="info" %}}
 From [GitHub's webhook documentation](https://help.github.com/en/github/extending-github/about-webhooks):

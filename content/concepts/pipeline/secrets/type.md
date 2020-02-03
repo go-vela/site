@@ -5,7 +5,7 @@ description: >
   This section contains information on the type component for a secret.
 ---
 
-The `type` component is a part of a [secret](/docs/usage/concepts/pipeline/secrets) for Vela.
+The `type` component is a part of a [secret](/docs/concepts/pipeline/secrets) for Vela.
 
 This declaration allows you to provide the type of secret to fetch from the storage backend.
 

@@ -5,7 +5,7 @@ description: >
   This section contains information on the needs component for a stage.
 ---
 
-The `needs` component is a part of a [stage](/docs/usage/concepts/pipeline/stages) for Vela.
+The `needs` component is a part of a [stage](/docs/concepts/pipeline/stages) for Vela.
 
 This declaration allows you to provide other stages that must complete before starting the current one.
 

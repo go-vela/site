@@ -8,9 +8,7 @@ description: >
 The `pipeline` component is a list of repeatable, execution instructions for Vela.
 
 {{% alert color="info" %}}
-A single, ephemeral run of a pipeline is known as a [build](/docs/usage/concepts/resources/build).
-
-Each instruction for execution in a build is referred to as a [step](/docs/usage/concepts/resources/step).
+A single, ephemeral run of a pipeline is known as a [build](/docs/concepts/resources/build).
 {{% /alert %}}
 
 It can be thought of as a defined workflow for how you test, build, and deploy your code.

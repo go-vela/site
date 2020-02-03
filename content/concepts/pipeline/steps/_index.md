@@ -5,12 +5,12 @@ description: >
   This section contains information on the steps component for a pipeline.
 ---
 
-The `steps` component is a part of a [pipeline](/docs/usage/concepts/pipeline) for Vela.
+The `steps` component is a part of a [pipeline](/docs/concepts/pipeline) for Vela.
 
 This declaration allows you to provide sequential, execution instructions for a pipeline.
 
 {{% alert color="info" %}}
-A single, ephemeral run of a pipeline is known as a [build](/docs/usage/concepts/resources/build).
+A single, ephemeral run of a pipeline is known as a [build](/docs/concepts/system/build).
 {{% /alert %}}
 
 Steps are always executed, in the order they are defined, inside an ephemeral [Docker container](https://www.docker.com/resources/what-container).
@@ -18,7 +18,7 @@ Steps are always executed, in the order they are defined, inside an ephemeral [D
 If the container returns a non-zero exit code, the build immediately terminates and returns a failure status.
 
 {{% alert color="info" %}}
-To run `steps` in parallel, you can visit the [stages documentation](/docs/usage/concepts/pipeline/stages).
+To run `steps` in parallel, you can visit the [stages documentation](/docs/concepts/pipeline/stages).
 {{% /alert %}}
 
 ## Fields

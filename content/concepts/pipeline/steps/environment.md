@@ -5,7 +5,7 @@ description: >
   This section contains information on the environment component for a step.
 ---
 
-The `environment` component is a part of a [step](/docs/usage/concepts/pipeline/steps) for Vela.
+The `environment` component is a part of a [step](/docs/concepts/pipeline/steps) for Vela.
 
 This declaration allows you to provide variables injected into the container environment.
 

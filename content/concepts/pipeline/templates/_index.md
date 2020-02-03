@@ -5,7 +5,7 @@ description: >
   This section contains information on the template component for a step.
 ---
 
-The `template` component is a part of a [step](/docs/usage/concepts/pipeline/step) for Vela.
+The `template` component is a part of a [step](/docs/concepts/pipeline/steps) for Vela.
 
 This declaration allows you to provide the name of template to expand in the pipeline.
 

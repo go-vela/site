@@ -7,7 +7,7 @@ description: >
 
 The `service` component is part of the core system components for Vela.
 
-A `service` is defined as a detached (headless), execution instruction for a [pipeline](/docs/usage/concepts/pipeline).
+A `service` is defined as a detached (headless), execution instruction for a [pipeline](/docs/concepts/pipeline).
 
 Each service is executed inside an ephemeral [Docker container](https://www.docker.com/resources/what-container) and starts at the beginning of a pipeline.
 

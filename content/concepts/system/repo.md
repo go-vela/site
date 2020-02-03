@@ -7,7 +7,7 @@ description: >
 
 The `repo` component is part of the core system components for Vela.
 
-A `repo` is defined as the upstream dependency from the source control provider used to store code and trigger [hooks](/docs/usage/concepts/system/hook) to Vela.
+A `repo` is defined as the upstream dependency from the source control provider used to store code and trigger [hooks](/docs/concepts/system/hook) to Vela.
 
 {{% alert color="info" %}}
 From [GitHub's repository documentation](

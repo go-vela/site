@@ -5,7 +5,7 @@ description: >
   This section contains information on the type component for a template.
 ---
 
-The `type` component is a part of a [template](/docs/usage/concepts/pipeline/templates) for Vela.
+The `type` component is a part of a [template](/docs/concepts/pipeline/templates) for Vela.
 
 This declaration allows you to provide the type of template provided from the remote system.
 

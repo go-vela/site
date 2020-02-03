@@ -5,7 +5,7 @@ description: >
   This section contains information on the ports component for a service.
 ---
 
-The `ports` component is a part of a [service](/docs/usage/concepts/pipeline/services) for Vela.
+The `ports` component is a part of a [service](/docs/concepts/pipeline/services) for Vela.
 
 This declaration allows you to provide a list of ports to map for the container in the pipeline.
 

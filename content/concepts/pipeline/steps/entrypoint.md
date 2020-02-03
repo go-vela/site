@@ -5,7 +5,7 @@ description: >
   This section contains information on the entrypoint component for a step.
 ---
 
-The `entrypoint` component is a part of a [step](/docs/usage/concepts/pipeline/steps) for Vela.
+The `entrypoint` component is a part of a [step](/docs/concepts/pipeline/steps) for Vela.
 
 This declaration allows you to provide the command to execute inside the container.
 

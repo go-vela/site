@@ -5,7 +5,7 @@ description: >
   This section contains information on the source component for a template.
 ---
 
-The `source` component is a part of a [template](/docs/usage/concepts/pipeline/templates) for Vela.
+The `source` component is a part of a [template](/docs/concepts/pipeline/templates) for Vela.
 
 This declaration allows you to provide the path to the template in the remote system.
 

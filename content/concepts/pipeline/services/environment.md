@@ -5,7 +5,7 @@ description: >
   This section contains information on the environment component for a service.
 ---
 
-The `environment` component is a part of a [service](/docs/usage/concepts/pipeline/services) for Vela.
+The `environment` component is a part of a [service](/docs/concepts/pipeline/services) for Vela.
 
 This declaration allows you to provide variables injected into the container environment.
 

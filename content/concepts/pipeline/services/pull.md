@@ -5,9 +5,9 @@ description: >
   This section contains information on the pull component for a service.
 ---
 
-The `pull` component is a part of a [service](/docs/usage/concepts/pipeline/steps) for Vela.
+The `pull` component is a part of a [service](/docs/concepts/pipeline/services) for Vela.
 
-This declaration allows you to automatically upgrade to the latest version of the [image](/docs/usage/concepts/pipeline/service/image).
+This declaration allows you to automatically upgrade to the latest version of the [image](/docs/concepts/pipeline/services/image).
 
 {{% alert color="info" %}}
 Vela will always attempt to pull from its existing cache for images.

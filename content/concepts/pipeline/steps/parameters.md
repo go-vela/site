@@ -5,7 +5,7 @@ description: >
   This section contains information on the parameters component for a step.
 ---
 
-The `parameters` component is a part of a [step](/docs/usage/concepts/pipeline/steps) for Vela.
+The `parameters` component is a part of a [step](/docs/concepts/pipeline/steps) for Vela.
 
 This declaration allows you to provide extra configuration variables for a plugin.
 

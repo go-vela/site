@@ -5,7 +5,7 @@ description: >
   This section contains information on the secrets component for a step.
 ---
 
-The `secrets` component is a part of a [step](/docs/usage/concepts/pipeline/steps) for Vela.
+The `secrets` component is a part of a [step](/docs/concepts/pipeline/steps) for Vela.
 
 This declaration allows you to provide sensitive variables injected into the container environment.
 

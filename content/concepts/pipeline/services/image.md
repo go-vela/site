@@ -5,7 +5,7 @@ description: >
   This section contains information on the image component for a service.
 ---
 
-The `image` component is a part of a [service](/docs/usage/concepts/pipeline/services) for Vela.
+The `image` component is a part of a [service](/docs/concepts/pipeline/services) for Vela.
 
 This declaration allows you to provide the [Docker image](https://docs.docker.com/engine/docker-overview/#images) used to create the ephemeral container.
 
@@ -25,6 +25,10 @@ image: library/golang:1.12
 image: index.docker.io/library/golang
 image: index.docker.io/library/golang:1.12
 ```
+
+{{% alert color="warning" %}}
+All the above images would pull an image from the [golang Docker repository](https://hub.docker.com/_/golang).
+{{% /alert %}}
 
 ## Syntax
 

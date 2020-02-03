@@ -5,12 +5,12 @@ description: >
   This section contains information on the secrets component for a pipeline.
 ---
 
-The `secrets` component is a part of a [pipeline](/docs/usage/concepts/pipeline) for Vela.
+The `secrets` component is a part of a [pipeline](/docs/concepts/pipeline) for Vela.
 
 This declaration allows you to provide sensitive information into the pipeline.
 
 {{% alert color="info" %}}
-A single, ephemeral run of a pipeline is known as a [build](/docs/usage/concepts/resources/build).
+A single, ephemeral run of a pipeline is known as a [build](/docs/concepts/system/build).
 {{% /alert %}}
 
 Secrets are always retrieved at the beginning of a pipeline before any services, stages or steps are created or started. They are extremely useful when you don't want to provide sensitive information in plain text.

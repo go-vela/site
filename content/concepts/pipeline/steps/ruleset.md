@@ -5,7 +5,7 @@ description: >
   This section contains information on the ruleset component for a step.
 ---
 
-The `ruleset` component is a part of a [step](/docs/usage/concepts/pipeline/steps) for Vela.
+The `ruleset` component is a part of a [step](/docs/concepts/pipeline/steps) for Vela.
 
 This declaration allows you to provide conditions to limit the execution of the container.
 

@@ -1,16 +1,16 @@
 ---
-title: "Steps"
-linkTitle: "Steps"
+title: "Services"
+linkTitle: "Services"
 description: >
   This section contains information on the services component for a pipeline.
 ---
 
-The `services` component is a part of a [pipeline](/docs/usage/concepts/pipeline) for Vela.
+The `services` component is a part of a [pipeline](/docs/concepts/pipeline) for Vela.
 
 This declaration allows you to provide detached (headless), execution instructions for a pipeline.
 
 {{% alert color="info" %}}
-A single, ephemeral run of a pipeline is known as a [build](/docs/usage/concepts/resources/build).
+A single, ephemeral run of a pipeline is known as a [build](/docs/concepts/system/build).
 {{% /alert %}}
 
 Services are always executed, in parallel inside an ephemeral [Docker container](https://www.docker.com/resources/what-container). They are extremely useful when your testing requires additional services such as a cache, database or queue.
