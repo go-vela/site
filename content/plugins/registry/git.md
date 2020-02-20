@@ -5,10 +5,10 @@ title: "Git"
 ## Overview
 
 {{% alert color="info" %}}
-This plugin is automatically injected into your pipeline for the source repository.
+This plugin is automatically injected into every pipeline for the source repository.
 {{% /alert %}}
 
-This plugin enables you to clone repositories in a Vela pipeline to your build workspace.
+This plugin enables the ability to clone repositories in a Vela pipeline to the build workspace.
 
 Source Code: https://github.com/go-vela/vela-git
 
@@ -17,7 +17,7 @@ Registry: https://hub.docker.com/r/target/vela-git
 ## Usage
 
 {{% alert color="info" %}}
-This plugin is automatically injected into your pipeline for the source repository.
+This plugin is automatically injected into every pipeline for the source repository.
 {{% /alert %}}
 
 Sample of cloning a repository:
@@ -67,10 +67,10 @@ steps:
 ## Secrets
 
 {{% alert color="warning" %}}
-Users should refrain from configuring sensitive information in your pipeline in plain text.
+Users should refrain from configuring sensitive information in their pipeline in plain text.
 {{% /alert %}}
 
-You can use Vela secrets to substitute sensitive values at runtime:
+Users can use [Vela secrets](/docs/concepts/pipeline/secrets/) to substitute sensitive values at runtime:
 
 ```diff
 steps:

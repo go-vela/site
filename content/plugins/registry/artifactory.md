@@ -4,7 +4,7 @@ title: "Artifactory"
 
 ## Overview
 
-This plugin enables you to manage artifacts in [Artifactory](https://jfrog.com/artifactory/) in a Vela pipeline.
+This plugin enables the ability to manage artifacts in [Artifactory](https://jfrog.com/artifactory/) in a Vela pipeline.
 
 Source Code: https://github.com/go-vela/vela-artifactory
 
@@ -97,10 +97,10 @@ steps:
 ## Secrets
 
 {{% alert color="warning" %}}
-Users should refrain from configuring sensitive information in your pipeline in plain text.
+Users should refrain from configuring sensitive information in their pipeline in plain text.
 {{% /alert %}}
 
-You can use Vela secrets to substitute sensitive values at runtime:
+Users can use [Vela secrets](/docs/concepts/pipeline/secrets/) to substitute sensitive values at runtime:
 
 ```diff
 steps:

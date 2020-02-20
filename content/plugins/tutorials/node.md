@@ -6,7 +6,7 @@ description: >
 ---
 
 {{% alert color="warning" %}}
-We recommend you review [Docker's best practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) before attempting to create your own plugin.
+We recommend reviewing [Docker's best practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) before attempting to create a custom plugin.
 
 We recommend that all plugins be placed inside a [scratch image](https://hub.docker.com/_/scratch).
 {{% /alert %}}
@@ -60,14 +60,14 @@ req.end();
 ```
 
 {{% alert color="info" %}}
-An example of this code is provided in our [node.js section](https://github.com/go-vela/vela-tutorials/tree/master/plugins/node.js) of the [go-vela/vela-tutorials](https://github.com/go-vela/vela-tutorials/tree/master/plugins) repository.
+An example of this code is provided in the [node.js section](https://github.com/go-vela/vela-tutorials/tree/master/plugins/node.js) of the [go-vela/vela-tutorials](https://github.com/go-vela/vela-tutorials/tree/master/plugins) repository.
 {{% /alert %}}
 
 ## Image
 
 Once we have the executable needed to accomplish our plugin's task, we need to create a Dockerfile to produce an image.
 
-This image should contain our script and be setup to run that script when the plugin is executed:
+This image should contain the script and be setup to run that script when the plugin is executed:
 
 ```docker
 FROM node:alpine
@@ -80,12 +80,12 @@ ENTRYPOINT ["node", "/bin/vela-sample.js"]
 ```
 
 {{% alert color="info" %}}
-An example of this image is provided in our [target/vela-sample](https://hub.docker.com/r/target/vela-sample) Docker repository.
+An example of this image is provided in the [target/vela-sample](https://hub.docker.com/r/target/vela-sample) Docker repository.
 {{% /alert %}}
 
 ## Publishing
 
-In order to run our plugin in a pipeline, we'll need to make sure we build and publish it to a Docker registry:
+In order to run the plugin in a pipeline, we'll need to make sure we build and publish it to a Docker registry:
 
 ```sh
 # build the image
@@ -101,7 +101,7 @@ This has the added benefit of enabling others in the community to consume your p
 
 ## Troubleshooting
 
-To verify that your plugin performs the desired task, you can execute it locally via the command line:
+To verify that the plugin performs the desired task, it can be executed locally via the command line:
 
 ```sh
 docker run --rm \
@@ -113,7 +113,7 @@ docker run --rm \
 
 ## Usage
 
-After publishing your image to a Docker registry, you can then reference it in a pipeline:
+After publishing the image to a Docker registry, it can be referenced in a pipeline:
 
 ```yaml
 version: "1"
