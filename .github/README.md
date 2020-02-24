@@ -10,8 +10,6 @@ We use [Hugo](https://gohugo.io/) to format and generate our website, the [Docsy
 
 For installation and usage, please [visit our user docs](https://go-vela.github.io/docs).
 
-For local development, please [visit our repo docs](DOCS.md).
-
 ## Contributing
 
 We are always welcome to new pull requests!

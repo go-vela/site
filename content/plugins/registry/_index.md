@@ -1,8 +1,6 @@
 ---
 title: "Registry"
 linkTitle: "Registry"
-weight: 30
-date: 2017-01-05
 description: >
-  Community plugins to customize pipelines.
+  List of community plugins to customize Vela pipelines.
 ---

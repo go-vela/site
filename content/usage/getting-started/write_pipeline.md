@@ -65,7 +65,7 @@ steps:
 
 ### Ruleset
 
-Rulesets allow you to specify when a step will be triggered. You can restrict a step to a specific condition or specify a rule to specify to run unless a condition is met. You can read more in the pipeline docs.
+Rulesets allow you to specify when a step will be triggered. You can restrict a step to a specific condition or specify a rule to run unless a condition is met. You can read more in the pipeline docs.
 
 ```yaml
 steps:

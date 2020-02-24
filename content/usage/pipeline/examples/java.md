@@ -11,7 +11,7 @@ version: "1"
 
 steps:
   - name: install
-    image: openjdk8:8-alpine
+    image: openjdk:8-alpine
     pull: true
     environment:
       GRADLE_USER_HOME: .gradle
@@ -20,7 +20,7 @@ steps:
       - ./gradlew downloadDependencies
 
   - name: test
-    image: openjdk8:8-alpine
+    image: openjdk:8-alpine
     pull: true
     environment:
       GRADLE_USER_HOME: .gradle
@@ -29,7 +29,7 @@ steps:
       - ./gradlew test
 
   - name: build
-    image: openjdk8:8-alpine
+    image: openjdk:8-alpine
     pull: true
     environment:
       GRADLE_USER_HOME: .gradle
