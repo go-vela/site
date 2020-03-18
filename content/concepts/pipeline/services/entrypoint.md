@@ -5,7 +5,7 @@ description: >
   This section contains information on the entrypoint component for a service.
 ---
 
-The `entrypoint` component is a part of a [service](/docs/concepts/pipeline/services) for Vela.
+The `entrypoint` component is a part of a [service](/docs/concepts/pipeline/services/) for Vela.
 
 This declaration allows you to provide the command to execute inside the container.
 

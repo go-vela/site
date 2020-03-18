@@ -36,7 +36,7 @@ This section assumes you have already installed and setup the CLI.
 
 To install the CLI, please review the [installation documentation](/docs/cli/install/).
 
-To setup the CLI, please review the [authentication documentation](/docs/cli/authentication).
+To setup the CLI, please review the [authentication documentation](/docs/cli/authentication/).
 {{% /alert %}}
 
 #### Request

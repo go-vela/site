@@ -7,11 +7,10 @@ description: >
 
 The `repo` component is part of the core system components for Vela.
 
-A `repo` is defined as the upstream dependency from the source control provider used to store code and trigger [hooks](/docs/concepts/system/hook) to Vela.
+A `repo` is defined as the upstream dependency from the source control provider used to store code and trigger [hooks](/docs/concepts/system/hook/) to Vela.
 
 {{% alert color="info" %}}
-From [GitHub's repository documentation](
-https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-repositories):
+From [GitHub's repository documentation](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-repositories):
 
 > A repository is like a folder for your project. Your project's repository contains all of your project's files and stores each file's revision history. You can also discuss and manage your project's work within the repository.
 
@@ -48,7 +47,7 @@ This component is stored in the configured Vela backend in the `repos` table.
 
 ## References
 
-* [API](/docs/api/repo)
-* [CLI](/docs/cli/repo)
-* SDK
-  * [Go](/docs/sdk/go/repo)
+- [API](/docs/api/repo/)
+- [CLI](/docs/cli/repo/)
+- SDK
+  - [Go](/docs/sdk/go/repo/)

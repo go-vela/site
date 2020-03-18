@@ -13,7 +13,7 @@ This declaration allows you to provide parallel, execution instructions for a pi
 A single, ephemeral run of a pipeline is known as a [build](/docs/concepts/system/build/).
 {{% /alert %}}
 
-Stages are always executed, in parallel, and are comprised of one or many [steps](/docs/concepts/pipeline/steps).
+Stages are always executed, in parallel, and are comprised of one or many [steps](/docs/concepts/pipeline/steps/).
 
 ## Fields
 

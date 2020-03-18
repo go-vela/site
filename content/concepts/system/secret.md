@@ -11,12 +11,13 @@ A `secret` is defined as a piece of sensitive data or information that you want 
 
 {{% alert color="info" %}}
 The following list are some examples of secrets:
-* API keys
-* certificates
-* passwords
-* tokens
-* much, much more...
-{{% /alert %}}
+
+- API keys
+- certificates
+- passwords
+- tokens
+- much, much more...
+  {{% /alert %}}
 
 ## Fields
 
@@ -77,7 +78,7 @@ This secret type requires you to be a member of the team in the organization.
 
 ## References
 
-* [API](/docs/api/secret)
-* [CLI](/docs/cli/secret)
-* SDK
-  * [Go](/docs/sdk/go/secret)
+- [API](/docs/api/secret/)
+- [CLI](/docs/cli/secret/)
+- SDK
+  - [Go](/docs/sdk/go/secret/)

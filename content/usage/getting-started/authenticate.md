@@ -16,7 +16,7 @@ Navigate to your deployed instance and follow the OAuth workflow presented on th
 
 ## CLI
 
-Please see authentication in the [CLI reference](/docs/cli/authentication).
+Please see authentication in the [CLI reference](/docs/cli/authentication/).
 
 _If you have not yet installed the CLI, see [CLI install reference](/docs/cli/install/) first._
 

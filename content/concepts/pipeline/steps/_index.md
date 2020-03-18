@@ -18,7 +18,7 @@ Steps are always executed, in the order they are defined, inside an ephemeral [D
 If the container returns a non-zero exit code, the build immediately terminates and returns a failure status.
 
 {{% alert color="info" %}}
-To run `steps` in parallel, you can visit the [stages documentation](/docs/concepts/pipeline/stages).
+To run `steps` in parallel, you can visit the [stages documentation](/docs/concepts/pipeline/stages/).
 {{% /alert %}}
 
 ## Fields

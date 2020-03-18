@@ -5,7 +5,7 @@ description: >
   This section contains information on the ruleset component for a step.
 ---
 
-The `ruleset` component is a part of a [step](/docs/concepts/pipeline/steps) for Vela.
+The `ruleset` component is a part of a [step](/docs/concepts/pipeline/steps/) for Vela.
 
 This declaration allows you to provide conditions to limit the execution of the container.
 
@@ -54,9 +54,10 @@ steps:
 
 {{% alert color="info" %}}
 This pipeline will limit the execution of the `test` and `build` steps to:
-* builds with a branch of `master`
-* builds with an event of `push`
-{{% /alert %}}
+
+- builds with a branch of `master`
+- builds with an event of `push`
+  {{% /alert %}}
 
 ## Advanced
 
@@ -103,10 +104,12 @@ steps:
 
 {{% alert color="info" %}}
 This pipeline will limit the execution of the `test` step to:and `build` steps to:
-* builds with a branch of `master`
-* builds with an event of `push`
+
+- builds with a branch of `master`
+- builds with an event of `push`
 
 This pipeline will also limit the execution of the `build` step to:
-* builds without a branch of `master`
-* builds without an event of `push`
-{{% /alert %}}
+
+- builds without a branch of `master`
+- builds without an event of `push`
+  {{% /alert %}}

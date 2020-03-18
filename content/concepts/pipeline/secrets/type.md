@@ -5,7 +5,7 @@ description: >
   This section contains information on the type component for a secret.
 ---
 
-The `type` component is a part of a [secret](/docs/concepts/pipeline/secrets) for Vela.
+The `type` component is a part of a [secret](/docs/concepts/pipeline/secrets/) for Vela.
 
 This declaration allows you to provide the type of secret to fetch from the storage backend.
 
@@ -83,10 +83,12 @@ steps:
 
 {{% alert color="info" %}}
 This pipeline will allow the following secrets to be referenced:
-* `username`
-* `password`
+
+- `username`
+- `password`
 
 This pipeline will also add the following environment variables to the `test` step:
-* `USERNAME=<value>`
-* `PASSWORD=<value>`
-{{% /alert %}}
+
+- `USERNAME=<value>`
+- `PASSWORD=<value>`
+  {{% /alert %}}

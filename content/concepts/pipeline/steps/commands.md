@@ -5,7 +5,7 @@ description: >
   This section contains information on the commands component for a step.
 ---
 
-The `commands` component is a part of a [step](/docs/concepts/pipeline/steps) for Vela.
+The `commands` component is a part of a [step](/docs/concepts/pipeline/steps/) for Vela.
 
 This declaration allows you to provide execution instructions to run inside the container.
 

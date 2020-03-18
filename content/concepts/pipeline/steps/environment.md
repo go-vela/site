@@ -5,7 +5,7 @@ description: >
   This section contains information on the environment component for a step.
 ---
 
-The `environment` component is a part of a [step](/docs/concepts/pipeline/steps) for Vela.
+The `environment` component is a part of a [step](/docs/concepts/pipeline/steps/) for Vela.
 
 This declaration allows you to provide variables injected into the container environment.
 
@@ -50,7 +50,7 @@ The following environment variables are injected into every step:
 #### Build Environment Variables
 
 | Key                  | Value                                                                                    | Explanation                                                         |
-| ---------------------| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| -------------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
 | `BUILD_AUTHOR`       | `octocat`                                                                                | author from the source commit                                       |
 | `BUILD_AUTHOR_EMAIL` | `octocat@github.com`                                                                     | author email from the source commit                                 |
 | `BUILD_BRANCH`       | `master`                                                                                 | branch from the source commit                                       |
@@ -73,9 +73,10 @@ The following environment variables are injected into every step:
 | `BUILD_TAG`          | `v1.0.0`                                                                                 | tag is populated from the source reference                          |
 
 {{% alert color="info" %}}
-* `BUILD_LINK` is not populated if the Vela server is configured to run headless (no UI).
-* `BUILD_TAG` is only populated during `tag` events.
-{{% /alert %}}
+
+- `BUILD_LINK` is not populated if the Vela server is configured to run headless (no UI).
+- `BUILD_TAG` is only populated during `tag` events.
+  {{% /alert %}}
 
 #### Vela Environment Variables
 

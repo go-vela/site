@@ -5,7 +5,7 @@ description: >
   This section contains information on the template component for a step.
 ---
 
-The `template` component is a part of a [step](/docs/concepts/pipeline/steps) for Vela.
+The `template` component is a part of a [step](/docs/concepts/pipeline/steps/) for Vela.
 
 This declaration allows you to provide the name of template to expand in the pipeline.
 
@@ -13,10 +13,10 @@ This declaration allows you to provide the name of template to expand in the pip
 
 The following fields are used to configure the component:
 
-| Name     | Description                                        | Required |
-| -------- | -------------------------------------------------- | -------- |
-| `name`   | unique identifier for the template in the pipeline | `true`   |
-| `vars`   | variables injected into the template               | `false`  |
+| Name   | Description                                        | Required |
+| ------ | -------------------------------------------------- | -------- |
+| `name` | unique identifier for the template in the pipeline | `true`   |
+| `vars` | variables injected into the template               | `false`  |
 
 ## Syntax
 

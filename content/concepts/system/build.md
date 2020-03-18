@@ -9,10 +9,10 @@ The `build` component is part of the core system components for Vela.
 
 A `build` is defined as a single, ephemeral execution of a [pipeline](/docs/concepts/pipeline/).
 
-A build is comprised of one or many [services](/docs/concepts/system/service) and [steps](/docs/concepts/system/step) that contain the instructions to execute from the pipeline.
+A build is comprised of one or many [services](/docs/concepts/system/service/) and [steps](/docs/concepts/system/step/) that contain the instructions to execute from the pipeline.
 
 {{% alert color="info" %}}
-A build is typically created from a [hook](/docs/concepts/system/hook) triggered by a [repo](/docs/concepts/system/repo) in the source control provider.
+A build is typically created from a [hook](/docs/concepts/system/hook/) triggered by a [repo](/docs/concepts/system/repo/) in the source control provider.
 {{% /alert %}}
 
 ## Fields

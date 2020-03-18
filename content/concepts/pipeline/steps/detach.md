@@ -5,7 +5,7 @@ description: >
   This section contains information on the detach component for a step.
 ---
 
-The `detach` component is a part of a [step](/docs/concepts/pipeline/steps) for Vela.
+The `detach` component is a part of a [step](/docs/concepts/pipeline/steps/) for Vela.
 
 This declaration allows you to run the container in a detached (headless) state.
 
