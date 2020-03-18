@@ -26,4 +26,4 @@ Please see authentication in the [API reference](/docs/api/authentication/).
 
 ## SDK
 
-Please see authentication in the [sdk reference](/docs/usage/reference/sdk/authentication).
+Please see authentication in the [sdk reference](/docs/sdk/go/authentication/).
