@@ -27,7 +27,7 @@ COMING SOON!
 {{% alert color="warning" %}}
 This section assumes you already know how to authenticate to the API.
 
-To authenticate to the API, please review the [authentication documentation](/docs/api/authentication).
+To authenticate to the API, please review the [authentication documentation](/docs/api/authentication/).
 {{% /alert %}}
 
 #### Request
@@ -51,12 +51,8 @@ curl \
     "name": "foo",
     "value": null,
     "type": "repo",
-    "images": [
-      "alpine"
-    ],
-    "events": [
-      "push"
-    ]
+    "images": ["alpine"],
+    "events": ["push"]
   },
   {
     "id": 2,
@@ -66,12 +62,8 @@ curl \
     "name": "bar",
     "value": null,
     "type": "repo",
-    "images": [
-      "alpine"
-    ],
-    "events": [
-      "push"
-    ]
+    "images": ["alpine"],
+    "events": ["push"]
   }
 ]
 ```

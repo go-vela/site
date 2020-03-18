@@ -7,7 +7,7 @@ description: >
 
 The `log` component is part of the core system components for Vela.
 
-A `log` is defined as a sequence of records about the actions performed by a worker in a [build](/docs/concepts/system/build).
+A `log` is defined as a sequence of records about the actions performed by a worker in a [build](/docs/concepts/system/build/).
 
 ## Fields
 
@@ -28,13 +28,13 @@ This component is stored in the configured Vela backend in the `logs` table.
 
 ## References
 
-* API
-  * [Build](/docs/api/build/logs)
-  * [Service](/docs/api/service/logs)
-  * [Step](/docs/api/step/logs)
-* [CLI](/docs/cli/log)
-* SDK
-  * Go
-    * [Build](/docs/sdk/go/build/logs)
-    * [Service](/docs/sdk/go/service/logs)
-    * [Step](/docs/sdk/go/step/logs)
+- API
+  - [Build](/docs/api/build/logs)
+  - [Service](/docs/api/service/logs)
+  - [Step](/docs/api/step/logs)
+- [CLI](/docs/cli/log)
+- SDK
+  - Go
+    - [Build](/docs/sdk/go/build/logs)
+    - [Service](/docs/sdk/go/service/logs)
+    - [Step](/docs/sdk/go/step/logs)

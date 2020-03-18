@@ -28,10 +28,10 @@ The following parameters are used to configure the command:
 {{% alert color="info" %}}
 This command also supports setting the following parameters via a configuration file:
 
-* `org`
-* `repo`
+- `org`
+- `repo`
 
-For more information, please review the [CLI config documentation](/docs/cli/config).
+For more information, please review the [CLI config documentation](/docs/cli/config/).
 {{% /alert %}}
 
 ## Permissions
@@ -43,7 +43,7 @@ COMING SOON!
 {{% alert color="warning" %}}
 This section assumes you have already installed and setup the CLI.
 
-To install the CLI, please review the [installation documentation](/docs/cli/install).
+To install the CLI, please review the [installation documentation](/docs/cli/install/).
 
 To setup the CLI, please review the [authentication documentation](/docs/cli/authentication).
 {{% /alert %}}

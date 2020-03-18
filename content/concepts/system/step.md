@@ -7,7 +7,7 @@ description: >
 
 The `step` component is part of the core system components for Vela.
 
-A `step` is defined as a sequential, execution instruction for a [pipeline](/docs/concepts/pipeline).
+A `step` is defined as a sequential, execution instruction for a [pipeline](/docs/concepts/pipeline/).
 
 Each step is executed inside an ephemeral [Docker container](https://www.docker.com/resources/what-container) and are always executed in the order they are defined.
 
@@ -40,7 +40,7 @@ This component is stored in the configured Vela backend in the `steps` table.
 
 ## References
 
-* [API](/docs/api/step)
-* [CLI](/docs/cli/step)
-* SDK
-  * [Go](/docs/sdk/go/step)
+- [API](/docs/api/step)
+- [CLI](/docs/cli/step)
+- SDK
+  - [Go](/docs/sdk/go/step)

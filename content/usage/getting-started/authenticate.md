@@ -18,11 +18,11 @@ Navigate to your deployed instance and follow the OAuth workflow presented on th
 
 Please see authentication in the [CLI reference](/docs/cli/authentication).
 
-_If you have not yet installed the CLI, see [CLI install reference](/docs/cli/install) first._
+_If you have not yet installed the CLI, see [CLI install reference](/docs/cli/install/) first._
 
 ## API
 
-Please see authentication in the [API reference](/docs/api/authentication).
+Please see authentication in the [API reference](/docs/api/authentication/).
 
 ## SDK
 

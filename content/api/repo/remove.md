@@ -15,10 +15,10 @@ DELETE  /api/v1/repos/:org/:repo
 
 The following parameters are used to configure the endpoint:
 
-| Name    | Description          |
-| ------- | -------------------- |
-| `org`   | name of organization |
-| `repo`  | name of repository   |
+| Name   | Description          |
+| ------ | -------------------- |
+| `org`  | name of organization |
+| `repo` | name of repository   |
 
 ## Permissions
 
@@ -36,7 +36,7 @@ COMING SOON!
 {{% alert color="warning" %}}
 This section assumes you already know how to authenticate to the API.
 
-To authenticate to the API, please review the [authentication documentation](/docs/api/authentication).
+To authenticate to the API, please review the [authentication documentation](/docs/api/authentication/).
 {{% /alert %}}
 
 #### Request

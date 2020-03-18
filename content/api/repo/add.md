@@ -27,7 +27,7 @@ COMING SOON!
 {{% alert color="warning" %}}
 This section assumes you already know how to authenticate to the API.
 
-To authenticate to the API, please review the [authentication documentation](/docs/api/authentication).
+To authenticate to the API, please review the [authentication documentation](/docs/api/authentication/).
 {{% /alert %}}
 
 #### File
@@ -37,7 +37,7 @@ To authenticate to the API, please review the [authentication documentation](/do
   "owner": "github",
   "name": "octocat",
   "link": "https://github.com/github/octocat",
-  "clone": "https://github.com/github/octocat.git",
+  "clone": "https://github.com/github/octocat.git"
 }
 ```
 

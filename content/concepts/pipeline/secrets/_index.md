@@ -5,12 +5,12 @@ description: >
   This section contains information on the secrets component for a pipeline.
 ---
 
-The `secrets` component is a part of a [pipeline](/docs/concepts/pipeline) for Vela.
+The `secrets` component is a part of a [pipeline](/docs/concepts/pipeline/) for Vela.
 
 This declaration allows you to provide sensitive information into the pipeline.
 
 {{% alert color="info" %}}
-A single, ephemeral run of a pipeline is known as a [build](/docs/concepts/system/build).
+A single, ephemeral run of a pipeline is known as a [build](/docs/concepts/system/build/).
 {{% /alert %}}
 
 Secrets are always retrieved at the beginning of a pipeline before any services, stages or steps are created or started. They are extremely useful when you don't want to provide sensitive information in plain text.
@@ -32,10 +32,11 @@ The following fields are used to configure the component:
 
 {{% alert color="info" %}}
 The following fields have a default value already set:
-* `engine`: `native`
-* `key`: `<secret name>`
-* `type`: `repo`
-{{% /alert %}}
+
+- `engine`: `native`
+- `key`: `<secret name>`
+- `type`: `repo`
+  {{% /alert %}}
 
 ## Syntax
 
@@ -70,10 +71,12 @@ steps:
 
 {{% alert color="info" %}}
 This pipeline will allow the following secrets to be referenced:
-* `username`
-* `password`
+
+- `username`
+- `password`
 
 This pipeline will also add the following environment variables to the `test` step:
-* `USERNAME=<value>`
-* `PASSWORD=<value>`
-{{% /alert %}}
+
+- `USERNAME=<value>`
+- `PASSWORD=<value>`
+  {{% /alert %}}

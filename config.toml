@@ -106,6 +106,6 @@ no = 'Sorry to hear that. Please <a href="https://github.com/go-vela/docs/issues
         desc = "Chat with other project developers"
 [[params.links.developer]]
 	name = "Developer mailing list"
-	url = "vela@target.com"
+	url = "mailto:vela@target.com"
 	icon = "fa fa-envelope"
         desc = "Discuss development issues around the project"

@@ -5,7 +5,7 @@ description: >
   This section contains information on the metadata component for a pipeline.
 ---
 
-The `metadata` component is a part of a [pipeline](/docs/concepts/pipeline) for Vela.
+The `metadata` component is a part of a [pipeline](/docs/concepts/pipeline/) for Vela.
 
 This declaration allows extra information to be passed to the pipeline.
 

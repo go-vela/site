@@ -15,13 +15,13 @@ DELETE  /api/v1/secrets/:engine/:type/:org/:name/:secret
 
 The following parameters are used to configure the endpoint:
 
-| Name     | Description                  |
-| -------- | ---------------------------- |
-| `engine` | name of engine               |
-| `type`   | name of type of secret       |
-| `org`    | name of organization         |
-| `name`   | name of repository or team   |
-| `secret` | name of secret               |
+| Name     | Description                |
+| -------- | -------------------------- |
+| `engine` | name of engine             |
+| `type`   | name of type of secret     |
+| `org`    | name of organization       |
+| `name`   | name of repository or team |
+| `secret` | name of secret             |
 
 ## Permissions
 
@@ -39,7 +39,7 @@ COMING SOON!
 {{% alert color="warning" %}}
 This section assumes you already know how to authenticate to the API.
 
-To authenticate to the API, please review the [authentication documentation](/docs/api/authentication).
+To authenticate to the API, please review the [authentication documentation](/docs/api/authentication/).
 {{% /alert %}}
 
 #### Request

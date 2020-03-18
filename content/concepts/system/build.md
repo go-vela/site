@@ -7,7 +7,7 @@ description: >
 
 The `build` component is part of the core system components for Vela.
 
-A `build` is defined as a single, ephemeral execution of a [pipeline](/docs/concepts/pipeline).
+A `build` is defined as a single, ephemeral execution of a [pipeline](/docs/concepts/pipeline/).
 
 A build is comprised of one or many [services](/docs/concepts/system/service) and [steps](/docs/concepts/system/step) that contain the instructions to execute from the pipeline.
 
@@ -55,7 +55,7 @@ This component is stored in the configured Vela backend in the `builds` table.
 
 ## References
 
-* [API](/docs/api/build)
-* [CLI](/docs/cli/build)
-* SDK
-  * [Go](/docs/sdk/go/build)
+- [API](/docs/api/build/)
+- [CLI](/docs/cli/build/)
+- SDK
+  - [Go](/docs/sdk/go/build/)
