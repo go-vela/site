@@ -1,7 +1,7 @@
 ---
-title:  "Secrets"
-toc:  true
-weight:  9
+title: "Secrets"
+toc: true
+weight: 9
 description: >
   Set secrets that can be used within your build step.
 ---
@@ -71,4 +71,4 @@ steps:
 
 ### Reference Secret
 
-Vela offers a number of different ways to reference your secrets. To see the full set of options navigate to the [secret reference](/docs/usage/reference/pipeline/secret/) section.
+Vela offers a number of different ways to reference your secrets. To see the full set of options navigate to the [secret reference](/docs/usage/pipeline/steps/secrets/) section.
