@@ -76,7 +76,7 @@ secret "foo" was added
 Vela supports secrets at an organization level, which allows all repositories in that org to have access to a single secret. When creating `--type org` secrets the `--repo` flag is still required and allows for a wildcard.
 
 ```
-vela add secret --engine native --type org --repo * --name foo --value bar
+vela add secret --engine native --type org --repo '*' --name foo --value bar
 ```
 
 #### Input From File
