@@ -17,6 +17,7 @@ For more information, you can run `vela add secret --help`.
 
 {{% alert color="warning" %}}
 Note on special characters:
+
 Certain characters may require you to encapsulate your secret with `"` or `'`.
 `\` characters have to be double escaped to be `\\\`.
 {{% /alert %}}
