@@ -15,6 +15,12 @@ $ vela add secret <parameters...> <arguments...>
 For more information, you can run `vela add secret --help`.
 {{% /alert %}}
 
+{{% alert color="warning" %}}
+Note on special characters:
+Certain characters may require you to encapsulate your secret with `"` or `'`.
+`\` characters have to be double escaped to be `\\\`.
+{{% /alert %}}
+
 ## Parameters
 
 The following parameters are used to configure the command:
