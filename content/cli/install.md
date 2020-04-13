@@ -32,7 +32,7 @@ brew install vela
 
 ```sh
 # download the binary
-curl -L https://github.com/go-vela/cli/releases/download/v0.2.0/vela_darwin_amd64.tar.gz | tar zx
+curl -L https://github.com/go-vela/cli/releases/latest/download/vela_darwin_amd64.tar.gz | tar zx
 
 # copy binary to $PATH
 sudo cp vela /usr/local/bin/
@@ -44,7 +44,7 @@ sudo cp vela /usr/local/bin/
 
 ```sh
 # download the binary
-curl -L https://github.com/go-vela/cli/releases/download/v0.2.0/vela_linux_amd64.tar.gz | tar zx
+curl -L https://github.com/go-vela/cli/releases/latest/download/vela_linux_amd64.tar.gz | tar zx
 
 # copy binary to $PATH
 sudo cp vela /usr/local/bin/
@@ -60,7 +60,7 @@ The `curl` utility must be installed before following the instructions below.
 
 ```sh
 # download the binary
-curl -L https://github.com/go-vela/cli/releases/download/v0.2.0/vela_windows_amd64.tar.gz --output vela_windows_amd64.tar.gz
+curl -L https://github.com/go-vela/cli/releases/latest/download/vela_windows_amd64.tar.gz --output vela_windows_amd64.tar.gz
 
 # unzip the tarball
 tar xzvf vela_windows_amd64.tar.gz
@@ -73,7 +73,7 @@ copy vela C:\Windows\System32/vela.exe
 
 ```sh
 # download the binary
-curl https://github.com/go-vela/cli/releases/download/v0.2.0/vela_windows_amd64.tar.gz -OutFile vela_windows_amd64.tar.gz
+curl https://github.com/go-vela/cli/releases/latest/download/vela_windows_amd64.tar.gz -OutFile vela_windows_amd64.tar.gz
 
 # unzip the tarball
 tar xzvf vela_windows_amd64.tar.gz
@@ -86,7 +86,7 @@ cp vela C:\Windows\System32/vela.exe
 
 ```sh
 # download the binary
-curl -L https://github.com/go-vela/cli/releases/download/v0.2.0/vela_windows_amd64.tar.gz --output vela_windows_amd64.tar.gz
+curl -L https://github.com/go-vela/cli/releases/latest/download/vela_windows_amd64.tar.gz --output vela_windows_amd64.tar.gz
 
 # unzip the tarball
 tar xzvf vela_windows_amd64.tar.gz
