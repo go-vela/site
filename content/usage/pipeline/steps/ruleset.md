@@ -96,19 +96,19 @@ steps:
   - name: echo_always
     image: alpine:latest
     commands:
-      - echo "i will always run with comment event"
+      - echo "i will always run with 'comment' event"
 
   - name: echo_never_run_comment
     image: alpine:latest
     commands:
-      - echo "i will never run with comment event"
+      - echo "i will never run with 'comment' event"
     ruleset:
       event: [ push, pull_request ]
 
   - name: echo_only_run_comment
     image: alpine:latest
     commands:
-      - echo "i will only run with comment event"
+      - echo "i will only run with 'comment' event and `run build` comment"
     ruleset:
       event: [ comment ]
       comment: [ "run build" ]
