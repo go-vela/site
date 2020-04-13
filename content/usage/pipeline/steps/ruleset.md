@@ -108,7 +108,7 @@ steps:
   - name: echo_only_run_comment
     image: alpine:latest
     commands:
-      - echo "i will only run with 'comment' event and `run build` comment"
+      - echo "i will only run with 'comment' event and 'run build' comment"
     ruleset:
       event: [ comment ]
       comment: [ "run build" ]
