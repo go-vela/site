@@ -26,12 +26,12 @@ metadata:
 secrets:
   - name: username
     engine: native
-+   key: example-org/example-repo/username
++   key: egithub/octocat/username
     type: repo
 
   - name: password
     engine: native
-+   key: example-org/example-repo/password
++   key: egithub/octocat/password
     type: repo
 
 steps:
