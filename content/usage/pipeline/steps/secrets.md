@@ -13,11 +13,11 @@ version: "1"
 
 +secrets:
 +  - name: docker_username
-+    key:  docker_username
++    key:  example-org/example-repo/docker_username
 +    engine: native
 +    type: repo
 +  - name: docker_password
-+    key:  docker_password
++    key:  example-org/example-repo/docker_password
 +    engine: native
 +    type: repo
 ```
@@ -35,11 +35,11 @@ steps:
 
 secrets:
   - name: docker_username
-    key:  docker_username
+    key:  example-org/example-repo/docker_username
     engine: native
     type: repo
   - name: docker_password
-    key:  docker_password
+    key:  example-org/example-repo/docker_password
     engine: native
     type: repo
 ```
@@ -63,10 +63,10 @@ steps:
 +secrets:
 -  - name: docker_username
 +  - name: docker_eng_username
-+    key:  username
++    key:  example-org/example-repo/username
 -  - name: docker_password
 +  - name: docker_eng_password
-+    key:  password
++    key:  example-org/example-repo/password
 ```
 
 ### Reference Secret

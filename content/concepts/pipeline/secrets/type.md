@@ -62,13 +62,13 @@ metadata:
 secrets:
   - name: username
     engine: native
-    key: username
-+    type: repo
+    key: example-org/example-repo/username
++   type: repo
 
   - name: password
     engine: native
-    key: password
-+    type: repo
+    key: example-org/example-repo/password
++   type: repo
 
 steps:
   - name: test

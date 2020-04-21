@@ -26,12 +26,12 @@ metadata:
 secrets:
   - name: username
     engine: native
-+    key: username
++   key: example-org/example-repo/username
     type: repo
 
   - name: password
     engine: native
-+    key: password
++   key: example-org/example-repo/password
     type: repo
 
 steps:
