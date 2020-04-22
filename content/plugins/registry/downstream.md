@@ -70,7 +70,13 @@ steps:
 Users should refrain from configuring sensitive information in their pipeline in plain text.
 {{% /alert %}}
 
-Users can use [Vela secrets](/docs/concepts/pipeline/secrets/) to substitute sensitive values at runtime:
+The plugin accepts the following `parameters` for authentication:
+
+| Parameter | Environment Variable Configuration                                  |
+| --------- | ------------------------------------------------------------------- |
+| `token`   | `CONFIG_TOKEN`, `DOWNSTREAM_TOKEN`, `PARAMETER_TOKEN`, `VELA_TOKEN` |
+
+Users can use [Vela secrets](/docs/concepts/pipeline/secrets/) to substitute these sensitive values at runtime:
 
 ```diff
 steps:
@@ -85,6 +91,12 @@ steps:
       server: https://vela-server.localhost
 -     token: superSecretVelaToken
 ```
+
+{{% alert color="info" %}}
+This example will add the `secrets` to the `trigger_hello-world` step as environment variables:
+
+- `DOWNSTREAM_TOKEN`=<value>
+{{% /alert %}}
 
 ## Parameters
 

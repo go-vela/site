@@ -55,16 +55,26 @@ steps:
 
 ## Secrets
 
-**NOTE: Users should refrain from configuring sensitive information in your pipeline in plain text.**
+{{% alert color="warning" %}}
+Users should refrain from configuring sensitive information in their pipeline in plain text.
+{{% /alert %}}
 
-You can use Vela secrets to substitute sensitive values at runtime:
+The plugin accepts the following `parameters` for authentication:
+
+| Parameter       | Environment Variable Configuration                                       |
+| --------------- | ------------------------------------------------------------------------ |
+| `access_key`    | `AWS_ACCESS_KEY_ID`, `CACHE_S3_ACCESS_KEY`, `PARAMETER_ACCESS_KEY`       |
+| `secret_key`    | `AWS_SECRET_ACCESS_KEY`, `CACHE_S3_SECRET_KEY`, `PARAMETER_SECRET_KEY`   |
+| `session_token` | `AWS_SESSION_TOKEN`, `CACHE_S3_SESSION_TOKEN`, `PARAMETER_SESSION_TOKEN` |
+
+Users can use [Vela secrets](/docs/concepts/pipeline/secrets/) to substitute these sensitive values at runtime:
 
 ```diff
 steps:
   - name: restore_cache
     image: target/vela-s3-cache:v0.1.0
     pull: true
-+   secrets: [ cache_access_key, cache_secret_key ]
++   secrets: [ cache_s3_access_key, cache_s3_secret_key ]
     parameters:
       action: restore
       root: mybucket
@@ -73,19 +83,26 @@ steps:
 -     secret_key: 123456789QWERTYEXAMPLE
 ```
 
+{{% alert color="info" %}}
+This example will add the `secrets` to the `restore_cache` step as environment variables:
+
+- `CACHE_S3_ACCESS_KEY`=<value>
+- `CACHE_S3_SECRET_KEY`=<value>
+{{% /alert %}}
+
 ## Parameters
 
 The following parameters can used to configure all image actions:
 
-| Name        | Description                          | Required | Default |
-| ----------- | ------------------------------------ | -------- | ------- |
-| `action`    | action to perform against s3         | `true`   | `N/A`   |
-| `log_level` | set the log level for the plugin     | `true`   | `info`  |
-| `server`    | s3 instance to communicate with      | `true`   | `N/A`   |
-| `access_key`| access key for communication with s3 | `true`   | `N/A`   |
-| `secret_key`| secret key for communication with s3 | `true`   | `N/A`   |
-| `root`      | name of the s3 bucket                | `true`   | `N/A`   |
-| `prefix`    | path prefix for the object(s)        | `true`   | `N/A`   |
+| Name         | Description                          | Required | Default |
+| ------------ | ------------------------------------ | -------- | ------- |
+| `action`     | action to perform against s3         | `true`   | `N/A`   |
+| `log_level`  | set the log level for the plugin     | `true`   | `info`  |
+| `server`     | s3 instance to communicate with      | `true`   | `N/A`   |
+| `access_key` | access key for communication with s3 | `true`   | `N/A`   |
+| `secret_key` | secret key for communication with s3 | `true`   | `N/A`   |
+| `root`       | name of the s3 bucket                | `true`   | `N/A`   |
+| `prefix`     | path prefix for the object(s)        | `true`   | `N/A`   |
 
 #### Restore
 
