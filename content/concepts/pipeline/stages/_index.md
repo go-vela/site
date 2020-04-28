@@ -5,15 +5,15 @@ description: >
   This section contains information on the stages component for a pipeline.
 ---
 
-The `stages` component is a part of a [pipeline](/docs/concepts/pipeline) for Vela.
+The `stages` component is a part of a [pipeline](/docs/concepts/pipeline/) for Vela.
 
 This declaration allows you to provide parallel, execution instructions for a pipeline.
 
 {{% alert color="info" %}}
-A single, ephemeral run of a pipeline is known as a [build](/docs/concepts/system/build).
+A single, ephemeral run of a pipeline is known as a [build](/docs/concepts/system/build/).
 {{% /alert %}}
 
-Stages are always executed, in parallel, and are comprised of one or many [steps](/docs/concepts/pipeline/steps).
+Stages are always executed, in parallel, and are comprised of one or many [steps](/docs/concepts/pipeline/steps/).
 
 ## Fields
 

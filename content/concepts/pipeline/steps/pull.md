@@ -5,9 +5,9 @@ description: >
   This section contains information on the pull component for a step.
 ---
 
-The `pull` component is a part of a [step](/docs/concepts/pipeline/steps) for Vela.
+The `pull` component is a part of a [step](/docs/concepts/pipeline/steps/) for Vela.
 
-This declaration allows you to automatically upgrade to the latest version of the [image](/docs/concepts/pipeline/steps/image).
+This declaration allows you to automatically upgrade to the latest version of the [image](/docs/concepts/pipeline/steps/image/).
 
 {{% alert color="info" %}}
 Vela will always attempt to pull from its existing cache for images.

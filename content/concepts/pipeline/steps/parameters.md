@@ -5,7 +5,7 @@ description: >
   This section contains information on the parameters component for a step.
 ---
 
-The `parameters` component is a part of a [step](/docs/concepts/pipeline/steps) for Vela.
+The `parameters` component is a part of a [step](/docs/concepts/pipeline/steps/) for Vela.
 
 This declaration allows you to provide extra configuration variables for a plugin.
 
@@ -30,6 +30,7 @@ steps:
 
 {{% alert color="info" %}}
 This pipeline will add the following environment variables to the `plugin` step:
-* `PARAMETER_REGISTRY=index.docker.io`
-* `PARAMETER_REPO=index.docker.io/octocat/hello-world`
-{{% /alert %}}
+
+- `PARAMETER_REGISTRY=index.docker.io`
+- `PARAMETER_REPO=index.docker.io/octocat/hello-world`
+  {{% /alert %}}

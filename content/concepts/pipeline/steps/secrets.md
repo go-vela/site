@@ -5,7 +5,7 @@ description: >
   This section contains information on the secrets component for a step.
 ---
 
-The `secrets` component is a part of a [step](/docs/concepts/pipeline/steps) for Vela.
+The `secrets` component is a part of a [step](/docs/concepts/pipeline/steps/) for Vela.
 
 This declaration allows you to provide sensitive variables injected into the container environment.
 
@@ -45,8 +45,9 @@ steps:
 
 {{% alert color="info" %}}
 This pipeline will add the following environment variables to the `test` and `build` steps:
-* `GIT_USERNAME=<value>`
-* `GIT_PASSWORD=<value>`
+
+- `GIT_USERNAME=<value>`
+- `GIT_PASSWORD=<value>`
 
 This pipeline will also execute the `test` step first, then run the `build` step.
 {{% /alert %}}
@@ -102,8 +103,9 @@ steps:
 
 {{% alert color="info" %}}
 This pipeline will add the following environment variables to the `test` and `build` steps:
-* `GIT_USERNAME=<value>`
-* `GIT_PASSWORD=<value>`
+
+- `GIT_USERNAME=<value>`
+- `GIT_PASSWORD=<value>`
 
 This pipeline will also execute the `test` step first, then run the `build` step.
 {{% /alert %}}

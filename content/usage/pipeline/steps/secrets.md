@@ -1,7 +1,7 @@
 ---
-title:  "Secrets"
-toc:  true
-weight:  9
+title: "Secrets"
+toc: true
+weight: 9
 description: >
   Set secrets that can be used within your build step.
 ---
@@ -13,11 +13,11 @@ version: "1"
 
 +secrets:
 +  - name: docker_username
-+    key:  docker_username
++    key:  github/octocat/docker_username
 +    engine: native
 +    type: repo
 +  - name: docker_password
-+    key:  docker_password
++    key:  github/octocat/docker_password
 +    engine: native
 +    type: repo
 ```
@@ -35,11 +35,11 @@ steps:
 
 secrets:
   - name: docker_username
-    key:  docker_username
+    key:  github/octocat/docker_username
     engine: native
     type: repo
   - name: docker_password
-    key:  docker_password
+    key:  github/octocat/docker_password
     engine: native
     type: repo
 ```
@@ -63,12 +63,12 @@ steps:
 +secrets:
 -  - name: docker_username
 +  - name: docker_eng_username
-+    key:  username
++    key:  github/octocat/username
 -  - name: docker_password
 +  - name: docker_eng_password
-+    key:  password
++    key:  github/octocat/password
 ```
 
 ### Reference Secret
 
-Vela offers a number of different ways to reference your secrets. To see the full set of options navigate to the [secret reference](/docs/usage/reference/pipeline/secret/) section.
+Vela offers a number of different ways to reference your secrets. To see the full set of options navigate to the [secret reference](/docs/concepts/pipeline/secrets/) section.

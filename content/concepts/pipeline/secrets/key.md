@@ -5,7 +5,7 @@ description: >
   This section contains information on the key component for a secret.
 ---
 
-The `key` component is a part of a [secret](/docs/concepts/pipeline/secrets) for Vela.
+The `key` component is a part of a [secret](/docs/concepts/pipeline/secrets/) for Vela.
 
 This declaration allows you to provide the path to the secret to fetch from the storage backend.
 
@@ -26,12 +26,12 @@ metadata:
 secrets:
   - name: username
     engine: native
-+    key: username
++   key: egithub/octocat/username
     type: repo
 
   - name: password
     engine: native
-+    key: password
++   key: egithub/octocat/password
     type: repo
 
 steps:
@@ -47,10 +47,12 @@ steps:
 
 {{% alert color="info" %}}
 This pipeline will allow the following secrets to be referenced:
-* `username`
-* `password`
+
+- `username`
+- `password`
 
 This pipeline will also add the following environment variables to the `test` step:
-* `USERNAME=<value>`
-* `PASSWORD=<value>`
-{{% /alert %}}
+
+- `USERNAME=<value>`
+- `PASSWORD=<value>`
+  {{% /alert %}}

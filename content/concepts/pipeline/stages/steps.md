@@ -5,12 +5,12 @@ description: >
   This section contains information on the steps component for a stage.
 ---
 
-The `steps` component is a part of a [stage](/docs/concepts/pipeline/stages) for Vela.
+The `steps` component is a part of a [stage](/docs/concepts/pipeline/stages/) for Vela.
 
 This declaration allows you to provide sequential, execution instructions for a stage.
 
 {{% alert color="info" %}}
-For more information, you can visit the [steps documentation](/docs/concepts/pipeline/steps).
+For more information, you can visit the [steps documentation](/docs/concepts/pipeline/steps/).
 {{% /alert %}}
 
 ## Syntax

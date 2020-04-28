@@ -29,7 +29,7 @@ This component is stored in the configured Vela backend in the `users` table.
 
 ## References
 
-* [API](/docs/api/user)
-* [CLI](/docs/cli/user)
-* SDK
-  * [Go](/docs/sdk/go/user)
+- [API](/docs/api/user/)
+- [CLI](/docs/cli/user/)
+- SDK
+  - [Go](/docs/sdk/go/user/)

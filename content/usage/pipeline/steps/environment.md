@@ -10,7 +10,7 @@ The environment declaration for a build step instructs Vela to insert the given 
 {{% alert title="Warning" color="warning" %}}
 You should not use environment for plugin parameters or secrets.
 
-Please see [parameters](../parameters) or [secrets](../secrets).
+Please see [parameters](../parameters/) or [secrets](../secrets/).
 {{% /alert %}}
 
 ```diff

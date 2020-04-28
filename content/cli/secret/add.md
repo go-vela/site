@@ -15,6 +15,13 @@ $ vela add secret <parameters...> <arguments...>
 For more information, you can run `vela add secret --help`.
 {{% /alert %}}
 
+{{% alert color="warning" %}}
+Note on special characters:
+
+Certain characters may require you to encapsulate your secret with `"` or `'`.
+`\` characters have to be double escaped to be `\\\`.
+{{% /alert %}}
+
 ## Parameters
 
 The following parameters are used to configure the command:
@@ -35,12 +42,12 @@ The following parameters are used to configure the command:
 {{% alert color="info" %}}
 This command also supports setting the following parameters via a configuration file:
 
-* `engine`
-* `type`
-* `org`
-* `repo`
+- `engine`
+- `type`
+- `org`
+- `repo`
 
-For more information, please review the [CLI config documentation](/docs/cli/config).
+For more information, please review the [CLI config documentation](/docs/cli/config/).
 {{% /alert %}}
 
 ## Permissions
@@ -52,9 +59,9 @@ COMING SOON!
 {{% alert color="warning" %}}
 This section assumes you have already installed and setup the CLI.
 
-To install the CLI, please review the [installation documentation](/docs/cli/install).
+To install the CLI, please review the [installation documentation](/docs/cli/install/).
 
-To setup the CLI, please review the [authentication documentation](/docs/cli/authentication).
+To setup the CLI, please review the [authentication documentation](/docs/cli/authentication/).
 {{% /alert %}}
 
 #### Request

@@ -7,7 +7,7 @@ description: >
 
 The `queue` component is one of the server components for Vela.
 
-This component defines the system Vela uses for publishing workloads to be completed by a [worker](/docs/concepts/infrastructure/worker).
+This component defines the system Vela uses for publishing workloads to be completed by a [worker](/docs/concepts/infrastructure/worker/).
 
 ## Configuration
 
@@ -22,9 +22,10 @@ The following options are used to configure the component:
 
 {{% alert color="info" %}}
 All available options support `VELA_*` prefixes for the environment variables. For example:
-* `QUEUE_DRIVER` - type of client to control and operate queue
-* `VELA_QUEUE_DRIVER` - type of client to control and operate queue
-{{% /alert %}}
+
+- `QUEUE_DRIVER` - type of client to control and operate queue
+- `VELA_QUEUE_DRIVER` - type of client to control and operate queue
+  {{% /alert %}}
 
 #### Drivers
 

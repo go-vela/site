@@ -10,5 +10,5 @@ The below functions are available to operate on the `build` resource.
 {{% alert color="warning" %}}
 This section assumes you already know how to authenticate with the SDK.
 
-To authenticate with the SDK, please review the [authentication documentation](/docs/sdk/authentication).
+To authenticate with the SDK, please review the [authentication documentation](/docs/sdk/authentication/).
 {{% /alert %}}

@@ -86,7 +86,13 @@ steps:
 Users should refrain from configuring sensitive information in their pipeline in plain text.
 {{% /alert %}}
 
-Users can use [Vela secrets](/docs/concepts/pipeline/secrets/) to substitute sensitive values at runtime:
+The plugin accepts the following `parameters` for authentication:
+
+| Parameter | Environment Variable Configuration               |
+| --------- | ------------------------------------------------ |
+| `config`  | `CONFIG_FILE`, `KUBE_CONFIG`, `PARAMETER_CONFIG` |
+
+Users can use [Vela secrets](/docs/concepts/pipeline/secrets/) to substitute these sensitive values at runtime:
 
 ```diff
 steps:
@@ -102,6 +108,12 @@ steps:
 -     apiVersion: v1
 -     kind: Config
 ```
+
+{{% alert color="info" %}}
+This example will add the `secrets` to the `kubernetes` step as environment variables:
+
+- `KUBE_CONFIG`=<value>
+{{% /alert %}}
 
 ## Parameters
 

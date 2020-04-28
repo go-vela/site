@@ -37,7 +37,7 @@ COMING SOON!
 {{% alert color="warning" %}}
 This section assumes you already know how to authenticate to the API.
 
-To authenticate to the API, please review the [authentication documentation](/docs/api/authentication).
+To authenticate to the API, please review the [authentication documentation](/docs/api/authentication/).
 {{% /alert %}}
 
 #### File
@@ -74,6 +74,6 @@ curl \
   "exit_code": 0,
   "created": 1563475419,
   "started": 1563475420,
-  "finished": 1563475421,
+  "finished": 1563475421
 }
 ```

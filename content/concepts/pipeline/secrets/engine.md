@@ -5,7 +5,7 @@ description: >
   This section contains information on the engine component for a secret.
 ---
 
-The `engine` component is a part of a [secret](/docs/concepts/pipeline/secrets) for Vela.
+The `engine` component is a part of a [secret](/docs/concepts/pipeline/secrets/) for Vela.
 
 This declaration allows you to provide the name of the storage backend to fetch the secret from.
 
@@ -48,13 +48,13 @@ metadata:
 
 secrets:
   - name: username
-+    engine: native
-    key: username
++   engine: native
+    key: github/octocat/username
     type: repo
 
   - name: password
-+    engine: native
-    key: password
++   engine: native
+    key: github/octocat/password
     type: repo
 
 steps:
@@ -70,10 +70,12 @@ steps:
 
 {{% alert color="info" %}}
 This pipeline will allow the following secrets to be referenced:
-* `username`
-* `password`
+
+- `username`
+- `password`
 
 This pipeline will also add the following environment variables to the `test` step:
-* `USERNAME=<value>`
-* `PASSWORD=<value>`
-{{% /alert %}}
+
+- `USERNAME=<value>`
+- `PASSWORD=<value>`
+  {{% /alert %}}

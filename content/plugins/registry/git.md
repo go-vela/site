@@ -70,6 +70,13 @@ steps:
 Users should refrain from configuring sensitive information in their pipeline in plain text.
 {{% /alert %}}
 
+The plugin accepts the following `parameters` for authentication:
+
+| Parameter        | Environment Variable Configuration                                |
+| ---------------- | ----------------------------------------------------------------- |
+| `netrc_password` | `GIT_PASSWORD`, `PARAMETER_NETRC_PASSWORD`, `VELA_NETRC_PASSWORD` |
+| `netrc_username` | `GIT_USERNAME`, `PARAMETER_NETRC_USERNAME`, `VELA_NETRC_USERNAME` |
+
 Users can use [Vela secrets](/docs/concepts/pipeline/secrets/) to substitute sensitive values at runtime:
 
 ```diff
@@ -86,6 +93,13 @@ steps:
       remote: https://github.com/octocat/hello-world.git
       sha: 7fd1a60b01f91b314f59955a4e4d4e80d8edf11d
 ```
+
+{{% alert color="info" %}}
+This example will add the `secrets` to the `clone_hello-world` step as environment variables:
+
+- `GIT_USERNAME`=<value>
+- `GIT_PASSWORD`=<value>
+{{% /alert %}}
 
 ## Parameters
 

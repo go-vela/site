@@ -100,7 +100,15 @@ steps:
 Users should refrain from configuring sensitive information in their pipeline in plain text.
 {{% /alert %}}
 
-Users can use [Vela secrets](/docs/concepts/pipeline/secrets/) to substitute sensitive values at runtime:
+The plugin accepts the following `parameters` for authentication:
+
+| Parameter   | Environment Variable Configuration                              |
+| ----------- | --------------------------------------------------------------- |
+| `api_key`   | `ARTIFACTORY_API_KEY`, `CONFIG_API_KEY`, `PARAMETER_API_KEY`    |
+| `password`  | `ARTIFACTORY_PASSWORD`, `CONFIG_PASSWORD`, `PARAMETER_PASSWORD` |
+| `username`  | `ARTIFACTORY_USERNAME`, `CONFIG_USERNAME`, `PARAMETER_USERNAME` |
+
+Users can use [Vela secrets](/docs/concepts/pipeline/secrets/) to substitute these sensitive values at runtime:
 
 ```diff
 steps:
@@ -116,6 +124,13 @@ steps:
 -     username: octocat
 -     password: superSecretPassword
 ```
+
+{{% alert color="info" %}}
+This example will add the `secrets` to the `copy_artifacts` step as environment variables:
+
+- `ARTIFACTORY_USERNAME`=<value>
+- `ARTIFACTORY_PASSWORD`=<value>
+{{% /alert %}}
 
 ## Parameters
 

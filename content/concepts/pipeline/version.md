@@ -5,7 +5,7 @@ description: >
   This section contains information on the version component for a pipeline.
 ---
 
-The `version` component is a part of a [pipeline](/docs/concepts/pipeline) for Vela.
+The `version` component is a part of a [pipeline](/docs/concepts/pipeline/) for Vela.
 
 This declaration allows you to provide the syntax version used to evaluate the pipeline.
 
