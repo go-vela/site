@@ -8,29 +8,29 @@ description: >
 {{% alert color="note" %}}
 We recommend reviewing [Go Templates documentation](https://golang.org/pkg/text/template/) before attempting to create a template.
 
- If you're new to YAML we also recommend reviewing the [YAML 1.2 spec](https://yaml.org/spec/1.2/spec.html) for validation on syntax.
+If you're new to YAML we also recommend reviewing the [YAML 1.2 spec](https://yaml.org/spec/1.2/spec.html) for validation on syntax.
 {{% /alert %}}
 
 ## Overview
 
 From [YAML Spec Scalars](https://yaml.org/spec/1.2/spec.html):
 
-`|` - In literals, newlines are preserved
+* `|` - In literals, newlines are preserved
+> 
+> ```yaml
+> --- |
+>   \//||\/||
+>   // ||  ||__
+> ```
 
-```yaml
---- |
-  \//||\/||
-  // ||  ||__
-```
+* `>` - In the folded scalars, newlines become spaces
 
-`>` - In the folded scalars, newlines become spaces
-
-```yaml
---- >
-  Mark McGwire's
-  year was crippled
-  by a knee injury.
-```
+> ```yaml
+> --- >
+>   Mark McGwire's
+>   year was crippled
+>   by a knee injury.
+> ```
 
 {{% alert color="tip" %}}
 For information on more types of scalars read the [spec information](https://yaml.org/spec/1.2/spec.html#id2760844)
