@@ -6,9 +6,9 @@ description: >
 ---
 
 {{% alert color="note" %}}
-We recommend reviewing [Go Templates documentation](https://golang.org/pkg/text/template/) before attempting to create a templates.
+We recommend reviewing [Go Templates documentation](https://golang.org/pkg/text/template/) before attempting to create a template.
 
- If you're new to Yaml we also recommend reviewing the [Yaml 1.2 spec](https://yaml.org/spec/1.2/spec.html) for validation on syntax.
+ If you're new to YAML we also recommend reviewing the [YAML 1.2 spec](https://yaml.org/spec/1.2/spec.html) for validation on syntax.
 {{% /alert %}}
 
 ## Overview
@@ -33,7 +33,7 @@ For information on if/else statements see [conditional docs](https://golang.org/
 
 ## Sample
 
-Lets take a look at using a conditional with a variable in a template:
+Let's take a look at using a conditional with a variable in a template:
 
 ```yaml
 metadata:

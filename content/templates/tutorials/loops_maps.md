@@ -6,9 +6,9 @@ description: >
 ---
 
 {{% alert color="note" %}}
-We recommend reviewing [Go Templates documentation](https://golang.org/pkg/text/template/) before attempting to create a templates.
+We recommend reviewing [Go Templates documentation](https://golang.org/pkg/text/template/) before attempting to create a template.
 
- If you're new to Yaml we also recommend reviewing the [Yaml 1.2 spec](https://yaml.org/spec/1.2/spec.html) for validation on syntax.
+ If you're new to YAML we also recommend reviewing the [YAML 1.2 spec](https://yaml.org/spec/1.2/spec.html) for validation on syntax.
 {{% /alert %}}
 
 ## Overview
@@ -17,7 +17,7 @@ From [Go template range](https://golang.org/pkg/text/template/#hdr-Actions):
 
 ```text
 {{range pipeline}}
-  T1 
+  T1
 {{end}}
 ```
 
@@ -34,7 +34,7 @@ For information on range/else statements see [conditional docs](https://golang.o
 
 ## Sample
 
-Lets take a look at ranging over a map for a template:
+Let's take a look at ranging over a map for a template:
 
 ```yaml
 metadata:

@@ -9,7 +9,7 @@ A template is a pipeline with one to many defined steps that can be sourced into
 
 Templates can take the form of generalized workflows across repositories or complex workflows like matrices in a single build.
 
-The following Yaml tags are not valid inside a template pipeline:
+The following YAML tags are not valid inside a template pipeline:
 
 * `services:`
 * `secrets:`
@@ -20,10 +20,10 @@ The following Yaml tags are not valid inside a template pipeline:
 
 At this time the only supported template engine is [Go Templates](https://golang.org/pkg/text/template/). Go templates does allow custom functions to be created and used within the template. We use the [sprig functions library](http://masterminds.github.io/sprig/) in the engine to allow for more options on top of the Go template syntax.
 
-Lets take a look at a basic template:
+Let's take a look at a basic template:
 
 {{% alert color="tip" %}}
-For, this example we will call it build.yml but the Yaml does not have a required name.
+For this example we will call it build.yml but the YAML does not have a required name.
 {{% /alert %}}
 
 ```yaml
