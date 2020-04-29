@@ -15,22 +15,14 @@ If you're new to YAML we also recommend reviewing the [YAML 1.2 spec](https://ya
 
 From [YAML Spec Scalars](https://yaml.org/spec/1.2/spec.html):
 
-* `|` - In literals, newlines are preserved
-> 
-> ```yaml
-> --- |
->   \//||\/||
->   // ||  ||__
-> ```
+* `|` - In Scalar literals, newlines are preserved
 
-* `>` - In the folded scalars, newlines become spaces
-
-> ```yaml
-> --- >
->   Mark McGwire's
->   year was crippled
->   by a knee injury.
-> ```
+```yaml
+# Below YAML was taken from spec literal example
+--- |
+  \//||\/||
+  // ||  ||__
+```
 
 {{% alert color="tip" %}}
 For information on more types of scalars read the [spec information](https://yaml.org/spec/1.2/spec.html#id2760844)
