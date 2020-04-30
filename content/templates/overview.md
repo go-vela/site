@@ -20,7 +20,7 @@ The following YAML tags are not valid inside a template pipeline:
 
 ## Template Engines
 
-At this time the only supported template engine is [Go Templates](https://golang.org/pkg/text/template/). We extend Go's built-in template functions to add the [sprig library](http://masterminds.github.io/sprig/) in the engine to allow for more options on top of the Go template syntax.
+At this time the only supported template engine is [Go Templates](https://golang.org/pkg/text/template/). We extend Go's built-in template functions by utilizing the [sprig library](http://masterminds.github.io/sprig/) in the engine to allow for more options on top of the Go template syntax.
 
 Let's take a look at a basic template:
 
