@@ -79,7 +79,7 @@ The following environment variables are injected into every step:
 - `BUILD_LINK` is not populated if the Vela server is configured to run headless (no UI).
 - `BUILD_PULL_REQUEST_NUMBER` is only populated during `pull_request` events.
 - `BUILD_TAG` is only populated during `tag` events.
-- `BUILD_TAGET` is only populated during `deployment` events.
+- `BUILD_TARGET` is only populated during `deployment` events.
   {{% /alert %}}
 
 #### Vela Environment Variables
