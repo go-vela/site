@@ -68,6 +68,15 @@ ruleset:
   tag: [ dev/*, test/* ]
 ```
 
+### Target
+
+This rule type limits the execution of a step to **matching build deployment targets**. The below example will run a step if the build target is `stage` or `production`:
+
+```yaml
+ruleset:
+  target: [ stage, production ]
+```
+
 ### Path
 
 This rule type limits the execution of a step to **matching files changed in a repository**. The below example will run a step if file `README.md`, any file of type `*.md` in root directory or any file `./test/*` directory has changed:
@@ -81,7 +90,7 @@ ruleset:
 
 This rule type limits the execution of a step to **matching a pull request comment**. This extends the ability to start new builds through interactions within a pull request. The below example will run a step if a "run build" comment is added to the bottom of a pull request.
 
-Note: 
+Note:
 * The `comment` event must be enabled for the repo
 * The `comment` event must be enabled for any secrets required for the step
 * Consider explicitely adding `event` to ruleset for **all** steps as steps with no explicit event(s) will run when the comment matches
