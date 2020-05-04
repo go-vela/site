@@ -65,19 +65,21 @@ The following environment variables are injected into every step:
 | `BUILD_MESSAGE`             | `New line at end of file.`                                                               | message from the source commit                                      |
 | `BUILD_NUMBER`              | `1`                                                                                      | build number                                                        |
 | `BUILD_PARENT`              | `1`                                                                                      | previous build number                                               |
+| `BUILD_PULL_REQUEST_NUMBER` | `1`                                                                                      | pull request number is populated from the source reference          |
 | `BUILD_REF`                 | `refs/heads/master`                                                                      | reference from the source commit                                    |
 | `BUILD_STARTED`             | `1556730001`                                                                             | unix timestamp representing build start time                        |
 | `BUILD_SOURCE`              | `https://github.com/octocat/hello-world/commit/7fd1a60b01f91b314f59955a4e4d4e80d8edf11d` | link from the source commit                                         |
 | `BUILD_TITLE`               | `Merge pull request #6 from octocat/patch-1`                                             | title from the source commit                                        |
 | `BUILD_WORKSPACE`           | `/home/octocat_hello-world_1`                                                            | working directory the build is executed in                          |
 | `BUILD_TAG`                 | `v1.0.0`                                                                                 | tag is populated from the source reference                          |
-| `BUILD_PULL_REQUEST_NUMBER` | `1`                                                                                      | pull request number is populated from the source reference          |
+| `BUILD_TARGET`              | `production`                                                                             | deployment target                                                   |
 
 {{% alert color="info" %}}
 
 - `BUILD_LINK` is not populated if the Vela server is configured to run headless (no UI).
-- `BUILD_TAG` is only populated during `tag` events.
 - `BUILD_PULL_REQUEST_NUMBER` is only populated during `pull_request` events.
+- `BUILD_TAG` is only populated during `tag` events.
+- `BUILD_TAGET` is only populated during `deployment` events.
   {{% /alert %}}
 
 #### Vela Environment Variables
