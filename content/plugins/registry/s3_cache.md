@@ -17,7 +17,7 @@ Sample of restoring a cache:
 ```yaml
 steps:
   - name: restore_cache
-    image: target/vela-s3-cache:v0.1.0
+    image: target/vela-s3-cache:v0.2.0
     pull: true
     parameters:
       action: restore
@@ -30,7 +30,7 @@ Sample of rebuilding a cache:
 ```yaml
 steps:
   - name: rebuild_cache
-    image: target/vela-s3-cache:v0.1.0
+    image: target/vela-s3-cache:v0.2.0
     pull: true
     parameters:
       action: rebuild
@@ -45,7 +45,7 @@ Sample of flushing a cache:
 ```yaml
 steps:
   - name: flushing_cache
-    image: target/vela-s3-cache:v0.1.0
+    image: target/vela-s3-cache:v0.2.0
     pull: true
     parameters:
       action: flush
@@ -72,7 +72,7 @@ Users can use [Vela secrets](/docs/concepts/pipeline/secrets/) to substitute the
 ```diff
 steps:
   - name: restore_cache
-    image: target/vela-s3-cache:v0.1.0
+    image: target/vela-s3-cache:v0.2.0
     pull: true
 +   secrets: [ cache_s3_access_key, cache_s3_secret_key ]
     parameters:
