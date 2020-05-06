@@ -146,6 +146,7 @@ The following parameters are used to configure the image:
 | `dockerfile` | path to the file for building the image       | `true`   | `Dockerfile`      |
 | `dry_run`    | enable building the image without publishing  | `false`  | `false`           |
 | `event`      | event generated for build                     | `true`   | **set by Vela**   |
+| `labels`     | unique labels to add to the image             | `false`  | `N/A`             |
 | `log_level`  | set the log level for the plugin              | `true`   | `info`            |
 | `password`   | password for communication with the registry  | `true`   | `N/A`             |
 | `registry`   | name of the registry for the repository       | `true`   | `index.docker.io` |
@@ -153,6 +154,7 @@ The following parameters are used to configure the image:
 | `sha`        | SHA-1 hash generated for commit               | `true`   | **set by Vela**   |
 | `tag`        | tag generated for build                       | `false`  | **set by Vela**   |
 | `tags`       | unique tags of the image                      | `true`   | `latest`          |
+| `target`     | set the target build stage                    | `false`  | `N/A`             |
 | `username`   | user name for communication with the registry | `true`   | `N/A`             |
 
 ## Template
