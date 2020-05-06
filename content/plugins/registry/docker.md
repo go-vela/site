@@ -17,7 +17,7 @@ Sample of building and publishing an image:
 ```yaml
 steps:
   - name: publish_hello-world
-    image: target/vela-docker:v0.1.0
+    image: target/vela-docker:v0.2.0
     pull: true
     parameters:
       registry: index.docker.io
@@ -29,7 +29,7 @@ Sample of building an image without publishing:
 ```diff
 steps:
   - name: publish_hello-world
-    image: target/vela-docker:v0.1.0
+    image: target/vela-docker:v0.2.0
     pull: true
     parameters:
 +     dry_run: true
@@ -42,7 +42,7 @@ Sample of building and publishing an image with custom tags:
 ```diff
 steps:
   - name: publish_hello-world
-    image: target/vela-docker:v0.1.0
+    image: target/vela-docker:v0.2.0
     pull: true
     parameters:
       registry: index.docker.io
@@ -57,7 +57,7 @@ Sample of building and publishing an image with automatic tags:
 ```diff
 steps:
   - name: publish_hello-world
-    image: target/vela-docker:v0.1.0
+    image: target/vela-docker:v0.2.0
     pull: true
     parameters:
 +     auto_tag: true
@@ -70,7 +70,7 @@ Sample of building and publishing an image with build arguments:
 ```diff
 steps:
   - name: publish_hello-world
-    image: target/vela-docker:v0.1.0
+    image: target/vela-docker:v0.2.0
     pull: true
     parameters:
 +     build_args:
@@ -84,7 +84,7 @@ Sample of building and publishing an image with caching:
 ```diff
 steps:
   - name: publish_hello-world
-    image: target/vela-docker:v0.1.0
+    image: target/vela-docker:v0.2.0
     pull: true
     parameters:
 +     cache: true
@@ -111,7 +111,7 @@ Users can use [Vela secrets](/docs/concepts/pipeline/secrets/) to substitute the
 ```diff
 steps:
   - name: publish_hello-world
-    image: target/vela-docker:v0.1.0
+    image: target/vela-docker:v0.2.0
     pull: true
 +   secrets: [ docker_username, docker_password ]
     parameters:
