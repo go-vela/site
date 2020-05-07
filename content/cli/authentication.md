@@ -29,10 +29,10 @@ Log in and capture the personal token:
 
 ```sh
 # Syntax
-vela --addr <vela server url> login
+vela login --addr <vela server url>
 
 # Example
-vela --addr https://vela-server.localhost login
+vela login --addr https://vela-server.localhost
 ```
 
 Generate the configuration file:
