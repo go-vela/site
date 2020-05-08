@@ -12,12 +12,16 @@ Registry: https://hub.docker.com/r/target/vela-downstream
 
 ## Usage
 
+{{% alert color="warning" %}}
+This plugin will only search up to the last 500 builds in your build history.
+{{% /alert %}}
+
 Sample of triggering a downstream build:
 
 ```yaml
 steps:
   - name: trigger_hello-world
-    image: target/vela-downstream:v0.1.0
+    image: target/vela-downstream:v0.2.0
     pull: true
     parameters:
       branch: master
@@ -32,7 +36,7 @@ Sample of triggering a downstream build for multiple repos:
 steps:
 +  - name: trigger_multiple
 -  - name: trigger_hello-world
-    image: target/vela-downstream:v0.1.0
+    image: target/vela-downstream:v0.2.0
     pull: true
     parameters:
       branch: master
@@ -52,7 +56,7 @@ Use the @ symbol at the end of the org/repo to provide a unique branch per repo.
 steps:
 +  - name: trigger_multiple
 -  - name: trigger_hello-world
-    image: target/vela-downstream:v0.1.0
+    image: target/vela-downstream:v0.2.0
     pull: true
     parameters:
 -      branch: master
@@ -81,7 +85,7 @@ Users can use [Vela secrets](/docs/concepts/pipeline/secrets/) to substitute the
 ```diff
 steps:
   - name: trigger_hello-world
-    image: target/vela-downstream:v0.1.0
+    image: target/vela-downstream:v0.2.0
     pull: true
 +   secrets: [ downstream_token ]
     parameters:
