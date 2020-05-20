@@ -1,4 +1,6 @@
-# site
+# docs
+
+[![license](https://img.shields.io/crates/l/gl.svg)](../LICENSE)
 
 Vela is a Pipeline Automation (CI/CD) framework built on Linux container technology written in Golang.
 
@@ -21,3 +23,11 @@ Please see our [contributing](CONTRIBUTING.md) documentation for further instruc
 We are always here to help!
 
 Please see our [support](SUPPORT.md) documentation for further instructions.
+
+## Copyright and License
+
+```
+Copyright (c) 2020 Target Brands, Inc.
+```
+
+[Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
