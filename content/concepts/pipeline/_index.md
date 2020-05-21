@@ -1,6 +1,6 @@
 ---
-title: "Pipeline"
-linkTitle: "Pipeline"
+title: 'Pipeline'
+linkTitle: 'Pipeline'
 description: >
   This section contains information on the pipeline components.
 ---
@@ -8,7 +8,7 @@ description: >
 The `pipeline` component is a list of repeatable, execution instructions for Vela.
 
 {{% alert color="info" %}}
-A single, ephemeral run of a pipeline is known as a [build](/docs/concepts/resources/build/).
+A single, ephemeral run of a pipeline is known as a [build](/docs/concepts/system/build/).
 {{% /alert %}}
 
 It can be thought of as a defined workflow for how you test, build, and deploy your code.
@@ -44,7 +44,7 @@ You **can not** provide both declarations in the same pipeline.
 The following is an example of valid syntax for a `pipeline`:
 
 ```yaml
-version: "1"
+version: '1'
 
 metadata:
   template: false

@@ -1,6 +1,6 @@
 ---
-title: "Update"
-linkTitle: "Update"
+title: 'Update'
+linkTitle: 'Update'
 description: >
   Learn how to modify a repo.
 ---
@@ -41,7 +41,7 @@ COMING SOON!
 {{% alert color="warning" %}}
 This section assumes you already know how to authenticate with the SDK.
 
-To authenticate with the SDK, please review the [authentication documentation](/docs/sdk/authentication/).
+To authenticate with the SDK, please review the [authentication documentation](/docs/sdk/go/authentication/).
 {{% /alert %}}
 
 You can find an example of this function [here](https://godoc.org/github.com/go-vela/sdk-go/vela#example-RepoService-Update).

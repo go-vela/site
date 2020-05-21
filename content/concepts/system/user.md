@@ -1,6 +1,6 @@
 ---
-title: "User"
-linkTitle: "User"
+title: 'User'
+linkTitle: 'User'
 description: >
   This section contains information on the user component in the system.
 ---
@@ -30,6 +30,3 @@ This component is stored in the configured Vela backend in the `users` table.
 ## References
 
 - [API](/docs/api/user/)
-- [CLI](/docs/cli/user/)
-- SDK
-  - [Go](/docs/sdk/go/user/)

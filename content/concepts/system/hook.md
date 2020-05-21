@@ -1,6 +1,6 @@
 ---
-title: "Hook"
-linkTitle: "Hook"
+title: 'Hook'
+linkTitle: 'Hook'
 description: >
   This section contains information on the hook component in the system.
 ---
@@ -44,6 +44,6 @@ This component is stored in the configured Vela backend in the `hooks` table.
 ## References
 
 - [API](/docs/api/build/)
-- [CLI](/docs/cli/hook/)
+- [CLI](/docs/cli/build/)
 - SDK
-  - [Go](/docs/sdk/go/hook/)
+  - [Go](/docs/sdk/go/build/)
