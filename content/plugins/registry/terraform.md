@@ -1,8 +1,4 @@
----
-title: "Terraform"
----
-
-## Overview
+## Description
 
 This plugin enables you to run [Terraform](https://www.terraform.io/) against [providers](https://www.terraform.io/docs/providers/index.html) in a Vela pipeline.
 
@@ -13,6 +9,19 @@ Registry: https://hub.docker.com/r/target/vela-terraform
 ## Usage
 
 **NOTE: by default Terraform runs in the current directory. Use `directory: path/to/tf/files` to point Terraform at a file or files.**
+
+Sample of adding init options to Terraform configuration:
+
+```yaml
+- name: apply
+  image: target/vela-terraform:latest
+  pull: true
+  parameters:
+    action: apply
+    auto_approve: true # Required for versions of Terraform 0.12.x
+    init_options:
+      get_plugins: true
+```
 
 Sample of applying Terraform configuration:
 
@@ -35,8 +44,6 @@ Sample of destroying Terraform configuration:
     action: destroy
     auto_approve: true # Required for versions of Terraform 0.12.x
 ```
-
-Sample of adding init options to Terraform configuration:
 
 Sample of formatting Terraform configuration files:
 
@@ -71,7 +78,7 @@ Sample of validating Terraform configuration:
 
 ## Secrets
 
-**NOTE: Users should refrain from configuring sensitive information in your pipeline in plain text.**
+**NOTE: Users should refrain from configuring sensitive information in their pipeline in plain text.**
 
 ```diff
 - name: apply
@@ -91,7 +98,7 @@ The following parameters are used to configure the image:
 | -------------- | ------------------------------------------- | -------- | ------- |
 | `action`       | action to perform with Terraform            | `true`   | `N/A`   |
 | `directory`    | the directory for action to be performed on | `false`  | `N/A`   |
-| `init_options` | the directory for action to be performed on | `false`  | `N/A`   |
+| `init_options` | options to use for Terraform init operation | `false`  | `N/A`   |
 | `log_level`    | set the log level for the plugin            | `true`   | `info`  |
 
 
@@ -103,14 +110,14 @@ The following parameters can be used within the `init_options` to configure the 
 | `backend_configs` | this is merged with what is in the configuration file                                 | `true`   | `N/A`   |
 | `force_copy`      | suppress prompts about copying state data                                             | `true`   | `N/A`   |
 | `from_module`     | copy the contents of the given module into the target directory before initialization | `true`   | `N/A`   |
-| `get`             | Download any modules for this configuration                                           | `true`   | `N/A`   |
-| `get_plugins`     | Download any missing plugins for this configuration                                   | `true`   | `N/A`   |
+| `get`             | download any modules for this configuration                                           | `true`   | `N/A`   |
+| `get_plugins`     | download any missing plugins for this configuration                                   | `true`   | `N/A`   |
 | `input`           | ask for input for variables if not directly set                                       | `true`   | `N/A`   |
 | `lock`            | lock the state file when locking is supported                                         | `false`  | `N/A`   |
 | `lock_timeout`    | duration to retry a state lock                                                        | `false`  | `N/A`   |
 | `no_color`        | disables colors in output                                                             | `false`  | `N/A`   |
 | `plugin_dirs`     | directory containing plugin binaries; overrides all default search paths for plugins  | `false`  | `N/A`   |
-| `reconfigure`     | Reconfigure the backend, ignoring any saved configuration                             | `false`  | `N/A`   |
+| `reconfigure`     | reconfigure the backend, ignoring any saved configuration                             | `false`  | `N/A`   |
 | `upgrade`         | install the latest version allowed within configured constraints                      | `false`  | `N/A`   |
 | `verify_plugins`  | verify the authenticity and integrity of automatically downloaded plugins             | `false`  | `N/A`   |
 
@@ -216,13 +223,13 @@ Below are a list of common problems and how to solve them:
 _How do I add verbose logging to the Terraform CLI?_
 
 ```diff
- - name: apply
-   image: docker.target.com/rapid/neal/vela-terraform
-   pull: true
+- name: apply
+ image: docker.target.com/rapid/neal/vela-terraform
+ pull: true
 #  Verbose Terraform logging can be added directly to environment
-+  environment:
-+    TF_LOG: TRACE
-   parameters:
-     action: apply   
-     auto_approve: true
++ environment:
++   TF_LOG: TRACE
+ parameters:
+   action: apply   
+   auto_approve: true
 ```
