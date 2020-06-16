@@ -8,13 +8,17 @@ Registry: https://hub.docker.com/r/target/vela-terraform
 
 ## Usage
 
-**NOTE: by default Terraform runs in the current directory. Use `directory: path/to/tf/files` to point Terraform at a file or files.**
+{{% alert color="note" %}}
+1. By default Terraform runs in the current directory. Use `directory: path/to/tf/files` to point Terraform at a file or files.
+2. Terraform ships with a default version but you can download the specific version you need with `version: x.x.x`
+{{% /alert %}}
+
 
 Sample of adding init options to Terraform configuration:
 
 ```yaml
 - name: apply
-  image: target/vela-terraform:latest
+  image: target/vela-terraform:v0.1.0
   pull: true
   parameters:
     action: apply
@@ -27,7 +31,7 @@ Sample of applying Terraform configuration:
 
 ```yaml
 - name: apply
-  image: target/vela-terraform:latest
+  image: target/vela-terraform:v0.1.0
   pull: true
   parameters:
     action: apply
@@ -38,7 +42,7 @@ Sample of destroying Terraform configuration:
 
 ```yaml
 - name: destroy
-  image: target/vela-terraform:latest
+  image: target/vela-terraform:v0.1.0
   pull: true
   parameters:
     action: destroy
@@ -49,7 +53,7 @@ Sample of formatting Terraform configuration files:
 
 ```yaml
 - name: fmt
-  image: target/vela-terraform:latest
+  image: target/vela-terraform:v0.1.0
   pull: true
   parameters:
     action: fmt
@@ -59,7 +63,7 @@ Sample of planning Terraform configuration:
 
 ```yaml
 - name: plan
-  image: target/vela-terraform:latest
+  image: target/vela-terraform:v0.1.0
   pull: true
   parameters:
     action: plan
@@ -69,7 +73,7 @@ Sample of validating Terraform configuration:
 
 ```yaml
 - name: validate
-  image: target/vela-terraform:latest
+  image: target/vela-terraform:v0.1.0
   pull: true
   parameters:
     action: validate
@@ -78,11 +82,13 @@ Sample of validating Terraform configuration:
 
 ## Secrets
 
-**NOTE: Users should refrain from configuring sensitive information in their pipeline in plain text.**
+{{% alert color="warning" %}}
+Users should refrain from configuring sensitive information in their pipeline in plain text.
+{{% /alert %}}
 
 ```diff
 - name: apply
-  image: target/vela-terraform:latest
+  image: target/vela-terraform:v0.1.0
   pull: true
 +  secrets: [ github_token ]
   parameters:
@@ -100,6 +106,7 @@ The following parameters are used to configure the image:
 | `directory`    | the directory for action to be performed on | `false`  | `N/A`   |
 | `init_options` | options to use for Terraform init operation | `false`  | `N/A`   |
 | `log_level`    | set the log level for the plugin            | `true`   | `info`  |
+| `version`      | set the Terraform CLI version               | `true`   | `info`  |
 
 
 The following parameters can be used within the `init_options` to configure the image:
@@ -223,13 +230,13 @@ Below are a list of common problems and how to solve them:
 _How do I add verbose logging to the Terraform CLI?_
 
 ```diff
-- name: apply
- image: docker.target.com/rapid/neal/vela-terraform
- pull: true
+ - name: apply
+   image: target/vela-terraform:v0.1.0
+   pull: true
 #  Verbose Terraform logging can be added directly to environment
-+ environment:
-+   TF_LOG: TRACE
- parameters:
-   action: apply   
-   auto_approve: true
++  environment:
++    TF_LOG: TRACE
+   parameters:
+     action: apply   
+     auto_approve: true
 ```
