@@ -20,10 +20,10 @@ This ensures the code, dependencies, and compiled binaries are persisted and sha
 
 ```sh
 # Syntax
-/home/<source org>_<source repo>_<build number>
+/home/<source org>/<source repo>
 
 # Example
-/home/octocat_hello-world_1
+/home/octocat/hello-world
 ```
 
 This would be the equivalent to the following Docker commands being executed:
@@ -31,5 +31,5 @@ This would be the equivalent to the following Docker commands being executed:
 ```sh
 docker volume create build-workspace
 
-docker run --volume=build-workspace:/home/octocat_hello-world_1 <image>
+docker run --volume=build-workspace:/home/octocat/hello-world <image>
 ```
