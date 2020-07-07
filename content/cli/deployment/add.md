@@ -19,20 +19,22 @@ For more information, you can run `vela add deployment --help`.
 
 The following parameters are used to configure the command:
 
-| Name          | Description                   | Environment        |
-| ------------- | ----------------------------- | ------------------ |
-| `org`         | name of organization          | `VELA_ORG`         |
-| `repo`        | name of repository            | `VELA_NAME`        |
-| `ref`         | name of branch, commit or tag | `VELA_REF`         |
-| `target`      | name of target environment    | `VELA_TARGET`      |
-| `description` | description for deployment    | `VELA_DESCRIPTION` |
-| `task`        | name of task                  | `VELA_TASK`        |
+| Name          | Description                                       | Environment Variables                        |
+| ------------- | ------------------------------------------------- | -------------------------------------------- |
+| `org`         | name of organization for the deployment           | `VELA_ORG`, `DEPLOYMENT_ORG`                 |
+| `repo`        | name of repository for the deployment             | `VELA_REPO`, `DEPLOYMENT_REPO`               |
+| `ref`         | name of branch, commit, or tag for the deployment | `VELA_DEPLOYMENT`, `DEPLOYMENT_NUMBER`       |
+| `target`      | name of target environment for the deployment     | `VELA_TARGET`, `DEPLOYMENT_TARGET`           |
+| `description` | short description for the deployment              | `VELA_DESCRIPTION`, `DEPLOYMENT_DESCRIPTION` |
+| `task`        | name of task for the deployment                   | `VELA_TASK`, `DEPLOYMENT_TASK`               |
+| `output`      | format the output for the deployment              | `VELA_OUTPUT`, `DEPLOYMENT_OUTPUT`           |
 
 {{% alert color="info" %}}
 This command also supports setting the following parameters via a configuration file:
 
 - `org`
 - `repo`
+- `output`
 
 For more information, please review the [CLI config documentation](/docs/cli/config/).
 {{% /alert %}}
