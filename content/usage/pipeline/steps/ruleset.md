@@ -79,11 +79,11 @@ ruleset:
 
 ### Path
 
-This rule type limits the execution of a step to **matching files changed in a repository**. The below example will run a step if file `README.md`, any file of type `*.md` in root directory or any file `./test/*` directory has changed:
+This rule type limits the execution of a step to **matching files changed in a repository**. The below example will run a step if file `README.md`, any file of type `*.md` in the root directory or any file in the `test/*` directory has changed:
 
 ```yaml
 ruleset:
-  path: [ README.md, "*.md", "./test/*" ]
+  path: [ README.md, "*.md", "test/*" ]
 ```
 
 ### Comment
