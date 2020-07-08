@@ -26,18 +26,20 @@ Certain characters may require you to encapsulate your secret with `"` or `'`.
 
 The following parameters are used to configure the command:
 
-| Name       | Description                       | Environment     |
-| ---------- | --------------------------------- | --------------- |
-| `engine`   | name of engine                    | `SECRET_ENGINE` |
-| `type`     | name of type of secret            | `SECRET_TYPE`   |
-| `org`      | name of organization              | `SECRET_ORG`    |
-| `repo`     | name of repository                | `SECRET_REPO`   |
-| `team`     | name of team                      | `SECRET_TEAM`   |
-| `name`     | name of secret                    | `SECRET_NAME`   |
-| `value`    | value of secret                   | `SECRET_VALUE`  |
-| `image`    | limit secret to specific image(s) | `SECRET_IMAGES` |
-| `event`    | limit secret to specific event(s) | `SECRET_EVENTS` |
-| `filename` | add secret(s) from a file         | `N/A`           |
+| Name       | Description                                      | Environment Variables              |
+| ---------- | ------------------------------------------------ | ---------------------------------- |
+| `org`      | name of organization for the secret              | `VELA_ORG`, `SECRET_ORG`           |
+| `repo`     | name of repository for the secret                | `VELA_REPO`, `SECRET_REPO`         |
+| `engine`   | name of engine that stores the secret            | `VELA_ENGINE`. `SECRET_ENGINE`     |
+| `type`     | name of type of secret being stored              | `VELA_TYPE`, `SECRET_TYPE`         |
+| `team`     | name of team for the secret                      | `VELA_TEAM`, `SECRET_TEAM`         |
+| `name`     | name of the secret                               | `VELA_NAME`, `SECRET_NAME`         |
+| `value`    | value of the secret                              | `VELA_VALUE`, `SECRET_VALUE`       |
+| `image`    | build image(s) that can access the secret        | `VELA_IMAGES`, `SECRET_IMAGES`     |
+| `event`    | build event(s) that can access the secret        | `VELA_EVENTS`, `SECRET_EVENTS`     |
+| `commands` | allows a step with commands to access the secret | `VELA_COMMANDS`, `SECRET_COMMANDS` |
+| `file`     | name of file used to add the secret(s)           | `VELA_FILE`, `SECRET_FILE`         |
+| `output`   | format the output for the secret                 | `VELA_OUTPUT`, `SECRET_OUTPUT`     |
 
 {{% alert color="info" %}}
 This command also supports setting the following parameters via a configuration file:
@@ -46,6 +48,7 @@ This command also supports setting the following parameters via a configuration 
 - `type`
 - `org`
 - `repo`
+- `output`
 
 For more information, please review the [CLI config documentation](/docs/cli/config/).
 {{% /alert %}}
@@ -103,7 +106,7 @@ vela add secret -f secret.yml
 ```yaml
 ---
 metadata:
-  api_version: v1
+  version: v1
   engine: native
 secrets:
   - org: octocat
@@ -133,7 +136,7 @@ secrets:
 ```yaml
 ---
 metadata:
-  api_version: v1
+  version: v1
   engine: native
 secrets:
   - org: github
@@ -149,7 +152,7 @@ secrets:
 
 ---
 metadata:
-  api_version: v1
+  version: v1
   engine: vault
 secrets:
   - org: github

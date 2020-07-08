@@ -19,14 +19,14 @@ For more information, you can run `vela get secret --help`.
 
 The following parameters are used to configure the command:
 
-| Name     | Description            | Environment     |
-| -------- | ---------------------- | --------------- |
-| `engine` | name of engine         | `SECRET_ENGINE` |
-| `type`   | name of type of secret | `SECRET_TYPE`   |
-| `org`    | name of organization   | `SECRET_ORG`    |
-| `repo`   | name of repository     | `SECRET_REPO`   |
-| `team`   | name of team           | `SECRET_TEAM`   |
-| `output` | format the output      | `N/A`           |
+| Name     | Description                            | Environment Variables          |
+| -------- | -------------------------------------- | ------------------------------ |
+| `org`    | name of organization for the secrets   | `VELA_ORG`, `SECRET_ORG`       |
+| `repo`   | name of repository for the secrets     | `VELA_REPO`, `SECRET_REPO`     |
+| `engine` | name of engine that stores the secrets | `VELA_ENGINE`. `SECRET_ENGINE` |
+| `type`   | name of type of secrets being stored   | `VELA_TYPE`, `SECRET_TYPE`     |
+| `team`   | name of team for the secrets           | `VELA_TEAM`, `SECRET_TEAM`     |
+| `output` | format the output for the secrets      | `VELA_OUTPUT`, `SECRET_OUTPUT` |
 
 {{% alert color="info" %}}
 This command also supports setting the following parameters via a configuration file:
@@ -35,6 +35,7 @@ This command also supports setting the following parameters via a configuration 
 - `type`
 - `org`
 - `repo`
+- `output`
 
 For more information, please review the [CLI config documentation](/docs/cli/config/).
 {{% /alert %}}
