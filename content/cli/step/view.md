@@ -19,19 +19,20 @@ For more information, you can run `vela view step --help`.
 
 The following parameters are used to configure the command:
 
-| Name     | Description          | Environment    |
-| -------- | -------------------- | -------------- |
-| `org`    | name of organization | `BUILD_ORG`    |
-| `repo`   | name of repository   | `BUILD_REPO`   |
-| `build`  | number of build      | `BUILD_NUMBER` |
-| `step`   | number of step       | `STEP_NUMBER`  |
-| `output` | format the output    | `N/A`          |
+| Name     | Description                       | Environment Variables        |
+| -------- | --------------------------------- | ---------------------------- |
+| `org`    | name of organization for the step | `VELA_ORG`, `STEP_ORG`       |
+| `repo`   | name of repository for the step   | `VELA_REPO`, `STEP_REPO`     |
+| `build`  | number of build for the step      | `VELA_BUILD`, `STEP_BUILD`   |
+| `step`   | number of the step                | `VELA_STEP`, `STEP_NUMBER`   |
+| `output` | format the output for the step    | `VELA_OUTPUT`, `STEP_OUTPUT` |
 
 {{% alert color="info" %}}
 This command also supports setting the following parameters via a configuration file:
 
 - `org`
 - `repo`
+- `output`
 
 For more information, please review the [CLI config documentation](/docs/cli/config/).
 {{% /alert %}}

@@ -19,18 +19,21 @@ For more information, you can run `vela get step --help`.
 
 The following parameters are used to configure the command:
 
-| Name     | Description          | Environment    |
-| -------- | -------------------- | -------------- |
-| `org`    | name of organization | `BUILD_ORG`    |
-| `repo`   | name of repository   | `BUILD_REPO`   |
-| `build`  | number of build      | `BUILD_NUMBER` |
-| `output` | format the output    | `N/A`          |
+| Name       | Description                        | Environment Variables            |
+| ---------- | ---------------------------------- | -------------------------------- |
+| `org`      | name of organization for the steps | `VELA_ORG`, `STEP_ORG`           |
+| `repo`     | name of repository for the steps   | `VELA_REPO`, `STEP_REPO`         |
+| `build`    | number of build for the steps      | `VELA_BUILD`, `STEP_BUILD`       |
+| `output`   | format the output for the steps    | `VELA_OUTPUT`, `STEP_OUTPUT`     |
+| `page`     | prints a specific page of steps    | `VELA_PAGE`, `STEP_PAGE`         |
+| `per.page` | number of steps to print per page  | `VELA_PER_PAGE`, `STEP_PER_PAGE` |
 
 {{% alert color="info" %}}
 This command also supports setting the following parameters via a configuration file:
 
 - `org`
 - `repo`
+- `output`
 
 For more information, please review the [CLI config documentation](/docs/cli/config/).
 {{% /alert %}}
@@ -52,7 +55,7 @@ To setup the CLI, please review the [authentication documentation](/docs/cli/aut
 #### Request
 
 ```sh
-vela get step --org github --repo octocat --build-number 1
+vela get step --org github --repo octocat --build 1
 ```
 
 #### Response
