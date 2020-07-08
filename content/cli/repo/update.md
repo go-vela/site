@@ -19,23 +19,26 @@ For more information, you can run `vela update repo --help`.
 
 The following parameters are used to configure the command:
 
-| Name      | Description                  | Environment    |
-| --------- | ---------------------------- | -------------- |
-| `org`     | name of organization         | `REPO_ORG`     |
-| `repo`    | name of repository           | `REPO_NAME`    |
-| `link`    | full URL to repository       | `REPO_LINK`    |
-| `clone`   | clone URL to repository      | `REPO_CLONE`   |
-| `timeout` | max time allowed per build   | `REPO_TIMEOUT` |
-| `private` | makes the repository private | `REPO_PRIVATE` |
-| `trusted` | makes the repository trusted | `REPO_TRUSTED` |
-| `event`   | events to trigger repository | `REPO_EVENT`   |
-| `output`  | format the output            | `N/A`          |
+| Name         | Description                                        | Environment Variables                |
+| ------------ | -------------------------------------------------- | ------------------------------------ |
+| `org`        | name of organization for the repository            | `VELA_ORG`, `REPO_ORG`               |
+| `repo`       | name of repository                                 | `VELA_REPO`, `REPO_NAME`             |
+| `link`       | full URL for the repository                        | `VELA_LINK`, `REPO_LINK`             |
+| `clone`      | clone URL for the repository                       | `VELA_CLONE`, `REPO_CLONE`           |
+| `visibility` | access level required to view the repository       | `VELA_VISIBILITY`, `REPO_VISIBILITY` |
+| `timeout`    | max time allowed per build                         | `VELA_TIMEOUT`, `REPO_TIMEOUT`       |
+| `private`    | disables public access to the repository           | `VELA_PRIVATE`, `REPO_PRIVATE`       |
+| `trusted`    | elevates permissions for builds for the repository | `VELA_TRUSTED`, `REPO_TRUSTED`       |
+| `active`     | enables/disables the repository                    | `VELA_ACTIVE`, `REPO_ACTIVE`         |
+| `event`      | events to trigger builds for the repository        | `VELA_EVENTS`, `REPO_EVENTS`         |
+| `output`     | format the output for the repository               | `VELA_OUTPUT`, `REPO_OUTPUT`         |
 
 {{% alert color="info" %}}
 This command also supports setting the following parameters via a configuration file:
 
 - `org`
 - `repo`
+- `output`
 
 For more information, please review the [CLI config documentation](/docs/cli/config/).
 {{% /alert %}}
@@ -63,5 +66,22 @@ vela update repo --org github --repo octocat --event tag
 #### Response
 
 ```sh
-repo "github/octocat" was updated
+id: 1
+userid: 1
+org: github
+name: octocat
+fullname: github/octocat
+link: https://github.com/github/octocat
+clone: https://github.com/github/octocat.git
+branch: master
+timeout: 60
+visibility: public
+private: false
+trusted: false
+active: true
+allowpull: true
+allowpush: true
+allowdeploy: false
+allowtag: true
+allowcomment: false
 ```
