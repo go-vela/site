@@ -94,6 +94,22 @@ steps:
       url: http://localhost:8081/artifactory
 ```
 
+Sample of using docker-promote on an artifact:
+
+```yaml
+steps:
+  - name: docker_promote_artifacts
+    image: target/vela-artifactory:v0.2.0
+    pull: true
+    parameters:
+      action: docker-promote
+      target_repo: libs-snapshot-local
+      docker_registry: octocat/hello-world
+      tag: latest
+      target_docker_registry: octocat/hello-world
+      target_tags: "${BUILD_COMMIT:0:8}"
+```
+
 ## Secrets
 
 {{% alert color="warning" %}}
@@ -165,6 +181,19 @@ The following parameters are used to configure the `delete` action:
 | Name        | Description                                          | Required | Default |
 | ----------- | ---------------------------------------------------- | -------- | ------- |
 | `recursive` | enables removing sub-directories for the artifact(s) | `false`  | `false` |
+
+### Docker-Promote
+
+The following parameters are used to configure the `docker-promote` action:
+
+| Name                     | Description                                           | Required | Default  |
+| ------------------------ | ----------------------------------------------------- | -------- | -------- |
+| `target_repo`            | name of the docker registry containing the image      | `true`   | `N/A`    |
+| `docker_registry`        | path to image in docker registry                      | `true`   | `N/A`    |
+| `target_docker_registry` | path for target image in docker registry              | `true`   | `N/A`    |
+| `tag`                    | name of the tag for promoting                         | `true`   | `N/A`    |
+| `target_tags`            | name of the final tags after promotion                | `true`   | `N/A`    |
+| `copy`                   | set to copy instead of moving the image               | `false`  | `false`  |
 
 #### Set-Prop
 
