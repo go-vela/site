@@ -8,5 +8,3 @@ menu:
   main:
     weight: 405
 ---
-
-COMING SOON!
