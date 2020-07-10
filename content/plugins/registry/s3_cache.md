@@ -140,4 +140,20 @@ COMING SOON!
 
 ## Troubleshooting
 
+You can start troubleshooting this plugin by tuning the level of logs being displayed:
+
+```diff
+steps:
+  - name: restore_cache
+    image: target/vela-s3-cache:v0.2.0
+    pull: true
+    parameters:
+      action: restore
++     log_level: trace
+      root: mybucket
+      server: mybucket.s3-us-west-2.amazonaws.com
+```
+
 Below are a list of common problems and how to solve them:
+
+COMING SOON!

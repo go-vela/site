@@ -221,4 +221,21 @@ COMING SOON!
 
 ## Troubleshooting
 
+You can start troubleshooting this plugin by tuning the level of logs being displayed:
+
+```diff
+steps:
+  - name: copy_artifacts
+    image: target/vela-artifactory:v0.2.0
+    pull: true
+    parameters:
+      action: copy
++     log_level: trace
+      path: libs-snapshot-local/foo.txt
+      target: libs-snapshot-local/bar.txt
+      url: http://localhost:8081/artifactory
+```
+
 Below are a list of common problems and how to solve them:
+
+COMING SOON!

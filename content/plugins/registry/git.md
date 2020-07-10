@@ -128,4 +128,21 @@ COMING SOON!
 
 ## Troubleshooting
 
+You can start troubleshooting this plugin by tuning the level of logs being displayed:
+
+```diff
+steps:
+  - name: clone_hello-world
+    image: target/vela-git:v0.3.0
+    pull: true
+    parameters:
++     log_level: trace
+      path: hello-world
+      ref: refs/heads/master
+      remote: https://github.com/octocat/hello-world.git
+      sha: 7fd1a60b01f91b314f59955a4e4d4e80d8edf11d
+```
+
 Below are a list of common problems and how to solve them:
+
+COMING SOON!

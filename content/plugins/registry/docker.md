@@ -178,4 +178,19 @@ COMING SOON!
 
 ## Troubleshooting
 
+You can start troubleshooting this plugin by tuning the level of logs being displayed:
+
+```diff
+steps:
+  - name: publish_hello-world
+    image: target/vela-docker:v0.2.1
+    pull: true
+    parameters:
++     log_level: trace
+      registry: index.docker.io
+      repo: index.docker.io/octocat/hello-world
+```
+
 Below are a list of common problems and how to solve them:
+
+COMING SOON!

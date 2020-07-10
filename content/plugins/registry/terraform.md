@@ -132,7 +132,9 @@ The following parameters can be used within the `init_options` to configure the 
 
 The following parameters are used to configure the `apply` action:
 
-_Command uses Terraform CLI command defaults if not overridden in config._
+{{% alert color="warning" %}}
+This action uses the Terraform CLI command defaults if not explicitly set.
+{{% /alert %}}
 
 | Name           | Description                                                   | Required | Default |
 | -------------- | ------------------------------------------------------------- | -------- | ------- |
@@ -154,7 +156,9 @@ _Command uses Terraform CLI command defaults if not overridden in config._
 
 The following parameters are used to configure the `destroy` action:
 
-_Command uses Terraform CLI command defaults if not overridden in config._
+{{% alert color="warning" %}}
+This action uses the Terraform CLI command defaults if not explicitly set.
+{{% /alert %}}
 
 | Name           | Description                                                   | Required | Default |
 | -------------- | ------------------------------------------------------------- | -------- | ------- |
@@ -175,7 +179,9 @@ _Command uses Terraform CLI command defaults if not overridden in config._
 
 The following parameters are used to configure the `fmt` action:
 
-_Command uses Terraform CLI command defaults if not overridden in config._
+{{% alert color="warning" %}}
+This action uses the Terraform CLI command defaults if not explicitly set.
+{{% /alert %}}
 
 | Name    | Description                                   | Required | Default |
 | ------- | --------------------------------------------- | -------- | ------- |
@@ -188,7 +194,9 @@ _Command uses Terraform CLI command defaults if not overridden in config._
 
 The following parameters are used to configure the `plan` action:
 
-_Command uses Terraform CLI command defaults if not overridden in config._
+{{% alert color="warning" %}}
+This action uses the Terraform CLI command defaults if not explicitly set.
+{{% /alert %}}
 
 | Name                 | Description                                                        | Required | Default |
 | -------------------- | ------------------------------------------------------------------ | -------- | ------- |
@@ -210,7 +218,9 @@ _Command uses Terraform CLI command defaults if not overridden in config._
 
 The following parameters are used to configure the `validate` action:
 
-_Command uses Terraform CLI command defaults if not overridden in config._
+{{% alert color="warning" %}}
+This action uses the Terraform CLI command defaults if not explicitly set.
+{{% /alert %}}
 
 | Name              | Description                                                           | Required | Default |
 | ----------------- | --------------------------------------------------------------------- | -------- | ------- |
@@ -225,18 +235,24 @@ COMING SOON!
 
 ## Troubleshooting
 
-Below are a list of common problems and how to solve them:
+{{% alert color="warning" %}}
+We recommend reviewing Terraform's [debugging guide](https://www.terraform.io/docs/internals/debugging.html) before troubleshooting further.
+{{% /alert %}}
 
-_How do I add verbose logging to the Terraform CLI?_
+You can start troubleshooting this plugin by tuning the level of logs being displayed:
 
 ```diff
- - name: apply
-   image: target/vela-terraform:v0.1.0
-   pull: true
-#  Verbose Terraform logging can be added directly to environment
-+  environment:
-+    TF_LOG: TRACE
-   parameters:
-     action: apply   
-     auto_approve: true
+- name: apply
+  image: target/vela-terraform:v0.1.0
+  pull: true
+  parameters:
+    action: apply
+    auto_approve: true # Required for versions of Terraform 0.12.x
+    init_options:
+      get_plugins: true
++   log_level: trace
 ```
+
+Below are a list of common problems and how to solve them:
+
+COMING SOON!

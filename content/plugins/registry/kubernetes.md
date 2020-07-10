@@ -166,4 +166,19 @@ COMING SOON!
 
 ## Troubleshooting
 
+You can start troubleshooting this plugin by tuning the level of logs being displayed:
+
+```diff
+steps:
+  - name: kubernetes
+    image: target/vela-kubernetes:v0.1.0
+    pull: true
+    parameters:
+      action: apply
+      files: [ kubernetes/common, kubernetes/dev/deploy.yml ]
++     log_level: trace
+```
+
 Below are a list of common problems and how to solve them:
+
+COMING SOON!

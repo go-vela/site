@@ -120,4 +120,21 @@ COMING SOON!
 
 ## Troubleshooting
 
+You can start troubleshooting this plugin by tuning the level of logs being displayed:
+
+```diff
+steps:
+  - name: trigger_hello-world
+    image: target/vela-downstream:v0.2.0
+    pull: true
+    parameters:
+      branch: master
++     log_level: trace
+      repos:
+        - octocat/hello-world
+      server: https://vela-server.localhost
+```
+
 Below are a list of common problems and how to solve them:
+
+COMING SOON!
