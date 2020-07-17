@@ -152,26 +152,26 @@ This example will add the `secrets` to the `copy_artifacts` step as environment 
 
 The following parameters are used to configure the image:
 
-| Name        | Description                                  | Required | Default |
-| ----------- | -------------------------------------------- | -------- | ------- |
-| `action`    | action to perform against Artifactory        | `true`   | `N/A`   |
-| `api_key`   | API key for communication with Artifactory   | `false`  | `N/A`   |
-| `dry_run`   | enables pretending to perform the action     | `false`  | `false` |
-| `log_level` | set the log level for the plugin             | `true`   | `info`  |
-| `password`  | password for communication with Artifactory  | `false`  | `N/A`   |
-| `path`      | source/target path to artifact(s) for action | `true`   | `N/A`   |
-| `url`       | Artifactory instance to communicate with     | `true`   | `N/A`   |
-| `username`  | user name for communication with Artifactory | `true`   | `N/A`   |
+| Name        | Description                                              | Required | Default |
+| ----------- | -------------------------------------------------------- | -------- | ------- |
+| `action`    | action to perform against Artifactory                    | `true`   | `N/A`   |
+| `api_key`   | API key for communication with Artifactory               | `false`  | `N/A`   |
+| `dry_run`   | enables pretending to perform the action                 | `false`  | `false` |
+| `log_level` | set the log level for the plugin                         | `true`   | `info`  |
+| `password`  | password for communication with Artifactory              | `false`  | `N/A`   |
+| `path`      | source/target Artifactory path to artifact(s) for action | `true`   | `N/A`   |
+| `url`       | Artifactory instance to communicate with                 | `true`   | `N/A`   |
+| `username`  | user name for communication with Artifactory             | `true`   | `N/A`   |
 
 #### Copy
 
 The following parameters are used to configure the `copy` action:
 
-| Name        | Description                                         | Required | Default |
-| ----------- | --------------------------------------------------- | -------- | ------- |
-| `flat`      | enables removing source directory hierarchy         | `false`  | `false` |
-| `recursive` | enables copying sub-directories for the artifact(s) | `false`  | `false` |
-| `target`    | target path to copy artifact(s) to                  | `true`   | `N/A`   |
+| Name        | Description                                                     | Required | Default |
+| ----------- | --------------------------------------------------------------- | -------- | ------- |
+| `flat`      | enables removing source directory hierarchy                     | `false`  | `false` |
+| `recursive` | enables copying sub-directories for the artifact(s)             | `false`  | `false` |
+| `target`    | target Artifactory path to copy artifact(s) to                  | `true`   | `N/A`   |
 
 
 #### Delete
