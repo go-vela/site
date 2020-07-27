@@ -19,26 +19,26 @@ For more information, you can run `vela update secret --help`.
 
 The following parameters are used to configure the command:
 
-| Name       | Description                                      | Environment Variables              |
-| ---------- | ------------------------------------------------ | ---------------------------------- |
-| `org`      | name of organization for the secret              | `VELA_ORG`, `SECRET_ORG`           |
-| `repo`     | name of repository for the secret                | `VELA_REPO`, `SECRET_REPO`         |
-| `engine`   | name of engine that stores the secret            | `VELA_ENGINE`. `SECRET_ENGINE`     |
-| `type`     | name of type of secret being stored              | `VELA_TYPE`, `SECRET_TYPE`         |
-| `team`     | name of team for the secret                      | `VELA_TEAM`, `SECRET_TEAM`         |
-| `name`     | name of the secret                               | `VELA_NAME`, `SECRET_NAME`         |
-| `value`    | value of the secret                              | `VELA_VALUE`, `SECRET_VALUE`       |
-| `image`    | build image(s) that can access the secret        | `VELA_IMAGES`, `SECRET_IMAGES`     |
-| `event`    | build event(s) that can access the secret        | `VELA_EVENTS`, `SECRET_EVENTS`     |
-| `commands` | allows a step with commands to access the secret | `VELA_COMMANDS`, `SECRET_COMMANDS` |
-| `file`     | name of file used to update the secret(s)        | `VELA_FILE`, `SECRET_FILE`         |
-| `output`   | format the output for the secret                 | `VELA_OUTPUT`, `SECRET_OUTPUT`     |
+| Name            | Description                                      | Environment Variables              |
+| --------------- | ------------------------------------------------ | ---------------------------------- |
+| `org`           | name of organization for the secret              | `VELA_ORG`, `SECRET_ORG`           |
+| `repo`          | name of repository for the secret                | `VELA_REPO`, `SECRET_REPO`         |
+| `secret.engine` | name of engine that stores the secret            | `VELA_ENGINE`. `SECRET_ENGINE`     |
+| `secret.type`   | name of type of secret being stored              | `VELA_TYPE`, `SECRET_TYPE`         |
+| `team`          | name of team for the secret                      | `VELA_TEAM`, `SECRET_TEAM`         |
+| `name`          | name of the secret                               | `VELA_NAME`, `SECRET_NAME`         |
+| `value`         | value of the secret                              | `VELA_VALUE`, `SECRET_VALUE`       |
+| `image`         | build image(s) that can access the secret        | `VELA_IMAGES`, `SECRET_IMAGES`     |
+| `event`         | build event(s) that can access the secret        | `VELA_EVENTS`, `SECRET_EVENTS`     |
+| `commands`      | allows a step with commands to access the secret | `VELA_COMMANDS`, `SECRET_COMMANDS` |
+| `file`          | name of file used to update the secret(s)        | `VELA_FILE`, `SECRET_FILE`         |
+| `output`        | format the output for the secret                 | `VELA_OUTPUT`, `SECRET_OUTPUT`     |
 
 {{% alert color="info" %}}
 This command also supports setting the following parameters via a configuration file:
 
-- `engine`
-- `type`
+- `secret.engine`
+- `secret.type`
 - `org`
 - `repo`
 - `output`
@@ -63,7 +63,7 @@ To setup the CLI, please review the [authentication documentation](/docs/cli/aut
 #### Request
 
 ```sh
-vela update secret --engine native --type repo --org github --repo octocat --name foo --value baz
+vela update secret --secret.engine native --secret.type repo --org github --repo octocat --name foo --value baz
 ```
 
 #### Response
@@ -80,10 +80,10 @@ Vela supports updating a single-line or multi-line secret from a file using the 
 
 ```sh
 # Syntax
-vela update secret --engine native --type repo --org github --repo octocat --name foo --value @/path/to/file
+vela update secret --secret.engine native --secret.type repo --org github --repo octocat --name foo --value @/path/to/file
 
 # Example
-vela update secret --engine native --type repo --org github --repo octocat --name foo --value @$HOME/tmp/secret.txt
+vela update secret --secret.engine native --secret.type repo --org github --repo octocat --name foo --value @$HOME/tmp/secret.txt
 ```
 
 #### Secrets From File
@@ -99,7 +99,7 @@ vela update secret -f secret.yml
 ```yaml
 ---
 metadata:
-  api_version: v1
+  version: v1
   engine: native
 secrets:
   - org: octocat
@@ -129,7 +129,7 @@ secrets:
 ```yaml
 ---
 metadata:
-  api_version: v1
+  version: v1
   engine: native
 secrets:
   - org: github
@@ -145,7 +145,7 @@ secrets:
 
 ---
 metadata:
-  api_version: v1
+  version: v1
   engine: vault
 secrets:
   - org: github

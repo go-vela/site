@@ -19,21 +19,21 @@ For more information, you can run `vela view secret --help`.
 
 The following parameters are used to configure the command:
 
-| Name     | Description                           | Environment Variables          |
-| -------- | ------------------------------------- | ------------------------------ |
-| `org`    | name of organization for the secret   | `VELA_ORG`, `SECRET_ORG`       |
-| `repo`   | name of repository for the secret     | `VELA_REPO`, `SECRET_REPO`     |
-| `engine` | name of engine that stores the secret | `VELA_ENGINE`. `SECRET_ENGINE` |
-| `type`   | name of type of secret being stored   | `VELA_TYPE`, `SECRET_TYPE`     |
-| `team`   | name of team for the secret           | `VELA_TEAM`, `SECRET_TEAM`     |
-| `name`   | name of the secret                    | `VELA_NAME`, `SECRET_NAME`     |
-| `output` | format the output for the secret      | `VELA_OUTPUT`, `SECRET_OUTPUT` |
+| Name            | Description                           | Environment Variables          |
+| --------------- | ------------------------------------- | ------------------------------ |
+| `org`           | name of organization for the secret   | `VELA_ORG`, `SECRET_ORG`       |
+| `repo`          | name of repository for the secret     | `VELA_REPO`, `SECRET_REPO`     |
+| `secret.engine` | name of engine that stores the secret | `VELA_ENGINE`. `SECRET_ENGINE` |
+| `secret.type`   | name of type of secret being stored   | `VELA_TYPE`, `SECRET_TYPE`     |
+| `team`          | name of team for the secret           | `VELA_TEAM`, `SECRET_TEAM`     |
+| `name`          | name of the secret                    | `VELA_NAME`, `SECRET_NAME`     |
+| `output`        | format the output for the secret      | `VELA_OUTPUT`, `SECRET_OUTPUT` |
 
 {{% alert color="info" %}}
 This command also supports setting the following parameters via a configuration file:
 
-- `engine`
-- `type`
+- `secret.engine`
+- `secret.type`
 - `org`
 - `repo`
 - `output`
@@ -58,7 +58,7 @@ To setup the CLI, please review the [authentication documentation](/docs/cli/aut
 #### Request
 
 ```sh
-vela view secret --engine native --type repo --org github --repo octocat --name foo
+vela view secret --secret.engine native --secret.type repo --org github --repo octocat --name foo
 ```
 
 #### Response

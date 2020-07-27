@@ -19,8 +19,8 @@ For more information, you can run `vela get service --help`.
 
 The following parameters are used to configure the command:
 
-| Name       | Description                        | Environment Variables            |
-| ---------- | ---------------------------------- | -------------------------------- |
+| Name       | Description                           | Environment Variables               |
+| ---------- | ------------------------------------- | ----------------------------------- |
 | `org`      | name of organization for the services | `VELA_ORG`, `SERVICE_ORG`           |
 | `repo`     | name of repository for the services   | `VELA_REPO`, `SERVICE_REPO`         |
 | `build`    | number of build for the services      | `VELA_BUILD`, `SERVICE_BUILD`       |

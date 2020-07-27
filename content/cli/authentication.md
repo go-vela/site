@@ -16,7 +16,7 @@ Each request requires a server address and user token to be provided. You can pr
 - Flags
 
 {{% alert color="info" %}}
-A configuration file is the recommended method for providing the address and token to the CLI.
+A configuration file is the recommended method for providing the API address and token to the CLI.
 {{% /alert %}}
 
 ### Configuration File
@@ -29,20 +29,20 @@ Log in and capture the personal token:
 
 ```sh
 # Syntax
-vela login --addr <vela server url>
+vela login --api.addr <vela server url>
 
 # Example
-vela login --addr https://vela-server.localhost
+vela login --api.addr https://vela-server.localhost
 ```
 
 Generate the configuration file:
 
 ```sh
 # Syntax
-vela generate config --addr <vela server url> --token <personal token>
+vela generate config --api.addr <vela server url> --api.token <personal token>
 
 # Example
-vela generate config --addr https://vela-server.localhost --token qwerty123
+vela generate config --api.addr https://vela-server.localhost --api.token qwerty123
 ```
 
 {{% alert color="info" %}}
@@ -79,18 +79,18 @@ Log in and capture the personal token:
 
 ```sh
 # Syntax
-vela --addr <vela server url> login
+vela --api.addr <vela server url> login
 
 # Example
-vela --addr https://vela-server.localhost login
+vela --api.addr https://vela-server.localhost login
 ```
 
 Pass the personal token as a flag argument:
 
 ```sh
 # Syntax
-vela --addr <vela server url> --token <personal token>
+vela --api.addr <vela server url> --api.token <personal token>
 
 # Example
-vela --addr https://vela-server.localhost --token qwerty123
+vela --api.addr https://vela-server.localhost --api.token qwerty123
 ```

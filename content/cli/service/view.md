@@ -19,13 +19,13 @@ For more information, you can run `vela view service --help`.
 
 The following parameters are used to configure the command:
 
-| Name     | Description                       | Environment Variables        |
-| -------- | --------------------------------- | ---------------------------- |
-| `org`    | name of organization for the service | `VELA_ORG`, `SERVICE_ORG`       |
-| `repo`   | name of repository for the service   | `VELA_REPO`, `SERVICE_REPO`     |
-| `build`  | number of build for the service      | `VELA_BUILD`, `SERVICE_BUILD`   |
-| `service`   | number of the service                | `VELA_SERVICE`, `SERVICE_NUMBER`   |
-| `output` | format the output for the service    | `VELA_OUTPUT`, `SERVICE_OUTPUT` |
+| Name      | Description                          | Environment Variables            |
+| --------- | ------------------------------------ | -------------------------------- |
+| `org`     | name of organization for the service | `VELA_ORG`, `SERVICE_ORG`        |
+| `repo`    | name of repository for the service   | `VELA_REPO`, `SERVICE_REPO`      |
+| `build`   | number of build for the service      | `VELA_BUILD`, `SERVICE_BUILD`    |
+| `service` | number of the service                | `VELA_SERVICE`, `SERVICE_NUMBER` |
+| `output`  | format the output for the service    | `VELA_OUTPUT`, `SERVICE_OUTPUT`  |
 
 {{% alert color="info" %}}
 This command also supports setting the following parameters via a configuration file:

@@ -19,20 +19,20 @@ For more information, you can run `vela get secret --help`.
 
 The following parameters are used to configure the command:
 
-| Name     | Description                            | Environment Variables          |
-| -------- | -------------------------------------- | ------------------------------ |
-| `org`    | name of organization for the secrets   | `VELA_ORG`, `SECRET_ORG`       |
-| `repo`   | name of repository for the secrets     | `VELA_REPO`, `SECRET_REPO`     |
-| `engine` | name of engine that stores the secrets | `VELA_ENGINE`. `SECRET_ENGINE` |
-| `type`   | name of type of secrets being stored   | `VELA_TYPE`, `SECRET_TYPE`     |
-| `team`   | name of team for the secrets           | `VELA_TEAM`, `SECRET_TEAM`     |
-| `output` | format the output for the secrets      | `VELA_OUTPUT`, `SECRET_OUTPUT` |
+| Name            | Description                            | Environment Variables          |
+| --------------- | -------------------------------------- | ------------------------------ |
+| `org`           | name of organization for the secrets   | `VELA_ORG`, `SECRET_ORG`       |
+| `repo`          | name of repository for the secrets     | `VELA_REPO`, `SECRET_REPO`     |
+| `secret.engine` | name of engine that stores the secrets | `VELA_ENGINE`. `SECRET_ENGINE` |
+| `secret.type`   | name of type of secrets being stored   | `VELA_TYPE`, `SECRET_TYPE`     |
+| `team`          | name of team for the secrets           | `VELA_TEAM`, `SECRET_TEAM`     |
+| `output`        | format the output for the secrets      | `VELA_OUTPUT`, `SECRET_OUTPUT` |
 
 {{% alert color="info" %}}
 This command also supports setting the following parameters via a configuration file:
 
-- `engine`
-- `type`
+- `secret.engine`
+- `secret.type`
 - `org`
 - `repo`
 - `output`
@@ -57,7 +57,7 @@ To setup the CLI, please review the [authentication documentation](/docs/cli/aut
 #### Request
 
 ```sh
-vela get secret --engine native --type repo --org github --repo octocat
+vela get secret --secret.engine native --secret.type repo --org github --repo octocat
 ```
 
 #### Response
