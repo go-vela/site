@@ -3,6 +3,7 @@ public/
 resources/
 node_modules/
 tech-doc-hugo
+package-lock.json
 
 # IntelliJ project folder
 .idea/

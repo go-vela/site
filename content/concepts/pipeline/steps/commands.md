@@ -20,17 +20,31 @@ metadata:
   template: false
 
 steps:
-  - name: test
-    image: golang
-+    commands:
-+      - go test ./...
-
   - name: build
     image: golang
-+    commands:
-+      - go build
++   commands:
++     - go test ./...
++     - go build
 ```
 
 {{% alert color="info" %}}
 This pipeline will execute the `test` step first, then run the `build` step.
 {{% /alert %}}
+
+Using the above example, the provided commands are converted to a simple shell script that looks like:
+
+```sh
+#!/bin/sh
+
+set -e
+
+go test ./...
+
+go build
+```
+
+In turn, the above shell script is executed as the Docker entrypoint for the container:
+
+```sh
+docker run --entrypoint=build.sh golang
+```
