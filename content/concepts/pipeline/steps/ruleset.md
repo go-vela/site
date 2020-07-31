@@ -70,6 +70,7 @@ The following fields are used to configure the advanced version of the component
 | ---------- | ------------------------------------------------- | -------- |
 | `continue` | enables continuing the build if the step fails    | `false`  |
 | `if`       | limits the step execution to all rules must match | `false`  |
+| `matcher`  | matcher to use when evaluating the ruleset        | `false`  |
 | `operator` | operator to use when evaluating the ruleset       | `false`  |
 | `unless`   | limits the step execution to no rules can match   | `false`  |
 
@@ -104,7 +105,7 @@ steps:
 ```
 
 {{% alert color="info" %}}
-This pipeline will limit the execution of the `test` step to:and `build` steps to:
+This pipeline will limit the execution of the `test` step to:
 
 - builds with a branch of `master`
 - builds with an event of `push`

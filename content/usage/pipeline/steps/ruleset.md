@@ -173,6 +173,28 @@ This ruleset would limit the execution of the step to always run **unless** the 
 
 ### Advanced
 
+#### Matcher
+
+Vela enables even more advanced conditional triggers by adding the `regex` matcher. Consider the below example:
+
+```diff
+version: "1"
+
+steps:
+  - name: test
+    image: golang
++   ruleset:
++     event: [ tag ]
++     tag: "^v[0-9]\\.[0-9]\\.[0-9]$"
++     matcher: regex
+    commands:
+      - go test ./...
+```
+
+This ruleset would limit the execution of the step to the build event is `tag` and the build ref matches the regex pattern `^v[0-9]\.[0-9]\.[0-9]$`.
+
+#### Operator
+
 Vela enables even more advanced conditional triggers by adding the `or` operator. Consider the below example:
 
 ```diff
