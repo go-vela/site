@@ -15,15 +15,16 @@ This declaration allows you to provide conditions to limit the execution of the 
 
 The following fields are used to configure the simple version of the component:
 
-| Name     | Description                         | Required |
-| -------- | ----------------------------------- | -------- |
-| `branch` | name of branch for build            | `false`  |
-| `event`  | name of event for build             | `false`  |
-| `path`   | path to workspace files for build   | `false`  |
-| `repo`   | name of repo for build              | `false`  |
-| `status` | name of status for build            | `false`  |
-| `tag`    | name of reference for build         | `false`  |
-| `target` | name of deployment target for build | `false`  |
+| Name      | Description                         | Required |
+| --------- | ----------------------------------- | -------- |
+| `branch`  | name of branch for build            | `false`  |
+| `comment` | pull request comment body           | `false`  |
+| `event`   | name of event for build             | `false`  |
+| `path`    | path to workspace files for build   | `false`  |
+| `repo`    | name of repo for build              | `false`  |
+| `status`  | name of status for build            | `false`  |
+| `tag`     | name of reference for build         | `false`  |
+| `target`  | name of deployment target for build | `false`  |
 
 #### Syntax
 
@@ -115,7 +116,7 @@ This pipeline will also limit the execution of the `build` step to:
 - builds without an event of `push`
   {{% /alert %}}
 
-## Appendix  
+## Ruleset type Appendix  
 
 #### Branch
 
@@ -142,15 +143,6 @@ This rule type limits the execution of a step to **matching build statuses**. Th
 ```yaml
 ruleset:
   status: [ failure, success ]
-```
-
-#### Continue
-
-This rule type limits the execution of a step to **continuing on any failure**. The below example will run a step if `continue` is set to `true`:
-
-```yaml
-ruleset:
-  continue: true
 ```
 
 #### Tag
