@@ -24,6 +24,8 @@ The following [pipeline concepts](/docs/concepts/pipeline) are being used in the
 
 {{% alert title="Note:" color="primary" %}}
 Pipeline must be stored in base of repository as `.vela.yml` or `.vela.yaml`
+
+It is recommended to pin `image:` versions for production pipelines
 {{% /alert %}}
 
 ```yaml
@@ -63,6 +65,8 @@ The following [pipeline concepts](/docs/concepts/pipeline) are being used in the
 
 {{% alert title="Note:" color="primary" %}}
 Pipeline must be stored in base of repository as `.vela.yml` or `.vela.yaml`
+
+It is recommended to pin `image:` versions for production pipelines
 {{% /alert %}}
 
 ```yaml

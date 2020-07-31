@@ -24,6 +24,8 @@ The following [pipeline concepts](/docs/concepts/pipeline) are being used in the
 
 {{% alert title="Note:" color="primary" %}}
 Pipeline must be stored in base of repository as `.vela.yml` or `.vela.yaml`
+
+It is recommended to pin `image:` versions for production pipelines
 {{% /alert %}}
 
 ```yaml
@@ -31,7 +33,7 @@ version: "1"
 
 steps:
   - name: install
-    image: openjdk:8-alpine
+    image: openjdk:latest
     pull: true
     environment:
       GRADLE_USER_HOME: .gradle
@@ -40,7 +42,7 @@ steps:
       - ./gradlew downloadDependencies
 
   - name: test
-    image: openjdk:8-alpine
+    image: openjdk:latest
     pull: true
     environment:
       GRADLE_USER_HOME: .gradle
@@ -49,7 +51,7 @@ steps:
       - ./gradlew test
 
   - name: build
-    image: openjdk:8-alpine
+    image: openjdk:latest
     pull: true
     environment:
       GRADLE_USER_HOME: .gradle
@@ -72,6 +74,8 @@ The following [pipeline concepts](/docs/concepts/pipeline) are being used in the
 
 {{% alert title="Note:" color="primary" %}}
 Pipeline must be stored in base of repository as `.vela.yml` or `.vela.yaml`
+
+It is recommended to pin `image:` versions for production pipelines
 {{% /alert %}}
 
 ```yaml
