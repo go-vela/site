@@ -84,7 +84,7 @@ stages:
   install:
     steps:
       - name: install
-        image: openjdk:8-alpine
+        image: openjdk:latest
         pull: true
         environment:
           GRADLE_USER_HOME: .gradle
@@ -95,7 +95,7 @@ stages:
     needs: [ install ]
     steps:
       - name: test
-        image: openjdk:8-alpine
+        image: openjdk:latest
         pull: true
         environment:
           GRADLE_USER_HOME: .gradle
@@ -107,7 +107,7 @@ stages:
     needs: [ install ]
     steps:
       - name: build
-        image: openjdk:8-alpine
+        image: openjdk:latest
         pull: true
         environment:
           GRADLE_USER_HOME: .gradle
