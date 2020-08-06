@@ -1,12 +1,12 @@
 ---
-title: "Node"
+title: "Rust (With Cargo)"
 toc: true
-weight: 3
+weight: 1
 description: >
-  Sample Node Pipeline
+  Sample Rust (With Cargo) Pipeline
 ---
 
-Sample [Yaml](https://yaml.org/spec/) configuration for a project building a [Node](https://nodejs.org/en/docs/) application.
+Sample [Yaml](https://yaml.org/spec/) configuration for a project building a [Rust](https://www.rust-lang.org/) binary with [Cargo](https://doc.rust-lang.org/cargo/commands/cargo-doc.html).
 
 ## Scenario
 
@@ -31,23 +31,29 @@ It is recommended to pin `image:` versions for production pipelines
 version: "1"
 
 steps:
-  - name: install
-    image: node:latest
+  - name: fetch
+    image: rust:latest
     pull: true
     commands:
-      - node install
+      - cargo fetch --verbose --all
 
-  - name: lint
-    image: node:latest
+  - name: test
+    image: rust:latest
     pull: true
+    environment:
+      CGO_ENABLED: '0'
+      GOOS: linux
     commands:
-      - node test
+      - cargo test --verbose --all
 
   - name: build
-    image: node:latest
+    image: rust:latest
     pull: true
+    environment:
+      CGO_ENABLED: '0'
+      GOOS: linux
     commands:
-      - node build
+      - cargo build --verbose --all
 ```
 
 ### Stages
@@ -71,29 +77,29 @@ It is recommended to pin `image:` versions for production pipelines
 version: "1"
 
 stages:
-  install:
+  fetch:
     steps:
-      - name: install
-        image: node:latest
+      - name: fetch
+        image: rust:latest
         pull: true
         commands:
-          - node install
+          - cargo fetch --verbose --all
 
   test:
-    needs: [ install ]
+    needs: [ fetch ]
     steps:
       - name: test
-        image: node:latest
+        image: rust:latest
         pull: true
         commands:
-          - node test
+          - cargo test --verbose --all
 
   build:
-    needs: [ install ]
+    needs: [ fetch ]
     steps:
       - name: build
-        image: node:latest
+        image: rust:latest
         pull: true
         commands:
-          - node build
+          - cargo build --verbose --all
 ```

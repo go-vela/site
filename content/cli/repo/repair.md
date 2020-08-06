@@ -19,17 +19,18 @@ For more information, you can run `vela repair --help`.
 
 The following parameters are used to configure the command:
 
-| Name     | Description          | Environment |
-| -------- | -------------------- | ----------- |
-| `org`    | name of organization | `REPO_ORG`  |
-| `repo`   | name of repository   | `REPO_NAME` |
-| `output` | format the output    | `N/A`       |
+| Name     | Description                             | Environment Variables        |
+| -------- | --------------------------------------- | ---------------------------- |
+| `org`    | name of organization for the repository | `VELA_ORG`, `REPO_ORG`       |
+| `repo`   | name of repository                      | `VELA_REPO`, `REPO_NAME`     |
+| `output` | format the output for the repository    | `VELA_OUTPUT`, `REPO_OUTPUT` |
 
 {{% alert color="info" %}}
 This command also supports setting the following parameters via a configuration file:
 
 - `org`
 - `repo`
+- `output`
 
 For more information, please review the [CLI config documentation](/docs/cli/config/).
 {{% /alert %}}

@@ -1,12 +1,12 @@
 ---
-title: "Node"
+title: "Go (With Modules)"
 toc: true
-weight: 3
+weight: 1
 description: >
-  Sample Node Pipeline
+  Sample Go (With Modules) Pipeline
 ---
 
-Sample [Yaml](https://yaml.org/spec/) configuration for a project building a [Node](https://nodejs.org/en/docs/) application.
+Sample [Yaml](https://yaml.org/spec/) configuration for a project building a [Go](https://golang.org/) binary with [Go modules](https://github.com/golang/go/wiki/Modules).
 
 ## Scenario
 
@@ -18,6 +18,7 @@ The following [pipeline concepts](/docs/concepts/pipeline) are being used in the
 
 * [Steps](/docs/concepts/pipeline/steps/)
   * [image](/docs/concepts/pipeline/steps/image/)
+  * [Environment](/docs/concepts/pipeline/steps/environment/)
   * [Pull](/docs/concepts/pipeline/steps/pull/)
   * [Commands](/docs/concepts/pipeline/steps/commands/)
 
@@ -32,22 +33,31 @@ version: "1"
 
 steps:
   - name: install
-    image: node:latest
+    image: golang:latest
     pull: true
+    environment:
+      CGO_ENABLED: '0'
+      GOOS: linux
     commands:
-      - node install
+      - go get ./...
 
-  - name: lint
-    image: node:latest
+  - name: test
+    image: golang:latest
     pull: true
+    environment:
+      CGO_ENABLED: '0'
+      GOOS: linux
     commands:
-      - node test
+      - go test ./...
 
   - name: build
-    image: node:latest
+    image: golang:latest
     pull: true
+    environment:
+      CGO_ENABLED: '0'
+      GOOS: linux
     commands:
-      - node build
+      - go build
 ```
 
 ### Stages
@@ -58,6 +68,7 @@ The following [pipeline concepts](/docs/concepts/pipeline) are being used in the
   * [Needs](/docs/concepts/pipeline/needs/)
   * [Steps](/docs/concepts/pipeline/steps/)
     * [image](/docs/concepts/pipeline/steps/image/)
+    * [Environment](/docs/concepts/pipeline/steps/environment/)
     * [Pull](/docs/concepts/pipeline/steps/pull/)
     * [Commands](/docs/concepts/pipeline/steps/commands/)
 
@@ -74,26 +85,35 @@ stages:
   install:
     steps:
       - name: install
-        image: node:latest
+        image: golang:latest
         pull: true
+        environment:
+          CGO_ENABLED: '0'
+          GOOS: linux
         commands:
-          - node install
+          - go get ./...
 
   test:
     needs: [ install ]
     steps:
       - name: test
-        image: node:latest
+        image: golang:latest
         pull: true
+        environment:
+          CGO_ENABLED: '0'
+          GOOS: linux
         commands:
-          - node test
+          - go test ./...
 
   build:
     needs: [ install ]
     steps:
       - name: build
-        image: node:latest
+        image: golang:latest
         pull: true
+        environment:
+          CGO_ENABLED: '0'
+          GOOS: linux
         commands:
-          - node build
+          - go build
 ```

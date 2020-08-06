@@ -1,32 +1,30 @@
 ---
-title: "View"
-linkTitle: "View"
+title: "Get"
+linkTitle: "Get"
 description: >
-  Learn how to inspect logs for a build, step, or service.
+  Learn how to list logs for a build.
 ---
 
 ## Command
 
 ```
-$ vela view log <parameters...> <arguments...>
+$ vela get log <parameters...> <arguments...>
 ```
 
 {{% alert color="info" %}}
-For more information, you can run `vela view log --help`.
+For more information, you can run `vela get log --help`.
 {{% /alert %}}
 
 ## Parameters
 
 The following parameters are used to configure the command:
 
-| Name      | Description                       | Environment Variables         |
-| --------- | --------------------------------- | ----------------------------- |
-| `org`     | name of organization for the log  | `VELA_ORG`, `LOG_ORG`         |
-| `repo`    | name of repository for the log    | `VELA_REPO`, `LOG_REPO`       |
-| `build`   | number of the build for the log   | `VELA_BUILD`, `LOG_BUILD`     |
-| `service` | number of the service for the log | `VELA_SERVICE`, `LOG_SERVICE` |
-| `step`    | number of the step for the log    | `VELA_STEP`, `LOG_STEP`       |
-| `output`  | format the output for the logs    | `VELA_OUTPUT`, `LOG_OUTPUT`   |
+| Name     | Description                      | Environment Variables       |
+| -------- | -------------------------------- | --------------------------- |
+| `org`    | name of organization for the log | `VELA_ORG`, `LOG_ORG`       |
+| `repo`   | name of repository for the log   | `VELA_REPO`, `LOG_REPO`     |
+| `build`  | number of the build for the log  | `VELA_BUILD`, `LOG_BUILD`   |
+| `output` | format the output for the logs   | `VELA_OUTPUT`, `LOG_OUTPUT` |
 
 {{% alert color="info" %}}
 This command also supports setting the following parameters via a configuration file:
@@ -55,7 +53,7 @@ To setup the CLI, please review the [authentication documentation](/docs/cli/aut
 #### Request
 
 ```sh
-$ vela view log --org github --repo octocat --build 5 --step 1
+$ vela get log --org github --repo octocat --build 5
 ```
 
 #### Response
@@ -73,4 +71,7 @@ From https://github.com/github/octocat
  * [new branch]      master     -> origin/master
 $ git reset --hard afafce5e33a8efd4340613b31a953107d6dec3a3
 HEAD is now at afafce5 Dummy commit
+
+$ echo "Hello World!"
+Hello World!
 ```

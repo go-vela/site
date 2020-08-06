@@ -1,18 +1,18 @@
 ---
-title: "Generate"
-linkTitle: "Generate"
+title: "Validate"
+linkTitle: "Validate"
 description: >
-  Learn how to produce a pipeline.
+  Learn how to validate a Vela pipeline.
 ---
 
 ## Command
 
 ```
-$ vela generate pipeline <parameters...> <arguments...>
+$ vela validate pipeline <parameters...> <arguments...>
 ```
 
 {{% alert color="info" %}}
-For more information, you can run `vela generate pipeline --help`.
+For more information, please run `vela validate pipeline --help`.
 {{% /alert %}}
 
 ## Parameters
@@ -23,8 +23,6 @@ The following parameters are used to configure the command:
 | -------- | ---------------------------------- | -------------------------------- |
 | `file`   | name of the file for the pipeline  | `VELA_FILE`, `PIPELINE_FILE`     |
 | `path`   | path to the file for the pipeline  | `VELA_PATH`, `PIPELINE_PATH`     |
-| `stages` | generates the pipeline with stages | `VELA_STAGES`, `PIPELINE_STAGES` |
-| `type`   | type of pipeline being generated   | `VELA_TYPE`, `PIPELINE_TYPE`     |
 
 ## Permissions
 
@@ -36,18 +34,17 @@ COMING SOON!
 This section assumes you have already installed and setup the CLI.
 
 To install the CLI, please review the [installation documentation](/docs/cli/install/).
-
 To setup the CLI, please review the [authentication documentation](/docs/cli/authentication/).
 {{% /alert %}}
 
 #### Request
 
 ```sh
-vela generate pipeline
+vela validate pipeline
 ```
 
 #### Response
 
 ```sh
-".vela.yml" go pipeline generated
+".vela.yml" is valid
 ```

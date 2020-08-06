@@ -19,16 +19,17 @@ For more information, you can run `vela generate config --help`.
 
 The following parameters are used to configure the command:
 
-| Name            | Description                  | Environment |
-| --------------- | ---------------------------- | ----------- |
-| `addr`          | URL to server                | `N/A`       |
-| `token`         | user token from server       | `N/A`       |
-| `api-version`   | API version for server       | `N/A`       |
-| `log-level`     | change the CLI logging level | `N/A`       |
-| `org`           | name of organization         | `N/A`       |
-| `repo`          | name of repository           | `N/A`       |
-| `secret-engine` | name of secret backend       | `N/A`       |
-| `secret-type`   | name of secret type          | `N/A`       |
+| Name            | Description                         | Environment Variables                    |
+| --------------- | ----------------------------------- | ---------------------------------------- |
+| `api.addr`      | full URL to API server              | `VELA_ADDR`, `CONFIG_ADDR`               |
+| `api.token`     | user token from API server          | `VELA_TOKEN`, `CONFIG_TOKEN`             |
+| `api.version`   | version of API for server           | `VELA_API_VERSION`, `CONFIG_API_VERSION` |
+| `log.level`     | set the level of logging            | `VELA_LOG_LEVEL`, `CONFIG_LOG_LEVEL`     |
+| `output`        | format the output for API results   | `VELA_OUTPUT`, `CONFIG_OUTPUT`           |
+| `org`           | name of organization for API calls  | `VELA_ORG`, `CONFIG_ORG`                 |
+| `repo`          | name of repository for API calls    | `VELA_REPO`, `CONFIG_REPO`               |
+| `secret.engine` | name of secret engine for API calls | `VELA_ENGINE`, `CONFIG_ENGINE`           |
+| `secret.type`   | name of secret type for API calls   | `VELA_TYPE`, `CONFIG_TYPE`               |
 
 ## Permissions
 
@@ -47,14 +48,16 @@ To setup the CLI, please review the [authentication documentation](/docs/cli/aut
 #### Request
 
 ```sh
-vela generate config --addr https://vela-server.localhost --token qwerty123
+vela generate config --api.addr https://vela-server.localhost --api.token superSecretToken
 ```
 
 #### Response
 
 ```sh
-addr: https://vela-server.localhost
-token: qwerty123
-api-version: v1
-log-level: info
+api:
+  addr: https://vela-server.localhost
+  token: superSecretToken
+  version: "1"
+log:
+  level: info
 ```

@@ -19,18 +19,19 @@ For more information, you can run `vela view deployment --help`.
 
 The following parameters are used to configure the command:
 
-| Name         | Description          | Environment   |
-| ------------ | -------------------- | ------------- |
-| `org`        | name of organization | `VELA_ORG`    |
-| `repo`       | name of repository   | `VELA_REPO`   |
-| `deployment` | number of deployment | `VELA_NUMBER` |
-| `output`     | format the output    | `N/A`         |
+| Name         | Description                             | Environment Variables                  |
+| ------------ | --------------------------------------- | -------------------------------------- |
+| `org`        | name of organization for the deployment | `VELA_ORG`, `DEPLOYMENT_ORG`           |
+| `repo`       | name of repository for the deployment   | `VELA_REPO`, `DEPLOYMENT_REPO`         |
+| `deployment` | number of the deployment                | `VELA_DEPLOYMENT`, `DEPLOYMENT_NUMBER` |
+| `output`     | format the output for the deployment    | `VELA_OUTPUT`, `DEPLOYMENT_OUTPUT`     |
 
 {{% alert color="info" %}}
 This command also supports setting the following parameters via a configuration file:
 
 - `org`
 - `repo`
+- `output`
 
 For more information, please review the [CLI config documentation](/docs/cli/config/).
 {{% /alert %}}

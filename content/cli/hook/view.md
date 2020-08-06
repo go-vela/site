@@ -2,17 +2,17 @@
 title: "View"
 linkTitle: "View"
 description: >
-  Learn how to inspect a step.
+  Learn how to inspect a hook.
 ---
 
 ## Command
 
 ```
-$ vela view step <parameters...> <arguments...>
+$ vela view hook <parameters...> <arguments...>
 ```
 
 {{% alert color="info" %}}
-For more information, you can run `vela view step --help`.
+For more information, you can run `vela view hook --help`.
 {{% /alert %}}
 
 ## Parameters
@@ -21,11 +21,10 @@ The following parameters are used to configure the command:
 
 | Name     | Description                       | Environment Variables        |
 | -------- | --------------------------------- | ---------------------------- |
-| `org`    | name of organization for the step | `VELA_ORG`, `STEP_ORG`       |
-| `repo`   | name of repository for the step   | `VELA_REPO`, `STEP_REPO`     |
-| `build`  | number of build for the step      | `VELA_BUILD`, `STEP_BUILD`   |
-| `step`   | number of the step                | `VELA_STEP`, `STEP_NUMBER`   |
-| `output` | format the output for the step    | `VELA_OUTPUT`, `STEP_OUTPUT` |
+| `org`    | name of organization for the hook | `VELA_ORG`, `HOOK_ORG`       |
+| `repo`   | name of repository for the hook   | `VELA_REPO`, `HOOK_REPO`     |
+| `hook`   | number of the hook                | `VELA_HOOK`, `HOOK_NUMBER`   |
+| `output` | format the output for the hook    | `VELA_OUTPUT`, `HOOK_OUTPUT` |
 
 {{% alert color="info" %}}
 This command also supports setting the following parameters via a configuration file:
@@ -54,24 +53,22 @@ To setup the CLI, please review the [authentication documentation](/docs/cli/aut
 #### Request
 
 ```sh
-vela view step --org github --repo octocat --build 1 --step 1
+vela view hook --org github --repo octocat --hook 1
 ```
 
 #### Response
 
 ```sh
 id: 1
-build_id: 1
 repo_id: 1
+build_id: 1
 number: 1
-name: clone
+source_id: c8da1302-07d6-11ea-882f-4893bca275b8
+created: 1563475419
+host: github.com
+event: push
+branch: master
+error: 
 status: success
-error: ""           # Populates when the platform runs into an error with the build
-exitcode: 0
-created: 1561748980
-started: 1561748979
-finished: 1561748981
-host: "worker.host.com"
-runtime: "docker"
-distribution: "linux"
+link: https://github.com/github/octocat/settings/hooks/1
 ```

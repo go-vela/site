@@ -19,18 +19,19 @@ For more information, you can run `vela view build --help`.
 
 The following parameters are used to configure the command:
 
-| Name     | Description          | Environment    |
-| -------- | -------------------- | -------------- |
-| `org`    | name of organization | `BUILD_ORG`    |
-| `repo`   | name of repository   | `BUILD_REPO`   |
-| `build`  | number of build      | `BUILD_NUMBER` |
-| `output` | format the output    | `N/A`          |
+| Name     | Description                        | Environment Variables             |
+| -------- | ---------------------------------- | --------------------------------- |
+| `org`    | name of organization for the build | `VELA_ORG`, `BUILD_ORG`           |
+| `repo`   | name of repository for the build   | `VELA_REPO`, `BUILD_REPO`         |
+| `build`  | number of the build                | `VELA_BUILD`, `BUILD_NUMBER`      |
+| `output` | format the output for the build    | `VELA_OUTPUT`, `BUILD_OUTPUT`     |
 
 {{% alert color="info" %}}
 This command also supports setting the following parameters via a configuration file:
 
 - `org`
 - `repo`
+- `output`
 
 For more information, please review the [CLI config documentation](/docs/cli/config/).
 {{% /alert %}}

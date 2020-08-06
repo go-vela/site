@@ -1,9 +1,11 @@
 ---
-title: "Auto completion"
-linkTitle: "Auto completion"
+title: "Completion"
+linkTitle: "Completion"
 description: >
-  Learn how to enable vela auto-completion permanently in bash/zsh sessions.
+  Learn how to enable auto-completion in your terminal.
 ---
+
+The below commands are available to operate on the `completion` resource.
 
 {{% alert color="warning" %}}
 This section assumes you have already installed and setup the CLI.

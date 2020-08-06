@@ -2,17 +2,17 @@
 title: "Get"
 linkTitle: "Get"
 description: >
-  Learn how to list steps.
+  Learn how to list hooks.
 ---
 
 ## Command
 
 ```
-$ vela get step <parameters...> <arguments...>
+$ vela get hook <parameters...> <arguments...>
 ```
 
 {{% alert color="info" %}}
-For more information, you can run `vela get step --help`.
+For more information, you can run `vela get hook --help`.
 {{% /alert %}}
 
 ## Parameters
@@ -21,12 +21,11 @@ The following parameters are used to configure the command:
 
 | Name       | Description                        | Environment Variables            |
 | ---------- | ---------------------------------- | -------------------------------- |
-| `org`      | name of organization for the steps | `VELA_ORG`, `STEP_ORG`           |
-| `repo`     | name of repository for the steps   | `VELA_REPO`, `STEP_REPO`         |
-| `build`    | number of build for the steps      | `VELA_BUILD`, `STEP_BUILD`       |
-| `output`   | format the output for the steps    | `VELA_OUTPUT`, `STEP_OUTPUT`     |
-| `page`     | prints a specific page of steps    | `VELA_PAGE`, `STEP_PAGE`         |
-| `per.page` | number of steps to print per page  | `VELA_PER_PAGE`, `STEP_PER_PAGE` |
+| `org`      | name of organization for the hooks | `VELA_ORG`, `HOOK_ORG`           |
+| `repo`     | name of repository for the hooks   | `VELA_REPO`, `HOOK_REPO`         |
+| `output`   | format the output for the hooks    | `VELA_OUTPUT`, `HOOK_OUTPUT`     |
+| `page`     | prints a specific page of hooks    | `VELA_PAGE`, `HOOK_PAGE`         |
+| `per.page` | number of hooks to print per page  | `VELA_PER_PAGE`, `HOOK_PER_PAGE` |
 
 {{% alert color="info" %}}
 This command also supports setting the following parameters via a configuration file:
@@ -55,15 +54,16 @@ To setup the CLI, please review the [authentication documentation](/docs/cli/aut
 #### Request
 
 ```sh
-vela get step --org github --repo octocat --build 1
+vela get hook --org github --repo octocat
 ```
 
 #### Response
 
 ```sh
-NAME            STATUS  RUNTIME DURATION
-publish         failure         1s
-build           success         17s
-test            success         10s
-clone           success         2s
+NUMBER  STATUS  EVENT   BRANCH
+5       failure push    master
+4       failure push    master
+3       success push    master
+2       success push    master
+1       success push    master
 ```

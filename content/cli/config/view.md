@@ -38,8 +38,10 @@ vela view config
 #### Response
 
 ```sh
-addr: https://vela-server.localhost
-token: qwerty123
-api-version: v1
-log-level: info
+api:
+  addr: https://vela-server.localhost
+  token: superSecretToken
+  version: "1"
+log:
+  level: info
 ```

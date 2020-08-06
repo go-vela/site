@@ -2,7 +2,7 @@
 title: "Tutorials"
 linkTitle: "Tutorials"
 description: >
-  Learn how to write your own plugin for Vela.
+  Learn how to write your own pipeline plugin for Vela.
 ---
 
 An example of these tutorials exist in our [go-vela/vela-tutorials](https://github.com/go-vela/vela-tutorials/tree/master/plugins) repository.
