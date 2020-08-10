@@ -44,7 +44,7 @@ version: "1"
 
 steps:
   - name: publish hello world
-    image: target/vela-docker:v0.2.1
+    image: target/vela-docker:latest
     pull: true
     secrets: [ docker_username, docker_password ]
     parameters:
@@ -95,7 +95,7 @@ stages:
   docker:
     steps:
       - name: publish hello world
-        image: target/vela-docker:v0.2.1
+        image: target/vela-docker:latest
         pull: true
         secrets: [ docker_username, docker_password ]
         parameters:
