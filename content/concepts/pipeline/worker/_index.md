@@ -7,7 +7,7 @@ description: >
 
 The `worker` component is a part of a [pipeline](/docs/concepts/pipeline/) for Vela.
 
-This declaration allows you to route you build to a subset of workers within a Vela cluster.
+This declaration allows you to route your build to a subset of workers within a Vela cluster.
 
 {{% alert color="info" %}}
 Routes can **only** be made by a system administrator. 
@@ -50,5 +50,5 @@ steps:
 ```
 
 {{% alert color="info" %}}
-This pipeline will start and run on a worker with the available queue `docker:large`
+This pipeline will start and run on a worker with the available route `docker:large`
 {{% /alert %}}
