@@ -10,6 +10,12 @@ Source Code: https://github.com/go-vela/vela-downstream
 
 Registry: https://hub.docker.com/r/target/vela-downstream
 
+{{% alert color="tip" %}}
+This plugin supports environment (`PARAMETER_*`) and volume (`/vela/parameters/*`) configuration for setting parameters.
+
+The precedence order is take files then environment variables if both are set in a container.
+{{% /alert %}}
+
 ## Usage
 
 {{% alert color="warning" %}}
@@ -74,6 +80,8 @@ steps:
 Users should refrain from configuring sensitive information in their pipeline in plain text.
 {{% /alert %}}
 
+### Internal
+
 The plugin accepts the following `parameters` for authentication:
 
 | Parameter | Environment Variable Configuration                                  |
@@ -100,6 +108,33 @@ steps:
 This example will add the `secrets` to the `trigger_hello-world` step as environment variables:
 
 - `DOWNSTREAM_TOKEN`=<value>
+{{% /alert %}}
+
+### External
+
+The plugin accepts the following files for authentication:
+
+| Parameter | Volume Configuration                                                                |
+| --------- | ----------------------------------------------------------------------------------- |
+| `token`   | `/vela/parameters/downstream/config/token`, `/vela/secrets/downstream/config/token` |
+
+Users can use [Vela external secrets](/docs/concepts/pipeline/secrets/) to substitute these sensitive values at runtime:
+
+```diff
+steps:
+  - name: trigger_hello-world
+    image: target/vela-downstream:v0.2.0
+    pull: true
+    parameters:
+      branch: master
+      repos:
+        - octocat/hello-world
+      server: https://vela-server.localhost
+-     token: superSecretVelaToken
+```
+
+{{% alert color="info" %}}
+This example will read the secrets values in the files stored at `/vela/secrets/`:
 {{% /alert %}}
 
 ## Parameters

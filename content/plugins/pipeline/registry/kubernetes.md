@@ -10,6 +10,12 @@ Source Code: https://github.com/go-vela/vela-kubernetes
 
 Registry: https://hub.docker.com/r/target/vela-kubernetes
 
+{{% alert color="tip" %}}
+This plugin supports environment (`PARAMETER_*`) and volume (`/vela/parameters/*`) configuration for setting parameters.
+
+The precedence order is take files then environment variables if both are set in a container.
+{{% /alert %}}
+
 ## Usage
 
 Sample of applying Kubernetes files:
@@ -86,6 +92,8 @@ steps:
 Users should refrain from configuring sensitive information in their pipeline in plain text.
 {{% /alert %}}
 
+### Internal
+
 The plugin accepts the following `parameters` for authentication:
 
 | Parameter | Environment Variable Configuration               |
@@ -113,6 +121,34 @@ steps:
 This example will add the `secrets` to the `kubernetes` step as environment variables:
 
 - `KUBE_CONFIG`=<value>
+{{% /alert %}}
+
+### External
+
+The plugin accepts the following files for authentication:
+
+| Parameter        | Volume Configuration                                                       |
+| ---------------- | -------------------------------------------------------------------------- |
+| `config`  | `/vela/parameters/kubernetes/config/file`, `/vela/secrets/kubernetes/config/file` |
+
+Users can use [Vela external secrets](/docs/concepts/pipeline/secrets/) to substitute these sensitive values at runtime:
+
+```diff
+steps:
+  - name: kubernetes
+    image: target/vela-kubernetes:v0.1.0
+    pull: true
+    parameters:
+      action: apply
+      files: [ kubernetes/common, kubernetes/dev/deploy.yml ]
+-     config: |
+-     ---
+-     apiVersion: v1
+-     kind: Config
+```
+
+{{% alert color="info" %}}
+This example will read the secrets values in the files stored at `/vela/secrets/`:
 {{% /alert %}}
 
 ## Parameters

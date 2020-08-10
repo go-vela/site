@@ -14,6 +14,12 @@ Source Code: https://github.com/go-vela/vela-git
 
 Registry: https://hub.docker.com/r/target/vela-git
 
+{{% alert color="tip" %}}
+This plugin supports environment (`PARAMETER_*`) and volume (`/vela/parameters/*`) configuration for setting parameters.
+
+The precedence order is take files then environment variables if both are set in a container.
+{{% /alert %}}
+
 ## Usage
 
 {{% alert color="info" %}}
@@ -70,6 +76,8 @@ steps:
 Users should refrain from configuring sensitive information in their pipeline in plain text.
 {{% /alert %}}
 
+### Internal
+
 The plugin accepts the following `parameters` for authentication:
 
 | Parameter        | Environment Variable Configuration                                |
@@ -99,6 +107,35 @@ This example will add the `secrets` to the `clone_hello-world` step as environme
 
 - `GIT_USERNAME`=<value>
 - `GIT_PASSWORD`=<value>
+{{% /alert %}}
+
+### External
+
+The plugin accepts the following files for authentication:
+
+| Parameter        | Volume Configuration                                                      |
+| ---------------- | ------------------------------------------------------------------------- |
+| `netrc_password` | `/vela/parameters/git/netrc/password`, `/vela/secrets/git/netrc/password` |
+| `netrc_username` | `/vela/parameters/git/netrc/username`, `/vela/secrets/git/netrc/username` |
+
+Users can use [Vela external secrets](/docs/concepts/pipeline/secrets/) to substitute these sensitive values at runtime:
+
+```diff
+steps:
+  - name: clone_hello-world
+    image: target/vela-git:v0.3.0
+    pull: true
+    parameters:
+-     netrc_username: octocat
+-     netrc_password: superSecretPassword
+      path: /home/octocat_hello-world_1
+      ref: refs/heads/master
+      remote: https://github.com/octocat/hello-world.git
+      sha: 7fd1a60b01f91b314f59955a4e4d4e80d8edf11d
+```
+
+{{% alert color="info" %}}
+This example will read the secrets values in the files stored at `/vela/secrets/`:
 {{% /alert %}}
 
 ## Parameters

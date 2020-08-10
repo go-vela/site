@@ -6,6 +6,12 @@ Source Code: https://github.com/go-vela/vela-terraform
 
 Registry: https://hub.docker.com/r/target/vela-terraform
 
+{{% alert color="tip" %}}
+This plugin supports environment (`PARAMETER_*`) and volume (`/vela/parameters/*`) configuration for setting parameters.
+
+The precedence order is take files then environment variables if both are set in a container.
+{{% /alert %}}
+
 ## Usage
 
 {{% alert color="note" %}}

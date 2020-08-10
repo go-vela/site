@@ -10,6 +10,12 @@ Source Code: https://github.com/go-vela/vela-artifactory
 
 Registry: https://hub.docker.com/r/target/vela-artifactory
 
+{{% alert color="tip" %}}
+This plugin supports environment (`PARAMETER_*`) and volume (`/vela/parameters/*`) configuration for setting parameters.
+
+The precedence order is take files then environment variables if both are set in a container.
+{{% /alert %}}
+
 ## Usage
 
 Sample of copying an artifact:
@@ -116,6 +122,8 @@ steps:
 Users should refrain from configuring sensitive information in their pipeline in plain text.
 {{% /alert %}}
 
+### Internal
+
 The plugin accepts the following `parameters` for authentication:
 
 | Parameter   | Environment Variable Configuration                              |
@@ -146,6 +154,36 @@ This example will add the `secrets` to the `copy_artifacts` step as environment 
 
 - `ARTIFACTORY_USERNAME`=<value>
 - `ARTIFACTORY_PASSWORD`=<value>
+{{% /alert %}}
+
+### External
+
+The plugin accepts the following files for authentication:
+
+| Parameter   | Volume Configuration                           |
+| ----------- | ------------------------------------------------------------ |
+| `api_key`  | `/vela/parameters/config/artifactory/api_key`, `/vela/secrets/artifactory/api_key` |
+| `password`  | `/vela/parameters/config/artifactory/password`, `/vela/secrets/artifactory/password` |
+| `username`  | `/vela/parameters/config/artifactory/username`, `/vela/secrets/artifactory/username` |
+
+Users can use [Vela external secrets](/docs/concepts/pipeline/secrets/) to substitute these sensitive values at runtime:
+
+```diff
+steps:
+  - name: copy_artifacts
+    image: target/vela-artifactory:v0.2.0
+    pull: true
+    parameters:
+      action: copy
+      path: libs-snapshot-local/foo.txt
+      target: libs-snapshot-local/bar.txt
+      url: http://localhost:8081/artifactory
+-     username: octocat
+-     password: superSecretPassword
+```
+
+{{% alert color="info" %}}
+This example will read the secrets values in the files stored at `/vela/secrets/`:
 {{% /alert %}}
 
 ## Parameters

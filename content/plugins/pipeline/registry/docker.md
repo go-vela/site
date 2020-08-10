@@ -10,6 +10,12 @@ Source Code: https://github.com/go-vela/vela-docker
 
 Registry: https://hub.docker.com/r/target/vela-docker
 
+{{% alert color="tip" %}}
+This plugin supports environment (`PARAMETER_*`) and volume (`/vela/parameters/*`) configuration for setting parameters.
+
+The precedence order is take files then environment variables if both are set in a container.
+{{% /alert %}}
+
 ## Usage
 
 Sample of building and publishing an image:
@@ -114,6 +120,8 @@ steps:
 Users should refrain from configuring sensitive information in their pipeline in plain text.
 {{% /alert %}}
 
+### Internal
+
 The plugin accepts the following `parameters` for authentication:
 
 | Parameter   | Environment Variable Configuration                           |
@@ -141,6 +149,33 @@ This example will add the `secrets` to the `publish_hello-world` step as environ
 
 - `DOCKER_USERNAME`=<value>
 - `DOCKER_PASSWORD`=<value>
+{{% /alert %}}
+
+### External
+
+The plugin accepts the following files for authentication:
+
+| Parameter   | Volume Configuration                           |
+| ----------- | ------------------------------------------------------------ |
+| `password`  | `/vela/parameters/docker/registry/password`, `/vela/secrets/docker/registry/password`, `/vela/secrets/docker/password` |
+| `username`  | `/vela/parameters/docker/registry/username`, `/vela/secrets/docker/registry/username`, `/vela/secrets/docker/username` |
+
+Users can use [Vela external secrets](/docs/concepts/pipeline/secrets/) to substitute these sensitive values at runtime:
+
+```diff
+steps:
+  - name: publish_hello-world
+    image: target/vela-docker:v0.2.1
+    pull: true
+    parameters:
+      registry: index.docker.io
+      repo: index.docker.io/octocat/hello-world
+-     username: octocat
+-     password: superSecretPassword
+```
+
+{{% alert color="info" %}}
+This example will read the secrets values in the files stored at `/vela/secrets/`:
 {{% /alert %}}
 
 ## Parameters
