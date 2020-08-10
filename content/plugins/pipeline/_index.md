@@ -4,40 +4,22 @@ linkTitle: "Pipeline"
 description: >
   Learn about pipeline plugins for Vela.
 ---
-## Using a plugin
 
-Typically, plugins are configured as a step in a pipeline and should accept their configuration via environment variables. The below example shows a Docker plugin that can publish an image to a registry:
+## Under the hood
 
-```yaml
-version: "1"
-
-steps:
-  - name: plugin
-    image: target/vela-docker:v0.1.0
-    pull: true
-    parameters:
-      registry: index.docker.io
-      repo: index.docker.io/octocat/hello-world
-```
-
-We pass these variables in Vela using the `parameters` block. Any variable passed to this block, will be injected into the step as `PARAMETER_<variable>`:
+Pipeline plugins are designed to automate, customize, and execute your software development workflows. The example we have shown is publishing an image to a registry:
 
 ```diff
 version: "1"
 
 steps:
-  - name: plugin
-    image: target/vela-docker:v0.1.0
+  - name: docker
+    image: target/vela-docker
     pull: true
 +   parameters:
 +     registry: index.docker.io
 +     repo: index.docker.io/octocat/hello-world
 ```
-
-From the above example, the following environment variables would be added to the container:
-
-* `PARAMETER_REGISTRY=index.docker.io`
-* `PARAMETER_REPO=index.docker.io/octocat/hello-world`
 
 ## Building a plugin
 

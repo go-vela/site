@@ -29,6 +29,7 @@ The following fields are used to configure the component:
 | `key`    | path to secret to fetch from storage backend | `false`  |
 | `name`   | name of secret to reference in the pipeline  | `true`   |
 | `type`   | type of secret to fetch from storage backend | `false`  |
+| `type`   | loop up a secret via running a secret plugin | `false`  |
 
 {{% alert color="info" %}}
 The following fields have a default value already set:
