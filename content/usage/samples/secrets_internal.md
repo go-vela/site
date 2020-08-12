@@ -16,7 +16,7 @@ User is looking to create a pipeline that can inject configuration that can not 
 It is assumed you have created secrets `docker_username` and `docker_password` in the web interface or [CLI](/docs/cli/).
 {{% /alert %}}
 
-The samples show a pipeline using repository secrets. Vela contains three secret types repository, organization, and shared. For examples on organization and shared please see the [secret concepts](/docs/concepts/pipeline/steps/secrets/) documentation.
+The samples show a pipeline using repository secrets. Vela contains three secret types: repository, organization, and shared. For examples on organization and shared, please see the [secret concepts](/docs/concepts/pipeline/steps/secrets/) documentation.
 
 ### Steps
 
@@ -24,7 +24,7 @@ The following [pipeline concepts](/docs/concepts/pipeline) are being used in the
 
 * [Steps](/docs/concepts/pipeline/steps/)
   * [Image](/docs/concepts/pipeline/steps/image/)
-  * [Pull](/docs/concepts/pipeline/steps/pull/)* 
+  * [Pull](/docs/concepts/pipeline/steps/pull/) 
   * [Secrets](/docs/concepts/pipeline/steps/secrets/)
   * [Parameters](/docs/concepts/pipeline/steps/parameters/)
 * [Secrets](/docs/concepts/pipeline/secrets/)

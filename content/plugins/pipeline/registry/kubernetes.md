@@ -148,7 +148,7 @@ steps:
 ```
 
 {{% alert color="info" %}}
-This example will read the secrets values in the files stored at `/vela/secrets/`:
+This example will read the secrets values in the volume stored at `/vela/secrets/`:
 {{% /alert %}}
 
 ## Parameters

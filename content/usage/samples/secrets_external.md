@@ -10,13 +10,13 @@ Sample [Yaml](https://yaml.org/spec/) configuration for a project requiring a se
 
 ## Scenario
 
-User is looking to create a pipeline that can integrate with a private Vault to inject secrets that can not be used with pushing Docker image to a registry.
+User is looking to create a pipeline that can integrate with a private Vault to inject secrets that can not be used with pushing a Docker image to a registry.
 
 {{% alert title="Note:" color="primary" %}}
 It is assumed you have created secret `vault_token` in the web interface or [CLI](/docs/cli/).
 {{% /alert %}}
 
-The samples show a pipeline using repository secrets. Vela contains three secret types repository, organization, and shared. For examples on organization and shared please see the [secret concepts](/docs/concepts/pipeline/steps/secrets/) documentation.
+The samples show a pipeline using repository secrets. Vela contains three secret types: repository, organization, and shared. For examples on organization and shared, please see the [secret concepts](/docs/concepts/pipeline/steps/secrets/) documentation.
 
 ### Steps
 
@@ -24,7 +24,7 @@ The following [pipeline concepts](/docs/concepts/pipeline) are being used in the
 
 * [Steps](/docs/concepts/pipeline/steps/)
   * [Image](/docs/concepts/pipeline/steps/image/)
-  * [Pull](/docs/concepts/pipeline/steps/pull/)* 
+  * [Pull](/docs/concepts/pipeline/steps/pull/)
   * [Secrets](/docs/concepts/pipeline/steps/secrets/)
   * [Parameters](/docs/concepts/pipeline/steps/parameters/)
 * [Secrets](/docs/concepts/pipeline/secrets/)
@@ -61,7 +61,7 @@ secrets:
       pull: true
       secrets: [ vault_token ]
       parameters:
-        addr: vault.company.com
+        addr: vault.example.com
         auth_method: token
         username: octocat
         items:
@@ -118,7 +118,7 @@ secrets:
       pull: true
       secrets: [ vault_token ]
       parameters:
-        addr: vault.company.com
+        addr: vault.example.com
         auth_method: token
         username: octocat
         items:

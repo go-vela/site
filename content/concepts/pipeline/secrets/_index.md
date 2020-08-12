@@ -23,13 +23,13 @@ Any variable provided with this declaration will allow step(s) to request access
 
 The following fields are used to configure the component:
 
-| Name     | Description                                  | Required |
-| -------- | -------------------------------------------- | -------- |
-| `engine` | name of storage backend to fetch secret from | `false`  |
-| `key`    | path to secret to fetch from storage backend | `false`  |
-| `name`   | name of secret to reference in the pipeline  | `true`   |
-| `type`   | type of secret to fetch from storage backend | `false`  |
-| `type`   | loop up a secret via running a secret plugin | `false`  |
+| Name       | Description                                  | Required |
+| ---------- | -------------------------------------------- | -------- |
+| `engine`   | name of storage backend to fetch secret from | `false`  |
+| `key`      | path to secret to fetch from storage backend | `false`  |
+| `name`     | name of secret to reference in the pipeline  | `true`   |
+| `type`     | type of secret to fetch from storage backend | `false`  |
+| `origin`   | look up a secret via running a secret plugin | `false`  |
 
 {{% alert color="info" %}}
 The following fields have a default value already set:
@@ -37,7 +37,7 @@ The following fields have a default value already set:
 - `engine`: `native`
 - `key`: `<secret name>`
 - `type`: `repo`
-  {{% /alert %}}
+{{% /alert %}}
 
 ## Syntax
 
