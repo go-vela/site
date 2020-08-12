@@ -1,7 +1,7 @@
 ---
 title:  "Understanding the Workspace"
 toc:  true
-weight:  6
+weight:  7
 description: >
   Shared directory that all build steps begin at.
 ---
