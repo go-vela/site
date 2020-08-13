@@ -29,20 +29,20 @@ Log in and capture the personal token:
 
 ```sh
 # Syntax
-vela login --api.addr <vela server url>
+vela login --addr <vela server url>
 
 # Example
-vela login --api.addr https://vela-server.localhost
+vela login --addr https://vela-server.localhost
 ```
 
 Generate the configuration file:
 
 ```sh
 # Syntax
-vela generate config --api.addr <vela server url> --api.token <personal token>
+vela generate config --addr <vela server url> --token <personal token>
 
 # Example
-vela generate config --api.addr https://vela-server.localhost --api.token qwerty123
+vela generate config --addr https://vela-server.localhost --token qwerty123
 ```
 
 {{% alert color="info" %}}
@@ -79,18 +79,18 @@ Log in and capture the personal token:
 
 ```sh
 # Syntax
-vela --api.addr <vela server url> login
+vela --addr <vela server url> login
 
 # Example
-vela --api.addr https://vela-server.localhost login
+vela --addr https://vela-server.localhost login
 ```
 
 Pass the personal token as a flag argument:
 
 ```sh
 # Syntax
-vela --api.addr <vela server url> --api.token <personal token>
+vela --addr <vela server url> --token <personal token>
 
 # Example
-vela --api.addr https://vela-server.localhost --api.token qwerty123
+vela --addr https://vela-server.localhost --token qwerty123
 ```
