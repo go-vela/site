@@ -60,7 +60,7 @@ $ vela get log --org github --repo octocat --build 5
 
 ```sh
 $ git init
-Initialized empty Git repository in /home/github_octocat_5/.git/
+Initialized empty Git repository in /vela/src/github.com/github/octocat/.git/
 $ git remote add origin https://github.com/github/octocat.git
 $ git remote --verbose
 origin  https://github.com/github/octocat.git (fetch)

@@ -96,7 +96,7 @@ steps:
     parameters:
 -     netrc_username: octocat
 -     netrc_password: superSecretPassword
-      path: /home/octocat_hello-world_1
+      path: /vela/src/github.com/octocat/hello-world
       ref: refs/heads/master
       remote: https://github.com/octocat/hello-world.git
       sha: 7fd1a60b01f91b314f59955a4e4d4e80d8edf11d
@@ -128,7 +128,7 @@ steps:
     parameters:
 -     netrc_username: octocat
 -     netrc_password: superSecretPassword
-      path: /home/octocat_hello-world_1
+      path: /vela/src/github.com/octocat/hello-world
       ref: refs/heads/master
       remote: https://github.com/octocat/hello-world.git
       sha: 7fd1a60b01f91b314f59955a4e4d4e80d8edf11d

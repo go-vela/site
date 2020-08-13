@@ -66,7 +66,7 @@ The following environment variables are injected into every service:
 | `BUILD_STARTED`             | `1556730001`                                                                             | unix timestamp representing build start time                        |
 | `BUILD_SOURCE`              | `https://github.com/octocat/hello-world/commit/7fd1a60b01f91b314f59955a4e4d4e80d8edf11d` | link from the source commit                                         |
 | `BUILD_TITLE`               | `push received from https://github.com/octocat`                                          | title from the source commit                                        |
-| `BUILD_WORKSPACE`           | `/home/octocat_hello-world_1`                                                            | working directory the build is executed in                          |
+| `BUILD_WORKSPACE`           | `/vela/src/github.com/octocat/hello-world`                                               | working directory the build is executed in                          |
 | `BUILD_TAG`                 | `v1.0.0`                                                                                 | tag is populated from the source reference                          |
 | `BUILD_PULL_REQUEST_NUMBER` | `1`                                                                                      | pull request number is populated from the source reference          |
 
@@ -79,19 +79,19 @@ The following environment variables are injected into every service:
 
 #### Vela Environment Variables
 
-| Key              | Value                         | Explanation                                                         |
-| ---------------- | ----------------------------- | ------------------------------------------------------------------- |
-| `VELA`           | `true`                        | environment is Vela                                                 |
-| `VELA_ADDR`      | `vela-server.localhost`       | fully qualified domain name of the Vela server                      |
-| `VELA_CHANNEL`   | `vela`                        | queue channel the build was published to                            |
-| `VELA_DATABASE`  | `postgres`                    | database Vela is connected to                                       |
-| `VELA_HOST`      | `vela-worker-1`               | fully qualified domain name of the worker the build was executed on |
-| `VELA_QUEUE`     | `redis`                       | queue build was published to                                        |
-| `VELA_RUNTIME`   | `docker`                      | runtime environment build was executed in                           |
-| `VELA_SOURCE`    | `github`                      | queue channel the build was published to                            |
-| `VELA_VERSION`   | `v0.1.0`                      | Vela version                                                        |
-| `VELA_WORKSPACE` | `/home/octocat_hello-world_1` | working directory the build is executed in                          |
-| `CI`             | `vela`                        | CI enabled is Vela                                                  |
+| Key              | Value                                             | Explanation                                                         |
+| ---------------- | ------------------------------------------------- | ------------------------------------------------------------------- |
+| `VELA`           | `true`                                            | environment is Vela                                                 |
+| `VELA_ADDR`      | `vela-server.localhost`                           | fully qualified domain name of the Vela server                      |
+| `VELA_CHANNEL`   | `vela`                                            | queue channel the build was published to                            |
+| `VELA_DATABASE`  | `postgres`                                        | database Vela is connected to                                       |
+| `VELA_HOST`      | `vela-worker-1`                                   | fully qualified domain name of the worker the build was executed on |
+| `VELA_QUEUE`     | `redis`                                           | queue build was published to                                        |
+| `VELA_RUNTIME`   | `docker`                                          | runtime environment build was executed in                           |
+| `VELA_SOURCE`    | `github`                                          | queue channel the build was published to                            |
+| `VELA_VERSION`   | `v0.1.0`                                          | Vela version                                                        |
+| `VELA_WORKSPACE` | `/vela/src/github.com/github/octocat/hello-world` | working directory the build is executed in                          |
+| `CI`             | `vela`                                            | CI enabled is Vela                                                  |
 
 #### Repository Environment Variables
 
