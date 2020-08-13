@@ -27,7 +27,7 @@ stages:
         commands:
           - go test ./...
   build:
-+    needs: [ test ]
++   needs: [ test ]
     steps:
       - name: build
         image: golang
