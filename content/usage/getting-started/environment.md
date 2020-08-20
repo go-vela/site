@@ -6,7 +6,7 @@ description: >
   Learn about how to leverage the environment within your builds.
 ---
 
-Vela provides the ability to define environment variables scoped to individual steps, services and secrets. Pleas note the environment is design to be unique per container. Vela does inject a variety of [default values]() from build, repo and user information.
+Vela provides the ability to define environment variables scoped to individual steps, services and secrets. Pleas note the environment is design to be unique per container. Vela does inject a variety of default values from build, repo and user information.
 
 Defaults:
 
