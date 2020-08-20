@@ -106,7 +106,7 @@ The following table includes variables only available during the **pull request*
 | `VELA_PULL_REQUEST_TARGET` | `master` | pull request branch for the target reference               |
 
 {{% alert color="info" %}}
-The following table includes variables only available during the **pull request** event
+The following table includes variables only available during the **tag** event
 {{% /alert %}}
 
 | Key              | Value    | Explanation                                |
