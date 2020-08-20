@@ -45,7 +45,7 @@ This pipeline will execute the `test` step first, then run the `build` step.
 
 ## Defaults
 
-The following environment variables are injected into every service:
+The following environment variables are injected into every step:
 
 #### Build Environment Variables
 
