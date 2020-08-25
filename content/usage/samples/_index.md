@@ -1,7 +1,7 @@
 ---
 title: "Samples"
 toc: true
-weight: 1
+weight: 2
 description: >
   View sample pipelines for a quick start.
 ---

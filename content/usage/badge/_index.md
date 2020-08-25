@@ -1,9 +1,9 @@
 ---
 title: "Badges"
 linkTitle: "Badges"
-weight: 3
+weight: 4
 description: >
-  Show off your build status
+  Show off your build status.
 ---
 
 {{% alert title="Note:" color="primary" %}}
