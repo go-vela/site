@@ -10,7 +10,7 @@ Vela supports multiple ways to provide pipeline validation and feedback.
 
 ## Editors/IDEs
 
-Integration with editors can enhance your pipeline writing experience by providing autocompletion, inline documentation, and links to documention within your editor.
+Integration with editors can enhance your pipeline writing experience by providing autocompletion, inline documentation, and links to documentation within your editor.
 
 Many editors are supported out-of-the-box due to the inclusion of Vela's schema in the JSON Schema Store. However, _some_ editors might require manual configuration. You can leverage the [schema details on the schema page](/docs/usage/validation/schema/) to assist with that.
 
