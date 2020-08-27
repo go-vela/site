@@ -28,9 +28,17 @@ Plugin:
 
 - coc-yaml: https://github.com/neoclide/coc-yaml
 
+### Visual Studio Code
+
+Although support for `.json` files is built-in, an extension is needed to add the support for YAML files. The _YAML Language Support_ extension has been known to work well and requires no additional configuration.
+
+Extension:
+
+- YAML Language Support (`redhat.vscode-yaml`)
+
 ### Others
 
-TBD
+(open a PR to add your own)
 
 ## CLI
 
