@@ -14,7 +14,7 @@ Integration with editors can enhance your pipeline writing experience by providi
 
 Many editors are supported out-of-the-box due to the inclusion of Vela's schema in the JSON Schema Store. However, _some_ editors might require manual configuration. You can leverage the [schema details on the schema page](/docs/usage/validation/schema/) to assist with that.
 
-Select editors are also supported by their own plugin/extension ecosystems, which often include Yaml/JSON schema validator plugins with support for automatically pulling from the Schema Store. Search your editor's respective store/marketplace for an applicable extension.
+Select editors are also supported by their own plugin/extension ecosystems, which often include YAML/JSON schema validator plugins with support for automatically pulling from the Schema Store. Search your editor's respective store/marketplace for an applicable extension.
 
 Here are some examples for configuring certain editors without out-of-the-box support:
 
@@ -42,7 +42,7 @@ Extension:
 
 ## CLI
 
-The [Vela CLI](/docs/cli/) offers a [validate command](/docs/cli/pipeline/validate/) to perform basic Yaml validation of your pipeline.
+The [Vela CLI](/docs/cli/) offers a [validate command](/docs/cli/pipeline/validate/) to perform basic YAML validation of your pipeline.
 
 ## UI
 
