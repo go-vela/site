@@ -65,7 +65,7 @@ steps:
 The following [pipeline concepts](/docs/concepts/pipeline) are being used in the pipeline below:
 
 * [Stages](/docs/concepts/pipeline/stages/)
-  * [Needs](/docs/concepts/pipeline/needs/)
+  * [Needs](docs/concepts/pipeline/stages/needs/)
   * [Steps](/docs/concepts/pipeline/steps/)
     * [image](/docs/concepts/pipeline/steps/image/)
     * [Environment](/docs/concepts/pipeline/steps/environment/)
