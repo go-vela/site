@@ -24,7 +24,7 @@ jobs:
 
     - name: Install PostCSS and AutoPrefixer
       run: |
-        npm install -D --save postcss-cli autoprefixer
+        npm install -D -g --save postcss-cli autoprefixer
 
     - name: Build Hugo
       run: git submodule update -f --init --recursive && hugo
