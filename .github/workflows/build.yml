@@ -8,10 +8,29 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Clone
-      uses: actions/checkout@v1
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive  # Fetch the theme
+          fetch-depth: 0         # Fetch all history for .GitInfo and .Lastmod
 
-    - name: Build Hugo
-      uses: jakejarvis/hugo-build-action@v0.59.1
-      env:
-        HUGO_ENV: production
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.59.1'
+          extended: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - run: npm ci
+      - run: hugo --minify
