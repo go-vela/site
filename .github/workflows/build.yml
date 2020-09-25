@@ -11,23 +11,7 @@ jobs:
     - name: Clone
       uses: actions/checkout@v1
 
-    - name: Install Node
-      uses: actions/setup-node@v1
-      with:
-        node-version: '10.x'
-
-    - name: Install Hugo
-      uses: peaceiris/actions-hugo@v2.2.2
-      with:
-        hugo-version: '0.59.1'
-        extended: true
-
-    - name: Install PostCSS and AutoPrefixer
-      run: |
-        npm install -D --save autoprefixer
-        npm install -D --save postcss-cli
-
     - name: Build Hugo
-      run: git submodule update -f --init --recursive && hugo
+      uses: jakejarvis/hugo-build-action@0.59.1
       env:
         HUGO_ENV: production
