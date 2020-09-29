@@ -31,9 +31,10 @@ jobs:
 
     - name: build
       env:
-          HUGO_ENV: production
+        HUGO_ENV: production
       run: |
-        npm install
+        npm install -D --save autoprefixer
+        npm install -D --save postcss-cli
         hugo --minify
 
     - name: publish
