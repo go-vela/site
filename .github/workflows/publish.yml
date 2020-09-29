@@ -1,5 +1,5 @@
 # name of the action
-name: build
+name: publish
 
 # trigger on push to master
 on:
