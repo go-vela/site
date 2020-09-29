@@ -19,7 +19,7 @@ jobs:
         fetch-depth: 0
 
     - name: node
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v1
       with:
         node-version: '12'
 
@@ -33,8 +33,7 @@ jobs:
       env:
           HUGO_ENV: production
       run: |
-        npm install -D --save autoprefixer
-        npm install -D --save postcss-cli
+        npm install
         hugo --minify
 
     - name: publish
