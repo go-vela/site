@@ -7,13 +7,24 @@ description: >
 
 The `pull` component is a part of a [service](/docs/concepts/pipeline/services/) for Vela.
 
-This declaration allows you to automatically upgrade to the latest version of the [image](/docs/concepts/pipeline/services/image/).
+This declaration allows you to control how and when Vela will attempt to pull the [image](/docs/concepts/pipeline/services/image/) provided for the service.
 
 {{% alert color="info" %}}
-Vela will always attempt to pull from its existing cache for images.
+This component has a default value of `not_present`.
 
-We recommend using the `pull` declaration whenever possible.
+This means Vela will always attempt to pull from its existing cache for images.
 {{% /alert %}}
+
+## Options
+
+The following options are available to configure the component:
+
+| Name          | Description                                                       |
+| ------------- | ----------------------------------------------------------------- |
+| `always`      | attempt to pull the image even if it exists in the local cache    |
+| `never`       | assumes the image already exists in the local cache               |
+| `not_present` | only pull the image if it does not exist in the local cache       |
+| `on_start`    | waits to pull the image until right before starting the container |
 
 ## Syntax
 
@@ -28,11 +39,12 @@ metadata:
 services:
   - name: postgres
     image: postgres:12
-+    pull: true
++   pull: not_present
 
 steps:
   - name: test
     image: golang
++   pull: always
     environment:
       DATABASE_DRIVER: postgres
       DATABASE_CONFIG: 'postgres://postgres@postgres:5432/postgres?sslmode=disable'

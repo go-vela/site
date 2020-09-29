@@ -1,9 +1,9 @@
 ---
 title: "Skipping a Build"
 linkTitle: "Skipping a Build"
-weight: 6
+weight: 5
 description: >
-    Skip builds for certain commits.
+  Skip builds for certain commits.
 ---
 
 To prevent Vela from running a build for a commit, add one of the following to your commit title or message:
