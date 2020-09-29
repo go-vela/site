@@ -1,33 +1,36 @@
-name: CI
+# name of the action
+name: build
 
+# trigger on pull_request or push events
 on:
   push:
   pull_request:
 
+# pipeline to execute
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Clone
-      uses: actions/checkout@v1
-
-    - name: Install Node
-      uses: actions/setup-node@v1
+    - name: clone
+      uses: actions/checkout@v2
       with:
-        node-version: '10.x'
+        submodules: recursive
+        fetch-depth: 0
 
-    - name: Install Hugo
-      uses: peaceiris/actions-hugo@v2.2.2
+    - name: hugo
+      uses: peaceiris/actions-hugo@v2
       with:
-        hugo-version: '0.59.1'
+        hugo-version: '0.75.1'
         extended: true
 
-    - name: Install PostCSS and AutoPrefixer
-      run: |
-        npm install -D --save autoprefixer
-        npm install -D --save postcss-cli
+    - name: node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
 
-    - name: Build Hugo
-      run: git submodule update -f --init --recursive && hugo
+    - name: build
       env:
-        HUGO_ENV: production
+          HUGO_ENV: production
+      run: |
+        npm ci
+        hugo --minify
