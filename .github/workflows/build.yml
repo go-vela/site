@@ -32,5 +32,6 @@ jobs:
       env:
           HUGO_ENV: production
       run: |
-        npm ci
+        npm install -D --save autoprefixer
+        npm install -D --save postcss-cli
         hugo --minify
