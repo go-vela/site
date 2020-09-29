@@ -35,4 +35,4 @@ jobs:
         npm install -D --save autoprefixer
         npm install -D --save postcss
         npm install -D --save postcss-cli
-        hugo --minify
+        hugo
