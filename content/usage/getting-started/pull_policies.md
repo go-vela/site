@@ -19,6 +19,12 @@ The following [pipeline concepts](/docs/concepts/pipeline) are being used in the
 * [Secrets](/docs/concepts/pipeline/secrets/)
   * [Origin](/docs/concepts/pipeline/steps/origin/)
 
+{{% alert title="Note:" color="primary" %}}
+Please be warned that the `pull` declaration is **not required**.
+
+If you do not provide the `pull` declaration, a default value of `not_present` will be used.
+{{% /alert %}}
+
 ```diff
 version: "1"
 services:

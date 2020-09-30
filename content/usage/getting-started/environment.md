@@ -42,7 +42,7 @@ steps:
   - name: check status
     image: redis:latest
 +   environment:
-+     EXAMPLE: Hello, World!    
++     EXAMPLE: Hello, World!
     commands:
       # you can use bash commands in-line to set or override variables
       - export EXAMPLE="Hello World From Vela Team"
@@ -53,7 +53,7 @@ secrets:
       name: private vault
       image: target/secret-vault:latest
 +     environment:
-+       EXAMPLE: Hello, World!       
++       EXAMPLE: Hello, World!
       secrets: [ vault_token ]
       parameters:
         addr: vault.example.com
@@ -61,5 +61,5 @@ secrets:
         username: octocat
         items:
           - source: secret/docker
-            path: docker      
+            path: docker
 ```
