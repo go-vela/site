@@ -80,7 +80,7 @@ steps:
       name: golang
       vars:
         image: golang:latest
-        pull_policy: "pull: true"
+        pull_policy: "pull: always"
         branch: master
 ```
 
@@ -93,7 +93,7 @@ steps:
     commands:
       - go test ./...
     image: golang:latest
-    pull: true
+    pull: always
     ruleset:
       event: [ push, pull_request ]
 
@@ -101,7 +101,7 @@ steps:
     commands:
       - go build
     image: golang:latest
-    pull: true
+    pull: always
     ruleset:
       event: [ push, pull_request ]
 ```

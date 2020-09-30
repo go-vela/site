@@ -45,7 +45,7 @@ version: "1"
 steps:
   - name: publish hello world
     image: target/vela-docker:latest
-    pull: true
+    pull: always
     secrets: [ docker_username, docker_password ]
     parameters:
       registry: index.docker.io
@@ -96,7 +96,7 @@ stages:
     steps:
       - name: publish hello world
         image: target/vela-docker:latest
-        pull: true
+        pull: always
         secrets: [ docker_username, docker_password ]
         parameters:
           registry: index.docker.io

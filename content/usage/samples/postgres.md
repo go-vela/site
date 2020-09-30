@@ -36,7 +36,7 @@ version: "1"
 services:
   - name: postgres
     image: postgres:latest
-    pull: true
+    pull: always
     environment:
       POSTGRES_USER: admin
       POSTGRES_DB: vela
@@ -44,7 +44,7 @@ services:
 steps:
   - name: check status
     image: postgres:latest
-    pull: true
+    pull: always
     commands:
       # sleeping can help ensure the service adequate time to start
 +      - sleep 15
@@ -74,7 +74,7 @@ version: "1"
 steps:
   - name: postgres
     image: postgres:latest
-    pull: true
+    pull: always
     environment:
       POSTGRES_USER: admin
       POSTGRES_DB: vela    
@@ -82,7 +82,7 @@ steps:
 
   - name: check status
     image: postgres:latest
-    pull: true
+    pull: always
     commands:
       # sleeping can help ensure the service adequate time to start
 +      - sleep 15

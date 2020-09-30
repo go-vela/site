@@ -15,7 +15,7 @@ version: "1"
 steps:
   - name: docker
     image: target/vela-docker
-    pull: true
+    pull: always
 +   parameters:
 +     registry: index.docker.io
 +     repo: index.docker.io/octocat/hello-world

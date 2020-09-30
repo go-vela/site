@@ -36,12 +36,12 @@ version: "1"
 services:
   - name: mongo
     image: mongo:latest
-    pull: true
+    pull: always
 
 steps:
   - name: check status
     image: mongo:latest
-    pull: true
+    pull: always
     commands:
       # sleeping can help ensure the service adequate time to start
 +      - sleep 15

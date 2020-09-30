@@ -34,7 +34,7 @@ version: "1"
 steps:
   - name: install
     image: golang:latest
-    pull: true
+    pull: always
     environment:
       CGO_ENABLED: '0'
       GOOS: linux
@@ -43,7 +43,7 @@ steps:
 
   - name: test
     image: golang:latest
-    pull: true
+    pull: always
     environment:
       CGO_ENABLED: '0'
       GOOS: linux
@@ -52,7 +52,7 @@ steps:
 
   - name: build
     image: golang:latest
-    pull: true
+    pull: always
     environment:
       CGO_ENABLED: '0'
       GOOS: linux
@@ -86,7 +86,7 @@ stages:
     steps:
       - name: install
         image: golang:latest
-        pull: true
+        pull: always
         environment:
           CGO_ENABLED: '0'
           GOOS: linux
@@ -98,7 +98,7 @@ stages:
     steps:
       - name: test
         image: golang:latest
-        pull: true
+        pull: always
         environment:
           CGO_ENABLED: '0'
           GOOS: linux
@@ -110,7 +110,7 @@ stages:
     steps:
       - name: build
         image: golang:latest
-        pull: true
+        pull: always
         environment:
           CGO_ENABLED: '0'
           GOOS: linux

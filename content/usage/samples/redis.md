@@ -36,12 +36,12 @@ version: "1"
 services:
   - name: redis
     image: redis:latest
-    pull: true
+    pull: always
 
 steps:
   - name: check status
     image: redis:latest
-    pull: true
+    pull: always
     commands:
       # sleeping can help ensure the service adequate time to start
 +      - sleep 15
@@ -71,12 +71,12 @@ version: "1"
 steps:
   - name: redis
     image: redis:latest
-    pull: true
+    pull: always
     detach: true
 
   - name: check status
     image: redis:latest
-    pull: true
+    pull: always
     commands:
       # sleeping can help ensure the service adequate time to start
 +      - sleep 15

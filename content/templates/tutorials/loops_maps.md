@@ -80,7 +80,7 @@ steps:
     template:  
       name: golang
       vars:
-        pull_policy: "pull: true"
+        pull_policy: "pull: always"
         images:
           _latest: golang:latest
           _1.13: golang:1.13
@@ -100,7 +100,7 @@ steps:
     commands:
       - go test ./...
     image: golang:latest
-    pull: true
+    pull: always
     ruleset:
       event: [ push, pull_request ]
 
@@ -108,7 +108,7 @@ steps:
     commands:
       - go test ./...
     image: golang:1.13
-    pull: true
+    pull: always
     ruleset:
       event: [ push, pull_request ]
 
@@ -116,7 +116,7 @@ steps:
     commands:
       - go test ./...
     image: golang:1.12
-    pull: true
+    pull: always
     ruleset:
       event: [ push, pull_request ]
 
@@ -127,7 +127,7 @@ steps:
       CGO_ENABLED: '0'
       GOOS: linux
     image: golang:latest
-    pull: true
+    pull: always
     ruleset:
       event: [ push, pull_request ]
 ```

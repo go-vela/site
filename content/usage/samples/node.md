@@ -33,19 +33,19 @@ version: "1"
 steps:
   - name: install
     image: node:latest
-    pull: true
+    pull: always
     commands:
       - node install
 
   - name: lint
     image: node:latest
-    pull: true
+    pull: always
     commands:
       - node test
 
   - name: build
     image: node:latest
-    pull: true
+    pull: always
     commands:
       - node build
 ```
@@ -75,7 +75,7 @@ stages:
     steps:
       - name: install
         image: node:latest
-        pull: true
+        pull: always
         commands:
           - node install
 
@@ -84,7 +84,7 @@ stages:
     steps:
       - name: test
         image: node:latest
-        pull: true
+        pull: always
         commands:
           - node test
 
@@ -93,7 +93,7 @@ stages:
     steps:
       - name: build
         image: node:latest
-        pull: true
+        pull: always
         commands:
           - node build
 ```

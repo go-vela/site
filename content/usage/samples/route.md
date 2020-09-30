@@ -42,7 +42,7 @@ worker:
 steps:
   - name: view worker name
     image: alpine:latest
-    pull: true
+    pull: always
     commands:
       - echo "Hello ${BUILD_HOST} Worker!!"
 ```
@@ -77,7 +77,7 @@ stages:
     steps:
       - name: view worker name
         image: alpine:latest
-        pull: true
+        pull: always
         commands:
           - echo "Hello ${BUILD_HOST} Worker!!"
 ```

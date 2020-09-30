@@ -33,13 +33,13 @@ version: "1"
 steps:
   - name: fetch
     image: rust:latest
-    pull: true
+    pull: always
     commands:
       - cargo fetch --verbose --all
 
   - name: test
     image: rust:latest
-    pull: true
+    pull: always
     environment:
       CGO_ENABLED: '0'
       GOOS: linux
@@ -48,7 +48,7 @@ steps:
 
   - name: build
     image: rust:latest
-    pull: true
+    pull: always
     environment:
       CGO_ENABLED: '0'
       GOOS: linux
@@ -81,7 +81,7 @@ stages:
     steps:
       - name: fetch
         image: rust:latest
-        pull: true
+        pull: always
         commands:
           - cargo fetch --verbose --all
 
@@ -90,7 +90,7 @@ stages:
     steps:
       - name: test
         image: rust:latest
-        pull: true
+        pull: always
         commands:
           - cargo test --verbose --all
 
@@ -99,7 +99,7 @@ stages:
     steps:
       - name: build
         image: rust:latest
-        pull: true
+        pull: always
         commands:
           - cargo build --verbose --all
 ```

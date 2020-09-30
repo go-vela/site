@@ -24,7 +24,7 @@ Sample of restoring a cache:
 steps:
   - name: restore_cache
     image: target/vela-s3-cache:v0.2.0
-    pull: true
+    pull: always
     parameters:
       action: restore
       root: mybucket
@@ -37,7 +37,7 @@ Sample of rebuilding a cache:
 steps:
   - name: rebuild_cache
     image: target/vela-s3-cache:v0.2.0
-    pull: true
+    pull: always
     parameters:
       action: rebuild
       root: mybucket
@@ -52,7 +52,7 @@ Sample of flushing a cache:
 steps:
   - name: flushing_cache
     image: target/vela-s3-cache:v0.2.0
-    pull: true
+    pull: always
     parameters:
       action: flush
       root: mybucket
@@ -81,7 +81,7 @@ Users can use [Vela secrets](/docs/concepts/pipeline/secrets/) to substitute the
 steps:
   - name: restore_cache
     image: target/vela-s3-cache:v0.2.0
-    pull: true
+    pull: always
 +   secrets: [ cache_s3_access_key, cache_s3_secret_key ]
     parameters:
       action: restore
@@ -114,7 +114,7 @@ Users can use [Vela external secrets](/docs/concepts/pipeline/secrets/) to subst
 steps:
   - name: restore_cache
     image: target/vela-s3-cache:v0.2.0
-    pull: true
+    pull: always
     parameters:
       action: restore
       root: mybucket
@@ -183,7 +183,7 @@ You can start troubleshooting this plugin by tuning the level of logs being disp
 steps:
   - name: restore_cache
     image: target/vela-s3-cache:v0.2.0
-    pull: true
+    pull: always
     parameters:
       action: restore
 +     log_level: trace

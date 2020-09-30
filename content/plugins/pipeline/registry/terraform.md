@@ -25,7 +25,7 @@ Sample of adding init options to Terraform configuration:
 ```yaml
 - name: apply
   image: target/vela-terraform:v0.1.0
-  pull: true
+  pull: always
   parameters:
     action: apply
     auto_approve: true # Required for versions of Terraform 0.12.x
@@ -38,7 +38,7 @@ Sample of applying Terraform configuration:
 ```yaml
 - name: apply
   image: target/vela-terraform:v0.1.0
-  pull: true
+  pull: always
   parameters:
     action: apply
     auto_approve: true # Required for versions of Terraform 0.12.x
@@ -49,7 +49,7 @@ Sample of destroying Terraform configuration:
 ```yaml
 - name: destroy
   image: target/vela-terraform:v0.1.0
-  pull: true
+  pull: always
   parameters:
     action: destroy
     auto_approve: true # Required for versions of Terraform 0.12.x
@@ -60,7 +60,7 @@ Sample of formatting Terraform configuration files:
 ```yaml
 - name: fmt
   image: target/vela-terraform:v0.1.0
-  pull: true
+  pull: always
   parameters:
     action: fmt
 ```
@@ -70,7 +70,7 @@ Sample of planning Terraform configuration:
 ```yaml
 - name: plan
   image: target/vela-terraform:v0.1.0
-  pull: true
+  pull: always
   parameters:
     action: plan
 ```
@@ -80,7 +80,7 @@ Sample of validating Terraform configuration:
 ```yaml
 - name: validate
   image: target/vela-terraform:v0.1.0
-  pull: true
+  pull: always
   parameters:
     action: validate
 ```
@@ -95,7 +95,7 @@ Users should refrain from configuring sensitive information in their pipeline in
 ```diff
 - name: apply
   image: target/vela-terraform:v0.1.0
-  pull: true
+  pull: always
 +  secrets: [ github_token ]
   parameters:
     action: apply
@@ -250,7 +250,7 @@ You can start troubleshooting this plugin by tuning the level of logs being disp
 ```diff
 - name: apply
   image: target/vela-terraform:v0.1.0
-  pull: true
+  pull: always
   parameters:
     action: apply
     auto_approve: true # Required for versions of Terraform 0.12.x

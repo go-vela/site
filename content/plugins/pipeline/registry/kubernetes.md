@@ -24,7 +24,7 @@ Sample of applying Kubernetes files:
 steps:
   - name: kubernetes
     image: target/vela-kubernetes:v0.1.0
-    pull: true
+    pull: always
     parameters:
       action: apply
       files: [ kubernetes/common, kubernetes/dev/deploy.yml ]
@@ -36,7 +36,7 @@ Sample of pretending to apply Kubernetes files:
 steps:
   - name: kubernetes
     image: target/vela-kubernetes:v0.1.0
-    pull: true
+    pull: always
     parameters:
       action: apply
 +     dry_run: true
@@ -49,7 +49,7 @@ Sample of patching containers in Kubernetes files:
 steps:
   - name: kubernetes
     image: target/vela-kubernetes:v0.1.0
-    pull: true
+    pull: always
     parameters:
       action: patch
       files: [ kubernetes/common, kubernetes/dev/deploy.yml ]
@@ -64,7 +64,7 @@ Sample of pretending to patch containers in Kubernetes files:
 steps:
   - name: kubernetes
     image: target/vela-kubernetes:v0.1.0
-    pull: true
+    pull: always
     parameters:
       action: patch
 +     dry_run: true
@@ -80,7 +80,7 @@ Sample of watching the status of resources:
 steps:
   - name: kubernetes
     image: target/vela-kubernetes:v0.1.0
-    pull: true
+    pull: always
     parameters:
       action: status
       statuses: [ sample ]
@@ -106,7 +106,7 @@ Users can use [Vela secrets](/docs/concepts/pipeline/secrets/) to substitute the
 steps:
   - name: kubernetes
     image: target/vela-kubernetes:v0.1.0
-    pull: true
+    pull: always
 +   secrets: [ kube_config ]
     parameters:
       action: apply
@@ -137,7 +137,7 @@ Users can use [Vela external secrets](/docs/concepts/pipeline/secrets/) to subst
 steps:
   - name: kubernetes
     image: target/vela-kubernetes:v0.1.0
-    pull: true
+    pull: always
     parameters:
       action: apply
       files: [ kubernetes/common, kubernetes/dev/deploy.yml ]
@@ -208,7 +208,7 @@ You can start troubleshooting this plugin by tuning the level of logs being disp
 steps:
   - name: kubernetes
     image: target/vela-kubernetes:v0.1.0
-    pull: true
+    pull: always
     parameters:
       action: apply
       files: [ kubernetes/common, kubernetes/dev/deploy.yml ]

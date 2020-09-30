@@ -16,7 +16,7 @@ secrets:
   - origin:
       name: vault
       image: target/secret-vault
-      pull: true
+      pull: always
       secrets: [ vault_token ]
 +     parameters:
 +       addr: vault.company.com

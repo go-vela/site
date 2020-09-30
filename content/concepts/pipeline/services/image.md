@@ -43,7 +43,7 @@ metadata:
 services:
   - name: postgres
 +    image: postgres:12
-    pull: true
+    pull: always
 
 steps:
   - name: test

@@ -47,7 +47,7 @@ steps:
       CGO_ENABLED: '0'
       GOOS: linux
     image: golang:latest
-    pull: true
+    pull: always
     ruleset:
       event: [ push, pull_request ]
 ```
@@ -71,7 +71,7 @@ steps:
               commands:
                 - go test ./...
               image: golang:latest
-              pull: true
+              pull: always
               ruleset:
                event: [ push, pull_request ]
 ```
@@ -85,7 +85,7 @@ steps:
     commands:
       - go test ./...
     image: golang:latest
-    pull: true
+    pull: always
     ruleset:
       event: [ push, pull_request ]
 
@@ -93,7 +93,7 @@ steps:
     commands:
       - go build
     image: golang:latest
-    pull: true
+    pull: always
     ruleset:
       event: [ push, pull_request ]
 ```

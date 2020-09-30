@@ -34,7 +34,7 @@ version: "1"
 steps:
   - name: install
     image: gradle:latest
-    pull: true
+    pull: always
     environment:
       GRADLE_USER_HOME: .gradle
       GRADLE_OPTS: -Dorg.gradle.daemon=false -Dorg.gradle.workers.max=1 -Dorg.gradle.parallel=false
@@ -43,7 +43,7 @@ steps:
 
   - name: test
     image: gradle:latest
-    pull: true
+    pull: always
     environment:
       GRADLE_USER_HOME: .gradle
       GRADLE_OPTS: -Dorg.gradle.daemon=false -Dorg.gradle.workers.max=1 -Dorg.gradle.parallel=false
@@ -52,7 +52,7 @@ steps:
 
   - name: build
     image: gradle:latest
-    pull: true
+    pull: always
     environment:
       GRADLE_USER_HOME: .gradle
       GRADLE_OPTS: -Dorg.gradle.daemon=false -Dorg.gradle.workers.max=1 -Dorg.gradle.parallel=false
@@ -85,7 +85,7 @@ stages:
     steps:
       - name: install
         image: gradle:latest
-        pull: true
+        pull: always
         environment:
           GRADLE_USER_HOME: .gradle
           GRADLE_OPTS: -Dorg.gradle.daemon=false -Dorg.gradle.workers.max=1 -Dorg.gradle.parallel=false
@@ -96,7 +96,7 @@ stages:
     steps:
       - name: test
         image: gradle:latest
-        pull: true
+        pull: always
         environment:
           GRADLE_USER_HOME: .gradle
           GRADLE_OPTS: -Dorg.gradle.daemon=false -Dorg.gradle.workers.max=1 -Dorg.gradle.parallel=false
@@ -108,7 +108,7 @@ stages:
     steps:
       - name: build
         image: gradle:latest
-        pull: true
+        pull: always
         environment:
           GRADLE_USER_HOME: .gradle
           GRADLE_OPTS: -Dorg.gradle.daemon=false -Dorg.gradle.workers.max=1 -Dorg.gradle.parallel=false

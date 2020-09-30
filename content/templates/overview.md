@@ -38,7 +38,7 @@ steps:
       - go test ./...
       - go build
     image: {{ .image }}
-    pull: true
+    pull: always
     ruleset:
       event: [ push, pull_request ]
 ```

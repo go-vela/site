@@ -28,7 +28,7 @@ Sample of triggering a downstream build:
 steps:
   - name: trigger_hello-world
     image: target/vela-downstream:v0.2.0
-    pull: true
+    pull: always
     parameters:
       branch: master
       repos:
@@ -43,7 +43,7 @@ steps:
 +  - name: trigger_multiple
 -  - name: trigger_hello-world
     image: target/vela-downstream:v0.2.0
-    pull: true
+    pull: always
     parameters:
       branch: master
       repos:
@@ -63,7 +63,7 @@ steps:
 +  - name: trigger_multiple
 -  - name: trigger_hello-world
     image: target/vela-downstream:v0.2.0
-    pull: true
+    pull: always
     parameters:
 -      branch: master
       repos:
@@ -94,7 +94,7 @@ Users can use [Vela secrets](/docs/concepts/pipeline/secrets/) to substitute the
 steps:
   - name: trigger_hello-world
     image: target/vela-downstream:v0.2.0
-    pull: true
+    pull: always
 +   secrets: [ downstream_token ]
     parameters:
       branch: master
@@ -124,7 +124,7 @@ Users can use [Vela external secrets](/docs/concepts/pipeline/secrets/) to subst
 steps:
   - name: trigger_hello-world
     image: target/vela-downstream:v0.2.0
-    pull: true
+    pull: always
     parameters:
       branch: master
       repos:
@@ -161,7 +161,7 @@ You can start troubleshooting this plugin by tuning the level of logs being disp
 steps:
   - name: trigger_hello-world
     image: target/vela-downstream:v0.2.0
-    pull: true
+    pull: always
     parameters:
       branch: master
 +     log_level: trace

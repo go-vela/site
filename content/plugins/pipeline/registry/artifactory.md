@@ -24,7 +24,7 @@ Sample of copying an artifact:
 steps:
   - name: copy_artifacts
     image: target/vela-artifactory:v0.2.0
-    pull: true
+    pull: always
     parameters:
       action: copy
       path: libs-snapshot-local/foo.txt
@@ -38,7 +38,7 @@ Sample of deleting an artifact:
 steps:
   - name: delete_artifacts
     image: target/vela-artifactory:v0.2.0
-    pull: true
+    pull: always
     parameters:
       action: delete
       path: libs-snapshot-local/foo.txt
@@ -51,7 +51,7 @@ Sample of setting properties on an artifact:
 steps:
   - name: set_properties_artifacts
     image: target/vela-artifactory:v0.2.0
-    pull: true
+    pull: always
     parameters:
       action: set-prop
       path: libs-snapshot-local/foo.txt
@@ -71,7 +71,7 @@ Sample of uploading an artifact:
 steps:
   - name: upload_artifacts
     image: target/vela-artifactory:v0.2.0
-    pull: true
+    pull: always
     parameters:
       action: upload
       path: libs-snapshot-local/
@@ -88,7 +88,7 @@ Sample of pretending to upload an artifact:
 steps:
   - name: upload_artifacts
     image: target/vela-artifactory:v0.2.0
-    pull: true
+    pull: always
     parameters:
       action: upload
 +     dry_run: true
@@ -106,7 +106,7 @@ Sample of using docker-promote on an artifact:
 steps:
   - name: docker_promote_artifacts
     image: target/vela-artifactory:v0.2.0
-    pull: true
+    pull: always
     parameters:
       action: docker-promote
       target_repo: libs-snapshot-local
@@ -138,7 +138,7 @@ Users can use [Vela secrets](/docs/concepts/pipeline/secrets/) to substitute the
 steps:
   - name: copy_artifacts
     image: target/vela-artifactory:v0.2.0
-    pull: true
+    pull: always
 +   secrets: [ artifactory_username, artifactory_password ]
     parameters:
       action: copy
@@ -172,7 +172,7 @@ Users can use [Vela external secrets](/docs/concepts/pipeline/secrets/) to subst
 steps:
   - name: copy_artifacts
     image: target/vela-artifactory:v0.2.0
-    pull: true
+    pull: always
     parameters:
       action: copy
       path: libs-snapshot-local/foo.txt
@@ -265,7 +265,7 @@ You can start troubleshooting this plugin by tuning the level of logs being disp
 steps:
   - name: copy_artifacts
     image: target/vela-artifactory:v0.2.0
-    pull: true
+    pull: always
     parameters:
       action: copy
 +     log_level: trace

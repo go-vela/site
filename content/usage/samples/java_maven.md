@@ -33,19 +33,19 @@ version: "1"
 steps:
   - name: install
     image: maven:latest
-    pull: true
+    pull: always
     commands:
       - mvn install
 
   - name: test
     image: maven:latest
-    pull: true
+    pull: always
     commands:
       - mvn test
 
   - name: build
     image: maven:latest
-    pull: true
+    pull: always
     commands:
       - mvn package
 ```
@@ -74,7 +74,7 @@ stages:
     steps:
       - name: install
         image: maven:latest
-        pull: true
+        pull: always
         commands:
           - mvn install
   test:
@@ -82,7 +82,7 @@ stages:
     steps:
       - name: test
         image: maven:latest
-        pull: true
+        pull: always
         environment:
           GRADLE_USER_HOME: .gradle
           GRADLE_OPTS: -Dorg.gradle.daemon=false -Dorg.gradle.workers.max=1 -Dorg.gradle.parallel=false
@@ -94,7 +94,7 @@ stages:
     steps:
       - name: build
         image: maven:latest
-        pull: true
+        pull: always
         environment:
           GRADLE_USER_HOME: .gradle
           GRADLE_OPTS: -Dorg.gradle.daemon=false -Dorg.gradle.workers.max=1 -Dorg.gradle.parallel=false

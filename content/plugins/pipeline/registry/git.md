@@ -32,7 +32,7 @@ Sample of cloning a repository:
 steps:
   - name: clone_hello-world
     image: target/vela-git:v0.3.0
-    pull: true
+    pull: always
     parameters:
       path: hello-world
       ref: refs/heads/master
@@ -46,7 +46,7 @@ Sample of cloning a repository with submodules:
 steps:
   - name: clone_hello-world
     image: target/vela-git:v0.3.0
-    pull: true
+    pull: always
     parameters:
       path: hello-world
       ref: refs/heads/master
@@ -61,7 +61,7 @@ Sample of cloning a repository with tags:
 steps:
   - name: clone_hello-world
     image: target/vela-git:v0.3.0
-    pull: true
+    pull: always
     parameters:
       path: hello-world
       ref: refs/heads/master
@@ -91,7 +91,7 @@ Users can use [Vela secrets](/docs/concepts/pipeline/secrets/) to substitute sen
 steps:
   - name: clone_hello-world
     image: target/vela-git:v0.3.0
-    pull: true
+    pull: always
 +   secrets: [ git_username, git_password ]
     parameters:
 -     netrc_username: octocat
@@ -124,7 +124,7 @@ Users can use [Vela external secrets](/docs/concepts/pipeline/secrets/) to subst
 steps:
   - name: clone_hello-world
     image: target/vela-git:v0.3.0
-    pull: true
+    pull: always
     parameters:
 -     netrc_username: octocat
 -     netrc_password: superSecretPassword
@@ -171,7 +171,7 @@ You can start troubleshooting this plugin by tuning the level of logs being disp
 steps:
   - name: clone_hello-world
     image: target/vela-git:v0.3.0
-    pull: true
+    pull: always
     parameters:
 +     log_level: trace
       path: hello-world

@@ -18,7 +18,7 @@ Basic Usage
 steps:
   - name: captains-log
     image: target/captains-log:1
-    pull: true
+    pull: always
     secrets: [GITHUB_TOKEN, SLACK_URL]
     parameters:
       github_owner: target
@@ -34,7 +34,7 @@ Utilize "teams" organization:
 steps:
   - name: captains-log
     image: target/captains-log:1
-    pull: true
+    pull: always
     secrets: [GITHUB_TOKEN, SLACK_URL]
     parameters:
       github_owner: target
@@ -82,7 +82,7 @@ Users can use [Vela secrets](/docs/concepts/pipeline/secrets/) to substitute the
 steps:
   - name: captains-log
     image: target/captains-log:1
-    pull: true
+    pull: always
 +   secrets: [ github_token, slack_url ]
     parameters:
       github_owner: target

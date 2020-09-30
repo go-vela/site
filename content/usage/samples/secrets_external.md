@@ -45,7 +45,7 @@ version: "1"
 steps:
   - name: publish hello world
     image: target/vela-docker:latest
-    pull: true
+    pull: always
     parameters:
       registry: index.docker.io
       repo: index.docker.io/vela/hello-world
@@ -58,7 +58,7 @@ secrets:
   - origin:
       name: private vault
       image: target/secret-vault:latest
-      pull: true
+      pull: always
       secrets: [ vault_token ]
       parameters:
         addr: vault.example.com
@@ -102,7 +102,7 @@ stages:
     steps:
       - name: publish hello world
         image: target/vela-docker:latest
-        pull: true
+        pull: always
         secrets: [ docker_username, docker_password ]
         parameters:
           registry: index.docker.io
@@ -115,7 +115,7 @@ secrets:
   - origin:
       name: private vault
       image: target/secret-vault:latest
-      pull: true
+      pull: always
       secrets: [ vault_token ]
       parameters:
         addr: vault.example.com

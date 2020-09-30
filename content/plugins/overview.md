@@ -46,7 +46,7 @@ version: "1"
 steps:
   - name: plugin
     image: target/vela-docker
-    pull: true
+    pull: always
     parameters:
       registry: index.docker.io
       repo: index.docker.io/octocat/hello-world
@@ -57,7 +57,7 @@ secrets:
   - origin:
       name: plugin
       image: target/secret-vault
-      pull: true
+      pull: always
       secrets: [ vault_token ]
       parameters:
         addr: vault.company.com
@@ -75,7 +75,7 @@ version: "1"
 steps:
   - name: docker
     image: target/vela-docker
-    pull: true
+    pull: always
 +   parameters:
 +     registry: index.docker.io
 +     repo: index.docker.io/octocat/hello-world
@@ -86,7 +86,7 @@ secrets:
   - origin:
       name: vault
       image: target/secret-vault
-      pull: true
+      pull: always
       secrets: [ vault_token ]
 +     parameters:
 +       addr: vault.company.com
