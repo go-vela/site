@@ -10,13 +10,11 @@ Source Code: https://github.com/go-vela/vela-kaniko
 
 Registry: https://hub.docker.com/r/target/vela-kaniko
 
-{{% alert color="tip" %}}
-This plugin supports environment (`PARAMETER_*`) and volume (`/vela/parameters/*`) configuration for setting parameters.
-
-The precedence order is take files then environment variables if both are set in a container.
-{{% /alert %}}
-
 ## Usage
+
+{{% alert color="tip" %}}
+* It is not recommended to use `latest` as the tag for the Docker image. Users should use a semantically versioned tag instead.
+{{% /alert %}}
 
 Sample of building and publishing an image:
 
@@ -24,7 +22,7 @@ Sample of building and publishing an image:
 steps:
   - name: publish_hello-world
     image: target/vela-kaniko:latest
-    pull: true
+    pull: always
     parameters:
       registry: index.docker.io
       repo: index.docker.io/octocat/hello-world
@@ -36,7 +34,7 @@ Sample of building an image without publishing:
 steps:
   - name: publish_hello-world
     image: target/vela-kaniko:latest
-    pull: true
+    pull: always
     parameters:
 +     dry_run: true
       registry: index.docker.io
@@ -49,7 +47,7 @@ Sample of building and publishing an image with custom tags:
 steps:
   - name: publish_hello-world
     image: target/vela-kaniko:latest
-    pull: true
+    pull: always
     parameters:
       registry: index.docker.io
       repo: index.docker.io/octocat/hello-world
@@ -64,7 +62,7 @@ Sample of building and publishing an image with automatic tags:
 steps:
   - name: publish_hello-world
     image: target/vela-kaniko:latest
-    pull: true
+    pull: always
     parameters:
 +     auto_tag: true
       registry: index.docker.io
@@ -77,7 +75,7 @@ Sample of building and publishing an image with build arguments:
 steps:
   - name: publish_hello-world
     image: target/vela-kaniko:latest
-    pull: true
+    pull: always
     parameters:
 +     build_args:
 +       - FOO=bar
@@ -91,7 +89,7 @@ Sample of building and publishing an image with caching:
 steps:
   - name: publish_hello-world
     image: target/vela-kaniko:latest
-    pull: true
+    pull: always
     parameters:
 +     cache: true
 +     cache_repo: index.docker.io/octocat/hello-world
@@ -105,7 +103,7 @@ Sample of building and publishing an image with custom labels:
 steps:
   - name: publish_hello-world
     image: target/vela-kaniko:latest
-    pull: true
+    pull: always
     parameters:
       registry: index.docker.io
       repo: index.docker.io/octocat/hello-world
@@ -135,7 +133,7 @@ Users can use [Vela secrets](/docs/concepts/pipeline/secrets/) to substitute the
 steps:
   - name: publish_hello-world
     image: target/vela-kaniko:latest
-    pull: true
+    pull: always
 +   secrets: [ docker_username, docker_password ]
     parameters:
       registry: index.docker.io
@@ -166,7 +164,7 @@ Users can use [Vela external secrets](/docs/concepts/pipeline/secrets/) to subst
 steps:
   - name: publish_hello-world
     image: target/vela-kaniko:latest
-    pull: true
+    pull: always
     parameters:
       registry: index.docker.io
       repo: index.docker.io/octocat/hello-world
@@ -221,7 +219,7 @@ You can start troubleshooting this plugin by tuning the level of logs being disp
 steps:
   - name: publish_hello-world
     image: target/vela-kaniko:latest
-    pull: true
+    pull: always
     parameters:
 +     log_level: trace
       registry: index.docker.io
