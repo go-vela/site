@@ -10,20 +10,20 @@ Source Code: https://github.com/go-vela/vela-s3-cache
 
 Registry: https://hub.docker.com/r/target/vela-s3-cache
 
-{{% alert color="tip" %}}
-This plugin supports environment (`PARAMETER_*`) and volume (`/vela/parameters/*`) configuration for setting parameters.
-
-The precedence order is take files then environment variables if both are set in a container.
-{{% /alert %}}
-
 ## Usage
+
+{{% alert color="warning" %}}
+Users should refrain from using `latest` as the tag for the Docker image.
+
+It is recommended to use a semantically versioned tag instead.
+{{% /alert %}}
 
 Sample of restoring a cache:
 
 ```yaml
 steps:
   - name: restore_cache
-    image: target/vela-s3-cache:v0.2.0
+    image: target/vela-s3-cache:latest
     pull: always
     parameters:
       action: restore
@@ -36,7 +36,7 @@ Sample of rebuilding a cache:
 ```yaml
 steps:
   - name: rebuild_cache
-    image: target/vela-s3-cache:v0.2.0
+    image: target/vela-s3-cache:latest
     pull: always
     parameters:
       action: rebuild
@@ -51,7 +51,7 @@ Sample of flushing a cache:
 ```yaml
 steps:
   - name: flushing_cache
-    image: target/vela-s3-cache:v0.2.0
+    image: target/vela-s3-cache:latest
     pull: always
     parameters:
       action: flush
@@ -75,12 +75,12 @@ The plugin accepts the following `parameters` for authentication:
 | `secret_key`    | `AWS_SECRET_ACCESS_KEY`, `CACHE_S3_SECRET_KEY`, `PARAMETER_SECRET_KEY`   |
 | `session_token` | `AWS_SESSION_TOKEN`, `CACHE_S3_SESSION_TOKEN`, `PARAMETER_SESSION_TOKEN` |
 
-Users can use [Vela secrets](/docs/concepts/pipeline/secrets/) to substitute these sensitive values at runtime:
+Users can use [Vela internal secrets](/docs/concepts/pipeline/secrets/) to substitute these sensitive values at runtime:
 
 ```diff
 steps:
   - name: restore_cache
-    image: target/vela-s3-cache:v0.2.0
+    image: target/vela-s3-cache:latest
     pull: always
 +   secrets: [ cache_s3_access_key, cache_s3_secret_key ]
     parameters:
@@ -94,18 +94,18 @@ steps:
 {{% alert color="info" %}}
 This example will add the `secrets` to the `restore_cache` step as environment variables:
 
-- `CACHE_S3_ACCESS_KEY`=<value>
-- `CACHE_S3_SECRET_KEY`=<value>
+- `CACHE_S3_ACCESS_KEY=<value>`
+- `CACHE_S3_SECRET_KEY=<value>`
 {{% /alert %}}
 
 ### External
 
 The plugin accepts the following files for authentication:
 
-| Parameter       | Volume Configuration                                                       |
-| --------------- | ------------------------------------------------------------------------ |
+| Parameter       | Volume Configuration                                                                            |
+| --------------- | ----------------------------------------------------------------------------------------------- |
 | `access_key`    | `/vela/parameters/s3_cache/config/access_key`, `/vela/secrets/s3_cache/config/access_key`       |
-| `secret_key`    | `/vela/parameters/s3_cache/config/secret_key`, `/vela/secrets/s3_cache/config/secret_key`   |
+| `secret_key`    | `/vela/parameters/s3_cache/config/secret_key`, `/vela/secrets/s3_cache/config/secret_key`       |
 | `session_token` | `/vela/parameters/s3_cache/config/session_token`, `/vela/secrets/s3_cache/config/session_token` |
 
 Users can use [Vela external secrets](/docs/concepts/pipeline/secrets/) to substitute these sensitive values at runtime:
@@ -113,7 +113,7 @@ Users can use [Vela external secrets](/docs/concepts/pipeline/secrets/) to subst
 ```diff
 steps:
   - name: restore_cache
-    image: target/vela-s3-cache:v0.2.0
+    image: target/vela-s3-cache:latest
     pull: always
     parameters:
       action: restore
@@ -128,6 +128,12 @@ This example will read the secrets values in the volume stored at `/vela/secrets
 {{% /alert %}}
 
 ## Parameters
+
+{{% alert color="info" %}}
+The plugin supports reading all parameters vie environment variables or files.
+
+Any values set from a file take precedence over values set from the environment.
+{{% /alert %}}
 
 The following parameters can used to configure all image actions:
 
@@ -150,7 +156,6 @@ The following parameters are used to configure the `restore` action:
 | `filename` | the name of the cache object                               | `false`  | `true`  |
 | `mount`    | the file or directories locations to build your cache from | `true`   | `N/A`   |
 | `timeout`  | the timeout for the call to s3                             | `false`  | `true`  |
-
 
 #### Rebuild
 
@@ -182,7 +187,7 @@ You can start troubleshooting this plugin by tuning the level of logs being disp
 ```diff
 steps:
   - name: restore_cache
-    image: target/vela-s3-cache:v0.2.0
+    image: target/vela-s3-cache:latest
     pull: always
     parameters:
       action: restore

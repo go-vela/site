@@ -10,20 +10,20 @@ Source Code: https://github.com/go-vela/vela-artifactory
 
 Registry: https://hub.docker.com/r/target/vela-artifactory
 
-{{% alert color="tip" %}}
-This plugin supports environment (`PARAMETER_*`) and volume (`/vela/parameters/*`) configuration for setting parameters.
-
-The precedence order is take files then environment variables if both are set in a container.
-{{% /alert %}}
-
 ## Usage
+
+{{% alert color="warning" %}}
+Users should refrain from using `latest` as the tag for the Docker image.
+
+It is recommended to use a semantically versioned tag instead.
+{{% /alert %}}
 
 Sample of copying an artifact:
 
 ```yaml
 steps:
   - name: copy_artifacts
-    image: target/vela-artifactory:v0.2.0
+    image: target/vela-artifactory:latest
     pull: always
     parameters:
       action: copy
@@ -37,7 +37,7 @@ Sample of deleting an artifact:
 ```yaml
 steps:
   - name: delete_artifacts
-    image: target/vela-artifactory:v0.2.0
+    image: target/vela-artifactory:latest
     pull: always
     parameters:
       action: delete
@@ -50,7 +50,7 @@ Sample of setting properties on an artifact:
 ```yaml
 steps:
   - name: set_properties_artifacts
-    image: target/vela-artifactory:v0.2.0
+    image: target/vela-artifactory:latest
     pull: always
     parameters:
       action: set-prop
@@ -70,7 +70,7 @@ Sample of uploading an artifact:
 ```yaml
 steps:
   - name: upload_artifacts
-    image: target/vela-artifactory:v0.2.0
+    image: target/vela-artifactory:latest
     pull: always
     parameters:
       action: upload
@@ -87,7 +87,7 @@ Sample of pretending to upload an artifact:
 ```diff
 steps:
   - name: upload_artifacts
-    image: target/vela-artifactory:v0.2.0
+    image: target/vela-artifactory:latest
     pull: always
     parameters:
       action: upload
@@ -105,7 +105,7 @@ Sample of using docker-promote on an artifact:
 ```yaml
 steps:
   - name: docker_promote_artifacts
-    image: target/vela-artifactory:v0.2.0
+    image: target/vela-artifactory:latest
     pull: always
     parameters:
       action: docker-promote
@@ -132,12 +132,12 @@ The plugin accepts the following `parameters` for authentication:
 | `password`  | `ARTIFACTORY_PASSWORD`, `CONFIG_PASSWORD`, `PARAMETER_PASSWORD` |
 | `username`  | `ARTIFACTORY_USERNAME`, `CONFIG_USERNAME`, `PARAMETER_USERNAME` |
 
-Users can use [Vela secrets](/docs/concepts/pipeline/secrets/) to substitute these sensitive values at runtime:
+Users can use [Vela internal secrets](/docs/concepts/pipeline/secrets/) to substitute these sensitive values at runtime:
 
 ```diff
 steps:
   - name: copy_artifacts
-    image: target/vela-artifactory:v0.2.0
+    image: target/vela-artifactory:latest
     pull: always
 +   secrets: [ artifactory_username, artifactory_password ]
     parameters:
@@ -152,26 +152,26 @@ steps:
 {{% alert color="info" %}}
 This example will add the `secrets` to the `copy_artifacts` step as environment variables:
 
-- `ARTIFACTORY_USERNAME`=<value>
-- `ARTIFACTORY_PASSWORD`=<value>
+- `ARTIFACTORY_USERNAME=<value>`
+- `ARTIFACTORY_PASSWORD=<value>`
 {{% /alert %}}
 
 ### External
 
 The plugin accepts the following files for authentication:
 
-| Parameter   | Volume Configuration                           |
-| ----------- | ------------------------------------------------------------ |
-| `api_key`  | `/vela/parameters/config/artifactory/api_key`, `/vela/secrets/artifactory/api_key` |
-| `password`  | `/vela/parameters/config/artifactory/password`, `/vela/secrets/artifactory/password` |
-| `username`  | `/vela/parameters/config/artifactory/username`, `/vela/secrets/artifactory/username` |
+| Parameter  | Volume Configuration                                                                 |
+| ---------- | ------------------------------------------------------------------------------------ |
+| `api_key`  | `/vela/parameters/config/artifactory/api_key`, `/vela/secrets/artifactory/api_key`   |
+| `password` | `/vela/parameters/config/artifactory/password`, `/vela/secrets/artifactory/password` |
+| `username` | `/vela/parameters/config/artifactory/username`, `/vela/secrets/artifactory/username` |
 
 Users can use [Vela external secrets](/docs/concepts/pipeline/secrets/) to substitute these sensitive values at runtime:
 
 ```diff
 steps:
   - name: copy_artifacts
-    image: target/vela-artifactory:v0.2.0
+    image: target/vela-artifactory:latest
     pull: always
     parameters:
       action: copy
@@ -183,10 +183,16 @@ steps:
 ```
 
 {{% alert color="info" %}}
-This example will read the secrets values in the volume stored at `/vela/secrets/`:
+This example will read the secrets values in the volume stored at `/vela/secrets/`
 {{% /alert %}}
 
 ## Parameters
+
+{{% alert color="info" %}}
+The plugin supports reading all parameters vie environment variables or files.
+
+Any values set from a file take precedence over values set from the environment.
+{{% /alert %}}
 
 The following parameters are used to configure the image:
 
@@ -210,7 +216,6 @@ The following parameters are used to configure the `copy` action:
 | `flat`      | enables removing source directory hierarchy                     | `false`  | `false` |
 | `recursive` | enables copying sub-directories for the artifact(s)             | `false`  | `false` |
 | `target`    | target Artifactory path to copy artifact(s) to                  | `true`   | `N/A`   |
-
 
 #### Delete
 
@@ -264,7 +269,7 @@ You can start troubleshooting this plugin by tuning the level of logs being disp
 ```diff
 steps:
   - name: copy_artifacts
-    image: target/vela-artifactory:v0.2.0
+    image: target/vela-artifactory:latest
     pull: always
     parameters:
       action: copy

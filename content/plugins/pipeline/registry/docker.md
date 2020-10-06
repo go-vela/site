@@ -10,20 +10,20 @@ Source Code: https://github.com/go-vela/vela-docker
 
 Registry: https://hub.docker.com/r/target/vela-docker
 
-{{% alert color="tip" %}}
-This plugin supports environment (`PARAMETER_*`) and volume (`/vela/parameters/*`) configuration for setting parameters.
-
-The precedence order is take files then environment variables if both are set in a container.
-{{% /alert %}}
-
 ## Usage
+
+{{% alert color="warning" %}}
+Users should refrain from using `latest` as the tag for the Docker image.
+
+It is recommended to use a semantically versioned tag instead.
+{{% /alert %}}
 
 Sample of building and publishing an image:
 
 ```yaml
 steps:
   - name: publish_hello-world
-    image: target/vela-docker:v0.2.1
+    image: target/vela-docker:latest
     pull: always
     parameters:
       registry: index.docker.io
@@ -35,7 +35,7 @@ Sample of building an image without publishing:
 ```diff
 steps:
   - name: publish_hello-world
-    image: target/vela-docker:v0.2.1
+    image: target/vela-docker:latest
     pull: always
     parameters:
 +     dry_run: true
@@ -48,7 +48,7 @@ Sample of building and publishing an image with custom tags:
 ```diff
 steps:
   - name: publish_hello-world
-    image: target/vela-docker:v0.2.1
+    image: target/vela-docker:latest
     pull: always
     parameters:
       registry: index.docker.io
@@ -63,7 +63,7 @@ Sample of building and publishing an image with automatic tags:
 ```diff
 steps:
   - name: publish_hello-world
-    image: target/vela-docker:v0.2.1
+    image: target/vela-docker:latest
     pull: always
     parameters:
 +     auto_tag: true
@@ -76,7 +76,7 @@ Sample of building and publishing an image with build arguments:
 ```diff
 steps:
   - name: publish_hello-world
-    image: target/vela-docker:v0.2.1
+    image: target/vela-docker:latest
     pull: always
     parameters:
 +     build_args:
@@ -90,7 +90,7 @@ Sample of building and publishing an image with caching:
 ```diff
 steps:
   - name: publish_hello-world
-    image: target/vela-docker:v0.2.1
+    image: target/vela-docker:latest
     pull: always
     parameters:
 +     cache: true
@@ -104,7 +104,7 @@ Sample of building and publishing an image with custom labels:
 ```diff
 steps:
   - name: publish_hello-world
-    image: target/vela-docker:v0.2.1
+    image: target/vela-docker:latest
     pull: always
     parameters:
       registry: index.docker.io
@@ -129,12 +129,12 @@ The plugin accepts the following `parameters` for authentication:
 | `password`  | `DOCKER_PASSWORD`, `REGISTRY_PASSWORD`, `PARAMETER_PASSWORD` |
 | `username`  | `DOCKER_USERNAME`, `REGISTRY_USERNAME`, `PARAMETER_USERNAME` |
 
-Users can use [Vela secrets](/docs/concepts/pipeline/secrets/) to substitute these sensitive values at runtime:
+Users can use [Vela internal secrets](/docs/concepts/pipeline/secrets/) to substitute these sensitive values at runtime:
 
 ```diff
 steps:
   - name: publish_hello-world
-    image: target/vela-docker:v0.2.1
+    image: target/vela-docker:latest
     pull: always
 +   secrets: [ docker_username, docker_password ]
     parameters:
@@ -147,25 +147,25 @@ steps:
 {{% alert color="info" %}}
 This example will add the `secrets` to the `publish_hello-world` step as environment variables:
 
-- `DOCKER_USERNAME`=<value>
-- `DOCKER_PASSWORD`=<value>
+- `DOCKER_USERNAME=<value>`
+- `DOCKER_PASSWORD=<value>`
 {{% /alert %}}
 
 ### External
 
 The plugin accepts the following files for authentication:
 
-| Parameter   | Volume Configuration                           |
-| ----------- | ------------------------------------------------------------ |
-| `password`  | `/vela/parameters/docker/registry/password`, `/vela/secrets/docker/registry/password`, `/vela/secrets/docker/password` |
-| `username`  | `/vela/parameters/docker/registry/username`, `/vela/secrets/docker/registry/username`, `/vela/secrets/docker/username` |
+| Parameter  | Volume Configuration                                                                                                   |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `password` | `/vela/parameters/docker/registry/password`, `/vela/secrets/docker/registry/password`, `/vela/secrets/docker/password` |
+| `username` | `/vela/parameters/docker/registry/username`, `/vela/secrets/docker/registry/username`, `/vela/secrets/docker/username` |
 
 Users can use [Vela external secrets](/docs/concepts/pipeline/secrets/) to substitute these sensitive values at runtime:
 
 ```diff
 steps:
   - name: publish_hello-world
-    image: target/vela-docker:v0.2.1
+    image: target/vela-docker:latest
     pull: always
     parameters:
       registry: index.docker.io
@@ -181,7 +181,9 @@ This example will read the secrets values in the volume stored at `/vela/secrets
 ## Parameters
 
 {{% alert color="info" %}}
-Vela injects several variables, by default, that this plugin can load in automatically.
+The plugin supports reading all parameters vie environment variables or files.
+
+Any values set from a file take precedence over values set from the environment.
 {{% /alert %}}
 
 The following parameters are used to configure the image:
@@ -218,7 +220,7 @@ You can start troubleshooting this plugin by tuning the level of logs being disp
 ```diff
 steps:
   - name: publish_hello-world
-    image: target/vela-docker:v0.2.1
+    image: target/vela-docker:latest
     pull: always
     parameters:
 +     log_level: trace

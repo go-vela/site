@@ -10,20 +10,20 @@ Source Code: https://github.com/go-vela/vela-kubernetes
 
 Registry: https://hub.docker.com/r/target/vela-kubernetes
 
-{{% alert color="tip" %}}
-This plugin supports environment (`PARAMETER_*`) and volume (`/vela/parameters/*`) configuration for setting parameters.
-
-The precedence order is take files then environment variables if both are set in a container.
-{{% /alert %}}
-
 ## Usage
+
+{{% alert color="warning" %}}
+Users should refrain from using `latest` as the tag for the Docker image.
+
+It is recommended to use a semantically versioned tag instead.
+{{% /alert %}}
 
 Sample of applying Kubernetes files:
 
 ```yaml
 steps:
   - name: kubernetes
-    image: target/vela-kubernetes:v0.1.0
+    image: target/vela-kubernetes:latest
     pull: always
     parameters:
       action: apply
@@ -35,7 +35,7 @@ Sample of pretending to apply Kubernetes files:
 ```diff
 steps:
   - name: kubernetes
-    image: target/vela-kubernetes:v0.1.0
+    image: target/vela-kubernetes:latest
     pull: always
     parameters:
       action: apply
@@ -48,7 +48,7 @@ Sample of patching containers in Kubernetes files:
 ```yaml
 steps:
   - name: kubernetes
-    image: target/vela-kubernetes:v0.1.0
+    image: target/vela-kubernetes:latest
     pull: always
     parameters:
       action: patch
@@ -63,7 +63,7 @@ Sample of pretending to patch containers in Kubernetes files:
 ```diff
 steps:
   - name: kubernetes
-    image: target/vela-kubernetes:v0.1.0
+    image: target/vela-kubernetes:latest
     pull: always
     parameters:
       action: patch
@@ -79,7 +79,7 @@ Sample of watching the status of resources:
 ```yaml
 steps:
   - name: kubernetes
-    image: target/vela-kubernetes:v0.1.0
+    image: target/vela-kubernetes:latest
     pull: always
     parameters:
       action: status
@@ -100,12 +100,12 @@ The plugin accepts the following `parameters` for authentication:
 | --------- | ------------------------------------------------ |
 | `config`  | `CONFIG_FILE`, `KUBE_CONFIG`, `PARAMETER_CONFIG` |
 
-Users can use [Vela secrets](/docs/concepts/pipeline/secrets/) to substitute these sensitive values at runtime:
+Users can use [Vela internal secrets](/docs/concepts/pipeline/secrets/) to substitute these sensitive values at runtime:
 
 ```diff
 steps:
   - name: kubernetes
-    image: target/vela-kubernetes:v0.1.0
+    image: target/vela-kubernetes:latest
     pull: always
 +   secrets: [ kube_config ]
     parameters:
@@ -120,15 +120,15 @@ steps:
 {{% alert color="info" %}}
 This example will add the `secrets` to the `kubernetes` step as environment variables:
 
-- `KUBE_CONFIG`=<value>
+- `KUBE_CONFIG=<value>`
 {{% /alert %}}
 
 ### External
 
 The plugin accepts the following files for authentication:
 
-| Parameter        | Volume Configuration                                                       |
-| ---------------- | -------------------------------------------------------------------------- |
+| Parameter | Volume Configuration                                                              |
+| --------- | --------------------------------------------------------------------------------- |
 | `config`  | `/vela/parameters/kubernetes/config/file`, `/vela/secrets/kubernetes/config/file` |
 
 Users can use [Vela external secrets](/docs/concepts/pipeline/secrets/) to substitute these sensitive values at runtime:
@@ -136,7 +136,7 @@ Users can use [Vela external secrets](/docs/concepts/pipeline/secrets/) to subst
 ```diff
 steps:
   - name: kubernetes
-    image: target/vela-kubernetes:v0.1.0
+    image: target/vela-kubernetes:latest
     pull: always
     parameters:
       action: apply
@@ -152,6 +152,12 @@ This example will read the secrets values in the volume stored at `/vela/secrets
 {{% /alert %}}
 
 ## Parameters
+
+{{% alert color="info" %}}
+The plugin supports reading all parameters vie environment variables or files.
+
+Any values set from a file take precedence over values set from the environment.
+{{% /alert %}}
 
 The following parameters are used to configure the image:
 
@@ -207,7 +213,7 @@ You can start troubleshooting this plugin by tuning the level of logs being disp
 ```diff
 steps:
   - name: kubernetes
-    image: target/vela-kubernetes:v0.1.0
+    image: target/vela-kubernetes:latest
     pull: always
     parameters:
       action: apply

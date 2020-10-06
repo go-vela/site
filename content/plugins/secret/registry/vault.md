@@ -15,6 +15,12 @@ Registry: https://hub.docker.com/r/target/secret-vault
 
 ## Usage
 
+{{% alert color="warning" %}}
+Users should refrain from using `latest` as the tag for the Docker image.
+
+It is recommended to use a semantically versioned tag instead.
+{{% /alert %}}
+
 Sample of writing a secret using token authentication:
 
 ```yaml
@@ -22,6 +28,7 @@ secrets:
   - origin:
       name: vault
       image: target/vela/secret-vault:latest
+      pull: always
       parameters:
         addr: vault.company.com
         token: superSecretVaultToken
@@ -39,6 +46,7 @@ secrets:
   - origin:
       name: vault
       image: target/vela/secret-vault:latest
+      pull: always
       parameters:
         addr: vault.company.com
 +       username: octocat
@@ -58,6 +66,7 @@ secrets:
   - origin:
       name: vault
       image: target/vela/secret-vault:latest
+      pull: always
       parameters:
         addr: vault.company.com
         username: octocat
@@ -73,11 +82,13 @@ secrets:
 
 ## Secrets
 
-**NOTE: Users should refrain from configuring sensitive information in your pipeline in plain text.**
+{{% alert color="warning" %}}
+Users should refrain from configuring sensitive information in their pipeline in plain text.
 
-**NOTE: Secrets used within the secret plugin must exist as Vela secrets.**
+Secrets used within the secret plugin must exist as Vela secrets.
+{{% /alert %}}
 
-You can use Vela secrets to substitute sensitive values at runtime:
+Users can use [Vela internal secrets](/docs/concepts/pipeline/secrets/) to substitute these sensitive values at runtime:
 
 ```diff
 secrets:
@@ -88,7 +99,8 @@ secrets:
   - origin:
       name: vault
       image: target/vela/secret-vault:latest
-      secret: [ vault_token ]
+      pull: always
++     secret: [ vault_token ]
       parameters:
         addr: vault.company.com
 -       token: superSecretVaultToken
@@ -98,6 +110,12 @@ secrets:
           - source: secret/vela/username
             path: docker
 ```
+
+{{% alert color="info" %}}
+This example will add the `secrets` to the `vault` step as environment variables:
+
+- `VAULT_TOKEN=<value>`
+{{% /alert %}}
 
 ## Parameters
 
@@ -126,4 +144,25 @@ COMING SOON!
 
 ## Troubleshooting
 
+You can start troubleshooting this plugin by tuning the level of logs being displayed:
+
+```diff
+secrets:
+  - origin:
+      name: vault
+      image: target/vela/secret-vault:latest
+      pull: always
+      parameters:
++       log_level: trace
+        addr: vault.company.com
+        token: superSecretVaultToken
+        auth_method: token
+        items:
+          # Written to path: "/vela/secrets/docker/<key>"
+          - source: secret/vela/username
+            path: docker
+```
+
 Below are a list of common problems and how to solve them:
+
+COMING SOON!

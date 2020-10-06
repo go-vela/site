@@ -14,16 +14,12 @@ Source Code: https://github.com/go-vela/vela-git
 
 Registry: https://hub.docker.com/r/target/vela-git
 
-{{% alert color="tip" %}}
-This plugin supports environment (`PARAMETER_*`) and volume (`/vela/parameters/*`) configuration for setting parameters.
-
-The precedence order is take files then environment variables if both are set in a container.
-{{% /alert %}}
-
 ## Usage
 
-{{% alert color="info" %}}
-This plugin is automatically injected into every pipeline for the source repository.
+{{% alert color="warning" %}}
+Users should refrain from using `latest` as the tag for the Docker image.
+
+It is recommended to use a semantically versioned tag instead.
 {{% /alert %}}
 
 Sample of cloning a repository:
@@ -31,7 +27,7 @@ Sample of cloning a repository:
 ```yaml
 steps:
   - name: clone_hello-world
-    image: target/vela-git:v0.3.0
+    image: target/vela-git:latest
     pull: always
     parameters:
       path: hello-world
@@ -45,7 +41,7 @@ Sample of cloning a repository with submodules:
 ```diff
 steps:
   - name: clone_hello-world
-    image: target/vela-git:v0.3.0
+    image: target/vela-git:latest
     pull: always
     parameters:
       path: hello-world
@@ -60,7 +56,7 @@ Sample of cloning a repository with tags:
 ```diff
 steps:
   - name: clone_hello-world
-    image: target/vela-git:v0.3.0
+    image: target/vela-git:latest
     pull: always
     parameters:
       path: hello-world
@@ -85,12 +81,12 @@ The plugin accepts the following `parameters` for authentication:
 | `netrc_password` | `GIT_PASSWORD`, `PARAMETER_NETRC_PASSWORD`, `VELA_NETRC_PASSWORD` |
 | `netrc_username` | `GIT_USERNAME`, `PARAMETER_NETRC_USERNAME`, `VELA_NETRC_USERNAME` |
 
-Users can use [Vela secrets](/docs/concepts/pipeline/secrets/) to substitute sensitive values at runtime:
+Users can use [Vela internal secrets](/docs/concepts/pipeline/secrets/) to substitute sensitive values at runtime:
 
 ```diff
 steps:
   - name: clone_hello-world
-    image: target/vela-git:v0.3.0
+    image: target/vela-git:latest
     pull: always
 +   secrets: [ git_username, git_password ]
     parameters:
@@ -105,8 +101,8 @@ steps:
 {{% alert color="info" %}}
 This example will add the `secrets` to the `clone_hello-world` step as environment variables:
 
-- `GIT_USERNAME`=<value>
-- `GIT_PASSWORD`=<value>
+- `GIT_USERNAME=<value>`
+- `GIT_PASSWORD=<value>`
 {{% /alert %}}
 
 ### External
@@ -123,7 +119,7 @@ Users can use [Vela external secrets](/docs/concepts/pipeline/secrets/) to subst
 ```diff
 steps:
   - name: clone_hello-world
-    image: target/vela-git:v0.3.0
+    image: target/vela-git:latest
     pull: always
     parameters:
 -     netrc_username: octocat
@@ -141,7 +137,9 @@ This example will read the secrets values in the volume stored at `/vela/secrets
 ## Parameters
 
 {{% alert color="info" %}}
-Vela injects several variables, by default, that this plugin can load in automatically.
+The plugin supports reading all parameters vie environment variables or files.
+
+Any values set from a file take precedence over values set from the environment.
 {{% /alert %}}
 
 The following parameters are used to configure the image:
@@ -170,7 +168,7 @@ You can start troubleshooting this plugin by tuning the level of logs being disp
 ```diff
 steps:
   - name: clone_hello-world
-    image: target/vela-git:v0.3.0
+    image: target/vela-git:latest
     pull: always
     parameters:
 +     log_level: trace
