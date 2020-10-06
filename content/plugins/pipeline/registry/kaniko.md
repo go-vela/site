@@ -4,7 +4,7 @@ title: "Kaniko"
 
 ## Overview
 
-This plugin uses [Kaniko](https://github.com/GoogleContainerTools/kaniko) to provide the ability to build and publish [Docker](https://www.docker.com/) images in a Vela pipeline without evaluated access on the workers.
+This plugin uses [Kaniko](https://github.com/GoogleContainerTools/kaniko) to provide the ability to build and publish [Docker](https://www.docker.com/) images in a Vela pipeline without elevated access on the workers.
 
 Source Code: https://github.com/go-vela/vela-kaniko
 

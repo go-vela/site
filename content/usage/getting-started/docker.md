@@ -6,14 +6,14 @@ description: >
   Understanding the options for how to build a Dockerfile
 ---
 
-We assume you understand how to build and run Docker images. If you need assistance on how to get started with Docker we recommend you see their documentation for [getting set up](https://docs.docker.com/get-started/).
+We assume you understand how to build and run Docker images. If you need assistance on how to get started with Docker; we recommend you see their documentation for [getting set up](https://docs.docker.com/get-started/).
 
 Vela runs all workloads within Docker containers. Which essentially gives us two core different ways to build Docker images:
 
 * Without elevated daemon access
 * With elevated daemon access
 
-Both options have disadvantages and advantages, so we encourage all Vela administrators to way the pros/cons of how they want to build Docker images for their cluster.
+Both options have disadvantages and advantages, so we encourage all Vela administrators to weigh the pros/cons of how they want to build Docker images for their cluster.
 
 ## Without elevated daemon access
 
