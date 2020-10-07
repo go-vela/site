@@ -5,7 +5,7 @@ title: "Docker"
 ## Overview
 
 {{% alert color="warning" %}}
-This plugin was originally used to build **all** Docker images. The functionality of this plugin still exists within [Kaniko](/kaniko)
+This plugin was originally used to build **all** Docker images. The functionality of this plugin still exists within [Kaniko](/docs/plugins/pipeline/registry/kaniko)
 {{% /alert %}}
 
 This plugin enables the ability to build and publish [Docker](https://www.docker.com/) images in a Vela pipeline. Plugin requires the pipeline to run on a worker that provides the plugin elevated access. 

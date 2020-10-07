@@ -208,3 +208,5 @@ COMING SOON!
 ## Troubleshooting
 
 Below are a list of common problems and how to solve them:
+
+COMING SOON!
