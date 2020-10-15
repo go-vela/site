@@ -26,9 +26,9 @@ The following fields make up this component:
 | Name            | Type       | Description                                             |
 | --------------- | ---------- | ------------------------------------------------------- |
 | `allow_command` | `bool`     | enable injecting a secret with a `commands` declaration |
-| `events`        | `[]string` | whitelist of events permitted to access the secret      |
+| `events`        | `[]string` | list of events permitted to access the secret           |
 | `id`            | `int64`    | unique identifier for secret in the system              |
-| `images`        | `[]string` | whitelist of images permitted to access the secret      |
+| `images`        | `[]string` | list of images permitted to access the secret           |
 | `name`          | `string`   | unique name of the secret                               |
 | `org`           | `string`   | unique org from source control provider                 |
 | `repo`          | `string`   | unique repo name in org from source control provider    |
