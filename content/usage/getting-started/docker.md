@@ -45,7 +45,29 @@ steps:
 
 ## With elevated daemon access
 
-COMING SOON!
+Building an image with elevated access is a allowed pattern as long as the administrators have set the required allow list of images on the worker. It's *important to work with your administrator* to understand stand which pattern you instances was deployed to support. The supported plugin for building those images:
+
+* [vela-kaniko](/docs/plugins/pipeline/registry/docker/)
+
+```diff
+version: "1"
+steps:
++ - name: build and publish with Dockers build kit
++   image: target/vela-docker:latest
++   pull: always
++   parameters:
++     registry: index.docker.io
++     tags: [ index.docker.io/octocat/hello-world ]
+
++ - name: build and publish with Dockers without build kit
++   image: target/vela-docker:latest
++   environment:
++     DOCKER_BUILDKIT=0   
++   pull: always
++   parameters:
++     registry: index.docker.io
++     tags: [ index.docker.io/octocat/hello-world ]
+```
 
 ## Additional Resources
 
