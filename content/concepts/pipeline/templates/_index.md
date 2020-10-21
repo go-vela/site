@@ -29,7 +29,7 @@ version: "1"
 metadata:
   template: false
 
-+templates
++templates:
 +  - name: template
 +    source: github.com/vela/atlas/cmd
 +    type: github
