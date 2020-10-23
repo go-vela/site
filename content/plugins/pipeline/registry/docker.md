@@ -240,10 +240,10 @@ The following parameters are used to configure the image:
 | `bip`                 | enables specifying a network bridge IP                  | `false`  | N/A     |
 | `dns.servers`         | enables setting the DNS server to use                   | `false`  | N/A     |
 | `dns.searches`        | enables setting the DNS search domains to use           | `false`  | N/A     |
-| `experimental`        | enable experimental features                            | `false`  | N/A     |
+| `experimental`        | enables experimental features                            | `false`  | N/A     |
 | `insecure_registries` | enables insecure registry communication                 | `false`  | N/A     |
 | `ipv6`                | enables IPv6 networking                                 | `false`  | N/A     |
-| `mtu`                 | enable setting the containers network MTU               | `false`  | N/A     |
+| `mtu`                 | enables setting the containers network MTU               | `false`  | N/A     |
 | `registry_mirrors`    | enables setting a preferred Docker registry mirror      | `false`  | N/A     |
 | `storage.drivers`     | enables setting an alternate storage driver             | `false`  | N/A     |
 | `storage.opts`        | enables setting options on the alternate storage driver | `false`  | N/A     |
