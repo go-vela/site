@@ -8,11 +8,11 @@ description: >
 ## Command
 
 ```
-$ vela repair <parameters...> <arguments...>
+$ vela repair repo <parameters...> <arguments...>
 ```
 
 {{% alert color="info" %}}
-For more information, you can run `vela repair --help`.
+For more information, you can run `vela repair repo --help`.
 {{% /alert %}}
 
 ## Parameters
@@ -52,7 +52,7 @@ To setup the CLI, please review the [authentication documentation](/docs/cli/aut
 #### Request
 
 ```sh
-vela repair --org github --repo octocat
+vela repair repo --org github --repo octocat
 ```
 
 #### Response
