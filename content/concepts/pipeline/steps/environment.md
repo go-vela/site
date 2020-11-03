@@ -71,6 +71,10 @@ The following environment variables are injected into every step:
 | `VELA_BUILD_REF`          | `refs/heads/master`                                         | reference from the source commit                                    |
 | `VELA_BUILD_RUNTIME`      | `docker`                                                    | runtime where the build was executed                                |
 | `VELA_BUILD_SENDER`       | `NealColeman`                                               | user who triggered the build                                        |
+| `VELA_BUILD_SOURCE`       | `https://github.com/octocat/hello-world/commit/7fd1a...`    | push event: url to the commit sha                                   |
+|                           | `https://github.com/octocat/hello-world/pulls/7`            | pull request event: url to the the pull request                     |
+|                           | `https://github.com/octocat/hello-world/commit/7fd1a...`    | deployment event: url to the the deployment                         |
+|                           | `https://github.com/octocat/hello-world/commit/7fd1a...`    | comment event: url to the the issue                                 |
 | `VELA_BUILD_STARTED`      | `1556730001`                                                | unix timestamp representing build start time                        |
 | `VELA_BUILD_STATUS`       | `success`  |                                                | status of the build                                                 |
 | `VELA_BUILD_TITLE`        | `push received from https://github.com/octocat/hello-world` | title for the build                                                 |
