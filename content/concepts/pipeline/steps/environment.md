@@ -50,35 +50,35 @@ The following environment variables are injected into every step:
 #### Build Environment Variables
 
 | Key                       | Value                                                       | Explanation                                                         |
-| ------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------- |
-| `VELA_BUILD_AUTHOR`       | `octocat`                                                   | author from the source commit                                       |
-| `VELA_BUILD_AUTHOR_EMAIL` | `octocat@github.com`                                        | author email from the source commit                                 |
-| `VELA_BUILD_BASE_REF`     | `refs/heads/dev`                                            | reference from the base commit                                      |
-| `VELA_BUILD_BRANCH`       | `master`                                                    | branch from the source commit                                       |
-| `VELA_BUILD_CHANNEL`      | `vela`                                                      | queue channel the build was published to                            |
-| `VELA_BUILD_CLONE`        | `https://github.com/octocat/hello-world.git`                | clone url for the repository the build was triggered from           |
-| `VELA_BUILD_COMMIT`       | `7fd1a60b01f91b314f59955a4e4d4e80d8edf11d`                  | commit sha from the source commit                                   |
-| `VELA_BUILD_CREATED`      | `1556720958`                                                | unix timestamp representing build creation time                     |
-| `VELA_BUILD_DISTRIBUTION` | `linux`                                                     | distribution where the build was executed                           |
-| `VELA_BUILD_ENQUEUED`     | `1556720958`                                                | unix timestamp representing build enqueued time                     |
-| `VELA_BUILD_EVENT`        | `push`                                                      | webhook event that triggered the build                              |
-| `VELA_BUILD_FINISHED`     | `1556730045`                                                | unix timestamp representing build completion time                   |
-| `VELA_BUILD_HOST`         | `vela-worker-1`                                             | fully qualified domain name of the worker the build was executed on |
-| `VELA_BUILD_LINK`         | `https://vela-server.localhost/octocat/hello-world/1`       | link to the build in the UI                                         |
-| `VELA_BUILD_MESSAGE`      | `Merge pull request #6 from octocat/patch-1`                | message from the source commit                                      |
-| `VELA_BUILD_NUMBER`       | `1`                                                         | build number                                                        |
-| `VELA_BUILD_PARENT`       | `1`                                                         | previous build number                                               |
-| `VELA_BUILD_REF`          | `refs/heads/master`                                         | reference from the source commit                                    |
-| `VELA_BUILD_RUNTIME`      | `docker`                                                    | runtime where the build was executed                                |
-| `VELA_BUILD_SENDER`       | `NealColeman`                                               | user who triggered the build                                        |
-| `VELA_BUILD_SOURCE`       | `https://github.com/octocat/hello-world/commit/7fd1a...`    | push event: url to the commit sha                                   |
-|                           | `https://github.com/octocat/hello-world/pulls/7`            | pull request event: url to the the pull request                     |
-|                           | `https://github.com/octocat/hello-world/commit/7fd1a...`    | deployment event: url to the the deployment                         |
-|                           | `https://github.com/octocat/hello-world/commit/7fd1a...`    | comment event: url to the the issue                                 |
-| `VELA_BUILD_STARTED`      | `1556730001`                                                | unix timestamp representing build start time                        |
-| `VELA_BUILD_STATUS`       | `success`  |                                                | status of the build                                                 |
-| `VELA_BUILD_TITLE`        | `push received from https://github.com/octocat/hello-world` | title for the build                                                 |
-| `VELA_BUILD_WORKSPACE`    | `/vela/src/github.com/octocat/hello-world`                  | working directory the build is executed in                          |
+| ------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `VELA_BUILD_AUTHOR`       | `octocat`                                                               | author from the source commit                                       |
+| `VELA_BUILD_AUTHOR_EMAIL` | `octocat@github.com`                                                    | author email from the source commit                                 |
+| `VELA_BUILD_BASE_REF`     | `refs/heads/dev`                                                        | reference from the base commit                                      |
+| `VELA_BUILD_BRANCH`       | `master`                                                                | branch from the source commit                                       |
+| `VELA_BUILD_CHANNEL`      | `vela`                                                                  | queue channel the build was published to                            |
+| `VELA_BUILD_CLONE`        | `https://github.com/octocat/hello-world.git`                            | clone url for the repository the build was triggered from           |
+| `VELA_BUILD_COMMIT`       | `7fd1a60b01f91b314f59955a4e4d4e80d8edf11d`                              | commit sha from the source commit                                   |
+| `VELA_BUILD_CREATED`      | `1556720958`                                                            | unix timestamp representing build creation time                     |
+| `VELA_BUILD_DISTRIBUTION` | `linux`                                                                 | distribution where the build was executed                           |
+| `VELA_BUILD_ENQUEUED`     | `1556720958`                                                            | unix timestamp representing build enqueued time                     |
+| `VELA_BUILD_EVENT`        | `push`                                                                  | webhook event that triggered the build                              |
+| `VELA_BUILD_FINISHED`     | `1556730045`                                                            | unix timestamp representing build completion time                   |
+| `VELA_BUILD_HOST`         | `vela-worker-1`                                                         | fully qualified domain name of the worker the build was executed on |
+| `VELA_BUILD_LINK`         | `https://vela-server.localhost/octocat/hello-world/1`                   | link to the build in the UI                                         |
+| `VELA_BUILD_MESSAGE`      | `Merge pull request #6 from octocat/patch-1`                            | message from the source commit                                      |
+| `VELA_BUILD_NUMBER`       | `1`                                                                     | build number                                                        |
+| `VELA_BUILD_PARENT`       | `1`                                                                     | previous build number                                               |
+| `VELA_BUILD_REF`          | `refs/heads/master`                                                     | reference from the source commit                                    |
+| `VELA_BUILD_RUNTIME`      | `docker`                                                                | runtime where the build was executed                                |
+| `VELA_BUILD_SENDER`       | `NealColeman`                                                           | user who triggered the build                                        |
+| `VELA_BUILD_SOURCE`       | `https://github.com/octocat/hello-world/commit/7fd1a...`                | push event: url to the commit sha                                   |
+|                           | `https://github.com/octocat/hello-world/pulls/7`                        | pull request event: url to the the pull request                     |
+|                           | `https://api.github.com/repos/octocat/hello-world/deployments/1234567`  | deployment event: url to the the deployment                         |
+|                           | `https://github.com/octocat/hello-world/issues/1`                       | comment event: url to the the issue                                 |
+| `VELA_BUILD_STARTED`      | `1556730001`                                                            | unix timestamp representing build start time                        |
+| `VELA_BUILD_STATUS`       | `success`  |                                                            | status of the build                                                 |
+| `VELA_BUILD_TITLE`        | `push received from https://github.com/octocat/hello-world`             | title for the build                                                 |
+| `VELA_BUILD_WORKSPACE`    | `/vela/src/github.com/octocat/hello-world`                              | working directory the build is executed in                          |
 
 {{% alert color="info" %}}
 The following table includes variables only available during the **comment** event
