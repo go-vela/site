@@ -55,6 +55,14 @@ curl \
 
 #### Response
 
+```yaml
+some_template:
+  link: https://github.com/github/octocat/blob/master/template.yml
+  name: some_template
+  source: github.com/github/octocat/template.yml
+  type: github
+```
+
 ```json
 {
   "some_template": {
@@ -64,12 +72,4 @@ curl \
     "type": "github"
   },
 }
-```
-
-```yaml
-some_template:
-  link: https://github.com/github/octocat/blob/master/template.yml
-  name: some_template
-  source: github.com/github/octocat/template.yml
-  type: github
 ```

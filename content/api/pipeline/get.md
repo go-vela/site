@@ -55,6 +55,17 @@ curl \
 
 #### Response
 
+```yaml
+version: "1"
+steps:
+  - name: hello
+    image: golang
+    ruleset:
+      event: push
+    commands:
+      - echo "hello"
+```
+
 ```json
 {
   "version": "1",
@@ -82,15 +93,4 @@ curl \
     }
   ]
 }
-```
-
-```yaml
-version: "1"
-steps:
-  - name: hello
-    image: golang
-    ruleset:
-      event: push
-    commands:
-      - echo "hello"
 ```

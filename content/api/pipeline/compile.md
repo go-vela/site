@@ -59,6 +59,39 @@ curl \
 Notice, when compiling a pipeline configuration step fields such as `image` and `commands` will be arranged in alphabetical order.
 {{% /alert %}}
 
+```yaml
+version: "1"
+secrets:
+- name: go_module
+  key: github/octocat/template_secret
+  engine: native
+  type: repo
+steps:
+- commands:
+  - go vet ./... && git diff --exit-code; code=$?; git checkout -- .; (exit $code)
+  - go fmt ./... && git diff --exit-code; code=$?; git checkout -- .; (exit $code)
+  image: golang:latest
+  name: go_validate
+  pull: not_present
+- commands:
+  - go test ./...
+  image: golang:latest
+  name: go_test
+  pull: not_present
+- commands:
+  - go build -a -ldflags '-extldflags "-static"' -o release/heyvela {$GO_MODULE}
+  image: golang:latest
+  name: go_build
+  pull: not_present
+  environment:
+    CGO_ENABLED: "0"
+    GOOS: linux
+templates:
+- name: go
+  source: github.com/github/octocat/go/template.yml
+  type: github
+```
+
 ```json
 {
   "version": "1",
@@ -176,37 +209,4 @@ Notice, when compiling a pipeline configuration step fields such as `image` and 
     }
   ]
 }
-```
-
-```yaml
-version: "1"
-secrets:
-- name: go_module
-  key: github/octocat/template_secret
-  engine: native
-  type: repo
-steps:
-- commands:
-  - go vet ./... && git diff --exit-code; code=$?; git checkout -- .; (exit $code)
-  - go fmt ./... && git diff --exit-code; code=$?; git checkout -- .; (exit $code)
-  image: golang:latest
-  name: go_validate
-  pull: not_present
-- commands:
-  - go test ./...
-  image: golang:latest
-  name: go_test
-  pull: not_present
-- commands:
-  - go build -a -ldflags '-extldflags "-static"' -o release/heyvela {$GO_MODULE}
-  image: golang:latest
-  name: go_build
-  pull: not_present
-  environment:
-    CGO_ENABLED: "0"
-    GOOS: linux
-templates:
-- name: go
-  source: github.com/github/octocat/go/template.yml
-  type: github
 ```
