@@ -1,42 +1,16 @@
 ---
-title: "Overview"
-linkTitle: "Overview"
+title: "Working with plugins"
+toc: true
 description: >
-  Learn about the kinds of Vela plugins.
+  Walkthrough of an example using pipeline and secret plugins working together
 ---
 
 {{% alert title="Note:" color="primary" %}}
-Before you begin your plugin journey we recommend the following pre-requisites:
+The following plugins are used within the example
 
-* [Steps](/docs/concepts/pipeline/steps/)
-* [Stages](/docs/concepts/pipeline/stages/)
-* [Templates](/docs/concepts/pipeline/templates/)
+* [Kaniko](/docs/plugins/registry/pipeline/kaniko/)
+* [Vault](/docs/plugins/registry/secret/vault/)
 {{% /alert %}}
-
-## Pipeline
-
-These plugins are designed to be used within steps, stages and template pipelines. Pipeline plugins configuration works via environment variables that pass data from pipeline to the container at runtime. 
-
-A pipeline plugin is a Docker container that is designed to perform a set of pre-defined actions.
-
-These actions can be for any number of general tasks, including:
-
-* deploying code
-* publishing artifacts
-* sending notifications
-* much, much more...
-
-## Secret
-
-{{% alert title="Note:" color="primary" %}}
-Secret plugins are by default under an allow list of available images for an installation. To know which secret plugins are available for your Vela installation we recommend consulting your system administrators. 
-{{% /alert %}}
-
-These plugins are designed to be used within the secrets Yaml block of pipelines. Secret plugins configuration works via environment variables that pass data from pipeline to the container at runtime. 
-
-A secret plugin works in tandem with the Vela workspace to read data from a provider and write them into an available location (`/vela/secrets`) within a pipeline.
-
-## Using a plugin
 
 Typically, plugins are configured as a step in a pipeline and should accept their configuration via environment variables. The below example shows a pipeline and secret plugin working together to publish an image to a registry:
 
