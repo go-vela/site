@@ -1,7 +1,6 @@
 ---
 title: "Using the Environment"
 toc: true
-weight: 6
 description: >
   Learn about how to leverage the environment within your builds.
 ---

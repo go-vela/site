@@ -1,7 +1,6 @@
 ---
-title: "JSON Schema"
+title: "JSON Schema support"
 toc: true
-weight: 1
 description: >
   JSON Schema information.
 ---

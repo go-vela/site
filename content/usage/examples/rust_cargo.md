@@ -3,10 +3,10 @@ title: "Rust (With Cargo)"
 toc: true
 weight: 1
 description: >
-  Sample Rust (With Cargo) Pipeline
+  Example Rust (With Cargo) Pipeline
 ---
 
-Sample [Yaml](https://yaml.org/spec/) configuration for a project building a [Rust](https://www.rust-lang.org/) binary with [Cargo](https://doc.rust-lang.org/cargo/commands/cargo-doc.html).
+Example [Yaml](https://yaml.org/spec/) configuration for a project building a [Rust](https://www.rust-lang.org/) binary with [Cargo](https://doc.rust-lang.org/cargo/commands/cargo-doc.html).
 
 ## Scenario
 

@@ -1,12 +1,12 @@
 ---
-title: "Java (With Maven)"
+title: "Go (With Modules)"
 toc: true
-weight: 2
+weight: 1
 description: >
-  Sample Java (With Maven) Pipeline
+  Example Go (With Modules) Pipeline
 ---
 
-Sample [Yaml](https://yaml.org/spec/) configuration for a project building a [Java](https://docs.oracle.com/en/java/) application with [Maven](https://maven.apache.org/guides/index.html).
+Example [Yaml](https://yaml.org/spec/) configuration for a project building a [Go](https://golang.org/) binary with [Go modules](https://github.com/golang/go/wiki/Modules).
 
 ## Scenario
 
@@ -18,6 +18,7 @@ The following [pipeline concepts](/docs/concepts/pipeline) are being used in the
 
 * [Steps](/docs/concepts/pipeline/steps/)
   * [image](/docs/concepts/pipeline/steps/image/)
+  * [Environment](/docs/concepts/pipeline/steps/environment/)
   * [Pull](/docs/concepts/pipeline/steps/pull/)
   * [Commands](/docs/concepts/pipeline/steps/commands/)
 
@@ -32,22 +33,31 @@ version: "1"
 
 steps:
   - name: install
-    image: maven:latest
+    image: golang:latest
     pull: always
+    environment:
+      CGO_ENABLED: '0'
+      GOOS: linux
     commands:
-      - mvn install
+      - go get ./...
 
   - name: test
-    image: maven:latest
+    image: golang:latest
     pull: always
+    environment:
+      CGO_ENABLED: '0'
+      GOOS: linux
     commands:
-      - mvn test
+      - go test ./...
 
   - name: build
-    image: maven:latest
+    image: golang:latest
     pull: always
+    environment:
+      CGO_ENABLED: '0'
+      GOOS: linux
     commands:
-      - mvn package
+      - go build
 ```
 
 ### Stages
@@ -58,6 +68,7 @@ The following [pipeline concepts](/docs/concepts/pipeline) are being used in the
   * [Needs](/docs/concepts/pipeline/needs/)
   * [Steps](/docs/concepts/pipeline/steps/)
     * [image](/docs/concepts/pipeline/steps/image/)
+    * [Environment](/docs/concepts/pipeline/steps/environment/)
     * [Pull](/docs/concepts/pipeline/steps/pull/)
     * [Commands](/docs/concepts/pipeline/steps/commands/)
 
@@ -69,35 +80,40 @@ It is recommended to pin `image:` versions for production pipelines
 
 ```yaml
 version: "1"
+
 stages:
   install:
     steps:
       - name: install
-        image: maven:latest
+        image: golang:latest
         pull: always
+        environment:
+          CGO_ENABLED: '0'
+          GOOS: linux
         commands:
-          - mvn install
+          - go get ./...
+
   test:
     needs: [ install ]
     steps:
       - name: test
-        image: maven:latest
+        image: golang:latest
         pull: always
         environment:
-          GRADLE_USER_HOME: .gradle
-          GRADLE_OPTS: -Dorg.gradle.daemon=false -Dorg.gradle.workers.max=1 -Dorg.gradle.parallel=false
+          CGO_ENABLED: '0'
+          GOOS: linux
         commands:
-          - mvn test
-          
+          - go test ./...
+
   build:
     needs: [ install ]
     steps:
       - name: build
-        image: maven:latest
+        image: golang:latest
         pull: always
         environment:
-          GRADLE_USER_HOME: .gradle
-          GRADLE_OPTS: -Dorg.gradle.daemon=false -Dorg.gradle.workers.max=1 -Dorg.gradle.parallel=false
+          CGO_ENABLED: '0'
+          GOOS: linux
         commands:
-          - mvn package
+          - go build
 ```

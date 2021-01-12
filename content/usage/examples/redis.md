@@ -3,10 +3,10 @@ title: "Redis"
 toc: true
 weight: 1
 description: >
-  Sample Pipeline with Redis
+  Example Pipeline with Redis
 ---
 
-Sample [Yaml](https://yaml.org/spec/) configuration for a project requiring a [Redis](https://redis.io/) as a pipeline dependency.
+Example [Yaml](https://yaml.org/spec/) configuration for a project requiring a [Redis](https://redis.io/) as a pipeline dependency.
 
 ## Scenario
 

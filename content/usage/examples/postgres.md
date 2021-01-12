@@ -1,16 +1,16 @@
 ---
-title: "Mongo"
+title: "Postgres"
 toc: true
 weight: 1
 description: >
-  Sample Pipeline with Mongo
+  Example Pipeline with Postgres
 ---
 
-Sample [Yaml](https://yaml.org/spec/) configuration for a project requiring a [Mongo](https://www.mongodb.com/) as a pipeline dependency.
+Example [Yaml](https://yaml.org/spec/) configuration for a project requiring a [Postgres](https://www.postgresql.org/) as a pipeline dependency.
 
 ## Scenario
 
-User is looking to create a pipeline that can integrate with an ephemeral Mongo instance.
+User is looking to create a pipeline that can integrate with an ephemeral Postgres instance.
 
 ### Services
 
@@ -34,18 +34,21 @@ It is recommended to pin `image:` versions for production pipelines
 ```diff
 version: "1"
 services:
-  - name: mongo
-    image: mongo:latest
+  - name: postgres
+    image: postgres:latest
     pull: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_DB: vela
 
 steps:
   - name: check status
-    image: mongo:latest
+    image: postgres:latest
     pull: always
     commands:
       # sleeping can help ensure the service adequate time to start
 +      - sleep 15
-      - "mongo --host mongo --eval \"{ ping: 1 }\""
+      - psql -U admin -d vela -h tcp://postgres:5432
 ```
 
 ### Detach
@@ -69,14 +72,19 @@ It is recommended to pin `image:` versions for production pipelines
 version: "1"
 
 steps:
-  - name: mongo
-    image: mongo:latest
+  - name: postgres
+    image: postgres:latest
+    pull: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_DB: vela    
     detach: true
 
   - name: check status
-    image: mongo:latest
+    image: postgres:latest
+    pull: always
     commands:
       # sleeping can help ensure the service adequate time to start
 +      - sleep 15
-      - "mongo --host mongo --eval \"{ ping: 1 }\""
+      - psql -U admin -d vela -h tcp://postgres:5432
 ```

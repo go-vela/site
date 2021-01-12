@@ -1,12 +1,12 @@
 ---
-title: "Java (With Gradle)"
+title: "Java (With Maven)"
 toc: true
 weight: 2
 description: >
-  Sample Java (With Gradle) Pipeline
+  Example Java (With Maven) Pipeline
 ---
 
-Sample [Yaml](https://yaml.org/spec/) configuration for a project building a [Java](https://docs.oracle.com/en/java/) application with [Gradle](https://docs.gradle.org/current/userguide/userguide.html).
+Example [Yaml](https://yaml.org/spec/) configuration for a project building a [Java](https://docs.oracle.com/en/java/) application with [Maven](https://maven.apache.org/guides/index.html).
 
 ## Scenario
 
@@ -18,7 +18,6 @@ The following [pipeline concepts](/docs/concepts/pipeline) are being used in the
 
 * [Steps](/docs/concepts/pipeline/steps/)
   * [image](/docs/concepts/pipeline/steps/image/)
-  * [Environment](/docs/concepts/pipeline/steps/environment/)
   * [Pull](/docs/concepts/pipeline/steps/pull/)
   * [Commands](/docs/concepts/pipeline/steps/commands/)
 
@@ -33,31 +32,22 @@ version: "1"
 
 steps:
   - name: install
-    image: gradle:latest
+    image: maven:latest
     pull: always
-    environment:
-      GRADLE_USER_HOME: .gradle
-      GRADLE_OPTS: -Dorg.gradle.daemon=false -Dorg.gradle.workers.max=1 -Dorg.gradle.parallel=false
     commands:
-      - gradle downloadDependencies
+      - mvn install
 
   - name: test
-    image: gradle:latest
+    image: maven:latest
     pull: always
-    environment:
-      GRADLE_USER_HOME: .gradle
-      GRADLE_OPTS: -Dorg.gradle.daemon=false -Dorg.gradle.workers.max=1 -Dorg.gradle.parallel=false
     commands:
-      - gradle test
+      - mvn test
 
   - name: build
-    image: gradle:latest
+    image: maven:latest
     pull: always
-    environment:
-      GRADLE_USER_HOME: .gradle
-      GRADLE_OPTS: -Dorg.gradle.daemon=false -Dorg.gradle.workers.max=1 -Dorg.gradle.parallel=false
     commands:
-      - gradle build
+      - mvn package
 ```
 
 ### Stages
@@ -65,10 +55,9 @@ steps:
 The following [pipeline concepts](/docs/concepts/pipeline) are being used in the pipeline below:
 
 * [Stages](/docs/concepts/pipeline/stages/)
-  * [Needs](docs/concepts/pipeline/stages/needs/)
+  * [Needs](/docs/concepts/pipeline/needs/)
   * [Steps](/docs/concepts/pipeline/steps/)
     * [image](/docs/concepts/pipeline/steps/image/)
-    * [Environment](/docs/concepts/pipeline/steps/environment/)
     * [Pull](/docs/concepts/pipeline/steps/pull/)
     * [Commands](/docs/concepts/pipeline/steps/commands/)
 
@@ -84,34 +73,31 @@ stages:
   install:
     steps:
       - name: install
-        image: gradle:latest
+        image: maven:latest
         pull: always
-        environment:
-          GRADLE_USER_HOME: .gradle
-          GRADLE_OPTS: -Dorg.gradle.daemon=false -Dorg.gradle.workers.max=1 -Dorg.gradle.parallel=false
         commands:
-          - gradle downloadDependencies
+          - mvn install
   test:
     needs: [ install ]
     steps:
       - name: test
-        image: gradle:latest
+        image: maven:latest
         pull: always
         environment:
           GRADLE_USER_HOME: .gradle
           GRADLE_OPTS: -Dorg.gradle.daemon=false -Dorg.gradle.workers.max=1 -Dorg.gradle.parallel=false
         commands:
-          - gradle test
+          - mvn test
           
   build:
     needs: [ install ]
     steps:
       - name: build
-        image: gradle:latest
+        image: maven:latest
         pull: always
         environment:
           GRADLE_USER_HOME: .gradle
           GRADLE_OPTS: -Dorg.gradle.daemon=false -Dorg.gradle.workers.max=1 -Dorg.gradle.parallel=false
         commands:
-          - gradle build
+          - mvn package
 ```

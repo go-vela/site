@@ -1,7 +1,6 @@
 ---
 title: "Start a Build"
 linkTitle: "Start a Build"
-weight: 4
 description: >
   Start a build for the first time.
 ---

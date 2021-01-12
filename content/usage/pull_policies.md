@@ -1,7 +1,6 @@
 ---
 title: "Pull Policies"
 toc: true
-weight: 8
 description: >
   Learn how to control pulling images in your pipeline.
 ---

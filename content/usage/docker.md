@@ -1,7 +1,6 @@
 ---
 title: "Building Docker Images"
 toc: true
-weight: 7
 description: >
   Understanding the options for how to build a Dockerfile
 ---

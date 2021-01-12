@@ -1,7 +1,6 @@
 ---
 title: "Enable a Repo"
 linkTitle: "Enable a Repo"
-weight: 3
 description: >
   Learn how to add your first repo.
 ---

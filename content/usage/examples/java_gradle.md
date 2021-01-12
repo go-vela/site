@@ -1,12 +1,12 @@
 ---
-title: "Go (With Modules)"
+title: "Java (With Gradle)"
 toc: true
-weight: 1
+weight: 2
 description: >
-  Sample Go (With Modules) Pipeline
+  Example Java (With Gradle) Pipeline
 ---
 
-Sample [Yaml](https://yaml.org/spec/) configuration for a project building a [Go](https://golang.org/) binary with [Go modules](https://github.com/golang/go/wiki/Modules).
+Example [Yaml](https://yaml.org/spec/) configuration for a project building a [Java](https://docs.oracle.com/en/java/) application with [Gradle](https://docs.gradle.org/current/userguide/userguide.html).
 
 ## Scenario
 
@@ -33,31 +33,31 @@ version: "1"
 
 steps:
   - name: install
-    image: golang:latest
+    image: gradle:latest
     pull: always
     environment:
-      CGO_ENABLED: '0'
-      GOOS: linux
+      GRADLE_USER_HOME: .gradle
+      GRADLE_OPTS: -Dorg.gradle.daemon=false -Dorg.gradle.workers.max=1 -Dorg.gradle.parallel=false
     commands:
-      - go get ./...
+      - gradle downloadDependencies
 
   - name: test
-    image: golang:latest
+    image: gradle:latest
     pull: always
     environment:
-      CGO_ENABLED: '0'
-      GOOS: linux
+      GRADLE_USER_HOME: .gradle
+      GRADLE_OPTS: -Dorg.gradle.daemon=false -Dorg.gradle.workers.max=1 -Dorg.gradle.parallel=false
     commands:
-      - go test ./...
+      - gradle test
 
   - name: build
-    image: golang:latest
+    image: gradle:latest
     pull: always
     environment:
-      CGO_ENABLED: '0'
-      GOOS: linux
+      GRADLE_USER_HOME: .gradle
+      GRADLE_OPTS: -Dorg.gradle.daemon=false -Dorg.gradle.workers.max=1 -Dorg.gradle.parallel=false
     commands:
-      - go build
+      - gradle build
 ```
 
 ### Stages
@@ -65,7 +65,7 @@ steps:
 The following [pipeline concepts](/docs/concepts/pipeline) are being used in the pipeline below:
 
 * [Stages](/docs/concepts/pipeline/stages/)
-  * [Needs](/docs/concepts/pipeline/needs/)
+  * [Needs](docs/concepts/pipeline/stages/needs/)
   * [Steps](/docs/concepts/pipeline/steps/)
     * [image](/docs/concepts/pipeline/steps/image/)
     * [Environment](/docs/concepts/pipeline/steps/environment/)
@@ -80,40 +80,38 @@ It is recommended to pin `image:` versions for production pipelines
 
 ```yaml
 version: "1"
-
 stages:
   install:
     steps:
       - name: install
-        image: golang:latest
+        image: gradle:latest
         pull: always
         environment:
-          CGO_ENABLED: '0'
-          GOOS: linux
+          GRADLE_USER_HOME: .gradle
+          GRADLE_OPTS: -Dorg.gradle.daemon=false -Dorg.gradle.workers.max=1 -Dorg.gradle.parallel=false
         commands:
-          - go get ./...
-
+          - gradle downloadDependencies
   test:
     needs: [ install ]
     steps:
       - name: test
-        image: golang:latest
+        image: gradle:latest
         pull: always
         environment:
-          CGO_ENABLED: '0'
-          GOOS: linux
+          GRADLE_USER_HOME: .gradle
+          GRADLE_OPTS: -Dorg.gradle.daemon=false -Dorg.gradle.workers.max=1 -Dorg.gradle.parallel=false
         commands:
-          - go test ./...
-
+          - gradle test
+          
   build:
     needs: [ install ]
     steps:
       - name: build
-        image: golang:latest
+        image: gradle:latest
         pull: always
         environment:
-          CGO_ENABLED: '0'
-          GOOS: linux
+          GRADLE_USER_HOME: .gradle
+          GRADLE_OPTS: -Dorg.gradle.daemon=false -Dorg.gradle.workers.max=1 -Dorg.gradle.parallel=false
         commands:
-          - go build
+          - gradle build
 ```

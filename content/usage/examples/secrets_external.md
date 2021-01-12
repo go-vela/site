@@ -3,10 +3,10 @@ title: "External Secrets"
 toc: true
 weight: 1
 description: >
-  Sample pipeline with external secrets
+  Example pipeline with external secrets
 ---
 
-Sample [Yaml](https://yaml.org/spec/) configuration for a project requiring a secrets to be used within a step
+Example [Yaml](https://yaml.org/spec/) configuration for a project requiring a secrets to be used within a step
 
 ## Scenario
 
@@ -16,7 +16,7 @@ User is looking to create a pipeline that can integrate with a private Vault to 
 It is assumed you have created secret `vault_token` in the web interface or [CLI](/docs/cli/).
 {{% /alert %}}
 
-The samples show a pipeline using repository secrets. Vela contains three secret types: repository, organization, and shared. For examples on organization and shared, please see the [secret concepts](/docs/concepts/pipeline/steps/secrets/) documentation.
+The examples show a pipeline using repository secrets. Vela contains three secret types: repository, organization, and shared. For examples on organization and shared, please see the [secret concepts](/docs/concepts/pipeline/steps/secrets/) documentation.
 
 ### Steps
 

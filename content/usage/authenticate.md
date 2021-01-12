@@ -1,7 +1,6 @@
 ---
 title: "Authenticate"
 linkTitle: "Authenticate"
-weight: 1
 description: >
   Authenticate to your Vela instance.
 ---

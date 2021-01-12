@@ -3,10 +3,10 @@ title: "Route"
 toc: true
 weight: 1
 description: >
-  Sample Pipeline with build routing
+  Example Pipeline with build routing
 ---
 
-Sample [Yaml](https://yaml.org/spec/) configuration for a project requiring a specific runtime or platform.
+Example [Yaml](https://yaml.org/spec/) configuration for a project requiring a specific runtime or platform.
 
 ## Scenario
 

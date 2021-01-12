@@ -3,10 +3,10 @@ title: "Node"
 toc: true
 weight: 3
 description: >
-  Sample Node Pipeline
+  Example Node Pipeline
 ---
 
-Sample [Yaml](https://yaml.org/spec/) configuration for a project building a [Node](https://nodejs.org/en/docs/) application.
+Example [Yaml](https://yaml.org/spec/) configuration for a project building a [Node](https://nodejs.org/en/docs/) application.
 
 ## Scenario
 

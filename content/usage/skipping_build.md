@@ -1,7 +1,6 @@
 ---
 title: "Skipping a Build"
 linkTitle: "Skipping a Build"
-weight: 5
 description: >
   Skip builds for certain commits.
 ---

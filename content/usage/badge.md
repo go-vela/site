@@ -1,7 +1,6 @@
 ---
 title: "Badges"
 linkTitle: "Badges"
-weight: 4
 description: >
   Show off your build status.
 ---
