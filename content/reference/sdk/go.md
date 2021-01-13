@@ -24,25 +24,24 @@ package main
 
 import (
     "fmt"
-	"github.com/go-vela/sdk-go/vela"
+    "github.com/go-vela/sdk-go/vela"
 )
 
 func main() {
-	// url is the full URI to the Vela server
-	url := "https://your-vela-server.example.com"
+    // full URI to the Vela server
+    url := "https://your-vela-server.example.com"
 
     token := "someToken"
-	accessToken := "someAccessToken"
-	refreshToken := "someRefreshToken"   
+    accessToken := "someAccessToken"
+    refreshToken := "someRefreshToken"   
 
-	// instantiate a new Vela client
+    // instantiate a new Vela client
     client, err := vela.NewClient(url, nil)
     if err != nil {
         fmt.Println(err)
     }    
 
-	// set the Authentication mechanism for the client
-	// to use our access token given from Vela
+    // set the Authentication mechanisms for the client
     client.Authentication.SetTokenAuth(token)
     client.Authentication.SetAccessAndRefreshAuth(accessToken, refreshToken) 
     
