@@ -9,7 +9,12 @@ menu:
     weight: 305
 ---
 
-Vela contains two plugin types: pipeline, and secret. Both accept configuration via environment variables but should be used within their specific location of the Yaml pipeline. Pipeline plugins are designed to be used within steps, stages, and template pipelines. Secret plugins are designed to be used within the secrets Yaml block of pipelines.
+Vela contains two plugin types:
+
+* pipeline - designed to be used within steps, stages, and template pipelines
+* secret - designed to be used within the secrets Yaml block of pipelines
+
+Both accept configuration via environment variables but should be used within their specific location of the Yaml pipeline.
 
 {{% alert title="Note:" color="warning" %}}
 Before you begin your plugin journey we recommend the following pre-requisites:
@@ -30,9 +35,9 @@ These actions can be for any number of general tasks, including:
 * sending notifications
 * much, much more...
 
-### Sample
+### Example
 
-The sample we have shown is publishing an image to a registry. Pipeline plugins configuration works via environment variables that pass data from pipeline to the container at runtime. 
+The example we have shown is publishing an image to a registry. Pipeline plugins configuration works via environment variables that pass data from pipeline to the container at runtime. 
 
 _Not a runnable pipeline_
 ```diff
