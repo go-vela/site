@@ -18,15 +18,15 @@ metadata:
 ```
 
 {{% alert title="Warning:" color="warning" %}}
-Routes are defined by a Vela system administrators during installation. To know what routes are available for your Vela installation, we recommend consulting your system administrators.
+Routes are defined by the Vela system administrators during installation. To know what routes are available for your Vela installation, we recommend consulting your system administrators.
 {{% /alert %}}
 
 ## Tags
 
 | Tag        | Required | Type   | Description                                          |
 |------------|----------|--------|------------------------------------------------------|
-| `flavor`   | N        | string | Indicates what flavor of worker. (i.e. sm, m, lg)    |
-| `platform` | N        | string | Indicates the platform of worker. (i.e. docker, k8s) |
+| `flavor`   | N        | string | Indicates what flavor of a worker. (i.e. sm, m, lg)    |
+| `platform` | N        | string | Indicates the platform of a worker. (i.e. docker, k8s) |
 
 ### Usage
 

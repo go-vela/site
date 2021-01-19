@@ -31,7 +31,7 @@ steps:
 | `ruleset`     | N        | struct          | Conditions to limit the execution of the container.              |
 | `parameters`  | N        | map             | Extra configuration variables specific to a plugin.              |
 | `commands`    | N        | []string        | Execution instructions to run inside the container.              |
-| `template`    | N        | struct          | Name of template to expand in the pipeline.                      |
+| `template`    | N        | struct          | Name of a template to expand in the pipeline.                      |
 | `entrypoint`  | N        | []string        | Commands to execute inside the container.                        |
 | `detach`      | N        | []string        | Run the container in a detached (headless) state.                |
 | `volume`      | N        | string          | Mount volumes for the container.                                 |
@@ -118,16 +118,16 @@ steps:
 
 The following rules can be used to configure a ruleset:
 
-| Name      | Description                          |
-|-----------|--------------------------------------|
-| `branch`  | name of branch for build.            |
-| `comment` | pull request comment body.           |
-| `event`   | name of event for build.             |
-| `path`    | path to workspace files for build.   |
-| `repo`    | name of repo for build.              |
-| `status`  | name of status for build.            |
-| `tag`     | name of reference for build.         |
-| `target`  | name of deployment target for build. |
+| Name      | Description                            |
+|-----------|----------------------------------------|
+| `branch`  | name of branch for a build.            |
+| `comment` | pull request comment body.             |
+| `event`   | name of an event for a build.          |
+| `path`    | path to workspace files for a build.   |
+| `repo`    | name of the  repo for a build.         |
+| `status`  | name of status for a build.            |
+| `tag`     | name of reference for a build.         |
+| `target`  | name of deployment target for a build. |
 
 ```yaml
 ---
@@ -172,7 +172,7 @@ steps:
 steps:
   - ruleset:
       # Below is displaying it will run a step if repo exists within the target GitHub
-      # organizatio or the repo is the go-vela/docs repository.
+      # organization or the repo is the go-vela/docs repository.
       repo: [ "target/*", "go-vela/docs" ]
 ```
 
@@ -372,7 +372,7 @@ steps:
 ---
 steps:
     # Set the user limits for the container.  
-  - umlimits:
+  - ulimits:
       - name: foo
         soft: 1024
       - name: bar
