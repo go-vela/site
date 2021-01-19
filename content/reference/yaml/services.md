@@ -74,7 +74,7 @@ services:
 ---
 services: 
     # Variables to injected into the container environment
-    # using a array style syntax.
+    # using an array style syntax.
   - environment:
       - DB_NAME=vela
 ```
