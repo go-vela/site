@@ -11,7 +11,7 @@ The services tag is intended to be used to run applications alongside the pipeli
 ```yaml
 ---
 # This document is displaying all the required tags
-# to run a postgre database for the duration of a pipeline.
+# to run a postgres database for the duration of a pipeline.
 services: 
   - name: postgres
     image: postgres:latest

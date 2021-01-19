@@ -6,7 +6,7 @@ description: >
   reference information for creating Vela pipelines
 ---
 
-Steps and Stages Pipeline use "YAML Ain’t Markup Language" (YAML) which is a data serialization language designed to be human friendly. Vela accepts YAML fles with either a `.yml` or `.yaml` extension. If need to learn more about the YAML language we recommend to, see "[Learn YAML in five minutes.](https://www.codeproject.com/Articles/1214409/Learn-YAML-in-five-minutes)".
+Steps and Stages Pipeline use "YAML Ain’t Markup Language" (YAML) which is a data serialization language designed to be human friendly. Vela accepts YAML fles with either a `.yml` or `.yaml` extension. If you'd like to learn more about the YAML language, we recommend you see, "[Learn YAML in five minutes.](https://www.codeproject.com/Articles/1214409/Learn-YAML-in-five-minutes)".
 
 {{% alert title="Tip:" color="info" %}}
 The design goals for YAML are, in decreasing priority:
