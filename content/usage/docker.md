@@ -55,14 +55,14 @@ Building an image with elevated access is a allowed pattern as long as the admin
 ```yaml
 version: "1"
 steps:
-  - name: build and publish with Dockers build kit
+  - name: build and publish with Docker's BuildKit
     image: target/vela-docker:latest
     pull: always
     parameters:
       registry: index.docker.io
       tags: [ index.docker.io/octocat/hello-world ]
 
-  - name: build and publish with Dockers without build kit
+  - name: build and publish without Docker's BuildKit
     image: target/vela-docker:latest
     environment:
       DOCKER_BUILDKIT=0   
