@@ -61,7 +61,7 @@ templates:
 
 steps:
   - name: sample
-    template:  
+    template:
       name: go
       vars:
         image: golang:latest
@@ -71,25 +71,24 @@ steps:
 The `format:` option was written backwards compatible. This means by default templates go through it's expansion process. That makes the following options valid Yaml syntax:
 
 1. `format: go`
-2. `format: golang`
-3. `format: ""`
+1. `format: golang`
+1. `format: ""`
 
 {{% /alert %}}
 
-
 ### Starlark
 
-[Starlark](https://github.com/bazelbuild/starlark) is a configuration language that was designed for the [Bazel build system](https://bazel.build/). The language is a [Python](https://www.python.org/) dialect that exists for advanced configuration management that can require complex structures. The language is dynamically typed and allows for all sorts of language Esque primitives to make writing large configuration files more manageable. 
+[Starlark](https://github.com/bazelbuild/starlark) is a configuration language that was designed for the [Bazel build system](https://bazel.build/). The language is a [Python](https://www.python.org/) dialect that exists for advanced configuration management that can require complex structures. The language is dynamically typed and allows for all sorts of language-esque primitives to make writing large configuration files more manageable.
 
 It is recommended users read the [Starlark Spec](https://github.com/bazelbuild/starlark/blob/master/spec.md) to understand the syntax differences between Python and Starlark. Python IDE tools are compatible with Starlark to assist users in writing their `.star` or `.py` template pipelines.
 
 Let's take a look at a basic template:
 
 {{% alert color="tip" %}}
-For this example we will call it build.yml but the YAML does not have a required name.
+For this example we will call it build.star but the file does not have a required name.
 {{% /alert %}}
 
-```star
+```python
 def main(ctx):
   return {
     'version': '1',
@@ -118,7 +117,7 @@ templates:
 
 steps:
   - name: sample
-    template:  
+    template:
       name: starlark
       vars:
         image: golang:latest

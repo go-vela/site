@@ -32,13 +32,13 @@ def main(ctx):
 
 ### Decision two: the context is used by the compiler to pass information to the template
 
-The compiler will inject user variables defined in the parent template and compile time platform variables. Both sets of variables are injected into the context within a dictionary structure. 
+The compiler will inject user variables defined in the parent template and compile time platform variables. Both sets of variables are injected into the context within a dictionary structure.
 
 #### Platform variables
 
 Syntax: `ctx['vela']['<resource>']['<name>']`
 
-```star
+```python
 def main(ctx):
 
   repo = ctx["vela"]["repo"]["full_name"]
@@ -62,7 +62,7 @@ def main(ctx):
 
 Syntax: `ctx['vars'][<name>]`
 
-```star
+```python
 def main(ctx):
 
   image = ctx['vars']['image']

@@ -11,31 +11,35 @@ We recommend reviewing [Starlark Spec](https://github.com/bazelbuild/starlark/bl
 
 ## Overview
 
-From [Platform vars](/docs/templates/tutorials/starlark/#platform-variables):
-
 Platform variables can be referenced with the following syntax:
 
 `ctx['vela']['<resource>']['<name>']`
 
+## Examples
+
+- `ctx["vela"]["repo"]["name"]` equates to the `VELA_REPO_NAME` environment variable
+- `ctx["vela"]["build"]["number"]` equates to the `VELA_BUILD_NUMBER` environment variable
+- `ctx["vela"]["system"]["addr"]` equates to the `VELA_ADDR` environment variable
+
 ## Sample
 
-Let's take a look at using a function within a template:
+Let's take a look at using a platform variable within a template:
 
-```star
+```python
 def main(ctx):
     return {
         'version': '1',
         'steps': [
-            step(ctx["vela"]["repo"]["full_name"]),
+            step(ctx["vela"]["repo"]["name"]),
         ],
     }
 
-def step(full_name):
+def step(name):
     return {
-        "name": "echo %s" % full_name,
+        "name": "echo %s" % name,
         "image": "alpine:latest",
         'commands': [
-            "echo %s" % full_name
+            "echo %s" % name
         ]
     }
 
@@ -53,9 +57,9 @@ templates:
 
 steps:
   - name: build
-    template:  
+    template:
       name: sample
-      vars: 
+      vars:
 ```
 
 Which means the compiled pipeline for execution on a worker is:
@@ -63,8 +67,8 @@ Which means the compiled pipeline for execution on a worker is:
 ```yaml
 version: 1
 steps:
-  - name: sample_echo octocat/hello-world
+  - name: sample_echo hello-world
     image: alpine:latest
     commands:
-      - echo octocat/hello-world
+      - echo hello-world
 ```

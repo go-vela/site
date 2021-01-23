@@ -11,17 +11,15 @@ We recommend reviewing [Starlark Spec](https://github.com/bazelbuild/starlark/bl
 
 ## Overview
 
-From [Template vars](/docs/templates/tutorials/starlark/#template-variables):
-
 Template variables can be referenced with the following syntax:
 
 `ctx['vars'][<name>]`
 
 ## Sample
 
-Let's take a look at using a function within a template:
+Let's take a look at using variables within a template:
 
-```star
+```python
 def main(ctx):
     steps = [step(x, ctx["vars"]["pull_policy"], ctx["vars"]["commands"]) for x in ctx["vars"]["tags"]]
 
@@ -53,14 +51,14 @@ templates:
 
 steps:
   - name: build
-    template:  
+    template:
       name: sample
       vars:
         tags: [latest, "1.14", "1.15"]
         pull_policy: always
         commands:
           test: "go test ./..."
-          build: "go build"  
+          build: "go build"
 ```
 
 Which means the compiled pipeline for execution on a worker is:
@@ -73,7 +71,7 @@ steps:
     pull: always
     commands:
       - go test ./...
-      - go build 
+      - go build
 
   - name: sample_build 1.14
     image: golang:1.14
@@ -87,5 +85,5 @@ steps:
     pull: always
     commands:
       - go test ./...
-      - go build  
+      - go build
 ```

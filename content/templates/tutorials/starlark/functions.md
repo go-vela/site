@@ -36,7 +36,7 @@ twice("two")            # "twotwo"
 
 Let's take a look at using a function within a template:
 
-```star
+```python
 def main(ctx):
     return {
         'version': '1',
@@ -45,7 +45,7 @@ def main(ctx):
             step('bar')
         ],
     }
-    
+
 def step(word):
     return {
         "name": "build_%s" % word,
@@ -68,7 +68,7 @@ templates:
 
 steps:
   - name: echo
-    template:  
+    template:
       name: sample
       vars:
 ```

@@ -39,7 +39,7 @@ Let's take a look at using a conditional with a variable in a template:
 metadata:
   template: true
 
-{{$br := .branch}}
+{{$br := vela "BUILD_BRANCH"}}
 
 steps:
 
@@ -76,12 +76,11 @@ templates:
 
 steps:
   - name: sample
-    template:  
+    template:
       name: golang
       vars:
         image: golang:latest
         pull_policy: "pull: always"
-        branch: master
 ```
 
 Which means the compiled pipeline for execution on a worker is:
