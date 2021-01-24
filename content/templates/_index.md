@@ -24,6 +24,15 @@ The following YAML tags are not valid inside a template pipeline:
 
 ## Template Engines
 
+### Format
+
+By default, templates utilize the Go template language unless otherwise specified. You may opt to specify the `format` key to switch the template language to one of the following:
+
+* `format: go`
+* `format: golang`
+* `format: ""`
+* `format: starlark`
+
 ### Go Template
 
 [Go Templates](https://golang.org/pkg/text/template/) is the default formatter for building out template pipelines. We extend Go's built-in template functions by utilizing the [sprig library](http://masterminds.github.io/sprig/) in the engine to allow for more options on top of the Go template syntax.
@@ -31,7 +40,7 @@ The following YAML tags are not valid inside a template pipeline:
 Let's take a look at a basic template:
 
 {{% alert color="tip" %}}
-For this example we will call it build.yml but the YAML does not have a required name.
+For this example we will call it `build.yml` but the YAML does not have a required name.
 {{% /alert %}}
 
 ```yaml
@@ -67,15 +76,6 @@ steps:
         image: golang:latest
 ```
 
-{{% alert color="note" %}}
-The `format:` option was written backwards compatible. This means by default templates go through it's expansion process. That makes the following options valid Yaml syntax:
-
-1. `format: go`
-1. `format: golang`
-1. `format: ""`
-
-{{% /alert %}}
-
 ### Starlark
 
 [Starlark](https://github.com/bazelbuild/starlark) is a configuration language that was designed for the [Bazel build system](https://bazel.build/). The language is a [Python](https://www.python.org/) dialect that exists for advanced configuration management that can require complex structures. The language is dynamically typed and allows for all sorts of language-esque primitives to make writing large configuration files more manageable.
@@ -85,7 +85,7 @@ It is recommended users read the [Starlark Spec](https://github.com/bazelbuild/s
 Let's take a look at a basic template:
 
 {{% alert color="tip" %}}
-For this example we will call it build.star but the file does not have a required name.
+For this example we will call it `build.star` but the file does not have a required name.
 {{% /alert %}}
 
 ```python

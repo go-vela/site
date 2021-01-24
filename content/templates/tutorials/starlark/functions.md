@@ -38,22 +38,22 @@ Let's take a look at using a function within a template:
 
 ```python
 def main(ctx):
-    return {
-        'version': '1',
-        'steps': [
-            step('foo'),
-            step('bar')
-        ],
-    }
+  return {
+    'version': '1',
+    'steps': [
+        step('foo'),
+        step('bar')
+    ],
+  }
 
 def step(word):
-    return {
-        "name": "build_%s" % word,
-        "image": "alpine:latest",
-        'commands': [
-            "echo %s" % word
-        ]
-    }
+  return {
+    "name": "build_%s" % word,
+    "image": "alpine:latest",
+    'commands': [
+        "echo %s" % word
+    ]
+  }
 ```
 
 The caller of this template could look like:
@@ -70,7 +70,6 @@ steps:
   - name: echo
     template:
       name: sample
-      vars:
 ```
 
 Which means the compiled pipeline for execution on a worker is:

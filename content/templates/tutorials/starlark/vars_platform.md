@@ -27,22 +27,21 @@ Let's take a look at using a platform variable within a template:
 
 ```python
 def main(ctx):
-    return {
-        'version': '1',
-        'steps': [
-            step(ctx["vela"]["repo"]["name"]),
-        ],
-    }
+  return {
+    'version': '1',
+    'steps': [
+      step(ctx["vela"]["repo"]["name"]),
+    ],
+  }
 
 def step(name):
-    return {
-        "name": "echo %s" % name,
-        "image": "alpine:latest",
-        'commands': [
-            "echo %s" % name
-        ]
-    }
-
+  return {
+    "name": "echo %s" % name,
+    "image": "alpine:latest",
+    'commands': [
+      "echo %s" % name
+    ]
+  }
 ```
 
 The caller of this template could look like:

@@ -27,46 +27,46 @@ Let's take a look at using a conditional with a variable in a template:
 
 ```python
 def main(ctx):
-    steps = [
-                {
-                    "name": "test",
-                    "image": ctx["vars"]["image"],
-                    "commands": [
-                        "go test ./..."
-                    ],
-                    "pull": ctx["vars"]["pull_policy"],
-                    "ruleset": {
-                        "event": [
-                            "push",
-                            "pull_request"
-                        ]
-                    }
-                }
-            ]
+  steps = [
+              {
+                  "name": "test",
+                  "image": ctx["vars"]["image"],
+                  "commands": [
+                      "go test ./..."
+                  ],
+                  "pull": ctx["vars"]["pull_policy"],
+                  "ruleset": {
+                      "event": [
+                          "push",
+                          "pull_request"
+                      ]
+                  }
+              }
+          ]
 
-    # if branch equals master add this step to the final pipeline
-    if ctx["vela"]["build"]["branch"] == "master":
-        steps.append(
-            {
-                "name": "build",
-                "image": ctx["vars"]["image"],
-                "commands": [
-                    "go build"
-                ],
-                "pull": ctx["vars"]["pull_policy"],
-                "ruleset": {
-                    "event": [
-                        "push",
-                        "pull_request"
-                    ]
-                }
-            }
-        )
+  # if branch equals master add this step to the final pipeline
+  if ctx["vela"]["build"]["branch"] == "master":
+      steps.append(
+          {
+              "name": "build",
+              "image": ctx["vars"]["image"],
+              "commands": [
+                  "go build"
+              ],
+              "pull": ctx["vars"]["pull_policy"],
+              "ruleset": {
+                  "event": [
+                      "push",
+                      "pull_request"
+                  ]
+              }
+          }
+      )
 
-    return {
-        'version': '1',
-        'steps': steps,
-    }
+  return {
+      'version': '1',
+      'steps': steps,
+  }
 ```
 
 The caller of this template could look like:

@@ -77,7 +77,7 @@ templates:
 
 steps:
   - name: sample
-    template:  
+    template:
       name: golang
       vars:
         pull_policy: "pull: always"

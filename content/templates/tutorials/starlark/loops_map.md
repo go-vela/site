@@ -1,8 +1,8 @@
 ---
-title: "Loops with Slices"
-linkTitle: "Loops with Slices"
+title: "Loops with Maps"
+linkTitle: "Loops with Maps"
 description: >
-  Example Starlark template with loops and slices.
+  Example Starlark template with loops and maps.
 ---
 
 {{% alert color="note" %}}
@@ -14,13 +14,13 @@ We recommend reviewing [Starlark Spec](https://github.com/bazelbuild/starlark/bl
 From [Starlark for loops](https://github.com/google/starlark-go/blob/master/doc/spec.md#for-loops):
 
 ```python
-for i in [1, 2, 3]:
-  print(i) # prints "1", "2", "3"
+for i in [["a", 1], ["b", 2], ["c", 3]]:
+  print(a, i) # prints "a 1", "b 2", "c 3"
 ```
 
 ## Sample
 
-Let's take a look at ranging over a slice for a template:
+Let's take a look at looping over a map for a template:
 
 ```python
 def main(ctx):
@@ -36,24 +36,24 @@ def main(ctx):
       "name": "install",
       "image": "golang:latest",
       "commands": [
-        "go get ./..."
+          "go get ./..."
       ],
       "pull": ctx["vars"]["pull_policy"],
       "ruleset": ruleset,
     }
   ]
 
-  for image in ctx["vars"]["images"]:
+  for name, image in ctx["vars"]["images"].items():
     steps.append(
-      {
-        "name": "test_%s" % image,
-        "image": image,
-        "commands": [
-          "go test ./..."
-        ],
-        "pull": ctx["vars"]["pull_policy"],
-        "ruleset": ruleset,
-      }
+        {
+          "name": "test_%s" % name,
+          "image": image,
+          "commands": [
+              "go test ./..."
+          ],
+          "pull": ctx["vars"]["pull_policy"],
+          "ruleset": ruleset,
+        }
     )
 
   steps.append(
@@ -61,11 +61,11 @@ def main(ctx):
       "name": "build",
       "image": "golang:latest",
       "commands": [
-        "go build"
+          "go build"
       ],
       "environment": {
-        "CGO_ENABLED": "0",
-        "GOOS": "linux",
+          "CGO_ENABLED": "0",
+          "GOOS": "linux",
       },
       "pull": ctx["vars"]["pull_policy"],
       "ruleset": ruleset,
@@ -95,10 +95,17 @@ steps:
       name: golang
       vars:
         pull_policy: "always"
-        images: [ golang:latest, golang:1.13, golang:1.12s ]
+        images:
+          _latest: golang:latest
+          _1.13: golang:1.13
+          _1.12: golang:1.13
 ```
 
 Which means the compiled pipeline for execution on a worker is:
+
+{{% alert color="warning" %}}
+Vela does not guarantee order with maps. If you need the steps to **always** be outputted in the same order use the loops with slice implementation.
+{{% /alert %}}
 
 ```yaml
 version: "1"
@@ -111,7 +118,7 @@ steps:
     ruleset:
       event: [ push, pull_request ]
 
-  - name: sample_test_golang:1.13
+  - name: sample_test_1.13
     commands:
       - go test ./...
     image: golang:1.13
@@ -119,7 +126,7 @@ steps:
     ruleset:
       event: [ push, pull_request ]
 
-  - name: sample_test_golang:1.12
+  - name: sample_test_1.12
     commands:
       - go test ./...
     image: golang:1.12
