@@ -62,9 +62,9 @@ templates:
     type: github
 
 steps:
-  - name: sample
+  - name: golang
     template:  
-      name: golang
+      name: sample
       vars:
         test: |
           - name: test

@@ -76,9 +76,9 @@ templates:
     type: github
 
 steps:
-  - name: sample
+  - name: golang
     template:  
-      name: golang
+      name: sample
       vars:
         pull_policy: "pull: always"
         images: [ golang:latest, golang:1.13, golang:1.12s ]
