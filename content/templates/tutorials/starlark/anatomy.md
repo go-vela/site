@@ -9,7 +9,7 @@ description: >
 
 In order to make Starlark work with Vela's templates functionality we did have to make a few design decisions on behalf of the users.
 
-### All templates must contain a main that returns the pipeline
+### All templates must contain a "main" function that returns the pipeline
 
 This is illustrated in the below example with a starlark file that contains a `def main(ctx)` and returns the data structure that is a valid pipeline.
 

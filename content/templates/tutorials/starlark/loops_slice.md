@@ -87,6 +87,7 @@ version: "1"
 templates:
   - name: sample
     source: github.com/<org>/<repo>/path/to/file/<template>.star
+    format: starlark
     type: github
 
 steps:
