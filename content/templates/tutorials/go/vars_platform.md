@@ -19,7 +19,7 @@ Platform variables can be referenced with the following syntax:
 
 ## Examples
 
-- `{{ vela "VELA_FULL_REPO_NAME" }}` equates to the `VELA_REPO_NAME` environment variable
+- `{{ vela "VELA_FULL_REPO_NAME" }}` equates to the `VELA_FULL_REPO_NAME` environment variable
 - `{{ vela "FULL_REPO_NAME" }}` equates to the `VELA_REPO_NAME` environment variable
 - `{{ vela "VELA_BUILD_NUMBER" }}` equates to the `VELA_BUILD_NUMBER` environment variable
 - `{{ vela "VELA_ADDR" }}` equates to the `VELA_ADDR` environment variable
