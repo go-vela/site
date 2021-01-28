@@ -88,9 +88,6 @@ It is recommended to pin `image:` versions for production pipelines
 ```yaml
 version: "1"
 
-worker:
-  runtime: docker
-
 stages:
   docker:
     steps:
