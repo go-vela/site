@@ -24,11 +24,11 @@ secrets:
     engine: native
     type: repo
   - name: foo2
-    key: go-vela/foo`
+    key: go-vela/foo2`
     engine: native
     type: org
   - name: foo3
-    key: go-vela/admins/foo
+    key: go-vela/admins/foo3
     engine: native
     type: shared
 
@@ -112,8 +112,8 @@ secrets:
 ```yaml
 ---
 secrets: 
-    # Type of secret to fetch from storage backend. By default, Vela 
-    # can pull repo but tag accepts the 
+    # Type of secret to fetch from storage backend.
+    # By default, Vela can pull repo but tag accepts the 
     # following values: repo, org, and shared
   - type: repo
 ```
@@ -131,5 +131,5 @@ secrets:
 | `parameters`  | N        | map             | Extra configuration variables specific to a plugin.              |
 
 {{% alert title="Tip:" color="info" %}}
-In an effort to not duplicate how documentation, to see how tags can be set, see the comparable [step tags documentation](/docs/reference/yaml/steps/#tags) to get behavior details.
+In an effort to reduce duplicate documentation, see the comparable [step tags documentation](/docs/reference/yaml/steps/#tags) to learn how tags can be set and details on behavior.
 {{% /alert %}}
