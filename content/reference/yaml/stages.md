@@ -6,7 +6,7 @@ description: >
   YAML stages for stages block
 ---
 
-The stages tag is intended to be used to one to many sets of steps tasks in parallel.
+The `stages` tag is intended to be used to parallelize one-to-many sets of step tasks.
 
 ```yaml
 ---
@@ -61,7 +61,7 @@ stages:
 #### The `steps:` tag
 
 {{% alert title="Tip:" color="info" %}}
-To see how all steps tags, see the [step tags documentation](/docs/reference/yaml/steps/#tags)
+For more details on steps tags, see the [step tags documentation](/docs/reference/yaml/steps/#tags)
 {{% /alert %}}
 
 ```yaml

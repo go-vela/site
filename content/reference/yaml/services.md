@@ -6,7 +6,7 @@ description: >
   YAML tags for services block
 ---
 
-The services tag is intended to be used to run applications alongside the pipeline.
+The `services` tag is intended to be used to run applications alongside the pipeline.
 
 ```yaml
 ---
