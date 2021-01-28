@@ -24,7 +24,7 @@ See YAML [design goals](https://yaml.org/spec/1.2/spec.html#Introduction) from s
 
 ## Terminology Check
 
-Whether you are a YAML expert or a novice here is some quick terminology that is used without the Vela reference documentation you should be aware of:
+Whether you are a YAML expert or a novice, here is some quick terminology that you should be aware of:
 
 {{% alert title="Tip:" color="info" %}}
 You can get feedback directly on your `.vela.yml` or `.vela.yaml` pipelines in your IDE with the available [JSON Schema](/docs/usage/schema/). 
