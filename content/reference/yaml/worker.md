@@ -12,7 +12,7 @@ The worker tag is intended to be used to route a build to a specific worker pool
 ---
 # This document is displaying all the available tags
 # and routing the build to a specific worker "sm:docker".
-metadata:
+worker:
   flavor: sm
   platform: docker
 ```
