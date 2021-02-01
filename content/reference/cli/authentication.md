@@ -75,8 +75,8 @@ Log in and confirm the two prompts as stated above:
 
 ```sh
 # Syntax
-vela --api.addr <vela server url> login
+vela login --api.addr <vela server url>
 
 # Example
-vela --api.addr https://vela-server.localhost login
+vela login --api.addr https://vela-server.localhost
 ```
