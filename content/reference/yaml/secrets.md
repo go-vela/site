@@ -6,8 +6,7 @@ description: >
   YAML tags for secret block
 ---
 
-The secret tag is intended to be used to pull secrets from the Vela server or execute 
-plugins to write the external secrets to the build volume.
+The secret tag is intended to be used to pull secrets from the Vela server or execute plugins to write the external secrets to the build volume.
 
 ```yaml
 ---
