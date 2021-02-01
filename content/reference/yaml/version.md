@@ -6,7 +6,7 @@ description: >
   YAML tags for version block
 ---
 
-The version tag is intended to be used in order to issue warnings for deprecation or breaking changes within the YAML document.
+The version tag is intended to be used in order to issue warnings for deprecated features or breaking changes within the YAML document.
 
 ```yaml
 ---

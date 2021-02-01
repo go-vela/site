@@ -6,7 +6,7 @@ description: >
   YAML tags for templates block
 ---
 
-The template tag is intended to be used to identity where to retrieve templates during the compiler phase of the pipeline.
+The template tag is intended to be used to identify where to retrieve templates during the compiler phase of the pipeline.
 
 ```yaml
 ---
