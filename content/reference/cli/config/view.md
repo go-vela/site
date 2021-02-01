@@ -39,7 +39,7 @@ vela view config
 
 ```sh
 api:
-  addr: https://vela-server.dev.target.com
+  addr: https://vela-server.localhost
   access_token: superSecretAccessToken
   refresh_token: superSecretRefreshToken
   version: v1

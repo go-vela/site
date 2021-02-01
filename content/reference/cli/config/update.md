@@ -22,8 +22,8 @@ The following parameters are used to configure the command:
 | Name                | Description                         | Environment Variables                        |
 | ------------------- | ----------------------------------- | -------------------------------------------- |
 | `api.addr`          | updates the API address field       | `VELA_ADDR`, `CONFIG_ADDR`                   |
-| `api.access_token`  | updates the API access token field  | `VELA_ACCESS_TOKEN`, `CONFIG_ACCESS_TOKEN`   |
-| `api.refresh_token` | updates the API refresh token field | `VELA_REFRESH_TOKEN`, `CONFIG_REFRESH_TOKEN` |
+| `api.token.access`  | updates the API access token field  | `VELA_ACCESS_TOKEN`, `CONFIG_ACCESS_TOKEN`   |
+| `api.token.refresh` | updates the API refresh token field | `VELA_REFRESH_TOKEN`, `CONFIG_REFRESH_TOKEN` |
 | `api.token`         | updates the API token field         | `VELA_TOKEN`, `CONFIG_TOKEN`                 |
 | `api.version`       | updates the API version field       | `VELA_API_VERSION`, `CONFIG_API_VERSION`     |
 | `log.level`         | updates the log level field         | `VELA_LOG_LEVEL`, `CONFIG_LOG_LEVEL`         |
@@ -57,7 +57,7 @@ vela update config --org github
 
 ```sh
 api:
-  addr: https://vela-server.dev.target.com
+  addr: https://vela-server.localhost
   access_token: superSecretAccessToken
   refresh_token: superSecretRefreshToken
   version: v1
