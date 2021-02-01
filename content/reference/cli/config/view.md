@@ -24,9 +24,9 @@ COMING SOON!
 {{% alert color="warning" %}}
 This section assumes you have already installed and setup the CLI.
 
-To install the CLI, please review the [installation documentation](/docs/cli/install/).
+To install the CLI, please review the [installation documentation](/docs/reference/cli/install/).
 
-To setup the CLI, please review the [authentication documentation](/docs/cli/authentication/).
+To setup the CLI, please review the [authentication documentation](/docs/reference/cli/authentication/).
 {{% /alert %}}
 
 #### Request
@@ -39,9 +39,11 @@ vela view config
 
 ```sh
 api:
-  addr: https://vela-server.localhost
-  token: superSecretToken
-  version: "1"
+  addr: https://vela-server.dev.target.com
+  access_token: superSecretAccessToken
+  refresh_token: superSecretRefreshToken
+  version: v1
 log:
   level: info
+secret: {}
 ```
