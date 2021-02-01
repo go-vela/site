@@ -380,7 +380,7 @@ steps:
         hard: 2048
 ```
 
-#### The `detach:` tag
+#### The `privileged:` tag
 
 ```yaml
 ---
