@@ -9,5 +9,5 @@ description: >
 {{% alert color="info" %}}
 This command has been moved to `vela validate pipeline`.
 
-For more information, please see the [command documentation](/docs/cli/pipeline/validate/)
+For more information, please see the [command documentation](/docs/reference/cli/pipeline/validate/)
 {{% /alert %}}

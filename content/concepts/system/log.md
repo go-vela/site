@@ -29,12 +29,9 @@ This component is stored in the configured Vela backend in the `logs` table.
 ## References
 
 - API
-  - [Build](/docs/api/build/logs/)
-  - [Service](/docs/api/service/logs/)
-  - [Step](/docs/api/step/logs/)
-- [CLI](/docs/cli/log/)
+  - [Build](/docs/reference/api/build/logs/)
+  - [Service](/docs/reference/api/service/logs/)
+  - [Step](/docs/reference/api/step/logs/)
+- [CLI](/docs/reference/cli/log/)
 - SDK
-  - Go
-    - [Build](/docs/sdk/go/build/logs/)
-    - [Service](/docs/sdk/go/service/logs/)
-    - [Step](/docs/sdk/go/step/logs/)
+  - [Go](/docs/sdk/go/repo/)

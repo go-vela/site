@@ -29,4 +29,4 @@ This component is stored in the configured Vela backend in the `users` table.
 
 ## References
 
-- [API](/docs/api/user/)
+- [API](/docs/reference/api/user/)

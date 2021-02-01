@@ -55,7 +55,7 @@ This component is stored in the configured Vela backend in the `builds` table.
 
 ## References
 
-- [API](/docs/api/build/)
-- [CLI](/docs/cli/build/)
+- [API](/docs/reference/api/build/)
+- [CLI](/docs/reference/cli/build/)
 - SDK
-  - [Go](/docs/sdk/go/build/)
+  - [Go](/docs/reference/sdk/go/)

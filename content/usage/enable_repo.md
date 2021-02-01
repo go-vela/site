@@ -12,7 +12,7 @@ to the repo.
 
 ### Via the UI
 
-For this example, we'll go over using the UI to add the repo. You can always head over to the [CLI docs](/docs/cli/repo/add/) for docs on how to add a repo via CLI.
+For this example, we'll go over using the UI to add the repo. You can always head over to the [CLI docs](/docs/reference/cli/repo/add/) for docs on how to add a repo via CLI.
 
 1. Log into your Vela instance.
 1. Click "Add Repositories".

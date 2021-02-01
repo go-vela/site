@@ -13,7 +13,7 @@ Example [Yaml](https://yaml.org/spec/) configuration for a project requiring a s
 User is looking to create a pipeline that can integrate with a private Vault to inject secrets that can not be used with pushing a Docker image to a registry.
 
 {{% alert title="Note:" color="primary" %}}
-It is assumed you have created secret `vault_token` in the web interface or [CLI](/docs/cli/).
+It is assumed you have created secret `vault_token` in the web interface or [CLI](/docs/reference/cli/).
 {{% /alert %}}
 
 The examples show a pipeline using repository secrets. Vela contains three secret types: repository, organization, and shared. For examples on organization and shared, please see the [secret concepts](/docs/concepts/pipeline/steps/secrets/) documentation.
