@@ -15,14 +15,14 @@ Navigate to your deployed instance and follow the OAuth workflow presented on th
 
 ## CLI
 
-Please see authentication in the [CLI reference](/docs/cli/authentication/).
+Please see authentication in the [CLI reference](/docs/reference/cli/authentication/).
 
-_If you have not yet installed the CLI, see [CLI install reference](/docs/cli/install/) first._
+_If you have not yet installed the CLI, see [CLI install reference](/docs/reference/cli/install/) first._
 
 ## API
 
-Please see authentication in the [API reference](/docs/api/authentication/).
+Please see authentication in the [API reference](/docs/reference/api/authentication/).
 
 ## SDK
 
-Please see authentication in the [sdk reference](/docs/sdk/go/authentication/).
+Please see authentication in the [sdk reference](/docs/reference/sdk/go/).
