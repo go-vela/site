@@ -1,0 +1,24 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  <h3>{{ .Description }}</h3>
+
+  {{- $sectionDelimiter := "<!-- section break -->" -}}
+  {{- $rawContentSections := split .RawContent $sectionDelimiter -}}
+  {{- if gt (len $rawContentSections) 1 -}}
+
+  <div class="wrapper" style="display: grid;">
+    <div class="float-body" style="display: flex;">
+      <div style="width: 50%; padding: 5px;">
+        {{ index $rawContentSections 0 | .RenderString }}
+      </div>
+      <div style="padding: 5px;">
+        {{ index $rawContentSections 1 | .RenderString }}
+      </div>
+    </div>
+
+    <div class="float-footer">
+        {{ index $rawContentSections 2 | .RenderString }}
+    </div>
+  </div>
+  {{- end -}}
+{{ end }}
