@@ -51,7 +51,7 @@ steps:
 
 ```sh
 $ vela exec pipeline
-
+...
 [service: cache] 1:C 02 Feb 2021 21:24:10.600 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
 [service: cache] 1:C 02 Feb 2021 21:24:10.600 # Redis version=6.0.10, bits=64, commit=00000000, modified=0, pid=1, just started
 [service: cache] 1:C 02 Feb 2021 21:24:10.600 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf

@@ -36,7 +36,7 @@ steps:
 
 ```sh
 $ vela exec pipeline
-
+...
 [stage: ][step: Greeting] $ echo "Hello, World"
 [stage: ][step: Greeting] Hello, World
 [stage: ][step: Welcome] $ echo "Welcome to the Vela docs"
