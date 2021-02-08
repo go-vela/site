@@ -1,7 +1,7 @@
 ---
 title: "Plugins"
 linkTitle: "Plugins"
-weight: 4
+weight: 5
 description: >
   Learn about plugin.
 ---

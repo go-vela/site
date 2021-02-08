@@ -3,7 +3,7 @@ title: "Step"
 linkTitle: "Step"
 weight: 1
 description: >
-  Learn about Step.
+  Learn about step.
 ---
 
 A step declaration allows you to provide an execution instructions for a pipeline.

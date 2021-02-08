@@ -1,7 +1,7 @@
 ---
 title: "Templates"
 linkTitle: "Templates"
-weight: 9
+weight: 10
 description: >
   Learn about template pipelines.
 ---

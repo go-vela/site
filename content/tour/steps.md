@@ -1,7 +1,7 @@
 ---
 title: "Steps"
 linkTitle: "Steps"
-weight: 7
+weight: 8
 description: >
   Learn about steps pipelines.
 ---

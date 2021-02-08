@@ -1,7 +1,7 @@
 ---
 title: "Cloning"
 linkTitle: "Cloning"
-weight: 5
+weight: 6
 description: >
   Learn about cloning.
 ---
