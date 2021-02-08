@@ -46,7 +46,7 @@ vela generate config --api.addr https://vela-server.localhost --api.token qwerty
 ```
 
 {{% alert color="info" %}}
-For more information, you can visit the [CLI config documentation](/docs/cli/config/).
+For more information, you can visit the [CLI config documentation](/docs/reference/cli/config/).
 {{% /alert %}}
 
 ### Environment Variables
