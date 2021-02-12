@@ -78,7 +78,7 @@ This secret type requires you to be a member of the team in the organization.
 
 ## References
 
-- [API](/docs/api/secret/)
-- [CLI](/docs/cli/secret/)
+- [API](/docs/reference/api/build/)
+- [CLI](/docs/reference/cli/build/)
 - SDK
-  - [Go](/docs/sdk/go/secret/)
+  - [Go](/docs/reference/sdk/go/)

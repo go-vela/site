@@ -6,5 +6,5 @@ description: >
   This section contains information on the components for Vela.
 menu:
   main:
-    weight: 5
+    weight: 105
 ---

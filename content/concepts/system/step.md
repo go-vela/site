@@ -40,7 +40,7 @@ This component is stored in the configured Vela backend in the `steps` table.
 
 ## References
 
-- [API](/docs/api/step/)
-- [CLI](/docs/cli/step/)
+- [API](/docs/reference/api/build/)
+- [CLI](/docs/reference/cli/build/)
 - SDK
-  - [Go](/docs/sdk/go/step/)
+  - [Go](/docs/reference/sdk/go/)

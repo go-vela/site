@@ -39,7 +39,7 @@ This component is stored in the configured Vela backend in the `services` table.
 
 ## References
 
-- [API](/docs/api/service/)
-- [CLI](/docs/cli/service/)
+- [API](/docs/reference/api/build/)
+- [CLI](/docs/reference/cli/build/)
 - SDK
-  - [Go](/docs/sdk/go/service/)
+  - [Go](/docs/reference/sdk/go/)
