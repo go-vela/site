@@ -18,11 +18,21 @@ The registry of existing plugins can be found on this site in the [plugins](http
 
 ```yaml
 steps:
+  # Within the parameters block YAML tags are injected
+  # as upper case environment variables with the pattern
+  # of PARAMETER_<YAML_TAG>.
   - name: publish hello world
     image: target/vela-kaniko
+    # Environment variables injected:
+    # PARAMETER_REGISTRY=index.docker.io
+    # PARAMETER_REPO=index.docker.io/go-vela/hello-world
+    # PARAMETER_TAGS=latest,v1.0.0
     parameters:
       registry: index.docker.io
-      repo: index.docker.io/octocat/hello-world
+      repo: index.docker.io/go-vela/hello-world
+      tags:
+        - latest
+        - v1.0.0
 ```
 
 <!-- section break -->

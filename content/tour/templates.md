@@ -39,6 +39,8 @@ steps:
       - echo "Hello, World"        
 ```
 
+<!-- section break -->
+
 **Tag references:**
 
 [`templates:`](/docs/reference/yaml/templates), [`vars:`](/docs/reference/yaml/steps/#the-template-tag), 
