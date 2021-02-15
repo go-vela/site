@@ -14,13 +14,13 @@ Anyone can create a plugin and use it in their pipeline.
 
 The registry of existing plugins can be found on this site in the [plugins](https://go-vela.github.io/docs/plugins/) tab.
 
+Within the parameters block YAML tags are injected as upper case environment variables with the pattern of `PARAMETER_<YAML_TAG>`.
+
 <!-- section break -->
 
 ```yaml
 steps:
-  # Within the parameters block YAML tags are injected
-  # as upper case environment variables with the pattern
-  # of PARAMETER_<YAML_TAG>.
+
   - name: publish hello world
     image: target/vela-kaniko
     # Environment variables injected:
