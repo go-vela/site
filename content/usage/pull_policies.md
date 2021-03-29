@@ -16,7 +16,7 @@ The following [pipeline concepts](/docs/concepts/pipeline) are being used in the
 * [Steps](/docs/concepts/pipeline/steps/)
   * [Pull](/docs/concepts/pipeline/steps/pull/)
 * [Secrets](/docs/concepts/pipeline/secrets/)
-  * [Origin](/docs/concepts/pipeline/steps/origin/)
+  * [Origin](/docs/concepts/pipeline/secrets/origin/)
 
 {{% alert title="Note:" color="primary" %}}
 Please be warned that the `pull` declaration is **not required**.

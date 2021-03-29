@@ -10,7 +10,7 @@ The `origin` component is a part of a [secret](/docs/concepts/pipeline/secrets/)
 This declaration allows you to pull secrets from non-internal secret providers via plugins.
 
 {{% alert color="info" %}}
-To see what plugins are supported and how they integrate with the Vela build lifecycle see the [plugins page](/docs/plugins/secrets/)
+To see what plugins are supported and how they integrate with the Vela build lifecycle see the [plugins page](/docs/plugins/registry/secret/)
 {{% /alert %}}
 
 ## Syntax

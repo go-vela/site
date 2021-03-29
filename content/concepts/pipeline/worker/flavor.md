@@ -5,7 +5,7 @@ description: >
   This section contains information on the flavor component for a worker.
 ---
 
-The `flavor` component is a part of a [template](/docs/concepts/pipeline/flavor/) for Vela.
+The `flavor` component is a part of a [template](/docs/concepts/pipeline/worker/flavor/) for Vela.
 
 This declaration allows you to route your build to a single flavors within a Vela cluster.
 

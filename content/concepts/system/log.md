@@ -34,4 +34,4 @@ This component is stored in the configured Vela backend in the `logs` table.
   - [Step](/docs/reference/api/step/logs/)
 - [CLI](/docs/reference/cli/log/)
 - SDK
-  - [Go](/docs/sdk/go/repo/)
+  - [Go](/docs/reference/sdk/go/)

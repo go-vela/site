@@ -31,7 +31,7 @@ The following [pipeline concepts](/docs/concepts/pipeline) are being used in the
 
 The following [Vela plugins](/docs/concepts/pipeline) are being used in the pipeline below:
 
-* [Docker](/docs/plugins/pipeline/registry/docker/)
+* [Docker](/docs/plugins/registry/pipeline/docker/)
 
 {{% alert title="Note:" color="primary" %}}
 Pipeline must be stored in base of repository as `.vela.yml` or `.vela.yaml`
@@ -77,7 +77,7 @@ The following [pipeline concepts](/docs/concepts/pipeline) are being used in the
 
 The following [Vela plugins](/docs/concepts/pipeline) are being used in the pipeline below:
 
-* [Docker](/docs/plugins/pipeline/registry/docker/)
+* [Docker](/docs/plugins/registry/pipeline/docker/)
 
 {{% alert title="Note:" color="primary" %}}
 Pipeline must be stored in base of repository as `.vela.yml` or `.vela.yaml`

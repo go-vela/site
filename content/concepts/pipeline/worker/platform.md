@@ -5,7 +5,7 @@ description: >
   This section contains information on the platform component for a worker.
 ---
 
-The `platform` component is a part of a [template](/docs/concepts/pipeline/platform/) for Vela.
+The `platform` component is a part of a [template](/docs/concepts/pipeline/worker/platform/) for Vela.
 
 This declaration allows you to route your build to a single platform within a Vela cluster.
 

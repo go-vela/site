@@ -25,7 +25,7 @@ Building an image without elevated access gives administrators the most secure p
 * [vela-kaniko](/docs/plugins/registry/pipeline/kaniko/)
 * [vela-makisu](/docs/plugins/registry/pipeline/makisu/)
 
-We recommend customers read the [tool comparisons](/docs/usage/getting-started/docker/#additional-resources) before picking a technology for building their images. In-depth examples for building with either utility are available within their respective plugin documentation pages. A simple example is provided below:
+We recommend customers read the [tool comparisons](/docs/usage/docker/#additional-resources) before picking a technology for building their images. In-depth examples for building with either utility are available within their respective plugin documentation pages. A simple example is provided below:
 
 ```yaml
 version: "1"
