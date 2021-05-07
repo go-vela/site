@@ -65,8 +65,8 @@ steps:
 ---
 steps:
     # Declaration to configure if and when the Docker image is pulled.
-    # By default, the compiler will inject pull but accepts the 
-    # following values: always, never, no_present, on_start, 
+    # By default, the compiler will inject pull with value not_present but
+    # accepts the following values: always, never, not_present, on_start
   - pull: always
 ```
 
