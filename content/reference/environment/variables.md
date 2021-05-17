@@ -135,9 +135,9 @@ The following environment variables are **only** injected into every step contai
 | `VELA_STEP_IMAGE`        | `target/vela-git:latest` | name of the image executed                                         |
 | `VELA_STEP_NAME`         | `clone`                  | name of the step                                                   |
 | `VELA_STEP_NUMBER`       | `1`                      | number of the step executed within the pipeline                    |
-| `VELA_STEP_RUNTIME`      | `docker`                 | runtime where the build was executed                               |
+| `VELA_STEP_RUNTIME`      | `docker`                 | runtime where the step was executed                               |
 | `VELA_STEP_STAGE`        | `clone`                  | name of the stage the step belongs to within the pipeline          |
-| `VELA_STEP_STARTED`      | `1556730001`             | unix timestamp representing build start time                       |
+| `VELA_STEP_STARTED`      | `1556730001`             | unix timestamp representing step start time                       |
 | `VELA_STEP_STATUS`       | `success`                | status of the step                                                 |
 
 ## Service Only Defaults
@@ -153,6 +153,6 @@ The following environment variables are **only** injected into every step contai
 | `VELA_SERVICE_IMAGE`        | `target/vela-git:latest` | name of the image executed                                            |
 | `VELA_SERVICE_NAME`         | `clone`                  | name of the service                                                   |
 | `VELA_SERVICE_NUMBER`       | `1`                      | number of the service executed within the pipeline                    |
-| `VELA_SERVICE_RUNTIME`      | `docker`                 | runtime where the build was executed                                  |
-| `VELA_SERVICE_STARTED`      | `1556730001`             | unix timestamp representing build start time                          |
+| `VELA_SERVICE_RUNTIME`      | `docker`                 | runtime where the service was executed                                  |
+| `VELA_SERVICE_STARTED`      | `1556730001`             | unix timestamp representing service start time                          |
 | `VELA_SERVICE_STATUS`       | `success`                | status of the service                                                 |
