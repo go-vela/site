@@ -41,5 +41,8 @@ version: "1"
 steps:
   - name: echo
     commands:
+    # This expression does not escape the evaluation
++   - echo ${VELA_BUILD_COMMIT}
+    # This expression does escape the evaluation by adding the double '$$'
 +   - echo $${VELA_BUILD_COMMIT}
 ```
