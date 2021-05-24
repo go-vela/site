@@ -16,8 +16,6 @@ Templates can take the form of generalized workflows across repositories or comp
 {{% alert color="warning" %}}
 The following YAML tags are not valid inside a template pipeline:
 
-* `services:`
-* `secrets:`
 * `stages:`
 * `templates:`
 {{% /alert %}}
