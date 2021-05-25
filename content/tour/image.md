@@ -9,13 +9,11 @@ All Vela steps will require an image declaration to be provided.
 
 The `image:` tag is a key component defines a [Docker Image](https://docs.docker.com/engine/docker-overview/#images) you want to executed during the step.
 
-The default behavior is for a Vela worker component to pull an image if not present. Since the Docker daemon builds up a large cache this had the advantage of executing the build very quickly.
+The default behavior is for a Vela worker to pull an image if it is not present on the host. Docker daemon's cache layers locally, by allowing the default behavior to use the cache you can get the advantage of faster build start up times.
 
 Sometimes this isn't the desired behavior and you want the image to always be pulled or pulled at a specific point in the pipeline lifecycle.
 
-That's when you cant use the `pull:` YAML tag to set the policy on the step for how/when the image should be treated. 
-
-
+That's when you can use the `pull:` YAML tag to set the policy for how/when the image pull interaction should be treated.
 
 <!-- section break -->
 

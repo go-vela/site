@@ -12,7 +12,7 @@ Services are always ran, in parallel alongside the ephemeral steps in the pipeli
 
 Services are always created at the beginning of a pipeline in the order they are defined.
 
-The `name:` field of the service defines at what hostname the service will be available.
+The `name:` field of the service defines what the hostname of the service will for available communicate to other tasks the pipeline.
 
 However, there are times when you need more control over when a service is created. Perhaps you are dealing with a service that has start up dependencies and service A needs some to to start up before service B is started
 
