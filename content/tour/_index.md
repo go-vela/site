@@ -9,13 +9,11 @@ menu:
     weight: 105
 ---
 
-Welcome to the Vela tour! The tour covers the core components of building Vela pipelines. We will walk through the core components that make up a pipeline and show how/where they are used inside a Vela YAML file (Can be `.vela.yml` or `.vela.yaml`).
+Welcome to the Vela (VEE-la) tour! This tour covers the core components of building Vela pipelines. We will walk through the components that make up a pipeline and show how/where they are used inside a Vela YAML file (Can be `.vela.yml` or `.vela.yaml`).
 
-Vela pipelines execute pipeline commands inside ephemeral Docker containers. Docker containers provide isolation, allowing safe execution of concurrent pipelines on the same machine.
+Vela has a few core pipeline types steps, stages, and templates. Steps pipelines should be used in situations when everything in the workflow needs to be accomplished sequentially. Stages are pipelines that are leveraged when workflows can or need to run in parallel. Lastly, templates, the goal with these pipelines is to identify one too many tasks that can be abstracted and used repeatedly.
 
-Vela has two core pipeline types steps, and stages. Steps pipelines should be used for use cases when everything in the build workflow need to be done sequentially. Stages are pipelines that are designed to run one to many steps workflows in parallel
+Vela pipelines execute commands inside ephemeral Docker containers. By integrating with Docker we provide isolation between steps and allow safe execution of concurrent tasks on the same machine. Using containers empowers users to customize the features and functionality they want Vela to perform through plugins.
 
-Using containers empowers users to customize the features and functionality they want Vela to perform through plugins. A plugin is a Docker container that performs a pre-defined set of tasks and typically is configured as a step in pipelines. Plugins can be used to deploy code, publish artifacts, send notifications, and much more.
-
-Vela also enables users to build simple, reusable pipelines with templates. A template is like creating an alias to a subset of a pipeline actions that can contain any number of steps you would like to execute. Users can create one or many templates, to be stored in separate files, and then reference each template in the full pipeline configuration.
+A plugin is a Docker container that performs a pre-defined set of tasks and typically is configured as a step in pipelines. Plugins can be used to deploy code, publish artifacts, send notifications, and much more. Additionally, for even more powerful workflows you can string together a set of plugins into a single template to create reusable pipelines across your applications. Users can create one or many templates, to be stored in separate files, and then reference each template in the full pipeline configuration.
 
