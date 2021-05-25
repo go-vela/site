@@ -34,7 +34,7 @@ To authenticate to the API, please review the [authentication documentation](/do
 
 ```json
 {
-  "owner": "github",
+  "org": "github",
   "name": "octocat",
   "link": "https://github.com/github/octocat",
   "clone": "https://github.com/github/octocat.git"

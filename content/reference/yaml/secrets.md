@@ -23,7 +23,7 @@ secrets:
     engine: native
     type: repo
   - name: foo2
-    key: go-vela/foo2`
+    key: go-vela/foo2
     engine: native
     type: org
   - name: foo3

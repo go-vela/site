@@ -96,7 +96,7 @@ steps:
       name: golang
       vars:
         pull_policy: "always"
-        images: [ golang:latest, golang:1.13, golang:1.12s ]
+        images: [ golang:latest, golang:1.13, golang:1.12 ]
 ```
 
 Which means the compiled pipeline for execution on a worker is:

@@ -21,7 +21,7 @@ Work with your server administer to understand what routes are available for you
 The following [pipeline concepts](/docs/concepts/pipeline) are being used in the pipeline below:
 
 * [Worker](/docs/concepts/pipeline/worker/)
-  * [Runtime](/docs/concepts/pipeline/worker/runtime/)
+  * [Platform](/docs/concepts/pipeline/worker/platform/)
 * [Steps](/docs/concepts/pipeline/steps/)
   * [Image](/docs/concepts/pipeline/steps/image/)
   * [Pull](/docs/concepts/pipeline/steps/pull/)
@@ -37,7 +37,7 @@ It is recommended to pin `image:` versions for production pipelines
 version: "1"
 
 worker:
-  runtime: docker
+  platform: docker
 
 steps:
   - name: view worker name
@@ -52,7 +52,7 @@ steps:
 The following [pipeline concepts](/docs/concepts/pipeline) are being used in the pipeline below:
 
 * [Worker](/docs/concepts/pipeline/worker/)
-  * [Runtime](/docs/concepts/pipeline/worker/runtime/)
+  * [Platform](/docs/concepts/pipeline/worker/platform/)
 * [Stages](/docs/concepts/pipeline/stages/)
   * [Steps](/docs/concepts/pipeline/steps/)
   * [Image](/docs/concepts/pipeline/steps/image/)
@@ -70,7 +70,7 @@ It is recommended to pin `image:` versions for production pipelines
 version: "1"
 
 worker:
-  runtime: docker
+  platform: docker
 
 stages:
   docker:

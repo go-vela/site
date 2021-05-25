@@ -21,7 +21,7 @@ The following [pipeline concepts](/docs/concepts/pipeline) are being used in the
 * [Steps](/docs/concepts/pipeline/steps/)
   * [Environment](/docs/concepts/pipeline/steps/environment/)
 * [Secrets](/docs/concepts/pipeline/secrets/)
-  * [Origin](/docs/concepts/pipeline/steps/origin/)
+  * [Origin](/docs/concepts/pipeline/secrets/origin/)
 
 {{% alert title="Note:" color="primary" %}}
 Please be warned that `${variable}` expressions are subject to pre-processing.

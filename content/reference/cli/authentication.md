@@ -9,14 +9,14 @@ description: >
 
 Authentication with the Vela CLI is the responsibility of the client initiating the request.
 
-Each request requires a server address and user token to be provided. You can provide these variables to the CLI in three ways:
+Each request requires a server address. You can provide this variable to the CLI in three ways:
 
 - Configuration File
-- Environment Variables
-- Flags
+- Environment Variable
+- Flag
 
 {{% alert color="info" %}}
-A configuration file is the recommended method for providing the API address and token to the CLI.
+A configuration file is the recommended method for providing the API address to the CLI.
 {{% /alert %}}
 
 ### Configuration File
@@ -25,7 +25,7 @@ A configuration file is the recommended method for providing the API address and
 The default path for this configuration file can be found @ `$HOME/.vela/config.yml`.
 {{% /alert %}}
 
-Log in and capture the personal token:
+Log in:
 
 ```sh
 # Syntax
@@ -35,14 +35,16 @@ vela login --api.addr <vela server url>
 vela login --api.addr https://vela-server.localhost
 ```
 
-Generate the configuration file:
+Confirm authentication via browser prompt:
 
-```sh
-# Syntax
-vela generate config --api.addr <vela server url> --api.token <personal token>
+```
+Open https://vela-server.localhost in your browser and complete authentication (Press Enter to confirm):
+```
 
-# Example
-vela generate config --api.addr https://vela-server.localhost --api.token qwerty123
+Confirm to generate or update the configuration file prompt:
+
+```
+Authentication complete. Continue to save configuration (existing config will be overwritten):
 ```
 
 {{% alert color="info" %}}
@@ -57,16 +59,10 @@ Configure the environment with the `VELA_ADDR` environment variable:
 export VELA_ADDR=https://vela-server.localhost
 ```
 
-Log in and capture the personal token:
+Log in and confirm the two prompts as stated above:
 
 ```sh
 vela login
-```
-
-Configure the environment with the `VELA_TOKEN` environment variable:
-
-```sh
-export VELA_TOKEN=<personal token>
 ```
 
 {{% alert color="info" %}}
@@ -75,22 +71,12 @@ It's recommended to add these to your terminal profile (`~/.bashrc` or `~/.zshrc
 
 ### Flags
 
-Log in and capture the personal token:
+Log in and confirm the two prompts as stated above:
 
 ```sh
 # Syntax
-vela --api.addr <vela server url> login
+vela login --api.addr <vela server url>
 
 # Example
-vela --api.addr https://vela-server.localhost login
-```
-
-Pass the personal token as a flag argument:
-
-```sh
-# Syntax
-vela --api.addr <vela server url> --api.token <personal token>
-
-# Example
-vela --api.addr https://vela-server.localhost --api.token qwerty123
+vela login --api.addr https://vela-server.localhost
 ```

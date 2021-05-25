@@ -40,8 +40,10 @@ vela view config
 ```sh
 api:
   addr: https://vela-server.localhost
-  token: superSecretToken
-  version: "1"
+  access_token: superSecretAccessToken
+  refresh_token: superSecretRefreshToken
+  version: v1
 log:
   level: info
+secret: {}
 ```

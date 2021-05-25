@@ -5,7 +5,7 @@ description: >
   Shared directory that all build steps begin at.
 ---
 
-Vela uses a shared volume model between steps to allow shared file system during the build process. These volumes should be considered ephemeral in the sense once a build completes execution all data via the volume being destroyed. 
+Vela uses a shared volume model between steps to allow shared file system during the build process. These volumes should be considered ephemeral in the sense once a build completes execution all data via the volume being destroyed.
 
 ## Working Directory
 
@@ -36,7 +36,7 @@ This ensures the configuration, code, dependencies, and compiled binaries are pe
 
 ```sh
 # Syntax
-/vela/secrets/<path>/<key>
+/vela/parameters/<path>/<key>
 
 # Example
 /vela/parameters/github/repo/settings/topics

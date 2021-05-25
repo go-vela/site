@@ -98,7 +98,7 @@ steps:
         images:
           _latest: golang:latest
           _1.13: golang:1.13
-          _1.12: golang:1.13
+          _1.12: golang:1.12
 ```
 
 Which means the compiled pipeline for execution on a worker is:

@@ -17,7 +17,7 @@ From [Go template range](https://golang.org/pkg/text/template/#hdr-Actions):
 
 ```text
 {{range pipeline}}
-  T1 
+  T1
 {{end}}
 ```
 
@@ -77,11 +77,11 @@ templates:
 
 steps:
   - name: golang
-    template:  
+    template:
       name: sample
       vars:
         pull_policy: "pull: always"
-        images: [ golang:latest, golang:1.13, golang:1.12s ]
+        images: [ golang:latest, golang:1.13, golang:1.12 ]
 ```
 
 Which means the compiled pipeline for execution on a worker is:

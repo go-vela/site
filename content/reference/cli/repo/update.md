@@ -24,6 +24,7 @@ The following parameters are used to configure the command:
 | `org`        | name of organization for the repository            | `VELA_ORG`, `REPO_ORG`               |
 | `repo`       | name of repository                                 | `VELA_REPO`, `REPO_NAME`             |
 | `link`       | full URL for the repository                        | `VELA_LINK`, `REPO_LINK`             |
+| `branch`     | default branch for the repository                  | `VELA_BRANCH`, `REPO_BRANCH`         |
 | `clone`      | clone URL for the repository                       | `VELA_CLONE`, `REPO_CLONE`           |
 | `visibility` | access level required to view the repository       | `VELA_VISIBILITY`, `REPO_VISIBILITY` |
 | `timeout`    | max time allowed per build                         | `VELA_TIMEOUT`, `REPO_TIMEOUT`       |
