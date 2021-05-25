@@ -203,13 +203,13 @@ steps:
 
 The following controls can be used to modify the behavior of the ruleset evaluation:
 
-| Name       | Description                                        |
-|------------|----------------------------------------------------|
-| `continue` | enables continuing the build if the step fails.    |
-| `if`       | limits the step execution to all rules must match. |
-| `matcher`  | matcher to use when evaluating the ruleset.        |
-| `operator` | operator to use when evaluating the ruleset.       |
-| `unless`   | limits the step execution to no rules can match.   |
+| Name       | Description                                        | Options                                                                 |
+|------------|----------------------------------------------------| ----------------------------------------------------------------------- |
+| `continue` | enables continuing the build if the step fails.    | `true`, `false`                                                         |
+| `matcher`  | matcher to use when evaluating the ruleset.        | `filepath`, `regexp`                                                    |
+| `operator` | operator to use when evaluating the ruleset.       | `and`, `or`                                                             |
+| `if`       | limits the step execution to all rules must match. | `branch`, `comment`, `event`, `path`, `repo`, `status`, `tag`, `target` |
+| `unless`   | limits the step execution to no rules can match.   | `branch`, `comment`, `event`, `path`, `repo`, `status`, `tag`, `target` |
 
 ```yaml
 ---
@@ -218,17 +218,6 @@ steps:
       # Below is displaying it will allow the step to continue the sequential step
       # pipeline when this step fails.
       continue: true
-```
-
-```yaml
----
-steps:
-  - ruleset:
-      # Below is displaying it will is an explicit way to tell the ruleset
-      # to only execute this step when the branch is master and event is push.
-      if:
-        branch: master
-        event: push
 ```
 
 ```yaml
@@ -249,6 +238,17 @@ steps:
       # "and" behavior when comparing all ruleset rules. The available
       # operators are: and, and or.
       operator: or
+```
+
+```yaml
+---
+steps:
+  - ruleset:
+      # Below is displaying it will is an explicit way to tell the ruleset
+      # to only execute this step when the branch is master and event is push.
+      if:
+        branch: master
+        event: push
 ```
 
 ```yaml
