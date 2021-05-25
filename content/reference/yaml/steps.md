@@ -227,7 +227,10 @@ steps:
       # Below is displaying it will overwrite Vela's default behavior to use a 
       # filepath matcher and instead evaluate all rules with regex. The available
       # matchers are: filepath, and regexp.
+      # Note: The regexp matcher uses Go's regexp package. You can find documentation
+      # at https://golang.org/pkg/regexp/syntax/
       matcher: regexp
+      branch: foo-\\d
 ```
 
 ```yaml
