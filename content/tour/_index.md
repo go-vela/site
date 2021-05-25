@@ -16,4 +16,3 @@ Vela has a few core pipeline types steps, stages, and templates. Steps pipelines
 Vela pipelines execute commands inside ephemeral Docker containers. By integrating with Docker we provide isolation between steps and allow safe execution of concurrent tasks on the same machine. Using containers empowers users to customize the features and functionality they want Vela to perform through plugins.
 
 A plugin is a Docker container that performs a pre-defined set of tasks and typically is configured as a step in pipelines. Plugins can be used to deploy code, publish artifacts, send notifications, and much more. Additionally, for even more powerful workflows you can string together a set of plugins into a single template to create reusable pipelines across your applications. Users can create one or many templates, to be stored in separate files, and then reference each template in the full pipeline configuration.
-

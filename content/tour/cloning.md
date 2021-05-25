@@ -18,6 +18,14 @@ However, sometimes you may need to customize, override or disable the default cl
 # Below is displaying the default behavior that occurs in a pipeline. 
 metadata:
   clone: true
+
+steps:
+  # Since the default behavior is to clone, we can instantly access
+  # files in our repository.
+  - name: view pipeline file
+    image: alpine
+    commands:
+      - cat .vela.yml
 ```
 
 
@@ -44,4 +52,4 @@ steps:
 
 **Tag references:**
 
-[`clone:`](/docs/reference/yaml/metdata/#the-clone-tag), [`name:`](/docs/reference/yaml/steps/#the-name-tag), [`image:`](/docs/reference/yaml/steps/#the-image-tag), [`parameters:`](/docs/reference/yaml/steps/#the-parameters-tag),
+[`clone:`](/docs/reference/yaml/metadata/#the-clone-tag), [`name:`](/docs/reference/yaml/steps/#the-name-tag), [`image:`](/docs/reference/yaml/steps/#the-image-tag), [`parameters:`](/docs/reference/yaml/steps/#the-parameters-tag),
