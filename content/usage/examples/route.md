@@ -18,14 +18,14 @@ Work with your server administer to understand what routes are available for you
 
 ### Steps
 
-The following [pipeline concepts](/docs/concepts/pipeline) are being used in the pipeline below:
+The following [pipeline concepts](/docs/tour/) are being used in the pipeline below:
 
-* [Worker](/docs/concepts/pipeline/worker/)
-  * [Platform](/docs/concepts/pipeline/worker/platform/)
-* [Steps](/docs/concepts/pipeline/steps/)
-  * [Image](/docs/concepts/pipeline/steps/image/)
-  * [Pull](/docs/concepts/pipeline/steps/pull/)
-  * [Commands](/docs/concepts/pipeline/steps/commands/)
+* [Worker](/docs/tour/worker/)
+  * [Platform](/docs/tour/worker/)
+* [Steps](/docs/tour/steps/)
+  * [Image](/docs/tour/image/)
+  * [Pull](/docs/tour/image/)
+  * [Commands](/docs/tour/steps/)
 
 {{% alert title="Note:" color="primary" %}}
 Pipeline must be stored in base of repository as `.vela.yml` or `.vela.yaml`
@@ -49,16 +49,16 @@ steps:
 
 ### Stages
 
-The following [pipeline concepts](/docs/concepts/pipeline) are being used in the pipeline below:
+The following [pipeline concepts](/docs/tour/) are being used in the pipeline below:
 
-* [Worker](/docs/concepts/pipeline/worker/)
-  * [Platform](/docs/concepts/pipeline/worker/platform/)
-* [Stages](/docs/concepts/pipeline/stages/)
-  * [Steps](/docs/concepts/pipeline/steps/)
-  * [Image](/docs/concepts/pipeline/steps/image/)
-  * [Environment](/docs/concepts/pipeline/steps/environment/)
-  * [Pull](/docs/concepts/pipeline/steps/pull/)
-  * [Commands](/docs/concepts/pipeline/steps/commands/)
+* [Worker](/docs/tour/worker/)
+  * [Platform](/docs/tour/worker/)
+* [Stages](/docs/tour/stages/)
+  * [Steps](/docs/tour/steps/)
+  * [Image](/docs/tour/image/)
+  * [Environment](/docs/tour/environment/)
+  * [Pull](/docs/tour/image/)
+  * [Commands](/docs/tour/steps/)
 
 {{% alert title="Note:" color="primary" %}}
 Pipeline must be stored in base of repository as `.vela.yml` or `.vela.yaml`

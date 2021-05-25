@@ -9,19 +9,20 @@ Vela provides the ability to define environment variables scoped to individual s
 
 Defaults:
 
-* [Services](https://go-vela.github.io/docs/concepts/pipeline/services/environment/#defaults)
-* [Steps](https://go-vela.github.io/docs/concepts/pipeline/steps/environment/#defaults)
+* [Container](/docs/reference/environment/variables/#container-defaults)
+* [Steps only](/docs/reference/environment/variables/#step-only-defaults)
+* [Services only](/docs/reference/environment/variables/#service-only-defaults)
 
 ## Usage
 
-The following [pipeline concepts](/docs/concepts/pipeline) are being used in the pipeline below:
+The following [pipeline concepts](/docs/tour) are being used in the pipeline below:
 
-* [Services](/docs/concepts/pipeline/services/)
-  * [Environment](/docs/concepts/pipeline/steps/environment/)
-* [Steps](/docs/concepts/pipeline/steps/)
-  * [Environment](/docs/concepts/pipeline/steps/environment/)
-* [Secrets](/docs/concepts/pipeline/secrets/)
-  * [Origin](/docs/concepts/pipeline/secrets/origin/)
+* [Services](/docs/tour/services/)
+  * [Environment](/docs/tour/environment/)
+* [Steps](/docs/tour/steps/)
+  * [Environment](/docs/tour/environment/)
+* [Secrets](/docs/tour/secrets/)
+  * [Origin](/docs/tour/secrets/)
 
 {{% alert title="Note:" color="primary" %}}
 Please be warned that `${variable}` expressions are subject to pre-processing.

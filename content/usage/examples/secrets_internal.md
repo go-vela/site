@@ -16,20 +16,20 @@ User is looking to create a pipeline that can inject configuration that can not 
 It is assumed you have created secrets `docker_username` and `docker_password` in the web interface or [CLI](/docs/reference/cli/).
 {{% /alert %}}
 
-The examples show a pipeline using repository secrets. Vela contains three secret types: repository, organization, and shared. For examples on organization and shared, please see the [secret concepts](/docs/concepts/pipeline/steps/secrets/) documentation.
+The examples show a pipeline using repository secrets. Vela contains three secret types: repository, organization, and shared. For examples on organization and shared, please see the [secret concepts](/docs/tour/steps/secrets/) documentation.
 
 ### Steps
 
-The following [pipeline concepts](/docs/concepts/pipeline) are being used in the pipeline below:
+The following [pipeline concepts](/docs/tour/) are being used in the pipeline below:
 
-* [Steps](/docs/concepts/pipeline/steps/)
-  * [Image](/docs/concepts/pipeline/steps/image/)
-  * [Pull](/docs/concepts/pipeline/steps/pull/) 
-  * [Secrets](/docs/concepts/pipeline/steps/secrets/)
-  * [Parameters](/docs/concepts/pipeline/steps/parameters/)
-* [Secrets](/docs/concepts/pipeline/secrets/)
+* [Steps](/docs/tour/steps/)
+  * [Image](/docs/tour/image/)
+  * [Pull](/docs/tour/image/)
+  * [Secrets](/docs/tour/secrets/)
+  * [Parameters](/docs/tour/plugins/)
+* [Secrets](/docs/tour/secrets/)
 
-The following [Vela plugins](/docs/concepts/pipeline) are being used in the pipeline below:
+The following [Vela plugins](/docs/tour/) are being used in the pipeline below:
 
 * [Docker](/docs/plugins/registry/pipeline/docker/)
 
@@ -65,17 +65,17 @@ secrets:
 
 ### Stages
 
-The following [pipeline concepts](/docs/concepts/pipeline) are being used in the pipeline below:
+The following [pipeline concepts](/docs/tour/) are being used in the pipeline below:
 
-* [Stages](/docs/concepts/pipeline/steps/)
-  * [Steps](/docs/concepts/pipeline/steps/)
-  * [Image](/docs/concepts/pipeline/steps/image/)
-  * [Pull](/docs/concepts/pipeline/steps/pull/)
-  * [Secrets](/docs/concepts/pipeline/steps/secrets/)
-  * [Parameters](/docs/concepts/pipeline/steps/parameters/)
-* [Secrets](/docs/concepts/pipeline/secrets/)
+* [Stages](/docs/tour/stages/)
+  * [Steps](/docs/tour/steps/)
+  * [Image](/docs/tour/image/)
+  * [Pull](/docs/tour/image/)
+  * [Secrets](/docs/tour/secrets/)
+  * [Parameters](/docs/tour/plugins/)
+* [Secrets](/docs/tour/secrets/)
 
-The following [Vela plugins](/docs/concepts/pipeline) are being used in the pipeline below:
+The following [Vela plugins](/docs/tour/) are being used in the pipeline below:
 
 * [Docker](/docs/plugins/registry/pipeline/docker/)
 

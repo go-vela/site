@@ -76,7 +76,7 @@ The plugin accepts the following `parameters` for authentication:
 | `slack_token`  | `SLACK_URL`                        |
 | `slack_url`    | `SLACK_TOKEN`                      |
 
-Users can use [Vela secrets](/docs/concepts/pipeline/secrets/) to substitute these sensitive values at runtime:
+Users can use [Vela secrets](/docs/tour/secrets/) to substitute these sensitive values at runtime:
 
 ```diff
 steps:

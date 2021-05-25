@@ -19,9 +19,9 @@ Both accept configuration via environment variables but should be used within th
 {{% alert title="Note:" color="warning" %}}
 Before you begin your plugin journey we recommend the following pre-requisites:
 
-* [Steps](/docs/concepts/pipeline/steps/)
-* [Stages](/docs/concepts/pipeline/stages/)
-* [Templates](/docs/concepts/pipeline/templates/)
+* [Steps](/docs/tour/steps/)
+* [Stages](/docs/tour/stages/)
+* [Templates](/docs/tour/templates/)
 {{% /alert %}}
 
 ## Pipeline

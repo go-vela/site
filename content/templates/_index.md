@@ -9,7 +9,7 @@ menu:
     weight: 405
 ---
 
-A template is a pipeline with one to many defined steps that can be sourced into another pipeline. Templates can live in any repository in a [source control system](/docs/concepts/infrastructure/server/source/) and are expanded at compile time to create the final executable pipeline.
+A template is a pipeline with one to many defined steps that can be sourced into another pipeline. Templates can live in any repository in a source control system and are expanded at compile time to create the final executable pipeline.
 
 Templates can take the form of generalized workflows across repositories or complex workflows like matrices in a single build.
 

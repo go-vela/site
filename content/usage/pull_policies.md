@@ -9,14 +9,14 @@ Vela provides the ability to define how and when the images for secrets, steps, 
 
 ## Usage
 
-The following [pipeline concepts](/docs/concepts/pipeline) are being used in the pipeline below:
+The following [pipeline concepts](/docs/tour) are being used in the pipeline below:
 
-* [Services](/docs/concepts/pipeline/services/)
-  * [Pull](/docs/concepts/pipeline/services/pull/)
-* [Steps](/docs/concepts/pipeline/steps/)
-  * [Pull](/docs/concepts/pipeline/steps/pull/)
-* [Secrets](/docs/concepts/pipeline/secrets/)
-  * [Origin](/docs/concepts/pipeline/secrets/origin/)
+* [Services](/docs/tour/services/)
+  * [Pull](/docs/tour/services/image/)
+* [Steps](/docs/tour/steps/)
+  * [Pull](/docs/tour/steps/image/)
+* [Secrets](/docs/tour/secrets/)
+  * [Origin](/docs/tour/secrets/)
 
 {{% alert title="Note:" color="primary" %}}
 Please be warned that the `pull` declaration is **not required**.

@@ -14,12 +14,12 @@ User is looking to create a pipeline that builds an artifact on any event or bra
 
 ### Steps
 
-The following [pipeline concepts](/docs/concepts/pipeline) are being used in the pipeline below:
+The following [pipeline concepts](/docs/tour/) are being used in the pipeline below:
 
-* [Steps](/docs/concepts/pipeline/steps/)
-  * [image](/docs/concepts/pipeline/steps/image/)
-  * [Pull](/docs/concepts/pipeline/steps/pull/)
-  * [Commands](/docs/concepts/pipeline/steps/commands/)
+* [Steps](/docs/tour/steps/)
+  * [image](/docs/tour/image/)
+  * [Pull](/docs/tour/image/)
+  * [Commands](/docs/tour/steps/)
 
 {{% alert title="Note:" color="primary" %}}
 Pipeline must be stored in base of repository as `.vela.yml` or `.vela.yaml`
@@ -52,14 +52,14 @@ steps:
 
 ### Stages
 
-The following [pipeline concepts](/docs/concepts/pipeline) are being used in the pipeline below:
+The following [pipeline concepts](/docs/tour/) are being used in the pipeline below:
 
-* [Stages](/docs/concepts/pipeline/stages/)
-  * [Needs](/docs/concepts/pipeline/stages/needs/)
-  * [Steps](/docs/concepts/pipeline/steps/)
-    * [image](/docs/concepts/pipeline/steps/image/)
-    * [Pull](/docs/concepts/pipeline/steps/pull/)
-    * [Commands](/docs/concepts/pipeline/steps/commands/)
+* [Stages](/docs/tour/stages/)
+  * [Needs](/docs/tour/stages/)
+  * [Steps](/docs/tour/steps/)
+    * [image](/docs/tour/image/)
+    * [Pull](/docs/tour/image/)
+    * [Commands](/docs/tour/steps/)
 
 {{% alert title="Note:" color="primary" %}}
 Pipeline must be stored in base of repository as `.vela.yml` or `.vela.yaml`
