@@ -14,6 +14,10 @@ Vela does import a library to provide partial string operations. You can be use 
 
 With this substitution you should be aware `${variable}` expressions are subject to pre-processing. If you want to avoid this behavior you can escape your expressions to avoid the pre-processor evaluations.
 
+**Expand your knowledge with an example!**
+
+* [Using the environment](/docs/usage/environment/)
+
 <!-- section break -->
 
 ```yaml

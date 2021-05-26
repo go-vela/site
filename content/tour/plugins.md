@@ -16,6 +16,10 @@ The registry of existing plugins can be found on this site in the [plugins](/doc
 
 Within the parameters block tags are injected as upper case environment variables with the pattern of `PARAMETER_<YAML_TAG>`.
 
+**Expand your knowledge with an example!**
+
+* [Working with Plugins](/docs/usage/plugin/)
+
 <!-- section break -->
 
 ```yaml

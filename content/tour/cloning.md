@@ -12,6 +12,10 @@ Vela injects the clone credentials that are the oauth2 token associated with the
 
 However, sometimes you may need to customize, override or disable the default clone behavior.
 
+**Expand your knowledge with an example!**
+
+* [Understanding the workspace](/docs/usage/workspace/)
+
 <!-- section break -->
 
 ```yaml

@@ -14,6 +14,8 @@ In this pipeline each step is shown with the minimum required YAML tags to execu
 
 Both steps are pulling a [Alpine Linux](https://alpinelinux.org/) image from [Docker Hub](https://hub.docker.com/) and executing echo statements.  
 
+**Expand your knowledge with a [deep dive](/docs/templates/)!**
+
 <!-- section break -->
 
 ```yaml

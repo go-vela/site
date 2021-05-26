@@ -15,6 +15,10 @@ Sometimes this isn't the desired behavior and you want the image to always be pu
 
 That's when you can use the `pull:` tag to set the policy for how/when the image pull interaction should be treated.
 
+**Expand your knowledge with an example!**
+
+* [Pull policy](/docs/usage/pull_policies/)
+
 <!-- section break -->
 
 ```yaml
