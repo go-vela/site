@@ -16,6 +16,12 @@ The `name:` field of the service defines what the hostname of the service will f
 
 However, there are times when you need more control over when a service is created. Perhaps you are dealing with a service that has start up dependencies and service A needs some to to start up before service B is started
 
+**See it in action with examples!**
+
+* [Mongo](/docs/usage/examples/mongo/)
+* [Postgres](/docs/usage/examples/postgres/)
+* [Redis](/docs/usage/examples/redis/)
+
 <!-- section break -->
 
 ```yaml
@@ -67,4 +73,5 @@ $ vela exec pipeline
 
 **Tag references:**
 
-[`name:`](/docs/reference/yaml/services/#the-name-tag), [`image:`](/docs/reference/yaml/services/#the-image-tag), [`detach:`](/docs/reference/yaml/steps/#the-detach-tag), 
+[`name:`](/docs/reference/yaml/services/#the-name-tag), [`image:`](/docs/reference/yaml/services/#the-image-tag), [`detach:`](/docs/reference/yaml/steps/#the-detach-tag),
+

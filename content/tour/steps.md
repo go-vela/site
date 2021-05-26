@@ -14,6 +14,15 @@ In this pipeline each step is shown with the minimum required YAML tags to execu
 
 Both steps are pulling a [Alpine Linux](https://alpinelinux.org/) image from [Docker Hub](https://hub.docker.com/) and executing echo statements.  
 
+**See it in action with examples!**
+
+* [Go](/docs/usage/examples/go_modules/)
+* [Rust](/docs/usage/examples/rust_cargo/)
+* [Gradle](/docs/usage/examples/java_gradle/)
+* [Maven](/docs/usage/examples/java_maven/)
+* [Node](/docs/usage/examples/node/)
+
+
 <!-- section break -->
 
 ```yaml
@@ -46,4 +55,4 @@ $ vela exec pipeline
 
 **Tag references:**
 
-[`name:`](/docs/reference/yaml/steps/#the-name-tag), [`image:`](/docs/reference/yaml/steps/#the-image-tag), [`commands:`](/docs/reference/yaml/steps/#the-commands-tag), 
+[`name:`](/docs/reference/yaml/steps/#the-name-tag), [`image:`](/docs/reference/yaml/steps/#the-image-tag), [`commands:`](/docs/reference/yaml/steps/#the-commands-tag),
