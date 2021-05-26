@@ -10,9 +10,9 @@ The ruleset allows you to provide conditions to limit the execution of the conta
 
 When you push your code to a source control management system a payload is sent to Vela.
 
-Within that payload contains characteristics about what just happened. Maybe it was a push to the main branch. 
+Within that payload contains characteristics about what just happened. Maybe it was a push to the main branch, feature branch or tag on any specific commit.
 
-The ruleset tag gives you the ability to add conditions on if the step should be executed.
+The ruleset tag gives you the ability to add conditions on the step to tell Vela when this step should be executed.
 
 <!-- section break -->
 

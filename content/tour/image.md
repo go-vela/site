@@ -7,9 +7,9 @@ description: >
 ---
 All Vela steps will require an image declaration to be provided.
 
-The `image:` tag is a key component defines a [Docker Image](https://docs.docker.com/engine/docker-overview/#images) you want to executed during the step.
+The `image:` tag is a key component that defines the [Docker Image](https://docs.docker.com/engine/docker-overview/#images) you want to be executed during the step.
 
-The default behavior is for a Vela worker to pull an image if it is not present on the host. Docker daemon's cache layers locally, by allowing the default behavior to use the cache you can get the advantage of faster build start up times.
+The default behavior is for a Vela worker to pull an image if it is not present on the host. Docker daemon's cache image layers locally, by allowing the default behavior to use the cache you can get the advantage of faster build start up times.
 
 Sometimes this isn't the desired behavior and you want the image to always be pulled or pulled at a specific point in the pipeline lifecycle.
 

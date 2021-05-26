@@ -8,11 +8,11 @@ description: >
 
 To define environment variables scoped to a step you can add an `environment:` YAML tag.
 
-Every step's environment is isolated to each individual step. All platform variables get injected with a custom `VELA_` pattern to each step. 
-
-You should be aware `${variable}` expressions are subject to pre-processing. If you want to avoid this behavior you can escape your expressions to avoid the pre-processor to evaluations.
+Every step's environment is isolated to each individual step and all platform variables get injected with a custom `VELA_` prefix pattern.
 
 Vela does import a library to provide partial string operations. You can be use the functions to manipulate string values prior to substitution.
+
+With this substitution you should be aware `${variable}` expressions are subject to pre-processing. If you want to avoid this behavior you can escape your expressions to avoid the pre-processor evaluations.
 
 <!-- section break -->
 

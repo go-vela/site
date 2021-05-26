@@ -6,13 +6,11 @@ description: >
   Learn about secrets.
 ---
 
-Sometimes you need to inject environment information into an image or plugin that you don't want in plain text in the pipeline file.
+Sometimes you need to inject environment information into an image or plugin that you don't want in plain text.
 
-For this, we introduce pipeline secrets as a pattern to keep sensitive data safe.
+For this, we introduce pipeline secrets as a pattern to keep sensitive data safe. Secrets are always retrieved at the beginning of a pipeline before any services, stages, or steps are created or started.
 
-Secrets are always retrieved at the beginning of a pipeline before any services, stages, or steps are created or started.
-
-They are extremely useful when you don’t want to provide that sensitive information in plain text.
+They are answer when you don’t want to provide that sensitive information in plain text.
 
 Let's go back to our Docker image used within the plugin tutorial and focus only on the repository secrets type. You can learn about all secret types in the [internal secrets example](/docs/usage/examples/secrets_internal/).
 

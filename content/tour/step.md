@@ -8,7 +8,7 @@ description: >
 
 A step declaration allows you to provide execution instructions for a pipeline.
 
-The following step is displaying an example of a minimal configured step for executing a simple echo.
+The following step is displaying an example of a minimal configuration for executing a simple echo linux command.
 
 The `name:` tag is the unique identifier for the step throughout the lifecycle of the execution.
 
