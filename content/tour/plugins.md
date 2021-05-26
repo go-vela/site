@@ -14,7 +14,7 @@ Anyone can create a plugin and use it in their pipeline.
 
 The registry of existing plugins can be found on this site in the [plugins](/docs/plugins/registry/) tab.
 
-Within the parameters block YAML tags are injected as upper case environment variables with the pattern of `PARAMETER_<YAML_TAG>`.
+Within the parameters block tags are injected as upper case environment variables with the pattern of `PARAMETER_<YAML_TAG>`.
 
 <!-- section break -->
 

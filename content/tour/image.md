@@ -13,7 +13,7 @@ The default behavior is for a Vela worker to pull an image if it is not present 
 
 Sometimes this isn't the desired behavior and you want the image to always be pulled or pulled at a specific point in the pipeline lifecycle.
 
-That's when you can use the `pull:` YAML tag to set the policy for how/when the image pull interaction should be treated.
+That's when you can use the `pull:` tag to set the policy for how/when the image pull interaction should be treated.
 
 <!-- section break -->
 

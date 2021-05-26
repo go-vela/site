@@ -10,7 +10,7 @@ A stages pipelines are designed to parallelize one-to-many sets of step tasks.
 
 By design all of the stages will run at the same time unless the user uses a `needs:` YAML tag to control the flow of stage executions.
 
-These pipelines do not have a minimum defined length and will always execute steps within a stage in the order defined. 
+These pipelines do not have a minimum defined length and will always execute steps within a stage in the order defined. Stages always run on the same host so it's important to take into consideration the size of the worker running your builds.
 
 In this pipeline both stages trigger at the same time and run independently of the other. 
 

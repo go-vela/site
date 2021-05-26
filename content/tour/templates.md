@@ -31,8 +31,6 @@ steps:
       vars:
         images: [ golang:1.16, golang:1.15, golang:1.14 ]
 
-# In this pipeline, commands are executed inside the container as the Entrypoint.
-# If any command returns a non-zero exit code, the pipeline fails and exits.
   - name: Build binary
     image: alpine
     commands:

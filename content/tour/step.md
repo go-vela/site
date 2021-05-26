@@ -6,17 +6,19 @@ description: >
   Learn about step.
 ---
 
-A step declaration allows you to provide an execution instructions for a pipeline.
+A step declaration allows you to provide execution instructions for a pipeline.
 
-The following step is displaying an example of a minimal configuration for executing. 
+The following step is displaying an example of a minimal configured step for executing a simple echo.
 
-The `name:` key is the unique identifier for the step throughout the lifecycle of the execution. 
+The `name:` tag is the unique identifier for the step throughout the lifecycle of the execution.
 
 When `commands:` are provided they are converted to a shell script and executed as the Docker entrypoint for the container.
 
 <!-- section break -->
 
 ```yaml
+# In this step, commands are executed inside the container as the Entrypoint.
+# If any command returns a non-zero exit code, the step fails and exits.
 - name: Welcome
   image: alpine
   commands:
