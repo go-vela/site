@@ -30,6 +30,8 @@ steps:
     parameters:
       registry: index.docker.io
       repo: index.docker.io/go-vela/hello-world
+      username: moby
+      password: mypassword
       tags:
         - latest
         - v1.0.0
