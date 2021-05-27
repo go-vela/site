@@ -247,7 +247,7 @@ steps:
 ---
 steps:
   - ruleset:
-      # Below is displaying it will is an explicit way to tell the ruleset
+      # As shown below, this is an explicit way to tell the ruleset
       # to only execute this step when the branch is master and event is push.
       if:
         branch: master
