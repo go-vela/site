@@ -133,7 +133,7 @@ The following rules can be used to configure a ruleset:
 ---
 steps:
   - ruleset:
-      # Below is displaying a step that would execute if the build
+      # As shown below this step will execute if the build
       # branch is stage or master.
       branch: [ stage, master ]
 ```
@@ -143,7 +143,7 @@ steps:
 steps:
   - ruleset:
       # This extends the ability to start new builds through interactions
-      # within a pull request. Below is displaying it will run a step if a “run build”
+      # within a pull request. As shown below this will run a step if a “run build”
       # comment is added to the bottom of a pull request.
       comment: [ "run build" ]
 ```
@@ -152,7 +152,7 @@ steps:
 ---
 steps:
   - ruleset:
-      # Below is displaying a step that would execute if the build
+      # As shown below this step will execute if the build
       # event is push or pull_request. The available events are:
       # comment, push, pull_request, tag, and deployment.
       event: [ push, pull_request ]
@@ -162,7 +162,7 @@ steps:
 ---
 steps:
   - ruleset:
-      # Below is displaying it will run a step if file README.md, any file of type *.md
+      # As shown below this step will execute if file README.md, any file of type *.md
       # in the root directory or any file in the test/* directory has changed.
       path: [ README.md, "*.md", "test/*" ]
 ```
@@ -171,7 +171,7 @@ steps:
 ---
 steps:
   - ruleset:
-      # Below is displaying it will run a step if repo exists within the target GitHub
+      # As shown below this step will execute if repo exists within the target GitHub
       # organization or the repo is the go-vela/docs repository.
       repo: [ "target/*", "go-vela/docs" ]
 ```
@@ -180,7 +180,7 @@ steps:
 ---
 steps:
   - ruleset:
-      # Below is displaying it will run a step if the build status is failure or success.
+      # As shown below this step will execute if the build status is failure or success.
       status: [ failure, success ]
 ```
 
@@ -188,7 +188,7 @@ steps:
 ---
 steps:
   - ruleset:
-      # Below is displaying it will run a step if the build ref is dev/* or test/*.
+      # As shown below this step will execute if the build ref is dev/* or test/*.
       tag: [ dev/*, test/* ]
 ```
 
@@ -196,7 +196,7 @@ steps:
 ---
 steps:
   - ruleset:
-      # Below is displaying it will run a step if the build target is stage or production.
+      # As shown below this step will execute if the build target is stage or production.
       # This tag is only compatible with deployment events.
       target: [ dev/*, test/* ]
 ```
@@ -215,8 +215,8 @@ The following controls can be used to modify the behavior of the ruleset evaluat
 ---
 steps:
   - ruleset:
-      # Below is displaying how to allow the build to continue
-      # the sequential step pipeline when this step fails.
+      # As shown below this will overwrite Vela's default behavior to
+      # allow the build to continue the sequential step pipeline when this step fails.
       continue: true
 ```
 
@@ -224,7 +224,7 @@ steps:
 ---
 steps:
   - ruleset:
-      # Below is displaying how to overwrite Vela's default behavior to use a 
+      # As shown below this will overwrite Vela's default behavior to use a 
       # filepath matcher and instead evaluate all rules with regex. The available
       # matchers are: filepath, and regexp.
       # Note: The regexp matcher uses Go's regexp package. You can find documentation
@@ -237,7 +237,7 @@ steps:
 ---
 steps:
   - ruleset:
-      # Below is displaying how to overwrite Vela's default behavior to use an 
+      # As shown below this will overwrite Vela's default behavior to use an 
       # "or" behavior when comparing all ruleset rules.
       # The available operators are: and, and or.
       operator: or
@@ -247,7 +247,7 @@ steps:
 ---
 steps:
   - ruleset:
-      # Below is displaying an explicit way to tell the ruleset to only execute
+      # As shown below this will tell the ruleset to only execute
       # this step when the branch is master and event is push.
       if:
         branch: master
@@ -258,8 +258,8 @@ steps:
 ---
 steps:
   - ruleset:
-      # Below is displaying an explicit way to tell the ruleset to only execute
-      # this step when the branch is not master and event is not push.
+      # As shown below this will overwrite Vela's default behavior to tell the ruleset
+      # to only execute this step when the branch is not master and event is not push.
       unless:
         branch: master
         event: push
@@ -271,8 +271,9 @@ steps:
 ---
 steps:
     # Extra configuration variables specific to a plugin. All tags within the 
-    # parameters tag are injected environment variables into the container
-    # as PARAMETER_<TAG_NAME>. Below is illustrating a plugin that needs to fields:
+    # parameters tag are injected environment variables into the
+    # container as PARAMETER_<TAG_NAME>.
+    # As shown below this step will execute a plugin that needs two fields:
     # PARAMETERS_REGISTRY=index.docker.io
     # PARAMETERS_REPO=octocat/hello-world,go-vela/docs
   - parameters:
