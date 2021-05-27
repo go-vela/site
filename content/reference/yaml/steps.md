@@ -215,8 +215,8 @@ The following controls can be used to modify the behavior of the ruleset evaluat
 ---
 steps:
   - ruleset:
-      # Below is displaying it will allow the step to continue the sequential step
-      # pipeline when this step fails.
+      # Below is displaying how to allow the build to continue
+      # the sequential step pipeline when this step fails.
       continue: true
 ```
 
@@ -224,7 +224,7 @@ steps:
 ---
 steps:
   - ruleset:
-      # Below is displaying it will overwrite Vela's default behavior to use a 
+      # Below is displaying how to overwrite Vela's default behavior to use a 
       # filepath matcher and instead evaluate all rules with regex. The available
       # matchers are: filepath, and regexp.
       # Note: The regexp matcher uses Go's regexp package. You can find documentation
@@ -237,9 +237,9 @@ steps:
 ---
 steps:
   - ruleset:
-      # Below is displaying it will overwrite Vela's default behavior to use a 
-      # "and" behavior when comparing all ruleset rules. The available
-      # operators are: and, and or.
+      # Below is displaying how to overwrite Vela's default behavior to use an 
+      # "or" behavior when comparing all ruleset rules.
+      # The available operators are: and, and or.
       operator: or
 ```
 
@@ -247,8 +247,8 @@ steps:
 ---
 steps:
   - ruleset:
-      # As shown below, this is an explicit way to tell the ruleset
-      # to only execute this step when the branch is master and event is push.
+      # Below is displaying an explicit way to tell the ruleset to only execute
+      # this step when the branch is master and event is push.
       if:
         branch: master
         event: push
@@ -258,8 +258,8 @@ steps:
 ---
 steps:
   - ruleset:
-      # Below is displaying it will is an explicit way to tell the ruleset
-      # to only execute this step when the branch is not master and event is not push.
+      # Below is displaying an explicit way to tell the ruleset to only execute
+      # this step when the branch is not master and event is not push.
       unless:
         branch: master
         event: push
