@@ -1,26 +1,26 @@
 ---
-title: "Logs"
-linkTitle: "Logs"
+title: "Remove"
+linkTitle: "Remove"
 description: >
-  Learn how to view step logs.
+  Learn how to remove logs for a service.
 ---
 
 ## Endpoint
 
 ```
-GET  /api/v1/repos/:org/:repo/builds/:build/steps/:step/logs
+DELETE  /api/v1/repos/:org/:repo/builds/:build/services/:service/logs
 ```
 
 ## Parameters
 
 The following parameters are used to configure the endpoint:
 
-| Name    | Description          |
-| ------- | -------------------- |
-| `org`   | name of organization |
-| `repo`  | name of repository   |
-| `build` | number of build      |
-| `step`  | number of step       |
+| Name      | Description          |
+| --------- | -------------------- |
+| `org`     | name of organization |
+| `repo`    | name of repository   |
+| `build`   | number of build      |
+| `service` | number of service    |
 
 ## Permissions
 
@@ -45,19 +45,13 @@ To authenticate to the API, please review the [authentication documentation](/do
 
 ```sh
 curl \
-  -X GET \
+  -X DELETE \
   -H "Authorization: Bearer <token>" \
-  "http://127.0.0.1:8080/api/v1/repos/github/octocat/builds/1/steps/1/logs"
+  "http://127.0.0.1:8080/api/v1/repos/github/octocat/builds/1/services/1/logs"
 ```
 
 #### Response
 
-```json
-{
-  "id": 1,
-  "build_id": 1,
-  "repo_id": 1,
-  "step_id": 1,
-  "data": "SGVsbG8sIFdvcmxkIQ=="
-}
+```
+Logs deleted for service github/octocat/1/1
 ```
