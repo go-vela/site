@@ -38,8 +38,10 @@ The following environment variables are injected into every step, service, or se
 | `VELA_BUILD_TITLE`        | `push received from https://github.com/octocat/hello-world` | title for the build                                                 |
 | `VELA_BUILD_WORKSPACE`    | `/vela/src/github.com/octocat/hello-world`                  | working directory the build is executed in                          |
 
+##### `comment` event only
+
 {{% alert color="info" %}}
-The following table includes variables only available during the **comment** event
+The following table includes variables only available during the **comment** event.
 {{% /alert %}}
 
 | Key                       | Value | Explanation                                                |
@@ -47,8 +49,12 @@ The following table includes variables only available during the **comment** eve
 | `VELA_BUILD_PULL_REQUEST` | `1`   | pull request number is populated from the source reference |
 | `VELA_PULL_REQUEST`       | `1`   | pull request number is populated from the source reference |
 
+##### `deployment` event only
+
 {{% alert color="info" %}}
-The following table includes variables only available during the **deploy** event
+The following table includes variables only available during the **deployment** event.
+
+All custom parameters are passed are available with a `DEPLOYMENT_PARAMETER_` prefix of the key.
 {{% /alert %}}
 
 | Key                 | Value        | Explanation                                   |
@@ -56,8 +62,10 @@ The following table includes variables only available during the **deploy** even
 | `VELA_BUILD_TARGET` | `production` | name of target environment for the deployment |
 | `VELA_DEPLOYMENT`   | `production` | name of target environment for the deployment |
 
+##### `pull_request` event only
+
 {{% alert color="info" %}}
-The following table includes variables only available during the **pull request** event
+The following table includes variables only available during the **pull_request** event.
 {{% /alert %}}
 
 | Key                        | Value    | Explanation                                                |
@@ -67,8 +75,10 @@ The following table includes variables only available during the **pull request*
 | `VELA_PULL_REQUEST_SOURCE` | `dev`    | pull request branch from the source reference              |
 | `VELA_PULL_REQUEST_TARGET` | `master` | pull request branch for the target reference               |
 
+##### `tag` event only
+
 {{% alert color="info" %}}
-The following table includes variables only available during the **tag** event
+The following table includes variables only available during the **tag** event.
 {{% /alert %}}
 
 | Key              | Value    | Explanation                                |

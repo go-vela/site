@@ -36,10 +36,6 @@ This command also supports setting the following parameters via a configuration 
 For more information, please review the [CLI config documentation](/docs/reference/cli/config/).
 {{% /alert %}}
 
-## Permissions
-
-COMING SOON!
-
 ## Sample
 
 {{% alert color="warning" %}}
@@ -50,15 +46,11 @@ To install the CLI, please review the [installation documentation](/docs/referen
 To setup the CLI, please review the [authentication documentation](/docs/reference/cli/authentication/).
 {{% /alert %}}
 
-#### Request
-
 ```sh
-vela view deployment --org github --repo octocat --deployment 1
-```
+# Request with CLI to add a deployment for the "github" org and "octocat" repo
+$ vela view deployment --org github --repo octocat --deployment 1
 
-#### Response
-
-```sh
+# Response generated from successful CLI command
 id: 1
 repo_id: 1
 url: https://api.github.com/repos/github/octocat/deployments/1
@@ -68,4 +60,16 @@ ref: master
 task: deploy:vela
 target: production
 description: Deployment request from Vela
+```
+
+## Examples
+
+```sh
+EXAMPLES:
+  1. View deployment details for a repository.
+    $ vela view deployment --org MyOrg --repo MyRepo --deployment 1
+  2. View deployment details for a repository with json output.
+    $ vela view deployment --org MyOrg --repo MyRepo --deployment 1 --output json
+  3. View deployment details for a repository config or environment variables are set.
+    $ vela view deployment --deployment 1
 ```

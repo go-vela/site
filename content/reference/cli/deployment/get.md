@@ -37,10 +37,6 @@ This command also supports setting the following parameters via a configuration 
 For more information, please review the [CLI config documentation](/docs/reference/cli/config/).
 {{% /alert %}}
 
-## Permissions
-
-COMING SOON!
-
 ## Sample
 
 {{% alert color="warning" %}}
@@ -51,16 +47,28 @@ To install the CLI, please review the [installation documentation](/docs/referen
 To setup the CLI, please review the [authentication documentation](/docs/reference/cli/authentication/).
 {{% /alert %}}
 
-#### Request
-
 ```sh
-vela get deployment --org github --repo octocat
-```
+# Request with CLI to view a deployment for the "github" org and "octocat" repo
+$ vela get deployment --org github --repo octocat
 
-#### Response
-
-```sh
+# Response generated from successful CLI command
 ID  TASK         USER     REF     TARGET
 2   deploy:vela  octocat  master  production
 1   deploy:vela  octocat  master  production
+```
+
+## Examples
+
+```sh
+EXAMPLES:
+  1. Get deployments for a repository.
+    $ vela get deployment --org MyOrg --repo MyRepo
+  2. Get deployments for a repository with wide view output.
+    $ vela get deployment --org MyOrg --repo MyRepo --output wide
+  3. Get deployments for a repository with yaml output.
+    $ vela get deployment --org MyOrg --repo MyRepo --output yaml
+  4. Get deployments for a repository with json output.
+    $ vela get deployment --org MyOrg --repo MyRepo --output json
+  5. Get deployments for a repository when config or environment variables are set.
+    $ vela get deployment
 ```
