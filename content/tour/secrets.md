@@ -10,7 +10,7 @@ Sometimes you need to inject environment information into an image or plugin tha
 
 For this, we introduce pipeline secrets as a pattern to keep sensitive data safe. Secrets are always retrieved at the beginning of a pipeline before any services, stages, or steps are created or started.
 
-They are answer when you don’t want to provide that sensitive information in plain text.
+They are the answer when you don’t want to provide that sensitive information in plain text.
 
 Let's go back to our Docker image used within the plugin tutorial and focus only on the repository secrets type. You can learn about all secret types in the [internal secrets example](/docs/usage/examples/secrets_internal/).
 
@@ -45,7 +45,7 @@ steps:
     image: target/vela-kaniko
     # Now lets try something more complicated let's say you want to
     # alias your secret. You can do that via source and target syntax
-    # where source is the name and target is the name of the env var.
+    # where source is the new name and target is the name of the env var.
     secrets:
       - source: password
         target: docker_password
