@@ -8,7 +8,7 @@ description: >
 ## Command
 
 ```
-$ vela execute pipeline <parameters...> <arguments...>
+$ vela exec pipeline <parameters...> <arguments...>
 ```
 
 {{% alert color="info" %}}
