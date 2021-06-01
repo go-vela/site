@@ -8,7 +8,7 @@ description: >
 
 Templates help to create reusable workflows in order to make grouping tasks like building and deploying code.
 
-Templates can solve duplicative tasks in a single workflow or be leveraged any number of pipelines to make reusable tasks across multiple workflows.
+Templates can solve duplicative tasks in a single workflow or be leveraged by any number of pipelines to make reusable tasks across multiple workflows.
 
 In this pipeline each step is shown with the minimum required YAML tags to execute a step. 
 

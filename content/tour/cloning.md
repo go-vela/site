@@ -34,12 +34,12 @@ steps:
 
 
 ```yaml
-# Below is displaying the turning off the clone behavior that. 
+# Below is displaying how to turn off the clone behavior.
 metadata:
   clone: false
 
 steps:
-  # Now that the turn is cloned off; you can use any Docker
+  # Now that the clone is turned off; you can use any Docker
   # image with git installed to manually clone the repo
   # with any clone specific settings for the repository.
   - name: clone

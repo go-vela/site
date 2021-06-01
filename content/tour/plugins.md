@@ -30,6 +30,8 @@ steps:
     # Environment variables injected:
     # PARAMETER_REGISTRY=index.docker.io
     # PARAMETER_REPO=index.docker.io/go-vela/hello-world
+    # PARAMETER_USERNAME=moby
+    # PARAMETER_PASSWORD=mypassword
     # PARAMETER_TAGS=latest,v1.0.0
     parameters:
       registry: index.docker.io

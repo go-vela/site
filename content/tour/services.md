@@ -14,7 +14,7 @@ Services are always created at the beginning of a pipeline in the order they are
 
 The `name:` field of the service defines what the hostname of the service will for available communicate to other tasks the pipeline.
 
-However, there are times when you need more control over when a service is created. Perhaps you are dealing with a service that has start up dependencies and service A needs some to to start up before service B is started
+However, there are times when you need more control over when a service is created. Perhaps you are dealing with a service that has start up dependencies and service A needs something to start up before service B is started.
 
 **See it in action with examples!**
 
