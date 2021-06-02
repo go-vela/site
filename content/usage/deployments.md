@@ -10,7 +10,9 @@ Pipelines can be written with your specific branching methodology in mind but wh
 Vela leverages a deep integration with [GitHub Deployments](https://docs.github.com/en/rest/reference/repos#deployments) which will not only trigger your build but create a system of record on GitHub for your deployment action. You can leverage a deployment in your steps like:
 
 {{% alert title="Tip:" color="info" %}}
-Make sure you have events enabled on your repo and any secrets are available for that event.
+Make sure you have the `deployment` event enabled within repo settings
+
+ Additionally, any secret you may need for the event must also have `deployments` allowed for events.
 {{% /alert %}}
 
 ```yaml

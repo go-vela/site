@@ -54,7 +54,7 @@ The following table includes variables only available during the **comment** eve
 {{% alert color="info" %}}
 The following table includes variables only available during the **deployment** event.
 
-All custom parameters are passed are available with a `DEPLOYMENT_PARAMETER_` prefix of the key.
+All custom parameters are passed to the deployment available with a `DEPLOYMENT_PARAMETER_` prefix of the key.
 {{% /alert %}}
 
 | Key                 | Value        | Explanation                                   |
