@@ -67,6 +67,7 @@ link: https://github.com/github/octocat
 clone: https://github.com/github/octocat.git
 branch: master
 timeout: 60
+counter: 0
 visibility: public
 private: false
 trusted: false

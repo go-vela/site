@@ -28,6 +28,7 @@ The following parameters are used to configure the command:
 | `clone`      | clone URL for the repository                       | `VELA_CLONE`, `REPO_CLONE`           |
 | `visibility` | access level required to view the repository       | `VELA_VISIBILITY`, `REPO_VISIBILITY` |
 | `timeout`    | max time allowed per build                         | `VELA_TIMEOUT`, `REPO_TIMEOUT`       |
+| `counter`    | set a value for a new build number                 | `VELA_COUNTER`, `REPO_COUNTER`       |
 | `private`    | disables public access to the repository           | `VELA_PRIVATE`, `REPO_PRIVATE`       |
 | `trusted`    | elevates permissions for builds for the repository | `VELA_TRUSTED`, `REPO_TRUSTED`       |
 | `active`     | enables/disables the repository                    | `VELA_ACTIVE`, `REPO_ACTIVE`         |
@@ -76,6 +77,7 @@ link: https://github.com/github/octocat
 clone: https://github.com/github/octocat.git
 branch: master
 timeout: 60
+counter: 0
 visibility: public
 private: false
 trusted: false
