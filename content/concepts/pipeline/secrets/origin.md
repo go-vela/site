@@ -5,7 +5,7 @@ description: >
   This section contains information on the origin component for a secret.
 ---
 
-The `origin` component is a part of a [secret](/docs/concepts/pipeline/secrets/) for Vela.
+The `origin` component is a part of a [secret](/docs/tour/secrets/) for Vela.
 
 This declaration allows you to pull secrets from non-internal secret providers via plugins.
 
