@@ -274,8 +274,8 @@ steps:
     # parameters tag are injected environment variables into the
     # container as PARAMETER_<TAG_NAME>.
     # As shown below this step will execute a plugin that needs two fields:
-    # PARAMETERS_REGISTRY=index.docker.io
-    # PARAMETERS_REPO=octocat/hello-world,go-vela/docs
+    # PARAMETER_REGISTRY=index.docker.io
+    # PARAMETER_REPO=octocat/hello-world,go-vela/docs
   - parameters:
       registry: index.docker.io
       repo: [ go-vela/hello-world,  go-vela/docs ]

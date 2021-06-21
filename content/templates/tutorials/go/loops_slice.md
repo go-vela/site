@@ -48,7 +48,7 @@ steps:
     commands:
       - go test ./...
     image: {{ $value }}
-    {{ .pull_policy }}
+    {{ $.pull_policy }}
     ruleset:
       event: [ push, pull_request ]
 
@@ -61,7 +61,7 @@ steps:
       CGO_ENABLED: '0'
       GOOS: linux
     image: golang:latest
-    {{ .pull_policy }}
+    {{ $.pull_policy }}
     ruleset:
       event: [ push, pull_request ]
 ```

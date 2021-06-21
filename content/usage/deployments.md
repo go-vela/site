@@ -42,7 +42,7 @@ Let us look at an example workflow for executing a deployment on your repo. You 
 * [Steps](/docs/tour/steps/)
   * [image](/docs/tour/image/)
   * [Commands](/docs/tour/environment/)
-  * [Ruleset](/docs/tour/ruleset/)
+  * [Ruleset](/docs/tour/rulesets/)
 
 ```yaml
 version: "1"

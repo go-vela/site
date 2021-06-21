@@ -20,8 +20,8 @@ However, this time we are going to remove the `username:` and `password:` YAML t
 
 **See it in action with examples!**
 
-* [internal secrets](/docs/usage/examples/internal_secrets/)
-* [external secrets](/docs/usage/examples/external_secrets/)
+* [internal secrets](/docs/usage/examples/secrets_internal/)
+* [external secrets](/docs/usage/examples/secrets_external/)
 
 <!-- section break -->
 
