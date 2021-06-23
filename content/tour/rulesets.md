@@ -45,4 +45,4 @@ The ruleset tag gives you the ability to add conditions on the step to tell Vela
 
 **Tag references:**
 
-[`name:`](/docs/reference/yaml/steps/#the-name-tag), [`ruleset:`](/docs/reference/yaml/steps/#the-image-tag),[`image:`](/docs/reference/yaml/steps/#the-image-tag), [`commands:`](/docs/reference/yaml/steps/#the-commands-tag),
+[`name:`](/docs/reference/yaml/steps/#the-name-tag), [`ruleset:`](/docs/reference/yaml/steps/#the-ruleset-tag),[`image:`](/docs/reference/yaml/steps/#the-image-tag), [`commands:`](/docs/reference/yaml/steps/#the-commands-tag),
