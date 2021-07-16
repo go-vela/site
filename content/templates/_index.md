@@ -22,7 +22,7 @@ The following YAML tags are not valid inside a template pipeline:
 
 ## Reference documentation
 
-Check out the [YAML reference documentation](https://go-vela.github.io/docs/reference/yaml/templates/) for templates.
+Check out the [YAML reference documentation](/docs/reference/yaml/templates/) for templates.
 
 ## Template Engines
 
