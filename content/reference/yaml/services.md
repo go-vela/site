@@ -27,7 +27,7 @@ services:
 | `environment` | N        | map || []string | Variables to inject into the container environment              |
 | `entrypoint`  | N        | []string        | Commands to execute inside the container                        |
 | `ports`       | N        | string          | List of ports to map for the container in the pipeline          |
-| `ulimits`     | N        | string          | Set the user limits for the container.                          |
+| `ulimits`     | N        | []string        | Set the user limits for the container                           |
 
 ### Usage
 
