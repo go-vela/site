@@ -34,7 +34,7 @@ stages:
 |---------|----------|----------|-----------------------------------------------------------|
 | `name`  | Y        | string   | Unique identifier for the stage in the pipeline           |
 | `steps` | Y        | []string | Sequential execution instructions for the stage           |
-| `needs` | N        | struct   | Stages that must complete before starting the current one |
+| `needs` | N        | []string | Stages that must complete before starting the current one |
 
 ### Usage
 

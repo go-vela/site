@@ -20,6 +20,10 @@ The following YAML tags are not valid inside a template pipeline:
 * `templates:`
 {{% /alert %}}
 
+## Reference documentation
+
+Check out the [YAML reference documentation](/docs/reference/yaml/templates/) for templates.
+
 ## Template Engines
 
 ### Format

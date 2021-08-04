@@ -22,11 +22,12 @@ services:
 | Tag           | Required | Type            | Description                                                     |
 |---------------|----------|-----------------|-----------------------------------------------------------------|
 | `name`        | Y        | string          | Unique identifier for the container in the pipeline             |
-| `image`       | Y        | []string        | Docker image used to create an ephemeral container                 |
+| `image`       | Y        | []string        | Docker image used to create an ephemeral container              |
 | `pull`        | N        | string          | Declaration to configure if and when the Docker image is pulled |
 | `environment` | N        | map || []string | Variables to inject into the container environment              |
 | `entrypoint`  | N        | []string        | Commands to execute inside the container                        |
 | `ports`       | N        | string          | List of ports to map for the container in the pipeline          |
+| `ulimits`     | N        | []string        | Set the user limits for the container                           |
 
 ### Usage
 
@@ -98,4 +99,18 @@ services:
     # List of ports to map for the container in the pipeline.
   - ports: 
       - "8080:5432"
+```
+
+#### The `ulimits:` tag
+
+```yaml
+---
+steps:
+    # Set the user limits for the container.  
+  - ulimits:
+      - name: foo
+        soft: 1024
+      - name: bar
+        soft: 1024
+        hard: 2048
 ```
