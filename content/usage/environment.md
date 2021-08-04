@@ -5,9 +5,9 @@ description: >
   Learn about how to leverage the environment within your builds.
 ---
 
-Vela provides the ability to define environment variables scoped to individual steps, services and secrets. Additionally, if you need global environment setting you can set it at the parent and have it injected to all containers.
+Vela provides the ability to define environment variables scoped to individual steps, services and secrets. Additionally, if you need global environment variables you can set it at the parent and have it injected to all containers.
 
-Please note the environment is design to be unique per container. Vela does inject a variety of default values from build, repo and user information.
+Please note the environment is designed to be unique per container. Vela does inject a variety of default values from build, repo and user information.
 
 Defaults:
 
@@ -71,7 +71,7 @@ secrets:
 
 ## Global Usage
 
-By default global injection effects all containers ran within the pipeline but if only want some container types to receive the configuration you can limit which types get them by adding the `environment` declaring into the metadata.
+By default global injection affects all containers ran within the pipeline. However, if only want some container types to receive the configuration you can limit which types get them by adding the `environment` declaration into the metadata.
 
 {{% alert title="Note:" color="primary" %}}
 Valid values for metadata `environment:` YAML tag are `steps`, `services` and `secrets`.
@@ -98,13 +98,14 @@ steps:
 +   environment:
 +     LOCAL_EXAMPLE: Hello, World!
     commands:
-      # you can use bash commands in-line to set or override variables
+      # you can local shell commands in-line to set or override variables
       - export EXAMPLE="Hello World From Vela Team"
       - echo ${EXAMPLE}
       - echo ${GLOBAL_EXAMPLE}
 
 secrets:
-  # Global configuration is no longer available in secrets
+  # Global configuration is no longer available in secrets since "secrets"
+  # was removed as a value in the metadata.environment block.
   - origin:
       name: private vault
       image: target/secret-vault:latest

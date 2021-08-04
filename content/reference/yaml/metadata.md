@@ -55,8 +55,8 @@ metadata:
 ```yaml
 ---
 metadata:
-  # By default, the below is populated into every pipeline
-  # but if block exists configuration specified is used during
-  # environment injection during compile phase
+  # By default, the below is populated into every pipeline with
+  # services, steps, and secrets. But, when the block exists the
+  # configuration specified is used during compile phase.
   environment: [ steps, services, secrets ]
 ```
