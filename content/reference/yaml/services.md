@@ -22,7 +22,7 @@ services:
 | Tag           | Required | Type            | Description                                                     |
 |---------------|----------|-----------------|-----------------------------------------------------------------|
 | `name`        | Y        | string          | Unique identifier for the container in the pipeline             |
-| `image`       | Y        | []string        | Docker image used to create an ephemeral container              |
+| `image`       | Y        | string          | Docker image used to create an ephemeral container              |
 | `pull`        | N        | string          | Declaration to configure if and when the Docker image is pulled |
 | `environment` | N        | map || []string | Variables to inject into the container environment              |
 | `entrypoint`  | N        | []string        | Commands to execute inside the container                        |

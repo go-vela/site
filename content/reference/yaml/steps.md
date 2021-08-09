@@ -24,7 +24,7 @@ steps:
 | Tag           | Required | Type            | Description                                                      |
 |---------------|----------|-----------------|------------------------------------------------------------------|
 | `name`        | Y        | string          | Unique identifier for the container in the pipeline.             |
-| `image`       | Y        | []string        | Docker image used to create ephemeral container.                 |
+| `image`       | Y        | string          | Docker image used to create ephemeral container.                 |
 | `pull`        | N        | string          | Declaration to configure if and when the Docker image is pulled. |
 | `secrets`     | N        | struct          | Sensitive variables injected into the container environment.     |
 | `environment` | N        | map || []string | Variables to inject into the container environment.              |
