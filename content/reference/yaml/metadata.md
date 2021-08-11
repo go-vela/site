@@ -49,14 +49,3 @@ metadata:
   # Enables injecting the default clone process
   clone: true
 ```
-
-#### The `environment:` tag
-
-```yaml
----
-metadata:
-  # By default, the below is populated into every pipeline with
-  # services, steps, and secrets. But, when the block exists the
-  # configuration specified is used during compile phase.
-  environment: [ steps, services, secrets ]
-```
