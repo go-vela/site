@@ -124,3 +124,56 @@ steps:
       vars:
         image: golang:latest
 ```
+
+### Templating directly in `.vela.yml`
+
+As of `0.9.0` Vela allows using Starlark and Go templates directly in the `.vela.yml` 
+given you select the desired template language in the pipeline settings.
+
+#### Example `.vela.yml` using Golang
+```yaml
+
+version: "1"
+
+{{$stageList := list "foo" "bar" "star" -}}
+
+stages:
+  {{range $stage := $stageList -}}
+  {{ $stage }}:
+    steps:
+      - name: {{ $stage }}
+        image: alpine
+        commands:
+          - echo hello from {{ $stage }}
+  {{ end }}
+```
+
+#### Example `.vela.yml` using Starlark
+```yaml
+
+def main(ctx):
+  stageNames = ["foo", "bar", "star"]
+
+  stages = {}
+
+  for name in stageNames:
+    stages[name] = stage(name)
+
+  return {
+      'version': '1',
+      'stages': stages
+  }
+
+def stage(word):
+  return {
+      "steps": [
+        {
+          "name": "build_%s" % word,
+          "image": "alpine:latest",
+          'commands': [
+              "echo hello from %s" % word
+          ]
+        }
+      ]
+  }
+```
