@@ -128,7 +128,10 @@ steps:
 ### Templating directly in `.vela.yml`
 
 As of `0.9.0` Vela allows using Starlark and Go templates directly in the `.vela.yml` 
-given you select the desired template language in the pipeline settings.
+given you select the desired template language in the pipeline settings `https://vela.company.com/<org>/<repo>/settings`.
+
+**NOTE:** When starlark is chosen in the pipeline settings, Vela will look for any of the following files for the pipeline instructions
+`.vela.yml`, `.vela.py` or `.vela.star`
 
 #### Example `.vela.yml` using Golang
 ```yaml
@@ -148,8 +151,8 @@ stages:
   {{ end }}
 ```
 
-#### Example `.vela.yml` using Starlark
-```yaml
+#### Example `.vela.yml`, `.vela.py` or `.vela.star` using Starlark
+```python
 
 def main(ctx):
   stageNames = ["foo", "bar", "star"]
