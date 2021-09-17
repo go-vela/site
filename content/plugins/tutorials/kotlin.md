@@ -113,10 +113,6 @@ Once we have the jar needed to accomplish our plugin's task, we need to create a
 
 This image should contain the jar and be setup to run that jar when the plugin is executed
 
-{{% alert color="info" %}}
-Update myapp to the name of your application
-{{% /alert %}}
-
 ```docker
 FROM alpine:latest
 
