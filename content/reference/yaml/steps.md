@@ -37,6 +37,7 @@ steps:
 | `volume`      | N        | string          | Mount volumes for the container.                                 |
 | `ulimits`     | N        | string          | Set the user limits for the container.                           |
 | `privileged`  | N        | string          | Run the container with extra privileges.                         |
+| `user`        | N        | string          | Set the user for the container. |
 
 
 ### Usage
@@ -389,6 +390,15 @@ steps:
 ```yaml
 ---
 steps:
-    # Run the container with extra privileges. 
+    # Run the container with extra privileges.
   - privileged: true
+```
+
+#### The `user:` tag
+
+```yaml
+---
+steps:
+    # Run the container with the foo user.
+  - user: foo
 ```

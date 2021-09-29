@@ -28,6 +28,7 @@ services:
 | `entrypoint`  | N        | []string        | Commands to execute inside the container                        |
 | `ports`       | N        | string          | List of ports to map for the container in the pipeline          |
 | `ulimits`     | N        | []string        | Set the user limits for the container                           |
+| `user`        | N        | string          | Set the user for the container. |
 
 ### Usage
 
@@ -106,11 +107,20 @@ services:
 ```yaml
 ---
 steps:
-    # Set the user limits for the container.  
+    # Set the user limits for the container.
   - ulimits:
       - name: foo
         soft: 1024
       - name: bar
         soft: 1024
         hard: 2048
+```
+
+#### The `user:` tag
+
+```yaml
+---
+steps:
+    # Run the container with the foo user.
+  - user: foo
 ```
