@@ -17,7 +17,7 @@ When writing a new template getting feedback can be a very painful process. Vela
 
 ## Pipeline endpoints
 
-This method allows you to look at your evaluate your pipeline that exists within a VCS system. It is most commonly referenced on the build page in the pipeline tab.
+This method allows you to evaluate your pipeline that exists within a VCS system. It is most commonly referenced on the build page in the pipeline tab.
 
 Additionally, you can also interact with it the Vela CLI or API if you're trying to create more elaborate workflows.
 
