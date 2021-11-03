@@ -33,7 +33,7 @@ The following environment variables are injected into every step, service, or se
 | `VELA_BUILD_RUNTIME`      | `docker`                                                    | runtime where the build was executed                                |
 | `VELA_BUILD_SENDER`       | `NealColeman`                                               | user who triggered the build                                        |
 | `VELA_BUILD_STARTED`      | `1556730001`                                                | unix timestamp representing build start time                        |
-| `VELA_BUILD_SOURCE`       | `1556730001`                                                | name of the source provider for the repo                            |
+| `VELA_BUILD_SOURCE`       | `https://github.com/octocat/hello-world/commit/7fd1a60b01f91b314f59955a4e4d4e80d8edf11d` |  full url for the source commit the build was triggered from                            |
 | `VELA_BUILD_STATUS`       | `success`                                                   | status of the build                                                 |
 | `VELA_BUILD_TITLE`        | `push received from https://github.com/octocat/hello-world` | title for the build                                                 |
 | `VELA_BUILD_WORKSPACE`    | `/vela/src/github.com/octocat/hello-world`                  | working directory the build is executed in                          |
