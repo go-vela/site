@@ -20,8 +20,8 @@ Work with your server administer to understand what routes are available for you
 
 The following [pipeline concepts](/docs/tour/) are being used in the pipeline below:
 
-* *Worker* 
-  * *Platform* 
+* *Worker*
+  * *Platform*
 * [Steps](/docs/tour/steps/)
   * [Image](/docs/tour/image/)
   * [Pull](/docs/tour/image/)
@@ -51,8 +51,8 @@ steps:
 
 The following [pipeline concepts](/docs/tour/) are being used in the pipeline below:
 
-* [Worker](/docs/tour/worker/)
-  * [Platform](/docs/tour/worker/)
+* *Worker*
+  * *Platform*
 * [Stages](/docs/tour/stages/)
   * [Steps](/docs/tour/steps/)
   * [Image](/docs/tour/image/)

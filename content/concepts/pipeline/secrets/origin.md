@@ -49,5 +49,5 @@ steps:
 ```
 
 {{% alert color="info" %}}
-To see more information on the Vault plugin usage see the [Vault docs](docs/plugins/registry/secret/vault)
+To see more information on the Vault plugin usage see the [Vault docs](/docs/plugins/registry/secret/vault)
 {{% /alert %}}
