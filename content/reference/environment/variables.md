@@ -16,7 +16,7 @@ The following environment variables are injected into every step, service, or se
 | `VELA_BUILD_AUTHOR`       | `octocat`                                                   | author from the source commit                                       |
 | `VELA_BUILD_AUTHOR_EMAIL` | `octocat@github.com`                                        | author email from the source commit                                 |
 | `VELA_BUILD_BASE_REF`     | `refs/heads/dev`                                            | reference from the base commit                                      |
-| `VELA_BUILD_BRANCH`       | `master`                                                    | branch from the source commit                                       |
+| `VELA_BUILD_BRANCH`       | `main`                                                      | branch from the source commit                                       |
 | `VELA_BUILD_CHANNEL`      | `vela`                                                      | queue channel the build was published to                            |
 | `VELA_BUILD_CLONE`        | `https://github.com/octocat/hello-world.git`                | clone url for the repository the build was triggered from           |
 | `VELA_BUILD_COMMIT`       | `7fd1a60b01f91b314f59955a4e4d4e80d8edf11d`                  | commit sha from the source commit                                   |
@@ -29,7 +29,7 @@ The following environment variables are injected into every step, service, or se
 | `VELA_BUILD_MESSAGE`      | `Merge pull request #6 from octocat/patch-1`                | message from the source commit                                      |
 | `VELA_BUILD_NUMBER`       | `1`                                                         | build number                                                        |
 | `VELA_BUILD_PARENT`       | `1`                                                         | previous build number                                               |
-| `VELA_BUILD_REF`          | `refs/heads/master`                                         | reference from the source commit                                    |
+| `VELA_BUILD_REF`          | `refs/heads/main`                                           | reference from the source commit                                    |
 | `VELA_BUILD_RUNTIME`      | `docker`                                                    | runtime where the build was executed                                |
 | `VELA_BUILD_SENDER`       | `NealColeman`                                               | user who triggered the build                                        |
 | `VELA_BUILD_STARTED`      | `1556730001`                                                | unix timestamp representing build start time                        |
@@ -68,12 +68,12 @@ All custom parameters are passed to the deployment available with a `DEPLOYMENT_
 The following table includes variables only available during the **pull_request** event.
 {{% /alert %}}
 
-| Key                        | Value    | Explanation                                                |
-| -------------------------- | -------- | ---------------------------------------------------------- |
-| `VELA_BUILD_PULL_REQUEST`  | `1`      | pull request number is populated from the source reference |
-| `VELA_PULL_REQUEST`        | `1`      | pull request number is populated from the source reference |
-| `VELA_PULL_REQUEST_SOURCE` | `dev`    | pull request branch from the source reference              |
-| `VELA_PULL_REQUEST_TARGET` | `master` | pull request branch for the target reference               |
+| Key                        | Value  | Explanation                                                |
+| -------------------------- | ------ | ---------------------------------------------------------- |
+| `VELA_BUILD_PULL_REQUEST`  | `1`    | pull request number is populated from the source reference |
+| `VELA_PULL_REQUEST`        | `1`    | pull request number is populated from the source reference |
+| `VELA_PULL_REQUEST_SOURCE` | `dev`  | pull request branch from the source reference              |
+| `VELA_PULL_REQUEST_TARGET` | `main` | pull request branch for the target reference               |
 
 ##### `tag` event only
 
@@ -112,7 +112,7 @@ The following table includes variables only available during the **tag** event.
 | `VELA_REPO_ALLOW_PULL`    | `true`                                       | pull enabled setting for the repository    |
 | `VELA_REPO_ALLOW_PUSH`    | `true`                                       | push enabled setting for the repository    |
 | `VELA_REPO_ALLOW_TAG`     | `false`                                      | tag enabled setting for the repository     |
-| `VELA_REPO_BRANCH`        | `master`                                     | default branch of the repository           |
+| `VELA_REPO_BRANCH`        | `main`                                       | default branch of the repository           |
 | `VELA_REPO_CLONE`         | `https://github.com/octocat/hello-world.git` | clone url of the repository                |
 | `VELA_REPO_FULL_NAME`     | `octocat/hello-world`                        | full name of the repository                |
 | `VELA_REPO_LINK`          | `https://github.com/octocat/hello-world`     | direct url of the repository               |
