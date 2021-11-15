@@ -113,7 +113,7 @@ secrets:
 ---
 secrets:
     # Type of secret to fetch from storage backend.
-    # By default, Vela can pull repo but tag accepts the
+    # By default, Vela can pull repo but type accepts the
     # following values: repo, org, and shared
   - type: repo
 ```
