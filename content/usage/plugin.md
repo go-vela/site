@@ -27,6 +27,9 @@ steps:
 
 secrets:
   - name: vault_token
+    key: go-vela/vault_token
+    engine: native
+    type: org
 
   - origin:
       name: plugin
@@ -38,7 +41,7 @@ secrets:
         auth_method: token
         items:
           - source: secret/docker
-            path: docker   
+            path: docker
 ```
 
 We pass these variables in Vela using the `parameters` block. Any variable passed to this block, will be injected into the step as `PARAMETER_<variable>`:
@@ -56,6 +59,9 @@ steps:
 
 secrets:
   - name: vault_token
+    key: go-vela/vault_token
+    engine: native
+    type: org
 
   - origin:
       name: vault
@@ -67,7 +73,7 @@ secrets:
 +       auth_method: token
 +       items:
 +         - source: secret/docker
-+           path: docker  
++           path: docker
 ```
 
 From the above example, the following environment variables would be added to the containers:

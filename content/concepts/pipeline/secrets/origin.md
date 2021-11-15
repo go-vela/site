@@ -24,8 +24,10 @@ metadata:
   template: false
 
 secrets:
-  # Implicit secret definition.
   - name: vault_token
+    key: go-vela/vault_token
+    engine: native
+    type: org
 
 +  - origin:
 +     name: vault external secrets

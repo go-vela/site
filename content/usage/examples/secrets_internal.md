@@ -53,11 +53,12 @@ steps:
 
 
 secrets:
-  # Implicit secret definition. This definition is only supported for native secrets of repository type.
   - name: docker_username
+    key: vela/hello-world/docker_username
+    engine: native
+    type: repo
 
-  # Declarative secret definition.
-  - name: foo1
+  - name: docker_password
     key: vela/hello-world/docker_password
     engine: native
     type: repo
@@ -100,12 +101,13 @@ stages:
           repo: index.docker.io/vela/hello-world
 
 secrets:
-  # Implicit secret definition. This definition is only supported for native secrets of repository type.
   - name: docker_username
+    key: vela/hello-world/docker_username
+    engine: native
+    type: repo
 
-  # Declarative secret definition.
-  - name: foo1
+  - name: docker_password
     key: vela/hello-world/docker_password
     engine: native
-    type: repo   
+    type: repo
 ```

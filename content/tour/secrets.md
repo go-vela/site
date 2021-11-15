@@ -59,14 +59,10 @@ steps:
         - v1.0.0
 
 secrets:
-  # This syntax is an implicit way of pulling a repo secret.
-  # You can see all secret pattens in the reference section.
-  - name: docker_password
-  - name: password
-
-  # Notice here I decided to use the explicit syntax. This allows
-  # me to alias the name here instead of using source/target syntax
-  # directly in the step
+  # Notice here how the name and the key don't need to match.
+  # This gives end users an ability to reuse or rename secrets with
+  # different names across their various pipelines. This is similar
+  # to the alias above, but allows for aliasing across the entire pipeline.
   - name: docker_username
     key: go-vela/docs/username
     engine: native

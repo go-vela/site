@@ -11,12 +11,8 @@ The secret tag is intended to be used to pull secrets from the Vela server or ex
 ```yaml
 ---
 # This document is displaying all the required tags
-# to pull various secret types. 
-secrets: 
-  # Below is displaying the implicit native secret definition. This definition 
-  # is only supported for native secrets of repository type.
-  - name: foo
-
+# to pull various secret types.
+secrets:
   # Below is displaying the declarative secret definitions.
   - name: foo1
     key: go-vela/docs/foo1
@@ -30,11 +26,16 @@ secrets:
     key: go-vela/admins/foo3
     engine: native
     type: shared
+  - name: vault_token
+    key: go-vela/vault_token
+    engine: native
+    type: org
 
   # Below is displaying executing a secret plugin.
   - origin:
      name: External Vault Secret
      image: target/secret-vault:latest
+     secrets: [ vault_token ]
      parameters:
        addr: vault.company.com
        auth_method: token
@@ -42,7 +43,7 @@ secrets:
        token: sometoken
        items:
          - source: secret/vela
-           path: user    
+           path: user
 ```
 
 ## Tags
@@ -59,7 +60,7 @@ secrets:
 
 ```yaml
 ---
-secrets: 
+secrets:
     # Name of secret to reference in the pipeline.
   - name: postgres
 ```
@@ -78,18 +79,18 @@ The key is unique
 
 ```yaml
 ---
-secrets: 
-    # Path to secret to fetch from storage backend. Displaying a 
-    # repo type secret. 
+secrets:
+    # Path to secret to fetch from storage backend. Displaying a
+    # repo type secret.
   - key: go-vela/docs/foo1
 
-    # Path to secret to fetch from storage backend. Displaying a 
+    # Path to secret to fetch from storage backend. Displaying a
     # org type secret.
   - key: go-vela/foo1
-  
-    # Path to secret to fetch from storage backend. Displaying a 
+
+    # Path to secret to fetch from storage backend. Displaying a
     # shared type secret.
-  - key: go-vela/admins/foo1  
+  - key: go-vela/admins/foo1
 ```
 
 #### The `engine:` tag
@@ -100,9 +101,9 @@ To know what engines are available for your Vela installation, we recommend cons
 
 ```yaml
 ---
-secrets: 
+secrets:
     # Name of storage backend to fetch secret from, "native" signifies
-    # the backend provide it the Vela database. 
+    # the backend provide it the Vela database.
   - engine: native
 ```
 
@@ -110,9 +111,9 @@ secrets:
 
 ```yaml
 ---
-secrets: 
+secrets:
     # Type of secret to fetch from storage backend.
-    # By default, Vela can pull repo but tag accepts the 
+    # By default, Vela can pull repo but tag accepts the
     # following values: repo, org, and shared
   - type: repo
 ```
