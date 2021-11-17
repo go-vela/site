@@ -119,7 +119,7 @@ secrets:
     engine: native
     type: org
 
-- origin:
+  - origin:
       name: private vault
       image: target/secret-vault:latest
       pull: always
