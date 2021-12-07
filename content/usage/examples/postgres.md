@@ -39,6 +39,7 @@ services:
     pull: always
     environment:
       POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
       POSTGRES_DB: vela
 
 steps:
@@ -77,6 +78,7 @@ steps:
     pull: always
     environment:
       POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
       POSTGRES_DB: vela    
     detach: true
 
