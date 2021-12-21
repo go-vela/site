@@ -2,7 +2,7 @@
 title: "Sync"
 linkTitle: "Sync"
 description: >
-  Learn how to change ownership of a repo.
+  Learn how to sync a repo with SCM.
 ---
 
 ## Endpoint
@@ -46,6 +46,6 @@ curl \
 
 #### Response
 
-```
-Repo github/octocat synced
+```sh
+repo "github/octocat" synced
 ```

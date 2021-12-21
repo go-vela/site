@@ -4,6 +4,7 @@ resources/
 node_modules/
 tech-doc-hugo
 package-lock.json
+.hugo_build.lock
 
 # IntelliJ project folder
 .idea/

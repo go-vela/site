@@ -2,7 +2,7 @@
 title: "SyncAll"
 linkTitle: "SyncAll"
 description: >
-  Learn how to change ownership of a repo.
+  Learn how to sync org repos with SCM.
 ---
 
 ## Endpoint
@@ -45,6 +45,6 @@ curl \
 
 #### Response
 
-```
-Org github synced
+```sh
+org "github" synced
 ```
