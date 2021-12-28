@@ -30,7 +30,6 @@ This command also supports setting the following parameters via a configuration 
 
 - `org`
 - `repo`
-- `all`
 
 For more information, please review the [CLI config documentation](/docs/reference/cli/config/).
 {{% /alert %}}
