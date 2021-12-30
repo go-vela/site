@@ -19,10 +19,10 @@ For more information, please run `vela validate pipeline --help`.
 
 The following parameters are used to configure the command:
 
-| Name     | Description                        | Environment Variables            |
-| -------- | ---------------------------------- | -------------------------------- |
-| `file`   | name of the file for the pipeline  | `VELA_FILE`, `PIPELINE_FILE`     |
-| `path`   | path to the file for the pipeline  | `VELA_PATH`, `PIPELINE_PATH`     |
+| Name   | Description                       | Environment Variables        |
+| ------ | --------------------------------- | ---------------------------- |
+| `file` | name of the file for the pipeline | `VELA_FILE`, `PIPELINE_FILE` |
+| `path` | path to the file for the pipeline | `VELA_PATH`, `PIPELINE_PATH` |
 
 ## Permissions
 
@@ -48,3 +48,5 @@ vela validate pipeline
 ```sh
 ".vela.yml" is valid
 ```
+
+Using a template in your pipeline? You can [validate templates also](/docs/templates/working_with/#cli-pipeline-validation).
