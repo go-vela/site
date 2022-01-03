@@ -21,6 +21,8 @@ The following [pipeline concepts](/docs/tour) are being used in the pipeline bel
 
 * [Services](/docs/tour/services/)
   * [Environment](/docs/tour/environment/)
+* [Stages](/docs/tour/stages/)
+  * [Environment](/docs/tour/environment/)
 * [Steps](/docs/tour/steps/)
   * [Environment](/docs/tour/environment/)
 * [Secrets](/docs/tour/secrets/)
@@ -36,22 +38,28 @@ If you do not want the pre-processor to evaluate your expression it must be esca
 version: "1"
 + environment:
 +   GLOBAL_EXAMPLE: Hello, World Globally!
+
 services:
   - name: redis
 +   environment:
 +     LOCAL_EXAMPLE: Hello, World!
     image: redis:latest
 
-steps:
-  - name: check status
-    image: redis:latest
+stages:
+  first_stage:
 +   environment:
-+     LOCAL_EXAMPLE: Hello, World!
-    commands:
-      # you can use bash commands in-line to set or override variables
-      - export EXAMPLE="Hello World From Vela Team"
-      - echo ${EXAMPLE}
-      - echo ${GLOBAL_EXAMPLE}
++     STAGE_EXAMPLE: "All the World's a Stage!"
+    steps:
+      - name: check status
+        image: redis:latest
++       environment:
++         LOCAL_EXAMPLE: Hello, World!
+        commands:
+          # you can use bash commands in-line to set or override variables
+          - export EXAMPLE="Hello World From Vela Team"
+          - echo ${EXAMPLE}
+          - echo ${STAGE_EXAMPLE}
+          - echo ${GLOBAL_EXAMPLE}
 
 secrets:
   - origin:
@@ -71,7 +79,7 @@ secrets:
 
 ## Global Usage
 
-By default global injection affects all containers ran within the pipeline. However, if only want some container types to receive the configuration you can limit which types get them by adding the `environment` declaration into the metadata.
+By default global injection affects all containers ran within the pipeline. However, if you only want some container types to receive the configuration you can limit which types get them by adding the `environment` declaration into the metadata.
 
 {{% alert title="Note:" color="primary" %}}
 Valid values for metadata `environment:` YAML tag are `steps`, `services` and `secrets`.
@@ -79,38 +87,43 @@ Valid values for metadata `environment:` YAML tag are `steps`, `services` and `s
 
 ```diff
 version: "1"
-+ environment:
-+   GLOBAL_EXAMPLE: Hello, World Globally!
+  environment:
+    GLOBAL_EXAMPLE: Hello, World Globally!
 
-metadata:
-  environment: [ steps ]
++ metadata:
++   environment: [ steps, services ]
 
 services:
   # Global configuration is no longer available in services
   - name: redis
-+   environment:
-+     LOCAL_EXAMPLE: Hello, World!
+    environment:
+      LOCAL_EXAMPLE: Hello, World!
     image: redis:latest
 
-steps:
-  - name: check status
-    image: redis:latest
-+   environment:
-+     LOCAL_EXAMPLE: Hello, World!
-    commands:
-      # you can local shell commands in-line to set or override variables
-      - export EXAMPLE="Hello World From Vela Team"
-      - echo ${EXAMPLE}
-      - echo ${GLOBAL_EXAMPLE}
+stages:
+  first_stage:
+    environment:
+      STAGE_EXAMPLE: "All the World's a Stage!"
+    steps:
+      - name: check status
+        image: redis:latest
+        environment:
+          LOCAL_EXAMPLE: Hello, World!
+        commands:
+          # you can use bash commands in-line to set or override variables
+          - export EXAMPLE="Hello World From Vela Team"
+          - echo ${EXAMPLE}
+          - echo ${STAGE_EXAMPLE}
+          - echo ${GLOBAL_EXAMPLE}
 
 secrets:
-  # Global configuration is no longer available in secrets since "secrets"
-  # was removed as a value in the metadata.environment block.
++  # Global configuration is no longer available in secrets since "secrets"
++  # was removed as a value in the metadata.environment block.
   - origin:
       name: private vault
       image: target/secret-vault:latest
-+     environment:
-+       EXAMPLE: Hello, World!
+      environment:
+        EXAMPLE: Hello, World!
       secrets: [ vault_token ]
       parameters:
         addr: vault.example.com

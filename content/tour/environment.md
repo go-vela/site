@@ -6,9 +6,15 @@ description: >
   Learn about environment.
 ---
 
-To define environment variables scoped to a step you can add an `environment:` YAML tag.
+To define environment variables you can add an `environment:` YAML tag. Environment variables can be scoped to be global, within a stage, or within a step.
 
-Every step's environment is isolated to each individual step and all platform variables get injected with a custom `VELA_` prefix pattern.
+All platform variables get injected with a custom `VELA_` prefix pattern.
+
+The global environment encompasses all stages and steps within the pipeline.
+
+Every stage's environment is isolated to each individual stage and its steps. A stage environment variable will overwrite a global environment variable of the same name.
+
+Every step's environment is isolated to each individual step. A step environment variable will overwrite a global or stage environment variable of the same name.
 
 Vela does import a library to provide partial string operations. You can use the functions to manipulate string values prior to substitution.
 
@@ -21,24 +27,35 @@ With this substitution you should be aware `${variable}` expressions are subject
 <!-- section break -->
 
 ```yaml
-- name: Vela Platform ENV
-  image: alpine
-  commands:
-    - echo ${VELA_REPO_FULL_NAME}
+version: "1"
 
-- name: Custom User ENV
-  image: alpine
-  environment:
-    MESSAGE: Hello, World
-  commands:
-    - echo ${MESSAGE}
+environment:
+  GLOBAL_ENV: Global Environment
+stages:
+  hello:
+    environment: 
+      hello_message: Hello, World!
+    steps:
+      - name: Vela Platform ENV
+        image: alpine
+        commands:
+          - echo ${VELA_REPO_FULL_NAME}
 
-- name: String Operation
-  image: alpine
-  commands:
-    # This ":0:8" shorthand will cut the value of the commit
-    # down to just the first 0 through 8 characters of the sha.
-    - echo ${VELA_BUILD_COMMIT:0:8}    
+      - name: Custom User ENV
+        image: alpine
+        commands:
+          - echo ${HELLO_MESSAGE}
+  goodbye:
+    steps:
+      - name: String Operation
+        image: alpine
+        environment:
+          goodbye_message: Goodbye, World!
+        commands:
+          # This ":0:8" shorthand will cut the value of the commit
+          # down to just the first 0 through 8 characters of the sha.
+          - echo ${VELA_BUILD_COMMIT:0:8} 
+          - echo ${GOODBYE_MESSAGE}   
 ```
 
 <!-- section break -->
