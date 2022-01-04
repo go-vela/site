@@ -73,6 +73,11 @@ curl \
   "value": "",
   "type": "repo",
   "images": ["alpine"],
-  "events": ["push", "tag"]
+  "events": ["push", "tag"],
+  "allow_command": true,
+  "created_at": 1641314085,
+  "created_by": "octokitty",
+  "updated_at": 1641314500,
+  "updated_by": "octocat"
 }
 ```

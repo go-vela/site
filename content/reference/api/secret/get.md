@@ -63,7 +63,12 @@ curl \
     "value": null,
     "type": "repo",
     "images": ["alpine"],
-    "events": ["push"]
+    "events": ["push"],
+    "allow_command": true,
+    "created_at": 1641314085,
+    "created_by": "octokitty",
+    "updated_at": 1641314085,
+    "updated_by": "octokitty"
   },
   {
     "id": 2,
@@ -74,7 +79,12 @@ curl \
     "value": null,
     "type": "repo",
     "images": ["alpine"],
-    "events": ["push"]
+    "events": ["push"],
+    "allow_command": true,
+    "created_at": 1641314500,
+    "created_by": "octokitty",
+    "updated_at": 1641314500,
+    "updated_by": "octokitty"
   }
 ]
 ```
