@@ -1,4 +1,3 @@
-
 ---
 title: "Functions"
 linkTitle: "Functions"
