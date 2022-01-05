@@ -61,7 +61,7 @@ curl \
     "ref": "master",
     "task": "deploy:vela",
     "target": "production",
-    "description": "Deployment request from Vela"
+    "description": "Deployment request from Vela",
 		"payload": {},
 		"builds": [
       {
