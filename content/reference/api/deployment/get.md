@@ -62,8 +62,8 @@ curl \
     "task": "deploy:vela",
     "target": "production",
     "description": "Deployment request from Vela",
-		"payload": {},
-		"builds": [
+    "payload": {},
+    "builds": [
       {
         "id": 10,
         "repo_id": 1,
@@ -103,8 +103,8 @@ curl \
     "task": "deploy:vela",
     "target": "production",
     "description": "Deployment request from Vela",
-		"payload": {},
-		"builds": [
+    "payload": {},
+    "builds": [
       {
         "id": 1,
         "repo_id": 1,
