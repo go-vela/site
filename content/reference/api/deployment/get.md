@@ -96,7 +96,7 @@ curl \
   {
     "id": 9,
     "repo_id": 1,
-    "url": "https://api.github.com/repos/github/octocat/deployments/1",
+    "url": "https://api.github.com/repos/github/octocat/deployments/9",
     "user": "octocat",
     "commit": "48afb5bdc41ad69bf22588491333f7cf71135163",
     "ref": "master",
