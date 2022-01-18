@@ -55,3 +55,25 @@ The variable can be provided as a `string`.
 {{% alert title="Note:" color="primary" %}}
 This variable has a default value of `https://github.com/go-vela/ui/issues/new/`.
 {{% /alert %}}
+
+### VELA_LOG_BYTES_LIMIT
+
+This variable sets the maximum amount of bytes for logs the UI will attempt to render.
+
+The variable can be provided as an `integer`.
+
+{{% alert title="Note:" color="primary" %}}
+This variable has a default value of `20000` (2 MB).
+{{% /alert %}}
+
+### VELA_MAX_BUILD_LIMIT
+
+This variable sets the maximum amount of concurrent builds a repo is allowed to run.
+
+The variable can be provided as an `integer`.
+
+{{% alert title="Note:" color="primary" %}}
+This variable has a default value of `30`.
+
+This variable should match [the `VELA_MAX_BUILD_LIMIT` variable](/docs/administration/server/reference/#vela_max_build_limit) provided to the server.
+{{% /alert %}}
