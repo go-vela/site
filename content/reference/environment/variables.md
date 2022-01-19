@@ -104,24 +104,25 @@ The following table includes variables only available during the **tag** event.
 
 #### Repository Environment Variables
 
-| Key                       | Value                                        | Explanation                                |
-| ------------------------- | -------------------------------------------- | ------------------------------------------ |
-| `VELA_REPO_ACTIVE`        | `true`                                       | active setting for the repository          |
-| `VELA_REPO_ALLOW_COMMENT` | `false`                                      | comment enabled setting for the repository |
-| `VELA_REPO_ALLOW_DEPLOY`  | `false`                                      | deploy enabled setting for the repository  |
-| `VELA_REPO_ALLOW_PULL`    | `true`                                       | pull enabled setting for the repository    |
-| `VELA_REPO_ALLOW_PUSH`    | `true`                                       | push enabled setting for the repository    |
-| `VELA_REPO_ALLOW_TAG`     | `false`                                      | tag enabled setting for the repository     |
-| `VELA_REPO_BRANCH`        | `main`                                       | default branch of the repository           |
-| `VELA_REPO_CLONE`         | `https://github.com/octocat/hello-world.git` | clone url of the repository                |
-| `VELA_REPO_FULL_NAME`     | `octocat/hello-world`                        | full name of the repository                |
-| `VELA_REPO_LINK`          | `https://github.com/octocat/hello-world`     | direct url of the repository               |
-| `VELA_REPO_NAME`          | `hello-world`                                | name of the repository                     |
-| `VELA_REPO_ORG`           | `octocat`                                    | org of the repository                      |
-| `VELA_REPO_PRIVATE`       | `false`                                      | privacy setting for the repository         |
-| `VELA_REPO_TIMEOUT`       | `30`                                         | timeout setting for the repository         |
-| `VELA_REPO_TRUSTED`       | `false`                                      | trusted setting for the repository         |
-| `VELA_REPO_VISIBILITY`    | `public`                                     | visibility setting for the repository      |
+| Key                       | Value                                        | Explanation                                   |
+| ------------------------- | -------------------------------------------- | --------------------------------------------- |
+| `VELA_REPO_ACTIVE`        | `true`                                       | active setting for the repository             |
+| `VELA_REPO_ALLOW_COMMENT` | `false`                                      | comment enabled setting for the repository    |
+| `VELA_REPO_ALLOW_DEPLOY`  | `false`                                      | deploy enabled setting for the repository     |
+| `VELA_REPO_ALLOW_PULL`    | `true`                                       | pull enabled setting for the repository       |
+| `VELA_REPO_ALLOW_PUSH`    | `true`                                       | push enabled setting for the repository       |
+| `VELA_REPO_ALLOW_TAG`     | `false`                                      | tag enabled setting for the repository        |
+| `VELA_REPO_BRANCH`        | `main`                                       | default branch of the repository              |
+| `VELA_REPO_BUILD_LIMIT`   | `10`                                         | limit of concurrent builds for the repository |
+| `VELA_REPO_CLONE`         | `https://github.com/octocat/hello-world.git` | clone url of the repository                   |
+| `VELA_REPO_FULL_NAME`     | `octocat/hello-world`                        | full name of the repository                   |
+| `VELA_REPO_LINK`          | `https://github.com/octocat/hello-world`     | direct url of the repository                  |
+| `VELA_REPO_NAME`          | `hello-world`                                | name of the repository                        |
+| `VELA_REPO_ORG`           | `octocat`                                    | org of the repository                         |
+| `VELA_REPO_PRIVATE`       | `false`                                      | privacy setting for the repository            |
+| `VELA_REPO_TIMEOUT`       | `30`                                         | timeout setting for the repository            |
+| `VELA_REPO_TRUSTED`       | `false`                                      | trusted setting for the repository            |
+| `VELA_REPO_VISIBILITY`    | `public`                                     | visibility setting for the repository         |
 
 #### User Environment Variables
 
