@@ -66,6 +66,7 @@ fullname: github/octocat
 link: https://github.com/github/octocat
 clone: https://github.com/github/octocat.git
 branch: master
+buildlimit: 10
 timeout: 60
 counter: 0
 visibility: public
@@ -77,4 +78,5 @@ allowpush: true
 allowdeploy: false
 allowtag: false
 allowcomment: false
+pipelinetype: yaml
 ```
