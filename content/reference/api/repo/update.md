@@ -70,6 +70,7 @@ curl \
   "link": "https://github.com/github/octocat",
   "clone": "https://github.com/github/octocat.git",
   "branch": "master",
+  "build_limit": 10,
   "timeout": 60,
   "counter": 0,
   "visibility": "public",
@@ -80,6 +81,7 @@ curl \
   "allow_push": true,
   "allow_deploy": false,
   "allow_tag": true,
-  "allow_comment": false
+  "allow_comment": false,
+  "pipeline_type": "yaml"
 }
 ```
