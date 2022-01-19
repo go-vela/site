@@ -70,6 +70,10 @@ This variable has a default value of `20000` (2 MB).
 
 This variable sets the maximum amount of concurrent builds a repo is allowed to run.
 
+In this context, concurrent builds refers to any `pending` or `running` builds for that repo.
+
+If the amount of concurrent builds for a repo matches the limit, then any new builds will be blocked from being created.
+
 The variable can be provided as an `integer`.
 
 {{% alert title="Note:" color="primary" %}}
