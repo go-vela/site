@@ -54,7 +54,7 @@ To setup the CLI, please review the [authentication documentation](/docs/referen
 #### Request
 
 ```sh
-vela get repo
+vela get repos
 ```
 
 #### Response

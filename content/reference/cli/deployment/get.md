@@ -47,11 +47,16 @@ To install the CLI, please review the [installation documentation](/docs/referen
 To setup the CLI, please review the [authentication documentation](/docs/reference/cli/authentication/).
 {{% /alert %}}
 
-```sh
-# Request with CLI to view a deployment for the "github" org and "octocat" repo
-$ vela get deployment --org github --repo octocat
+#### Request
 
-# Response generated from successful CLI command
+<div class="highlight"><pre><code><b>~/github/octocat $</b> vela get deployment</code></pre></div>
+
+#### Targeted Request
+
+<div class="highlight"><pre><code><b>~ $</b> vela get deployment --org github --repo octocat</code></pre></div>
+
+#### Response generated from successful CLI command
+```sh
 ID  TASK         USER     REF     TARGET
 2   deploy:vela  octocat  master  production
 1   deploy:vela  octocat  master  production

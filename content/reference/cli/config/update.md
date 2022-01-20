@@ -63,6 +63,7 @@ api:
   version: v1
 log:
   level: info
+no-git: "false"
 secret: {}
 org: github
 ```
