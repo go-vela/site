@@ -1,7 +1,7 @@
 ---
 title: "Usage"
 toc: true
-weight: 3
+weight: 1
 description: >
   Frequently Asked Questions about how to use Vela.
 ---
