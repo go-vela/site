@@ -17,7 +17,7 @@ This can be accomplished by using one of the following methods:
 * **UI** - Navigate to the `https://vela.example.com/<org>/<repo>/hooks` page for the repository
 * **CLI** - Run [the `vela get hooks --org <org> --repo <repo>` command for the repository](/docs/reference/cli/hook/get/)
 
-After finding the error for the webhook delivery, please use the list below which includes details on how to resolve the issue.
+After finding the information for the webhook, please use the list below which includes details on how to resolve the issue.
 
 ### Missing Webhook Signature
 
@@ -77,7 +77,7 @@ This can be accomplished by using one of the following methods:
 
 ### YAML Errors
 
-TODO:
+TODO: provide examples
 
 ### Your Account Was Suspended
 
@@ -98,10 +98,55 @@ An access level of `admin` is required in order to change ownership of a reposit
 
 ## Why is my build not running?
 
-![Build Not Running](build_not_running.png)
+This behavior can occur for several reasons that may or may not be visually apparent.
 
-This behavior indicates the number of `running` builds for the system is greater than the number of workers available.
+The first step to troubleshooting this issue requires viewing the build object for the repository.
+
+This can be accomplished by using one of the following methods:
+
+* **UI** - Navigate to the `https://vela.example.com/<org>/<repo>` page for the repository
+* **CLI** - Run [the `vela get builds --org <org> --repo <repo>` command for the repository](/docs/reference/cli/build/get/)
+
+After finding the information for the build, please use the list below which includes details on how to resolve the issue.
+
+### Build is Pending
+
+![Build is Pending](build_is_pending.png)
+
+This behavior indicates the number of `running` builds for the system is greater than the number of [workers](/docs/administration/worker/) available.
 
 Unfortunately, the only way to resolve the issue is to wait until a worker becomes available to run your build.
+
+### Context Deadline Exceeded
+
+![Context Deadline Exceeded](context_deadline_exceeded.png)
+
+This behavior indicates the amount of time the build was `running` exceeded the timeout for the repository.
+
+To resolve the issue, optimize the pipeline to improve the performance and decrease the runtime for builds.
+
+This can be accomplished by using one of the following methods:
+
+* Update the pipeline [to use rulesets](/docs/tour/rulesets/) which will limit the number of [steps](/docs/tour/step/) ran in the build
+* Update the pipeline [to use stages](/docs/tour/stages/) which will enable running [steps](/docs/tour/step/) concurrently
+
+{{% alert title="Tip:" color="primary" %}}
+An alternative solution is to increase the build timeout for the repository.
+
+This can be accomplished by using one of the following methods:
+
+* **UI** - Update the `Build Timeout` field on the `https://vela.example.com/<org>/<repo>/settings` page for the repository
+* **CLI** - Run [the `vela update repo --org <org> --repo <repo> --timeout <timeout>` command for the repository](/docs/reference/cli/repo/update/)
+  {{% /alert %}}
+
+### Invalid Reference Format
+
+![Invalid Reference Format](invalid_reference_format.png)
+
+This behavior indicates [the `image` key](/docs/tour/image/) provided for a step in the pipeline is invalid.
+
+To resolve the issue, identify the step with the incorrect `image` and update it with a proper value.
+
+This can be accomplished by using the [`docker pull` CLI command](https://docs.docker.com/engine/reference/commandline/pull/) with the value for the `image` as the first argument.
 
 
