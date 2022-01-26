@@ -75,9 +75,15 @@ This can be accomplished by using one of the following methods:
 * **CLI** - Run [the `vela update repo --org <org> --repo <repo> --build.limit <limit>` command for the repository](/docs/reference/cli/repo/update/)
 {{% /alert %}}
 
-### YAML Errors
+### Unable To Unmarshal YAML
 
-TODO: provide examples
+![Unable To Unmarshal YAML](unable_to_unmarshal_yaml.png)
+
+This behavior indicates the pipeline can't be compiled because it includes invalid syntax.
+
+To resolve the issue, identify the incorrect syntax in the pipeline and update it with proper value(s).
+
+This can be accomplished by using the [`vela validate pipeline` CLI command](/docs/reference/cli/pipeline/validate/) in the directory where the pipeline is located.
 
 ### Your Account Was Suspended
 
@@ -109,13 +115,17 @@ This can be accomplished by using one of the following methods:
 
 After finding the information for the build, please use the list below which includes details on how to resolve the issue.
 
-### Build is Pending
+### Build Is Pending
 
-![Build is Pending](build_is_pending.png)
+![Build Is Pending](build_is_pending.png)
 
 This behavior indicates the number of `running` builds for the system is greater than the number of [workers](/docs/administration/worker/) available.
 
 Unfortunately, the only way to resolve the issue is to wait until a worker becomes available to run your build.
+
+{{% alert title="Tip:" color="primary" %}}
+Reach out to the administrators of the installation to request additional workers be added to the system.
+{{% /alert %}}
 
 ### Context Deadline Exceeded
 
@@ -137,7 +147,7 @@ This can be accomplished by using one of the following methods:
 
 * **UI** - Update the `Build Timeout` field on the `https://vela.example.com/<org>/<repo>/settings` page for the repository
 * **CLI** - Run [the `vela update repo --org <org> --repo <repo> --timeout <timeout>` command for the repository](/docs/reference/cli/repo/update/)
-  {{% /alert %}}
+{{% /alert %}}
 
 ### Invalid Reference Format
 
