@@ -149,6 +149,18 @@ The possible options to provide for this variable are:
 * `time-chunks`
 {{% /alert %}}
 
+### VELA_EXECUTOR_MAX_LOG_SIZE
+
+This configuration variable is used by the [executor component](/docs/administration/worker/reference/executor/) for the worker.
+
+This variable sets the maximum number of bytes for logs allowed to be uploaded per step.
+
+The variable can be provided as an `integer`.
+
+{{% alert title="Note:" color="primary" %}}
+This variable has a default value of `0`. No limit.
+{{% /alert %}}
+
 ### VELA_QUEUE_CLUSTER
 
 This configuration variable is used by the [queue component](/docs/administration/worker/reference/queue/) for the worker.
