@@ -46,10 +46,12 @@ steps:
   - name: check status
     image: postgres:latest
     pull: always
+    environment:
+      PGPASSWORD=password
     commands:
       # sleeping can help ensure the service adequate time to start
-+      - sleep 15
-      - psql -U admin -d vela -h tcp://postgres:5432
+      - sleep 15
+      - psql -U admin -d vela -h postgres -p 5432
 ```
 
 ### Detach
@@ -82,11 +84,14 @@ steps:
       POSTGRES_DB: vela    
     detach: true
 
+steps:
   - name: check status
     image: postgres:latest
     pull: always
+    environment:
+      PGPASSWORD=password
     commands:
       # sleeping can help ensure the service adequate time to start
-+      - sleep 15
-      - psql -U admin -d vela -h tcp://postgres:5432
+      - sleep 15
+      - psql -U admin -d vela -h postgres -p 5432
 ```
