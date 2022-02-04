@@ -8,7 +8,7 @@ description: >
 
 A stages pipelines are designed to parallelize one-to-many sets of step tasks.
 
-By design all of the stages will run at the same time unless the user uses a `needs:` YAML tag to control the flow of stage executions.
+By design all of the stages will run at the same time unless the user uses a `needs:` YAML tag to control the flow of stage executions (see example). Note: even if every step within a stage is skipped, the stage still runs. Do not use `needs` as a stage-level equivalent to `rulesets`. 
 
 These pipelines do not have a minimum defined length and will always execute steps within a stage in the order defined. Stages always run on the same host so it's important to take into consideration the size of the worker running your builds.
 
@@ -45,6 +45,15 @@ stages:
         image: alpine
         commands:
           - echo "Welcome to the Vela docs"
+  
+  goodbye:
+    # will wait for greeting and welcome to finish
+    needs: [greeting, welcome]
+    steps:
+      - name: Goodbye
+        image: alpine
+        commands:
+          - echo "Goodbye, World"
 ```
 
 
