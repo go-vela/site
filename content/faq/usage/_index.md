@@ -123,10 +123,6 @@ This behavior indicates the number of `running` builds for the system is greater
 
 Unfortunately, the only way to resolve the issue is to wait until a worker becomes available to run your build.
 
-{{% alert title="Tip:" color="primary" %}}
-Reach out to the administrators of the installation to request additional workers be added to the system.
-{{% /alert %}}
-
 ### Context Deadline Exceeded
 
 ![Context Deadline Exceeded](context_deadline_exceeded.png)
