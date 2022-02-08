@@ -64,6 +64,8 @@ $ vela exec pipeline
 [stage: greeting][step: Greeting] Hello, World
 [stage: welcome][step: Welcome] $ echo "Welcome to the Vela docs"
 [stage: welcome][step: Welcome] Welcome to the Vela docs
+[stage: goodbye][step: Goodbye] $ echo "Goodbye, World"
+[stage: goodbye][step: Goodbyte] Goodbye, World
 ```
 
 <!-- section break -->
