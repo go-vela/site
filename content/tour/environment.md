@@ -10,7 +10,7 @@ To define environment variables you can add an `environment:` YAML tag. Environm
 
 All platform variables get injected with a custom `VELA_` prefix pattern.
 
-The global environment encompasses all stages and steps within the pipeline.
+The global environment encompasses all stages, steps, and services within the pipeline.
 
 Every stage's environment is isolated to each individual stage and its steps. A stage environment variable will overwrite a global environment variable of the same name.
 
