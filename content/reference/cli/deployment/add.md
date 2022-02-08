@@ -52,11 +52,17 @@ To setup the CLI, please review the [authentication documentation](/docs/referen
 
 #### Request
 
-<div class="highlight"><pre><code><b>~/github/octocat $</b> vela add deployment</code></pre></div>
+```sh
+$ pwd
+~/github/octocat
+$ vela add deployment
+```
 
 #### Targeted Request
 
-<div class="highlight"><pre><code><b>~ $</b> vela add deployment --org github --repo octocat</code></pre></div>
+```sh
+$ vela add deployment --org github --repo octocat
+```
 
 #### Response generated from successful CLI command
 ```sh

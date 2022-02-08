@@ -53,11 +53,17 @@ To setup the CLI, please review the [authentication documentation](/docs/referen
 
 #### Request
 
-<div class="highlight"><pre><code><b>~/github/octocat $</b> vela view service --build 1 --service 1</code></pre></div>
+```sh
+$ pwd
+~/github/octocat
+$ vela view service --build 1 --service 1
+```
 
 #### Targeted Request
 
-<div class="highlight"><pre><code><b>~ $</b> vela view service --org github --repo octocat --build 1 --service 1</code></pre></div>
+```sh
+$ vela get service --org github --repo octocat --build 1 --service 1
+```
 
 #### Response
 

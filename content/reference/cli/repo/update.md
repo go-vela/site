@@ -61,11 +61,17 @@ To setup the CLI, please review the [authentication documentation](/docs/referen
 
 #### Request
 
-<div class="highlight"><pre><code><b>~/github/octocat $</b> vela update repo --event tag</code></pre></div>
+```sh
+$ pwd
+~/github/octocat
+$ vela update repo --event tag
+```
 
 #### Targeted Request
 
-<div class="highlight"><pre><code><b>~ $</b> vela update repo --org github --repo octocat --event tag</code></pre></div>
+```sh
+$ vela update repo --org github --repo octocat --event tag
+```
 
 #### Response
 

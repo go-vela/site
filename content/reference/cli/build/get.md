@@ -56,11 +56,17 @@ To setup the CLI, please review the [authentication documentation](/docs/referen
 
 #### Request
 
-<div class="highlight"><pre><code><b>~/github/octocat $</b> vela get build</code></pre></div>
+```sh
+$ pwd
+~/github/octocat
+$ vela get build --build 1
+```
 
 #### Targeted Request
 
-<div class="highlight"><pre><code><b>~ $</b> vela get build --org github --repo octocat</code></pre></div>
+```sh
+$ vela get build --org github --repo octocat --build 1
+```
 
 #### Response
 

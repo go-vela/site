@@ -52,11 +52,17 @@ To setup the CLI, please review the [authentication documentation](/docs/referen
 
 #### Request
 
-<div class="highlight"><pre><code><b>~/github/octocat $</b> vela restart build --build 1</code></pre></div>
+```sh
+$ pwd
+~/github/octocat
+$ vela restart build --build 1
+```
 
 #### Targeted Request
 
-<div class="highlight"><pre><code><b>~ $</b> vela restart build --org github --repo octocat --build 1</code></pre></div>
+```sh
+$ vela restart build --org github --repo octocat --build 1
+```
 
 #### Response
 
