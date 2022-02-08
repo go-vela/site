@@ -19,13 +19,16 @@ For more information, you can run `vela get build --help`.
 
 The following parameters are used to configure the command:
 
-| Name       | Description                         | Environment Variables             |
-| ---------- | ----------------------------------- | --------------------------------- |
-| `org`      | name of organization for the builds | `VELA_ORG`, `BUILD_ORG`           |
-| `repo`     | name of repository for the builds   | `VELA_REPO`, `BUILD_REPO`         |
-| `output`   | format the output for the builds    | `VELA_OUTPUT`, `BUILD_OUTPUT`     |
-| `page`     | prints a specific page of builds    | `VELA_PAGE`, `BUILD_PAGE`         |
-| `per.page` | number of builds to print per page  | `VELA_PER_PAGE`, `BUILD_PER_PAGE` |
+| Name       | Description                          | Environment Variables             |
+| ---------- | ------------------------------------ | --------------------------------- |
+| `org`      | name of organization for the builds  | `VELA_ORG`, `BUILD_ORG`           |
+| `repo`     | name of repository for the builds    | `VELA_REPO`, `BUILD_REPO`         |
+| `event`    | name of event filter for the builds  | `VELA_EVENT`, `BUILD_EVENT`       |
+| `status`   | name of status filter for the builds | `VELA_STATUS`, `BUILD_STATUS`     |
+| `branch`   | name of branch filter for the builds | `VELA_BRANCH`, `BUILD_BRANCH`     |
+| `output`   | format the output for the builds     | `VELA_OUTPUT`, `BUILD_OUTPUT`     |
+| `page`     | prints a specific page of builds     | `VELA_PAGE`, `BUILD_PAGE`         |
+| `per.page` | number of builds to print per page   | `VELA_PER_PAGE`, `BUILD_PER_PAGE` |
 
 {{% alert color="info" %}}
 This command also supports setting the following parameters via a configuration file:

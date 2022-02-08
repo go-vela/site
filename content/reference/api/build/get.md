@@ -20,6 +20,16 @@ The following parameters are used to configure the endpoint:
 | `org`  | name of organization |
 | `repo` | name of repository   |
 
+## Filters
+
+The following optional filters are available:
+
+| Name     | Description                 |
+| -------- | --------------------------- |
+| `branch` | name of branch to filter to |
+| `event`  | name of event to filter to  |
+| `status` | name of status to filter to |
+
 ## Permissions
 
 COMING SOON!
@@ -46,6 +56,14 @@ curl \
   -X GET \
   -H "Authorization: Bearer <token>" \
   "http://127.0.0.1:8080/api/v1/repos/github/octocat/builds"
+```
+
+```sh
+# with optional event filter
+curl \
+  -X GET \
+  -H "Authorization: Bearer <token>" \
+  "http://127.0.0.1:8080/api/v1/repos/github/octocat/builds?event=push"
 ```
 
 #### Response
