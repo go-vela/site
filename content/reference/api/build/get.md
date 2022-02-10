@@ -24,11 +24,14 @@ The following parameters are used to configure the endpoint:
 
 The following optional filters are available:
 
-| Name     | Description                 |
-| -------- | --------------------------- |
-| `branch` | name of branch to filter to |
-| `event`  | name of event to filter to  |
-| `status` | name of status to filter to |
+| Name       | Description                                       | 
+| --------   | -----------------------------------------------   |
+| `branch`   | name of branch to filter to                       |
+| `commit`   | commit hash to filter to                          |
+| `event`    | name of event to filter to                        |
+| `page`     | page number for results (default 1)               |
+| `per_page` | number of results in a page (default 10, max 100) |
+| `status`   | name of status to filter to                       |
 
 ## Permissions
 
