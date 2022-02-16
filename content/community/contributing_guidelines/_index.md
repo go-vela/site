@@ -180,7 +180,7 @@ As you contribute to Vela, we ask that you follow these style guides to keep the
 
 - **Commenting:** Make sure to add comments to your code when necessary. Users should know what your code is doing by your comments. Check out comments in existing code to get a feel of what and how to comment.
 
-- **Accessibility** Vela strives to conform to [Web Content Accessibility Guidelines 2.1](https://www.w3.org/TR/WCAG21/) (AA) standards for accessibility. Please ensure your contribution(s) meets or exceeds this standard.
+- **Accessibility** Vela strives to conform to [Web Content Accessibility Guidelines 2.1](https://www.w3.org/TR/WCAG21/) AA standards for accessibility. Please ensure your contribution(s) meets or exceeds this standard.
 
 ## Roles
 Because Vela is an open source tool, anyone can contribute! We have our admins and trusted committers defined in [teams](https://github.com/orgs/go-vela/teams).
