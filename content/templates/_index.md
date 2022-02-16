@@ -138,6 +138,8 @@ given you select the desired template language in the pipeline settings `https:/
 
 version: "1"
 
+# The trailing dash trims any whitespace to the right of the closing }} tag. See
+# https://pkg.go.dev/text/template#hdr-Text_and_spaces
 {{$stageList := list "foo" "bar" "star" -}}
 
 stages:
