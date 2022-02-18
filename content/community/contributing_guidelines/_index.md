@@ -174,7 +174,7 @@ As you contribute to Vela, we ask that you follow these style guides to keep the
 
 - **Folder structure:** Currently, we use a modified version of the [golang project folder structure](https://github.com/golang-standards/project-layout). When contributing to any repo, keep the structure consistent within the repo. When creating new plugins, be sure to mirror the structure of other plugins (vela-). 
 
-- **Dependency management:** Check out the [core repos](/docs/community/contributing_guidelines/#dependency-tree-for-core-repos) and the [plugin repos](/docs/community/contributing_guidelines/#plugin-repos) to see how they are dependent on one another. We ask that you use standard libraries whenever possible. See [golang modules](https://go.dev/blog/using-go-modules) and [npm](https://docs.npmjs.com/about-npm) for dependency management.
+- **Dependency management:** Check out the [core repos](/docs/community/contributing_guidelines/#dependency-tree-for-core-repos) and the `go.mod` file in a [plugin repo](/docs/community/contributing_guidelines/#plugin-repos) to see how they are dependent on one another. We ask that you use standard libraries whenever possible. See [golang modules](https://go.dev/blog/using-go-modules) and [npm](https://docs.npmjs.com/about-npm) for dependency management.
 
 - **Environment variables:** Add environment variables whenever implementation can vary by customer installation, or can be modified outside of a release.
 
