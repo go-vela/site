@@ -66,7 +66,7 @@ Vela is written in a modular format which creates a dependency tree. The ui is i
 
 [Proposals](https://github.com/go-vela/community/tree/master/proposals) are used to foster discussion around large or breaking feature requests, or when looking for feedback on varied implementation options. Check that an [issue](https://github.com/go-vela/community/issues) or [proposal](https://github.com/go-vela/community/tree/master/proposals) doesn’t exist already.
 
-Create a pull request using the [proposal template](link to proposals readme).
+Create a pull request using the [proposal template](https://github.com/go-vela/community/blob/master/.github/PULL_REQUEST_TEMPLATE/proposal.md).
 
 Anyone is welcome to weigh in on a proposal. If you’d like, link it in the [public #vela Slack channel](https://gophers.slack.com/app_redirect?channel=CNRRKE8KY) for more visibility.
 
@@ -134,7 +134,7 @@ See [style guide](/docs/community/contributing_guidelines/#style-guide) for guid
 - **PR review process**
   * Getting Reviewed: The admins and trusted committers actively watch for incoming PR’s.
 
-  * Getting Approved: For [core repos](), PRs need 2 approvals. At least one approval must come from an admin, the other can be from a trusted committer. For plugin repos, 1 approval from an admin or trusted committer is needed.
+  * Getting Approved: For [core repos](/docs/community/contributing_guidelines/#core-repos), PRs need 2 approvals. At least one approval must come from an admin, the other can be from a trusted committer. For plugin repos, 1 approval from an admin or trusted committer is needed.
 
   * Getting Merged: Once approved, your PR will be merged by an admin. If your story crosses dependent repos, PRs will be merged in the appropriate order neccessary.
 
@@ -174,7 +174,7 @@ As you contribute to Vela, we ask that you follow these style guides to keep the
 
 - **Folder structure:** Currently, we use a modified version of the [golang project folder structure](https://github.com/golang-standards/project-layout). When contributing to any repo, keep the structure consistent within the repo. When creating new plugins, be sure to mirror the structure of other plugins (vela-). 
 
-- **Dependency management:** Check out the [core repos](#dependency-tree-for-core-repos) and the [plugin repos](/docs/community/contributing_guidelines/#plugin-repos) to see how they are dependent on one another. We ask that you use standard libraries whenever possible. See [golang modules](https://go.dev/blog/using-go-modules) and [npm](https://docs.npmjs.com/about-npm) for dependency management.
+- **Dependency management:** Check out the [core repos](/docs/community/contributing_guidelines/#dependency-tree-for-core-repos) and the [plugin repos](/docs/community/contributing_guidelines/#plugin-repos) to see how they are dependent on one another. We ask that you use standard libraries whenever possible. See [golang modules](https://go.dev/blog/using-go-modules) and [npm](https://docs.npmjs.com/about-npm) for dependency management.
 
 - **Environment variables:** Add environment variables whenever implementation can vary by customer installation, or can be modified outside of a release.
 
