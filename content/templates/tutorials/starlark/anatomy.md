@@ -20,7 +20,7 @@ def main(ctx):
     'steps': [
       {
         'name': 'build',
-        'image': golang:latest,
+        'image': 'golang:latest',
         'commands': [
           'go build',
           'go test',
@@ -47,7 +47,7 @@ def main(ctx):
     'steps': [
       {
         'name': 'build',
-        'image': golang:latest,
+        'image': 'golang:latest',
         'commands': [
           "go build %s" %, repo,
           'go test',
