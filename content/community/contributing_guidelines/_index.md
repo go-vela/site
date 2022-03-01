@@ -79,7 +79,7 @@ Make sure an [issue](https://github.com/go-vela/community/issues) or [proposal](
 {{% /alert %}}
 
 ### Determining appropriateness for Vela
-Before contributing any code, make sure an [issue](/docs/community/contributing_guidelines/#issues) exists, be sure to checkout current issues](https://github.com/go-vela/community/issues) and [proposals](https://github.com/go-vela/community/tree/master/proposals) to make sure your idea isn’t already being worked on. We're working on a public roadmap view to link here.
+Before contributing any code, make sure an [issue](/docs/community/contributing_guidelines/#issues) exists, be sure to checkout current [issues](https://github.com/go-vela/community/issues) and [proposals](https://github.com/go-vela/community/tree/master/proposals) to make sure your idea isn’t already being worked on. We're working on a public roadmap view to link here.
 
 If an issue does not exist, make sure to create one.
 
