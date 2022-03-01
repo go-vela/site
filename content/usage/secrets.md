@@ -8,7 +8,7 @@ description: >
 This page will primarily focus on `internal secrets`. Check out [external secrets examples](/docs/usage/examples/secrets_external/). To learn how to use `internal` or `external` secrets in your pipeline, check out the [secrets tour](/docs/tour/secrets/).
 
 {{% alert title="Warning:" color="secondary" %}}
-Internal secrets do NOT have the `pull_request` event enabled by default. This is intentional to help mitigate exposure due to anyone submitting a pull request against the repo. You can override this behavior, at your own risk, for each secret.
+To reduce the Internal secrets do NOT have the `pull_request` event enabled by default. This is intentional to help mitigate exposure due to anyone submitting a pull request against the repo. You can override this behavior, at your own risk, for each secret.
 {{% /alert %}}
 
 ## Internal Secrets
@@ -52,7 +52,7 @@ There are three types of internal secrets, with equivalent example paths for the
 
 #### Repository
 
-Repository secrets are scoped to only a single repository. In order to create/modify these secrets you must be a repository admin.
+Repository secrets are scoped to only a single repository. In order to create/modify these secrets you must be a repository admin within the source code manager.
 
 _Example yaml block for repository secret type_
 
@@ -66,7 +66,7 @@ secrets:
 
 #### Organization
 
-Organization secrets are scoped to any repository in the organization. In order to create/modify these secrets you must be an organization admin.
+Organization secrets are scoped to any repository in the organization. In order to create/modify these secrets you must be an organization admin within the source code manager.
 
 _Example yaml block for organization secret type_
 
@@ -80,7 +80,7 @@ secrets:
 
 #### Shared
 
-Shared secrets are scoped to any repository in the source control provider. Shared secrets are unique in the case they require a team to exist in your org. In order to create/modify these secrets you must be a member of the team.
+Shared secrets are scoped to any repository in the source code manager (SCM). Shared secrets are unique in the case they require a team to exist in your SCM org. In order to create/modify these secrets you must be a member of the SCM team.
 
 _Example yaml block for shared secret type_
 
