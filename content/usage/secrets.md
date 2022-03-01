@@ -8,7 +8,7 @@ description: >
 This page will primarily focus on `internal secrets`. Check out [external secrets examples](/docs/usage/examples/secrets_external/). To learn how to use `internal` or `external` secrets in your pipeline, check out the [secrets tour](/docs/tour/secrets/).
 
 {{% alert title="Warning:" color="secondary" %}}
-To reduce the Internal secrets do NOT have the `pull_request` event enabled by default. This is intentional to help mitigate exposure due to anyone submitting a pull request against the repo. You can override this behavior, at your own risk, for each secret.
+Internal secrets do NOT have the `pull_request` event enabled by default. This is intentional to help mitigate exposure via a pull request against the repo. You can override this behavior, at your own risk, for each secret.
 {{% /alert %}}
 
 ## Internal Secrets
