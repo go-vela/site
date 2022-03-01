@@ -16,6 +16,10 @@ User is looking to create a pipeline that can inject configuration that can not 
 It is assumed you have created secrets `docker_username` and `docker_password` in the web interface or [CLI](/docs/reference/cli/).
 {{% /alert %}}
 
+{{% alert title="Warning:" color="secondary" %}}
+Internal secrets do NOT have the `pull_request` event enabled by default. This is intentional to help mitigate exposure due to anyone submitting a pull request against the repo. You can override this behavior, at your own risk, for each secret.
+{{% /alert %}}
+
 The examples show a pipeline using repo secrets. Vela contains three secret types: repo, org, and shared. Please see the [secret concepts](/docs/tour/secrets/) documentation.
 
 ### Steps
