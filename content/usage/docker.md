@@ -16,14 +16,12 @@ Both options have disadvantages and advantages, so we encourage all Vela adminis
 
 * [What is Docker BuildKit and What can I use it for?](https://brianchristner.io/what-is-docker-buildkit/)
 * [Kaniko tools comparison](https://github.com/GoogleContainerTools/kaniko#comparison-with-other-tools)
-* [Makisu tools comparison](https://github.com/uber/makisu#comparison-with-similar-tools)
 
 ## Without elevated daemon access
 
 Building an image without elevated access gives administrators the most secure pattern for not allowing any elevated access to the workers within the cluster. There are two plugin options for building those images:
 
 * [vela-kaniko](/docs/plugins/registry/pipeline/kaniko/)
-* [vela-makisu](/docs/plugins/registry/pipeline/makisu/)
 
 We recommend customers read the [tool comparisons](/docs/usage/docker/#additional-resources) before picking a technology for building their images. In-depth examples for building with either utility are available within their respective plugin documentation pages. A simple example is provided below:
 
@@ -36,14 +34,6 @@ steps:
     parameters:
       registry: index.docker.io
       repo: index.docker.io/octocat/hello-world
-
-  - name: build and publish with makisu
-    image: target/vela-makisu:latest
-    pull: always
-    parameters:
-      registry: index.docker.io
-      tag: index.docker.io/octocat/hello-world
-      pushes: [ index.docker.io ]
 ```
 
 ## With elevated daemon access
@@ -76,4 +66,3 @@ steps:
 
 * [Building Container Images Securely on Kubernetes](https://blog.jessfraz.com/post/building-container-images-securely-on-kubernetes/)
 * [Why is building rootless so hard?](https://github.com/opencontainers/runc/pull/1692)
-* [Introducing Makisu](https://eng.uber.com/makisu/)
