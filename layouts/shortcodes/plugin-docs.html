@@ -1,0 +1,4 @@
+{{ $repo := .Get 0 }}
+{{ $filename := .Get 1 }}
+{{ $json := getJSON "https://api.github.com/repos/" $repo "/contents/" $filename }}
+{{ $json.content | base64Decode | markdownify | emojify }}

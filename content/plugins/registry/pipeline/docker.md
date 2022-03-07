@@ -2,4 +2,4 @@
 title: "Docker"
 ---
 
-{{% remote-github-content "https://api.github.com/repos/go-vela/vela-docker/contents/DOCS.md" %}}
+{{% plugin-docs "go-vela/vela-docker" "DOCS.md" %}}

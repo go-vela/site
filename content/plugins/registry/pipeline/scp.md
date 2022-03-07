@@ -1,4 +1,4 @@
 ---
 title: "SCP"
 ---
-{{% remote-github-content "https://api.github.com/repos/go-vela/vela-openssh/contents/docs/usage-scp.md"  %}}
+{{% plugin-docs "go-vela/vela-openssh" "docs/usage-scp.md"  %}}

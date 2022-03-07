@@ -2,4 +2,4 @@
 title: "Makisu"
 ---
 
-{{% remote-github-content "https://api.github.com/repos/go-vela/vela-makisu/contents/DOCS.md" %}}
+{{% plugin-docs "go-vela/vela-makisu" "DOCS.md" %}}
