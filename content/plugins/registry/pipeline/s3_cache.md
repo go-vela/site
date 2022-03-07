@@ -2,4 +2,4 @@
 title: "S3 Cache"
 ---
 
-{{% plugin-docs "vela-s3-cache" %}}
+{{% remote-github-content "https://api.github.com/repos/go-vela/vela-s3-cache/contents/DOCS.md" %}}

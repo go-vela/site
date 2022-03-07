@@ -2,4 +2,4 @@
 title: "Kubernetes"
 ---
 
-{{% plugin-docs "vela-kubernetes" %}}
+{{% remote-github-content "https://api.github.com/repos/go-vela/vela-kubernetes/contents/DOCS.md" %}}

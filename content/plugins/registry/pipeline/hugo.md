@@ -2,4 +2,4 @@
 title: "Hugo"
 ---
 
-{{% plugin-docs "vela-hugo" %}}
+{{% remote-github-content "https://api.github.com/repos/go-vela/vela-hugo/contents/DOCS.md" %}}

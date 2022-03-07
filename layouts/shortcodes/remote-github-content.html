@@ -1,0 +1,3 @@
+{{ $repo := .Get 0 }}
+{{ $json := getJSON $repo }}
+{{ $json.content | base64Decode | markdownify | emojify }}

@@ -5,4 +5,4 @@ description: >
   Learn about the Vault secret plugin.
 ---
 
-{{% plugin-docs "secret-vault" %}}
+{{% remote-github-content "https://api.github.com/repos/go-vela/secret-vault/contents/DOCS.md" %}}

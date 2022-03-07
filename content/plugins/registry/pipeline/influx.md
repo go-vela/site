@@ -2,4 +2,4 @@
 title: "Influx"
 ---
 
-{{% plugin-docs "vela-influx" %}}
+{{% remote-github-content "https://api.github.com/repos/go-vela/vela-influx/contents/DOCS.md" %}}

@@ -1,3 +1,0 @@
-{{ $repo := .Get 0 }}
-{{ $json := getJSON "https://api.github.com/repos/go-vela/" $repo "/contents/DOCS.md" }}
-{{ $json.content | base64Decode | markdownify }}
