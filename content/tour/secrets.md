@@ -12,7 +12,7 @@ For this, we introduce pipeline secrets as a pattern to keep sensitive data safe
 
 They are the answer when you don’t want to provide that sensitive information in plain text.
 
-Let's go back to our Docker image used within the plugin tutorial and focus only on the repository secrets type. You can learn about all secret types in the [internal secrets example](/docs/usage/examples/secrets_internal/).
+Let's go back to our Docker image used within the plugin tutorial and focus only on the repo secrets type. You can learn about all secret types in the [secrets usage section](/docs/usage/secrets/).
 
 The pipeline we are looking at shows a few different patterns on how you can leverage adding and aliasing secrets in your pipeline.
 
