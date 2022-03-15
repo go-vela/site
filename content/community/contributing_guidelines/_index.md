@@ -144,6 +144,10 @@ Currently, main releases only apply to [core repos](/docs/community/contributing
 
 - **Patches:** Patches will be released on an as needed basis for bug and security fixes. We increment the minor version.
 - **RC’s (pre-releases):** Prior to releasing a main version, we will have at least a week of rc releases for testing purposes.
+  - Once an RC is cut:
+    - No new features will be included.
+    - Bug and security fixes can be included.
+    - Non-breaking dependency updates can be included.
 - **Release Notes:** You can find a list of release notes in the [community repository](https://github.com/go-vela/community/tree/master/releases).
 
 ## Style Guide
