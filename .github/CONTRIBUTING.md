@@ -1,22 +1,8 @@
 # Contributing
 
-We'd love to accept your contributions to this project! There are just a few guidelines you need to follow.
-
-## Bugs
-
-Bug reports should be opened up as [issues](https://help.github.com/en/github/managing-your-work-on-github/about-issues) on the [go-vela/community](https://github.com/go-vela/community) repository!
-
-## Feature Requests
-
-Feature Requests should be opened up as [issues](https://help.github.com/en/github/managing-your-work-on-github/about-issues) on the [go-vela/community](https://github.com/go-vela/community) repository!
-
-## Pull Requests
-
-**NOTE: We recommend you start by opening a new issue describing the bug or feature you're intending to fix. Even if you think it's relatively minor, it's helpful to know what people are working on.**
-
-We are always open to new PRs! You can follow the below guide for learning how you can contribute to the project!
-
 ## Getting Started
+
+We'd love to accept your contributions to this project! If you are a first time contributor, please review our [Contributing Guidelines](https://go-vela.github.io/docs/community/contributing_guidelines/) before proceeding.
 
 ### Prerequisites
 
@@ -47,6 +33,10 @@ cd $HOME/go-vela/docs
 # Add a remote branch pointing to your fork
 git remote add fork https://github.com/your_fork/docs
 ```
+
+* Make sure to follow our [PR process](https://go-vela.github.io/docs/community/contributing_guidelines/#development-workflow) when opening a pull request
+
+Thank you for your contribution!
 
 ## Running the website locally
 
