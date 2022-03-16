@@ -59,8 +59,14 @@ Vela is written in a modular format which creates a dependency tree. The ui is i
 
 [Issues](https://github.com/go-vela/community/issues) include:
 - Bugs
+  - Implementation of a feature request or enhancement causing an unexpected result
+  - Example: Action performed by an API call is incorrect
 - Enhancements
+  - A tweak to an existing feature, not resulting in underlying functionality change
+  - Examples: Updating log output to be more useful
 - Feature requests
+  - Net-new functionality
+  - Example: Adding an API endpoint
 
 ### Proposals
 
@@ -145,8 +151,9 @@ Currently, main releases only apply to [core repos](/docs/community/contributing
 - **Patches:** Patches will be released on an as needed basis for bug and security fixes. We increment the minor version.
 - **RC’s (pre-releases):** Prior to releasing a main version, we will have at least a week of rc releases for testing purposes.
   - Once an RC is cut:
-    - No new features will be included.
-    - Bug and security fixes can be included.
+    - No new [features](/docs/community/contributing_guidelines/#issues) will be included.
+    - [Enhancements](/docs/community/contributing_guidelines/#issues) will be considered on a case-by-case basis by admins.
+    - [Bugs](/docs/community/contributing_guidelines/#issues) and security fixes can be included.
     - Non-breaking dependency updates can be included.
 - **Release Notes:** You can find a list of release notes in the [community repository](https://github.com/go-vela/community/tree/master/releases).
 
