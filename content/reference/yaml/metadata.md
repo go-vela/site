@@ -19,10 +19,11 @@ metadata:
 
 ## Tags
 
-| Tag        | Required | Type | Description                                   |
-|------------|----------|------|-----------------------------------------------|
-| `template` | Y        | bool | Enables compiling the pipeline as a template. |
-| `clone`    | N        | bool | Enables injecting the default clone process.  |
+| Tag             | Required | Type | Description                                            |
+|-----------------|----------|------|--------------------------------------------------------|
+| `template`      | Y        | bool | Enables compiling the pipeline as a template.          |
+| `clone`         | N        | bool | Enables injecting the default clone process.           |
+| `render_inline` | N        | bool | Enables rendering for templates without stages/steps.  |
 
 ### Usage
 
@@ -59,4 +60,16 @@ metadata:
   # services, steps, and secrets. But, when the block exists the
   # configuration specified is used during compile phase.
   environment: [ steps, services, secrets ]
+```
+
+#### The `render_inline:` tag
+
+```yaml
+---
+metadata:
+  # By default, the below is populated into every pipeline with
+  # false. But, when set to "true" a user can render a template 
+  # in the resulting pipeline without referencing it in stages
+  # or steps. 
+  render_inline: false
 ```
