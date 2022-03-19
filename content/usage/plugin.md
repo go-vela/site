@@ -19,7 +19,7 @@ version: "1"
 
 steps:
   - name: plugin
-    image: target/vela-docker
+    image: target/vela-kaniko
     pull: always
     parameters:
       registry: index.docker.io
@@ -37,7 +37,7 @@ secrets:
       pull: always
       secrets: [ vault_token ]
       parameters:
-        addr: vault.company.com
+        addr: vault.example.com
         auth_method: token
         items:
           - source: secret/docker
@@ -51,7 +51,7 @@ version: "1"
 
 steps:
   - name: docker
-    image: target/vela-docker
+    image: target/vela-kaniko
     pull: always
 +   parameters:
 +     registry: index.docker.io
@@ -69,7 +69,7 @@ secrets:
       pull: always
       secrets: [ vault_token ]
 +     parameters:
-+       addr: vault.company.com
++       addr: vault.example.com
 +       auth_method: token
 +       items:
 +         - source: secret/docker
