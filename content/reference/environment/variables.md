@@ -89,7 +89,7 @@ The following table includes variables only available during the **tag** event.
 #### Vela Environment Variables
 
 | Key              | Value                                             | Explanation                                                         |
-| ---------------- | ------------------------------------------------- | ------------------------------------------------------------------- |
+| ---------------- |---------------------------------------------------|---------------------------------------------------------------------|
 | `VELA`           | `true`                                            | environment is Vela                                                 |
 | `VELA_ADDR`      | `vela-server.localhost`                           | fully qualified domain name of the Vela server                      |
 | `VELA_CHANNEL`   | `vela`                                            | queue channel the build was published to                            |
@@ -100,7 +100,7 @@ The following table includes variables only available during the **tag** event.
 | `VELA_SOURCE`    | `github`                                          | queue channel the build was published to                            |
 | `VELA_VERSION`   | `v0.1.0`                                          | Vela version                                                        |
 | `VELA_WORKSPACE` | `/vela/src/github.com/github/octocat/hello-world` | working directory the build is executed in                          |
-| `CI`             | `vela`                                            | CI enabled is Vela                                                  |
+| `CI`             | `true`                                            | Indicates this is a CI environment                                  |
 
 #### Repository Environment Variables
 
