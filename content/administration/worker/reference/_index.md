@@ -236,6 +236,30 @@ This variable sets a namespace (for Kubernetes only) to use for runtime workload
 
 The variable can be provided as a `string`.
 
+### VELA_RUNTIME_PODS_TEMPLATE_NAME
+
+This configuration variable is used by the [runtime component](/docs/administration/worker/reference/runtime/) for the worker.
+
+Examples using this configuration variable are provided in the [kubernetes runtime documentation](/docs/administration/worker/kubernetes/).
+
+This variable sets a `PipelinePodsTemplate` name (for Kubernetes only) to use for runtime workloads.
+The named template must be in the `VELA_RUNTIME_NAMESPACE`.
+
+The variable can be provided as a `string`.
+
+### VELA_RUNTIME_PODS_TEMPLATE_FILE
+
+This configuration variable is used by the [runtime component](/docs/administration/worker/reference/runtime/) for the worker.
+
+This variable sets the path to a `PipelinePodsTemplate` YAML file (for Kubernetes only) to use for runtime workloads.
+This file is only used if `VELA_RUNTIME_PODS_TEMPLATE_NAME` is empty.
+
+An example file is provided in the [kubernetes runtime documentation](/docs/administration/worker/kubernetes/).
+
+This is useful for Kubernetes clusters that do not allow loading CRDs. It is also used for testing Vela.
+
+The variable can be provided as a `string`.
+
 ### VELA_RUNTIME_PRIVILEGED_IMAGES
 
 This configuration variable is used by the [runtime component](/docs/administration/worker/reference/runtime/) for the worker.
