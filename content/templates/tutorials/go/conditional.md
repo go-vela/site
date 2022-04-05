@@ -27,7 +27,7 @@ From [Go template Conditional](https://golang.org/pkg/text/template/#hdr-Actions
 > string of length zero.
 > Dot is unaffected.
 
-{{% alert title="Tip:" color="info" %}
+{{% alert title="Tip:" color="info" %}}
 For information on if/else statements see [conditional docs](https://golang.org/pkg/text/template/#hdr-Actions)
 {{% /alert %}}
 
