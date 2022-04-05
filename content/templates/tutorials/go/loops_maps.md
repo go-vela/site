@@ -28,7 +28,7 @@ From [Go template range](https://golang.org/pkg/text/template/#hdr-Actions):
 > keys are of basic type with a defined order, the elements will be
 > visited in sorted key order.
 
-{{% alert color="tip" %}}
+{{% alert title="Tip:" color="info" %}
 For information on range/else statements see [conditional docs](https://golang.org/pkg/text/template/#hdr-Actions)
 {{% /alert %}}
 

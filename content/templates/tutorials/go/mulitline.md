@@ -24,7 +24,7 @@ From [YAML Spec Scalars](https://yaml.org/spec/1.2/spec.html):
   // ||  ||__
 ```
 
-{{% alert color="tip" %}}
+{{% alert title="Tip:" color="info" %}
 For information on more types of scalars read the [spec information](https://yaml.org/spec/1.2/spec.html#id2760844)
 {{% /alert %}}
 

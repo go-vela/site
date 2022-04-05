@@ -41,7 +41,7 @@ By default, templates utilize the Go template language unless otherwise specifie
 
 Let's take a look at a basic template:
 
-{{% alert color="tip" %}}
+{{% alert title="Tip:" color="info" %}}
 For this example we will call it `build.yml` but the YAML does not have a required name.
 {{% /alert %}}
 
@@ -86,7 +86,7 @@ It is recommended users read the [Starlark Spec](https://github.com/bazelbuild/s
 
 Let's take a look at a basic template:
 
-{{% alert color="tip" %}}
+{{% alert title="Tip:" color="info" %}}
 For this example we will call it `build.star` but the file does not have a required name.
 {{% /alert %}}
 

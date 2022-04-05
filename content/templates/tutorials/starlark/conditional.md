@@ -17,7 +17,7 @@ From [Starlark Conditional Expressions](https://github.com/google/starlark-go/bl
 "yes" if enabled else "no"
 ```
 
-{{% alert color="tip" %}}
+{{% alert title="Tip:" color="info" %}
 For information on if/else statements see [conditional docs](https://github.com/google/starlark-go/blob/master/doc/spec.md#conditional-expressions)
 {{% /alert %}}
 
