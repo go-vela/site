@@ -193,9 +193,22 @@ Rendering a template inline gives you the power of:
 You **can not** mix stages and steps pipelines in a single render. They must be all of one type. 
 {{% /alert %}}
 
-Using this feat unlocks powerful pipelines that allow you to pull templates with stages, steps, services, and secrets into a single workflow. To use this feature all you need to do is add `render_inline: true` in the metadata block of your pipeline and you can start compiling templates without the need of the stages and steps blocks. This feature does work with both Go templates and Starlark. 
+Using this feat unlocks powerful pipelines that allow you to use templates with:
+
+- stages
+- steps
+- services
+- secrets
+
+To use this feature all you need to do is add `render_inline: true` in the metadata block of your pipeline and you can start compiling templates without the need of the stages and steps blocks. This feature does work with both Go templates and Starlark. 
 
 #### Basic
+
+This example is for injecting a stages into an external calling pipeline.
+
+{{% alert title="Tip:" color="info" %}}
+The same pattern can be used with steps workflows.
+{{% /alert %}}
 
 ```yaml
 metadata:
@@ -239,6 +252,12 @@ templates:
 ```
 
 #### Advanced
+
+This example is for combing stages from an external template into the calling pipeline.
+
+{{% alert title="Tip:" color="info" %}}
+The same pattern can be used with steps workflows.
+{{% /alert %}}
 
 ```yaml
 metadata:

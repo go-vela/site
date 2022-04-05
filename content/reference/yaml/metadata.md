@@ -19,11 +19,11 @@ metadata:
 
 ## Tags
 
-| Tag             | Required | Type | Description                                            |
-|-----------------|----------|------|--------------------------------------------------------|
-| `template`      | Y        | bool | Enables compiling the pipeline as a template.          |
-| `clone`         | N        | bool | Enables injecting the default clone process.           |
-| `render_inline` | N        | bool | Enables rendering for templates without stages/steps.  |
+| Tag             | Required | Type | Description                                                        |
+|-----------------|----------|------|--------------------------------------------------------------------|
+| `template`      | Y        | bool | Enables compiling the pipeline as a template.                      |
+| `clone`         | N        | bool | Enables injecting the default clone process.                       |
+| `render_inline` | N        | bool | Enables rendering without explicitly calling within the pipeline.  |
 
 ### Usage
 
