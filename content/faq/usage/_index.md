@@ -155,4 +155,34 @@ To resolve the issue, identify the step with the incorrect `image` and update it
 
 This can be accomplished by using the [`docker pull` CLI command](https://docs.docker.com/engine/reference/commandline/pull/) with the value for the `image` as the first argument.
 
+### Invalid Secret Path
 
+![Invalid Secret Path](invalid_secret_path.png)
+
+This behavior indicates [the `key` property](/docs/reference/yaml/secrets/#the-key-tag) provided for a secret in the pipeline is invalid.
+
+To resolve the issue, explicitly define the secret depending on the type as outlined in the [secret usage docs](/docs/usage/secrets/) with all of the expected fields.
+
+If you are using a secret that only defines `name` as the property and are receiving this error, you will need add the missing properties as this way of referencing a secret was deprecated in an older version of Vela.
+
+For example:
+```yaml
+secrets:
+  - name: foo
+```
+
+would need to be changed to:
+
+```diff
+secrets:
+  - name: foo
++   key: <org>/<repo>/foo
++   engine: native
++   type: repo
+```
+
+{{% alert title="Tip:" color="primary" %}}
+Make sure to replace `<org>` and `<repo>` for the `key` property with the appropriate values from your source code provider.
+
+If you're using GitHub and using the secret for a pipeline at `https://github.com/octocat/hello`, your `org` would be `octocat` and `repo` would be `hello`.
+{{% /alert %}} 
