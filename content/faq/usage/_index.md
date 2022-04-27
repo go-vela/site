@@ -170,6 +170,14 @@ For example:
 secrets:
   - name: foo
 ```
+and even 
+```yaml
+secrets:
+  - name: foo
+    key: foo
+    engine: native
+    type: repo
+```
 
 would need to be changed to:
 
