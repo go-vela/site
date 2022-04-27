@@ -152,11 +152,22 @@ steps:
 ```yaml
 ---
 steps:
-  - ruleset:
+  - name: Event Ruleset
+    ruleset:
       # As shown below this step will execute if the build
       # event is push or pull_request. The available events are:
       # comment, push, pull_request, tag, and deployment.
       event: [ push, pull_request ]
+  - name: Scope Events
+    ruleset:
+      # For pull_request and comment events, specifying an action will
+      # further scope when the step is executed. These actions include
+      # opened, synchronized, and edited for pull_request; created and 
+      # edited for comment. To specify an action, use a ":" as shown below.
+      event: [pull_request:opened, comment:created]
+
+      # Note: specifying pull_request is the same as [pull_request:opened, pull_request:synchronized]. 
+      # Specifying comment is the same as [comment:created, comment:edited]. 
 ```
 
 ```yaml
