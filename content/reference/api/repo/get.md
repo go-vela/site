@@ -132,7 +132,7 @@ To authenticate to the API, please review the [authentication documentation](/do
 curl \
   -X GET \
   -H "Authorization: Bearer <token>" \
-  "http://127.0.0.1:8080/api/v1/repos/github"
+  "http://127.0.0.1:8080/api/v1/repos/octocat"
 ```
 
 #### Response
@@ -142,11 +142,11 @@ curl \
   {
     "id": 1,
     "user_id": 1,
-    "org": "github",
-    "name": "octocat",
-    "full_name": "github/octocat",
-    "link": "https://github.com/github/octocat",
-    "clone": "https://github.com/github/octocat.git",
+    "org": "octocat",
+    "name": "example",
+    "full_name": "octocat/example",
+    "link": "https://github.com/octocat/example",
+    "clone": "https://github.com/octocat/example.git",
     "branch": "master",
     "build_limit": 10,
     "timeout": 60,
@@ -165,11 +165,11 @@ curl \
   {
     "id": 2,
     "user_id": 1,
-    "org": "github",
+    "org": "octocat",
     "name": "octokitty",
-    "full_name": "github/octokitty",
-    "link": "https://github.com/github/octokitty",
-    "clone": "https://github.com/github/octokitty.git",
+    "full_name": "octocat/octokitty",
+    "link": "https://github.com/octocat/octokitty",
+    "clone": "https://github.com/octocat/octokitty.git",
     "branch": "master",
     "build_limit": 10,
     "timeout": 60,
