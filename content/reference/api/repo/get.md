@@ -2,7 +2,7 @@
 title: "Get"
 linkTitle: "Get"
 description: >
-  Learn how to list repos.
+  Learn how to list repos by current user or by organization.
 ---
 
 ## Endpoint
@@ -10,6 +10,7 @@ description: >
 ```
 GET  /api/v1/repos
 ```
+This will return a list of all repos owned by the user.
 
 ## Filters
 
