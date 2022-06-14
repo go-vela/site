@@ -22,7 +22,7 @@ Make sure you have the `deployment` event enabled within repo settings
   commands:
     - echo "Running your deployment!"
   ruleset:
-    events: [ deployment ]
+    event: [ deployment ]
 
 # A step triggering deployment to a specific target.
 # Targets can be any value i.e. dev, stage, eng, prod, etc
@@ -31,7 +31,7 @@ Make sure you have the `deployment` event enabled within repo settings
   commands:
     - echo "Running deployment for ${VELA_DEPLOYMENT}!"
   ruleset:
-    events: [ deployment ]
+    event: [ deployment ]
     target: [ dev, eng ]
 ```
 
@@ -53,7 +53,7 @@ steps:
     commands:
       - echo "Running your deployment!"
     ruleset:
-      events: [ deployment ]
+      event: [ deployment ]
 
   # A step triggering deployment to a specific target.
   # Targets can be any value i.e. dev, stage, eng, prod, etc
@@ -62,7 +62,7 @@ steps:
     commands:
       - echo "Running deployment for ${VELA_DEPLOYMENT}!"
     ruleset:
-      events: [ deployment ]
+      event: [ deployment ]
       target: [ dev, eng ]
 
   # Now that we know how to control a deployment, lets look
@@ -74,7 +74,7 @@ steps:
     commands:
       - echo "Custom parameter message, ${DEPLOYMENT_PARAMETER_MESSAGE}"
     ruleset:
-      events: [ deployment ]
+      event: [ deployment ]
       target: [ dev, eng ]
 ```
 
