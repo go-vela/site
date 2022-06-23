@@ -51,14 +51,14 @@ To setup the CLI, please review the [authentication documentation](/docs/referen
 #### Request
 
 ```sh
-vela generate config --api.addr https://vela-server.localhost --log.level info
+vela generate config --api.addr https://vela.example.com --log.level info
 ```
 
 #### Response
 
 ```sh
 api:
-  addr: https://vela-server.localhost
+  addr: https://vela.example.com
 log:
   level: info
 no-git: "false"

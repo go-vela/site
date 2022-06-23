@@ -57,7 +57,7 @@ vela update config --org github
 
 ```sh
 api:
-  addr: https://vela-server.localhost
+  addr: https://vela.example.com
   access_token: superSecretAccessToken
   refresh_token: superSecretRefreshToken
   version: v1

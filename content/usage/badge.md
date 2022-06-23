@@ -18,7 +18,7 @@ The server has an endpoint that will return an SVG badge for the default branch 
 https://<vela server>/badge/<org>/<repo>/status.svg
 
 # Example
-https://vela-server.localhost/badge/octocat/Hello-World/status.svg
+https://vela.example.com/badge/octocat/Hello-World/status.svg
 ```
 
 In addition you can specify which branch you want to get a badge for by supplying a `?branch=` query parameter in the URL.
@@ -28,7 +28,7 @@ In addition you can specify which branch you want to get a badge for by supplyin
 https://<vela server>/badge/<org>/<repo>/status.svg?branch=<branch name>
 
 # Example
-https://vela-server.localhost/badge/octocat/Hello-World/status.svg?branch=not_master
+https://vela.example.com/badge/octocat/Hello-World/status.svg?branch=not_master
 ```
 
 ### Embedding in Markdown
@@ -40,5 +40,5 @@ To embed your badge in your markdown formatted file, follow this example:
 [![Build Status](https://<vela server>/badge/<org>/<repo>/status.svg)](https://<vela server>/badge/<org>/<repo>)
 
 # Example
-[![Build Status](https://vela-server.localhost/badge/octocat/Hello-World/status.svg)](https://vela-server.localhost/badge/octocat/Hello-World)
+[![Build Status](https://vela.example.com/badge/octocat/Hello-World/status.svg)](https://vela.example.com/badge/octocat/Hello-World)
 ```

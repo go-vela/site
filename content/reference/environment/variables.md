@@ -25,7 +25,7 @@ The following environment variables are injected into every step, service, or se
 | `VELA_BUILD_ENQUEUED`     | `1556720958`                                                | unix timestamp representing build enqueued time                     |
 | `VELA_BUILD_EVENT`        | `push`                                                      | webhook event that triggered the build                              |
 | `VELA_BUILD_HOST`         | `vela-worker-1`                                             | fully qualified domain name of the worker the build was executed on |
-| `VELA_BUILD_LINK`         | `https://vela-server.localhost/octocat/hello-world/1`       | link to the build in the UI                                         |
+| `VELA_BUILD_LINK`         | `https://vela.example.com/octocat/hello-world/1`       | link to the build in the UI                                         |
 | `VELA_BUILD_MESSAGE`      | `Merge pull request #6 from octocat/patch-1`                | message from the source commit                                      |
 | `VELA_BUILD_NUMBER`       | `1`                                                         | build number                                                        |
 | `VELA_BUILD_PARENT`       | `1`                                                         | previous build number                                               |
@@ -91,7 +91,7 @@ The following table includes variables only available during the **tag** event.
 | Key              | Value                                             | Explanation                                                         |
 | ---------------- |---------------------------------------------------|---------------------------------------------------------------------|
 | `VELA`           | `true`                                            | environment is Vela                                                 |
-| `VELA_ADDR`      | `vela-server.localhost`                           | fully qualified domain name of the Vela server                      |
+| `VELA_ADDR`      | `vela.example.com`                           | fully qualified domain name of the Vela server                      |
 | `VELA_CHANNEL`   | `vela`                                            | queue channel the build was published to                            |
 | `VELA_DATABASE`  | `postgres`                                        | database Vela is connected to                                       |
 | `VELA_HOST`      | `vela-worker-1`                                   | fully qualified domain name of the worker the build was executed on |

@@ -32,13 +32,13 @@ Log in:
 vela login --api.addr <vela server url>
 
 # Example
-vela login --api.addr https://vela-server.localhost
+vela login --api.addr https://vela.example.com
 ```
 
 Confirm authentication via browser prompt:
 
 ```
-Open https://vela-server.localhost in your browser and complete authentication (Press Enter to confirm):
+Open https://vela.example.com in your browser and complete authentication (Press Enter to confirm):
 ```
 
 Confirm to generate or update the configuration file prompt:
@@ -56,7 +56,7 @@ For more information, you can visit the [CLI config documentation](/docs/referen
 Configure the environment with the `VELA_ADDR` environment variable:
 
 ```sh
-export VELA_ADDR=https://vela-server.localhost
+export VELA_ADDR=https://vela.example.com
 ```
 
 Log in and confirm the two prompts as stated above:
@@ -78,5 +78,5 @@ Log in and confirm the two prompts as stated above:
 vela login --api.addr <vela server url>
 
 # Example
-vela login --api.addr https://vela-server.localhost
+vela login --api.addr https://vela.example.com
 ```
