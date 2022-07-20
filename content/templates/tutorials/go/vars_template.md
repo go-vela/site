@@ -21,7 +21,7 @@ Template variables can be referenced with the following syntax:
 
 Let's take a look at using variables within a template:
 
-```python
+```yaml
 metadata:
   template: true
 
