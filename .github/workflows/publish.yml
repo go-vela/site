@@ -33,6 +33,7 @@ jobs:
       env:
         HUGO_ENV: production
       run: |
+        npm install -D --save autoprefixer
         hugo --minify
 
     - name: publish
