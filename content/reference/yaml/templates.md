@@ -48,9 +48,9 @@ templates:
 templates:
     # Indicates a path to a template in remote system. This path
     # should always be the raw path within a repository. By default 
-    # the template is pulled from the default branch on the repository
-    # but can be overwritten by adding "@" symbol in the path.
-    source: github.com/go-vela/templates/example.yml
+    # the template is pulled from the default branch on the repository.
+    # It can be overwritten by adding a suffix of "@<branch>".
+    source: github.com/go-vela/templates/example.yml@testbranch
 ```
 
 #### The `type:` tag

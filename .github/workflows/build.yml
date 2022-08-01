@@ -20,12 +20,12 @@ jobs:
     - name: node
       uses: actions/setup-node@v3
       with:
-        node-version: '12'
+        node-version: '16'
 
     - name: hugo
       uses: peaceiris/actions-hugo@v2
       with:
-        hugo-version: '0.79.0'
+        hugo-version: '0.101.0'
         extended: true
 
     - name: build
@@ -33,6 +33,5 @@ jobs:
         HUGO_ENV: production
       run: |
         npm install -D --save autoprefixer
-        npm install -D --save postcss
         npm install -D --save postcss-cli
-        hugo
+        hugo --minify
