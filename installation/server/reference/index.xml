@@ -1,0 +1,658 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Reference</title><link>https://go-vela.github.io/docs/installation/server/reference/</link><description>Recent content in Reference on Vela</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://go-vela.github.io/docs/installation/server/reference/index.xml" rel="self" type="application/rss+xml"/><item><title>Installation: Compiler</title><link>https://go-vela.github.io/docs/installation/server/reference/compiler/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/server/reference/compiler/</guid><description>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+The compiler is embedded directly in the server and can only be accessed through the server.
+&lt;/div>
+&lt;p>This component is responsible for transforming a &lt;a href="https://go-vela.github.io/docs/docs/tour/">pipeline&lt;/a> into an executable representation for the &lt;a href="https://go-vela.github.io/docs/docs/installation/worker/">worker&lt;/a>.&lt;/p>
+&lt;p>During the transformation, it will retrieve &lt;a href="https://go-vela.github.io/docs/docs/tour/templates/">templates&lt;/a> from one or more registries depending on the pipeline configuration.&lt;/p>
+&lt;p>By default, Vela will use &lt;a href="https://github.com/">GitHub&lt;/a> as a registry for fetching templates, but you can configure additional registries as well.&lt;/p>
+&lt;p>However, to fetch templates from a private organization or repository on GitHub, you need to provide a token to the compiler.&lt;/p>
+&lt;p>Additionally, the compiler can send pipelines to an external endpoint, to be modified, based off custom configuration.&lt;/p>
+&lt;p>This modification endpoint can be used to perform any number of customizations to all workloads created by the system.&lt;/p>
+&lt;p>Some examples of what the modification endpoint can do include, but are not limited to:&lt;/p>
+&lt;ul>
+&lt;li>injecting or updating the configuration for &lt;a href="https://go-vela.github.io/docs/docs/tour/secrets/">secrets&lt;/a> in the pipeline&lt;/li>
+&lt;li>injecting or updating the configuration for &lt;a href="https://go-vela.github.io/docs/docs/tour/services/">services&lt;/a> in the pipeline&lt;/li>
+&lt;li>injecting or updating the configuration for &lt;a href="https://go-vela.github.io/docs/docs/tour/stages/">stages&lt;/a> in the pipeline&lt;/li>
+&lt;li>injecting or updating the configuration for &lt;a href="https://go-vela.github.io/docs/docs/tour/steps/">steps&lt;/a> in the pipeline&lt;/li>
+&lt;/ul>
+&lt;h2 id="configuration">Configuration&lt;/h2>
+&lt;p>The following options are used to configure the component:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Environment Variables&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>github-driver&lt;/code>&lt;/td>
+&lt;td>enables using Github or GitHub Enterprise Server as a registry for templates&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>COMPILER_GITHUB&lt;/code>&lt;br>&lt;code>VELA_COMPILER_GITHUB&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>github-url&lt;/code>&lt;/td>
+&lt;td>fully qualified url to GitHub or GitHub Enterprise Server for templates&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>COMPILER_GITHUB_URL&lt;/code>&lt;br>&lt;code>VELA_COMPILER_GITHUB_URL&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>github-token&lt;/code>&lt;/td>
+&lt;td>token used for authentication when fetching registry templates&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>COMPILER_GITHUB_TOKEN&lt;/code>&lt;br>&lt;code>VELA_COMPILER_GITHUB_TOKEN&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>modification-addr&lt;/code>&lt;/td>
+&lt;td>fully qualified url to endpoint for modifying pipelines&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>MODIFICATION_ADDR&lt;/code>&lt;br>&lt;code>VELA_MODIFICATION_ADDR&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>modification-retries&lt;/code>&lt;/td>
+&lt;td>number of times to resend failed requests to the modification endpoint&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>5&lt;/code>&lt;/td>
+&lt;td>&lt;code>MODIFICATION_RETRIES&lt;/code>&lt;br>&lt;code>VELA_MODIFICATION_RETRIES&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>modification-secret&lt;/code>&lt;/td>
+&lt;td>authenticates communication between compiler and the modification endpoint&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>MODIFICATION_SECRET&lt;/code>&lt;br>&lt;code>VELA_MODIFICATION_SECRET&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>modification-timeout&lt;/code>&lt;/td>
+&lt;td>timeout for requests sent to the modification endpoint&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>8s&lt;/code>&lt;/td>
+&lt;td>&lt;code>MODIFICATION_TIMEOUT&lt;/code>&lt;br>&lt;code>VELA_MODIFICATION_TIMEOUT&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+For more information on these configuration options, please see the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/">server reference&lt;/a>.
+&lt;/div>
+&lt;h2 id="drivers">Drivers&lt;/h2>
+&lt;p>The following drivers are available to configure the component:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Documentation&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>github&lt;/code>&lt;/td>
+&lt;td>uses GitHub or GitHug Enterprise Server as a template registry&lt;/td>
+&lt;td>&lt;a href="https://docs.github.com/en/enterprise-server/admin/overview/system-overview">https://docs.github.com/en/enterprise-server/admin/overview/system-overview&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="github">GitHub&lt;/h3>
+&lt;p>From the &lt;a href="https://github.com/about/">GitHub official website&lt;/a>:&lt;/p>
+&lt;blockquote>
+&lt;p>GitHub is where the world builds software. Millions of developers and companies build, ship, and maintain their software on GitHub—the largest and most advanced development platform in the world.&lt;/p>
+&lt;/blockquote>
+&lt;p>The below configuration displays an example of starting the Vela server that will use a GitHub Server as a template registry:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-diff" data-lang="diff">&lt;span style="display:flex;">&lt;span>$ docker run \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --detach=true \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_ADDR=https://vela-server.example.com \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_COMPILER_GITHUB=true \
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_COMPILER_TOKEN=&amp;lt;github-personal-access-token&amp;gt; \
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_COMPILER_URL=https://github.com \
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">&lt;/span> --env=VELA_DATABASE_ENCRYPTION_KEY=&amp;lt;encryption-key&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_QUEUE_DRIVER=redis \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_QUEUE_ADDR=redis://&amp;lt;password&amp;gt;@&amp;lt;hostname&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;database&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_PORT=443 \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SECRET=&amp;lt;shared-secret&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SCM_CLIENT=&amp;lt;oauth-client-id&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SCM_SECRET=&amp;lt;oauth-client-secret&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_WEBUI_ADDR=https://vela.example.com \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --name=server \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --publish=80:80 \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --publish=443:443 \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --restart=always \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> target/vela-server:latest
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+&lt;p>This GitHub configuration is enabled by default and is not necessary to provide in order for Vela to operate.&lt;/p>
+&lt;p>However, this configuration will enable you to fetch templates from a private organization or repository on GitHub.&lt;/p>
+&lt;/div>
+&lt;h3 id="github-enterprise-server">GitHub Enterprise Server&lt;/h3>
+&lt;p>From the &lt;a href="https://docs.github.com/en/enterprise-server/admin/overview/system-overview">GitHub Enterprise official website&lt;/a>:&lt;/p>
+&lt;blockquote>
+&lt;p>GitHub Enterprise Server is your organization&amp;rsquo;s private copy of GitHub contained within a virtual appliance, hosted on premises or in the cloud, that you configure and control.&lt;/p>
+&lt;/blockquote>
+&lt;p>The below configuration displays an example of starting the Vela server that will use a GitHub Enterprise Server as a template registry:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-diff" data-lang="diff">&lt;span style="display:flex;">&lt;span>$ docker run \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --detach=true \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_ADDR=https://vela-server.example.com \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_COMPILER_GITHUB=true \
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_COMPILER_TOKEN=&amp;lt;github-personal-access-token&amp;gt; \
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_COMPILER_URL=https://git.example.com \
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">&lt;/span> --env=VELA_DATABASE_ENCRYPTION_KEY=&amp;lt;encryption-key&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_QUEUE_DRIVER=redis \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_QUEUE_ADDR=redis://&amp;lt;password&amp;gt;@&amp;lt;hostname&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;database&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_PORT=443 \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SECRET=&amp;lt;shared-secret&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SCM_CLIENT=&amp;lt;oauth-client-id&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SCM_SECRET=&amp;lt;oauth-client-secret&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_WEBUI_ADDR=https://vela.example.com \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --name=server \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --publish=80:80 \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --publish=443:443 \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --restart=always \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> target/vela-server:latest
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Installation: Database</title><link>https://go-vela.github.io/docs/installation/server/reference/database/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/server/reference/database/</guid><description>
+&lt;p>This component is responsible for integrating with a database system based off the configuration provided.&lt;/p>
+&lt;p>The database system is used by Vela for storing application &lt;a href="https://en.wikipedia.org/wiki/Data_at_rest">data at rest&lt;/a>.&lt;/p>
+&lt;p>This data is an organized collection of information necessary for the platform to operate.&lt;/p>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+Any sensitive data stored in the database will be encrypted using the &lt;a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard">Advanced Encryption Standard (AES)&lt;/a>.
+&lt;/div>
+&lt;h2 id="configuration">Configuration&lt;/h2>
+&lt;p>The following options are used to configure the component:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Environment Variables&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>database.addr&lt;/code>&lt;/td>
+&lt;td>full connection string to the database&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>sqlite3&lt;/code>&lt;/td>
+&lt;td>&lt;code>DATABASE_ADDR&lt;/code>&lt;br>&lt;code>VELA_DATABASE_ADDR&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>database.driver&lt;/code>&lt;/td>
+&lt;td>type of client to control and operate the database&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>vela.sqlite&lt;/code>&lt;/td>
+&lt;td>&lt;code>DATABASE_DRIVER&lt;/code>&lt;br>&lt;code>VELA_DATABASE_DRIVER&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>database.compression.level&lt;/code>&lt;/td>
+&lt;td>level of compression for logs stored in the database&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>3&lt;/code>&lt;/td>
+&lt;td>&lt;code>DATABASE_COMPRESSION_LEVEL&lt;/code>&lt;br>&lt;code>VELA_DATABASE_COMPRESSION_LEVEL&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>database.connection.idle&lt;/code>&lt;/td>
+&lt;td>maximum number of idle connections to the database&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>2&lt;/code>&lt;/td>
+&lt;td>&lt;code>DATABASE_CONNECTION_IDLE&lt;/code>&lt;br>&lt;code>VELA_DATABASE_CONNECTION_IDLE&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>database.connection.life&lt;/code>&lt;/td>
+&lt;td>duration of time a connection is reusable&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>30m&lt;/code>&lt;/td>
+&lt;td>&lt;code>DATABASE_CONNECTION_LIFE&lt;/code>&lt;br>&lt;code>VELA_DATABASE_CONNECTION_LIFE&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>database.connection.open&lt;/code>&lt;/td>
+&lt;td>maximum number of open connections to the database&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>0&lt;/code>&lt;/td>
+&lt;td>&lt;code>DATABASE_CONNECTION_OPEN&lt;/code>&lt;br>&lt;code>VELA_DATABASE_CONNECTION_OPEN&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>database.encryption.key&lt;/code>&lt;/td>
+&lt;td>AES-256 key for encrypting/decrypting values in the database&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>DATABASE_ENCRYPTION_KEY&lt;/code>&lt;br>&lt;code>VELA_DATABASE_ENCRYPTION_KEY&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>database.skip_creation&lt;/code>&lt;/td>
+&lt;td>skips the creation of tables and indexes in the database&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>DATABASE_SKIP_CREATION&lt;/code>&lt;br>&lt;code>VELA_DATABASE_SKIP_CREATION&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+For more information on these configuration options, please see the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/">server reference&lt;/a>.
+&lt;/div>
+&lt;h2 id="drivers">Drivers&lt;/h2>
+&lt;p>The following drivers are available to configure the component:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Documentation&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>postgres&lt;/code>&lt;/td>
+&lt;td>uses a PostgreSQL database for storing data at rest&lt;/td>
+&lt;td>&lt;a href="https://www.postgresql.org/">https://www.postgresql.org/&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>sqlite3&lt;/code>&lt;/td>
+&lt;td>uses a SQLite database for storing data at rest&lt;/td>
+&lt;td>&lt;a href="https://www.sqlite.org/">https://www.sqlite.org/&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="postgres">Postgres&lt;/h3>
+&lt;p>From the &lt;a href="https://www.postgresql.org/">PostgreSQL official website&lt;/a>:&lt;/p>
+&lt;blockquote>
+&lt;p>PostgreSQL is a powerful, open source object-relational database system with over 30 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.&lt;/p>
+&lt;/blockquote>
+&lt;p>The below configuration displays an example of starting the Vela server that will connect to a Postgres database:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-diff" data-lang="diff">&lt;span style="display:flex;">&lt;span>$ docker run \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --detach=true \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_ADDR=https://vela-server.example.com \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_DATABASE_DRIVER=postgres \
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_DATABASE_ADDR=postgres://&amp;lt;username&amp;gt;:&amp;lt;password&amp;gt;@&amp;lt;hostname&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;database&amp;gt; \
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">&lt;/span> --env=VELA_DATABASE_ENCRYPTION_KEY=&amp;lt;encryption-key&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_QUEUE_DRIVER=redis \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_QUEUE_ADDR=redis://&amp;lt;password&amp;gt;@&amp;lt;hostname&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;database&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_PORT=443 \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SECRET=&amp;lt;shared-secret&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SCM_CLIENT=&amp;lt;oauth-client-id&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SCM_SECRET=&amp;lt;oauth-client-secret&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_WEBUI_ADDR=https://vela.example.com \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --name=server \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --publish=80:80 \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --publish=443:443 \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --restart=always \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> target/vela-server:latest
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="sqlite3">Sqlite3&lt;/h3>
+&lt;p>From the &lt;a href="https://www.sqlite.org/">Sqlite official website&lt;/a>:&lt;/p>
+&lt;blockquote>
+&lt;p>SQLite is a C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine. SQLite is the most used database engine in the world. SQLite is built into all mobile phones and most computers and comes bundled inside countless other applications that people use every day.&lt;/p>
+&lt;/blockquote>
+&lt;p>The below configuration displays an example of starting the Vela server that will connect to a Sqlite database:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-diff" data-lang="diff">&lt;span style="display:flex;">&lt;span>$ docker run \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --detach=true \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_ADDR=https://vela-server.example.com \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_DATABASE_DRIVER=sqlite3 \
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_DATABASE_ADDR=vela.sqlite \
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">&lt;/span> --env=VELA_DATABASE_ENCRYPTION_KEY=&amp;lt;encryption-key&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_QUEUE_DRIVER=redis \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_QUEUE_ADDR=redis://&amp;lt;password&amp;gt;@&amp;lt;hostname&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;database&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_PORT=443 \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SECRET=&amp;lt;shared-secret&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SCM_CLIENT=&amp;lt;oauth-client-id&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SCM_SECRET=&amp;lt;oauth-client-secret&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_WEBUI_ADDR=https://vela.example.com \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --name=server \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --publish=80:80 \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --publish=443:443 \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --restart=always \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> target/vela-server:latest
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+This Sqlite configuration is enabled by default and is not necessary to provide in order for Vela to operate.
+&lt;/div></description></item><item><title>Installation: Queue</title><link>https://go-vela.github.io/docs/installation/server/reference/queue/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/server/reference/queue/</guid><description>
+&lt;p>This component is responsible for integrating with a queue system based off the configuration provided.&lt;/p>
+&lt;p>The queue system is used by the Vela server for pushing workloads that will be run by a &lt;a href="https://go-vela.github.io/docs/docs/installation/worker/">worker&lt;/a>.&lt;/p>
+&lt;p>Workloads published to the queue are managed with a &lt;a href="https://en.wikipedia.org/wiki/FIFO_(computing_and_electronics)">first in, first out (FIFO)&lt;/a> strategy.&lt;/p>
+&lt;h2 id="configuration">Configuration&lt;/h2>
+&lt;p>The following options are used to configure the component:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Environment Variables&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>queue.addr&lt;/code>&lt;/td>
+&lt;td>full connection string to the queue&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>QUEUE_ADDR&lt;/code>&lt;br>&lt;code>VELA_QUEUE_ADDR&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>queue.cluster&lt;/code>&lt;/td>
+&lt;td>configures the client for a queue cluster&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>QUEUE_CLUSTER&lt;/code>&lt;br>&lt;code>VELA_QUEUE_CLUSTER&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>queue.driver&lt;/code>&lt;/td>
+&lt;td>type of client to control and operate queue&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>QUEUE_DRIVER&lt;/code>&lt;br>&lt;code>VELA_QUEUE_DRIVER&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>queue.pop.timeout&lt;/code>&lt;/td>
+&lt;td>timeout for requests that pop items off the queue&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>60s&lt;/code>&lt;/td>
+&lt;td>&lt;code>QUEUE_POP_TIMEOUT&lt;/code>&lt;br>&lt;code>VELA_QUEUE_POP_TIMEOUT&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>queue.routes&lt;/code>&lt;/td>
+&lt;td>unique channels or topics for pushing workloads&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>[ vela ]&lt;/code>&lt;/td>
+&lt;td>&lt;code>QUEUE_ROUTES&lt;/code>&lt;br>&lt;code>VELA_QUEUE_ROUTES&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+For more information on these configuration options, please see the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/">server reference&lt;/a>.
+&lt;/div>
+&lt;h2 id="drivers">Drivers&lt;/h2>
+&lt;p>The following drivers are available to configure the component:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Documentation&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>redis&lt;/code>&lt;/td>
+&lt;td>uses a Redis queue for managing workloads&lt;/td>
+&lt;td>&lt;a href="https://redis.io/">https://redis.io/&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="redis">Redis&lt;/h3>
+&lt;p>From the &lt;a href="https://redis.io/">Redis official website&lt;/a>:&lt;/p>
+&lt;blockquote>
+&lt;p>Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache, and message broker. Redis provides data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs, geospatial indexes, and streams. Redis has built-in replication, Lua scripting, LRU eviction, transactions, and different levels of on-disk persistence, and provides high availability via Redis Sentinel and automatic partitioning with Redis Cluster.&lt;/p>
+&lt;/blockquote>
+&lt;p>The below configuration displays an example of starting the Vela server that will connect to a Redis queue:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-diff" data-lang="diff">&lt;span style="display:flex;">&lt;span>$ docker run \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --detach=true \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_ADDR=https://vela-server.example.com \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_DATABASE_ENCRYPTION_KEY=&amp;lt;encryption-key&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_QUEUE_DRIVER=redis \
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_QUEUE_ADDR=redis://&amp;lt;password&amp;gt;@&amp;lt;hostname&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;database&amp;gt; \
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">&lt;/span> --env=VELA_PORT=443 \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SECRET=&amp;lt;shared-secret&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SCM_CLIENT=&amp;lt;oauth-client-id&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SCM_SECRET=&amp;lt;oauth-client-secret&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_WEBUI_ADDR=https://vela.example.com \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --name=server \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --publish=80:80 \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --publish=443:443 \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --restart=always \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> target/vela-server:latest
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Installation: SCM</title><link>https://go-vela.github.io/docs/installation/server/reference/scm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/server/reference/scm/</guid><description>
+&lt;p>This component is responsible for integrating with a source control management (SCM) system based off the configuration provided.&lt;/p>
+&lt;p>The SCM system is used by Vela for both authentication and authorization of interactions performed within the application.&lt;/p>
+&lt;p>&lt;img src="https://go-vela.github.io/docs/docs/installation/server/reference/authentication_workflow.png" alt="Authentication Workflow">&lt;/p>
+&lt;h2 id="configuration">Configuration&lt;/h2>
+&lt;p>The following options are used to configure the component:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Environment Variables&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>scm.addr&lt;/code>&lt;/td>
+&lt;td>fully qualified url for the SCM&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>https://github.com&lt;/code>&lt;/td>
+&lt;td>&lt;code>SCM_ADDR&lt;/code>&lt;br>&lt;code>VELA_SCM_ADDR&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>scm.client&lt;/code>&lt;/td>
+&lt;td>client ID from the generated OAuth application on the SCM&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>SCM_CLIENT&lt;/code>&lt;br>&lt;code>VELA_SCM_CLIENT&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>scm.context&lt;/code>&lt;/td>
+&lt;td>message to set in commit status on the SCM&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>continuous-integration/vela&lt;/code>&lt;/td>
+&lt;td>&lt;code>SCM_CONTEXT&lt;/code>&lt;br>&lt;code>VELA_SCM_CONTEXT&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>scm.driver&lt;/code>&lt;/td>
+&lt;td>type of client to control and operate SCM&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>github&lt;/code>&lt;/td>
+&lt;td>&lt;code>SCM_DRIVER&lt;/code>&lt;br>&lt;code>VELA_SCM_DRIVER&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>scm.scopes&lt;/code>&lt;/td>
+&lt;td>permission scopes to apply for the OAuth credentials on the SCM&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>[ repo, repo:status, user:email, read:user, read:org ]&lt;/code>&lt;/td>
+&lt;td>&lt;code>SCM_SCOPES&lt;/code>&lt;br>&lt;code>VELA_SCM_SCOPES&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>scm.secret&lt;/code>&lt;/td>
+&lt;td>client secret from the generated OAuth application on the SCM&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>SCM_SECRET&lt;/code>&lt;br>&lt;code>VELA_SCM_SECRET&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>scm.webhook.addr&lt;/code>&lt;/td>
+&lt;td>url for webhooks on the SCM to send requests to&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>the address of the Vela server (&lt;code>$VELA_ADDR&lt;/code>)&lt;/td>
+&lt;td>&lt;code>SCM_WEBHOOK_ADDR&lt;/code>&lt;br>&lt;code>VELA_SCM_WEBHOOK_ADDR&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+For more information on these configuration options, please see the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/">server reference&lt;/a>.
+&lt;/div>
+&lt;h2 id="drivers">Drivers&lt;/h2>
+&lt;p>The following drivers are available to configure the component:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Documentation&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>github&lt;/code>&lt;/td>
+&lt;td>uses a GitHub or GitHug Enterprise Server for the SCM&lt;/td>
+&lt;td>&lt;a href="https://github.com/about/">https://github.com/about/&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="github">GitHub&lt;/h3>
+&lt;p>From the &lt;a href="https://github.com/about/">GitHub official website&lt;/a>:&lt;/p>
+&lt;blockquote>
+&lt;p>GitHub is where the world builds software. Millions of developers and companies build, ship, and maintain their software on GitHub—the largest and most advanced development platform in the world.&lt;/p>
+&lt;/blockquote>
+&lt;p>The below configuration displays an example of creating a &lt;a href="https://docs.github.com/developers/apps/building-oauth-apps/creating-an-oauth-app">GitHub OAuth application&lt;/a>:&lt;/p>
+&lt;p>&lt;img src="https://go-vela.github.io/docs/docs/installation/server/github_oauth.png" alt="OAuth Application">&lt;/p>
+&lt;div class="alert alert-secondary" role="alert">
+&lt;h4 class="alert-heading">Warning:&lt;/h4>
+&lt;p>The &lt;code>Homepage URL&lt;/code> should match &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/#vela_addr">the &lt;code>VELA_ADDR&lt;/code> environment variable&lt;/a> provided to the server for clusters without a UI.&lt;/p>
+&lt;p>Otherwise, the &lt;code>Homepage URL&lt;/code> should match &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/#vela_webui_addr">the &lt;code>VELA_WEBUI_ADDR&lt;/code> environment variable&lt;/a> provided to the server.&lt;/p>
+&lt;p>The &lt;code>Authorization callback URL&lt;/code> should contain &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/#vela_addr">the &lt;code>VELA_ADDR&lt;/code> environment variable&lt;/a> with a &lt;code>/authenticate&lt;/code> suffix.&lt;/p>
+&lt;/div>
+&lt;h3 id="github-enterprise-server">GitHub Enterprise Server&lt;/h3>
+&lt;p>From the &lt;a href="https://docs.github.com/en/enterprise-server/admin/overview/system-overview">GitHub Enterprise official website&lt;/a>:&lt;/p>
+&lt;blockquote>
+&lt;p>GitHub Enterprise Server is your organization&amp;rsquo;s private copy of GitHub contained within a virtual appliance, hosted on premises or in the cloud, that you configure and control.&lt;/p>
+&lt;/blockquote>
+&lt;p>The below configuration displays an example of creating a &lt;a href="https://docs.github.com/enterprise-server@3.3/developers/apps/building-oauth-apps/creating-an-oauth-app">GitHub Enterprise Server OAuth application&lt;/a>:&lt;/p>
+&lt;p>&lt;img src="https://go-vela.github.io/docs/docs/installation/server/github_enterprise_oauth.png" alt="OAuth Application">&lt;/p>
+&lt;div class="alert alert-secondary" role="alert">
+&lt;h4 class="alert-heading">Warning:&lt;/h4>
+&lt;p>The &lt;code>Homepage URL&lt;/code> should match &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/#vela_addr">the &lt;code>VELA_ADDR&lt;/code> environment variable&lt;/a> provided to the server for clusters without a UI.&lt;/p>
+&lt;p>Otherwise, the &lt;code>Homepage URL&lt;/code> should match &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/#vela_webui_addr">the &lt;code>VELA_WEBUI_ADDR&lt;/code> environment variable&lt;/a> provided to the server.&lt;/p>
+&lt;p>The &lt;code>Authorization callback URL&lt;/code> should contain &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/#vela_addr">the &lt;code>VELA_ADDR&lt;/code> environment variable&lt;/a> with a &lt;code>/authenticate&lt;/code> suffix.&lt;/p>
+&lt;/div></description></item><item><title>Installation: Secret</title><link>https://go-vela.github.io/docs/installation/server/reference/secret/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/server/reference/secret/</guid><description>
+&lt;p>This component is optional and is responsible for integrating with an external secret system based off the configuration provided.&lt;/p>
+&lt;p>The secret system is used by Vela for storing sensitive application &lt;a href="https://en.wikipedia.org/wiki/Data_at_rest">data at rest&lt;/a>.&lt;/p>
+&lt;p>By default, Vela will use &lt;a href="https://go-vela.github.io/docs/docs/installation/server/database/">the database&lt;/a> to store the sensitive data if no other secret system is configured.&lt;/p>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+Any sensitive data stored in the database will be encrypted using the &lt;a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard">Advanced Encryption Standard (AES)&lt;/a>.
+&lt;/div>
+&lt;h2 id="configuration">Configuration&lt;/h2>
+&lt;p>The following options are used to configure the component:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Environment Variables&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>secret.vault.addr&lt;/code>&lt;/td>
+&lt;td>fully qualified url to the HashiCorp Vault instance&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>SECRET_VAULT_ADDR&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_ADDR&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>secret.vault.auth-method&lt;/code>&lt;/td>
+&lt;td>authentication method used to obtain token from the HashiCorp Vault instance&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>SECRET_VAULT_AUTH_METHOD&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_AUTH_METHOD&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>secret.vault.aws-role&lt;/code>&lt;/td>
+&lt;td>HashiCorp Vault role used to connect to the auth/aws/login endpoint&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>SECRET_VAULT_AWS_ROLE&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_AWS_ROLE&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>secret.vault.driver&lt;/code>&lt;/td>
+&lt;td>enables HashiCorp Vault as a secret engine&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>SECRET_VAULT&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>secret.vault.prefix&lt;/code>&lt;/td>
+&lt;td>prefix for k/v secrets in the HashiCorp Vault instance&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>SECRET_VAULT_PREFIX&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_PREFIX&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>secret.vault.renewal&lt;/code>&lt;/td>
+&lt;td>frequency to renew the token for the HashiCorp Vault instance&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>30m&lt;/code>&lt;/td>
+&lt;td>&lt;code>SECRET_VAULT_RENEWAL&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_RENEWAL&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>secret.vault.token&lt;/code>&lt;/td>
+&lt;td>token required to access the HashiCorp Vault instance&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>SECRET_VAULT_TOKEN&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_TOKEN&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>secret.vault.version&lt;/code>&lt;/td>
+&lt;td>version for the k/v backend for the HashiCorp Vault instance&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>2&lt;/code>&lt;/td>
+&lt;td>&lt;code>SECRET_VAULT_VERSION&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_VERSION&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+For more information on these configuration options, please see the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/">server reference&lt;/a>.
+&lt;/div>
+&lt;h2 id="drivers">Drivers&lt;/h2>
+&lt;p>The following drivers are available to configure the component:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Documentation&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>vault&lt;/code>&lt;/td>
+&lt;td>uses a HashiCorp Vault instance for storing sensitive data at rest&lt;/td>
+&lt;td>&lt;a href="https://www.vaultproject.io/">https://www.vaultproject.io/&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="hashicorp-vault">HashiCorp Vault&lt;/h3>
+&lt;p>From the &lt;a href="https://www.vaultproject.io/">HashiCorp Vault official website&lt;/a>:&lt;/p>
+&lt;blockquote>
+&lt;p>HashiCorp Vault enables you to secure, store and tightly control access to tokens, passwords, certificates, encryption keys for protecting secrets and other sensitive data using a UI, CLI, or HTTP API.&lt;/p>
+&lt;/blockquote>
+&lt;p>The below configuration displays an example of starting the Vela server that will connect to a HashiCorp Vault instance:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-diff" data-lang="diff">&lt;span style="display:flex;">&lt;span>$ docker run \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --detach=true \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_ADDR=https://vela-server.example.com \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_DATABASE_ENCRYPTION_KEY=&amp;lt;encryption-key&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_QUEUE_DRIVER=redis \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_QUEUE_ADDR=redis://&amp;lt;password&amp;gt;@&amp;lt;hostname&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;database&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_PORT=443 \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SECRET=&amp;lt;shared-secret&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_SECRET_VAULT=true \
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_SECRET_VAULT_ADDR=https://vault.example.com \
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_SECRET_VAULT_TOKEN=&amp;lt;vault-token&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">&lt;/span> --env=VELA_SCM_CLIENT=&amp;lt;oauth-client-id&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SCM_SECRET=&amp;lt;oauth-client-secret&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_WEBUI_ADDR=https://vela.example.com \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --name=server \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --publish=80:80 \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --publish=443:443 \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --restart=always \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> target/vela-server:latest
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>

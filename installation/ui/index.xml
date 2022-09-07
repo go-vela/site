@@ -1,0 +1,100 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – UI Overview</title><link>https://go-vela.github.io/docs/installation/ui/</link><description>Recent content in UI Overview on Vela</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://go-vela.github.io/docs/installation/ui/index.xml" rel="self" type="application/rss+xml"/><item><title>Installation: Docker</title><link>https://go-vela.github.io/docs/installation/ui/docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/ui/docker/</guid><description>
+&lt;h2 id="prerequisites">Prerequisites&lt;/h2>
+&lt;p>This section provides all required dependencies to install and start the UI with Docker.&lt;/p>
+&lt;h3 id="dependency-1-docker">Dependency 1: Docker&lt;/h3>
+&lt;p>&lt;a href="https://docs.docker.com/">Docker&lt;/a> will be used for downloading the UI and managing the lifecycle of the application.&lt;/p>
+&lt;p>You can refer to &lt;a href="https://docs.docker.com/get-docker/">Docker&amp;rsquo;s official documentation&lt;/a> on installing and configuring the service.&lt;/p>
+&lt;h2 id="installation">Installation&lt;/h2>
+&lt;p>This section provides an example of installing the UI with Docker.&lt;/p>
+&lt;p>This example only shows a subset of all possible configuration options.&lt;/p>
+&lt;h3 id="step-1-download-the-image">Step 1: Download the Image&lt;/h3>
+&lt;p>Download the &lt;a href="https://docs.docker.com/get-started/overview/#images">Docker image&lt;/a> for the Vela UI from &lt;a href="https://hub.docker.com/">DockerHub&lt;/a>.&lt;/p>
+&lt;p>You can use the &lt;a href="https://docs.docker.com/engine/reference/commandline/pull/">&lt;code>docker pull&lt;/code> command&lt;/a> to download the image:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>$ docker pull target/vela-ui:latest
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+&lt;p>The &lt;code>latest&lt;/code> tag will ensure you install the most-recent version of the Vela UI.&lt;/p>
+&lt;p>To see the full list of available versions, please refer to &lt;a href="https://hub.docker.com/r/target/vela-ui">the official registry&lt;/a>.&lt;/p>
+&lt;/div>
+&lt;h3 id="step-2-start-the-ui">Step 2: Start the UI&lt;/h3>
+&lt;p>Start the Vela UI as a &lt;a href="https://docs.docker.com/get-started/overview/#containers">Docker container&lt;/a> that is configured via environment variables.&lt;/p>
+&lt;p>You can use the &lt;a href="https://docs.docker.com/engine/reference/commandline/run/">&lt;code>docker run&lt;/code> command&lt;/a> to start the worker:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>$ docker run &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --detach&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#204a87">true&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --env&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">VELA_API&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>https://vela-server.example.com &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --name&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>ui &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --publish&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>80:80 &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --publish&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>443:443 &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --restart&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>always &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> target/vela-ui:latest
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+For a full list of configuration options, please see the &lt;a href="https://go-vela.github.io/docs/docs/installation/ui/reference/">UI reference&lt;/a>.
+&lt;/div>
+&lt;h3 id="step-3-verify-the-ui-logs">Step 3: Verify the UI Logs&lt;/h3>
+&lt;p>Ensure the UI started up successfully and is running as expected by inspecting the logs.&lt;/p>
+&lt;p>You can use the &lt;a href="https://docs.docker.com/engine/reference/commandline/logs/">&lt;code>docker logs&lt;/code> command&lt;/a> to verify the logs:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>$ docker logs ui
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Installation: Kubernetes</title><link>https://go-vela.github.io/docs/installation/ui/kubernetes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/ui/kubernetes/</guid><description>
+&lt;h2 id="prerequisites">Prerequisites&lt;/h2>
+&lt;p>This section provides all required dependencies to install and start the UI with Kubernetes.&lt;/p>
+&lt;h3 id="dependency-1-kubernetes">Dependency 1: Kubernetes&lt;/h3>
+&lt;p>&lt;a href="https://kubernetes.io/">Kubernetes&lt;/a> will be used for downloading the UI and managing the lifecycle of the application.&lt;/p>
+&lt;p>You can refer to &lt;a href="https://kubernetes.io/docs/setup/">Kubernetes&amp;rsquo; official documentation&lt;/a> on installing and configuring the service.&lt;/p>
+&lt;h2 id="installation">Installation&lt;/h2>
+&lt;p>This section provides an example of installing the UI with Kubernetes.&lt;/p>
+&lt;p>This example only shows a subset of all possible configuration options.&lt;/p>
+&lt;h3 id="step-1-todo">Step 1: TODO&lt;/h3>
+&lt;p>TODO&lt;/p></description></item><item><title>Installation: Reference</title><link>https://go-vela.github.io/docs/installation/ui/reference/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/ui/reference/</guid><description>
+&lt;h2 id="required">Required&lt;/h2>
+&lt;p>This section contains a list of all variables that must be provided to the UI.&lt;/p>
+&lt;h3 id="vela_api">VELA_API&lt;/h3>
+&lt;p>This variable sets a fully qualified URL to the Vela &lt;a href="https://go-vela.github.io/docs/docs/installation/server/">server&lt;/a> address.&lt;/p>
+&lt;p>The variable should be provided as a &lt;code>string&lt;/code>.&lt;/p>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+This variable should match &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/#vela_addr">the &lt;code>VELA_ADDR&lt;/code> variable&lt;/a> provided to the server.
+&lt;/div>
+&lt;h2 id="optional">Optional&lt;/h2>
+&lt;p>This section contains a list of all variables that can be provided to the UI.&lt;/p>
+&lt;h3 id="node_env">NODE_ENV&lt;/h3>
+&lt;p>This variable sets the targeted deployment environment for &lt;a href="https://nodejs.org/">node.js&lt;/a>.&lt;/p>
+&lt;p>Setting this variable to &lt;code>development&lt;/code> will enable development mode for the service and output verbose logging.&lt;/p>
+&lt;p>The variable can be provided as a &lt;code>string&lt;/code>.&lt;/p>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+This variable has a default value of &lt;code>production&lt;/code>.
+&lt;/div>
+&lt;h3 id="vela_docs_url">VELA_DOCS_URL&lt;/h3>
+&lt;p>This variable sets a fully qualified URL to the documentation website for Vela.&lt;/p>
+&lt;p>The variable can be provided as a &lt;code>string&lt;/code>.&lt;/p>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+This variable has a default value of &lt;code>https://go-vela.github.io/docs/&lt;/code>.
+&lt;/div>
+&lt;h3 id="vela_feedback_url">VELA_FEEDBACK_URL&lt;/h3>
+&lt;p>This variable sets a fully qualified URL to the feedback website for Vela.&lt;/p>
+&lt;p>The variable can be provided as a &lt;code>string&lt;/code>.&lt;/p>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+This variable has a default value of &lt;code>https://github.com/go-vela/ui/issues/new/&lt;/code>.
+&lt;/div>
+&lt;h3 id="vela_log_bytes_limit">VELA_LOG_BYTES_LIMIT&lt;/h3>
+&lt;p>This variable sets the maximum amount of bytes for logs the UI will attempt to render.&lt;/p>
+&lt;p>The variable can be provided as an &lt;code>integer&lt;/code>.&lt;/p>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+This variable has a default value of &lt;code>20000&lt;/code> (2 MB).
+&lt;/div>
+&lt;h3 id="vela_max_build_limit">VELA_MAX_BUILD_LIMIT&lt;/h3>
+&lt;p>This variable sets the maximum amount of concurrent builds a repo is allowed to run.&lt;/p>
+&lt;p>In this context, concurrent builds refers to any &lt;code>pending&lt;/code> or &lt;code>running&lt;/code> builds for that repo.&lt;/p>
+&lt;p>If the amount of concurrent builds for a repo matches the limit, then any new builds will be blocked from being created.&lt;/p>
+&lt;p>The variable can be provided as an &lt;code>integer&lt;/code>.&lt;/p>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+&lt;p>This variable has a default value of &lt;code>30&lt;/code>.&lt;/p>
+&lt;p>This variable should match &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/#vela_max_build_limit">the &lt;code>VELA_MAX_BUILD_LIMIT&lt;/code> variable&lt;/a> provided to the server.&lt;/p>
+&lt;/div></description></item></channel></rss>
