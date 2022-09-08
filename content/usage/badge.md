@@ -11,7 +11,7 @@ These docs assume you have Vela running.
 
 ### How to get your badge
 
-The server has an endpoint that will return an SVG badge for the default branch of your repo. The badge represents the current status for the most recent build for that branch (most recent, meaning the build with the highest build number). 
+The server has an endpoint that will return an SVG badge for the default branch of your repo. The badge represents the current status for the most recent build for that branch. The most recent build refers to any build produced by the repo that is attached to that branch, which includes any event (push, pull request, etc).
 
 ```sh
 # Syntax
