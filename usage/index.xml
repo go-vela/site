@@ -1037,7 +1037,7 @@ These docs assume you have Vela running.
 These docs assume you have Vela running.
 &lt;/div>
 &lt;h3 id="how-to-get-your-badge">How to get your badge&lt;/h3>
-&lt;p>The server has an endpoint that will return an SVG badge for the default branch of your repo.&lt;/p>
+&lt;p>The server has an endpoint that will return an SVG badge for the default branch of your repo. The badge represents the current status for the most recent build for that branch. The most recent build refers to any build produced by the repo that is attached to that branch, which includes any event (push, pull request, etc).&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Syntax&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>https://&amp;lt;vela server&amp;gt;/badge/&amp;lt;org&amp;gt;/&amp;lt;repo&amp;gt;/status.svg
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
