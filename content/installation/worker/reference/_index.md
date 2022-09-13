@@ -291,3 +291,22 @@ The variable can be provided as a `string`.
 This variable sets a fully qualified system path to the TLS certificate key used for HTTPS for the worker.
 
 The variable can be provided as a `string`.
+
+### VELA_SERVER_TLS_MIN_VERSION
+
+This variable sets the minimum TLS version that the worker API will accept.
+
+The variable can be provided as a `string`.
+
+{{% alert title="Note:" color="primary" %}}
+This variable has a default value of `1.2`.
+
+The possible options to provide for this variable are:
+
+* `1.0`
+* `1.1`
+* `1.2`
+* `1.3`
+{{% /alert %}}
+
+
