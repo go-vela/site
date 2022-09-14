@@ -605,6 +605,5 @@ The variable can be provided as a `duration` (i.e. `5s`, `10m`).
 {{% alert title="Note:" color="primary" %}}
 This variable has a default value of `5m`.\
 \
-The value should coordinate with the [`VELA_CHECK_IN`](/docs/installation/worker/reference/#vela_check_in)
-setting provided to the [worker](/docs/installation/worker/)
+The value should coordinate with the [`VELA_CHECK_IN`](/docs/installation/worker/reference/#vela_check_in) setting provided to the [worker](/docs/installation/worker/).
 {{% /alert %}}
