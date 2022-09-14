@@ -598,10 +598,13 @@ This variable has a default value of `/account/authenticate`.
 
 ### VELA_WORKER_ACTIVE_INTERVAL
 
-This variable sets the interval of time the workers will show as active for the [/metrics endpoint](TODO).
+This variable sets the interval of time the workers will be considered active. A worker is considered active if it has registered with the server inside the give duration.
 
 The variable can be provided as a `duration` (i.e. `5s`, `10m`).
 
 {{% alert title="Note:" color="primary" %}}
-This variable has a default value of `5m`.
+This variable has a default value of `5m`.\
+\
+The value should coordinate with the [`VELA_CHECK_IN`](/docs/installation/worker/reference/#vela_check_in)
+setting provided to the [worker](/docs/installation/worker/)
 {{% /alert %}}

@@ -110,7 +110,10 @@ This variable sets the maximum duration of time a worker will wait before regist
 The variable can be provided as a `duration` (i.e. `5s`, `10m`).
 
 {{% alert title="Note:" color="primary" %}}
-This variable has a default value of `15m`.
+This variable has a default value of `15m`.\
+\
+The value should coordinate with the [`VELA_WORKER_ACTIVE_INTERVAL`](/docs/installation/server/reference/#vela_worker_active_interval)
+setting provided to the [server](/docs/installation/server/)
 {{% /alert %}}
 
 ### VELA_EXECUTOR_DRIVER
