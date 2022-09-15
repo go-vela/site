@@ -106,7 +106,7 @@ services:
 
 ```yaml
 ---
-steps:
+services:
     # Set the user limits for the container.
   - ulimits:
       - name: foo
@@ -120,7 +120,7 @@ steps:
 
 ```yaml
 ---
-steps:
+services:
     # Run the container with the foo user.
   - user: foo
 ```
