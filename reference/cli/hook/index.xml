@@ -68,11 +68,11 @@ For more information, you can run &lt;code>vela get hook --help&lt;/code>.
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>$ vela get hook --org github --repo octocat
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="response">Response&lt;/h4>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>NUMBER STATUS EVENT BRANCH
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0000cf;font-weight:bold">5&lt;/span> failure push master
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0000cf;font-weight:bold">4&lt;/span> failure push master
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0000cf;font-weight:bold">3&lt;/span> success push master
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0000cf;font-weight:bold">2&lt;/span> success push master
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0000cf;font-weight:bold">1&lt;/span> success push master
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0000cf;font-weight:bold">5&lt;/span> failure push main
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0000cf;font-weight:bold">4&lt;/span> failure push main
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0000cf;font-weight:bold">3&lt;/span> success push main
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0000cf;font-weight:bold">2&lt;/span> success push main
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0000cf;font-weight:bold">1&lt;/span> success push main
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Reference: View</title><link>https://go-vela.github.io/docs/reference/cli/hook/view/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/cli/hook/view/</guid><description>
 &lt;h2 id="command">Command&lt;/h2>
 &lt;pre tabindex="0">&lt;code>$ vela view hook &amp;lt;parameters...&amp;gt; &amp;lt;arguments...&amp;gt;
@@ -145,7 +145,7 @@ For more information, you can run &lt;code>vela view hook --help&lt;/code>.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>created: &lt;span style="color:#0000cf;font-weight:bold">1563475419&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>host: github.com
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>event: push
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>branch: master
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>branch: main
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>error:
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>status: success
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>link: https://github.com/github/octocat/settings/hooks/1

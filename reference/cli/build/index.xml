@@ -148,11 +148,11 @@ For more information, you can run &lt;code>vela get build --help&lt;/code>.
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>$ vela get build --org github --repo octocat --build &lt;span style="color:#0000cf;font-weight:bold">1&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="response">Response&lt;/h4>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>NUMBER STATUS EVENT BRANCH DURATION
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0000cf;font-weight:bold">5&lt;/span> failure push master 45s
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0000cf;font-weight:bold">4&lt;/span> failure push master 50s
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0000cf;font-weight:bold">3&lt;/span> success push master 54s
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0000cf;font-weight:bold">2&lt;/span> success push master 55s
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0000cf;font-weight:bold">1&lt;/span> pending push master ...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0000cf;font-weight:bold">5&lt;/span> failure push main 45s
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0000cf;font-weight:bold">4&lt;/span> failure push main 50s
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0000cf;font-weight:bold">3&lt;/span> success push main 54s
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0000cf;font-weight:bold">2&lt;/span> success push main 55s
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0000cf;font-weight:bold">1&lt;/span> pending push main ...
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Reference: Restart</title><link>https://go-vela.github.io/docs/reference/cli/build/restart/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/cli/build/restart/</guid><description>
 &lt;h2 id="command">Command&lt;/h2>
 &lt;pre tabindex="0">&lt;code>$ vela restart build &amp;lt;parameters...&amp;gt; &amp;lt;arguments...&amp;gt;
@@ -236,8 +236,8 @@ For more information, you can run &lt;code>vela restart build --help&lt;/code>.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>commit: 48afb5bdc41ad69bf22588491333f7cf71135163
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sender: OctoKitty
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>author: OctoKitty
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>branch: master
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ref: refs/heads/master
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>branch: main
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ref: refs/heads/main
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>baseref: &lt;span style="color:#4e9a06">&amp;#34;&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>host: &lt;span style="color:#4e9a06">&amp;#34;company.localhost&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>runtime: &lt;span style="color:#4e9a06">&amp;#34;docker&amp;#34;&lt;/span>
@@ -325,8 +325,8 @@ For more information, you can run &lt;code>vela view build --help&lt;/code>.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>commit: 48afb5bdc41ad69bf22588491333f7cf71135163
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sender: OctoKitty
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>author: OctoKitty
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>branch: master
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ref: refs/heads/master
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>branch: main
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ref: refs/heads/main
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>baseref: &lt;span style="color:#4e9a06">&amp;#34;&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>host: &lt;span style="color:#4e9a06">&amp;#34;company.localhost&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>runtime: &lt;span style="color:#4e9a06">&amp;#34;docker&amp;#34;&lt;/span>

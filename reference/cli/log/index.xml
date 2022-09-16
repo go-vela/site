@@ -68,10 +68,10 @@ For more information, you can run &lt;code>vela get log --help&lt;/code>.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git remote --verbose
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>origin https://github.com/github/octocat.git &lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>fetch&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>origin https://github.com/github/octocat.git &lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>push&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git fetch --no-tags origin refs/heads/master
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git fetch --no-tags origin refs/heads/main
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>From https://github.com/github/octocat
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> * branch master -&amp;gt; FETCH_HEAD
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> * &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>new branch&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span> master -&amp;gt; origin/master
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> * branch main -&amp;gt; FETCH_HEAD
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> * &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>new branch&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span> main -&amp;gt; origin/main
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git reset --hard afafce5e33a8efd4340613b31a953107d6dec3a3
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>HEAD is now at afafce5 Dummy commit
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
@@ -157,10 +157,10 @@ For more information, you can run &lt;code>vela view log --help&lt;/code>.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git remote --verbose
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>origin https://github.com/github/octocat.git &lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>fetch&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>origin https://github.com/github/octocat.git &lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>push&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git fetch --no-tags origin refs/heads/master
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git fetch --no-tags origin refs/heads/main
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>From https://github.com/github/octocat
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> * branch master -&amp;gt; FETCH_HEAD
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> * &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>new branch&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span> master -&amp;gt; origin/master
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> * branch main -&amp;gt; FETCH_HEAD
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> * &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>new branch&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span> main -&amp;gt; origin/main
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git reset --hard afafce5e33a8efd4340613b31a953107d6dec3a3
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>HEAD is now at afafce5 Dummy commit
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>

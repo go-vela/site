@@ -1048,7 +1048,7 @@ These docs assume you have Vela running.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>https://&amp;lt;vela server&amp;gt;/badge/&amp;lt;org&amp;gt;/&amp;lt;repo&amp;gt;/status.svg?branch&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&amp;lt;branch name&amp;gt;
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Example&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>https://vela.example.com/badge/octocat/Hello-World/status.svg?branch&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>not_master
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>https://vela.example.com/badge/octocat/Hello-World/status.svg?branch&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>not_default
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="embedding-in-markdown">Embedding in Markdown&lt;/h3>
 &lt;p>To embed your badge in your markdown formatted file, follow this example:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Syntax&lt;/span>

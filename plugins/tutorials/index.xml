@@ -28,7 +28,7 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;&lt;/span>&lt;span style="color:#4e9a06">${&lt;/span>&lt;span style="color:#000">url&lt;/span>&lt;span style="color:#4e9a06">}&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;div class="alert alert-info" role="alert">
-An example of this code is provided in the &lt;a href="https://github.com/go-vela/vela-tutorials/tree/master/plugins/bash">bash section&lt;/a> of the &lt;a href="https://github.com/go-vela/vela-tutorials/tree/master/plugins">go-vela/vela-tutorials&lt;/a> repository.
+An example of this code is provided in the &lt;a href="https://github.com/go-vela/vela-tutorials/tree/main/plugins/bash">bash section&lt;/a> of the &lt;a href="https://github.com/go-vela/vela-tutorials/tree/main/plugins">go-vela/vela-tutorials&lt;/a> repository.
 &lt;/div>
 &lt;h2 id="image">Image&lt;/h2>
 &lt;p>Once we have the executable needed to accomplish our plugin&amp;rsquo;s task, we need to create a Dockerfile to produce an image.&lt;/p>
@@ -127,7 +127,7 @@ This has the added benefit of enabling others in the community to consume your p
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;div class="alert alert-info" role="alert">
-An example of this code is provided in the &lt;a href="https://github.com/go-vela/vela-tutorials/tree/master/plugins/go">go section&lt;/a> of the &lt;a href="https://github.com/go-vela/vela-tutorials/tree/master/plugins">go-vela/vela-tutorials&lt;/a> repository.
+An example of this code is provided in the &lt;a href="https://github.com/go-vela/vela-tutorials/tree/main/plugins/go">go section&lt;/a> of the &lt;a href="https://github.com/go-vela/vela-tutorials/tree/main/plugins">go-vela/vela-tutorials&lt;/a> repository.
 &lt;/div>
 &lt;h2 id="executable">Executable&lt;/h2>
 &lt;p>Now that we have the program to accomplish our plugin&amp;rsquo;s task, we need to compile the code to produce an executable binary for the target platform:&lt;/p>
@@ -354,7 +354,7 @@ This has the added benefit of enabling others in the community to consume your p
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic">&lt;/span>&lt;span style="color:#000">req&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">end&lt;/span>&lt;span style="color:#000;font-weight:bold">();&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;div class="alert alert-info" role="alert">
-An example of this code is provided in the &lt;a href="https://github.com/go-vela/vela-tutorials/tree/master/plugins/node.js">node.js section&lt;/a> of the &lt;a href="https://github.com/go-vela/vela-tutorials/tree/master/plugins">go-vela/vela-tutorials&lt;/a> repository.
+An example of this code is provided in the &lt;a href="https://github.com/go-vela/vela-tutorials/tree/main/plugins/node.js">node.js section&lt;/a> of the &lt;a href="https://github.com/go-vela/vela-tutorials/tree/main/plugins">go-vela/vela-tutorials&lt;/a> repository.
 &lt;/div>
 &lt;h2 id="image">Image&lt;/h2>
 &lt;p>Once we have the executable needed to accomplish our plugin&amp;rsquo;s task, we need to create a Dockerfile to produce an image.&lt;/p>
@@ -446,7 +446,7 @@ This has the added benefit of enabling others in the community to consume your p
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87">print&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">response&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">read&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">decode&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;utf-8&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">))&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;div class="alert alert-info" role="alert">
-An example of this code is provided in the &lt;a href="https://github.com/go-vela/vela-tutorials/tree/master/plugins/python">python section&lt;/a> of the &lt;a href="https://github.com/go-vela/vela-tutorials/tree/master/plugins">go-vela/vela-tutorials&lt;/a> repository.
+An example of this code is provided in the &lt;a href="https://github.com/go-vela/vela-tutorials/tree/main/plugins/python">python section&lt;/a> of the &lt;a href="https://github.com/go-vela/vela-tutorials/tree/main/plugins">go-vela/vela-tutorials&lt;/a> repository.
 &lt;/div>
 &lt;h2 id="image">Image&lt;/h2>
 &lt;p>Once we have the script needed to accomplish our plugin&amp;rsquo;s task, we need to create a Dockerfile to produce an image.&lt;/p>
@@ -536,7 +536,7 @@ This has the added benefit of enabling others in the community to consume your p
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87">puts&lt;/span> &lt;span style="color:#000">response&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">.&lt;/span>&lt;span style="color:#000">read_body&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;div class="alert alert-info" role="alert">
-An example of this code is provided in the &lt;a href="https://github.com/go-vela/vela-tutorials/tree/master/plugins/ruby">ruby section&lt;/a> of the &lt;a href="https://github.com/go-vela/vela-tutorials/tree/master/plugins">go-vela/vela-tutorials&lt;/a> repository.
+An example of this code is provided in the &lt;a href="https://github.com/go-vela/vela-tutorials/tree/main/plugins/ruby">ruby section&lt;/a> of the &lt;a href="https://github.com/go-vela/vela-tutorials/tree/main/plugins">go-vela/vela-tutorials&lt;/a> repository.
 &lt;/div>
 &lt;h2 id="image">Image&lt;/h2>
 &lt;p>Once we have the script needed to accomplish our plugin&amp;rsquo;s task, we need to create a Dockerfile to produce an image.&lt;/p>

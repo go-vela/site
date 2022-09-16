@@ -165,8 +165,8 @@ For more information, you can run &lt;code>vela get deployment --help&lt;/code>.
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>$ vela get deployment --org github --repo octocat
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="response-generated-from-successful-cli-command">Response generated from successful CLI command&lt;/h4>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>ID TASK USER REF TARGET
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0000cf;font-weight:bold">2&lt;/span> deploy:vela octocat master production
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0000cf;font-weight:bold">1&lt;/span> deploy:vela octocat master production
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0000cf;font-weight:bold">2&lt;/span> deploy:vela octocat main production
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0000cf;font-weight:bold">1&lt;/span> deploy:vela octocat main production
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="examples">Examples&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>EXAMPLES:
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1. Get deployments &lt;span style="color:#204a87;font-weight:bold">for&lt;/span> a repository.
@@ -246,7 +246,7 @@ For more information, you can run &lt;code>vela view deployment --help&lt;/code>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>url: https://api.github.com/repos/github/octocat/deployments/1
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>user: octocat
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>commit: 48afb5bdc41ad69bf22588491333f7cf71135163
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ref: master
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ref: main
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>task: deploy:vela
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>target: production
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>description: Deployment request from Vela

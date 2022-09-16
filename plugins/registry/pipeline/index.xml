@@ -2760,6 +2760,13 @@ Context-Type options are as follow:&lt;/p>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
+&lt;td>&lt;code>default_branch&lt;/code>&lt;/td>
+&lt;td>default branch of the repository&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;strong>set by Vela&lt;/strong>&lt;/td>
+&lt;td>&lt;code>PARAMETER_DEFAULT_BRANCH&lt;/code>&lt;br>&lt;code>GIT_DEFAULT_BRANCH&lt;/code>&lt;br>&lt;code>VELA_REPO_BRANCH&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>&lt;code>log_level&lt;/code>&lt;/td>
 &lt;td>set the log level for the plugin&lt;/td>
 &lt;td>&lt;code>true&lt;/code>&lt;/td>
