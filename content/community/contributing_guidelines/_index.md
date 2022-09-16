@@ -51,7 +51,7 @@ Vela is written in a modular format which creates a dependency tree. The ui is i
 - [docs](https://github.com/go-vela/docs)
 - [vela-tutorials](https://github.com/go-vela/vela-tutorials)
 - [community](https://github.com/go-vela/community) (migrations, proposals, releases (release notes), [issues](/docs/communityy/contributing_guidelines/#issues))
-- [homebrew](https://github.com/go-vela/homebrew) (brew tap go-vela/vela)
+- [homebrew](https://github.com/go-vela/homebrew-vela) (brew tap go-vela/vela)
 
 ## Types of Contributions
 
@@ -70,9 +70,9 @@ Vela is written in a modular format which creates a dependency tree. The ui is i
 
 ### Proposals
 
-[Proposals](https://github.com/go-vela/community/tree/master/proposals) are used to foster discussion around large or breaking feature requests, or when looking for feedback on varied implementation options. Check that an [issue](https://github.com/go-vela/community/issues) or [proposal](https://github.com/go-vela/community/tree/master/proposals) doesn’t exist already.
+[Proposals](https://github.com/go-vela/community/tree/main/proposals) are used to foster discussion around large or breaking feature requests, or when looking for feedback on varied implementation options. Check that an [issue](https://github.com/go-vela/community/issues) or [proposal](https://github.com/go-vela/community/tree/main/proposals) doesn’t exist already.
 
-Create a pull request using the [proposal template](https://github.com/go-vela/community/blob/master/.github/PULL_REQUEST_TEMPLATE/proposal.md).
+Create a pull request using the [proposal template](https://github.com/go-vela/community/blob/main/.github/PULL_REQUEST_TEMPLATE/proposal.md).
 
 Anyone is welcome to weigh in on a proposal. If you’d like, link it in the [public #vela Slack channel](https://gophers.slack.com/app_redirect?channel=CNRRKE8KY) for more visibility.
 
@@ -81,11 +81,11 @@ There isn’t a clearly defined proposal process yet (we’re working on that). 
 ## Lifecycle of a Contribution
 
 {{% alert title="Note:" color="warning" %}}
-Make sure an [issue](https://github.com/go-vela/community/issues) or [proposal](https://github.com/go-vela/community/tree/master/proposals) in the [go-vela/community](https://github.com/go-vela/community) repository exists prior to beginning any code changes.
+Make sure an [issue](https://github.com/go-vela/community/issues) or [proposal](https://github.com/go-vela/community/tree/main/proposals) in the [go-vela/community](https://github.com/go-vela/community) repository exists prior to beginning any code changes.
 {{% /alert %}}
 
 ### Determining appropriateness for Vela
-Before contributing any code, make sure an [issue](/docs/community/contributing_guidelines/#issues) exists, be sure to checkout current [issues](https://github.com/go-vela/community/issues) and [proposals](https://github.com/go-vela/community/tree/master/proposals) to make sure your idea isn’t already being worked on. We're working on a public roadmap view to link here.
+Before contributing any code, make sure an [issue](/docs/community/contributing_guidelines/#issues) exists, be sure to checkout current [issues](https://github.com/go-vela/community/issues) and [proposals](https://github.com/go-vela/community/tree/main/proposals) to make sure your idea isn’t already being worked on. We're working on a public roadmap view to link here.
 
 If an issue does not exist, make sure to create one.
 
@@ -155,7 +155,7 @@ Currently, main releases only apply to [core repos](/docs/community/contributing
     - [Enhancements](/docs/community/contributing_guidelines/#issues) will be considered on a case-by-case basis by admins.
     - [Bugs](/docs/community/contributing_guidelines/#issues) and security fixes can be included.
     - Non-breaking dependency updates can be included.
-- **Release Notes:** You can find a list of release notes in the [community repository](https://github.com/go-vela/community/tree/master/releases).
+- **Release Notes:** You can find a list of release notes in the [community repository](https://github.com/go-vela/community/tree/main/releases).
 
 ## Style Guide
 As you contribute to Vela, we ask that you follow these style guides to keep the code clean and consistent.
@@ -203,5 +203,5 @@ Because Vela is an open source tool, anyone can contribute! We have our admins a
 If you have a question about contributing to Vela, the above guidelines, or Vela in general, please reach out to the Vela team!
 - [#vela](https://gophers.slack.com/app_redirect?channel=CNRRKE8KY) Slack channel
 - Email us at [vela@target.com](mailto:vela@target.com)
-- [Support resources](https://github.com/go-vela/ui/blob/master/.github/SUPPORT.md)
+- [Support resources](https://github.com/go-vela/ui/blob/main/.github/SUPPORT.md)
 - Open an [issue](https://github.com/go-vela/community/issues/new/choose)

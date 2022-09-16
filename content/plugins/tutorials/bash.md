@@ -43,7 +43,7 @@ curl \
 ```
 
 {{% alert color="info" %}}
-An example of this code is provided in the [bash section](https://github.com/go-vela/vela-tutorials/tree/master/plugins/bash) of the [go-vela/vela-tutorials](https://github.com/go-vela/vela-tutorials/tree/master/plugins) repository.
+An example of this code is provided in the [bash section](https://github.com/go-vela/vela-tutorials/tree/main/plugins/bash) of the [go-vela/vela-tutorials](https://github.com/go-vela/vela-tutorials/tree/main/plugins) repository.
 {{% /alert %}}
 
 ## Image

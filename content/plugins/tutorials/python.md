@@ -57,7 +57,7 @@ print(response.read().decode("utf-8"))
 ```
 
 {{% alert color="info" %}}
-An example of this code is provided in the [python section](https://github.com/go-vela/vela-tutorials/tree/master/plugins/python) of the [go-vela/vela-tutorials](https://github.com/go-vela/vela-tutorials/tree/master/plugins) repository.
+An example of this code is provided in the [python section](https://github.com/go-vela/vela-tutorials/tree/main/plugins/python) of the [go-vela/vela-tutorials](https://github.com/go-vela/vela-tutorials/tree/main/plugins) repository.
 {{% /alert %}}
 
 ## Image

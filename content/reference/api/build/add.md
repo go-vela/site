@@ -44,12 +44,12 @@ To authenticate to the API, please review the [authentication documentation](/do
 ```json
 {
   "author": "Octokitty",
-  "branch": "master",
+  "branch": "main",
   "commit": "48afb5bdc41ad69bf22588491333f7cf71135163",
   "clone": "https://github.com/github/octocat.git",
   "event": "push",
   "message": "First commit...",
-  "ref": "refs/heads/master",
+  "ref": "refs/heads/main",
   "sender": "Octokitty",
   "source": "https://github.com/github/octocat/commit/48afb5bdc41ad69bf22588491333f7cf71135163",
   "title": "push received from https://github.com/github/octocat"
@@ -90,8 +90,8 @@ curl \
   "commit": "48afb5bdc41ad69bf22588491333f7cf71135163",
   "sender": "OctoKitty",
   "author": "OctoKitty",
-  "branch": "master",
-  "ref": "refs/heads/master",
+  "branch": "main",
+  "ref": "refs/heads/main",
   "base_ref": "",
   "host": "company.localhost",
   "runtime": "docker",

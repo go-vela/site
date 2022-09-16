@@ -58,7 +58,7 @@ curl \
   "url": "https://api.github.com/repos/github/octocat/deployments/1",
   "user": "octocat",
   "commit": "48afb5bdc41ad69bf22588491333f7cf71135163",
-  "ref": "master",
+  "ref": "main",
   "task": "deploy:vela",
   "target": "production",
   "description": "Deployment request from Vela"
