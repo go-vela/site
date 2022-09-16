@@ -487,9 +487,11 @@ This variable has a default value of &lt;code>2&lt;/code>.
 This variable has a default value of &lt;code>/account/authenticate&lt;/code>.
 &lt;/div>
 &lt;h3 id="vela_worker_active_interval">VELA_WORKER_ACTIVE_INTERVAL&lt;/h3>
-&lt;p>This variable sets the interval of time the workers will show as active for the &lt;a href="TODO">/metrics endpoint&lt;/a>.&lt;/p>
+&lt;p>This variable sets the interval of time the workers will be considered active. A worker is considered active if it has registered with the server inside the give duration.&lt;/p>
 &lt;p>The variable can be provided as a &lt;code>duration&lt;/code> (i.e. &lt;code>5s&lt;/code>, &lt;code>10m&lt;/code>).&lt;/p>
 &lt;div class="alert alert-primary" role="alert">
 &lt;h4 class="alert-heading">Note:&lt;/h4>
-This variable has a default value of &lt;code>5m&lt;/code>.
+This variable has a default value of &lt;code>5m&lt;/code>.&lt;br>
+&lt;br>
+The value should coordinate with the &lt;a href="https://go-vela.github.io/docs/docs/installation/worker/reference/#vela_check_in">&lt;code>VELA_CHECK_IN&lt;/code>&lt;/a> setting provided to the &lt;a href="https://go-vela.github.io/docs/docs/installation/worker/">worker&lt;/a>.
 &lt;/div></description></item></channel></rss>
