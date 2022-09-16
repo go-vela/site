@@ -119,7 +119,7 @@ After finding the information for the build, please use the list below which inc
 
 ![Build Is Pending](build_is_pending.png)
 
-This behavior indicates the number of `running` builds for the system is greater than the number of [workers](/docs/administration/worker/) available.
+This behavior indicates the number of `running` builds for the system is greater than the number of [workers](/docs/installation/worker/) available.
 
 Unfortunately, the only way to resolve the issue is to wait until a worker becomes available to run your build.
 

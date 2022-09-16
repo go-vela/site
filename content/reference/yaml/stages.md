@@ -13,8 +13,8 @@ The `stages` tag is intended to be used to parallelize one-to-many sets of step 
 # This document is displaying all the required tags
 # to run two stages with one step task in parallel.
 stages:
-  test:
-    hello:
+  hello:
+    steps:
       - name: Hello World
         image: alpine:latest
         commands:
