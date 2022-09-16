@@ -56,7 +56,7 @@ puts response.read_body
 ```
 
 {{% alert color="info" %}}
-An example of this code is provided in the [ruby section](https://github.com/go-vela/vela-tutorials/tree/master/plugins/ruby) of the [go-vela/vela-tutorials](https://github.com/go-vela/vela-tutorials/tree/master/plugins) repository.
+An example of this code is provided in the [ruby section](https://github.com/go-vela/vela-tutorials/tree/main/plugins/ruby) of the [go-vela/vela-tutorials](https://github.com/go-vela/vela-tutorials/tree/main/plugins) repository.
 {{% /alert %}}
 
 ## Image

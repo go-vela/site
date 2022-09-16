@@ -51,8 +51,8 @@ steps:
     ruleset:
       event: [ push, pull_request ]
 
-  # if branch equals master add this step to the final pipeline
-  {{ if (eq $br "master") }}
+  # if branch equals main add this step to the final pipeline
+  {{ if (eq $br "main") }}
 
   - name: build
     commands:

@@ -60,7 +60,7 @@ steps:
       vars:
         ruleset:
           event: [ push, pull_request ]
-          branch: [ master ]
+          branch: [ main ]
 ```
 
 `github.com/<org>/<repo>/path/to/file/<template>.yml`
@@ -88,7 +88,7 @@ steps:
     image: alpine
     ruleset:
       event: [ push, pull_request ]
-      branch: [ master ]
+      branch: [ main ]
 ```
 
 #### vela

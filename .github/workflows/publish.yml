@@ -1,11 +1,11 @@
 # name of the action
 name: publish
 
-# trigger on push to master
+# trigger on push to main
 on:
   push:
     branches:
-      - master
+      - main
 
 # pipeline to execute
 jobs:

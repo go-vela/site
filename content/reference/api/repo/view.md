@@ -59,7 +59,7 @@ curl \
   "full_name": "github/octocat",
   "link": "https://github.com/github/octocat",
   "clone": "https://github.com/github/octocat.git",
-  "branch": "master",
+  "branch": "main",
   "build_limit": 10,
   "timeout": 60,
   "counter": 0,
