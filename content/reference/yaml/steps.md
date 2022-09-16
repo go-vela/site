@@ -135,8 +135,8 @@ The following rules can be used to configure a ruleset:
 steps:
   - ruleset:
       # As shown below this step will execute if the build
-      # branch is stage or master.
-      branch: [ stage, master ]
+      # branch is stage or main.
+      branch: [ stage, main ]
 ```
 
 ```yaml
@@ -260,9 +260,9 @@ steps:
 steps:
   - ruleset:
       # As shown below this will tell the ruleset to only execute
-      # this step when the branch is master and event is push.
+      # this step when the branch is main and event is push.
       if:
-        branch: master
+        branch: main
         event: push
 ```
 
@@ -271,9 +271,9 @@ steps:
 steps:
   - ruleset:
       # As shown below this will overwrite Vela's default behavior to tell the ruleset
-      # to only execute this step when the branch is not master and event is not push.
+      # to only execute this step when the branch is not main and event is not push.
       unless:
-        branch: master
+        branch: main
         event: push
 ```
 

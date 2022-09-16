@@ -72,9 +72,9 @@ $ vela get build --org github --repo octocat --build 1
 
 ```sh
 NUMBER  STATUS  EVENT   BRANCH  DURATION
-5       failure push    master  45s
-4       failure push    master  50s
-3       success push    master  54s
-2       success push    master  55s
-1       pending push    master  ...
+5       failure push    main  45s
+4       failure push    main  50s
+3       success push    main  54s
+2       success push    main  55s
+1       pending push    main  ...
 ```

@@ -64,8 +64,8 @@ $ vela get deployment --org github --repo octocat
 #### Response generated from successful CLI command
 ```sh
 ID  TASK         USER     REF     TARGET
-2   deploy:vela  octocat  master  production
-1   deploy:vela  octocat  master  production
+2   deploy:vela  octocat  main  production
+1   deploy:vela  octocat  main  production
 ```
 
 ## Examples
