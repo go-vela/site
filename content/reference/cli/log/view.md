@@ -75,10 +75,10 @@ $ git remote add origin https://github.com/github/octocat.git
 $ git remote --verbose
 origin  https://github.com/github/octocat.git (fetch)
 origin  https://github.com/github/octocat.git (push)
-$ git fetch --no-tags origin refs/heads/master
+$ git fetch --no-tags origin refs/heads/main
 From https://github.com/github/octocat
- * branch            master     -> FETCH_HEAD
- * [new branch]      master     -> origin/master
+ * branch            main     -> FETCH_HEAD
+ * [new branch]      main     -> origin/main
 $ git reset --hard afafce5e33a8efd4340613b31a953107d6dec3a3
 HEAD is now at afafce5 Dummy commit
 ```

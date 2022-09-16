@@ -44,8 +44,8 @@ def main(ctx):
               }
           ]
 
-  # if branch equals master add this step to the final pipeline
-  if ctx["vela"]["build"]["branch"] == "master":
+  # if branch equals main add this step to the final pipeline
+  if ctx["vela"]["build"]["branch"] == "main":
       steps.append(
           {
               "name": "build",
