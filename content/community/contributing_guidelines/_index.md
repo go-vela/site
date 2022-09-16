@@ -51,7 +51,7 @@ Vela is written in a modular format which creates a dependency tree. The ui is i
 - [docs](https://github.com/go-vela/docs)
 - [vela-tutorials](https://github.com/go-vela/vela-tutorials)
 - [community](https://github.com/go-vela/community) (migrations, proposals, releases (release notes), [issues](/docs/communityy/contributing_guidelines/#issues))
-- [homebrew](https://github.com/go-vela/homebrew) (brew tap go-vela/vela)
+- [homebrew](https://github.com/go-vela/homebrew-vela) (brew tap go-vela/vela)
 
 ## Types of Contributions
 
