@@ -28,7 +28,7 @@ In addition you can specify which branch you want to get a badge for by supplyin
 https://<vela server>/badge/<org>/<repo>/status.svg?branch=<branch name>
 
 # Example
-https://vela.example.com/badge/octocat/Hello-World/status.svg?branch=not_master
+https://vela.example.com/badge/octocat/Hello-World/status.svg?branch=not_default
 ```
 
 ### Embedding in Markdown

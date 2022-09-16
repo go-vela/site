@@ -47,7 +47,7 @@ To authenticate to the API, please review the [authentication documentation](/do
   "source_id": "c8da1302-07d6-11ea-882f-4893bca275b8",
   "host": "github.com",
   "event": "push",
-  "branch": "master",
+  "branch": "main",
   "status": "success"
 }
 ```
@@ -75,7 +75,7 @@ curl \
   "created": "1563474076",
   "host": "github.com",
   "event": "push",
-  "branch": "master",
+  "branch": "main",
   "error": "",
   "status": "success",
   "link": ""

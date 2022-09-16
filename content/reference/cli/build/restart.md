@@ -86,8 +86,8 @@ message: First commit...
 commit: 48afb5bdc41ad69bf22588491333f7cf71135163
 sender: OctoKitty
 author: OctoKitty
-branch: master
-ref: refs/heads/master
+branch: main
+ref: refs/heads/main
 baseref: ""
 host: "company.localhost"
 runtime: "docker"

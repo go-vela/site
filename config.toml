@@ -49,7 +49,7 @@ anchor = "smart"
 
 [params]
 copyright = "Target Brands"
-privacy_policy = "https://github.com/go-vela/server/blob/master/LICENSE"
+privacy_policy = "https://github.com/go-vela/server/blob/main/LICENSE"
 
 # First one is picked as the Twitter card image if not set on page.
 # images = ["images/project-illustration.png"]

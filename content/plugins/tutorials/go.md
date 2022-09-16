@@ -64,7 +64,7 @@ func main() {
 ```
 
 {{% alert color="info" %}}
-An example of this code is provided in the [go section](https://github.com/go-vela/vela-tutorials/tree/master/plugins/go) of the [go-vela/vela-tutorials](https://github.com/go-vela/vela-tutorials/tree/master/plugins) repository.
+An example of this code is provided in the [go section](https://github.com/go-vela/vela-tutorials/tree/main/plugins/go) of the [go-vela/vela-tutorials](https://github.com/go-vela/vela-tutorials/tree/main/plugins) repository.
 {{% /alert %}}
 
 ## Executable

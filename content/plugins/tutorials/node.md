@@ -60,7 +60,7 @@ req.end();
 ```
 
 {{% alert color="info" %}}
-An example of this code is provided in the [node.js section](https://github.com/go-vela/vela-tutorials/tree/master/plugins/node.js) of the [go-vela/vela-tutorials](https://github.com/go-vela/vela-tutorials/tree/master/plugins) repository.
+An example of this code is provided in the [node.js section](https://github.com/go-vela/vela-tutorials/tree/main/plugins/node.js) of the [go-vela/vela-tutorials](https://github.com/go-vela/vela-tutorials/tree/main/plugins) repository.
 {{% /alert %}}
 
 ## Image

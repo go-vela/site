@@ -75,7 +75,7 @@ source_id: c8da1302-07d6-11ea-882f-4893bca275b8
 created: 1563475419
 host: github.com
 event: push
-branch: master
+branch: main
 error: 
 status: success
 link: https://github.com/github/octocat/settings/hooks/1
