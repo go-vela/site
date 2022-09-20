@@ -61,7 +61,7 @@ curl \
     "created": "1563474076",
     "host": "github.com",
     "event": "push",
-    "branch": "master",
+    "branch": "main",
     "error": "",
     "status": "success",
     "link": ""
@@ -75,7 +75,7 @@ curl \
     "created": "1563474076",
     "host": "github.com",
     "event": "push",
-    "branch": "master",
+    "branch": "main",
     "error": "",
     "status": "success",
     "link": ""

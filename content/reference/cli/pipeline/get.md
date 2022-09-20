@@ -69,6 +69,6 @@ $ vela get pipeline --org github --repo octocat
 
 ```sh
 COMMIT                                     REF                 TYPE   VERSION   STAGES   STEPS
-a49aaf4afae6431a79239c95247a2b169fd9f067   refs/heads/master   yaml   1         f        t
-48afb5bdc41ad69bf22588491333f7cf71135163   refs/heads/master   yaml   1         f        t
+a49aaf4afae6431a79239c95247a2b169fd9f067   refs/heads/main   yaml   1         f        t
+48afb5bdc41ad69bf22588491333f7cf71135163   refs/heads/main   yaml   1         f        t
 ```

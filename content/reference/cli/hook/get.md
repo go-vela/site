@@ -69,9 +69,9 @@ $ vela get hook --org github --repo octocat
 
 ```sh
 NUMBER  STATUS  EVENT   BRANCH
-5       failure push    master
-4       failure push    master
-3       success push    master
-2       success push    master
-1       success push    master
+5       failure push    main
+4       failure push    main
+3       success push    main
+2       success push    main
+1       success push    main
 ```

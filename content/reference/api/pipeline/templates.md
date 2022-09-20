@@ -57,7 +57,7 @@ curl \
 
 ```yaml
 some_template:
-  link: https://github.com/github/octocat/blob/master/template.yml
+  link: https://github.com/github/octocat/blob/main/template.yml
   name: some_template
   source: github.com/github/octocat/template.yml
   type: github
@@ -66,7 +66,7 @@ some_template:
 ```json
 {
   "some_template": {
-    "link": "https://github.com/github/octocat/blob/master/template.yml",
+    "link": "https://github.com/github/octocat/blob/main/template.yml",
     "name": "some_template",
     "source": "github.com/github/octocat/template.yml",
     "type": "github"
