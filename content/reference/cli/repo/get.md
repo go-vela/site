@@ -61,5 +61,5 @@ vela get repos
 
 ```sh
 ORG/REPO        STATUS  EVENTS             VISIBILITY  BRANCH
-github/octocat  true    push,pull_request  public      master
+github/octocat  true    push,pull_request  public      main
 ```
