@@ -436,4 +436,18 @@ This variable has a default value of &lt;code>target/vela-docker&lt;/code>.
 &lt;p>The variable can be provided as a &lt;code>string&lt;/code>.&lt;/p>
 &lt;h3 id="vela_server_cert_key">VELA_SERVER_CERT_KEY&lt;/h3>
 &lt;p>This variable sets a fully qualified system path to the TLS certificate key used for HTTPS for the worker.&lt;/p>
-&lt;p>The variable can be provided as a &lt;code>string&lt;/code>.&lt;/p></description></item></channel></rss>
+&lt;p>The variable can be provided as a &lt;code>string&lt;/code>.&lt;/p>
+&lt;h3 id="vela_server_tls_min_version">VELA_SERVER_TLS_MIN_VERSION&lt;/h3>
+&lt;p>This variable sets the minimum TLS version that the worker API will accept.&lt;/p>
+&lt;p>The variable can be provided as a &lt;code>string&lt;/code>.&lt;/p>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+&lt;p>This variable has a default value of &lt;code>1.2&lt;/code>.&lt;/p>
+&lt;p>The possible options to provide for this variable are:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>1.0&lt;/code>&lt;/li>
+&lt;li>&lt;code>1.1&lt;/code>&lt;/li>
+&lt;li>&lt;code>1.2&lt;/code>&lt;/li>
+&lt;li>&lt;code>1.3&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/div></description></item></channel></rss>
