@@ -37,8 +37,8 @@ To embed your badge in your markdown formatted file, follow this example:
 
 ```sh
 # Syntax
-[![Build Status](https://<vela server>/badge/<org>/<repo>/status.svg)](https://<vela server>/badge/<org>/<repo>)
+[![Build Status](https://<vela server>/badge/<org>/<repo>/status.svg)](https://<vela server>/<org>/<repo>)
 
 # Example
-[![Build Status](https://vela.example.com/badge/octocat/Hello-World/status.svg)](https://vela.example.com/badge/octocat/Hello-World)
+[![Build Status](https://vela.example.com/badge/octocat/Hello-World/status.svg)](https://vela.example.com/octocat/Hello-World)
 ```
