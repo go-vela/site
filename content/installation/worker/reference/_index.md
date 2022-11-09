@@ -163,6 +163,18 @@ The variable can be provided as an `integer`.
 This variable has a default value of `0`. No limit.
 {{% /alert %}}
 
+### VELA_EXECUTOR_ENFORCE_TRUSTED_REPOS
+
+This configuration variable is used by the [executor component](/docs/installation/worker/reference/executor/) for the worker.
+
+This variable sets whether or not the executor will verify a repository is `trusted` before executing a build that contains privileged images (see [runtime privileged images](/docs/installation/worker/reference/#vela_runtime_privileged_images)). 
+
+The variable can be provided as a `boolean`.
+
+{{% alert title="Note:" color="primary" %}}
+This variable has a default value of `true`. 
+{{% /alert %}}
+
 ### VELA_QUEUE_CLUSTER
 
 This configuration variable is used by the [queue component](/docs/installation/worker/reference/queue/) for the worker.
