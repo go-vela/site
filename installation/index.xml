@@ -657,7 +657,7 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;td>&lt;code>runtime.privileged-images&lt;/code>&lt;/td>
 &lt;td>images allowed to run in privileged mode for the runtime&lt;/td>
 &lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>[ target/vela-docker ]&lt;/code>&lt;/td>
+&lt;td>&lt;code>[ ]&lt;/code>&lt;/td>
 &lt;td>&lt;code>RUNTIME_PRIVILEGED_IMAGES&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_PRIVILEGED_IMAGES&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>

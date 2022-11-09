@@ -358,6 +358,14 @@ The value should coordinate with the &lt;a href="https://go-vela.github.io/docs/
 &lt;h4 class="alert-heading">Note:&lt;/h4>
 This variable has a default value of &lt;code>0&lt;/code>. No limit.
 &lt;/div>
+&lt;h3 id="vela_executor_enforce_trusted_repos">VELA_EXECUTOR_ENFORCE_TRUSTED_REPOS&lt;/h3>
+&lt;p>This configuration variable is used by the &lt;a href="https://go-vela.github.io/docs/docs/installation/worker/reference/executor/">executor component&lt;/a> for the worker.&lt;/p>
+&lt;p>This variable sets whether or not the executor will verify a repository is &lt;code>trusted&lt;/code> before executing a build that contains privileged images (see &lt;a href="https://go-vela.github.io/docs/docs/installation/worker/reference/#vela_runtime_privileged_images">runtime privileged images&lt;/a>).&lt;/p>
+&lt;p>The variable can be provided as a &lt;code>boolean&lt;/code>.&lt;/p>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+This variable has a default value of &lt;code>true&lt;/code>.
+&lt;/div>
 &lt;h3 id="vela_queue_cluster">VELA_QUEUE_CLUSTER&lt;/h3>
 &lt;p>This configuration variable is used by the &lt;a href="https://go-vela.github.io/docs/docs/installation/worker/reference/queue/">queue component&lt;/a> for the worker.&lt;/p>
 &lt;p>This variable enables the worker to connect to a queue cluster rather than a standalone instance.&lt;/p>
