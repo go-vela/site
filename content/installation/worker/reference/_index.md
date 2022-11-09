@@ -283,7 +283,7 @@ This variable sets the [Docker image(s)](https://docs.docker.com/get-started/ove
 The variable can be provided as a comma-separated `list` (i.e. `myImage1,myImage2`).
 
 {{% alert title="Note:" color="primary" %}}
-This variable has a default value of `target/vela-docker`.
+Please use with caution. This setting essentially grants any defined image root access to the host machine.
 {{% /alert %}}
 
 ### VELA_RUNTIME_VOLUMES
