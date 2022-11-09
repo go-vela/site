@@ -433,7 +433,7 @@ This file is only used if &lt;code>VELA_RUNTIME_PODS_TEMPLATE_NAME&lt;/code> is 
 &lt;p>The variable can be provided as a comma-separated &lt;code>list&lt;/code> (i.e. &lt;code>myImage1,myImage2&lt;/code>).&lt;/p>
 &lt;div class="alert alert-primary" role="alert">
 &lt;h4 class="alert-heading">Note:&lt;/h4>
-This variable has a default value of &lt;code>target/vela-docker&lt;/code>.
+Please use with caution. This setting essentially grants any defined image root access to the host machine.
 &lt;/div>
 &lt;h3 id="vela_runtime_volumes">VELA_RUNTIME_VOLUMES&lt;/h3>
 &lt;p>This configuration variable is used by the &lt;a href="https://go-vela.github.io/docs/docs/installation/worker/reference/runtime/">runtime component&lt;/a> for the worker.&lt;/p>

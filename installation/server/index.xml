@@ -385,6 +385,10 @@ This variable has a default value of &lt;code>8h&lt;/code>.
 &lt;h3 id="vela_repo_allowlist">VELA_REPO_ALLOWLIST&lt;/h3>
 &lt;p>This variable sets a group of repositories, from the SCM, that can be enabled on the server.&lt;/p>
 &lt;p>The variable can be provided as a comma-separated &lt;code>list&lt;/code> (i.e. &lt;code>myOrg1/myRepo1,myOrg1/myRepo2,myOrg2/*&lt;/code>).&lt;/p>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+By default, no repositories are allowed to be enabled. To allow any repository to be enabled, provide a single value of &lt;code>*&lt;/code>.
+&lt;/div>
 &lt;h3 id="vela_scm_addr">VELA_SCM_ADDR&lt;/h3>
 &lt;p>This configuration variable is used by the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/scm/">SCM component&lt;/a> for the server.&lt;/p>
 &lt;p>This variable sets a fully qualified URL to the source control management (SCM) system.&lt;/p>
