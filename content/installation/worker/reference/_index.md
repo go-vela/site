@@ -163,6 +163,18 @@ The variable can be provided as an `integer`.
 This variable has a default value of `0`. No limit.
 {{% /alert %}}
 
+### VELA_EXECUTOR_ENFORCE_TRUSTED_REPOS
+
+This configuration variable is used by the [executor component](/docs/installation/worker/reference/executor/) for the worker.
+
+This variable sets whether or not the executor will verify a repository is `trusted` before executing a build that contains privileged images (see [runtime privileged images](/docs/installation/worker/reference/#vela_runtime_privileged_images)). 
+
+The variable can be provided as a `boolean`.
+
+{{% alert title="Note:" color="primary" %}}
+This variable has a default value of `true`. 
+{{% /alert %}}
+
 ### VELA_QUEUE_CLUSTER
 
 This configuration variable is used by the [queue component](/docs/installation/worker/reference/queue/) for the worker.
@@ -271,7 +283,7 @@ This variable sets the [Docker image(s)](https://docs.docker.com/get-started/ove
 The variable can be provided as a comma-separated `list` (i.e. `myImage1,myImage2`).
 
 {{% alert title="Note:" color="primary" %}}
-This variable has a default value of `target/vela-docker`.
+Please use with caution. This setting essentially grants any defined image root access to the host machine.
 {{% /alert %}}
 
 ### VELA_RUNTIME_VOLUMES
@@ -293,3 +305,22 @@ The variable can be provided as a `string`.
 This variable sets a fully qualified system path to the TLS certificate key used for HTTPS for the worker.
 
 The variable can be provided as a `string`.
+
+### VELA_SERVER_TLS_MIN_VERSION
+
+This variable sets the minimum TLS version that the worker API will accept.
+
+The variable can be provided as a `string`.
+
+{{% alert title="Note:" color="primary" %}}
+This variable has a default value of `1.2`.
+
+The possible options to provide for this variable are:
+
+* `1.0`
+* `1.1`
+* `1.2`
+* `1.3`
+{{% /alert %}}
+
+

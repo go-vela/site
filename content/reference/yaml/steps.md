@@ -33,10 +33,8 @@ steps:
 | `commands`    | N        | []string        | Execution instructions to run inside the container.              |
 | `template`    | N        | struct          | Name of a template to expand in the pipeline.                      |
 | `entrypoint`  | N        | []string        | Commands to execute inside the container.                        |
-| `detach`      | N        | []string        | Run the container in a detached (headless) state.                |
-| `volume`      | N        | string          | Mount volumes for the container.                                 |
-| `ulimits`     | N        | string          | Set the user limits for the container.                           |
-| `privileged`  | N        | string          | Run the container with extra privileges.                         |
+| `detach`      | N        | []string        | Run the container in a detached (headless) state.                |                                |
+| `ulimits`     | N        | string          | Set the user limits for the container.                           |                        |
 | `user`        | N        | string          | Set the user for the container. |
 
 
@@ -358,30 +356,6 @@ steps:
   - detach: true
 ```
 
-#### The `volume:` tag
-
-```yaml
----
-steps:
-    # Mount volumes for the container.
-  - volume:
-      - source: /foo
-
-      - source: /foo
-        destination: /bar
-
-      - source: /foo
-        destination: /foobar
-        access_mode: ro
-```
-
-```yaml
----
-steps:
-    # Mount volumes for the container.
-  - volume: [ /foo, /foo:/bar, /foo:/foobar:ro ]
-```
-
 #### The `ulimits:` tag
 
 ```yaml
@@ -394,15 +368,6 @@ steps:
       - name: bar
         soft: 1024
         hard: 2048
-```
-
-#### The `privileged:` tag
-
-```yaml
----
-steps:
-    # Run the container with extra privileges.
-  - privileged: true
 ```
 
 #### The `user:` tag
