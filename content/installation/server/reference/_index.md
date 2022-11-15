@@ -434,6 +434,10 @@ This variable sets a group of repositories, from the SCM, that can be enabled on
 
 The variable can be provided as a comma-separated `list` (i.e. `myOrg1/myRepo1,myOrg1/myRepo2,myOrg2/*`).
 
+{{% alert title="Note:" color="primary" %}}
+By default, no repositories are allowed to be enabled. To allow any repository to be enabled, provide a single value of `*`.
+{{% /alert %}}
+
 ### VELA_SCM_ADDR
 
 This configuration variable is used by the [SCM component](/docs/installation/server/reference/scm/) for the server.
