@@ -2,13 +2,13 @@
 title: "User"
 linkTitle: "User"
 description: >
-  Learn how to list all users in the system.
+  Learn how to update a user as an admin in the system.
 ---
 
 ## Endpoint
 
 ```
-GET  /api/v1/admin/users
+GET  /api/v1/admin/user
 ```
 
 ## Permissions
@@ -30,34 +30,42 @@ This section assumes you already know how to authenticate to the API.
 To authenticate to the API, please review the [authentication documentation](/docs/reference/api/authentication/).
 {{% /alert %}}
 
+Note: You must provide the entire service object, as this endpoint overwrites the
+existing entry for the service.
+
+#### File
+
+```json
+{
+  "id": 1,
+  "name": "OctoKitty",
+  "token": null,
+  "favorites": ["github/octocat"],
+  "active": true,
+  "admin": true
+}
+```
+
 #### Request
 
 ```sh
 curl \
-  -X GET \
+  -X PUT \
   -H "Authorization: Bearer <token>" \
-  "http://127.0.0.1:8080/api/v1/admin/users"
+  -H "Content-Type: application/json" \
+  -d "@data.json" \
+  "http://127.0.0.1:8080/api/v1/admin/user"
 ```
 
 #### Response
 
 ```json
-[
-  {
-    "id": 2,
-    "name": "octocat",
-    "token": null,
-    "favorites": ["github/octocat"],
-    "active": true,
-    "admin": false
-  },
-  {
-    "id": 1,
-    "name": "OctoKitty",
-    "token": null,
-    "favorites": ["github/octocat"],
-    "active": true,
-    "admin": false
-  }
-]
+{
+  "id": 1,
+  "name": "OctoKitty",
+  "token": null,
+  "favorites": ["github/octocat"],
+  "active": true,
+  "admin": true
+}
 ```
