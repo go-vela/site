@@ -2,13 +2,13 @@
 title: "Secret"
 linkTitle: "Secret"
 description: >
-  Learn how to list all secrets in the system.
+  Learn how to update a secret as an admin in the system.
 ---
 
 ## Endpoint
 
 ```
-GET  /api/v1/admin/secrets
+GET  /api/v1/admin/secret
 ```
 
 ## Permissions
@@ -30,40 +30,58 @@ This section assumes you already know how to authenticate to the API.
 To authenticate to the API, please review the [authentication documentation](/docs/reference/api/authentication/).
 {{% /alert %}}
 
+Note: You must provide the entire secret object, as this endpoint overwrites the
+existing entry for the secret.
+
+#### File
+
+```json
+{
+  "id": 1,
+  "org": "github",
+  "repo": "octocat",
+  "team": "",
+  "name": "foo",
+  "value": "",
+  "type": "repo",
+  "images": ["alpine"],
+  "events": ["push", "tag"],
+  "allow_command": true,
+  "created_at": 1641314085,
+  "created_by": "octokitty",
+  "updated_at": 1641314500,
+  "updated_by": "octocat"
+}
+```
+
 #### Request
 
 ```sh
 curl \
-  -X GET \
+  -X PUT \
   -H "Authorization: Bearer <token>" \
-  "http://127.0.0.1:8080/api/v1/admin/secrets"
+  -H "Content-Type: application/json" \
+  -d "@data.json"
+  "http://127.0.0.1:8080/api/v1/admin/secret"
 ```
 
 #### Response
 
 ```json
-[
-  {
-    "id": 1,
-    "org": "github",
-    "repo": "octocat",
-    "team": "",
-    "name": "foo",
-    "value": null,
-    "type": "repo",
-    "images": ["alpine"],
-    "events": ["push"]
-  },
-  {
-    "id": 2,
-    "org": "github",
-    "repo": "octocat",
-    "team": "",
-    "name": "bar",
-    "value": null,
-    "type": "repo",
-    "images": ["alpine"],
-    "events": ["push"]
-  }
-]
+{
+  "id": 1,
+  "org": "github",
+  "repo": "octocat",
+  "team": "",
+  "name": "foo",
+  "value": "",
+  "type": "repo",
+  "images": ["alpine"],
+  "events": ["push", "tag"],
+  "allow_command": true,
+  "created_at": 1641314085,
+  "created_by": "octokitty",
+  "updated_at": 1641314500,
+  "updated_by": "octocat"
+}
 ```
