@@ -19,10 +19,11 @@ Platform variables can be referenced with the following syntax:
 
 ## Examples
 
-- `{{ vela "VELA_FULL_REPO_NAME" }}` equates to the `VELA_FULL_REPO_NAME` environment variable
-- `{{ vela "FULL_REPO_NAME" }}` equates to the `VELA_REPO_NAME` environment variable
+- `{{ vela "VELA_REPO_NAME" }}` equates to the `VELA_REPO_NAME` environment variable
+- `{{ vela "REPO_NAME" }}` equates to the `VELA_REPO_NAME` environment variable
 - `{{ vela "VELA_BUILD_NUMBER" }}` equates to the `VELA_BUILD_NUMBER` environment variable
 - `{{ vela "VELA_ADDR" }}` equates to the `VELA_ADDR` environment variable
+- `{{ vela "DEPLOYMENT_PARAMETER_<name>" }}` equates to the `DEPLOYMENT_PARAMETER_<name>` environment variable
 
 ## Sample
 
@@ -46,6 +47,7 @@ The caller of this template could look like:
 
 ```yaml
 version: "1"
+
 templates:
   - name: sample
     source: github.com/<org>/<repo>/path/to/file/<template>.yml
@@ -61,6 +63,7 @@ Which means the compiled pipeline for execution on a worker is:
 
 ```yaml
 version: "1"
+
 steps:
   - name: sample_echo
     commands:
