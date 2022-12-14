@@ -14,7 +14,7 @@ The following environment variables are injected into every step, service, or se
 | Key                       | Value                                                       | Explanation                                                         |
 | ------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------- |
 | `VELA_BUILD_AUTHOR`       | `octocat`                                                   | author from the source commit                                       |
-| `VELA_BUILD_AUTHOR_EMAIL` | `octocat@github.com`                                        | author email from the source commit                                 |
+| `VELA_BUILD_AUTHOR_EMAIL` | `octocat@github.com`                                        | author email from the source commit, available only in `push` events                                 |
 | `VELA_BUILD_BASE_REF`     | `refs/heads/dev`                                            | reference from the base commit                                      |
 | `VELA_BUILD_BRANCH`       | `main`                                                      | branch from the source commit                                       |
 | `VELA_BUILD_CHANNEL`      | `vela`                                                      | queue channel the build was published to                            |
