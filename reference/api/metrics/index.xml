@@ -1,0 +1,112 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Metrics</title><link>https://go-vela.github.io/docs/reference/api/metrics/</link><description>Recent content in Metrics on Vela</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://go-vela.github.io/docs/reference/api/metrics/index.xml" rel="self" type="application/rss+xml"/><item><title>Reference: Metrics</title><link>https://go-vela.github.io/docs/reference/api/metrics/metrics/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/api/metrics/metrics/</guid><description>
+&lt;h2 id="endpoint">Endpoint&lt;/h2>
+&lt;pre tabindex="0">&lt;code>GET /metrics
+&lt;/code>&lt;/pre>&lt;h2 id="query-parameters">Query Parameters&lt;/h2>
+&lt;p>The following parameters are used to configure the endpoint:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Query Parameter&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>user_count&lt;/code>&lt;/td>
+&lt;td>count of total users&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>repo_count&lt;/code>&lt;/td>
+&lt;td>count of total repos&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>build_count&lt;/code>&lt;/td>
+&lt;td>count of total builds&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>running_build_count&lt;/code>&lt;/td>
+&lt;td>count of builds with status &amp;lsquo;running&amp;rsquo;&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>failure_build_count&lt;/code>&lt;/td>
+&lt;td>count of builds with status &amp;lsquo;failure&amp;rsquo;&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>pending_build_count&lt;/code>&lt;/td>
+&lt;td>count of builds with status &amp;lsquo;pending&amp;rsquo;&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>killed_build_count&lt;/code>&lt;/td>
+&lt;td>count of builds with status &amp;lsquo;killed&amp;rsquo;&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>success_build_count&lt;/code>&lt;/td>
+&lt;td>count of builds with status &amp;lsquo;success&amp;rsquo;&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>error_build_count&lt;/code>&lt;/td>
+&lt;td>count of builds with status &amp;rsquo;error'&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>step_image_count&lt;/code>&lt;/td>
+&lt;td>count of total steps executed with each unique image&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>step_status_count&lt;/code>&lt;/td>
+&lt;td>count of total steps with each status&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>service_image_count&lt;/code>&lt;/td>
+&lt;td>count of total services executed with each unique image&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>service_status_count&lt;/code>&lt;/td>
+&lt;td>count of total services with each status&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>worker_build_limit&lt;/code>&lt;/td>
+&lt;td>count of worker build limits&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>active_worker_count&lt;/code>&lt;/td>
+&lt;td>count of active workers&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>inactive_worker_count&lt;/code>&lt;/td>
+&lt;td>count of inactive workers&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="permissions">Permissions&lt;/h2>
+&lt;p>No permission restrictions for this endpoint.&lt;/p>
+&lt;h2 id="responses">Responses&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Status Code&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>200&lt;/code>&lt;/td>
+&lt;td>indicates the request has succeeded&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>500&lt;/code>&lt;/td>
+&lt;td>indicates a server failure while processing the request&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="sample">Sample&lt;/h2>
+&lt;h4 id="request">Request&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>curl &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> -X GET &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;http://127.0.0.1:8080/metrics?pending_build_count=true&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="response">Response&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a40000">#&lt;/span> &lt;span style="color:#a40000">HELP&lt;/span> &lt;span style="color:#a40000">go_gc_duration_seconds&lt;/span> &lt;span style="color:#a40000">A&lt;/span> &lt;span style="color:#a40000">summary&lt;/span> &lt;span style="color:#a40000">of&lt;/span> &lt;span style="color:#a40000">the&lt;/span> &lt;span style="color:#a40000">pause&lt;/span> &lt;span style="color:#a40000">duration&lt;/span> &lt;span style="color:#a40000">of&lt;/span> &lt;span style="color:#a40000">garbage&lt;/span> &lt;span style="color:#a40000">collection&lt;/span> &lt;span style="color:#a40000">cycles.&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a40000">#&lt;/span> &lt;span style="color:#a40000">TYPE&lt;/span> &lt;span style="color:#a40000">go_gc_duration_seconds&lt;/span> &lt;span style="color:#a40000">summary&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a40000">go_gc_duration_seconds&lt;/span>&lt;span style="color:#000;font-weight:bold">{&lt;/span>&lt;span style="color:#a40000">quantile=&lt;/span>&lt;span style="color:#204a87;font-weight:bold">&amp;#34;0&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">}&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">4.0986e-05&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a40000">#&lt;/span> &lt;span style="color:#a40000">TYPE&lt;/span> &lt;span style="color:#a40000">vela_totals&lt;/span> &lt;span style="color:#a40000">gauge&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a40000">vela_totals&lt;/span>&lt;span style="color:#000;font-weight:bold">{&lt;/span>&lt;span style="color:#a40000">field=&lt;/span>&lt;span style="color:#204a87;font-weight:bold">&amp;#34;status&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#a40000">resource=&lt;/span>&lt;span style="color:#204a87;font-weight:bold">&amp;#34;build&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#a40000">value=&lt;/span>&lt;span style="color:#204a87;font-weight:bold">&amp;#34;pending&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">}&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">31&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>

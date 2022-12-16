@@ -50,7 +50,8 @@ For more information, you can visit the &lt;a href="https://jwt.io/introduction/
 &lt;div class="alert alert-warning" role="alert">
 &lt;p>This section assumes you already know how to authenticate to the API.&lt;/p>
 &lt;p>To authenticate to the API, please review the &lt;a href="https://go-vela.github.io/docs/docs/reference/api/authentication/">authentication documentation&lt;/a>.&lt;/p>
-&lt;/div></description></item><item><title>Reference: Pipeline</title><link>https://go-vela.github.io/docs/reference/api/pipeline/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/api/pipeline/</guid><description>
+&lt;/div></description></item><item><title>Reference: Metrics</title><link>https://go-vela.github.io/docs/reference/api/metrics/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/api/metrics/</guid><description>
+&lt;p>The below endpoints are available to retrieve metrics for a running Vela installation.&lt;/p></description></item><item><title>Reference: Pipeline</title><link>https://go-vela.github.io/docs/reference/api/pipeline/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/api/pipeline/</guid><description>
 &lt;p>The below endpoints are available to operate on the &lt;code>pipeline&lt;/code> resource.&lt;/p>
 &lt;div class="alert alert-warning" role="alert">
 &lt;p>This section assumes you already know how to authenticate to the API.&lt;/p>
