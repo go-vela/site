@@ -53,12 +53,26 @@ templates:
     source: github.com/go-vela/templates/example.yml@testbranch
 ```
 
+```yaml
+templates:
+    # As an alternative, if the template is within the same repository,
+    # the source can be the path to the template in the Vela workspace.
+    # This is used in conjunction with `type: file`.
+    source: path/to/template.yml
+```
+
 #### The `type:` tag
 
 ```yaml
 templates:
     # Indicates to the compiler which version to use.
     type: github
+```
+
+```yaml
+templates:
+    # The 'file' type will grab a template from the repository on a commit.
+    type: file
 ```
 
 #### The `format:` tag
