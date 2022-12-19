@@ -30,11 +30,12 @@ stages:
 
 ## Tags
 
-| Tag     | Required | Type     | Description                                               |
-|---------|----------|----------|-----------------------------------------------------------|
-| `name`  | Y        | string   | Unique identifier for the stage in the pipeline           |
-| `steps` | Y        | []string | Sequential execution instructions for the stage           |
-| `needs` | N        | []string | Stages that must complete before starting the current one |
+| Tag           | Required | Type     | Description                                                               |
+|---------------|----------|----------|---------------------------------------------------------------------------|
+| `name`        | Y        | string   | Unique identifier for the stage in the pipeline                           |
+| `steps`       | Y        | []string | Sequential execution instructions for the stage                           |
+| `needs`       | N        | []string | Stages that must complete before starting the current one                 |
+| `independent` | N        | bool     | Stage will execute its steps and ignore failures from other stages' steps |
 
 ### Usage
 
@@ -58,11 +59,11 @@ stages:
       steps:
 ```
 
-#### The `steps:` tag
-
 {{% alert title="Tip:" color="info" %}}
 For more details on steps tags, see the [step tags documentation](/docs/reference/yaml/steps/#tags)
 {{% /alert %}}
+
+#### The `needs:` tag
 
 ```yaml
 ---
@@ -73,4 +74,17 @@ stages:
     welcome:
       # Stages that must complete before starting the current one.
       needs: [ greeting ]
+```
+
+#### The `independent:` tag
+
+```yaml
+---
+stages:
+    greeting:
+
+    # Unique identifier for the stage in the pipeline.
+    welcome:
+      # If the greeting stage fails at any point, the welcome stage will continue its execution.
+      independent: true
 ```
