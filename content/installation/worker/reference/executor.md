@@ -13,11 +13,12 @@ Throughout the lifecycle of these resources, this component will track and repor
 
 The following options are used to configure the component:
 
-| Name                    | Description                                       | Required | Default        | Environment Variables                                   |
-| ----------------------- | ------------------------------------------------- | -------- | -------------- | ------------------------------------------------------- |
-| `executor.driver`       | type of client to control and operate executor    | `true`   | `linux`        | `EXECUTOR_DRIVER`<br>`VELA_EXECUTOR_DRIVER`             |
-| `executor.log_method`   | method used to publish logs back to the server    | `true`   | `byte-chunks`  | `EXECUTOR_LOG_METHOD`<br>`VELA_EXECUTOR_LOG_METHOD`     |
-| `executor.max_log_size` | maximum log size (in bytes)                       | `false`  | `0` (no limit) | `EXECUTOR_MAX_LOG_SIZE`<br>`VELA_EXECUTOR_MAX_LOG_SIZE` |
+| Name                             | Description                                                                | Required | Default        | Environment Variables                                                     |
+| -------------------------------- | -------------------------------------------------------------------------- | -------- | -------------- | ------------------------------------------------------------------------- |
+| `executor.driver`                | type of client to control and operate executor                             | `true`   | `linux`        | `EXECUTOR_DRIVER`<br>`VELA_EXECUTOR_DRIVER`                               |
+| `executor.log_method`            | method used to publish logs back to the server                             | `true`   | `byte-chunks`  | `EXECUTOR_LOG_METHOD`<br>`VELA_EXECUTOR_LOG_METHOD`                       |
+| `executor.max_log_size`          | maximum log size (in bytes)                                                | `false`  | `0` (no limit) | `EXECUTOR_MAX_LOG_SIZE`<br>`VELA_EXECUTOR_MAX_LOG_SIZE`                   |
+| `executor.log_streaming_timeout` | maximum time to wait, after build completion, for logs to finish streaming | `false`  | `5m`           | `EXECUTOR_LOG_STREAMING_TIMEOUT`<br>`VELA_EXECUTOR_LOG_STREAMING_TIMEOUT` |
 
 {{% alert title="Note:" color="primary" %}}
 For more information on these configuration options, please see the [worker reference](/docs/installation/worker/reference/).

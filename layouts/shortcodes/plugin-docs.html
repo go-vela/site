@@ -1,4 +1,44 @@
+{{/*
+  assign the passed in parameters
+*/}}
+
 {{ $repo := .Get 0 }}
 {{ $filename := .Get 1 }}
-{{ $json := getJSON "https://api.github.com/repos/" $repo "/contents/" $filename }}
-{{ $json.content | base64Decode | markdownify | emojify }}
+{{ $version := .Get 2 | default "main" }}
+
+
+{{/*
+ construct the url 
+*/}}
+
+{{ $docsURL := printf "https://api.github.com/repos/%s/contents/%s?ref=%s" $repo $filename $version }}
+{{ $dataJSON := false }}
+
+
+{{/*
+  utilize HUGO_GITHUB_TOKEN to avoid rate limit issues  
+*/}}
+
+{{ with $github_token := (os.Getenv "HUGO_GITHUB_TOKEN" | default false ) }}
+  {{ $bearer_token := dict "Authorization" (printf "Bearer %s" .) }}
+  {{ $dataJSON = getJSON $docsURL $bearer_token }}
+{{ else }}
+  {{ $dataJSON = getJSON $docsURL }}
+{{ end }}
+
+
+{{/*
+  if we have data, render it.
+  otherwise, render a helpful message.
+*/}}
+
+{{ with $dataJSON }}
+  {{ .content | base64Decode | markdownify | emojify }}
+{{ else }}
+  {{ $docsPage := printf "https://github.com/%s/blob/%s/%s" $repo $version $filename }}
+  <div class="alert alert-warning" role="alert">
+    <h4 class="alert-heading">Warning</h4>
+    <p>There was an error inlining the documentation.</p>
+    <p>Please visit <a href="{{ $docsPage }}">{{ $repo }} documentation</a> to learn more about this plugin.</p>
+  </div>
+{{ end }}
