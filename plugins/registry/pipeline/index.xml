@@ -3593,11 +3593,18 @@ Context-Type options are as follow:&lt;/p>
 &lt;td>&lt;code>PARAMETER_SHA&lt;/code>&lt;br>&lt;code>KANIKO_SHA&lt;/code>&lt;br>&lt;code>VELA_BUILD_COMMIT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>snapshot_mode&lt;/code>&lt;/td>
-&lt;td>control how to snapshot the filesystem. - options (full&lt;/td>
-&lt;td>redo&lt;/td>
-&lt;td>time)&lt;/td>
+&lt;td>&lt;code>use_new_run&lt;/code>&lt;/td>
+&lt;td>use experimental run implementation for detecting changes without requiring file system snapshots&lt;/td>
 &lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>PARAMETER_USE_NEW_RUN&lt;/code>&lt;br>&lt;code>KANIKO_USE_NEW_RUN&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>snapshot_mode&lt;/code>&lt;/td>
+&lt;td>control how to snapshot the filesystem. - options: &lt;code>full&lt;/code>, &lt;code>redo&lt;/code>, or &lt;code>time&lt;/code>&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>PARAMETER_SNAPSHOT_MODE&lt;/code>&lt;br>&lt;code>KANIKO_SNAPSHOT_MODE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;code>tag&lt;/code>&lt;/td>
