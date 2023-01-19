@@ -194,3 +194,11 @@ Make sure to replace `<org>` and `<repo>` for the `key` property with the approp
 
 If you're using GitHub and using the secret for a pipeline at `https://github.com/octocat/hello`, your `org` would be `octocat` and `repo` would be `hello`.
 {{% /alert %}} 
+
+### Repo is not trusted
+
+![Untrusted Repo](untrusted_repo.png)
+
+This behavior indicates [the `vela_executor_enforce_trusted_repos` flag](/docs/installation/worker/reference/#vela_executor_enforce_trusted_repos) has been set by the Vela platform administrators, which allows only certain repositories to run privileged images.
+
+To resolve the issue, identify the step attempting to run a privileged image and consider a workaround. Otherwise, work with your Vela platform administrators to add your repository to the allowlist. 
