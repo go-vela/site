@@ -32,15 +32,18 @@ Some examples of what the modification endpoint can do include, but are not limi
 
 The following options are used to configure the component:
 
-| Name                   | Description                                                                     | Required | Default | Environment Variables                                   |
-| ---------------------- | ------------------------------------------------------------------------------- | -------- | ------- | ------------------------------------------------------- |
-| `github-driver`        | enables using Github or GitHub Enterprise Server as a registry for templates    | `false`  | `false` | `COMPILER_GITHUB`<br>`VELA_COMPILER_GITHUB`             |
-| `github-url`           | fully qualified url to GitHub or GitHub Enterprise Server for templates         | `false`  | `N/A`   | `COMPILER_GITHUB_URL`<br>`VELA_COMPILER_GITHUB_URL`     |
-| `github-token`         | token used for authentication when fetching registry templates                  | `false`  | `N/A`   | `COMPILER_GITHUB_TOKEN`<br>`VELA_COMPILER_GITHUB_TOKEN` |
-| `modification-addr`    | fully qualified url to endpoint for modifying pipelines                         | `false`  | `N/A`   | `MODIFICATION_ADDR`<br>`VELA_MODIFICATION_ADDR`         |
-| `modification-retries` | number of times to resend failed requests to the modification endpoint          | `false`  | `5`     | `MODIFICATION_RETRIES`<br>`VELA_MODIFICATION_RETRIES`   |
-| `modification-secret`  | authenticates communication between compiler and the modification endpoint      | `false`  | `N/A`   | `MODIFICATION_SECRET`<br>`VELA_MODIFICATION_SECRET`     |
-| `modification-timeout` | timeout for requests sent to the modification endpoint                          | `false`  | `8s`    | `MODIFICATION_TIMEOUT`<br>`VELA_MODIFICATION_TIMEOUT`   |
+| Name                   | Description                                                                     | Required | Default               | Environment Variables                                   |
+| ---------------------- | ------------------------------------------------------------------------------- | -------- | --------------------- | ------------------------------------------------------- |
+| `clone-image`          | default clone image to use for Vela injected clone step                         | `true`   | `target/vela-git` (1) | `VELA_CLONE_IMAGE`                                      |
+| `github-driver`        | enables using Github or GitHub Enterprise Server as a registry for templates    | `false`  | `false`               | `COMPILER_GITHUB`<br>`VELA_COMPILER_GITHUB`             |
+| `github-url`           | fully qualified url to GitHub or GitHub Enterprise Server for templates         | `false`  | `N/A`                 | `COMPILER_GITHUB_URL`<br>`VELA_COMPILER_GITHUB_URL`     |
+| `github-token`         | token used for authentication when fetching registry templates                  | `false`  | `N/A`                 | `COMPILER_GITHUB_TOKEN`<br>`VELA_COMPILER_GITHUB_TOKEN` |
+| `modification-addr`    | fully qualified url to endpoint for modifying pipelines                         | `false`  | `N/A`                 | `MODIFICATION_ADDR`<br>`VELA_MODIFICATION_ADDR`         |
+| `modification-retries` | number of times to resend failed requests to the modification endpoint          | `false`  | `5`                   | `MODIFICATION_RETRIES`<br>`VELA_MODIFICATION_RETRIES`   |
+| `modification-secret`  | authenticates communication between compiler and the modification endpoint      | `false`  | `N/A`                 | `MODIFICATION_SECRET`<br>`VELA_MODIFICATION_SECRET`     |
+| `modification-timeout` | timeout for requests sent to the modification endpoint                          | `false`  | `8s`                  | `MODIFICATION_TIMEOUT`<br>`VELA_MODIFICATION_TIMEOUT`   |
+
+_(1) this will be the latest available, tagged release of `target/vela-git` at the time the server component is released_
 
 {{% alert title="Note:" color="primary" %}}
 For more information on these configuration options, please see the [server reference](/docs/installation/server/reference/).
