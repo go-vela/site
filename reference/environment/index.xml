@@ -117,7 +117,7 @@ var expressions are evaluated before the yaml is parsed. If you do not want the 
 &lt;tr>
 &lt;td>&lt;code>VELA_BUILD_AUTHOR_EMAIL&lt;/code>&lt;/td>
 &lt;td>&lt;code>octocat@github.com&lt;/code>&lt;/td>
-&lt;td>author email from the source commit&lt;/td>
+&lt;td>author email from the source commit, available only in &lt;code>push&lt;/code> events&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;code>VELA_BUILD_BASE_REF&lt;/code>&lt;/td>
