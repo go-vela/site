@@ -290,6 +290,16 @@ The variable can be provided as an `integer`.
 This variable has a default value of `30`.
 {{% /alert %}}
 
+### VELA_DEFAULT_REPO_EVENTS
+
+This variable sets the default active events for newly activated repositories.
+
+The variable can be provided as a comma-separated `list` (i.e. `push,tag,deployment`).
+
+{{% alert title="Note:" color="primary" %}}
+By default, the `push` event is enabled. Valid values are: `push`, 'pull_request', 'tag', 'deployment', and 'comment'.
+{{% /alert %}}
+
 ### VELA_DISABLE_WEBHOOK_VALIDATION
 
 This variable disables validation of webhooks sent by the SCM to the server.
