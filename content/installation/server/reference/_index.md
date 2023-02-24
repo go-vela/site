@@ -97,21 +97,15 @@ The variable should be provided as a `string`.
 This variable should match [the `VELA_SERVER_SECRET` variable](/docs/installation/worker/reference/#vela_server_secret) provided to the worker.
 {{% /alert %}}
 
+### VELA_SERVER_PRIVATE_KEY
+
+This variable sets the private key that will be used to sign all JWT tokens within Vela. Please be sure to follow [guidelines](https://www.rfc-editor.org/rfc/rfc2104#section-3) related to generating a private key.
+
+The variable should be provided as a `string`.
+
 ## Optional
 
 This section contains a list of all variables that can be provided to the server.
-
-### VELA_ACCESS_TOKEN_DURATION
-
-This variable sets the maximum duration of time a Vela access token for a user is valid on the server.
-
-The access token is used for authenticating user's requests to the server.
-
-The variable can be provided as a `duration` (i.e. `5s`, `10m`).
-
-{{% alert title="Note:" color="primary" %}}
-This variable has a default value of `15m`.
-{{% /alert %}}
 
 ### VELA_COMPILER_GITHUB
 
@@ -416,18 +410,6 @@ The variable can be provided as a comma-separated `list` (i.e. `myRoute1,myRoute
 This variable has a default value of `vela`.
 {{% /alert %}}
 
-### VELA_REFRESH_TOKEN_DURATION
-
-This variable sets the maximum duration of time a Vela refresh token for a user is valid on the server.
-
-The refresh token is used for refreshing a user's access token on the server.
-
-The variable can be provided as a `duration` (i.e. `5s`, `10m`).
-
-{{% alert title="Note:" color="primary" %}}
-This variable has a default value of `8h`.
-{{% /alert %}}
-
 ### VELA_REPO_ALLOWLIST
 
 This variable sets a group of repositories, from the SCM, that can be enabled on the server.
@@ -582,6 +564,42 @@ The variable can be provided as a `string`.
 
 {{% alert title="Note:" color="primary" %}}
 This variable has a default value of `2`.
+{{% /alert %}}
+
+### VELA_USER_ACCESS_TOKEN_DURATION
+
+This variable sets the maximum duration of time a Vela access token for a user is valid on the server.
+
+The access token is used for authenticating user's requests to the server.
+
+The variable can be provided as a `duration` (i.e. `5s`, `10m`).
+
+{{% alert title="Note:" color="primary" %}}
+This variable has a default value of `15m`.
+{{% /alert %}}
+
+### VELA_USER_REFRESH_TOKEN_DURATION
+
+This variable sets the maximum duration of time a Vela refresh token for a user is valid on the server.
+
+The refresh token is used for refreshing a user's access token on the server.
+
+The variable can be provided as a `duration` (i.e. `5s`, `10m`).
+
+{{% alert title="Note:" color="primary" %}}
+This variable has a default value of `8h`.
+{{% /alert %}}
+
+### VELA_BUILD_TOKEN_BUFFER_DURATION
+
+This variable sets the maximum duration of time a Vela build token for a build extends beyond the repo build limit to maintain validity on the server.
+
+The build token is used for authenticating a worker's access to the server to update build resources.
+
+The variable can be provided as a `duration` (i.e. `5s`, `10m`).
+
+{{% alert title="Note:" color="primary" %}}
+This variable has a default value of `5m`.
 {{% /alert %}}
 
 ### VELA_WEBUI_ADDR
