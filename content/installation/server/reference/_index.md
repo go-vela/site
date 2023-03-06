@@ -113,6 +113,16 @@ The variable can be provided as a `duration` (i.e. `5s`, `10m`).
 This variable has a default value of `15m`.
 {{% /alert %}}
 
+### VELA_CLONE_IMAGE
+
+This configuration variable is used by the [compiler component](/docs/installation/server/reference/compiler) for the server.
+
+The clone image sets the clone image to use for the Vela injected clone step in a pipeline.
+
+By default, Vela will use the latest available release of the clone image at the time of a server release.
+
+This variable should be provided as a `string`.
+
 ### VELA_COMPILER_GITHUB
 
 This configuration variable is used by the [compiler component](/docs/installation/server/reference/compiler/) for the server.
@@ -288,6 +298,16 @@ The variable can be provided as an `integer`.
 
 {{% alert title="Note:" color="primary" %}}
 This variable has a default value of `30`.
+{{% /alert %}}
+
+### VELA_DEFAULT_REPO_EVENTS
+
+This variable sets the default active events for newly activated repositories.
+
+The variable can be provided as a comma-separated `list` (i.e. `push,tag,deployment`).
+
+{{% alert title="Note:" color="primary" %}}
+By default, the `push` event is enabled. Valid values are: `push`, `pull_request`, `tag`, `deployment`, and `comment`.
 {{% /alert %}}
 
 ### VELA_DISABLE_WEBHOOK_VALIDATION
