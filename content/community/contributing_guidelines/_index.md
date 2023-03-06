@@ -165,13 +165,13 @@ As you contribute to Vela, we ask that you follow these style guides to keep the
 - **Linters:** We use [golangci-lint](https://golangci-lint.run/) to lint our code.  Make sure to run the provided style checks (make fmt, make tidy, etc.) against your code. Please address linter warnings appropriately. If you are intentionally violating a rule that triggers a linter, please annotate the respective code with nolint declarations [docs](https://golangci-lint.run/usage/false-positives/). We are using the following format for nolint declarations:
 
     ```go
-    // nolint:<linter(s)> // <short reason>
+    //nolint:<linter(s)> // <short reason>
     ```
 
     Example:
 
     ```go
-    // nolint:gocyclo // legacy function is complex, needs simplification
+    //nolint:gocyclo // legacy function is complex, needs simplification
     func superComplexFunction() error {
       // ..
     }
