@@ -293,6 +293,13 @@ This variable has a default value of &lt;code>10&lt;/code>.
 &lt;h4 class="alert-heading">Note:&lt;/h4>
 This variable has a default value of &lt;code>30&lt;/code>.
 &lt;/div>
+&lt;h3 id="vela_default_repo_events">VELA_DEFAULT_REPO_EVENTS&lt;/h3>
+&lt;p>This variable sets the default active events for newly activated repositories.&lt;/p>
+&lt;p>The variable can be provided as a comma-separated &lt;code>list&lt;/code> (i.e. &lt;code>push,tag,deployment&lt;/code>).&lt;/p>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+By default, the &lt;code>push&lt;/code> event is enabled. Valid values are: &lt;code>push&lt;/code>, &lt;code>pull_request&lt;/code>, &lt;code>tag&lt;/code>, &lt;code>deployment&lt;/code>, and &lt;code>comment&lt;/code>.
+&lt;/div>
 &lt;h3 id="vela_disable_webhook_validation">VELA_DISABLE_WEBHOOK_VALIDATION&lt;/h3>
 &lt;p>This variable disables validation of webhooks sent by the SCM to the server.&lt;/p>
 &lt;p>The variable can be provided as a &lt;code>boolean&lt;/code>.&lt;/p>
