@@ -663,4 +663,53 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --publish=443:443 \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --restart=always \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> target/vela-server:latest
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Installation: Token Manager</title><link>https://go-vela.github.io/docs/installation/server/reference/token_manager/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/server/reference/token_manager/</guid><description>
+&lt;p>This component is responsible for generating and validating JWT tokens shared between the Vela server, workers, and users based off the configuration provided.&lt;/p>
+&lt;p>The token manager is designed to ensure secure interactions with the server and protect build resources.&lt;/p>
+&lt;h2 id="configuration">Configuration&lt;/h2>
+&lt;p>The following options are used to configure the component:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Environment Variables&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>vela-server-private-key&lt;/code>&lt;/td>
+&lt;td>private key used for signing and validating all JWT tokens&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>VELA_SERVER_PRIVATE_KEY&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>user-access-token-duration&lt;/code>&lt;/td>
+&lt;td>maximum duration of time a Vela access token for a user is valid on the server&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>15m&lt;/code>&lt;/td>
+&lt;td>&lt;code>VELA_USER_ACCESS_TOKEN_DURATION&lt;/code>&lt;br>&lt;code>USER_ACCESS_TOKEN_DURATION&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>user-refresh-token-duration&lt;/code>&lt;/td>
+&lt;td>maximum duration of time a Vela refresh token for a user is valid on the server&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>8h&lt;/code>&lt;/td>
+&lt;td>&lt;code>VELA_USER_ACCESS_TOKEN_DURATION&lt;/code>&lt;br>&lt;code>USER_ACCESS_TOKEN_DURATION&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>build-token-buffer-duration&lt;/code>&lt;/td>
+&lt;td>maximum duration of time a Vela build token for a build extends beyond the repo build limit to maintain validity on the server&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>5m&lt;/code>&lt;/td>
+&lt;td>&lt;code>VELA_BUILD_TOKEN_BUFFER_DURATION&lt;/code>&lt;br>&lt;code>BUILD_TOKEN_BUFFER_DURATION&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+For more information on these configuration options, please see the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/">server reference&lt;/a>.
+&lt;/div></description></item></channel></rss>

@@ -165,16 +165,11 @@ This variable should match &lt;a href="https://go-vela.github.io/docs/docs/insta
 &lt;h4 class="alert-heading">Note:&lt;/h4>
 This variable should match &lt;a href="https://go-vela.github.io/docs/docs/installation/worker/reference/#vela_server_secret">the &lt;code>VELA_SERVER_SECRET&lt;/code> variable&lt;/a> provided to the worker.
 &lt;/div>
+&lt;h3 id="vela_server_private_key">VELA_SERVER_PRIVATE_KEY&lt;/h3>
+&lt;p>This variable sets the private key that will be used to sign all JWT tokens within Vela. Please be sure to follow &lt;a href="https://www.rfc-editor.org/rfc/rfc2104#section-3">guidelines&lt;/a> related to generating a private key.&lt;/p>
+&lt;p>The variable should be provided as a &lt;code>string&lt;/code>.&lt;/p>
 &lt;h2 id="optional">Optional&lt;/h2>
 &lt;p>This section contains a list of all variables that can be provided to the server.&lt;/p>
-&lt;h3 id="vela_access_token_duration">VELA_ACCESS_TOKEN_DURATION&lt;/h3>
-&lt;p>This variable sets the maximum duration of time a Vela access token for a user is valid on the server.&lt;/p>
-&lt;p>The access token is used for authenticating user&amp;rsquo;s requests to the server.&lt;/p>
-&lt;p>The variable can be provided as a &lt;code>duration&lt;/code> (i.e. &lt;code>5s&lt;/code>, &lt;code>10m&lt;/code>).&lt;/p>
-&lt;div class="alert alert-primary" role="alert">
-&lt;h4 class="alert-heading">Note:&lt;/h4>
-This variable has a default value of &lt;code>15m&lt;/code>.
-&lt;/div>
 &lt;h3 id="vela_clone_image">VELA_CLONE_IMAGE&lt;/h3>
 &lt;p>This configuration variable is used by the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/compiler">compiler component&lt;/a> for the server.&lt;/p>
 &lt;p>The clone image sets the clone image to use for the Vela injected clone step in a pipeline.&lt;/p>
@@ -386,14 +381,6 @@ This variable has a default value of &lt;code>60s&lt;/code>.
 &lt;h4 class="alert-heading">Note:&lt;/h4>
 This variable has a default value of &lt;code>vela&lt;/code>.
 &lt;/div>
-&lt;h3 id="vela_refresh_token_duration">VELA_REFRESH_TOKEN_DURATION&lt;/h3>
-&lt;p>This variable sets the maximum duration of time a Vela refresh token for a user is valid on the server.&lt;/p>
-&lt;p>The refresh token is used for refreshing a user&amp;rsquo;s access token on the server.&lt;/p>
-&lt;p>The variable can be provided as a &lt;code>duration&lt;/code> (i.e. &lt;code>5s&lt;/code>, &lt;code>10m&lt;/code>).&lt;/p>
-&lt;div class="alert alert-primary" role="alert">
-&lt;h4 class="alert-heading">Note:&lt;/h4>
-This variable has a default value of &lt;code>8h&lt;/code>.
-&lt;/div>
 &lt;h3 id="vela_repo_allowlist">VELA_REPO_ALLOWLIST&lt;/h3>
 &lt;p>This variable sets a group of repositories, from the SCM, that can be enabled on the server.&lt;/p>
 &lt;p>The variable can be provided as a comma-separated &lt;code>list&lt;/code> (i.e. &lt;code>myOrg1/myRepo1,myOrg1/myRepo2,myOrg2/*&lt;/code>).&lt;/p>
@@ -491,6 +478,30 @@ This variable has a default value of &lt;code>30m&lt;/code>.
 &lt;div class="alert alert-primary" role="alert">
 &lt;h4 class="alert-heading">Note:&lt;/h4>
 This variable has a default value of &lt;code>2&lt;/code>.
+&lt;/div>
+&lt;h3 id="vela_user_access_token_duration">VELA_USER_ACCESS_TOKEN_DURATION&lt;/h3>
+&lt;p>This variable sets the maximum duration of time a Vela access token for a user is valid on the server.&lt;/p>
+&lt;p>The access token is used for authenticating user&amp;rsquo;s requests to the server.&lt;/p>
+&lt;p>The variable can be provided as a &lt;code>duration&lt;/code> (i.e. &lt;code>5s&lt;/code>, &lt;code>10m&lt;/code>).&lt;/p>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+This variable has a default value of &lt;code>15m&lt;/code>.
+&lt;/div>
+&lt;h3 id="vela_user_refresh_token_duration">VELA_USER_REFRESH_TOKEN_DURATION&lt;/h3>
+&lt;p>This variable sets the maximum duration of time a Vela refresh token for a user is valid on the server.&lt;/p>
+&lt;p>The refresh token is used for refreshing a user&amp;rsquo;s access token on the server.&lt;/p>
+&lt;p>The variable can be provided as a &lt;code>duration&lt;/code> (i.e. &lt;code>5s&lt;/code>, &lt;code>10m&lt;/code>).&lt;/p>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+This variable has a default value of &lt;code>8h&lt;/code>.
+&lt;/div>
+&lt;h3 id="vela_build_token_buffer_duration">VELA_BUILD_TOKEN_BUFFER_DURATION&lt;/h3>
+&lt;p>This variable sets the maximum duration of time a Vela build token for a build extends beyond the repo build limit to maintain validity on the server.&lt;/p>
+&lt;p>The build token is used for authenticating a worker&amp;rsquo;s access to the server to update build resources.&lt;/p>
+&lt;p>The variable can be provided as a &lt;code>duration&lt;/code> (i.e. &lt;code>5s&lt;/code>, &lt;code>10m&lt;/code>).&lt;/p>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+This variable has a default value of &lt;code>5m&lt;/code>.
 &lt;/div>
 &lt;h3 id="vela_webui_addr">VELA_WEBUI_ADDR&lt;/h3>
 &lt;p>This variable sets a fully qualified URL to the Vela &lt;a href="https://go-vela.github.io/docs/docs/installation/ui/">UI&lt;/a> address.&lt;/p>
