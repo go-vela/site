@@ -107,6 +107,16 @@ The variable should be provided as a `string`.
 
 This section contains a list of all variables that can be provided to the server.
 
+### VELA_CLONE_IMAGE
+
+This configuration variable is used by the [compiler component](/docs/installation/server/reference/compiler) for the server.
+
+The clone image sets the clone image to use for the Vela injected clone step in a pipeline.
+
+By default, Vela will use the latest available release of the clone image at the time of a server release.
+
+This variable should be provided as a `string`.
+
 ### VELA_COMPILER_GITHUB
 
 This configuration variable is used by the [compiler component](/docs/installation/server/reference/compiler/) for the server.
