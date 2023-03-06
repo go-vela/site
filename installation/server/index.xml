@@ -175,6 +175,11 @@ This variable should match &lt;a href="https://go-vela.github.io/docs/docs/insta
 &lt;h4 class="alert-heading">Note:&lt;/h4>
 This variable has a default value of &lt;code>15m&lt;/code>.
 &lt;/div>
+&lt;h3 id="vela_clone_image">VELA_CLONE_IMAGE&lt;/h3>
+&lt;p>This configuration variable is used by the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/compiler">compiler component&lt;/a> for the server.&lt;/p>
+&lt;p>The clone image sets the clone image to use for the Vela injected clone step in a pipeline.&lt;/p>
+&lt;p>By default, Vela will use the latest available release of the clone image at the time of a server release.&lt;/p>
+&lt;p>This variable should be provided as a &lt;code>string&lt;/code>.&lt;/p>
 &lt;h3 id="vela_compiler_github">VELA_COMPILER_GITHUB&lt;/h3>
 &lt;p>This configuration variable is used by the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/compiler/">compiler component&lt;/a> for the server.&lt;/p>
 &lt;p>Examples using this configuration variable are provided in the above reference documentation.&lt;/p>

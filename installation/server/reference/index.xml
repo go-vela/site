@@ -30,6 +30,13 @@ The compiler is embedded directly in the server and can only be accessed through
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
+&lt;td>&lt;code>clone-image&lt;/code>&lt;/td>
+&lt;td>default clone image to use for Vela injected clone step&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>target/vela-git&lt;/code> (1)&lt;/td>
+&lt;td>&lt;code>VELA_CLONE_IMAGE&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>&lt;code>github-driver&lt;/code>&lt;/td>
 &lt;td>enables using Github or GitHub Enterprise Server as a registry for templates&lt;/td>
 &lt;td>&lt;code>false&lt;/code>&lt;/td>
@@ -80,6 +87,7 @@ The compiler is embedded directly in the server and can only be accessed through
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;p>&lt;em>(1) this will be the latest available, tagged release of &lt;code>target/vela-git&lt;/code> at the time the server component is released&lt;/em>&lt;/p>
 &lt;div class="alert alert-primary" role="alert">
 &lt;h4 class="alert-heading">Note:&lt;/h4>
 For more information on these configuration options, please see the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/">server reference&lt;/a>.
