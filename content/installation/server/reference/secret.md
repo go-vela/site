@@ -59,6 +59,7 @@ $ docker run \
   --env=VELA_QUEUE_ADDR=redis://<password>@<hostname>:<port>/<database> \
   --env=VELA_PORT=443 \
   --env=VELA_SECRET=<shared-secret> \
+  --env=VELA_SERVER_PRIVATE_KEY=<private_key> \
 + --env=VELA_SECRET_VAULT=true \
 + --env=VELA_SECRET_VAULT_ADDR=https://vault.example.com \
 + --env=VELA_SECRET_VAULT_TOKEN=<vault-token>
