@@ -127,6 +127,7 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_QUEUE_ADDR=redis://&amp;lt;password&amp;gt;@&amp;lt;hostname&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;database&amp;gt; \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_PORT=443 \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SECRET=&amp;lt;shared-secret&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SERVER_PRIVATE_KEY=&amp;lt;private_key&amp;gt; \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SCM_CLIENT=&amp;lt;oauth-client-id&amp;gt; \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SCM_SECRET=&amp;lt;oauth-client-secret&amp;gt; \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_WEBUI_ADDR=https://vela.example.com \
@@ -158,6 +159,7 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_QUEUE_ADDR=redis://&amp;lt;password&amp;gt;@&amp;lt;hostname&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;database&amp;gt; \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_PORT=443 \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SECRET=&amp;lt;shared-secret&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SERVER_PRIVATE_KEY=&amp;lt;private_key&amp;gt; \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SCM_CLIENT=&amp;lt;oauth-client-id&amp;gt; \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SCM_SECRET=&amp;lt;oauth-client-secret&amp;gt; \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_WEBUI_ADDR=https://vela.example.com \
@@ -288,6 +290,7 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_QUEUE_ADDR=redis://&amp;lt;password&amp;gt;@&amp;lt;hostname&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;database&amp;gt; \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_PORT=443 \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SECRET=&amp;lt;shared-secret&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SERVER_PRIVATE_KEY=&amp;lt;private_key&amp;gt; \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SCM_CLIENT=&amp;lt;oauth-client-id&amp;gt; \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SCM_SECRET=&amp;lt;oauth-client-secret&amp;gt; \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_WEBUI_ADDR=https://vela.example.com \
@@ -312,6 +315,7 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_QUEUE_ADDR=redis://&amp;lt;password&amp;gt;@&amp;lt;hostname&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;database&amp;gt; \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_PORT=443 \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SECRET=&amp;lt;shared-secret&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SERVER_PRIVATE_KEY=&amp;lt;private_key&amp;gt; \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SCM_CLIENT=&amp;lt;oauth-client-id&amp;gt; \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SCM_SECRET=&amp;lt;oauth-client-secret&amp;gt; \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_WEBUI_ADDR=https://vela.example.com \
@@ -514,6 +518,7 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_QUEUE_ADDR=redis://&amp;lt;password&amp;gt;@&amp;lt;hostname&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;database&amp;gt; \
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">&lt;/span> --env=VELA_PORT=443 \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SECRET=&amp;lt;shared-secret&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SERVER_PRIVATE_KEY=&amp;lt;private_key&amp;gt; \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SCM_CLIENT=&amp;lt;oauth-client-id&amp;gt; \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SCM_SECRET=&amp;lt;oauth-client-secret&amp;gt; \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_WEBUI_ADDR=https://vela.example.com \
@@ -989,6 +994,7 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_QUEUE_ADDR=redis://&amp;lt;password&amp;gt;@&amp;lt;hostname&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;database&amp;gt; \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_PORT=443 \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SECRET=&amp;lt;shared-secret&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SERVER_PRIVATE_KEY=&amp;lt;private_key&amp;gt; \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_SECRET_VAULT=true \
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_SECRET_VAULT_ADDR=https://vault.example.com \
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_SECRET_VAULT_TOKEN=&amp;lt;vault-token&amp;gt;

@@ -37,12 +37,16 @@ This example only shows a subset of all possible configuration options.
 &lt;p>Create a shared secret used for authenticating communication between workers and the server.&lt;/p>
 &lt;p>You can use the &lt;a href="https://www.openssl.org/">&lt;code>openssl&lt;/code> command&lt;/a> to generate the shared secret:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>$ openssl rand -hex &lt;span style="color:#0000cf;font-weight:bold">16&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="step-4-create-an-oauth-application">Step 4: Create an OAuth Application&lt;/h3>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="step-4-create-the-private-key">Step 4: Create the private key&lt;/h3>
+&lt;p>Create a private key used for minting and validating user and build tokens.&lt;/p>
+&lt;p>You can also use the &lt;a href="https://www.openssl.org/">&lt;code>openssl&lt;/code> command&lt;/a> to generate the key.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>$ openssl rand -hex &lt;span style="color:#0000cf;font-weight:bold">16&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="step-5-create-an-oauth-application">Step 5: Create an OAuth Application&lt;/h3>
 &lt;p>Vela requires OAuth application credentials from a source control management (SCM) provider.&lt;/p>
 &lt;p>These credentials are used to authenticate and authorize actions preformed within the platform.&lt;/p>
 &lt;p>Vela has support for many Source Control Management (SCM) providers to enable the preferences of you and your team.&lt;/p>
 &lt;p>You can follow the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/scm/">SCM reference&lt;/a> for instructions on creating the OAuth application.&lt;/p>
-&lt;h3 id="step-5-start-the-server">Step 5: Start the Server&lt;/h3>
+&lt;h3 id="step-6-start-the-server">Step 6: Start the Server&lt;/h3>
 &lt;p>Start the Vela server as a &lt;a href="https://docs.docker.com/get-started/overview/#containers">Docker container&lt;/a> that is configured via environment variables.&lt;/p>
 &lt;p>You can use the &lt;a href="https://docs.docker.com/engine/reference/commandline/run/">&lt;code>docker run&lt;/code> command&lt;/a> to start the server:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>$ docker run &lt;span style="color:#4e9a06">\
@@ -53,6 +57,7 @@ This example only shows a subset of all possible configuration options.
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --env&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">VELA_QUEUE_ADDR&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>redis://&amp;lt;password&amp;gt;@&amp;lt;hostname&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;database&amp;gt; &lt;span style="color:#4e9a06">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --env&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">VELA_PORT&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">443&lt;/span> &lt;span style="color:#4e9a06">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --env&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">VELA_SECRET&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&amp;lt;shared-secret&amp;gt; &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --env&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">VELA_SERVER_PRIVATE_KEY&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&amp;lt;private_key&amp;gt; &lt;span style="color:#4e9a06">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --env&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">VELA_SCM_CLIENT&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&amp;lt;oauth-client-id&amp;gt; &lt;span style="color:#4e9a06">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --env&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">VELA_SCM_SECRET&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&amp;lt;oauth-client-secret&amp;gt; &lt;span style="color:#4e9a06">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --env&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">VELA_WEBUI_ADDR&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>https://vela.example.com &lt;span style="color:#4e9a06">\
@@ -66,11 +71,11 @@ This example only shows a subset of all possible configuration options.
 &lt;h4 class="alert-heading">Note:&lt;/h4>
 For a full list of configuration options, please see the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/">server reference&lt;/a>.
 &lt;/div>
-&lt;h3 id="step-6-verify-the-server-logs">Step 6: Verify the Server Logs&lt;/h3>
+&lt;h3 id="step-7-verify-the-server-logs">Step 7: Verify the Server Logs&lt;/h3>
 &lt;p>Ensure the server started up successfully and is running as expected by viewing the logs.&lt;/p>
 &lt;p>You can use the &lt;a href="https://docs.docker.com/engine/reference/commandline/logs/">&lt;code>docker logs&lt;/code> command&lt;/a> to inspect the logs:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>$ docker logs server
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="step-7-install-workers">Step 7: Install Workers&lt;/h3>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="step-8-install-workers">Step 8: Install Workers&lt;/h3>
 &lt;p>After the server is up and running, you need to install workers to run workloads.&lt;/p>
 &lt;p>Please refer to &lt;a href="https://go-vela.github.io/docs/docs/installation/worker/">the worker installation docs&lt;/a> for more information.&lt;/p></description></item><item><title>Installation: Kubernetes</title><link>https://go-vela.github.io/docs/installation/server/kubernetes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/server/kubernetes/</guid><description>
 &lt;h2 id="prerequisites">Prerequisites&lt;/h2>
