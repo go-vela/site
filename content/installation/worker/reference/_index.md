@@ -286,6 +286,14 @@ The variable can be provided as a comma-separated `list` (i.e. `myImage1,myImage
 Please use with caution. This setting essentially grants any defined image root access to the host machine.
 {{% /alert %}}
 
+### VELA_RUNTIME_DROP_CAPABILITIES
+
+This configuration variable is used by the [runtime component](/docs/installation/worker/reference/runtime/) for the worker.
+
+This variable leverages the [`--cap-drop` Docker run flag](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities) to disable certain kernel capabilities given to the container by default.
+
+This variable can be provided as a comma-separated `list` (e.g. `CAP_CHOWN,CAP_DAC_OVERRIDE`). There is some validation in place to ensure accurate capabilities are provided.
+
 ### VELA_RUNTIME_VOLUMES
 
 This configuration variable is used by the [runtime component](/docs/installation/worker/reference/runtime/) for the worker.
