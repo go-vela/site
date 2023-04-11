@@ -5,7 +5,7 @@ description: >
   Learn how to orchestrate pipelines with stages.
 ---
 
-This page will focus on [`stages`](/docs/tour/stages) and how to effectively leverage the orchestration options given to users. These options come in the form of [`rulesets`](/docs/tour/rulesets), [`needs`](/docs/reference/yaml/stages/#the-needs-tag), and [`independency`](/docs/reference/yaml/stages/#the-independent-tag).
+This page will focus on [`stages`](/docs/tour/stages) and how to effectively leverage the orchestration options given to users. These options come in the form of [`rulesets`](/docs/tour/rulesets), [`needs`](/docs/reference/yaml/stages/#the-needs-tag), and [`independence`](/docs/reference/yaml/stages/#the-independent-tag).
 
 
 ### Step Rulesets in Stages
@@ -176,7 +176,7 @@ stages:
 
 So in fact, in this scenario, the `run-first` stage and the `y-stage` begin simultaneously, even though `y-stage` "needed" `compile-time-ruleset-stage` which "needed" `run-first` in the original pipeline. 
 
-### Leveraging Stage Independency
+### Leveraging Stage independence
 
 With the increasing popularity of monorepos, some Vela pipelines may want to simultaneously execute very different build flows based on modules within the repository. Since by nature Vela stages will skip the remainder of the build if a single stage fails its pipeline, this could potentially cause issues, such as half-done deployments.
 
