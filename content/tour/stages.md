@@ -8,13 +8,13 @@ description: >
 
 A stages pipelines are designed to parallelize one-to-many sets of step tasks.
 
-By design all of the stages will run at the same time unless the user uses a `needs:` YAML tag to control the flow of stage executions (see example). Note: even if every step within a stage is skipped, the stage still runs. Do not use `needs` as a stage-level equivalent to `rulesets`. 
+By design all of the stages will run at the same time unless the user uses a `needs:` YAML tag to control the flow of stage executions (see example).
 
 Stages will also stop executing their steps if the build fails as a whole, by default. In other words, if stage 1 fails, the steps that have yet to execute in stage 2 will be skipped. The user can declare `independent: true` for any stage to change this behavior.
 
 These pipelines do not have a minimum defined length and will always execute steps within a stage in the order defined. Stages always run on the same host so it's important to take into consideration the size of the worker running your builds.
 
-In this pipeline both stages trigger at the same time and run independently of the other. 
+In this pipeline both stages trigger at the same time.
 
 Both steps are pulling a [Alpine Linux](https://alpinelinux.org/) image from [Docker Hub](https://hub.docker.com/) and executing echo statements.  
 
@@ -25,6 +25,8 @@ Both steps are pulling a [Alpine Linux](https://alpinelinux.org/) image from [Do
 * [Gradle](/docs/usage/examples/java_gradle/)
 * [Maven](/docs/usage/examples/java_maven/)
 * [Node](/docs/usage/examples/node/)
+
+You can learn more about stage orchestration [here](/docs/usage/stage_orchestration.md)!
 
 <!-- section break -->
 
@@ -67,47 +69,6 @@ $ vela exec pipeline
 [stage: welcome][step: Welcome] Welcome to the Vela docs
 [stage: goodbye][step: Goodbye] $ echo "Goodbye, World"
 [stage: goodbye][step: Goodbye] Goodbye, World
-```
-
-```yaml
-version: "1"
-
-# In this pipeline, the behavior is very similar as the previous one. However, the 
-# `goodbye` stage will continue executing its steps, ignoring the failure in the welcome
-# stage. The overall build status will still be a failure.
-
-stages:
-  greeting:
-    steps:
-      - name: Greeting
-        image: alpine
-        commands:
-          - echo "Hello, World"
-
-  welcome:
-    steps:
-      - name: Welcome
-        image: alpine
-        commands:
-          - echo "Welcome to the Vela docs"
-          - echo "Uh oh"
-          - exit 1
-  
-  goodbye:
-    # will wait for greeting and welcome to finish
-    needs: [greeting, welcome]
-    # will ignore the failures in other stages
-    independent: true
-    steps:
-      - name: Goodbye
-        image: alpine
-        commands:
-          - echo "Goodbye, World"
-          - sleep 5
-      - name: Have a nice day
-        image: alpine
-        commands:
-          - echo "Have a nice day!"
 ```
 
 <!-- section break -->
