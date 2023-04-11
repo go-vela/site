@@ -180,7 +180,7 @@ So in fact, in this scenario, the `run-first` stage and the `y-stage` begin simu
 
 With the increasing popularity of monorepos, some Vela pipelines may want to simultaneously execute very different build flows based on modules within the repository. Since by nature Vela stages will skip the remainder of the build if a single stage fails its pipeline, this could potentially cause issues, such as half-done deployments.
 
-For example, say we have a repo that has back-end _and_ front-end code written together. Let's assume all the back-end code is in `org/repo/back-end` and the front-end code is in `org/repo/front-end`. We can leverage the `path` ruleset in conjucture with the `independent` stage tag to compartmentalize Vela builds:
+For example, say we have a repo that has back-end _and_ front-end code written together. Let's assume all the back-end code is in `org/repo/back-end` and the front-end code is in `org/repo/front-end`. We can leverage the [`path`](/docs/reference/yaml/steps/#the-ruleset-tag) ruleset in conjucture with the [`independent`](/docs/reference/yaml/stages/#the-independent-tag) stage tag to compartmentalize Vela builds:
 
 ```yaml
 version: "1"
