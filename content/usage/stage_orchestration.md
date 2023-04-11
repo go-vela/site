@@ -78,7 +78,7 @@ Notice how the `deploy` stage has been pruned completely, rather than being a st
 
 ### Understanding the `needs` tag
 
-Noting the example above, the `needs` tag can become tricky when combined with pruning. Let's take a look at a theoretical pipeline:
+While there isn't a sure-fire way of running stages in order, there is the `needs` tag, which introduces a level of dependency that can be used to order stages. However, noting the example above, the `needs` tag can become tricky when combined with pruning. Let's take a look at a theoretical pipeline:
 
 ```yaml
 version: "1"
@@ -260,4 +260,4 @@ We can extend this example to deployments, and it's easy to see where a team may
 
 ### In Summary
 
-Stages are an advanced tool to help with writing powerful and sensible pipelines with parallel execution. While these orchestration tools are helpful, it is worth investigating just using `steps` if your pipeline relies on them too heavily.
+Stages are an advanced tool to help with writing powerful and sensible pipelines with parallel execution. While these orchestration tools are helpful, it is worth investigating just using `steps` if your pipeline relies on them too heavily. 
