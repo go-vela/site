@@ -5,7 +5,7 @@ description: >
   Learn how to orchestrate pipelines with stages.
 ---
 
-This page will focus on [`stages`](/docs/tour/stages) and how to effectively leverage the orchestration options given to users. These options come in the form of [`rulesets`](/docs/tour/rulesets), [`needs`](/docs/reference/yaml/stages/#the-needs-tag), and [`independence`](/docs/reference/yaml/stages/#the-independent-tag).
+This page will focus on [`stages`](/docs/tour/stages) and how to effectively leverage the orchestration options given to users. These options come in the form of [`rulesets`](/docs/tour/rulesets), [`needs`](/docs/reference/yaml/stages/#the-needs-tag), and [independence](/docs/reference/yaml/stages/#the-independent-tag).
 
 
 ### Step Rulesets in Stages
