@@ -5,11 +5,11 @@ description: >
   Learn how to orchestrate pipelines with stages.
 ---
 
-This page will focus on [`stages`](/docs/tour/stages) and how to effectively leverage the orchestration options given to users. These options come in the form of [`rulesets`](/docs/tour/rulesets), [`needs`](/docs/reference/yaml/stages/#the-needs-tag), and [`independence`](/docs/reference/yaml/stages/#the-independent-tag).
+This page will focus on [`stages`](/docs/tour/stages) and how to effectively leverage the orchestration options given to users. These options are: the [`ruleset`](/docs/tour/rulesets) tag, the [`needs`](/docs/reference/yaml/stages/#the-needs-tag) tag, and the [`independent`](/docs/reference/yaml/stages/#the-independent-tag) tag.
 
 
 ### Step Rulesets in Stages
-To begin, let's focus on the `ruleset` tag. While this is not a tag at the stages level at the moment, each stage has a collection of steps, which can all be given rulesets. There are two kinds of rules within Vela: compile-time rules (path, event, branch, comment, tag, target, and repo) and a single runtime rule (status). When Vela compiles a pipeline, it will purge any steps that do not meet the compile-time rules.
+To begin, let's focus on the `ruleset` tag. While this is not a tag at the stages level, each stage has a collection of steps, which can all be given rulesets. There are two kinds of rules within Vela: compile-time rules (path, event, branch, comment, tag, target, and repo) and a single runtime rule (status). When Vela compiles a pipeline, it will purge any steps that do not meet the compile-time rules.
 
 For example, let's consider a pipeline written as such:
 
@@ -78,7 +78,7 @@ Notice how the `deploy` stage has been pruned completely, rather than being a st
 
 ### Understanding the `needs` tag
 
-While there isn't a sure-fire way of running stages in order, there is the `needs` tag, which introduces a level of dependency that can be used to order stages. However, noting the example above, the `needs` tag can become tricky when combined with pruning. Let's take a look at a theoretical pipeline:
+While there isn't a sure-fire way of running stages in order, the `needs` tag introduces a level of dependency that can be used to order stages. However the `needs` tag can become tricky when combined with pruning, as shown in the example above. Let's take a look at a theoretical pipeline:
 
 ```yaml
 version: "1"
@@ -180,7 +180,7 @@ So in fact, in this scenario, the `run-first` stage and the `y-stage` begin simu
 
 With the increasing popularity of monorepos, some Vela pipelines may want to simultaneously execute very different build flows based on modules within the repository. Since by nature Vela stages will skip the remainder of the build if a single stage fails its pipeline, this could potentially cause issues, such as half-done deployments.
 
-For example, say we have a repo that has back-end _and_ front-end code written together. Let's assume all the back-end code is in `org/repo/back-end` and the front-end code is in `org/repo/front-end`. We can leverage the [`path`](/docs/reference/yaml/steps/#the-ruleset-tag) ruleset in conjucture with the [`independent`](/docs/reference/yaml/stages/#the-independent-tag) stage tag to compartmentalize Vela builds:
+For example, say we have a repo that has back-end _and_ front-end code written together. Let's assume all the back-end code is in `org/repo/back-end` and the front-end code is in `org/repo/front-end`. We can leverage the [`path`](/docs/reference/yaml/steps/#the-ruleset-tag) ruleset with the [`independent`](/docs/reference/yaml/stages/#the-independent-tag) stage tag to compartmentalize Vela builds:
 
 ```yaml
 version: "1"
@@ -260,4 +260,4 @@ We can extend this example to deployments, and it's easy to see where a team may
 
 ### In Summary
 
-Stages are an advanced tool to help with writing powerful and sensible pipelines with parallel execution. While these orchestration tools are helpful, it is worth investigating just using `steps` if your pipeline relies on them too heavily. 
+Stages are an advanced tool to help with writing powerful and sensible pipelines with parallel execution. While these orchestration tools are helpful, consider just using `steps` to simplify pipelines that don't need the, sometimes surprising, complexity.
