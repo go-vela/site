@@ -350,7 +350,7 @@
 &lt;li>&lt;a href="https://go-vela.github.io/docs/docs/usage/examples/java_maven/">Maven&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://go-vela.github.io/docs/docs/usage/examples/node/">Node&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;p>You can learn more about stage orchestration &lt;a href="https://go-vela.github.io/docs/docs/usage/stage_orchestration.md">here&lt;/a>!&lt;/p>
+&lt;p>You can learn more about stage orchestration &lt;a href="https://go-vela.github.io/docs/docs/usage/stage_orchestration">here&lt;/a>!&lt;/p>
 &lt;!-- section break -->
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">version&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#4e9a06">&amp;#34;1&amp;#34;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">
