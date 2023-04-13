@@ -34,6 +34,18 @@ This command also supports setting the following parameters via a configuration 
 For more information, please review the [CLI config documentation](/docs/reference/cli/config/).
 {{% /alert %}}
 
+## Description
+
+The sync command allows users to re-align their repository in Vela with its SCM mirror. This discrepancy can come in the form of a repository that has been deleted from the SCM but not in Vela. 
+
+Further, as of `v0.19.0`, the sync command can be used to adjust events that are sent to Vela from the SCM that the Vela-instance of the repo is not subscribed to. For example, if your audit page has errors like
+
+```sh
+"unable to process webhook: <org>/<repo> does not have comment events enabled"
+```
+
+running the sync command should re-configure the SCM webhook to only send events that are allowed. Once aligned, you should not have to run this command again, even if the subscribed events are changed.
+
 ## Samples
 
 {{% alert color="warning" %}}
