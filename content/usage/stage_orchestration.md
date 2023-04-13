@@ -7,7 +7,6 @@ description: >
 
 This page will focus on [`stages`](/docs/tour/stages) and how to effectively leverage the orchestration options given to users. These options are: the [`ruleset`](/docs/tour/rulesets) tag, the [`needs`](/docs/reference/yaml/stages/#the-needs-tag) tag, and the [`independent`](/docs/reference/yaml/stages/#the-independent-tag) tag.
 
-
 ### Step Rulesets in Stages
 To begin, let's focus on the `ruleset` tag. While this is not a tag at the stages level, each stage has a collection of steps, which can all be given rulesets. There are two kinds of rules within Vela: compile-time rules (path, event, branch, comment, tag, target, and repo) and a single runtime rule (status). When Vela compiles a pipeline, it will purge any steps that do not meet the compile-time rules.
 
