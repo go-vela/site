@@ -26,7 +26,7 @@ Both steps are pulling a [Alpine Linux](https://alpinelinux.org/) image from [Do
 * [Maven](/docs/usage/examples/java_maven/)
 * [Node](/docs/usage/examples/node/)
 
-You can learn more about stage orchestration [here](/docs/usage/stage_orchestration.md)!
+You can learn more about stage orchestration [here](/docs/usage/stage_orchestration)!
 
 <!-- section break -->
 
