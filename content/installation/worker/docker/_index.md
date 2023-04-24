@@ -104,7 +104,7 @@ Once the worker has started, it will be in a paused state until a platform admin
 ```shell
 $ vela login --api.addr https://vela-server.example.com
 
-$ vela add worker --hostname vela-worker --address https://vela-worker.example.com
+$ vela add worker --worker.hostname vela-worker --worker.address https://vela-worker.example.com
 
 worker registered successfully
 ```
