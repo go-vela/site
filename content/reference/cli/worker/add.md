@@ -50,8 +50,12 @@ To setup the CLI, please review the [authentication documentation](/docs/referen
 #### Request
 
 ```sh
-$ vela add worker --worker.hostname MyWorker --worker.address myworker.example.com
+$ vela add worker --worker.address myworker.example.com
 ```
+
+{{% alert color="info" %}}
+Not passing `--worker.hostname` will automatically use the hostname part of the passed in `--worker.address` as the hostname.
+{{% /alert %}}
 
 #### Response generated from successful CLI command
 ```sh
@@ -63,5 +67,7 @@ worker registered successfully
 ```sh
 EXAMPLES:
   1. Add a worker reachable at the provided address.
+    $ vela add MyWorker --worker.address myworker.example.com
+  2. Add a worker with the provided hostname and reachable at the address given.
     $ vela add worker --worker.hostname MyWorker --worker.address myworker.example.com
 ```

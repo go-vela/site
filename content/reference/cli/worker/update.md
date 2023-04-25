@@ -53,12 +53,8 @@ To setup the CLI, please review the [authentication documentation](/docs/referen
 #### Request
 
 ```sh
-$ vela update worker --worker.address newaddress.example.com
+$ vela update worker --worker.hostname MyWorker --worker.address newaddress.example.com
 ```
-
-{{% alert color="info" %}}
-Not passing `--worker.hostname` will automatically use the hostname part of the passed in `--worker.address` as the hostname.
-{{% /alert %}}
 
 #### Response
 
