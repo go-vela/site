@@ -24,16 +24,16 @@ The following parameters are used to configure the endpoint:
 | `failure_build_count`   | count of builds with status 'failure'                   |
 | `pending_build_count`   | count of builds with status 'pending'                   |
 | `queued_build_count`    | count of builds inside the queue                        |
-|	`killed_build_count`    | count of builds with status 'killed'                    |
-|	`success_build_count`   | count of builds with status 'success'                   |
-|	`error_build_count`     | count of builds with status 'error'                     |
-|	`step_image_count`      | count of total steps executed with each unique image    |
-|	`step_status_count`     | count of total steps with each status                   |
-|	`service_image_count`   | count of total services executed with each unique image |
-|	`service_status_count`  | count of total services with each status                |
-|	`worker_build_limit`    | count of worker build limits                            |
-|	`active_worker_count`   | count of active workers                                 |
-|	`inactive_worker_count` | count of inactive workers                               |
+| `killed_build_count`    | count of builds with status 'killed'                    |
+| `success_build_count`   | count of builds with status 'success'                   |
+| `error_build_count`     | count of builds with status 'error'                     |
+| `step_image_count`      | count of total steps executed with each unique image    |
+| `step_status_count`     | count of total steps with each status                   |
+| `service_image_count`   | count of total services executed with each unique image |
+| `service_status_count`  | count of total services with each status                |
+| `worker_build_limit`    | count of worker build limits                            |
+| `active_worker_count`   | count of active workers                                 |
+| `inactive_worker_count` | count of inactive workers                               |
 
 
 ## Permissions
