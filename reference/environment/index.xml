@@ -490,6 +490,11 @@ The following table includes variables only available during the &lt;strong>tag&
 &lt;td>timeout setting for the repository&lt;/td>
 &lt;/tr>
 &lt;tr>
+&lt;td>&lt;code>VELA_REPO_TOPICS&lt;/code>&lt;/td>
+&lt;td>&lt;code>cloud,security&lt;/code>&lt;/td>
+&lt;td>comma-separated list of repository topics&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>&lt;code>VELA_REPO_TRUSTED&lt;/code>&lt;/td>
 &lt;td>&lt;code>false&lt;/code>&lt;/td>
 &lt;td>trusted setting for the repository&lt;/td>
