@@ -67,7 +67,7 @@ worker registered successfully
 ```sh
 EXAMPLES:
   1. Add a worker reachable at the provided address.
-    $ vela add MyWorker --worker.address myworker.example.com
+    $ vela add worker --worker.address myworker.example.com
   2. Add a worker with the provided hostname and reachable at the address given.
     $ vela add worker --worker.hostname MyWorker --worker.address myworker.example.com
 ```
