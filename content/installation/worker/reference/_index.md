@@ -136,23 +136,6 @@ The possible options to provide for this variable are:
 * `local`
 {{% /alert %}}
 
-### VELA_EXECUTOR_LOG_METHOD
-
-This configuration variable is used by the [executor component](/docs/installation/worker/reference/executor/) for the worker.
-
-This variable sets the logging method used by the worker for uploading workload logs to the Vela [server](/docs/installation/server/).
-
-The variable can be provided as a `string`.
-
-{{% alert title="Note:" color="primary" %}}
-This variable has a default value of `byte-chunks`.
-
-The possible options to provide for this variable are:
-
-* `byte-chunks`
-* `time-chunks`
-{{% /alert %}}
-
 ### VELA_EXECUTOR_MAX_LOG_SIZE
 
 This configuration variable is used by the [executor component](/docs/installation/worker/reference/executor/) for the worker.
