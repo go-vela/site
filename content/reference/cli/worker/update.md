@@ -19,14 +19,14 @@ For more information, you can run `vela update worker --help`.
 
 The following parameters are used to configure the command:
 
-| Name              | Description                      | Environment Variables                           |
-| ----------------- | -------------------------------- | ----------------------------------------------- |
-| `worker.address`  | address of the worker            | `VELA_WORKER_ADDRESS`, `WORKER_ADDRESS`         |
-| `worker.hostname` | hostname of the worker           | `VELA_WORKER_HOSTNAME`, `WORKER_HOSTNAME`       |
-| `active`          | current status of the worker     | `VELA_WORKER_ACTIVE`, `WORKER_ACTIVE`           |
-| `build-limit`     | build limit for the worker       | `VELA_WORKER_BUILD_LIMIT`, `WORKER_BUILD_LIMIT` |
-| `routes`          | route assignment for the worker  | `VELA_WORKER_ROUTES`, `WORKER_ROUTES`           |
-| `output`          | format the output for the worker | `VELA_OUTPUT`, `WORKER_OUTPUT`                  |
+| Name              | Description                              | Environment Variables                           |
+| ----------------- | ---------------------------------------- | ----------------------------------------------- |
+| `worker.address`  | address of the worker                    | `VELA_WORKER_ADDRESS`, `WORKER_ADDRESS`         |
+| `worker.hostname` | hostname of the worker                   | `VELA_WORKER_HOSTNAME`, `WORKER_HOSTNAME`       |
+| `active`          | current status of the worker (unused)    | `VELA_WORKER_ACTIVE`, `WORKER_ACTIVE`           |
+| `build-limit`     | build limit for the worker (ignored)     | `VELA_WORKER_BUILD_LIMIT`, `WORKER_BUILD_LIMIT` |
+| `routes`          | route assignment for the worker (unused) | `VELA_WORKER_ROUTES`, `WORKER_ROUTES`           |
+| `output`          | format the output for the worker         | `VELA_OUTPUT`, `WORKER_OUTPUT`                  |
 
 {{% alert color="info" %}}
 This command also supports setting the following parameters via a configuration file:
@@ -53,8 +53,12 @@ To setup the CLI, please review the [authentication documentation](/docs/referen
 #### Request
 
 ```sh
-$ vela update worker --worker.hostname MyWorker --worker.address newaddress.example.com
+$ vela update worker --worker.address newaddress.example.com
 ```
+
+{{% alert color="info" %}}
+Not passing `--worker.hostname` will automatically use the hostname part of the passed in `--worker.address` as the hostname.
+{{% /alert %}}
 
 #### Response
 
