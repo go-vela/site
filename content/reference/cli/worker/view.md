@@ -22,7 +22,7 @@ The following parameters are used to configure the command:
 | Name                        | Description                                                               | Environment Variables                                         |
 | --------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------- |
 | `worker.hostname`           | hostname of the worker                                                    | `VELA_WORKER_HOSTNAME`, `WORKER_HOSTNAME`                     |
-| `worker.registration.token` | show the registration token for the worker (requires Vela Platform Admin) | `VELA_WORKER_REGISTRATION_TOKEN`, `WORKER_REGISTRATION_TOKEN` |
+| `worker.registration.token` | generate a registration token for the worker (requires Vela Platform Admin) | `VELA_WORKER_REGISTRATION_TOKEN`, `WORKER_REGISTRATION_TOKEN` |
 | `output`                    | format the output for the repository                                      | `VELA_OUTPUT`, `WORKER_OUTPUT`                                |
 
 {{% alert color="info" %}}
