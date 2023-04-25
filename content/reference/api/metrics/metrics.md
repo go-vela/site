@@ -22,7 +22,7 @@ The following parameters are used to configure the endpoint:
 |	`build_count`           | count of total builds                                   |
 |	`running_build_count`   | count of builds with status 'running'                   |
 |	`failure_build_count`   | count of builds with status 'failure'                   |
-|	`pending_build_count`   | count of builds with status 'pending'                   |
+| `pending_build_count`   | count of builds with status 'pending'                   |
 | `queued_build_count`    | count of builds inside the queue                        |
 |	`killed_build_count`    | count of builds with status 'killed'                    |
 |	`success_build_count`   | count of builds with status 'success'                   |
