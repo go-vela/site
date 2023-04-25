@@ -713,9 +713,24 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;td>&lt;code>5m&lt;/code>&lt;/td>
 &lt;td>&lt;code>VELA_BUILD_TOKEN_BUFFER_DURATION&lt;/code>&lt;br>&lt;code>BUILD_TOKEN_BUFFER_DURATION&lt;/code>&lt;/td>
 &lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>worker-auth-token-duration&lt;/code>&lt;/td>
+&lt;td>maximum duration of time an auth token for a worker is valid on the server&lt;/td>
+&lt;td>&lt;code>false&lt;/code>*&lt;/td>
+&lt;td>&lt;code>20m&lt;/code>&lt;/td>
+&lt;td>&lt;code>VELA_WORKER_AUTH_TOKEN_DURATION&lt;/code>&lt;br>&lt;code>WORKER_AUTH_TOKEN_DURATION&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>worker-register-token-duration&lt;/code>&lt;/td>
+&lt;td>maximum duration of time a registration token for a worker is valid on the server&lt;/td>
+&lt;td>&lt;code>false&lt;/code>*&lt;/td>
+&lt;td>&lt;code>1m&lt;/code>&lt;/td>
+&lt;td>&lt;code>VELA_WORKER_REGISTER_TOKEN_DURATION&lt;/code>&lt;br>&lt;code>WORKER_REGISTER_TOKEN_DURATION&lt;/code>&lt;/td>
+&lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;div class="alert alert-primary" role="alert">
-&lt;h4 class="alert-heading">Note:&lt;/h4>
-For more information on these configuration options, please see the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/">server reference&lt;/a>.
+&lt;h4 class="alert-heading">Notes:&lt;/h4>
+&lt;p>* &lt;code>worker-auth-token-duration&lt;/code> and &lt;code>worker-register-token-duration&lt;/code> are required if you intend to register workers.&lt;/p>
+&lt;p>For more information on these configuration options, please see the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/">server reference&lt;/a>.&lt;/p>
 &lt;/div></description></item></channel></rss>
