@@ -54,8 +54,7 @@ Take care to read through both options to determine which setup makes the most s
 
 This authentication method involves using the same secret generated as the `VELA_SECRET` during the [server installation](/docs/installation/server/docker/#step-3-create-a-shared-secret) as the bearer token for all API requests related to check-in and build tokens from the worker to the server.
 
-The token is non-expiring and exists within the container environment. Once the server is running, all that is necessary for a worker to connect to the server and pull builds from the queue
-is simply starting the worker container:
+The token is non-expiring and exists within the container environment. Once the server is running, all that is necessary for a worker to connect to the server and pull builds from the queue is simply starting the worker container:
 
 ```shell
 $ docker run \
