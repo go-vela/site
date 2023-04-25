@@ -87,16 +87,6 @@ This variable sets the client secret from the OAuth application created on the S
 
 The variable should be provided as a `string`.
 
-### VELA_SECRET
-
-This variable sets a shared secret with the Vela [worker](/docs/installation/worker/) for authenticating communication between workers and the server.
-
-The variable should be provided as a `string`.
-
-{{% alert title="Note:" color="primary" %}}
-This variable should match [the `VELA_SERVER_SECRET` variable](/docs/installation/worker/reference/#vela_server_secret) provided to the worker.
-{{% /alert %}}
-
 ### VELA_SERVER_PRIVATE_KEY
 
 This variable sets the private key that will be used to sign all JWT tokens within Vela. Please be sure to follow [guidelines](https://www.rfc-editor.org/rfc/rfc2104#section-3) related to generating a private key.
@@ -106,6 +96,18 @@ The variable should be provided as a `string`.
 ## Optional
 
 This section contains a list of all variables that can be provided to the server.
+
+### VELA_SECRET
+
+This variable sets a shared secret with the Vela [worker](/docs/installation/worker/) for authenticating communication between workers and the server.
+
+Only necessary to provide if utilizing the [server-worker trusted symmetric worker authentication method](/docs/installation/worker/docker/#worker-server-trusted-symmetric-token).
+
+The variable should be provided as a `string`.
+
+{{% alert title="Note:" color="primary" %}}
+This variable should match [the `VELA_SERVER_SECRET` variable](/docs/installation/worker/reference/#vela_server_secret) provided to the worker.
+{{% /alert %}}
 
 ### VELA_CLONE_IMAGE
 
@@ -636,6 +638,34 @@ The variable can be provided as a `string`.
 
 {{% alert title="Note:" color="primary" %}}
 This variable has a default value of `/account/authenticate`.
+{{% /alert %}}
+
+### VELA_WORKER_AUTH_TOKEN_DURATION
+
+This variable sets the maximum duration of time a Vela auth token for a worker is valid on the server.
+
+The worker auth token is used for authenticating a worker's access to the server to check-in and request build tokens.
+
+The variable can be provided as a `duration` (i.e. `5s`, `10m`).
+
+{{% alert title="Notes:" color="primary" %}}
+This variable should be _longer_ than the [VELA_CHECK_IN](/docs/installation/worker/reference/#vela_check_in) in order to be able to refresh the auth token.
+
+This variable has a default value of `20m`.
+{{% /alert %}}
+
+### VELA_WORKER_REGISTER_TOKEN_DURATION
+
+This variable sets the maximum duration of time a Vela registration token for a worker is valid on the server.
+
+The worker register token is used for onboarding a worker onto the server and beginning its auth refresh routine.
+
+The variable can be provided as a `duration` (i.e. `5s`, `10m`).
+
+{{% alert title="Notes:" color="primary" %}}
+This variable should be relatively short-lived. There is a [CLI Command](/docs/reference/cli/worker/add) to quicken the registration process for admins.
+
+This variable has a default value of `1m`.
 {{% /alert %}}
 
 ### VELA_WORKER_ACTIVE_INTERVAL

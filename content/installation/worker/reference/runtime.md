@@ -21,6 +21,7 @@ The following options are used to configure the component:
 | `runtime.pods-template-name` | name of the PipelinePodsTemplate to retrieve from the `runtime.namespace` (only for kubernetes) | `false`  | `N/A`                    | `RUNTIME_PODS_TEMPLATE_NAME`<br>`VELA_RUNTIME_PODS_TEMPLATE_NAME` |
 | `runtime.pods-template-file` | path to local fallback file containing a PipelinePodsTemplate in YAML (only for kubernetes)     | `false`  | `N/A`                    | `RUNTIME_PODS_TEMPLATE_FILE`<br>`VELA_RUNTIME_PODS_TEMPLATE_FILE` |
 | `runtime.privileged-images`  | images allowed to run in privileged mode for the runtime                                        | `false`  | `[ ]` | `RUNTIME_PRIVILEGED_IMAGES`<br>`VELA_RUNTIME_PRIVILEGED_IMAGES`   |
+| `runtime.drop-capabilities`  | kernel capabilities to be dropped from each running container                                   | `false`  | `N/A`                    | `RUNTIME_DROP_CAPABILITIES`<br>`VELA_RUNTIME_DROP_CAPABILITIES`   |
 | `runtime.volumes`            | path to host volumes to mount into resources for the runtime                                    | `false`  | `N/A`                    | `RUNTIME_VOLUMES`<br>`VELA_RUNTIME_VOLUMES`                       |
 
 {{% alert title="Note:" color="primary" %}}

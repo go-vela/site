@@ -63,16 +63,6 @@ The variable should be provided as a `string`.
 This variable should match [the `VELA_ADDR` variable](/docs/installation/server/reference/#vela_addr) provided to the server.
 {{% /alert %}}
 
-### VELA_SERVER_SECRET
-
-This variable sets a shared secret for authenticating communication between workers and the server.
-
-The variable should be provided as a `string`.
-
-{{% alert title="Note:" color="primary" %}}
-This variable should match [the `VELA_SECRET` variable](/docs/installation/server/reference/#vela_secret) provided to the server.
-{{% /alert %}}
-
 ### VELA_WORKER_ADDR
 
 This variable sets a fully qualified URL to the Vela [worker](/docs/installation/worker/) address.
@@ -82,6 +72,18 @@ The variable should be provided as a `string`.
 ## Optional
 
 This section contains a list of all variables that can be provided to the worker.
+
+### VELA_SERVER_SECRET
+
+This variable sets a shared secret for authenticating communication between workers and the server.
+
+Only necessary to provide if utilizing the [server-worker trusted symmetric worker authentication method](/docs/installation/worker/docker/#worker-server-trusted-symmetric-token).
+
+The variable should be provided as a `string`.
+
+{{% alert title="Note:" color="primary" %}}
+This variable should match [the `VELA_SECRET` variable](/docs/installation/server/reference/#vela_secret) provided to the server.
+{{% /alert %}}
 
 ### VELA_BUILD_LIMIT
 
@@ -268,6 +270,14 @@ The variable can be provided as a comma-separated `list` (i.e. `myImage1,myImage
 {{% alert title="Note:" color="primary" %}}
 Please use with caution. This setting essentially grants any defined image root access to the host machine.
 {{% /alert %}}
+
+### VELA_RUNTIME_DROP_CAPABILITIES
+
+This configuration variable is used by the [runtime component](/docs/installation/worker/reference/runtime/) for the worker.
+
+This variable leverages the [`--cap-drop` Docker run flag](https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities) to disable certain kernel capabilities given to the container by default.
+
+This variable can be provided as a comma-separated `list` (e.g. `CAP_CHOWN,CAP_DAC_OVERRIDE`). There is some validation in place to ensure accurate capabilities are provided.
 
 ### VELA_RUNTIME_VOLUMES
 
