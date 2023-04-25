@@ -22,13 +22,6 @@
 &lt;td>&lt;code>EXECUTOR_DRIVER&lt;/code>&lt;br>&lt;code>VELA_EXECUTOR_DRIVER&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>executor.log_method&lt;/code>&lt;/td>
-&lt;td>method used to publish logs back to the server&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>byte-chunks&lt;/code>&lt;/td>
-&lt;td>&lt;code>EXECUTOR_LOG_METHOD&lt;/code>&lt;br>&lt;code>VELA_EXECUTOR_LOG_METHOD&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
 &lt;td>&lt;code>executor.max_log_size&lt;/code>&lt;/td>
 &lt;td>maximum log size (in bytes)&lt;/td>
 &lt;td>&lt;code>false&lt;/code>&lt;/td>

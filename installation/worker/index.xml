@@ -337,19 +337,6 @@ The value should coordinate with the &lt;a href="https://go-vela.github.io/docs/
 &lt;li>&lt;code>local&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;/div>
-&lt;h3 id="vela_executor_log_method">VELA_EXECUTOR_LOG_METHOD&lt;/h3>
-&lt;p>This configuration variable is used by the &lt;a href="https://go-vela.github.io/docs/docs/installation/worker/reference/executor/">executor component&lt;/a> for the worker.&lt;/p>
-&lt;p>This variable sets the logging method used by the worker for uploading workload logs to the Vela &lt;a href="https://go-vela.github.io/docs/docs/installation/server/">server&lt;/a>.&lt;/p>
-&lt;p>The variable can be provided as a &lt;code>string&lt;/code>.&lt;/p>
-&lt;div class="alert alert-primary" role="alert">
-&lt;h4 class="alert-heading">Note:&lt;/h4>
-&lt;p>This variable has a default value of &lt;code>byte-chunks&lt;/code>.&lt;/p>
-&lt;p>The possible options to provide for this variable are:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>byte-chunks&lt;/code>&lt;/li>
-&lt;li>&lt;code>time-chunks&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/div>
 &lt;h3 id="vela_executor_max_log_size">VELA_EXECUTOR_MAX_LOG_SIZE&lt;/h3>
 &lt;p>This configuration variable is used by the &lt;a href="https://go-vela.github.io/docs/docs/installation/worker/reference/executor/">executor component&lt;/a> for the worker.&lt;/p>
 &lt;p>This variable sets the maximum number of bytes for logs allowed to be uploaded per step.&lt;/p>
