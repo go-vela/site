@@ -36,6 +36,10 @@
 &lt;td>count of builds with status &amp;lsquo;pending&amp;rsquo;&lt;/td>
 &lt;/tr>
 &lt;tr>
+&lt;td>&lt;code>queued_build_count&lt;/code>&lt;/td>
+&lt;td>count of builds inside the queue&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>&lt;code>killed_build_count&lt;/code>&lt;/td>
 &lt;td>count of builds with status &amp;lsquo;killed&amp;rsquo;&lt;/td>
 &lt;/tr>
