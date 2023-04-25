@@ -32,6 +32,10 @@ This example only shows a subset of all possible configuration options.
 
 You will need to store some env vars in a `Secret`, and the rest can go in a `ConfigMap`.
 
+{{% alert title="Note:" color="primary" %}}
+Determine which worker auth method to use for worker-server communication before writing the `ConfigMap`. Details of the two offerings can be found [here](/docs/installation/worker/docker/#step-2-determine-worker-authentication-and-start-worker).
+{{% /alert %}}
+
 ```yaml
 apiVersion: v1
 kind: Secret
@@ -41,6 +45,7 @@ metadata:
 data:
   # these values are base64 encoded
 
+  # this value should only be specified if using the server-worker trusted symmetric token auth method.
   VELA_SERVER_SECRET: PHNoYXJlZC1zZWNyZXQ+
   # VELA_SERVER_SECRET: <shared-secret>
 
