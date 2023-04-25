@@ -121,6 +121,7 @@ The following table includes variables only available during the **tag** event.
 | `VELA_REPO_ORG`           | `octocat`                                    | org of the repository                         |
 | `VELA_REPO_PRIVATE`       | `false`                                      | privacy setting for the repository            |
 | `VELA_REPO_TIMEOUT`       | `30`                                         | timeout setting for the repository            |
+| `VELA_REPO_TOPICS`        | `cloud,security`                             | comma-separated list of repository topics     |
 | `VELA_REPO_TRUSTED`       | `false`                                      | trusted setting for the repository            |
 | `VELA_REPO_VISIBILITY`    | `public`                                     | visibility setting for the repository         |
 
