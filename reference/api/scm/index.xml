@@ -40,6 +40,11 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;h2 id="description">Description&lt;/h2>
+&lt;p>The sync endpoint allows users to re-align their repository in Vela with its SCM mirror. This discrepancy can come in the form of a repository that has been deleted from the SCM but not in Vela.&lt;/p>
+&lt;p>Further, as of &lt;code>v0.19.0&lt;/code>, the sync endpoint can be used to adjust events that are sent to Vela from the SCM that the Vela-instance of the repo is not subscribed to. For example, if your audit page has errors like&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&amp;#34;unable to process webhook: &amp;lt;org&amp;gt;/&amp;lt;repo&amp;gt; does not have comment events enabled&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>hitting the sync endpoint should re-configure the SCM webhook to only send events that are allowed. Once aligned, you should not have to hit this endpoint again, even if the subscribed events are changed.&lt;/p>
 &lt;h2 id="sample">Sample&lt;/h2>
 &lt;div class="alert alert-warning" role="alert">
 &lt;p>This section assumes you already know how to authenticate to the API.&lt;/p>
@@ -90,6 +95,11 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;h2 id="description">Description&lt;/h2>
+&lt;p>The sync-all endpoint allows users to re-align their organization&amp;rsquo;s repositories in Vela with their SCM mirror. This discrepancy can come in the form of a repository that has been deleted from the SCM but not in Vela.&lt;/p>
+&lt;p>Further, as of &lt;code>v0.19.0&lt;/code>, the sync-all endpoint can be used to adjust events that are sent to Vela from the SCM that the Vela-instance of the repo is not subscribed to. For example, if your audit page has errors like&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&amp;#34;unable to process webhook: &amp;lt;org&amp;gt;/&amp;lt;repo&amp;gt; does not have comment events enabled&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>hitting the sync-all endpoint should re-configure the SCM webhook for all repos in the organization to only send events that are allowed. Once aligned, you should not have to hit this endpoint again, even if the subscribed events are changed.&lt;/p>
 &lt;h2 id="sample">Sample&lt;/h2>
 &lt;div class="alert alert-warning" role="alert">
 &lt;p>This section assumes you already know how to authenticate to the API.&lt;/p>
