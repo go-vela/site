@@ -674,6 +674,13 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;td>&lt;code>RUNTIME_PRIVILEGED_IMAGES&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_PRIVILEGED_IMAGES&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
+&lt;td>&lt;code>runtime.drop-capabilities&lt;/code>&lt;/td>
+&lt;td>kernel capabilities to be dropped from each running container&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>RUNTIME_DROP_CAPABILITIES&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_DROP_CAPABILITIES&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>&lt;code>runtime.volumes&lt;/code>&lt;/td>
 &lt;td>path to host volumes to mount into resources for the runtime&lt;/td>
 &lt;td>&lt;code>false&lt;/code>&lt;/td>

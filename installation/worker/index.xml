@@ -422,6 +422,10 @@ This file is only used if &lt;code>VELA_RUNTIME_PODS_TEMPLATE_NAME&lt;/code> is 
 &lt;h4 class="alert-heading">Note:&lt;/h4>
 Please use with caution. This setting essentially grants any defined image root access to the host machine.
 &lt;/div>
+&lt;h3 id="vela_runtime_drop_capabilities">VELA_RUNTIME_DROP_CAPABILITIES&lt;/h3>
+&lt;p>This configuration variable is used by the &lt;a href="https://go-vela.github.io/docs/docs/installation/worker/reference/runtime/">runtime component&lt;/a> for the worker.&lt;/p>
+&lt;p>This variable leverages the &lt;a href="https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities">&lt;code>--cap-drop&lt;/code> Docker run flag&lt;/a> to disable certain kernel capabilities given to the container by default.&lt;/p>
+&lt;p>This variable can be provided as a comma-separated &lt;code>list&lt;/code> (e.g. &lt;code>CAP_CHOWN,CAP_DAC_OVERRIDE&lt;/code>). There is some validation in place to ensure accurate capabilities are provided.&lt;/p>
 &lt;h3 id="vela_runtime_volumes">VELA_RUNTIME_VOLUMES&lt;/h3>
 &lt;p>This configuration variable is used by the &lt;a href="https://go-vela.github.io/docs/docs/installation/worker/reference/runtime/">runtime component&lt;/a> for the worker.&lt;/p>
 &lt;p>This variable sets the fully qualified system path(s) to file(s) on the host machine that will be mounted into workloads executed on that worker.&lt;/p>
