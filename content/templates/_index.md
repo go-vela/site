@@ -125,6 +125,33 @@ steps:
         image: golang:latest
 ```
 
+### Rulesets for Templates
+
+As of `v0.19.0`, users can leverage step [`rulesets`](/docs/tour/rulesets) for steps that call a template:
+
+```yaml
+version: "1"
+
+templates:
+  - name: pr_flow
+    source: pr_flow.yml
+    type: file
+
+steps:
+  - name: always run
+    image: alpine:latest
+    commands:
+      - echo "always run"
+
+  - name: pr template
+    ruleset:
+      event: pull_request
+    template:
+      name: pr_flow
+```
+
+**NOTE:** Only compile-time rules are supported for template rulesets. Runtime rules, such as `status`, will not work, as the template has already been merged into the parent pipeline at that time. Any rulesets within the template will still be valid provided the template itself passes the ruleset.
+
 ### Templating directly in `.vela.yml`
 
 As of `0.9.0` Vela allows using Starlark and Go templates directly in the `.vela.yml` 

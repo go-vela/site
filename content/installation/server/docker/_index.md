@@ -64,6 +64,10 @@ The specific value we need from the output is the line with `key` in it (i.e. `k
 
 ### Step 3: Create a Shared Secret
 
+{{% alert title="Note:" color="primary" %}}
+Skip this step if you are utilizing the [worker registration auth flow](/docs/installation/worker/docker/#worker-registration-and-auth-refresh)
+{{% /alert %}}
+
 Create a shared secret used for authenticating communication between workers and the server.
 
 You can use the [`openssl` command](https://www.openssl.org/) to generate the shared secret:
@@ -72,7 +76,17 @@ You can use the [`openssl` command](https://www.openssl.org/) to generate the sh
 $ openssl rand -hex 16
 ```
 
-### Step 4: Create an OAuth Application
+### Step 4: Create the private key
+
+Create a private key used for minting and validating user, worker auth, and build JWT tokens.
+
+You can also use the [`openssl` command](https://www.openssl.org/) to generate the key.
+
+```shell
+$ openssl rand -hex 16
+```
+
+### Step 5: Create an OAuth Application
 
 Vela requires OAuth application credentials from a source control management (SCM) provider.
 
@@ -82,7 +96,7 @@ Vela has support for many Source Control Management (SCM) providers to enable th
 
 You can follow the [SCM reference](/docs/installation/server/reference/scm/) for instructions on creating the OAuth application.
 
-### Step 5: Start the Server
+### Step 6: Start the Server
 
 Start the Vela server as a [Docker container](https://docs.docker.com/get-started/overview/#containers) that is configured via environment variables.
 
@@ -96,7 +110,7 @@ $ docker run \
   --env=VELA_QUEUE_DRIVER=redis \
   --env=VELA_QUEUE_ADDR=redis://<password>@<hostname>:<port>/<database> \
   --env=VELA_PORT=443 \
-  --env=VELA_SECRET=<shared-secret> \
+  --env=VELA_SERVER_PRIVATE_KEY=<private_key> \
   --env=VELA_SCM_CLIENT=<oauth-client-id> \
   --env=VELA_SCM_SECRET=<oauth-client-secret> \
   --env=VELA_WEBUI_ADDR=https://vela.example.com \
@@ -107,11 +121,15 @@ $ docker run \
   target/vela-server:latest
 ```
 
-{{% alert title="Note:" color="primary" %}}
+{{% alert title="Notes:" color="primary" %}}
+If using the [server-worker trusted symmetric auth method](/docs/installation/worker/docker/#worker-server-trusted-symmetric-token), be sure to add the `VELA_SECRET` env variable:
+```shell
+  --env=VELA_SECRET=<shared_secret>
+```
 For a full list of configuration options, please see the [server reference](/docs/installation/server/reference/).
 {{% /alert %}}
 
-### Step 6: Verify the Server Logs
+### Step 7: Verify the Server Logs
 
 Ensure the server started up successfully and is running as expected by viewing the logs.
 
@@ -121,7 +139,7 @@ You can use the [`docker logs` command](https://docs.docker.com/engine/reference
 $ docker logs server
 ```
 
-### Step 7: Install Workers
+### Step 8: Install Workers
 
 After the server is up and running, you need to install workers to run workloads.
 
