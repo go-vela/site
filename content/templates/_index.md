@@ -328,3 +328,91 @@ stages:
         ruleset:
           event: [ push, pull_request ]      
 ```
+
+### Nested Templates
+
+As of version `0.20.0`, Vela supports templates calling templates. This can be useful for cases where a portable and repeatable process exists within a larger template. Let's take a look at an example:
+
+#### Parent Pipeline (.vela.yml)
+
+```yaml
+version: "1"
+
+templates:
+  - name: test_and_build
+    source: github.com/octocat/hello-world/.vela/test_and_build.yml
+    format: go
+    type: github
+
+# in this example, this project uses a redis service to test, whereas perhaps other projects do not
+steps:
+  - name: redis
+    image: redis:latest
+    pull: always
+    detach: true
+
+  - name: check status
+    image: redis:latest
+    pull: always
+    commands:
+      - sleep 15
+      - redis-cli -h redis ping\
+
+  # call the portable go test and build template
+  - name: test_and_build
+    template:
+      name: test_and_build
+```
+
+#### Template
+
+```yaml
+metadata:
+  template: true
+
+templates:
+  - name: tag
+    source: github.com/octocat/hello-world/.vela/tag.yml
+    format: go
+    type: github
+
+steps:
+  - name: install
+    image: golang:latest
+    pull: always
+    environment:
+      CGO_ENABLED: '0'
+      GOOS: linux
+    commands:
+      - go get ./...
+
+  - name: test
+    image: golang:latest
+    pull: always
+    environment:
+      CGO_ENABLED: '0'
+      GOOS: linux
+    commands:
+      - go test ./...
+
+  - name: build
+    image: golang:latest
+    pull: always
+    environment:
+      CGO_ENABLED: '0'
+      GOOS: linux
+    commands:
+      - go build
+
+  # in this example, the tag template is expanded within this go test_and_build template
+  - name: tag
+    # leveraging rulesets to control template call
+    ruleset:
+      event: [ tag ]
+    template:
+      name: tag
+```
+
+In the above example, the test and build template will call the tag template on tag events. This style of template composition can help organize pipeline tasks, limit redundant code, and make editing/improving pipelines an easier endeavor.
+
+The limitation on _how many_ nested templates can be called is determined by the `VELA_MAX_TEMPLATE_DEPTH` flag set by platform administrators.
