@@ -442,6 +442,26 @@ The variable can be provided as a comma-separated `list` (i.e. `myOrg1/myRepo1,m
 By default, no repositories are allowed to be enabled. To allow any repository to be enabled, provide a single value of `*`.
 {{% /alert %}}
 
+### VELA_SCHEDULE_ALLOWLIST
+
+This variable sets a group of repositories, from the SCM, that can create a schedule for a repo on the server.
+
+The variable can be provided as a comma-separated `list` (i.e. `myOrg1/myRepo1,myOrg1/myRepo2,myOrg2/*`).
+
+{{% alert title="Note:" color="primary" %}}
+By default, no repositories are allowed to create a schedule. To allow any repository to create a schedule, provide a single value of `*`.
+{{% /alert %}}
+
+### VELA_SCHEDULE_MINIMUM_FREQUENCY
+
+This variable sets the minimum frequency allowed to be set for a schedule.
+
+The variable can be provided as a `duration` (i.e. `5s`, `10m`).
+
+{{% alert title="Note:" color="primary" %}}
+This variable has a default value of `1h`.
+{{% /alert %}}
+
 ### VELA_SCM_ADDR
 
 This configuration variable is used by the [SCM component](/docs/installation/server/reference/scm/) for the server.
