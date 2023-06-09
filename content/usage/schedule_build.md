@@ -13,7 +13,7 @@ Vela supports the ability to periodically trigger builds for a repo known as a "
 
 Outside of the Vela ecosystem, this is more commonly known as a [cron expression](https://en.wikipedia.org/wiki/Cron).
 
-Users will be able to manage schedules for a repo via the UI, [API](/docs/reference/api/schedule/) and [CLI](/docs/reference/api/schedule/).
+Users will be able to manage schedules for a repo via the UI, [API](/docs/reference/api/schedule/) and [CLI](/docs/reference/cli/schedule/).
 
 Only users with `admin` access to a repo will be able to manage schedules for that repo.
 
