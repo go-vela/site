@@ -25,6 +25,10 @@ We make best efforts to support feature parity with `cron` but we may not suppor
 
 Users will be able to customize the cadence or frequency for how often the schedule should trigger a build via the `entry` field.
 
+By default, Vela sets a frequency limit of `1h` which controls the smallest amount of time a schedule can wait before running.
+
+i.e. A schedule can't trigger a build more often than every hour but this may be different for the Vela installation you use.
+
 Here's a small list of examples to demonstrate valid values for this field:
 
 * `0 * * * *` - setup a schedule to run every hour
