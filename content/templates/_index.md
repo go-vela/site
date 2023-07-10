@@ -415,3 +415,7 @@ steps:
 In the above example, the test and build template will call the tag template on tag events. This style of template composition can help organize pipeline tasks, limit redundant code, and make editing/improving pipelines an easier endeavor.
 
 The limitation on _how many_ nested templates can be called is determined by the `VELA_MAX_TEMPLATE_DEPTH` flag set by platform administrators.
+
+{{% alert title="Tip:" color="info" %}}
+Note: when using nested templates with `render_inline: true`, all templates that are called must also have `render_inline: true` in the `metadata` block.
+{{% /alert %}}
