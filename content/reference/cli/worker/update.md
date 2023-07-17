@@ -65,6 +65,11 @@ $ vela update worker --worker.hostname MyWorker --worker.address newaddress.exam
   Address: newaddress.example.com,
   Routes: [vela],
   Active: true,
+  Status: busy,
+  LastStatusUpdateAt: 1681486769,
+  RunningBuildIDs: [123],
+  LastBuildStartedAt: 1681486769,
+  LastBuildFinishedAt: 1681486769,
   LastCheckedIn: 1681486769,
   BuildLimit: 1,
 }
