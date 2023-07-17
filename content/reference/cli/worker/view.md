@@ -62,6 +62,13 @@ address: myworker.example.com
 routes:
 - vela
 active: true
+status: busy
+laststatusupdatedat: 1681487969
+runningbuildids:
+- 123
+lastbuildstartedat: 1681487969
+lastbuildfinishedat: 1681487969
 lastcheckedin: 1681487969
 buildlimit: 1
+
 ```
