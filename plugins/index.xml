@@ -2837,11 +2837,11 @@ Context-Type options are as follow:&lt;/p>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>default_branch&lt;/code>&lt;/td>
-&lt;td>default branch of the repository&lt;/td>
+&lt;td>&lt;code>branch&lt;/code>&lt;/td>
+&lt;td>initial branch to clone from repository&lt;/td>
 &lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;strong>set by Vela&lt;/strong>&lt;/td>
-&lt;td>&lt;code>PARAMETER_DEFAULT_BRANCH&lt;/code>&lt;br>&lt;code>GIT_DEFAULT_BRANCH&lt;/code>&lt;br>&lt;code>VELA_REPO_BRANCH&lt;/code>&lt;/td>
+&lt;td>&lt;code>master&lt;/code>&lt;/td>
+&lt;td>&lt;code>PARAMETER_BRANCH&lt;/code>&lt;br>&lt;code>GIT_BRANCH&lt;/code>&lt;br>&lt;code>VELA_PULL_REQUEST_SOURCE&lt;/code>&lt;br>&lt;code>VELA_BUILD_BRANCH&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;code>log_level&lt;/code>&lt;/td>
@@ -3581,6 +3581,28 @@ This has the added benefit of enabling others in the community to consume your p
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
 &lt;p>&lt;strong>NOTE:&lt;/strong> This option will only work if your Vela worker is configured appropriately.&lt;/p>
 &lt;/blockquote>
+&lt;p>Sample of only including repository topics starting with &amp;ldquo;id&amp;rdquo; as a value in the &amp;ldquo;io.vela.build.topics&amp;rdquo; that gets applied to the built image:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-diff" data-lang="diff">&lt;span style="display:flex;">&lt;span>steps:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - name: publish_hello-world
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> image: target/vela-kaniko:latest
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> pull: always
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> parameters:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ repo_topics_filter: &amp;#34;^id&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">&lt;/span> registry: index.docker.io
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> repo: index.docker.io/octocat/hello-world
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Sample of using &lt;code>zstd&lt;/code> layer compression:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-diff" data-lang="diff">&lt;span style="display:flex;">&lt;span>steps:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - name: publish_hello-world
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> image: target/vela-kaniko:latest
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> pull: always
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> parameters:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> registry: index.docker.io
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> repo: index.docker.io/octocat/hello-world
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ compression: zstd
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ compression_level: 3
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>&lt;strong>NOTE:&lt;/strong> Be aware that while this may yield better compression and/or performance, many common container tools are not yet compatible with this type of compression. Use at your own risk.&lt;/p>
+&lt;/blockquote>
 &lt;h2 id="secrets">Secrets&lt;/h2>
 &lt;blockquote>
 &lt;p>&lt;strong>NOTE:&lt;/strong> Users should refrain from configuring sensitive information in your pipeline in plain text.&lt;/p>
@@ -3686,6 +3708,20 @@ This has the added benefit of enabling others in the community to consume your p
 &lt;td>&lt;code>PARAMETER_CACHE_REPO&lt;/code>&lt;br>&lt;code>KANIKO_CACHE_REPO&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
+&lt;td>&lt;code>compression&lt;/code>&lt;/td>
+&lt;td>compression to use (&lt;code>gzip&lt;/code> or &lt;code>zstd&lt;/code> - kaniko uses &lt;code>gzip&lt;/code> if not defined)&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>PARAMETER_COMPRESSION&lt;/code>&lt;br>&lt;code>KANIKO_COMPRESSION&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>compression_level&lt;/code>&lt;/td>
+&lt;td>compression level to use (1 - 9, inclusive)&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>PARAMETER_COMPRESSION_LEVEL&lt;/code>&lt;br>&lt;code>KANIKO_COMPRESSION_LEVEL&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>&lt;code>context&lt;/code>&lt;/td>
 &lt;td>path to context for building the image&lt;/td>
 &lt;td>&lt;code>true&lt;/code>&lt;/td>
@@ -3719,6 +3755,13 @@ This has the added benefit of enabling others in the community to consume your p
 &lt;td>&lt;code>false&lt;/code>&lt;/td>
 &lt;td>&lt;code>false&lt;/code>&lt;/td>
 &lt;td>&lt;code>PARAMETER_FORCE_BUILD_METADATA&lt;/code>&lt;br>&lt;code>KANIKO_FORCE_BUILD_METADATA&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>repo_topics_filter&lt;/code>&lt;/td>
+&lt;td>regex expression to filter out repository topics&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>empty slice&lt;/code>&lt;/td>
+&lt;td>&lt;code>PARAMETER_REPO_TOPICS_FILTER&lt;/code>&lt;br>&lt;code>KANIKO_REPO_TOPICS_FILTER&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;code>labels&lt;/code>&lt;/td>
@@ -3782,6 +3825,13 @@ This has the added benefit of enabling others in the community to consume your p
 &lt;td>&lt;code>false&lt;/code>&lt;/td>
 &lt;td>&lt;code>false&lt;/code>&lt;/td>
 &lt;td>&lt;code>PARAMETER_USE_NEW_RUN&lt;/code>&lt;br>&lt;code>KANIKO_USE_NEW_RUN&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>single_snapshot&lt;/code>&lt;/td>
+&lt;td>takes a single snapshot of the filesystem at the end of the build, so only one layer will be appended to the base image&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>PARAMETER_SINGLE_SNAPSHOT&lt;/code>&lt;br>&lt;code>KANIKO_SINGLE_SNAPSHOT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;code>snapshot_mode&lt;/code>&lt;/td>
@@ -4751,6 +4801,13 @@ This has the added benefit of enabling others in the community to consume your p
 &lt;td>&lt;code>PARAMETER_EMAIL&lt;/code>&lt;br>&lt;code>NPM_EMAIL&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
+&lt;td>&lt;code>token&lt;/code>&lt;/td>
+&lt;td>auth token for communication with npm&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>PARAMETER_TOKEN&lt;/code>&lt;br>&lt;code>TOKEN&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>&lt;code>registry&lt;/code>&lt;/td>
 &lt;td>npm instance to communicate with&lt;/td>
 &lt;td>&lt;code>false&lt;/code>&lt;/td>
@@ -4805,6 +4862,27 @@ This has the added benefit of enabling others in the community to consume your p
 &lt;td>&lt;code>true&lt;/code>&lt;/td>
 &lt;td>&lt;code>info&lt;/code>&lt;/td>
 &lt;td>&lt;code>PARAMETER_LOG_LEVEL&lt;/code>&lt;br>&lt;code>LOG_LEVEL&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>workspaces&lt;/code>&lt;/td>
+&lt;td>publish all workspaces&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>PARAMETER_WORKSPACES&lt;/code>&lt;br>&lt;code>WORKSPACES&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>workspace&lt;/code>&lt;/td>
+&lt;td>publish a specific workspace by specifying the workspace name or relative path&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>PARAMETER_WORKSPACE&lt;/code>&lt;br>&lt;code>WORKSPACE&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>access&lt;/code>&lt;/td>
+&lt;td>Tells the registry whether this package should be published as public or restricted. Only applies to scoped packages, which default to restricted&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>restricted&lt;/code>&lt;/td>
+&lt;td>&lt;code>PARAMETER_ACCESS&lt;/code>&lt;br>&lt;code>ACCESS&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

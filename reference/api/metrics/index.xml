@@ -79,6 +79,22 @@
 &lt;td>&lt;code>inactive_worker_count&lt;/code>&lt;/td>
 &lt;td>count of inactive workers&lt;/td>
 &lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>idle_worker_count&lt;/code>&lt;/td>
+&lt;td>count of workers with a status of idle (no running builds)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>available_worker_count&lt;/code>&lt;/td>
+&lt;td>count of workers with a status of available (one or more available executors)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>busy_worker_count&lt;/code>&lt;/td>
+&lt;td>count of workers with a status of busy (no available executors)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>error_worker_count&lt;/code>&lt;/td>
+&lt;td>count of workers with a status of error&lt;/td>
+&lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;h2 id="permissions">Permissions&lt;/h2>

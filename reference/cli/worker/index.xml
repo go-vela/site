@@ -194,6 +194,11 @@ For more information, you can run &lt;code>vela update worker --help&lt;/code>.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Address: newaddress.example.com,
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Routes: &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>vela&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span>,
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Active: true,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Status: busy,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> LastStatusUpdateAt: 1681486769,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> RunningBuildIDs: &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>123&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> LastBuildStartedAt: 1681486769,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> LastBuildFinishedAt: 1681486769,
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> LastCheckedIn: 1681486769,
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> BuildLimit: 1,
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
@@ -256,6 +261,12 @@ For more information, you can run &lt;code>vela view worker --help&lt;/code>.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>routes:
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>- vela
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>active: &lt;span style="color:#204a87">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>status: busy
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>laststatusupdatedat: &lt;span style="color:#0000cf;font-weight:bold">1681487969&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>runningbuildids:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>- &lt;span style="color:#0000cf;font-weight:bold">123&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>lastbuildstartedat: &lt;span style="color:#0000cf;font-weight:bold">1681487969&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>lastbuildfinishedat: &lt;span style="color:#0000cf;font-weight:bold">1681487969&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>lastcheckedin: &lt;span style="color:#0000cf;font-weight:bold">1681487969&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>buildlimit: &lt;span style="color:#0000cf;font-weight:bold">1&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>
