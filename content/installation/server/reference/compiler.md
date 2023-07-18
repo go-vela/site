@@ -42,6 +42,7 @@ The following options are used to configure the component:
 | `modification-retries` | number of times to resend failed requests to the modification endpoint          | `false`  | `5`                   | `MODIFICATION_RETRIES`<br>`VELA_MODIFICATION_RETRIES`   |
 | `modification-secret`  | authenticates communication between compiler and the modification endpoint      | `false`  | `N/A`                 | `MODIFICATION_SECRET`<br>`VELA_MODIFICATION_SECRET`     |
 | `modification-timeout` | timeout for requests sent to the modification endpoint                          | `false`  | `8s`                  | `MODIFICATION_TIMEOUT`<br>`VELA_MODIFICATION_TIMEOUT`   |
+| `max-template-depth`   | max depth for calling nested templates during compilation                       | `true`   | `3`                   | `MAX_TEMPLATE_DEPTH`<br>`VELA_MAX_TEMPLATE_DEPTH`       |
 
 _(1) this will be the latest available, tagged release of `target/vela-git` at the time the server component is released_
 
