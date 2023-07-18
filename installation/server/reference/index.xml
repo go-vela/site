@@ -85,6 +85,13 @@ The compiler is embedded directly in the server and can only be accessed through
 &lt;td>&lt;code>8s&lt;/code>&lt;/td>
 &lt;td>&lt;code>MODIFICATION_TIMEOUT&lt;/code>&lt;br>&lt;code>VELA_MODIFICATION_TIMEOUT&lt;/code>&lt;/td>
 &lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>max-template-depth&lt;/code>&lt;/td>
+&lt;td>max depth for calling nested templates during compilation&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>3&lt;/code>&lt;/td>
+&lt;td>&lt;code>MAX_TEMPLATE_DEPTH&lt;/code>&lt;br>&lt;code>VELA_MAX_TEMPLATE_DEPTH&lt;/code>&lt;/td>
+&lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;p>&lt;em>(1) this will be the latest available, tagged release of &lt;code>target/vela-git&lt;/code> at the time the server component is released&lt;/em>&lt;/p>

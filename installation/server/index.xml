@@ -361,6 +361,14 @@ This variable has a default value of &lt;code>5&lt;/code>.
 &lt;h4 class="alert-heading">Note:&lt;/h4>
 This variable has a default value of &lt;code>8s&lt;/code>.
 &lt;/div>
+&lt;h3 id="vela_max_template_depth">VELA_MAX_TEMPLATE_DEPTH&lt;/h3>
+&lt;p>This configuration variable is used by the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/compiler">compiler component&lt;/a> for the server.&lt;/p>
+&lt;p>This variable sets the maximum depth of nested templates that can be called during compilation.&lt;/p>
+&lt;p>The variable can be provided as an &lt;code>integer&lt;/code>.&lt;/p>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+This variable has a default value of &lt;code>3&lt;/code>.
+&lt;/div>
 &lt;h3 id="vela_port">VELA_PORT&lt;/h3>
 &lt;p>This variable sets the port the server API responds on for HTTP requests.&lt;/p>
 &lt;p>The variable can be provided as a &lt;code>string&lt;/code>.&lt;/p>
