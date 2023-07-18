@@ -183,6 +183,73 @@ existing entry for the build.&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;distribution&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">]&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Reference: Clean</title><link>https://go-vela.github.io/docs/reference/api/admin/clean/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/api/admin/clean/</guid><description>
+&lt;h2 id="endpoint">Endpoint&lt;/h2>
+&lt;pre tabindex="0">&lt;code>PUT /api/v1/admin/clean
+&lt;/code>&lt;/pre>&lt;h2 id="filters">Filters&lt;/h2>
+&lt;p>The following optional filters are available:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>before&lt;/code>&lt;/td>
+&lt;td>clean resources created before a certain time (UNIX Epoch, default = &amp;ldquo;now&amp;rdquo; minus repo timeout + 5 minutes)&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="permissions">Permissions&lt;/h2>
+&lt;p>COMING SOON!&lt;/p>
+&lt;h2 id="responses">Responses&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Status Code&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>200&lt;/code>&lt;/td>
+&lt;td>indicates the request has succeeded&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>400&lt;/code>&lt;/td>
+&lt;td>indicates bad request&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>401&lt;/code>&lt;/td>
+&lt;td>indicates user does not have proper permissions&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>500&lt;/code>&lt;/td>
+&lt;td>indicates internal server issue while cleaning&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="sample">Sample&lt;/h2>
+&lt;div class="alert alert-warning" role="alert">
+&lt;p>This section assumes you already know how to authenticate to the API.&lt;/p>
+&lt;p>To authenticate to the API, please review the &lt;a href="https://go-vela.github.io/docs/docs/reference/api/authentication/">authentication documentation&lt;/a>.&lt;/p>
+&lt;/div>
+&lt;h4 id="file">File&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;message&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;this resource has been set to error by platform admins during maintenance&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Note: the default value for &lt;code>message&lt;/code> is &amp;ldquo;build cleaned by platform admin&amp;rdquo;&lt;/p>
+&lt;h4 id="request">Request&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>curl &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> -X PUT &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> -H &lt;span style="color:#4e9a06">&amp;#34;Authorization: Bearer &amp;lt;token&amp;gt;&amp;#34;&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> -H &lt;span style="color:#4e9a06">&amp;#34;Content-Type: application/json&amp;#34;&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> -d &lt;span style="color:#4e9a06">&amp;#34;@data.json&amp;#34;&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;http://127.0.0.1:8080/api/v1/admin/clean&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="response">Response&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;42 builds cleaned. 42 services cleaned. 42 steps cleaned.&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Reference: Hook</title><link>https://go-vela.github.io/docs/reference/api/admin/hook/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/api/admin/hook/</guid><description>
 &lt;h2 id="endpoint">Endpoint&lt;/h2>
 &lt;pre tabindex="0">&lt;code>GET /api/v1/admin/hook

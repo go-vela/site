@@ -2822,6 +2822,73 @@ For more information, you can run &lt;code>vela chown repo --help&lt;/code>.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ vela chown repo --org github --repo octocat
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="response">Response&lt;/h4>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>repo &lt;span style="color:#4e9a06">&amp;#34;github/octocat&amp;#34;&lt;/span> changed owner
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Reference: Clean</title><link>https://go-vela.github.io/docs/reference/api/admin/clean/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/api/admin/clean/</guid><description>
+&lt;h2 id="endpoint">Endpoint&lt;/h2>
+&lt;pre tabindex="0">&lt;code>PUT /api/v1/admin/clean
+&lt;/code>&lt;/pre>&lt;h2 id="filters">Filters&lt;/h2>
+&lt;p>The following optional filters are available:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>before&lt;/code>&lt;/td>
+&lt;td>clean resources created before a certain time (UNIX Epoch, default = &amp;ldquo;now&amp;rdquo; minus repo timeout + 5 minutes)&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="permissions">Permissions&lt;/h2>
+&lt;p>COMING SOON!&lt;/p>
+&lt;h2 id="responses">Responses&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Status Code&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>200&lt;/code>&lt;/td>
+&lt;td>indicates the request has succeeded&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>400&lt;/code>&lt;/td>
+&lt;td>indicates bad request&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>401&lt;/code>&lt;/td>
+&lt;td>indicates user does not have proper permissions&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>500&lt;/code>&lt;/td>
+&lt;td>indicates internal server issue while cleaning&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="sample">Sample&lt;/h2>
+&lt;div class="alert alert-warning" role="alert">
+&lt;p>This section assumes you already know how to authenticate to the API.&lt;/p>
+&lt;p>To authenticate to the API, please review the &lt;a href="https://go-vela.github.io/docs/docs/reference/api/authentication/">authentication documentation&lt;/a>.&lt;/p>
+&lt;/div>
+&lt;h4 id="file">File&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;message&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;this resource has been set to error by platform admins during maintenance&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Note: the default value for &lt;code>message&lt;/code> is &amp;ldquo;build cleaned by platform admin&amp;rdquo;&lt;/p>
+&lt;h4 id="request">Request&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>curl &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> -X PUT &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> -H &lt;span style="color:#4e9a06">&amp;#34;Authorization: Bearer &amp;lt;token&amp;gt;&amp;#34;&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> -H &lt;span style="color:#4e9a06">&amp;#34;Content-Type: application/json&amp;#34;&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> -d &lt;span style="color:#4e9a06">&amp;#34;@data.json&amp;#34;&lt;/span> &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;http://127.0.0.1:8080/api/v1/admin/clean&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="response">Response&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;42 builds cleaned. 42 services cleaned. 42 steps cleaned.&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Reference: Compile</title><link>https://go-vela.github.io/docs/reference/api/pipeline/compile/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/api/pipeline/compile/</guid><description>
 &lt;h2 id="endpoint">Endpoint&lt;/h2>
 &lt;pre tabindex="0">&lt;code>POST /api/v1/pipelines/:org/:repo/:pipeline/compile
@@ -4759,86 +4826,4 @@ For more information, you can run &lt;code>vela get build --help&lt;/code>.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0000cf;font-weight:bold">3&lt;/span> success push main 54s
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0000cf;font-weight:bold">2&lt;/span> success push main 55s
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0000cf;font-weight:bold">1&lt;/span> pending push main ...
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Reference: Get</title><link>https://go-vela.github.io/docs/reference/cli/deployment/get/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/cli/deployment/get/</guid><description>
-&lt;h2 id="command">Command&lt;/h2>
-&lt;pre tabindex="0">&lt;code>$ vela get deployment &amp;lt;parameters...&amp;gt; &amp;lt;arguments...&amp;gt;
-&lt;/code>&lt;/pre>
-&lt;div class="alert alert-info" role="alert">
-For more information, you can run &lt;code>vela get deployment --help&lt;/code>.
-&lt;/div>
-&lt;h2 id="parameters">Parameters&lt;/h2>
-&lt;p>The following parameters are used to configure the command:&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization for the deployments&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>DEPLOYMENT_ORG&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository for the deployments&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>DEPLOYMENT_REPO&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the deployments&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>DEPLOYMENT_OUTPUT&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>page&lt;/code>&lt;/td>
-&lt;td>prints a specific page of deployments&lt;/td>
-&lt;td>&lt;code>VELA_PAGE&lt;/code>, &lt;code>DEPLOYMENT_PAGE&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>per.page&lt;/code>&lt;/td>
-&lt;td>number of deployments to print per page&lt;/td>
-&lt;td>&lt;code>VELA_PER_PAGE&lt;/code>, &lt;code>DEPLOYMENT_PER_PAGE&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;div class="alert alert-info" role="alert">
-&lt;p>This command also supports setting the following parameters via a configuration file:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>org&lt;/code>&lt;/li>
-&lt;li>&lt;code>repo&lt;/code>&lt;/li>
-&lt;li>&lt;code>output&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;p>For more information, please review the &lt;a href="https://go-vela.github.io/docs/docs/reference/cli/config/">CLI config documentation&lt;/a>.&lt;/p>
-&lt;/div>
-&lt;h2 id="sample">Sample&lt;/h2>
-&lt;div class="alert alert-warning" role="alert">
-&lt;p>This section assumes you have already installed and setup the CLI.&lt;/p>
-&lt;p>To install the CLI, please review the &lt;a href="https://go-vela.github.io/docs/docs/reference/cli/install/">installation documentation&lt;/a>.&lt;/p>
-&lt;p>To setup the CLI, please review the &lt;a href="https://go-vela.github.io/docs/docs/reference/cli/authentication/">authentication documentation&lt;/a>.&lt;/p>
-&lt;/div>
-&lt;h4 id="request">Request&lt;/h4>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>$ &lt;span style="color:#204a87">pwd&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>~/github/octocat
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ vela get deployment
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="targeted-request">Targeted Request&lt;/h4>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>$ vela get deployment --org github --repo octocat
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="response-generated-from-successful-cli-command">Response generated from successful CLI command&lt;/h4>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>ID TASK USER REF TARGET
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0000cf;font-weight:bold">2&lt;/span> deploy:vela octocat main production
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0000cf;font-weight:bold">1&lt;/span> deploy:vela octocat main production
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="examples">Examples&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>EXAMPLES:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1. Get deployments &lt;span style="color:#204a87;font-weight:bold">for&lt;/span> a repository.
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $ vela get deployment --org MyOrg --repo MyRepo
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2. Get deployments &lt;span style="color:#204a87;font-weight:bold">for&lt;/span> a repository with wide view output.
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $ vela get deployment --org MyOrg --repo MyRepo --output wide
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3. Get deployments &lt;span style="color:#204a87;font-weight:bold">for&lt;/span> a repository with yaml output.
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $ vela get deployment --org MyOrg --repo MyRepo --output yaml
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4. Get deployments &lt;span style="color:#204a87;font-weight:bold">for&lt;/span> a repository with json output.
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $ vela get deployment --org MyOrg --repo MyRepo --output json
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5. Get deployments &lt;span style="color:#204a87;font-weight:bold">for&lt;/span> a repository when config or environment variables are set.
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $ vela get deployment
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>
