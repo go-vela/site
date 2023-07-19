@@ -386,6 +386,18 @@ The variable can be provided as a `duration` (i.e. `5s`, `10m`).
 This variable has a default value of `8s`.
 {{% /alert %}}
 
+### VELA_MAX_TEMPLATE_DEPTH
+
+This configuration variable is used by the [compiler component](/docs/installation/server/reference/compiler) for the server.
+
+This variable sets the maximum depth of nested templates that can be called during compilation.
+
+The variable can be provided as an `integer`.
+
+{{% alert title="Note:" color="primary" %}}
+This variable has a default value of `3`.
+{{% /alert %}}
+
 ### VELA_PORT
 
 This variable sets the port the server API responds on for HTTP requests.
