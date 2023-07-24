@@ -117,16 +117,16 @@ steps:
 
 The following rules can be used to configure a ruleset:
 
-| Name      | Description                            |
-|-----------|----------------------------------------|
-| `branch`  | name of branch for a build.            |
-| `comment` | pull request comment body.             |
-| `event`   | name of an event for a build.          |
-| `path`    | path to workspace files for a build.   |
-| `repo`    | name of the  repo for a build.         |
-| `status`  | name of status for a build.            |
-| `tag`     | name of reference for a build.         |
-| `target`  | name of deployment target for a build. |
+| Name      | Description                                        |
+|-----------|----------------------------------------------------|
+| `branch`  | name of branch for a build.                        |
+| `comment` | pull request comment body.                         |
+| `event`   | name of an event for a build.                      |
+| `path`    | path to workspace files for a build.               |
+| `repo`    | name of the  repo for a build.                     |
+| `status`  | name of status for a build.                        |
+| `tag`     | name of reference for a build.                     |
+| `target`  | name of deployment or schedule target for a build. |
 
 ```yaml
 ---
@@ -207,7 +207,7 @@ steps:
 steps:
   - ruleset:
       # As shown below this step will execute if the build target is stage or production.
-      # This tag is only compatible with deployment events.
+      # This tag is only compatible with deployment and schedule events.
       target: [ dev/*, test/* ]
 ```
 
