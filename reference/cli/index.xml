@@ -202,6 +202,12 @@ To setup the CLI, please review the &lt;a href="https://go-vela.github.io/docs/d
 &lt;p>This section assumes you have already installed and setup the CLI.&lt;/p>
 &lt;p>To install the CLI, please review the &lt;a href="https://go-vela.github.io/docs/docs/reference/cli/install/">installation documentation&lt;/a>.&lt;/p>
 &lt;p>To setup the CLI, please review the &lt;a href="https://go-vela.github.io/docs/docs/reference/cli/authentication/">authentication documentation&lt;/a>.&lt;/p>
+&lt;/div></description></item><item><title>Reference: Schedule</title><link>https://go-vela.github.io/docs/reference/cli/schedule/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/cli/schedule/</guid><description>
+&lt;p>The below commands are available to operate on the &lt;code>schedule&lt;/code> resource.&lt;/p>
+&lt;div class="alert alert-warning" role="alert">
+&lt;p>This section assumes you have already installed and setup the CLI.&lt;/p>
+&lt;p>To install the CLI, please review the &lt;a href="https://go-vela.github.io/docs/docs/reference/cli/install/">installation documentation&lt;/a>.&lt;/p>
+&lt;p>To setup the CLI, please review the &lt;a href="https://go-vela.github.io/docs/docs/reference/cli/authentication/">authentication documentation&lt;/a>.&lt;/p>
 &lt;/div></description></item><item><title>Reference: Secret</title><link>https://go-vela.github.io/docs/reference/cli/secret/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/cli/secret/</guid><description>
 &lt;p>The below commands are available to operate on the &lt;code>secret&lt;/code> resource.&lt;/p>
 &lt;div class="alert alert-warning" role="alert">

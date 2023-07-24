@@ -61,6 +61,11 @@ For more information, you can visit the &lt;a href="https://jwt.io/introduction/
 &lt;div class="alert alert-warning" role="alert">
 &lt;p>This section assumes you already know how to authenticate to the API.&lt;/p>
 &lt;p>To authenticate to the API, please review the &lt;a href="https://go-vela.github.io/docs/docs/reference/api/authentication/">authentication documentation&lt;/a>.&lt;/p>
+&lt;/div></description></item><item><title>Reference: Schedule</title><link>https://go-vela.github.io/docs/reference/api/schedule/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/api/schedule/</guid><description>
+&lt;p>The below endpoints are available to operate on the &lt;code>schedule&lt;/code> resource.&lt;/p>
+&lt;div class="alert alert-warning" role="alert">
+&lt;p>This section assumes you already know how to authenticate to the API.&lt;/p>
+&lt;p>To authenticate to the API, please review the &lt;a href="https://go-vela.github.io/docs/docs/reference/api/authentication/">authentication documentation&lt;/a>.&lt;/p>
 &lt;/div></description></item><item><title>Reference: SCM</title><link>https://go-vela.github.io/docs/reference/api/scm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/api/scm/</guid><description>
 &lt;p>The below endpoints are available to operate on the &lt;code>scm&lt;/code> resource.&lt;/p>
 &lt;div class="alert alert-warning" role="alert">
