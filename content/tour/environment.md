@@ -34,7 +34,7 @@ environment:
 stages:
   hello:
     environment: 
-      hello_message: Hello, World!
+      HELLO_MESSAGE: Hello, World!
     steps:
       - name: Vela Platform ENV
         image: alpine
