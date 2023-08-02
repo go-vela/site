@@ -34,7 +34,7 @@ environment:
 stages:
   hello:
     environment: 
-      hello_message: Hello, World!
+      HELLO_MESSAGE: Hello, World!
     steps:
       - name: Vela Platform ENV
         image: alpine
@@ -55,7 +55,7 @@ stages:
           # This ":0:8" shorthand will cut the value of the commit
           # down to just the first 0 through 8 characters of the sha.
           - echo ${VELA_BUILD_COMMIT:0:8} 
-          - echo ${GOODBYE_MESSAGE}   
+          - echo ${goodbye_message}   
 ```
 
 <!-- section break -->
