@@ -1213,29 +1213,39 @@ If you&amp;rsquo;re coming from another CI platform you can set a starting build
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Usage: Pull Policies</title><link>https://go-vela.github.io/docs/usage/pull_policies/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/usage/pull_policies/</guid><description>
 &lt;p>Vela provides the ability to define how and when the images for secrets, steps, and services will be retrieved at runtime.&lt;/p>
 &lt;h2 id="usage">Usage&lt;/h2>
-&lt;p>The following &lt;a href="https://go-vela.github.io/docs/docs/tour">pipeline concepts&lt;/a> are being used in the pipeline below:&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://go-vela.github.io/docs/docs/tour/services/">Services&lt;/a>
-&lt;ul>
-&lt;li>&lt;a href="https://go-vela.github.io/docs/docs/tour/image/">Pull&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;a href="https://go-vela.github.io/docs/docs/tour/steps/">Steps&lt;/a>
-&lt;ul>
-&lt;li>&lt;a href="https://go-vela.github.io/docs/docs/tour/image/">Pull&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;a href="https://go-vela.github.io/docs/docs/tour/secrets/">Secrets&lt;/a>
-&lt;ul>
-&lt;li>&lt;a href="https://go-vela.github.io/docs/docs/tour/secrets/">Origin&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
+&lt;p>Below are the options for pull policies for container images&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Policy&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>always&lt;/code>&lt;/td>
+&lt;td>Always attempt to pull image from registry, even if it exists locally. Best used when leveraging a mutable tag, such as &lt;code>latest&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>not_present&lt;/code>&lt;/td>
+&lt;td>Only attempt to pull image from registry if it does not already exist locally. This is the default behavior and is recommended for immutably tagged images.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>on_start&lt;/code>&lt;/td>
+&lt;td>Pull image from registry right before the step is to be executed. Can speed up build times if the step or service does not run on every build (e.g. failed build notifying plugins), can be leveraged when dealing with password rotation mid-build (e.g. Vault plugin), or can be used to pull an image that was created and published earlier in the build.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>never&lt;/code>&lt;/td>
+&lt;td>Only use images that exist locally.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
 &lt;div class="alert alert-primary" role="alert">
 &lt;h4 class="alert-heading">Note:&lt;/h4>
-&lt;p>Please be warned that the &lt;code>pull&lt;/code> declaration is &lt;strong>not required&lt;/strong>.&lt;/p>
+&lt;p>The &lt;code>pull&lt;/code> declaration is &lt;strong>not required&lt;/strong>.&lt;/p>
 &lt;p>If you do not provide the &lt;code>pull&lt;/code> declaration, a default value of &lt;code>not_present&lt;/code> will be used.&lt;/p>
 &lt;/div>
+&lt;h2 id="example">Example&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-diff" data-lang="diff">&lt;span style="display:flex;">&lt;span>version: &amp;#34;1&amp;#34;
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>services:
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - name: redis
@@ -1272,7 +1282,32 @@ If you&amp;rsquo;re coming from another CI platform you can set a starting build
 &lt;li>only pull the &lt;code>alpine:latest&lt;/code> image if it doesn&amp;rsquo;t already exist locally&lt;/li>
 &lt;li>wait to pull the &lt;code>target/secret-vault:latest&lt;/code> image until right before starting the container&lt;/li>
 &lt;/ul>
-&lt;/div></description></item><item><title>Usage: Roles</title><link>https://go-vela.github.io/docs/usage/roles/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/usage/roles/</guid><description>
+&lt;/div>
+&lt;h2 id="references">References&lt;/h2>
+&lt;p>The following &lt;a href="https://go-vela.github.io/docs/docs/tour">pipeline concepts&lt;/a> are being used in the pipeline below:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;a href="https://go-vela.github.io/docs/docs/tour/services/">Services&lt;/a>&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://go-vela.github.io/docs/docs/tour/image/">Pull&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a href="https://go-vela.github.io/docs/docs/tour/steps/">Steps&lt;/a>&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://go-vela.github.io/docs/docs/tour/image/">Pull&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a href="https://go-vela.github.io/docs/docs/tour/secrets/">Secrets&lt;/a>&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://go-vela.github.io/docs/docs/tour/secrets/">Origin&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a href="https://go-vela.github.io/docs/docs/reference/yaml/steps/#the-pull-tag">&lt;code>Pull&lt;/code> YAML Tag&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ul></description></item><item><title>Usage: Roles</title><link>https://go-vela.github.io/docs/usage/roles/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/usage/roles/</guid><description>
 &lt;div class="alert alert-warning" role="alert">
 &lt;h4 class="alert-heading">Warning&lt;/h4>
 At this time the only Source Control Provider is GitHub. So this documentation is tailored for those users.
