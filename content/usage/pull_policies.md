@@ -15,7 +15,7 @@ Below are the options for pull policies for container images
 |---------------  |-----------------------------------------------------------------|
 | `always`        | Always attempt to pull image from registry, even if it exists locally. Best used when leveraging a mutable tag, such as `latest`            |
 | `not_present`   | Only attempt to pull image from registry if it does not already exist locally. This is the default behavior and is recommended for immutably tagged images.              |
-| `on_start`      | Pull image from registry right before the step is to be executed. Can speed up build times if the step or service does not run on every build (e.g. failed build notifying plugins), or can be leveraged when dealing with password rotation mid-build (e.g. Vault plugin). |
+| `on_start`      | Pull image from registry right before the step is to be executed. Can speed up build times if the step or service does not run on every build (e.g. failed build notifying plugins), can be leveraged when dealing with password rotation mid-build (e.g. Vault plugin), or can be used to pull an image that was created and published earlier in the build. |
 | `never`         | Only use images that exist locally.              |
 
 {{% alert title="Note:" color="primary" %}}
