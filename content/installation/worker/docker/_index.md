@@ -44,7 +44,19 @@ The `latest` tag will ensure you install the most-recent version of the Vela wor
 To see the full list of available versions, please refer to [the official registry](https://hub.docker.com/r/target/vela-worker).
 {{% /alert %}}
 
-### Step 2: Determine Worker Authentication and Start Worker
+### Step 2: Create the signing key pair
+
+Create a key pair (ed25519) used for signing queue items. Items are signed via private key and opened via public key in the server and worker, respectively. The key pair must be base64 encoded prior to being supplied to the worker (and server).
+
+To make it easier, you can use this [Go Playground program](https://go.dev/play/p/-go_7SnJbnP) to generate an encoded key pair that is ready to use.
+
+{{% alert title="Notes:" color="primary" %}}
+The public key is used to open items in the worker.
+The private key is used to sign items in the server.
+Therefore if you've followed the server installation docs then you may have already generated the public key to use in the worker.
+{{% /alert %}}
+
+### Step 3: Determine Worker Authentication and Start Worker
 
 Currently, Vela supports two methods of maintaining authentication between the worker and the server. 
 
@@ -64,6 +76,7 @@ $ docker run \
   --env=VELA_SERVER_ADDR=https://vela-server.example.com \
   --env=VELA_SERVER_SECRET=<shared-secret> \
   --env=VELA_WORKER_ADDR=https://vela-worker.example.com \
+  --env=VELA_QUEUE_SIGNING_PUBLIC_KEY=<signing-public-key> \
   --name=worker \
   --publish=80:80 \
   --publish=443:443 \
@@ -76,7 +89,7 @@ The worker must still pass its check-in with the server in order to pull builds 
 
 ##### Worker Registration and Auth Refresh
 
-This authentication method is the more secure of the two options. Rather than using a non-expiring token in the container environment, platform administrators can register workers using their credentials via the Vela CLI. In order to leverage this method, simply do NOT supply the [`VELA_SECRET`](/docs/installation/server/reference/#vela_secret) to the server and do NOT supply the [`VELA_SERVER_SECRET`](/docs/installation/worker/reference/#vela_server_secret) to the worker. 
+This authentication method is the more secure of the two options. Rather than using a non-expiring token in the container environment, platform administrators can register workers using their credentials via the Vela CLI. In order to leverage this method, simply do NOT supply the [`VELA_SECRET`](/docs/installation/server/reference/#vela_secret) to the server and do NOT supply the [`VELA_SERVER_SECRET`](/docs/installation/worker/reference/#vela_server_secret) NOR the [`VELA_QUEUE_SIGNING_PUBLIC_KEY`](/docs/installation/worker/reference/#vela_signing_public_key) to the worker. 
 
 To start, launch the worker container:
 
@@ -100,7 +113,7 @@ Once the worker has started, it will be in a paused state until a platform admin
 ```shell
 $ vela login --api.addr https://vela-server.example.com
 
-$ vela add worker --worker.hostname vela-worker --worker.address https://vela-worker.example.com
+$ vela add worker --worker.hostname vela-worker --worker.address https://vela-worker.example.com --signing-private-key <signing-private-key>
 
 worker registered successfully
 ```
@@ -114,7 +127,7 @@ IMPORTANT: When using this method, ensure that the [`VELA_WORKER_AUTH_TOKEN_DURA
 Once registered, the worker will continue refreshing its authentication token at the specified check in interval. Workers that lose their connection to the server for long enough for their existing auth
 token to expire will need to be re-registered.
 
-### Step 3: Verify the Worker Logs
+### Step 4: Verify the Worker Logs
 
 Ensure the worker started up successfully and is running as expected by inspecting the logs.
 
