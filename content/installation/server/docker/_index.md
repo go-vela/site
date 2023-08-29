@@ -121,9 +121,9 @@ $ docker run \
   --env=VELA_DATABASE_ENCRYPTION_KEY=<encryption-key> \
   --env=VELA_QUEUE_DRIVER=redis \
   --env=VELA_QUEUE_ADDR=redis://<password>@<hostname>:<port>/<database> \
+  --env=VELA_QUEUE_PRIVATE_KEY=<signing-private-key> \
   --env=VELA_PORT=443 \
   --env=VELA_SERVER_PRIVATE_KEY=<private-key> \
-  --env=VELA_QUEUE_SIGNING_PRIVATE_KEY=<signing-private-key> \
   --env=VELA_SCM_CLIENT=<oauth-client-id> \
   --env=VELA_SCM_SECRET=<oauth-client-secret> \
   --env=VELA_WEBUI_ADDR=https://vela.example.com \
