@@ -89,7 +89,7 @@ The worker must still pass its check-in with the server in order to pull builds 
 
 ##### Worker Registration and Auth Refresh
 
-This authentication method is the more secure of the two options. Rather than using a non-expiring token in the container environment, platform administrators can register workers using their credentials via the Vela CLI. In order to leverage this method, simply do NOT supply the [`VELA_SECRET`](/docs/installation/server/reference/#vela_secret) to the server and do NOT supply the [`VELA_SERVER_SECRET`](/docs/installation/worker/reference/#vela_server_secret) NOR the [`VELA_QUEUE_PUBLIC_KEY`](/docs/installation/worker/reference/#vela_signing_public_key) to the worker. 
+This authentication method is the more secure of the two options. Rather than using a non-expiring token in the container environment, platform administrators can register workers using their credentials via the Vela CLI. In order to leverage this method, simply do NOT supply the [`VELA_SECRET`](/docs/installation/server/reference/#vela_secret) to the server and do NOT supply the [`VELA_SERVER_SECRET`](/docs/installation/worker/reference/#vela_server_secret) NOR the [`VELA_QUEUE_PUBLIC_KEY`](/docs/installation/worker/reference/#vela_queue_public_key) to the worker. 
 
 To start, launch the worker container:
 

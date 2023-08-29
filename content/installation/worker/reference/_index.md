@@ -203,7 +203,7 @@ This variable sets a public key secret for opening queue items that have been si
 The variable should be provided as a base64 encoded `string`.
 
 {{% alert title="Note:" color="primary" %}}
-This variable should created as part of generating [the `VELA_QUEUE_PRIVATE_KEY` variable](/docs/installation/server/reference/#vela_signing_private_key) provided to the server. If you've followed the worker installation docs then you may have already generated the private key to use in the server.
+This variable should created as part of generating [the `VELA_QUEUE_PRIVATE_KEY` variable](/docs/installation/server/reference/#vela_queue_private_key) provided to the server. If you've followed the worker installation docs then you may have already generated the private key to use in the server.
 {{% /alert %}}
 
 ### VELA_RUNTIME_CONFIG

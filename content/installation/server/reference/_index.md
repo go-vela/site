@@ -451,7 +451,7 @@ This variable sets a private key secret for signing queue items that will be ope
 The variable should be provided as a base64 encoded `string`.
 
 {{% alert title="Note:" color="primary" %}}
-This variable should created as part of generating [the `VELA_QUEUE_PUBLIC_KEY` variable](/docs/installation/worker/reference/#vela_signing_public_key) provided to the worker. If you've followed the worker installation docs then you may have already generated the private key to use in the server.
+This variable should created as part of generating [the `VELA_QUEUE_PUBLIC_KEY` variable](/docs/installation/worker/reference/#vela_queue_public_key) provided to the worker. If you've followed the worker installation docs then you may have already generated the private key to use in the server.
 {{% /alert %}}
 
 ### VELA_REPO_ALLOWLIST
