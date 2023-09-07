@@ -3283,7 +3283,7 @@ Context-Type options are as follow:&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> fields:
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> build_status: ${VELA_BUILD_STATUS}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Below are a list of common problems and how to solve them:&lt;/p></description></item><item><title>Plugins: k6</title><link>https://go-vela.github.io/docs/plugins/registry/pipeline/k6/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/plugins/registry/pipeline/k6/</guid><description>
-&lt;h1 id="description">Description&lt;/h1>
+&lt;h2 id="description">Description&lt;/h2>
 &lt;p>This plugin uses &lt;a href="https://k6.io/">Grafana k6&lt;/a> to run performance tests in a Vela pipeline.&lt;/p>
 &lt;p>Source Code: &lt;a href="https://github.com/go-vela/vela-k6">https://github.com/go-vela/vela-k6&lt;/a>&lt;/p>
 &lt;p>Registry: &lt;a href="https://hub.docker.com/r/target/vela-k6">https://hub.docker.com/r/target/vela-k6&lt;/a>&lt;/p>
