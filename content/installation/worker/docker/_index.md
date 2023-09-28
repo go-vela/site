@@ -44,19 +44,7 @@ The `latest` tag will ensure you install the most-recent version of the Vela wor
 To see the full list of available versions, please refer to [the official registry](https://hub.docker.com/r/target/vela-worker).
 {{% /alert %}}
 
-### Step 2: Create the signing key pair
-
-Create a key pair (ed25519) used for signing queue items. Items are signed via private key and opened via public key in the server and worker, respectively. The key pair must be base64 encoded prior to being supplied to the worker (and server).
-
-To make it easier, you can use this [Go Playground program](https://go.dev/play/p/-go_7SnJbnP) to generate an encoded key pair that is ready to use.
-
-{{% alert title="Notes:" color="primary" %}}
-The public key is used to open items in the worker.
-The private key is used to sign items in the server.
-Therefore if you've followed the server installation docs then you may have already generated the public key to use in the worker.
-{{% /alert %}}
-
-### Step 3: Determine Worker Authentication and Start Worker
+### Step 2: Determine Worker Authentication and Start Worker
 
 Currently, Vela supports two methods of maintaining authentication between the worker and the server. 
 
@@ -76,7 +64,6 @@ $ docker run \
   --env=VELA_SERVER_ADDR=https://vela-server.example.com \
   --env=VELA_SERVER_SECRET=<shared-secret> \
   --env=VELA_WORKER_ADDR=https://vela-worker.example.com \
-  --env=VELA_QUEUE_PUBLIC_KEY=<signing-public-key> \
   --name=worker \
   --publish=80:80 \
   --publish=443:443 \
@@ -127,7 +114,7 @@ IMPORTANT: When using this method, ensure that the [`VELA_WORKER_AUTH_TOKEN_DURA
 Once registered, the worker will continue refreshing its authentication token at the specified check in interval. Workers that lose their connection to the server for long enough for their existing auth
 token to expire will need to be re-registered.
 
-### Step 4: Verify the Worker Logs
+### Step 3: Verify the Worker Logs
 
 Ensure the worker started up successfully and is running as expected by inspecting the logs.
 

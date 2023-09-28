@@ -90,12 +90,12 @@ $ openssl rand -hex 16
 
 Create a key pair (ed25519) used for signing queue items. Items are signed via private key and opened via public key in the server and worker, respectively. The key pair must be base64 encoded prior to being supplied to the server (and worker).
 
-To make it easier, you can use this [Go Playground program](https://go.dev/play/p/-go_7SnJbnP) to generate an encoded key pair that is ready to use.
+To make it easier, you can use this [Go Playground program](https://go.dev/play/p/-go_7SnJbnP) to generate an encoded key pair that is ready to use. For security we recommend running the program locally.
 
 {{% alert title="Notes:" color="primary" %}}
 The private key is used to sign items in the server.
 The public key is used to open items in the worker.
-Therefore if you've followed the worker installation docs then you may have already generated the private key to use in the server.
+Both keys are provided to the server.
 {{% /alert %}}
 
 ### Step 6: Create an OAuth Application
@@ -122,6 +122,7 @@ $ docker run \
   --env=VELA_QUEUE_DRIVER=redis \
   --env=VELA_QUEUE_ADDR=redis://<password>@<hostname>:<port>/<database> \
   --env=VELA_QUEUE_PRIVATE_KEY=<signing-private-key> \
+  --env=VELA_QUEUE_PUBLIC_KEY=<signing-public-key> \
   --env=VELA_PORT=443 \
   --env=VELA_SERVER_PRIVATE_KEY=<private-key> \
   --env=VELA_SCM_CLIENT=<oauth-client-id> \
