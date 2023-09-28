@@ -23,6 +23,7 @@ The following options are used to configure the component:
 | `queue.pop.timeout` | timeout for requests that pop items off the queue | `true`   | `60s`      | `QUEUE_POP_TIMEOUT`<br>`VELA_QUEUE_POP_TIMEOUT` |
 | `queue.routes`      | unique channels or topics for pushing workloads   | `true`   | `[ vela ]` | `QUEUE_ROUTES`<br>`VELA_QUEUE_ROUTES`           |
 | `queue.private-key` | private key for signing items prior to push | `false`   | `N/A` | `QUEUE_PRIVATE_KEY`<br>`VELA_QUEUE_PRIVATE_KEY` |
+| `queue.public-key` | public key for opening items after popping them off the queue | `false`   | `N/A` | `QUEUE_PUBLIC_KEY`<br>`VELA_QUEUE_PUBLIC_KEY` |
 
 {{% alert title="Note:" color="primary" %}}
 For more information on these configuration options, please see the [server reference](/docs/installation/server/reference/).
@@ -52,6 +53,7 @@ $ docker run \
 + --env=VELA_QUEUE_DRIVER=redis \
 + --env=VELA_QUEUE_ADDR=redis://<password>@<hostname>:<port>/<database> \
 + --env=VELA_QUEUE_PRIVATE_KEY=<signing-private-key> \
++ --env=VELA_QUEUE_PUBLIC_KEY=<signing-public-key> \
   --env=VELA_PORT=443 \
   --env=VELA_SECRET=<shared-secret> \
   --env=VELA_SERVER_PRIVATE_KEY=<private_key> \

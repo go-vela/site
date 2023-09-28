@@ -88,7 +88,7 @@ $ openssl rand -hex 16
 
 ### Step 5: Create the signing key pair
 
-Create a key pair (ed25519) used for signing queue items. Items are signed via private key and opened via public key in the server and worker, respectively. The key pair must be base64 encoded prior to being supplied to the server (and worker).
+Create a key pair (ed25519) used for signing queue items. Items are signed via private key and opened via public key in the server and worker, respectively. The key pair must be base64 encoded prior to being supplied to the server. The server distributes the public key to registered workers, therefore both keys must be provided to the server.
 
 To make it easier, you can use this [Go Playground program](https://go.dev/play/p/-go_7SnJbnP) to generate an encoded key pair that is ready to use. For security we recommend running the program locally.
 
