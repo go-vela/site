@@ -330,6 +330,16 @@ This variable should only be used for local development.
 This variable has a default value of `true`.
 {{% /alert %}}
 
+### VELA_LOG_FORMATTER
+
+This variable sets whether the logging formatter used for structured server logs is a standard JSON logger, or a custom Elasticsearch Common Schema (ECS) compatible JSON formatter.
+
+The variable can be provided as a `string`.
+
+{{% alert title="Note:" color="primary" %}}
+This variable has a default value of `json`. Valid values are: `json`, and `ecs`.
+{{% /alert %}}
+
 ### VELA_MAX_BUILD_LIMIT
 
 This variable sets the maximum amount of concurrent builds a repo is allowed to run.
