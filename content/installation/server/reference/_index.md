@@ -97,18 +97,6 @@ The variable should be provided as a `string`.
 
 This section contains a list of all variables that can be provided to the server.
 
-### VELA_SECRET
-
-This variable sets a shared secret with the Vela [worker](/docs/installation/worker/) for authenticating communication between workers and the server.
-
-Only necessary to provide if utilizing the [server-worker trusted symmetric worker authentication method](/docs/installation/worker/docker/#worker-server-trusted-symmetric-token).
-
-The variable should be provided as a `string`.
-
-{{% alert title="Note:" color="primary" %}}
-This variable should match [the `VELA_SERVER_SECRET` variable](/docs/installation/worker/reference/#vela_server_secret) provided to the worker.
-{{% /alert %}}
-
 ### VELA_CLONE_IMAGE
 
 This configuration variable is used by the [compiler component](/docs/installation/server/reference/compiler) for the server.
@@ -546,6 +534,18 @@ The variable can be provided as a `string`.
 
 {{% alert title="Note:" color="primary" %}}
 This variable has a default value of [the `VELA_ADDR` variable](/docs/installation/server/reference/#vela_addr) provided to the server.
+{{% /alert %}}
+
+### VELA_SECRET
+
+This variable sets a shared secret with the Vela [worker](/docs/installation/worker/) for authenticating communication between workers and the server.
+
+Only necessary to provide if utilizing the [server-worker trusted symmetric worker authentication method](/docs/installation/worker/docker/#worker-server-trusted-symmetric-token).
+
+The variable should be provided as a `string`.
+
+{{% alert title="Note:" color="primary" %}}
+This variable should match [the `VELA_SERVER_SECRET` variable](/docs/installation/worker/reference/#vela_server_secret) provided to the worker.
 {{% /alert %}}
 
 ### VELA_SECRET_VAULT
