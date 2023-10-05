@@ -21,20 +21,6 @@ The worker is made up of several components, responsible for specific tasks, nec
 
 This section contains a list of all variables that must be provided to the worker.
 
-### VELA_QUEUE_ADDR
-
-This configuration variable is used by the [queue component](/docs/installation/worker/reference/queue/) for the worker.
-
-Examples using this configuration variable are provided in the above reference documentation.
-
-This variable sets a fully qualified URL to the queue instance for pulling workloads provided by the [server](/docs/installation/server/).
-
-The variable should be provided as a `string`.
-
-{{% alert title="Note:" color="primary" %}}
-This variable should match [the `VELA_QUEUE_ADDR` variable](/docs/installation/server/reference/#vela_queue_addr) provided to the server.
-{{% /alert %}}
-
 ### VELA_QUEUE_DRIVER
 
 This configuration variable is used by the [queue component](/docs/installation/worker/reference/queue/) for the worker.

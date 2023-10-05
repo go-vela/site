@@ -45,7 +45,6 @@ $ docker run \
   --detach=true \
 + --env=VELA_EXECUTOR_DRIVER=linux \
   --env=VELA_QUEUE_DRIVER=redis \
-  --env=VELA_QUEUE_ADDR=redis://<password>@<hostname>:<port>/<database> \
   --env=VELA_SERVER_ADDR=https://vela-server.example.com \
   --env=VELA_SERVER_SECRET=<shared-secret> \
   --env=VELA_WORKER_ADDR=https://vela-worker.example.com \

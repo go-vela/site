@@ -49,10 +49,6 @@ This variable sets a fully qualified URL to the queue instance for pushing workl
 
 The variable should be provided as a `string`.
 
-{{% alert title="Note:" color="primary" %}}
-This variable should match [the `VELA_QUEUE_ADDR` variable](/docs/installation/worker/reference/#vela_queue_addr) provided to the worker.
-{{% /alert %}}
-
 ### VELA_QUEUE_DRIVER
 
 This configuration variable is used by the [queue component](/docs/installation/server/reference/queue/) for the server.
