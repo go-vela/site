@@ -442,6 +442,18 @@ The variable can be provided as a comma-separated `list` (i.e. `myRoute1,myRoute
 This variable has a default value of `vela`.
 {{% /alert %}}
 
+### VELA_QUEUE_PRIVATE_KEY
+
+This variable sets a private key secret for signing queue items that will be opened by the worker's <signing-public-key>.
+
+The variable should be provided as a base64 encoded `string`.
+
+### VELA_QUEUE_PUBLIC_KEY
+
+This variable sets a public key secret for opening queue items that have been signed by the server's <signing-private-key>.
+
+The variable should be provided as a base64 encoded `string`.
+
 ### VELA_REPO_ALLOWLIST
 
 This variable sets a group of repositories, from the SCM, that can be enabled on the server.

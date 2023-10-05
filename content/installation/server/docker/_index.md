@@ -86,7 +86,19 @@ You can also use the [`openssl` command](https://www.openssl.org/) to generate t
 $ openssl rand -hex 16
 ```
 
-### Step 5: Create an OAuth Application
+### Step 5: Create the signing key pair
+
+Create a key pair (ed25519) used for signing queue items. Items are signed via private key and opened via public key in the server and worker, respectively. The key pair must be base64 encoded prior to being supplied to the server. The server distributes the public key to registered workers, therefore both keys must be provided to the server.
+
+To make it easier, you can use this [Go Playground program](https://go.dev/play/p/-go_7SnJbnP) to generate an encoded key pair that is ready to use. For security we recommend running the program locally.
+
+{{% alert title="Notes:" color="primary" %}}
+The private key is used to sign items in the server.
+The public key is used to open items in the worker.
+Both keys are provided to the server.
+{{% /alert %}}
+
+### Step 6: Create an OAuth Application
 
 Vela requires OAuth application credentials from a source control management (SCM) provider.
 
@@ -96,7 +108,7 @@ Vela has support for many Source Control Management (SCM) providers to enable th
 
 You can follow the [SCM reference](/docs/installation/server/reference/scm/) for instructions on creating the OAuth application.
 
-### Step 6: Start the Server
+### Step 7: Start the Server
 
 Start the Vela server as a [Docker container](https://docs.docker.com/get-started/overview/#containers) that is configured via environment variables.
 
@@ -109,8 +121,10 @@ $ docker run \
   --env=VELA_DATABASE_ENCRYPTION_KEY=<encryption-key> \
   --env=VELA_QUEUE_DRIVER=redis \
   --env=VELA_QUEUE_ADDR=redis://<password>@<hostname>:<port>/<database> \
+  --env=VELA_QUEUE_PRIVATE_KEY=<signing-private-key> \
+  --env=VELA_QUEUE_PUBLIC_KEY=<signing-public-key> \
   --env=VELA_PORT=443 \
-  --env=VELA_SERVER_PRIVATE_KEY=<private_key> \
+  --env=VELA_SERVER_PRIVATE_KEY=<private-key> \
   --env=VELA_SCM_CLIENT=<oauth-client-id> \
   --env=VELA_SCM_SECRET=<oauth-client-secret> \
   --env=VELA_WEBUI_ADDR=https://vela.example.com \
@@ -129,7 +143,7 @@ If using the [server-worker trusted symmetric auth method](/docs/installation/wo
 For a full list of configuration options, please see the [server reference](/docs/installation/server/reference/).
 {{% /alert %}}
 
-### Step 7: Verify the Server Logs
+### Step 8: Verify the Server Logs
 
 Ensure the server started up successfully and is running as expected by viewing the logs.
 
@@ -139,7 +153,7 @@ You can use the [`docker logs` command](https://docs.docker.com/engine/reference
 $ docker logs server
 ```
 
-### Step 8: Install Workers
+### Step 9: Install Workers
 
 After the server is up and running, you need to install workers to run workloads.
 
