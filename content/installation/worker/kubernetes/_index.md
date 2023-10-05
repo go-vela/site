@@ -48,9 +48,6 @@ data:
   # this value should only be specified if using the server-worker trusted symmetric token auth method.
   VELA_SERVER_SECRET: PHNoYXJlZC1zZWNyZXQ+
   # VELA_SERVER_SECRET: <shared-secret>
-
-  VELA_QUEUE_ADDR: cmVkaXM6Ly88cGFzc3dvcmQ+QDxob3N0bmFtZT46PHBvcnQ+LzxkYXRhYmFzZT4=
-  # VELA_QUEUE_ADDR: redis://<password>@<hostname>:<port>/<database>
 ```
 
 Do not store any passwords in the `ConfigMap`. The `ConfigMap` is more convenient for everything else.

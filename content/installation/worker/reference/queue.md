@@ -17,7 +17,6 @@ The following options are used to configure the component:
 
 | Name                | Description                                       | Required | Default    | Environment Variables                           |
 | ------------------- | ------------------------------------------------- | -------- | ---------- | ----------------------------------------------- |
-| `queue.addr`        | full connection string to the queue               | `true`   | `N/A`      | `QUEUE_ADDR`<br>`VELA_QUEUE_ADDR`               |
 | `queue.cluster`     | configures the client for a queue cluster         | `false`  | `false`    | `QUEUE_CLUSTER`<br>`VELA_QUEUE_CLUSTER`         |
 | `queue.driver`      | type of client to control and operate queue       | `true`   | `N/A`      | `QUEUE_DRIVER`<br>`VELA_QUEUE_DRIVER`           |
 | `queue.pop.timeout` | timeout for requests that pop items off the queue | `true`   | `60s`      | `QUEUE_POP_TIMEOUT`<br>`VELA_QUEUE_POP_TIMEOUT` |
@@ -47,7 +46,6 @@ The below configuration displays an example of starting the Vela worker that wil
 $ docker run \
   --detach=true \
 + --env=VELA_QUEUE_DRIVER=redis \
-+ --env=VELA_QUEUE_ADDR=redis://<password>@<hostname>:<port>/<database> \
   --env=VELA_SERVER_ADDR=https://vela-server.example.com \
   --env=VELA_SERVER_SECRET=<shared-secret> \
   --env=VELA_WORKER_ADDR=https://vela-worker.example.com \
