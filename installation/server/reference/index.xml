@@ -387,6 +387,20 @@ This Sqlite configuration is enabled by default and is not necessary to provide 
 &lt;td>&lt;code>[ vela ]&lt;/code>&lt;/td>
 &lt;td>&lt;code>QUEUE_ROUTES&lt;/code>&lt;br>&lt;code>VELA_QUEUE_ROUTES&lt;/code>&lt;/td>
 &lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>queue.private-key&lt;/code>&lt;/td>
+&lt;td>private key for signing items prior to push&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>QUEUE_PRIVATE_KEY&lt;/code>&lt;br>&lt;code>VELA_QUEUE_PRIVATE_KEY&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>queue.public-key&lt;/code>&lt;/td>
+&lt;td>public key for opening items after popping them off the queue&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>QUEUE_PUBLIC_KEY&lt;/code>&lt;br>&lt;code>VELA_QUEUE_PUBLIC_KEY&lt;/code>&lt;/td>
+&lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;div class="alert alert-primary" role="alert">
@@ -423,6 +437,8 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_DATABASE_ENCRYPTION_KEY=&amp;lt;encryption-key&amp;gt; \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_QUEUE_DRIVER=redis \
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_QUEUE_ADDR=redis://&amp;lt;password&amp;gt;@&amp;lt;hostname&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;database&amp;gt; \
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_QUEUE_PRIVATE_KEY=&amp;lt;signing-private-key&amp;gt; \
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_QUEUE_PUBLIC_KEY=&amp;lt;signing-public-key&amp;gt; \
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">&lt;/span> --env=VELA_PORT=443 \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SECRET=&amp;lt;shared-secret&amp;gt; \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SERVER_PRIVATE_KEY=&amp;lt;private_key&amp;gt; \

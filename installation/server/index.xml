@@ -45,12 +45,21 @@ Skip this step if you are utilizing the &lt;a href="https://go-vela.github.io/do
 &lt;p>Create a private key used for minting and validating user, worker auth, and build JWT tokens.&lt;/p>
 &lt;p>You can also use the &lt;a href="https://www.openssl.org/">&lt;code>openssl&lt;/code> command&lt;/a> to generate the key.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>$ openssl rand -hex &lt;span style="color:#0000cf;font-weight:bold">16&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="step-5-create-an-oauth-application">Step 5: Create an OAuth Application&lt;/h3>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="step-5-create-the-signing-key-pair">Step 5: Create the signing key pair&lt;/h3>
+&lt;p>Create a key pair (ed25519) used for signing queue items. Items are signed via private key and opened via public key in the server and worker, respectively. The key pair must be base64 encoded prior to being supplied to the server. The server distributes the public key to registered workers, therefore both keys must be provided to the server.&lt;/p>
+&lt;p>To make it easier, you can use this &lt;a href="https://go.dev/play/p/-go_7SnJbnP">Go Playground program&lt;/a> to generate an encoded key pair that is ready to use. For security we recommend running the program locally.&lt;/p>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Notes:&lt;/h4>
+The private key is used to sign items in the server.
+The public key is used to open items in the worker.
+Both keys are provided to the server.
+&lt;/div>
+&lt;h3 id="step-6-create-an-oauth-application">Step 6: Create an OAuth Application&lt;/h3>
 &lt;p>Vela requires OAuth application credentials from a source control management (SCM) provider.&lt;/p>
 &lt;p>These credentials are used to authenticate and authorize actions preformed within the platform.&lt;/p>
 &lt;p>Vela has support for many Source Control Management (SCM) providers to enable the preferences of you and your team.&lt;/p>
 &lt;p>You can follow the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/scm/">SCM reference&lt;/a> for instructions on creating the OAuth application.&lt;/p>
-&lt;h3 id="step-6-start-the-server">Step 6: Start the Server&lt;/h3>
+&lt;h3 id="step-7-start-the-server">Step 7: Start the Server&lt;/h3>
 &lt;p>Start the Vela server as a &lt;a href="https://docs.docker.com/get-started/overview/#containers">Docker container&lt;/a> that is configured via environment variables.&lt;/p>
 &lt;p>You can use the &lt;a href="https://docs.docker.com/engine/reference/commandline/run/">&lt;code>docker run&lt;/code> command&lt;/a> to start the server:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>$ docker run &lt;span style="color:#4e9a06">\
@@ -59,8 +68,10 @@ Skip this step if you are utilizing the &lt;a href="https://go-vela.github.io/do
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --env&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">VELA_DATABASE_ENCRYPTION_KEY&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&amp;lt;encryption-key&amp;gt; &lt;span style="color:#4e9a06">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --env&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">VELA_QUEUE_DRIVER&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>redis &lt;span style="color:#4e9a06">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --env&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">VELA_QUEUE_ADDR&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>redis://&amp;lt;password&amp;gt;@&amp;lt;hostname&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;database&amp;gt; &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --env&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">VELA_QUEUE_PRIVATE_KEY&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&amp;lt;signing-private-key&amp;gt; &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --env&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">VELA_QUEUE_PUBLIC_KEY&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&amp;lt;signing-public-key&amp;gt; &lt;span style="color:#4e9a06">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --env&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">VELA_PORT&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">443&lt;/span> &lt;span style="color:#4e9a06">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --env&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">VELA_SERVER_PRIVATE_KEY&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&amp;lt;private_key&amp;gt; &lt;span style="color:#4e9a06">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --env&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">VELA_SERVER_PRIVATE_KEY&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&amp;lt;private-key&amp;gt; &lt;span style="color:#4e9a06">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --env&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">VELA_SCM_CLIENT&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&amp;lt;oauth-client-id&amp;gt; &lt;span style="color:#4e9a06">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --env&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">VELA_SCM_SECRET&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&amp;lt;oauth-client-secret&amp;gt; &lt;span style="color:#4e9a06">\
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&lt;/span> --env&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">VELA_WEBUI_ADDR&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>https://vela.example.com &lt;span style="color:#4e9a06">\
@@ -76,11 +87,11 @@ Skip this step if you are utilizing the &lt;a href="https://go-vela.github.io/do
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span> --env&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">VELA_SECRET&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&amp;lt;shared_secret&amp;gt;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>For a full list of configuration options, please see the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/">server reference&lt;/a>.&lt;/p>
 &lt;/div>
-&lt;h3 id="step-7-verify-the-server-logs">Step 7: Verify the Server Logs&lt;/h3>
+&lt;h3 id="step-8-verify-the-server-logs">Step 8: Verify the Server Logs&lt;/h3>
 &lt;p>Ensure the server started up successfully and is running as expected by viewing the logs.&lt;/p>
 &lt;p>You can use the &lt;a href="https://docs.docker.com/engine/reference/commandline/logs/">&lt;code>docker logs&lt;/code> command&lt;/a> to inspect the logs:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>$ docker logs server
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="step-8-install-workers">Step 8: Install Workers&lt;/h3>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="step-9-install-workers">Step 9: Install Workers&lt;/h3>
 &lt;p>After the server is up and running, you need to install workers to run workloads.&lt;/p>
 &lt;p>Please refer to &lt;a href="https://go-vela.github.io/docs/docs/installation/worker/">the worker installation docs&lt;/a> for more information.&lt;/p></description></item><item><title>Installation: Kubernetes</title><link>https://go-vela.github.io/docs/installation/server/kubernetes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/server/kubernetes/</guid><description>
 &lt;h2 id="prerequisites">Prerequisites&lt;/h2>
@@ -399,6 +410,12 @@ This variable has a default value of &lt;code>60s&lt;/code>.
 &lt;h4 class="alert-heading">Note:&lt;/h4>
 This variable has a default value of &lt;code>vela&lt;/code>.
 &lt;/div>
+&lt;h3 id="vela_queue_private_key">VELA_QUEUE_PRIVATE_KEY&lt;/h3>
+&lt;p>This variable sets a private key secret for signing queue items that will be opened by the worker&amp;rsquo;s &lt;signing-public-key>.&lt;/p>
+&lt;p>The variable should be provided as a base64 encoded &lt;code>string&lt;/code>.&lt;/p>
+&lt;h3 id="vela_queue_public_key">VELA_QUEUE_PUBLIC_KEY&lt;/h3>
+&lt;p>This variable sets a public key secret for opening queue items that have been signed by the server&amp;rsquo;s &lt;signing-private-key>.&lt;/p>
+&lt;p>The variable should be provided as a base64 encoded &lt;code>string&lt;/code>.&lt;/p>
 &lt;h3 id="vela_repo_allowlist">VELA_REPO_ALLOWLIST&lt;/h3>
 &lt;p>This variable sets a group of repositories, from the SCM, that can be enabled on the server.&lt;/p>
 &lt;p>The variable can be provided as a comma-separated &lt;code>list&lt;/code> (i.e. &lt;code>myOrg1/myRepo1,myOrg1/myRepo2,myOrg2/*&lt;/code>).&lt;/p>
