@@ -154,10 +154,6 @@ Both keys are provided to the server.
 &lt;p>Examples using this configuration variable are provided in the above reference documentation.&lt;/p>
 &lt;p>This variable sets a fully qualified URL to the queue instance for pushing workloads that will be run by a &lt;a href="https://go-vela.github.io/docs/docs/installation/worker/">worker&lt;/a>.&lt;/p>
 &lt;p>The variable should be provided as a &lt;code>string&lt;/code>.&lt;/p>
-&lt;div class="alert alert-primary" role="alert">
-&lt;h4 class="alert-heading">Note:&lt;/h4>
-This variable should match &lt;a href="https://go-vela.github.io/docs/docs/installation/worker/reference/#vela_queue_addr">the &lt;code>VELA_QUEUE_ADDR&lt;/code> variable&lt;/a> provided to the worker.
-&lt;/div>
 &lt;h3 id="vela_queue_driver">VELA_QUEUE_DRIVER&lt;/h3>
 &lt;p>This configuration variable is used by the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/queue/">queue component&lt;/a> for the server.&lt;/p>
 &lt;p>Examples using this configuration variable are provided in the above reference documentation.&lt;/p>

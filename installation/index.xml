@@ -411,7 +411,6 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --detach=true \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_EXECUTOR_DRIVER=linux \
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">&lt;/span> --env=VELA_QUEUE_DRIVER=redis \
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_QUEUE_ADDR=redis://&amp;lt;password&amp;gt;@&amp;lt;hostname&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;database&amp;gt; \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SERVER_ADDR=https://vela-server.example.com \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SERVER_SECRET=&amp;lt;shared-secret&amp;gt; \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_WORKER_ADDR=https://vela-worker.example.com \
@@ -561,13 +560,6 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>queue.addr&lt;/code>&lt;/td>
-&lt;td>full connection string to the queue&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>QUEUE_ADDR&lt;/code>&lt;br>&lt;code>VELA_QUEUE_ADDR&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
 &lt;td>&lt;code>queue.cluster&lt;/code>&lt;/td>
 &lt;td>configures the client for a queue cluster&lt;/td>
 &lt;td>&lt;code>false&lt;/code>&lt;/td>
@@ -628,7 +620,6 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-diff" data-lang="diff">&lt;span style="display:flex;">&lt;span>$ docker run \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --detach=true \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_QUEUE_DRIVER=redis \
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_QUEUE_ADDR=redis://&amp;lt;password&amp;gt;@&amp;lt;hostname&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;database&amp;gt; \
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">&lt;/span> --env=VELA_SERVER_ADDR=https://vela-server.example.com \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SERVER_SECRET=&amp;lt;shared-secret&amp;gt; \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_WORKER_ADDR=https://vela-worker.example.com \
@@ -748,7 +739,6 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-diff" data-lang="diff">&lt;span style="display:flex;">&lt;span>$ docker run \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --detach=true \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_QUEUE_DRIVER=redis \
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_QUEUE_ADDR=redis://&amp;lt;password&amp;gt;@&amp;lt;hostname&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;database&amp;gt; \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_RUNTIME_DRIVER=docker \
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">&lt;/span> --env=VELA_SERVER_ADDR=https://vela-server.example.com \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SERVER_SECRET=&amp;lt;shared-secret&amp;gt; \
@@ -773,7 +763,6 @@ This Docker configuration is enabled by default and is not necessary to provide 
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-diff" data-lang="diff">&lt;span style="display:flex;">&lt;span>$ docker run \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --detach=true \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_QUEUE_DRIVER=redis \
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_QUEUE_ADDR=redis://&amp;lt;password&amp;gt;@&amp;lt;hostname&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;database&amp;gt; \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_RUNTIME_DRIVER=kubernetes \
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_RUNTIME_CONFIG=/root/.kube/config \
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_RUNTIME_NAMESPACE=vela \
