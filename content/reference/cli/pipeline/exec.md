@@ -155,4 +155,117 @@ sha256:6dbb9cc54074106d46d4ccb330f2a40a682d49dda5f4844962b7dce9fe44aaec
 
 ## Complex Samples
 
-There are many examples of leveraging environment files, templates (local and remote), and more in the response to `vela exec pipeline --help`.
+Below are several examples using the following Vela pipeline + template
+
+### .vela.yml
+```yaml
+version: "1"
+
+templates:
+  - name: tmpl
+    source: git.company.com/cloud/vela-templates/kaniko.yml@main
+    type: github
+  
+steps:
+  - name: testing
+    image: alpine:latest
+    commands:
+      - echo hello
+      
+  - name: file path ruleset
+    image: alpine:latest
+    ruleset:
+      matcher: regexp
+      path: [ src/* ]
+    commands:
+      - echo ran
+
+  - name: docker build
+    template:
+      name: tmpl
+      vars:
+        repo: docker.company.com/octocat/hello-world
+```
+
+### kaniko.yml Template
+```yaml
+version: "1"
+
+metadata:
+  template: true
+
+environment:
+  REPO: {{ .repo }}
+
+secrets:
+  - name: docker_username
+    key: octocat/docker_username
+    engine: native
+    type: org
+  
+  - name: docker_password
+    key: octocat/docker_password
+    engine: native
+    type: org
+
+steps:
+  - name: Build and Publish
+    image: target/vela-kaniko:latest
+    secrets: [ docker_username, docker_password ]
+    parameters:
+      registry: docker.company.com
+      repo: ${REPO}
+```
+
+### Remote Template + Local Environment Onboarding
+
+```sh
+$ DOCKER_USERNAME=octocat DOCKER_PASSWORD=abc123 VELA_BUILD_COMMIT=1a2b3c vela exec pipeline --ct <GITHUB_PAT> --cgu https://git.company.com --local-env
+```
+
+Note: `--local-env` onboards the entire bash environment. To load specific environment variables, use `--env-vars`:
+
+```sh
+$ vela exec pipeline --ct <GITHUB_PAT> --cgu https://git.company.com --env-vars DOCKER_USERNAME=octocat,DOCKER_PASSWORD=abc123,VELA_BUILD_COMMIT=1a2b3c
+```
+
+### Template Override
+
+```sh
+$ vela exec pipeline --template-file tmpl:path/to/template.yml --env-vars DOCKER_USERNAME=octocat,DOCKER_PASSWORD=abc123,VELA_BUILD_COMMIT=1a2b3c
+```
+
+### Environment File
+
+`.env`
+```
+DOCKER_USERNAME=octocat
+DOCKER_PASSWORD=abc123
+VELA_BUILD_COMMIT=1a2b3c
+```
+
+```sh
+$ vela exec pipeline --ct <GITHUB_PAT> --cgu https://git.company.com --env-file
+```
+
+`vela_exec.env`
+```
+DOCKER_USERNAME=octocat
+DOCKER_PASSWORD=abc123
+VELA_BUILD_COMMIT=1a2b3c
+```
+
+```sh
+$ vela exec pipeline --ct <GITHUB_PAT> --cgu https://git.company.com --env-file-path vela_exec.env
+```
+
+### Path Ruleset Inclusion
+
+In order to execute steps with rulesets, be sure to include all necessary flags that match the rules
+
+```sh
+$ vela exec pipeline --ct <GITHUB_PAT> --cgu https://git.company.com --env-file --file-changeset src/main.go
+```
+
+Other rules: `--branch`, `--event`, `--comment`, `--tag`, `--target`
+
