@@ -45,7 +45,7 @@ steps:
     commands:
       # sleeping can help ensure the service adequate time to start
 +      - sleep 15
-      - "mongo --host mongo --eval \"{ ping: 1 }\""
+      - /bin/mongosh --host mongo --eval 'db.runCommand("ping")'
 ```
 
 ### Detach
@@ -78,5 +78,5 @@ steps:
     commands:
       # sleeping can help ensure the service adequate time to start
 +      - sleep 15
-      - "mongo --host mongo --eval \"{ ping: 1 }\""
+      - /bin/mongosh --host mongo --eval 'db.runCommand("ping")'
 ```
