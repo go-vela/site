@@ -8,7 +8,7 @@ description: >
 ## Endpoint
 
 ```
-PATCH  /api/v1/scm/orgs/:org/sync
+GET  /api/v1/scm/orgs/:org/sync
 ```
 
 ## Parameters
