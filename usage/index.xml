@@ -369,7 +369,7 @@ Internal secrets do NOT have the &lt;code>pull_request&lt;/code> event enabled b
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> commands:
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # sleeping can help ensure the service adequate time to start
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ - sleep 15
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">&lt;/span> - &amp;#34;mongo --host mongo --eval \&amp;#34;{ ping: 1 }\&amp;#34;&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">&lt;/span> - /bin/mongosh --host mongo --eval &amp;#39;db.runCommand(&amp;#34;ping&amp;#34;)&amp;#39;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="detach">Detach&lt;/h3>
 &lt;p>If you&amp;rsquo;re looking for more granular start time for the container you can add a detach flag within stages and steps pipelines.&lt;/p>
 &lt;p>The following &lt;a href="https://go-vela.github.io/docs/docs/tour/">pipeline concepts&lt;/a> are being used in the pipeline below:&lt;/p>
@@ -399,7 +399,7 @@ Internal secrets do NOT have the &lt;code>pull_request&lt;/code> event enabled b
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> commands:
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> # sleeping can help ensure the service adequate time to start
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ - sleep 15
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">&lt;/span> - &amp;#34;mongo --host mongo --eval \&amp;#34;{ ping: 1 }\&amp;#34;&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">&lt;/span> - /bin/mongosh --host mongo --eval &amp;#39;db.runCommand(&amp;#34;ping&amp;#34;)&amp;#39;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Usage: Postgres</title><link>https://go-vela.github.io/docs/usage/examples/postgres/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/usage/examples/postgres/</guid><description>
 &lt;p>Example &lt;a href="https://yaml.org/spec/">Yaml&lt;/a> configuration for a project requiring a &lt;a href="https://www.postgresql.org/">Postgres&lt;/a> as a pipeline dependency.&lt;/p>
 &lt;h2 id="scenario">Scenario&lt;/h2>
