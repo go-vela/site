@@ -81,10 +81,12 @@ EXAMPLES:
     $ vela add deployment --org MyOrg --repo MyRepo --ref dev
   4. Add a deployment for a repository with a specific commit reference.
     $ vela add deployment --org MyOrg --repo MyRepo --ref 48afb5bdc41ad69bf22588491333f7cf71135163
-  5. Add a deployment for a repository with a specific description.
+  5. Add a deployment for a repository with a specific tag.
+    $ vela add deployment --org MyOrg --repo MyRepo --ref 'refs/tags/example.tag'
+  6. Add a deployment for a repository with a specific description.
     $ vela add deployment --org MyOrg --repo MyRepo --description 'my custom message'
-  6. Add a deployment for a repository with two parameters.
+  7. Add a deployment for a repository with two parameters.
     $ vela add deployment --org MyOrg --repo MyRepo --parameter 'key=value' --parameter 'foo=bar'
-  7. Add a deployment for a repository when config or environment variables are set.
+  8. Add a deployment for a repository when config or environment variables are set.
     $ vela add deployment
 ```
