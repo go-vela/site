@@ -2127,11 +2127,13 @@ For more information, you can run &lt;code>vela add deployment --help&lt;/code>.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $ vela add deployment --org MyOrg --repo MyRepo --ref dev
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4. Add a deployment &lt;span style="color:#204a87;font-weight:bold">for&lt;/span> a repository with a specific commit reference.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $ vela add deployment --org MyOrg --repo MyRepo --ref 48afb5bdc41ad69bf22588491333f7cf71135163
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5. Add a deployment &lt;span style="color:#204a87;font-weight:bold">for&lt;/span> a repository with a specific description.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5. Add a deployment &lt;span style="color:#204a87;font-weight:bold">for&lt;/span> a repository with a specific tag.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $ vela add deployment --org MyOrg --repo MyRepo --ref &lt;span style="color:#4e9a06">&amp;#39;refs/tags/example.tag&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6. Add a deployment &lt;span style="color:#204a87;font-weight:bold">for&lt;/span> a repository with a specific description.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $ vela add deployment --org MyOrg --repo MyRepo --description &lt;span style="color:#4e9a06">&amp;#39;my custom message&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6. Add a deployment &lt;span style="color:#204a87;font-weight:bold">for&lt;/span> a repository with two parameters.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 7. Add a deployment &lt;span style="color:#204a87;font-weight:bold">for&lt;/span> a repository with two parameters.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $ vela add deployment --org MyOrg --repo MyRepo --parameter &lt;span style="color:#4e9a06">&amp;#39;key=value&amp;#39;&lt;/span> --parameter &lt;span style="color:#4e9a06">&amp;#39;foo=bar&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 7. Add a deployment &lt;span style="color:#204a87;font-weight:bold">for&lt;/span> a repository when config or environment variables are set.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 8. Add a deployment &lt;span style="color:#204a87;font-weight:bold">for&lt;/span> a repository when config or environment variables are set.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $ vela add deployment
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Reference: Add</title><link>https://go-vela.github.io/docs/reference/cli/repo/add/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/cli/repo/add/</guid><description>
 &lt;h2 id="command">Command&lt;/h2>
