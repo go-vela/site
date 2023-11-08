@@ -48,13 +48,14 @@ secrets:
 
 ## Tags
 
-| Tag     | Required | Type   | Description                                                     |
-|---------|----------|--------|-----------------------------------------------------------------|
-| `name`  | Y        | string | Name of secret to reference in the pipeline.                    |
-| `key`   | N        | string | Path to secret to fetch from storage backend.                   |
-| `engine`| N        | string | Name of storage backend to fetch secret from.                   |
-| `type`  | N        | string | Type of secret to fetch from storage backend.                   |
-| `origin`| N        | struct | Declaration to pull secrets from non-internal secret providers. |
+| Tag      | Required | Type   | Description                                                     |
+| -------- | -------- | ------ | --------------------------------------------------------------- |
+| `name`   | Y        | string | Name of secret to reference in the pipeline.                    |
+| `key`    | N        | string | Path to secret to fetch from storage backend.                   |
+| `engine` | N        | string | Name of storage backend to fetch secret from.                   |
+| `type`   | N        | string | Type of secret to fetch from storage backend.                   |
+| `pull`   | N        | string | When to pull in secrets from storage backend.                   |
+| `origin` | N        | struct | Declaration to pull secrets from non-internal secret providers. |
 
 #### The `name:` tag
 
@@ -103,7 +104,7 @@ To know what engines are available for your Vela installation, we recommend cons
 ---
 secrets:
     # Name of storage backend to fetch secret from, "native" signifies
-    # the backend provide it the Vela database.
+    # the backend provider is the Vela database.
   - engine: native
 ```
 
@@ -118,18 +119,36 @@ secrets:
   - type: repo
 ```
 
+#### The `pull:` tag
+
+```yaml
+---
+secrets:
+    # When to pull in secrets from storage backend.
+    # By default, Vela will pull at the beginning of a build but
+    # accepts the following values: build_start, step_start
+  - pull: step_start
+```
+
 #### The `origin:` tag
 
-| Tag           | Required | Type            | Description                                                      |
-|---------------|----------|-----------------|------------------------------------------------------------------|
-| `name`        | Y        | string          | Unique identifier for the container in the pipeline.             |
-| `image`       | Y        | []string        | Docker image used to create an ephemeral container.                 |
-| `pull`        | N        | string          | Declaration to configure if and when the Docker image is pulled. |
-| `secrets`     | N        | struct          | Sensitive variables injected into the container environment.     |
-| `environment` | N        | map || []string | Variables to inject into the container environment.              |
-| `ruleset`     | N        | struct          | Conditions to limit the execution of the container.              |
-| `parameters`  | N        | map             | Extra configuration variables specific to a plugin.              |
+| Tag           | Required | Type     | Description                                                      |
+| ------------- | -------- | -------- | ---------------------------------------------------------------- |
+| `name`        | Y        | string   | Unique identifier for the container in the pipeline.             |
+| `image`       | Y        | []string | Docker image used to create an ephemeral container.              |
+| `pull`        | N        | string   | Declaration to configure if and when the Docker image is pulled. |
+| `secrets`     | N        | struct   | Sensitive variables injected into the container environment.     |
+| `environment` | N        | map      |                                                                  |
+| `ruleset`     | N        | struct   | Conditions to limit the execution of the container.              |
+| `parameters`  | N        | map      | Extra configuration variables specific to a plugin.              |
 
-{{% alert title="Tip:" color="info" %}}
-In an effort to reduce duplicate documentation, see the comparable [step tags documentation](/docs/reference/yaml/steps/#tags) to learn how tags can be set and details on behavior.
+{{% alert title="Note:" color="info" %}} The `pull:` option under `origin:`
+allows for different values than the
+[Secrets `pull:` tag](/docs/reference/yaml/secrets/#the-pull-tag). It mimics the
+[Steps version of the `pull:` tag](/docs/reference/yaml/steps/#the-pull-tag).
 {{% /alert %}}
+
+{{% alert title="Tip:" color="success" %}} In an effort to reduce duplicate
+documentation, see the comparable
+[step tags documentation](/docs/reference/yaml/steps/#tags) to learn how tags
+can be set and details on behavior. {{% /alert %}}
