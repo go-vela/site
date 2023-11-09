@@ -130,6 +130,11 @@ secrets:
   - pull: step_start
 ```
 
+{{% alert title="Important:" color="warning" %}} `step_start` or lazy loading secrets
+is not currently available for the [Kubernetes-based workers](/docs/installation/worker/kubernetes/) and does not work with secrets
+originating from plugins loaded via [`origin:` tag](/docs/reference/yaml/secrets/#the-pull-tag) (see below).
+{{% /alert %}}
+
 #### The `origin:` tag
 
 | Tag           | Required | Type     | Description                                                      |
