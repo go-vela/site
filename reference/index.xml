@@ -3326,6 +3326,7 @@ For more information, you can run &lt;code>vela exec pipeline --help&lt;/code>.
 &lt;/div>
 &lt;h2 id="parameters">Parameters&lt;/h2>
 &lt;p>The following parameters are used to configure the command:&lt;/p>
+&lt;h3 id="ruleset-parameters">Ruleset Parameters&lt;/h3>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -3361,6 +3362,114 @@ For more information, you can run &lt;code>vela exec pipeline --help&lt;/code>.
 &lt;td>&lt;code>VELA_TARGET&lt;/code>, &lt;code>PIPELINE_TARGET&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
+&lt;td>&lt;code>file-changeset&lt;/code>&lt;/td>
+&lt;td>the build file changeset for the pipeline&lt;/td>
+&lt;td>&lt;code>VELA_FILE_CHANGESET&lt;/code>, &lt;code>FILE_CHANGESET&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="repo-settings-parameters">Repo Settings Parameters&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Environment Variables&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>org&lt;/code>&lt;/td>
+&lt;td>provide the organization for the pipeline&lt;/td>
+&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>PIPELINE_ORG&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>repo&lt;/code>&lt;/td>
+&lt;td>provide the repository for the pipeline&lt;/td>
+&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>PIPELINE_REPO&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>pipeline-type&lt;/code>&lt;/td>
+&lt;td>provide the repository pipeline type&lt;/td>
+&lt;td>&lt;code>VELA_PIPELINE_TYPE&lt;/code>, &lt;code>PIPELINE_TYPE&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="template-parameters">Template Parameters&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Environment Variables&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>compiler.github.token&lt;/code>&lt;/td>
+&lt;td>PAT for accessing GitHub sourced templates&lt;/td>
+&lt;td>&lt;code>VELA_COMPILER_GITHUB_TOKEN&lt;/code>, &lt;code>COMPILER_GITHUB_TOKEN&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>compiler.github.url&lt;/code>&lt;/td>
+&lt;td>URL for accessing GitHub sourced templates&lt;/td>
+&lt;td>&lt;code>VELA_COMPILER_GITHUB_URL&lt;/code>, &lt;code>COMPILER_GITHUB_URL&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>template-file&lt;/code>&lt;/td>
+&lt;td>list of local templates in form of &lt;name>:&lt;path>&lt;/td>
+&lt;td>&lt;code>VELA_TEMPLATE_FILE&lt;/code>, &lt;code>PIPELINE_TEMPLATE_FILE&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>max-template-depth&lt;/code>&lt;/td>
+&lt;td>maximum depth for requesting nested templates&lt;/td>
+&lt;td>&lt;code>VELA_MAX_TEMPLATE_DEPTH&lt;/code>, &lt;code>MAX_TEMPLATE_DEPTH&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="environment-parameters">Environment Parameters&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Environment Variables&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>env-file&lt;/code>&lt;/td>
+&lt;td>Bool value for whether or not to source from an env file (default &lt;code>.env&lt;/code>)&lt;/td>
+&lt;td>&lt;code>VELA_ENV_FILE&lt;/code>, &lt;code>ENV_FILE&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>env-file-path&lt;/code>&lt;/td>
+&lt;td>Path to override default &lt;code>.env&lt;/code> sourcing of environment&lt;/td>
+&lt;td>&lt;code>VELA_ENV_FILE_PATH&lt;/code>, &lt;code>ENV_FILE_PATH&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>local-env&lt;/code>&lt;/td>
+&lt;td>Bool value for whether or not to onboard your local environment&lt;/td>
+&lt;td>&lt;code>ONBOARD_LOCAL_ENV&lt;/code>, &lt;code>LOCAL_ENV&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>env-vars&lt;/code>&lt;/td>
+&lt;td>list of environment variables to include in form of &lt;KEY>=&lt;VAL>&lt;/td>
+&lt;td>&lt;code>VELA_ENV_VARS&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="other-parameters">Other Parameters&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Environment Variables&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
 &lt;td>&lt;code>output&lt;/code>&lt;/td>
 &lt;td>format the output in json, spew or yaml&lt;/td>
 &lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>PIPELINE_OUTPUT&lt;/code>&lt;/td>
@@ -3385,22 +3494,15 @@ For more information, you can run &lt;code>vela exec pipeline --help&lt;/code>.
 &lt;td>provide list of local volumes to mount&lt;/td>
 &lt;td>&lt;code>VELA_VOLUMES&lt;/code>, &lt;code>PIPELINE_VOLUMES&lt;/code>&lt;/td>
 &lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>provide the organization for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>PIPELINE_ORG&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>provide the repository for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>PIPELINE_REPO&lt;/code>&lt;/td>
-&lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;h2 id="environment">Environment&lt;/h2>
+&lt;p>Unless the &lt;code>local-env&lt;/code> flag is supplied, the &lt;code>vela exec pipeline&lt;/code> command will execute without any set environment. Instead, users are encouraged to supply their own environment variables in the form of an env file (e.g. &lt;code>--env-file&lt;/code> OR &lt;code>--env-file-path custom.env&lt;/code>).&lt;/p>
+&lt;p>Many plugins, Starlark/Go templates, and other build resources depend on Vela-injected environment variables, such as &lt;code>VELA_BUILD_COMMIT&lt;/code>. These variables will have to be supplied by the user, as there is no way for the compiler to determine these values locally.&lt;/p>
 &lt;h2 id="secrets">Secrets&lt;/h2>
 &lt;p>The Vela Exec command does not have access to any secret you have stored in Vela or any other attached secret store.&lt;/p>
-&lt;p>You can set environment variables for the command by putting them before the command, ie &lt;code>MY_SECRET=foo vela exec pipeline&lt;/code>.&lt;/p>
-&lt;p>So if our pipeline is using the &lt;a href="https://go-vela.github.io/docs/plugins/registry/pipeline/kaniko/">kaniko plugin&lt;/a>, it may require the secret &lt;code>kaniko_password&lt;/code>, which we can provide with &lt;code>KANIKO_PASSWORD=mypass vela exec pipeline&lt;/code>&lt;/p>
+&lt;p>Environment variables can be set for the command by using the &lt;code>env-vars&lt;/code> flag, ie &lt;code>vela exec pipeline --env-vars MY_SECRET=foo&lt;/code>. They can also be set with the &lt;code>env-file&lt;/code> or &lt;code>local-env&lt;/code> flags.&lt;/p>
+&lt;p>For example, if a pipeline is using the &lt;a href="https://go-vela.github.io/docs/plugins/registry/pipeline/kaniko/">kaniko plugin&lt;/a>, it may require the secret &lt;code>kaniko_password&lt;/code>, which can be provided with &lt;code>vela exec pipeline --env-vars KANIKO_PASSWORD=mypass&lt;/code>.&lt;/p>
 &lt;h2 id="sample">Sample&lt;/h2>
 &lt;div class="alert alert-warning" role="alert">
 &lt;p>This section assumes you have already installed and setup the CLI.&lt;/p>
@@ -3462,7 +3564,83 @@ For more information, you can run &lt;code>vela exec pipeline --help&lt;/code>.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>step: hello Vela&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span> $ &lt;span style="color:#204a87">echo&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;hello Vela!&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>step: hello Vela&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span> hello Vela!
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Reference: Expand</title><link>https://go-vela.github.io/docs/reference/api/pipeline/expand/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/api/pipeline/expand/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="complex-samples">Complex Samples&lt;/h2>
+&lt;p>Below are several examples using the following Vela pipeline + template&lt;/p>
+&lt;h3 id="velayml">.vela.yml&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">version&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#4e9a06">&amp;#34;1&amp;#34;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">templates&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">name&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">tmpl&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">source&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">git.company.com/cloud/vela-templates/kaniko.yml@main&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">type&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">github&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">steps&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">name&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">testing&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">image&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">alpine:latest&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">commands&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#000">echo hello&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">name&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">file path ruleset&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">image&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">alpine:latest&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">ruleset&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">matcher&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">regexp&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">path&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000;font-weight:bold">[&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">src/* ]&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">commands&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#000">echo ran&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">name&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">docker build&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">template&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">name&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">tmpl&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">vars&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">repo&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">docker.company.com/octocat/hello-world&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="kanikoyml-template">kaniko.yml Template&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">version&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#4e9a06">&amp;#34;1&amp;#34;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">metadata&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">template&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">true&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">environment&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">REPO&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>{{&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">.repo }}&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">secrets&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">name&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">docker_username&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">key&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">octocat/docker_username&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">engine&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">native&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">type&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">org&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">name&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">docker_password&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">key&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">octocat/docker_password&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">engine&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">native&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">type&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">org&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">steps&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">name&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">Build and Publish&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">image&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">target/vela-kaniko:latest&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">secrets&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000;font-weight:bold">[&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">docker_username, docker_password ]&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">parameters&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">registry&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">docker.company.com&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">repo&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">${REPO}&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="remote-template--local-environment-onboarding">Remote Template + Local Environment Onboarding&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>$ &lt;span style="color:#000">DOCKER_USERNAME&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>octocat &lt;span style="color:#000">DOCKER_PASSWORD&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>abc123 &lt;span style="color:#000">VELA_BUILD_COMMIT&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>1a2b3c vela &lt;span style="color:#204a87">exec&lt;/span> pipeline --ct &amp;lt;GITHUB_PAT&amp;gt; --cgu https://git.company.com --local-env
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Note: &lt;code>--local-env&lt;/code> onboards the entire bash environment. To load specific environment variables, use &lt;code>--env-vars&lt;/code>:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>$ vela &lt;span style="color:#204a87">exec&lt;/span> pipeline --ct &amp;lt;GITHUB_PAT&amp;gt; --cgu https://git.company.com --env-vars &lt;span style="color:#000">DOCKER_USERNAME&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>octocat,DOCKER_PASSWORD&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>abc123,VELA_BUILD_COMMIT&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>1a2b3c
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="template-override">Template Override&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>$ vela &lt;span style="color:#204a87">exec&lt;/span> pipeline --template-file tmpl:path/to/template.yml --env-vars &lt;span style="color:#000">DOCKER_USERNAME&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>octocat,DOCKER_PASSWORD&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>abc123,VELA_BUILD_COMMIT&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>1a2b3c
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="environment-file">Environment File&lt;/h3>
+&lt;p>&lt;code>.env&lt;/code>&lt;/p>
+&lt;pre tabindex="0">&lt;code>DOCKER_USERNAME=octocat
+DOCKER_PASSWORD=abc123
+VELA_BUILD_COMMIT=1a2b3c
+&lt;/code>&lt;/pre>&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>$ vela &lt;span style="color:#204a87">exec&lt;/span> pipeline --ct &amp;lt;GITHUB_PAT&amp;gt; --cgu https://git.company.com --env-file
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>vela_exec.env&lt;/code>&lt;/p>
+&lt;pre tabindex="0">&lt;code>DOCKER_USERNAME=octocat
+DOCKER_PASSWORD=abc123
+VELA_BUILD_COMMIT=1a2b3c
+&lt;/code>&lt;/pre>&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>$ vela &lt;span style="color:#204a87">exec&lt;/span> pipeline --ct &amp;lt;GITHUB_PAT&amp;gt; --cgu https://git.company.com --env-file-path vela_exec.env
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="path-ruleset-inclusion">Path Ruleset Inclusion&lt;/h3>
+&lt;p>In order to execute steps with rulesets, be sure to include all necessary flags that match the rules&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>$ vela &lt;span style="color:#204a87">exec&lt;/span> pipeline --ct &amp;lt;GITHUB_PAT&amp;gt; --cgu https://git.company.com --env-file --file-changeset src/main.go
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Other rules: &lt;code>--branch&lt;/code>, &lt;code>--event&lt;/code>, &lt;code>--comment&lt;/code>, &lt;code>--tag&lt;/code>, &lt;code>--target&lt;/code>&lt;/p></description></item><item><title>Reference: Expand</title><link>https://go-vela.github.io/docs/reference/api/pipeline/expand/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/api/pipeline/expand/</guid><description>
 &lt;h2 id="endpoint">Endpoint&lt;/h2>
 &lt;pre tabindex="0">&lt;code>POST /api/v1/pipelines/:org/:repo/:pipeline/expand
 &lt;/code>&lt;/pre>&lt;h2 id="parameters">Parameters&lt;/h2>
