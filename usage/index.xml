@@ -1307,7 +1307,108 @@ If you&amp;rsquo;re coming from another CI platform you can set a starting build
 &lt;li>
 &lt;p>&lt;a href="https://go-vela.github.io/docs/docs/reference/yaml/steps/#the-pull-tag">&lt;code>Pull&lt;/code> YAML Tag&lt;/a>&lt;/p>
 &lt;/li>
-&lt;/ul></description></item><item><title>Usage: Roles</title><link>https://go-vela.github.io/docs/usage/roles/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/usage/roles/</guid><description>
+&lt;/ul></description></item><item><title>Usage: Repository Settings</title><link>https://go-vela.github.io/docs/usage/repo_settings/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/usage/repo_settings/</guid><description>
+&lt;h2 id="permissions">Permissions&lt;/h2>
+&lt;p>Before going through all the Vela repository settings, it&amp;rsquo;s important to cover Vela permissions and how they apply to various parts of the Vela application.&lt;/p>
+&lt;p>An overview of permissions can be found &lt;a href="https://go-vela.github.io/docs/docs/usage/roles/">here&lt;/a>.&lt;/p>
+&lt;h2 id="general-repository-settings">General Repository Settings&lt;/h2>
+&lt;p>Below are all settings for repositories that can be changed in the Vela UI / CLI / API.&lt;/p>
+&lt;h3 id="webhook-events">Webhook Events&lt;/h3>
+&lt;p>Vela can subscribe to any of the following webhook events:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Event&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>push&lt;/code>&lt;/td>
+&lt;td>a commit pushed to a repository branch&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>pull_request&lt;/code>&lt;/td>
+&lt;td>a pull request is opened or updated with a new commit&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>tag&lt;/code>&lt;/td>
+&lt;td>a commit tag is pushed to the repository&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>deployment&lt;/code>&lt;/td>
+&lt;td>a deployment is created for the repository&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>comment&lt;/code>&lt;/td>
+&lt;td>a comment has been made on a pull request&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Pipelines can be written to behave differently based on which event triggered the build (see &lt;a href="https://go-vela.github.io/docs/docs/tour/rulesets">rulesets&lt;/a>).&lt;/p>
+&lt;p>Updating webhook events for a Vela repository &lt;em>must&lt;/em> be done through Vela (API/CLI/UI) in order to preserve the signature integrity of the webhook. Otherwise, users will experience a &lt;a href="https://go-vela.github.io/docs/docs/faq/usage/#payload-signature-check-failed">webhook signature error&lt;/a>.&lt;/p>
+&lt;h3 id="access">Access&lt;/h3>
+&lt;p>Vela supports two options for visibility: &lt;strong>private&lt;/strong> or &lt;strong>any&lt;/strong>. This determines who can view the Vela builds.&lt;/p>
+&lt;p>By default, a newly enabled repository will inherit the visibility setting it has with the source control manager. However, if a user wishes for the visbility to differ between the source code repository and the CI repository, they can do so by changing this setting.&lt;/p>
+&lt;h3 id="build-limit">Build Limit&lt;/h3>
+&lt;p>The default and max build limit is determined by the platform administrators. These values determine how many builds can be run concurrently for any given repository. These limits exist to prevent any single repository from occupying a large amount of worker resources.&lt;/p>
+&lt;p>Builds that are triggered from a webhook event that result in exceeding the build limit will have to be re-launched by redelivering the webhook once the concurrent build total dips below the limit.&lt;/p>
+&lt;h3 id="build-timeout">Build Timeout&lt;/h3>
+&lt;p>The Build Timeout setting determines the time limit for any given build for a repository. If a build lasts longer than the set timeout, the build will &lt;a href="https://go-vela.github.io/docs/docs/faq/usage/#context-deadline-exceeded">error out&lt;/a>.&lt;/p>
+&lt;h3 id="build-counter">Build Counter&lt;/h3>
+&lt;p>This number is a tally of all builds that have ran for the repository. This number can be adjusted to be larger but &lt;em>NOT&lt;/em> smaller.&lt;/p>
+&lt;p>Occasionally, due to various compilation errors, this counter can fall behind resulting in a SQL collision error found in the audit page for new builds. To fix this, ensure the counter matches the actual build count.&lt;/p>
+&lt;h3 id="status-badge">Status Badge&lt;/h3>
+&lt;p>Check out the &lt;a href="https://go-vela.github.io/docs/docs/usage/badge/">usage documentation&lt;/a> for more details on customizing status badges for Vela repositories.&lt;/p>
+&lt;h3 id="repository-actions">Repository Actions&lt;/h3>
+&lt;p>&lt;strong>Chown&lt;/strong> — every Vela repository requires an owner. This owner is typically the user that first enabled the repository. The owner must have &lt;em>write&lt;/em> permissions for the repository at the minimum. The &amp;ldquo;Chown&amp;rdquo; button (or &lt;a href="https://go-vela.github.io/docs/docs/reference/cli/repo/chown/">command&lt;/a>) will transfer the ownership to the user making the request.&lt;/p>
+&lt;p>&lt;strong>Repair&lt;/strong> — whenever the connection between Vela and the webhook configured with the source control manager has been invalidated, the Vela repository must be repaired. This involves the deletion and re-creation of the webhook with the source repository. The build history will be preserved, but the ability to redeliver old webhooks will not.&lt;/p>
+&lt;h3 id="pipeline-type">Pipeline Type&lt;/h3>
+&lt;p>The following are the options for the formatting of the base pipeline:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Type&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>YAML&lt;/code>&lt;/td>
+&lt;td>Default pipeline syntax (&lt;a href="https://go-vela.github.io/docs/docs/reference/yaml/">Reference Documentation&lt;/a>)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>Go&lt;/code>&lt;/td>
+&lt;td>Standard YAML with Go inline functionality (&lt;a href="https://go-vela.github.io/docs/docs/templates/tutorials/go/">Reference Documentation&lt;/a>)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>Starlark&lt;/code>&lt;/td>
+&lt;td>YAML generation using Starlark (&lt;a href="https://go-vela.github.io/docs/docs/templates/tutorials/starlark/">Reference Documentation&lt;/a>)&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Note: by default, templates are treated with &lt;code>Go&lt;/code> syntax. In order to match that behavior for the base pipeline, this setting must be changed to &lt;code>Go&lt;/code>.&lt;/p>
+&lt;h2 id="pipeline-settings">Pipeline Settings&lt;/h2>
+&lt;p>Below are high-level pipeline settings that are pulled directly from the &lt;code>metadata&lt;/code> tag.&lt;/p>
+&lt;h3 id="auto-cancel">Auto Cancel&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">metadata&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">auto_cancel&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">running&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">true&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">default_branch&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">true&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Auto canceling builds is a build strategy that will prioritize the most recent status of the source code by canceling obsolete running/pending builds. More information can be found &lt;a href="https://go-vela.github.io/docs/docs/reference/yaml/metadata/#the-auto_cancel-tag">here&lt;/a>.&lt;/p>
+&lt;h3 id="render-inline">Render Inline&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">metadata&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">render_inline&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">true&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">templates&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">name&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">example&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">source&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">github.com/go-vela/templates/inline.yml&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">type&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">github&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Render Inline is a template compilation strategy that appends templates to the end of the base pipeline in the order in which they are declared. This is the only viable method of calling templates with &lt;code>stages&lt;/code> at the top level. More information can be found &lt;a href="https://go-vela.github.io/docs/docs/templates/#rendering-inline-directly-in-velayml">here&lt;/a>.&lt;/p>
+&lt;h3 id="clone">Clone&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">metadata&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">clone&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">false&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Setting the &lt;code>clone&lt;/code> tag to &lt;code>false&lt;/code> will override Vela&amp;rsquo;s default behavior of cloning the repository at the start of the build. More information can be found &lt;a href="https://go-vela.github.io/docs/docs/tour/cloning/">here&lt;/a>.&lt;/p></description></item><item><title>Usage: Roles</title><link>https://go-vela.github.io/docs/usage/roles/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/usage/roles/</guid><description>
 &lt;div class="alert alert-warning" role="alert">
 &lt;h4 class="alert-heading">Warning&lt;/h4>
 At this time the only Source Control Provider is GitHub. So this documentation is tailored for those users.
