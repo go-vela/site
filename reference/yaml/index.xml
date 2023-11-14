@@ -982,6 +982,12 @@ For more details on steps tags, see the &lt;a href="https://go-vela.github.io/do
 &lt;td>Type of secret to fetch from storage backend.&lt;/td>
 &lt;/tr>
 &lt;tr>
+&lt;td>&lt;code>pull&lt;/code>&lt;/td>
+&lt;td>N&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>When to pull in secrets from storage backend.&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>&lt;code>origin&lt;/code>&lt;/td>
 &lt;td>N&lt;/td>
 &lt;td>struct&lt;/td>
@@ -1026,7 +1032,7 @@ To know what engines are available for your Vela installation, we recommend cons
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">---&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">secrets&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic"># Name of storage backend to fetch secret from, &amp;#34;native&amp;#34; signifies&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic"># the backend provide it the Vela database.&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic"># the backend provider is the Vela database.&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">engine&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">native&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="the-type-tag">The &lt;code>type:&lt;/code> tag&lt;/h4>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">---&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
@@ -1035,7 +1041,21 @@ To know what engines are available for your Vela installation, we recommend cons
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic"># By default, Vela can pull repo but type accepts the&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic"># following values: repo, org, and shared&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">type&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">repo&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="the-origin-tag">The &lt;code>origin:&lt;/code> tag&lt;/h4>
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="the-pull-tag">The &lt;code>pull:&lt;/code> tag&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">---&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">secrets&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic"># When to pull in secrets from storage backend.&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic"># By default, Vela will pull at the beginning of a build but&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic"># accepts the following values: build_start, step_start&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">pull&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">step_start&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="alert alert-warning" role="alert">
+&lt;h4 class="alert-heading">Important:&lt;/h4>
+&lt;code>step_start&lt;/code> or lazy loading secrets
+is not currently available for the &lt;a href="https://go-vela.github.io/docs/docs/installation/worker/kubernetes/">Kubernetes-based workers&lt;/a> and does not work with secrets
+originating from plugins loaded via &lt;a href="https://go-vela.github.io/docs/docs/reference/yaml/secrets/#the-pull-tag">&lt;code>origin:&lt;/code> tag&lt;/a> (see below).
+&lt;/div>
+&lt;h4 id="the-origin-tag">The &lt;code>origin:&lt;/code> tag&lt;/h4>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -1091,6 +1111,16 @@ To know what engines are available for your Vela installation, we recommend cons
 &lt;/tbody>
 &lt;/table>
 &lt;div class="alert alert-info" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+The &lt;code>pull:&lt;/code> option under &lt;code>origin:&lt;/code>
+allows for different values than the
+&lt;a href="https://go-vela.github.io/docs/docs/reference/yaml/secrets/#the-pull-tag">Secrets &lt;code>pull:&lt;/code> tag&lt;/a>. It mimics the
+&lt;a href="https://go-vela.github.io/docs/docs/reference/yaml/steps/#the-pull-tag">Steps version of the &lt;code>pull:&lt;/code> tag&lt;/a>.
+&lt;/div>
+&lt;div class="alert alert-success" role="alert">
 &lt;h4 class="alert-heading">Tip:&lt;/h4>
-In an effort to reduce duplicate documentation, see the comparable &lt;a href="https://go-vela.github.io/docs/docs/reference/yaml/steps/#tags">step tags documentation&lt;/a> to learn how tags can be set and details on behavior.
+In an effort to reduce duplicate
+documentation, see the comparable
+&lt;a href="https://go-vela.github.io/docs/docs/reference/yaml/steps/#tags">step tags documentation&lt;/a> to learn how tags
+can be set and details on behavior.
 &lt;/div></description></item></channel></rss>
