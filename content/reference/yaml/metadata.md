@@ -19,11 +19,12 @@ metadata:
 
 ## Tags
 
-| Tag             | Required | Type | Description                                                        |
-|-----------------|----------|------|--------------------------------------------------------------------|
-| `template`      | Y        | bool | Enables compiling the pipeline as a template.                      |
-| `clone`         | N        | bool | Enables injecting the default clone process.                       |
-| `render_inline` | N        | bool | Enables rendering without explicitly calling within the pipeline.  |
+| Tag             | Required | Type        | Description                                                        |
+|-----------------|----------|-------------|--------------------------------------------------------------------|
+| `template`      | Y        | bool        | Enables compiling the pipeline as a template.                      |
+| `clone`         | N        | bool        | Enables injecting the default clone process.                       |
+| `render_inline` | N        | bool        | Enables rendering without explicitly calling within the pipeline.  |
+| `auto_cancel`   | N        | (see below) | Auto canceling settings for pipelines.                             | 
 
 ### Usage
 
@@ -72,4 +73,38 @@ metadata:
   # in the resulting pipeline without referencing it in stages
   # or steps. 
   render_inline: false
+```
+
+#### The `auto_cancel` tag
+
+| Tag              | Default  | Type  | Description                                                                                  |
+|------------------|----------|-------|----------------------------------------------------------------------------------------------|
+| `pending`        | True     | bool  | Pending builds will be auto canceled if qualifying build is triggered                        |
+| `running`        | False    | bool  | Currently running builds will be auto canceled if qualifying build is triggered              |
+| `default_branch` | False    | bool  | Pushes to the default branch will also be auto canceled if a qualifying build is triggered.  |
+
+A **qualifying build** is defined as either:
+  * a _push_ build with the same _branch_ as another running/pending _push_ build
+  * a _pull request_ build with the same _head ref_ as another running/pending _pull request_ build
+
+These builds most often happen when a user pushes a new commit to a branch and quickly push a new commit. Using the `auto_cancel` block can help free up build space and eliminate pointless builds.
+
+By default, auto canceling is disabled altogether. However, if `running` or `default_branch` are specified, `pending` has a default value of `true` unless specified otherwise.
+
+```yaml
+---
+# pending & running will auto cancel, but not pushes to the default branch.
+metadata:
+  auto_cancel:
+    running: true 
+```
+
+```yaml
+---
+# running builds will auto cancel even if they are targeting the default branch, but pending builds will not.
+metadata:
+  auto_cancel:
+    pending: false
+    default_branch: true
+    running: true
 ```
