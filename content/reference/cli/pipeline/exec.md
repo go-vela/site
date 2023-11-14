@@ -19,28 +19,66 @@ For more information, you can run `vela exec pipeline --help`.
 
 The following parameters are used to configure the command:
 
+### Ruleset Parameters
+
+| Name             | Description                                   | Environment Variables                  |
+| ---------------- | --------------------------------------------- | -------------------------------------- |
+| `branch`         | the build branch for the pipeline             | `VELA_BRANCH`, `PIPELINE_BRANCH`       |
+| `comment`        | the build comment for the pipeline            | `VELA_COMMENT`, `PIPELINE_COMMENT`     |
+| `event`          | the build event for the pipeline              | `VELA_EVENT`, `PIPELINE_EVENT`         |
+| `tag`            | the build tag for the pipeline                | `VELA_TAG`, `PIPELINE_TAG`             |
+| `target`         | the build target for the pipeline             | `VELA_TARGET`, `PIPELINE_TARGET`       |
+| `file-changeset` | the build file changeset for the pipeline     | `VELA_FILE_CHANGESET`, `FILE_CHANGESET`|
+
+### Repo Settings Parameters
+
+| Name            | Description                                   | Environment Variables                  |
+| --------------- | --------------------------------------------- | -------------------------------------- |
+| `org`           | provide the organization for the pipeline     | `VELA_ORG`, `PIPELINE_ORG`             |
+| `repo`          | provide the repository for the pipeline       | `VELA_REPO`, `PIPELINE_REPO`           |
+| `pipeline-type` | provide the repository pipeline type          | `VELA_PIPELINE_TYPE`, `PIPELINE_TYPE`  |
+
+### Template Parameters
+
+| Name                    | Description                                      | Environment Variables                                 |
+| ----------------------- | ------------------------------------------------ | ----------------------------------------------------- |
+| `compiler.github.token` | PAT for accessing GitHub sourced templates       | `VELA_COMPILER_GITHUB_TOKEN`, `COMPILER_GITHUB_TOKEN` |
+| `compiler.github.url`   | URL for accessing GitHub sourced templates       | `VELA_COMPILER_GITHUB_URL`, `COMPILER_GITHUB_URL`     |
+| `template-file`         | list of local templates in form of <name>:<path> | `VELA_TEMPLATE_FILE`, `PIPELINE_TEMPLATE_FILE`        |
+| `max-template-depth`    | maximum depth for requesting nested templates    | `VELA_MAX_TEMPLATE_DEPTH`, `MAX_TEMPLATE_DEPTH`       |
+
+### Environment Parameters
+
+| Name            | Description                                                               | Environment Variables                 |
+| --------------- | ------------------------------------------------------------------------- | ------------------------------------- |
+| `env-file`      | Bool value for whether or not to source from an env file (default `.env`) | `VELA_ENV_FILE`, `ENV_FILE`           |
+| `env-file-path` | Path to override default `.env` sourcing of environment                   | `VELA_ENV_FILE_PATH`, `ENV_FILE_PATH` |
+| `local-env`     | Bool value for whether or not to onboard your local environment           | `ONBOARD_LOCAL_ENV`, `LOCAL_ENV`      |
+| `env-vars`      | list of environment variables to include in form of <KEY>=<VAL>           | `VELA_ENV_VARS`                       |
+
+### Other Parameters
+
 | Name     | Description                                   | Environment Variables             |
 | -------- | --------------------------------------------- | --------------------------------- |
-| `branch` | the build branch for the pipeline             | `VELA_BRANCH`, `PIPELINE_BRANCH`  |
-| `comment`| the build comment for the pipeline            | `VELA_COMMENT`, `PIPELINE_COMMENT`|
-| `event`  | the build event for the pipeline              | `VELA_EVENT`, `PIPELINE_EVENT`    |
-| `tag`    | the build tag for the pipeline                | `VELA_TAG`, `PIPELINE_TAG`        |
-| `target` | the build target for the pipeline             | `VELA_TARGET`, `PIPELINE_TARGET`  |
 | `output` | format the output in json, spew or yaml       | `VELA_OUTPUT`, `PIPELINE_OUTPUT`  |
 | `file`   | name of the file for the pipeline             | `VELA_FILE`, `PIPELINE_FILE`      |
 | `path`   | path to the file for the pipeline             | `VELA_PATH`, `PIPELINE_PATH`      |
 | `local`  | enables mounting local directory to pipeline  | `VELA_LOCAL`, `PIPELINE_LOCAL`    |
 | `volume` | provide list of local volumes to mount        | `VELA_VOLUMES`, `PIPELINE_VOLUMES`|
-| `org`    | provide the organization for the pipeline     | `VELA_ORG`, `PIPELINE_ORG`        |
-| `repo`   | provide the repository for the pipeline       | `VELA_REPO`, `PIPELINE_REPO`      |
+
+## Environment
+
+Unless the `local-env` flag is supplied, the `vela exec pipeline` command will execute without any set environment. Instead, users are encouraged to supply their own environment variables in the form of an env file (e.g. `--env-file` OR `--env-file-path custom.env`). 
+
+Many plugins, Starlark/Go templates, and other build resources depend on Vela-injected environment variables, such as `VELA_BUILD_COMMIT`. These variables will have to be supplied by the user, as there is no way for the compiler to determine these values locally.
 
 ## Secrets
 
 The Vela Exec command does not have access to any secret you have stored in Vela or any other attached secret store.
 
-You can set environment variables for the command by putting them before the command, ie `MY_SECRET=foo vela exec pipeline`. 
+Environment variables can be set for the command by using the `env-vars` flag, ie `vela exec pipeline --env-vars MY_SECRET=foo`. They can also be set with the `env-file` or `local-env` flags.
 
-So if our pipeline is using the [kaniko plugin](https://go-vela.github.io/docs/plugins/registry/pipeline/kaniko/), it may require the secret `kaniko_password`, which we can provide with `KANIKO_PASSWORD=mypass vela exec pipeline`
+For example, if a pipeline is using the [kaniko plugin](https://go-vela.github.io/docs/plugins/registry/pipeline/kaniko/), it may require the secret `kaniko_password`, which can be provided with `vela exec pipeline --env-vars KANIKO_PASSWORD=mypass`.
 
 ## Sample
 
@@ -114,3 +152,120 @@ sha256:6dbb9cc54074106d46d4ccb330f2a40a682d49dda5f4844962b7dce9fe44aaec
 [step: hello Vela] $ echo "hello Vela!"
 [step: hello Vela] hello Vela!
 ```
+
+## Complex Samples
+
+Below are several examples using the following Vela pipeline + template
+
+### .vela.yml
+```yaml
+version: "1"
+
+templates:
+  - name: tmpl
+    source: git.company.com/cloud/vela-templates/kaniko.yml@main
+    type: github
+  
+steps:
+  - name: testing
+    image: alpine:latest
+    commands:
+      - echo hello
+      
+  - name: file path ruleset
+    image: alpine:latest
+    ruleset:
+      matcher: regexp
+      path: [ src/* ]
+    commands:
+      - echo ran
+
+  - name: docker build
+    template:
+      name: tmpl
+      vars:
+        repo: docker.company.com/octocat/hello-world
+```
+
+### kaniko.yml Template
+```yaml
+version: "1"
+
+metadata:
+  template: true
+
+environment:
+  REPO: {{ .repo }}
+
+secrets:
+  - name: docker_username
+    key: octocat/docker_username
+    engine: native
+    type: org
+  
+  - name: docker_password
+    key: octocat/docker_password
+    engine: native
+    type: org
+
+steps:
+  - name: Build and Publish
+    image: target/vela-kaniko:latest
+    secrets: [ docker_username, docker_password ]
+    parameters:
+      registry: docker.company.com
+      repo: ${REPO}
+```
+
+### Remote Template + Local Environment Onboarding
+
+```sh
+$ DOCKER_USERNAME=octocat DOCKER_PASSWORD=abc123 VELA_BUILD_COMMIT=1a2b3c vela exec pipeline --ct <GITHUB_PAT> --cgu https://git.company.com --local-env
+```
+
+Note: `--local-env` onboards the entire bash environment. To load specific environment variables, use `--env-vars`:
+
+```sh
+$ vela exec pipeline --ct <GITHUB_PAT> --cgu https://git.company.com --env-vars DOCKER_USERNAME=octocat,DOCKER_PASSWORD=abc123,VELA_BUILD_COMMIT=1a2b3c
+```
+
+### Template Override
+
+```sh
+$ vela exec pipeline --template-file tmpl:path/to/template.yml --env-vars DOCKER_USERNAME=octocat,DOCKER_PASSWORD=abc123,VELA_BUILD_COMMIT=1a2b3c
+```
+
+### Environment File
+
+`.env`
+```
+DOCKER_USERNAME=octocat
+DOCKER_PASSWORD=abc123
+VELA_BUILD_COMMIT=1a2b3c
+```
+
+```sh
+$ vela exec pipeline --ct <GITHUB_PAT> --cgu https://git.company.com --env-file
+```
+
+`vela_exec.env`
+```
+DOCKER_USERNAME=octocat
+DOCKER_PASSWORD=abc123
+VELA_BUILD_COMMIT=1a2b3c
+```
+
+```sh
+$ vela exec pipeline --ct <GITHUB_PAT> --cgu https://git.company.com --env-file-path vela_exec.env
+```
+
+### Path Ruleset Inclusion
+
+In order to execute steps with rulesets, be sure to include all necessary flags that match the rules
+
+```sh
+$ vela exec pipeline --ct <GITHUB_PAT> --cgu https://git.company.com --env-file --file-changeset src/main.go
+```
+
+Other rules: `--branch`, `--event`, `--comment`, `--tag`, `--target`
+
