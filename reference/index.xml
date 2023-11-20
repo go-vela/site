@@ -124,7 +124,7 @@ To learn how to write templates, see the &lt;a href="https://go-vela.github.io/d
 &lt;li>a &lt;em>push&lt;/em> build with the same &lt;em>branch&lt;/em> as another running/pending &lt;em>push&lt;/em> build&lt;/li>
 &lt;li>a &lt;em>pull request&lt;/em> build with the same &lt;em>head ref&lt;/em> as another running/pending &lt;em>pull request&lt;/em> build&lt;/li>
 &lt;/ul>
-&lt;p>These builds most often happen when a user pushes a new commit to a branch and quickly push a new commit. Using the &lt;code>auto_cancel&lt;/code> block can help free up build space and eliminate pointless builds.&lt;/p>
+&lt;p>These builds most often happen when a user pushes a commit to a branch and quickly pushes another commit, both of which kick off new builds. Using the &lt;code>auto_cancel&lt;/code> block can help free up build space and eliminate pointless builds.&lt;/p>
 &lt;p>By default, auto canceling is disabled altogether. However, if &lt;code>running&lt;/code> or &lt;code>default_branch&lt;/code> are specified, &lt;code>pending&lt;/code> has a default value of &lt;code>true&lt;/code> unless specified otherwise.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">---&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#8f5902;font-style:italic"># pending &amp;amp; running will auto cancel, but not pushes to the default branch.&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">

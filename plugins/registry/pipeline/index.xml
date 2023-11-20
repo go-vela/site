@@ -2017,8 +2017,8 @@ Users should refrain from configuring sensitive information in their pipeline in
 &lt;tr>
 &lt;td>&lt;code>branch&lt;/code>&lt;/td>
 &lt;td>branch to trigger a build on&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>master&lt;/code>&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
 &lt;td>&lt;code>PARAMETER_BRANCH&lt;/code>&lt;br>&lt;code>DOWNSTREAM_BRANCH&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -2062,6 +2062,34 @@ Users should refrain from configuring sensitive information in their pipeline in
 &lt;td>&lt;code>true&lt;/code>&lt;/td>
 &lt;td>&lt;code>N/A&lt;/code>&lt;/td>
 &lt;td>&lt;code>PARAMETER_TOKEN&lt;/code>&lt;br>&lt;code>DOWNSTREAM_TOKEN&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>report_back&lt;/code>&lt;/td>
+&lt;td>whether or not to track downstream build status&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>PARAMETER_REPORT_BACK&lt;/code>&lt;br>&lt;code>DOWNSTREAM_REPORT_BACK&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>target_status&lt;/code>&lt;/td>
+&lt;td>list of statuses to look for from downstream builds&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>[ success ]&lt;/code>&lt;/td>
+&lt;td>&lt;code>PARAMETER_TARGET_STATUS&lt;/code>&lt;br>&lt;code>DOWNSTREAM_TARGET_STATUS&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>timeout&lt;/code>&lt;/td>
+&lt;td>how long should the plugin wait for downstream builds&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>30m&lt;/code>&lt;/td>
+&lt;td>&lt;code>PARAMETER_TIMEOUT&lt;/code>&lt;br>&lt;code>DOWNSTREAM_TIMEOUT&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>continue_on_not_found&lt;/code>&lt;/td>
+&lt;td>continue triggering builds on failure to find one&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>PARAMETER_CONTINUE_ON_NOT_FOUND&lt;/code>&lt;br>&lt;code>DOWNSTREAM_CONTINUE_ON_NOT_FOUND&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
