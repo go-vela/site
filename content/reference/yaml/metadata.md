@@ -87,7 +87,7 @@ A **qualifying build** is defined as either:
   * a _push_ build with the same _branch_ as another running/pending _push_ build
   * a _pull request_ build with the same _head ref_ as another running/pending _pull request_ build
 
-These builds most often happen when a user pushes a new commit to a branch and quickly push a new commit. Using the `auto_cancel` block can help free up build space and eliminate pointless builds.
+These builds most often happen when a user pushes a commit to a branch and quickly pushes another commit, both of which kick off new builds. Using the `auto_cancel` block can help free up build space and eliminate pointless builds.
 
 By default, auto canceling is disabled altogether. However, if `running` or `default_branch` are specified, `pending` has a default value of `true` unless specified otherwise.
 
