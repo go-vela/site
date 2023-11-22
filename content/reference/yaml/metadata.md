@@ -86,6 +86,7 @@ metadata:
 A **qualifying build** is defined as either:
   * a _push_ build with the same _branch_ as another running/pending _push_ build
   * a _pull request_ build with the same _head ref_ as another running/pending _pull request_ build
+      * Note: the initial pr build (_pull_request:opened_ event) will not be canceled; only subsequent (_pull_request:synchronized_ event) builds will be canceled.
 
 These builds most often happen when a user pushes a commit to a branch and quickly pushes another commit, both of which kick off new builds. Using the `auto_cancel` block can help free up build space and eliminate pointless builds.
 
