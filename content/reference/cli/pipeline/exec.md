@@ -163,7 +163,7 @@ version: "1"
 
 templates:
   - name: tmpl
-    source: git.company.com/cloud/vela-templates/kaniko.yml@main
+    source: git.example.com/cloud/vela-templates/kaniko.yml@main
     type: github
   
 steps:
@@ -184,7 +184,7 @@ steps:
     template:
       name: tmpl
       vars:
-        repo: docker.company.com/octocat/hello-world
+        repo: docker.example.com/octocat/hello-world
 ```
 
 ### kaniko.yml Template
@@ -213,20 +213,20 @@ steps:
     image: target/vela-kaniko:latest
     secrets: [ docker_username, docker_password ]
     parameters:
-      registry: docker.company.com
+      registry: docker.example.com
       repo: ${REPO}
 ```
 
 ### Remote Template + Local Environment Onboarding
 
 ```sh
-$ DOCKER_USERNAME=octocat DOCKER_PASSWORD=abc123 VELA_BUILD_COMMIT=1a2b3c vela exec pipeline --ct <GITHUB_PAT> --cgu https://git.company.com --local-env
+$ DOCKER_USERNAME=octocat DOCKER_PASSWORD=abc123 VELA_BUILD_COMMIT=1a2b3c vela exec pipeline --ct <GITHUB_PAT> --cgu https://git.example.com --local-env
 ```
 
 Note: `--local-env` onboards the entire bash environment. To load specific environment variables, use `--env-vars`:
 
 ```sh
-$ vela exec pipeline --ct <GITHUB_PAT> --cgu https://git.company.com --env-vars DOCKER_USERNAME=octocat,DOCKER_PASSWORD=abc123,VELA_BUILD_COMMIT=1a2b3c
+$ vela exec pipeline --ct <GITHUB_PAT> --cgu https://git.example.com --env-vars DOCKER_USERNAME=octocat,DOCKER_PASSWORD=abc123,VELA_BUILD_COMMIT=1a2b3c
 ```
 
 ### Template Override
@@ -245,7 +245,7 @@ VELA_BUILD_COMMIT=1a2b3c
 ```
 
 ```sh
-$ vela exec pipeline --ct <GITHUB_PAT> --cgu https://git.company.com --env-file
+$ vela exec pipeline --ct <GITHUB_PAT> --cgu https://git.example.com --env-file
 ```
 
 `vela_exec.env`
@@ -256,7 +256,7 @@ VELA_BUILD_COMMIT=1a2b3c
 ```
 
 ```sh
-$ vela exec pipeline --ct <GITHUB_PAT> --cgu https://git.company.com --env-file-path vela_exec.env
+$ vela exec pipeline --ct <GITHUB_PAT> --cgu https://git.example.com --env-file-path vela_exec.env
 ```
 
 ### Path Ruleset Inclusion
@@ -264,7 +264,7 @@ $ vela exec pipeline --ct <GITHUB_PAT> --cgu https://git.company.com --env-file-
 In order to execute steps with rulesets, be sure to include all necessary flags that match the rules
 
 ```sh
-$ vela exec pipeline --ct <GITHUB_PAT> --cgu https://git.company.com --env-file --file-changeset src/main.go
+$ vela exec pipeline --ct <GITHUB_PAT> --cgu https://git.example.com --env-file --file-changeset src/main.go
 ```
 
 Other rules: `--branch`, `--event`, `--comment`, `--tag`, `--target`
