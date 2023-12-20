@@ -14,7 +14,7 @@ Users should refrain from using latest as the tag for the Docker image.
 It is recommended to use a semantically versioned tag instead.
 Sample of sending a message:
 steps: - name: message image: target/vela-slack:latest pull: always parameters: text: &#34;Hello World!&#34; Sample of sending a message with formatting:
-steps: - name: message-with-formatting image: target/vela-slack:latest pull: not_present parameters: - text: &#34;Hello World!"><meta itemprop=dateModified content="2022-03-08T10:43:11-08:00"><meta itemprop=wordCount content="563"><meta itemprop=keywords content><meta name=twitter:card content="summary"><meta name=twitter:title content="Slack"><meta name=twitter:description content="Description This plugin enables you to send data to a Slack channel.
+steps: - name: message-with-formatting image: target/vela-slack:latest pull: not_present parameters: - text: &#34;Hello World!"><meta itemprop=dateModified content="2022-03-08T10:43:11-08:00"><meta itemprop=wordCount content="561"><meta itemprop=keywords content><meta name=twitter:card content="summary"><meta name=twitter:title content="Slack"><meta name=twitter:description content="Description This plugin enables you to send data to a Slack channel.
 Source Code: https://github.com/go-vela/vela-slack
 Registry: https://hub.docker.com/r/target/vela-slack
 Usage NOTE:
@@ -71,7 +71,6 @@ steps: - name: message-with-formatting image: target/vela-slack:latest pull: not
 </span></span><span style=display:flex><span><span style=color:#a40000>-     text: &#34;Hello World!&#34;
 </span></span></span><span style=display:flex><span><span style=color:#a40000></span>      filepath: slack_attachment.json
 </span></span><span style=display:flex><span>      remote: false
-</span></span><span style=display:flex><span>      registry: https://github.com
 </span></span></code></pre></div><p>Sample of sending a message with remote attachment file:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-diff data-lang=diff><span style=display:flex><span>steps:
 </span></span><span style=display:flex><span>  - name: message-with-remote-attachment
 </span></span><span style=display:flex><span>    image: target/vela-slack:latest
