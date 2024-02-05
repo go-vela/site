@@ -37,6 +37,20 @@ Vela supports two options for visibility: **private** or **any**. This determine
 
 By default, a newly enabled repository will inherit the visibility setting it has with the source control manager. However, if a user wishes for the visbility to differ between the source code repository and the CI repository, they can do so by changing this setting.
 
+### Outside Contributor Permissions
+
+This setting allows repository admins to further safeguard their repositories by requiring approval for builds, specifically pull requests from forks.
+
+The three settings are:
+
+- **Always Require Approval**: regardless of user, if the webhook event is a pull request from a fork, the build will need to be approved by a repository admin.
+- **Require Approval For Read-Only**: some teams prefer the fork contribution workflow even if users have write permission to the repo. This setting allows those users to not need approval, but read-only users will.
+- **Never Require Approval**: any user will be able to run pull request builds by opening a PR against the repository.
+
+When a build is awaiting approval, the SCM will be updated with the status `pending` with the description `build needs approval from repo admin to run`. 
+
+Repository admins can approve a build in the UI or by using the [CLI](/docs/reference/cli/build/approve).
+
 ### Build Limit
 
 The default and max build limit is determined by the platform administrators. These values determine how many builds can be run concurrently for any given repository. These limits exist to prevent any single repository from occupying a large amount of worker resources.
