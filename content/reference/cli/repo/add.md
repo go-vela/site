@@ -98,5 +98,6 @@ allowpush: true
 allowdeploy: false
 allowtag: false
 allowcomment: false
+allowevents: [push pull_request:opened pull_request:synchronize ]
 pipelinetype: yaml
 ```

@@ -19,15 +19,30 @@ Below are all settings for repositories that can be changed in the Vela UI / CLI
 
 Vela can subscribe to any of the following webhook events:
 
-| Event           | Description                                             |
-|-----------------|---------------------------------------------------------|
-| `push`          |  a commit pushed to a repository branch                 |
-| `pull_request`  |  a pull request is opened or updated with a new commit  |
-| `tag`           |  a commit tag is pushed to the repository               |
-| `deployment`    |  a deployment is created for the repository             |
-| `comment`       |  a comment has been made on a pull request              |
+| Event                         | Description                                                                |
+|------------------------------ |--------------------------------------------------------------------------- |
+| `push`                        |  a commit pushed to a repository branch                                    |
+| `tag`                         |  a commit pushed to a repository branch                                    |
+| `pull_request:opened`         |  a pull request is opened                                                  |
+| `pull_request:reopened`       |  a pull request is reopened                                                |
+| `pull_request:synchronize`    |  a pull request source branch has been updated with a new commit           |
+| `pull_request:edited`         |  a pull request has been edited (title, description, target branch, etc)   |
+| `deployment:created`          |  a deployment is created for the repository                                |
+| `comment:created`             |  a comment has been made on a pull request                                 |
+| `comment:edited`              |  a comment has been edited on a pull request                               |
+| `delete:branch`               |  a repository branch has been deleted                                      |
+| `delete:tag`                  |  a repository tag has been deleted                                         |
 
 Pipelines can be written to behave differently based on which event triggered the build (see [rulesets](/docs/tour/rulesets)).
+
+{{% alert color="info" %}}
+Event scoping (`event:action`) was included in Vela release `v0.23.0`. As such, general `event` rulesets in pipelines are mapped as following:
+
+- `pull_request` -> [ `pull_request:opened`, `pull_request:synchronize`, `pull_request:reopened` ]
+- `comment` -> [ `comment:created`, `comment:edited` ]
+- `deployment` -> [ `deployment:created` ]
+
+{{% /alert %}}
 
 Updating webhook events for a Vela repository _must_ be done through Vela (API/CLI/UI) in order to preserve the signature integrity of the webhook. Otherwise, users will experience a [webhook signature error](/docs/faq/usage/#payload-signature-check-failed).
 

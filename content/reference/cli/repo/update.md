@@ -47,6 +47,16 @@ This command also supports setting the following parameters via a configuration 
 For more information, please review the [CLI config documentation](/docs/reference/cli/config/).
 {{% /alert %}}
 
+{{% alert color="warning" %}}
+As of Vela `v0.23.0`, the `event` flag is an overwrite/clobber operation. 
+
+```sh
+$ vela update repo --org github --repo octocat --event tag
+```
+
+The above will set the allowed events to only `tag`. Be sure to specify _all_ events when updating a repo via the CLI.
+{{% /alert %}}
+
 ## Permissions
 
 COMING SOON!
@@ -98,5 +108,6 @@ allowpush: true
 allowdeploy: false
 allowtag: true
 allowcomment: false
+allowevents: [tag]
 pipelinetype: yaml
 ```
