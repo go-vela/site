@@ -57,10 +57,11 @@ The following table includes variables only available during the **deployment** 
 All custom parameters are passed to the deployment available with a `DEPLOYMENT_PARAMETER_` prefix of the key.
 {{% /alert %}}
 
-| Key                 | Value        | Explanation                                   |
-| ------------------- | -----------  | --------------------------------------------- |
-| `VELA_BUILD_TARGET` | `production` | name of target environment for the deployment |
-| `VELA_DEPLOYMENT`   | `production` | name of target environment for the deployment |
+| Key                        | Value        | Explanation                                   |
+| -------------------------- | -----------  | --------------------------------------------- |
+| `VELA_BUILD_TARGET`        | `production` | name of target environment for the deployment |
+| `VELA_DEPLOYMENT`          | `production` | name of target environment for the deployment |
+| `VELA_DEPLOYMENT_NUMBER`   | `production` | number of deployment from GitHub              |
 
 ##### `pull_request` event only
 
