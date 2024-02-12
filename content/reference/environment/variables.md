@@ -13,6 +13,8 @@ The following environment variables are injected into every step, service, or se
 
 | Key                       | Value                                                       | Explanation                                                         |
 | ------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------- |
+| `VELA_BUILD_APPROVED_AT`  | `1556720958`                                                | unix timestamp representing when build was approved                 |
+| `VELA_BUILD_APPROVED_BY`  | `RepoAdmin`                                                 | user who approved the build                                         |
 | `VELA_BUILD_AUTHOR`       | `octocat`                                                   | author from the source commit                                       |
 | `VELA_BUILD_AUTHOR_EMAIL` | `octocat@github.com`                                        | author email from the source commit, available only in `push` events                                 |
 | `VELA_BUILD_BASE_REF`     | `refs/heads/dev`                                            | reference from the base commit                                      |
@@ -24,6 +26,7 @@ The following environment variables are injected into every step, service, or se
 | `VELA_BUILD_DISTRIBUTION` | `linux`                                                     | distribution where the build was executed                           |
 | `VELA_BUILD_ENQUEUED`     | `1556720958`                                                | unix timestamp representing build enqueued time                     |
 | `VELA_BUILD_EVENT`        | `push`                                                      | webhook event that triggered the build                              |
+| `VELA_BUILD_EVENT_ACTION` | `created`                                                    | webhook event action that triggered the build                       |
 | `VELA_BUILD_HOST`         | `vela-worker-1`                                             | fully qualified domain name of the worker the build was executed on |
 | `VELA_BUILD_LINK`         | `https://vela.example.com/octocat/hello-world/1`       | link to the build in the UI                                         |
 | `VELA_BUILD_MESSAGE`      | `Merge pull request #6 from octocat/patch-1`                | message from the source commit                                      |
@@ -46,8 +49,10 @@ The following table includes variables only available during the **comment** eve
 
 | Key                       | Value | Explanation                                                |
 | ------------------------- | ----- | ---------------------------------------------------------- |
-| `VELA_BUILD_PULL_REQUEST` | `1`   | pull request number is populated from the source reference |
-| `VELA_PULL_REQUEST`       | `1`   | pull request number is populated from the source reference |
+| `VELA_BUILD_PULL_REQUEST`  | `1`    | pull request number is populated from the source reference |
+| `VELA_PULL_REQUEST`        | `1`    | pull request number is populated from the source reference |
+| `VELA_PULL_REQUEST_SOURCE` | `dev`  | pull request branch from the source reference              |
+| `VELA_PULL_REQUEST_TARGET` | `main` | pull request branch for the target reference               |
 
 ##### `deployment` event only
 
@@ -57,10 +62,11 @@ The following table includes variables only available during the **deployment** 
 All custom parameters are passed to the deployment available with a `DEPLOYMENT_PARAMETER_` prefix of the key.
 {{% /alert %}}
 
-| Key                 | Value        | Explanation                                   |
-| ------------------- | -----------  | --------------------------------------------- |
-| `VELA_BUILD_TARGET` | `production` | name of target environment for the deployment |
-| `VELA_DEPLOYMENT`   | `production` | name of target environment for the deployment |
+| Key                      | Value        | Explanation                                   |
+| ------------------------ | -----------  | --------------------------------------------- |
+| `VELA_BUILD_TARGET`      | `production` | name of target environment for the deployment |
+| `VELA_DEPLOYMENT`        | `production` | name of target environment for the deployment |
+| `VELA_DEPLOYMENT_NUMBER` | `12345`      | ID of deployment from source                  |
 
 ##### `pull_request` event only
 
