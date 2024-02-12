@@ -1350,6 +1350,16 @@ If you&amp;rsquo;re coming from another CI platform you can set a starting build
 &lt;h3 id="access">Access&lt;/h3>
 &lt;p>Vela supports two options for visibility: &lt;strong>private&lt;/strong> or &lt;strong>any&lt;/strong>. This determines who can view the Vela builds.&lt;/p>
 &lt;p>By default, a newly enabled repository will inherit the visibility setting it has with the source control manager. However, if a user wishes for the visbility to differ between the source code repository and the CI repository, they can do so by changing this setting.&lt;/p>
+&lt;h3 id="outside-contributor-permissions">Outside Contributor Permissions&lt;/h3>
+&lt;p>This setting allows repository admins to further safeguard their repositories by requiring approval for builds, specifically pull requests from forks.&lt;/p>
+&lt;p>The three settings are:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Always Require Approval&lt;/strong>: regardless of user, if the webhook event is a pull request from a fork, the build will need to be approved by a repository admin.&lt;/li>
+&lt;li>&lt;strong>Require Approval For Read-Only&lt;/strong>: some teams prefer the fork contribution workflow even if users have write permission to the repo. This setting allows those users to not need approval, but read-only users will.&lt;/li>
+&lt;li>&lt;strong>Never Require Approval&lt;/strong>: any user will be able to run pull request builds by opening a PR against the repository.&lt;/li>
+&lt;/ul>
+&lt;p>When a build is awaiting approval, the SCM will be updated with the status &lt;code>pending&lt;/code> with the description &lt;code>build needs approval from repo admin to run&lt;/code>.&lt;/p>
+&lt;p>Repository admins can approve a build in the UI or by using the &lt;a href="https://go-vela.github.io/docs/docs/reference/cli/build/approve">CLI&lt;/a>.&lt;/p>
 &lt;h3 id="build-limit">Build Limit&lt;/h3>
 &lt;p>The default and max build limit is determined by the platform administrators. These values determine how many builds can be run concurrently for any given repository. These limits exist to prevent any single repository from occupying a large amount of worker resources.&lt;/p>
 &lt;p>Builds that are triggered from a webhook event that result in exceeding the build limit will have to be re-launched by redelivering the webhook once the concurrent build total dips below the limit.&lt;/p>

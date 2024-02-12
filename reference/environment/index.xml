@@ -110,6 +110,16 @@ var expressions are evaluated before the yaml is parsed. If you do not want the 
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
+&lt;td>&lt;code>VELA_BUILD_APPROVED_AT&lt;/code>&lt;/td>
+&lt;td>&lt;code>1556720958&lt;/code>&lt;/td>
+&lt;td>unix timestamp representing when build was approved&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>VELA_BUILD_APPROVED_BY&lt;/code>&lt;/td>
+&lt;td>&lt;code>RepoAdmin&lt;/code>&lt;/td>
+&lt;td>user who approved the build&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>&lt;code>VELA_BUILD_AUTHOR&lt;/code>&lt;/td>
 &lt;td>&lt;code>octocat&lt;/code>&lt;/td>
 &lt;td>author from the source commit&lt;/td>
@@ -163,6 +173,11 @@ var expressions are evaluated before the yaml is parsed. If you do not want the 
 &lt;td>&lt;code>VELA_BUILD_EVENT&lt;/code>&lt;/td>
 &lt;td>&lt;code>push&lt;/code>&lt;/td>
 &lt;td>webhook event that triggered the build&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>VELA_BUILD_EVENT_ACTION&lt;/code>&lt;/td>
+&lt;td>&lt;code>created&lt;/code>&lt;/td>
+&lt;td>webhook event action that triggered the build&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;code>VELA_BUILD_HOST&lt;/code>&lt;/td>
@@ -254,6 +269,16 @@ The following table includes variables only available during the &lt;strong>comm
 &lt;td>&lt;code>1&lt;/code>&lt;/td>
 &lt;td>pull request number is populated from the source reference&lt;/td>
 &lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>VELA_PULL_REQUEST_SOURCE&lt;/code>&lt;/td>
+&lt;td>&lt;code>dev&lt;/code>&lt;/td>
+&lt;td>pull request branch from the source reference&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>VELA_PULL_REQUEST_TARGET&lt;/code>&lt;/td>
+&lt;td>&lt;code>main&lt;/code>&lt;/td>
+&lt;td>pull request branch for the target reference&lt;/td>
+&lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;h5 id="deployment-event-only">&lt;code>deployment&lt;/code> event only&lt;/h5>
@@ -279,6 +304,11 @@ The following table includes variables only available during the &lt;strong>comm
 &lt;td>&lt;code>VELA_DEPLOYMENT&lt;/code>&lt;/td>
 &lt;td>&lt;code>production&lt;/code>&lt;/td>
 &lt;td>name of target environment for the deployment&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>VELA_DEPLOYMENT_NUMBER&lt;/code>&lt;/td>
+&lt;td>&lt;code>12345&lt;/code>&lt;/td>
+&lt;td>ID of deployment from source&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

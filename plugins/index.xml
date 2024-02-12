@@ -651,15 +651,15 @@ More information for ansible-playbook can be found at: &lt;a href="https://ansib
 &lt;tbody>
 &lt;tr>
 &lt;td>&lt;code>api_key&lt;/code>&lt;/td>
-&lt;td>&lt;code>/vela/parameters/artifactory/api_key&lt;/code>, &lt;code>/vela/secrets/artifactory/api_key&lt;/code>&lt;/td>
+&lt;td>&lt;code>/vela/parameters/artifactory/api_key&lt;/code>, &lt;code>/vela/secrets/artifactory/api_key&lt;/code>, &lt;code>/vela/secrets/managed-auth/api_key&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;code>password&lt;/code>&lt;/td>
-&lt;td>&lt;code>/vela/parameters/artifactory/password&lt;/code>, &lt;code>/vela/secrets/artifactory/password&lt;/code>&lt;/td>
+&lt;td>&lt;code>/vela/parameters/artifactory/password&lt;/code>, &lt;code>/vela/secrets/artifactory/password&lt;/code>, &lt;code>/vela/secrets/managed-auth/password&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;code>username&lt;/code>&lt;/td>
-&lt;td>&lt;code>/vela/parameters/artifactory/username&lt;/code>, &lt;code>/vela/secrets/artifactory/username&lt;/code>&lt;/td>
+&lt;td>&lt;code>/vela/parameters/artifactory/username&lt;/code>, &lt;code>/vela/secrets/artifactory/username&lt;/code>, &lt;code>/vela/secrets/managed-auth/username&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -748,6 +748,41 @@ More information for ansible-playbook can be found at: &lt;a href="https://ansib
 &lt;td>&lt;code>false&lt;/code>&lt;/td>
 &lt;td>&lt;code>N/A&lt;/code>&lt;/td>
 &lt;td>&lt;code>PARAMETER_USERNAME&lt;/code>&lt;br>&lt;code>ARTIFACTORY_USERNAME&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>http_client_retries&lt;/code>&lt;/td>
+&lt;td>number of times to retry failed http attempts&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>3&lt;/code>&lt;/td>
+&lt;td>&lt;code>PARAMETER_HTTP_CLIENT_RETRIES&lt;/code>&lt;br>&lt;code>ARTIFACTORY_HTTP_CLIENT_RETRIES&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>http_client_retry_wait&lt;/code>&lt;/td>
+&lt;td>amount of milliseconds to wait between failed http attempts&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>500&lt;/code>&lt;/td>
+&lt;td>&lt;code>PARAMETER_HTTP_CLIENT_RETRY_WAIT_MILLISECONDS&lt;/code>&lt;br>&lt;code>ARTIFACTORY_HTTP_CLIENT_RETRY_WAIT_MILLISECONDS&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>http_client_cert&lt;/code>&lt;/td>
+&lt;td>file path to the client certificate to use for TLS communication&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>PARAMETER_HTTP_CLIENT_CERT&lt;/code>&lt;br>&lt;code>ARTIFACTORY_HTTP_CLIENT_CERT&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>http_client_cert_key&lt;/code>&lt;/td>
+&lt;td>file path to the client certificate key to use for TLS communication&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>PARAMETER_HTTP_CLIENT_CERT_KEY&lt;/code>&lt;br>&lt;code>ARTIFACTORY_HTTP_CLIENT_CERT_KEY&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>http_client_insecure_tls&lt;/code>&lt;/td>
+&lt;td>enable insecure TLS communication&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>PARAMETER_HTTP_CLIENT_INSECURE_TLS&lt;/code>&lt;br>&lt;code>ARTIFACTORY_HTTP_CLIENT_INSECURE_TLS&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -3763,11 +3798,11 @@ This has the added benefit of enabling others in the community to consume your p
 &lt;tbody>
 &lt;tr>
 &lt;td>&lt;code>password&lt;/code>&lt;/td>
-&lt;td>&lt;code>/vela/parameters/kaniko/password&lt;/code>, &lt;code>/vela/secrets/kaniko/password&lt;/code>&lt;/td>
+&lt;td>&lt;code>/vela/parameters/kaniko/password&lt;/code>, &lt;code>/vela/secrets/kaniko/password&lt;/code>, &lt;code>/vela/secrets/managed-auth/password&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;code>username&lt;/code>&lt;/td>
-&lt;td>&lt;code>/vela/parameters/kaniko/username&lt;/code>, &lt;code>/vela/secrets/kaniko/username&lt;/code>&lt;/td>
+&lt;td>&lt;code>/vela/parameters/kaniko/username&lt;/code>, &lt;code>/vela/secrets/kaniko/username&lt;/code>, &lt;code>/vela/secrets/managed-auth/username&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -3978,6 +4013,13 @@ This has the added benefit of enabling others in the community to consume your p
 &lt;td>&lt;code>true&lt;/code>&lt;/td>
 &lt;td>&lt;code>latest&lt;/code>&lt;/td>
 &lt;td>&lt;code>PARAMETER_TAGS&lt;/code>&lt;br>&lt;code>KANIKO_TAGS&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>tar_path&lt;/code>&lt;/td>
+&lt;td>save the image as a tarball at path&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>PARAMETER_TAR_PATH&lt;/code>&lt;br>&lt;code>KANIKO_TAR_PATH&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;code>target&lt;/code>&lt;/td>
@@ -4866,11 +4908,11 @@ This has the added benefit of enabling others in the community to consume your p
 &lt;tbody>
 &lt;tr>
 &lt;td>&lt;code>password&lt;/code>&lt;/td>
-&lt;td>&lt;code>/vela/parameters/npm/password&lt;/code>, &lt;code>/vela/secrets/npm/password&lt;/code>&lt;/td>
+&lt;td>&lt;code>/vela/parameters/npm/password&lt;/code>, &lt;code>/vela/secrets/npm/password&lt;/code>, &lt;code>/vela/secrets/managed-auth/password&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;code>username&lt;/code>&lt;/td>
-&lt;td>&lt;code>/vela/parameters/npm/username&lt;/code>, &lt;code>/vela/secrets/npm/username&lt;/code>&lt;/td>
+&lt;td>&lt;code>/vela/parameters/npm/username&lt;/code>, &lt;code>/vela/secrets/npm/username&lt;/code>, &lt;code>/vela/secrets/managed-auth/username&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;code>registry&lt;/code>&lt;/td>
