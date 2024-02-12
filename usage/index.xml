@@ -1328,24 +1328,56 @@ If you&amp;rsquo;re coming from another CI platform you can set a starting build
 &lt;td>a commit pushed to a repository branch&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pull_request&lt;/code>&lt;/td>
-&lt;td>a pull request is opened or updated with a new commit&lt;/td>
-&lt;/tr>
-&lt;tr>
 &lt;td>&lt;code>tag&lt;/code>&lt;/td>
-&lt;td>a commit tag is pushed to the repository&lt;/td>
+&lt;td>a commit pushed to a repository branch&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>deployment&lt;/code>&lt;/td>
+&lt;td>&lt;code>pull_request:opened&lt;/code>&lt;/td>
+&lt;td>a pull request is opened&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>pull_request:reopened&lt;/code>&lt;/td>
+&lt;td>a pull request is reopened&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>pull_request:synchronize&lt;/code>&lt;/td>
+&lt;td>a pull request source branch has been updated with a new commit&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>pull_request:edited&lt;/code>&lt;/td>
+&lt;td>a pull request has been edited (title, description, target branch, etc)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>deployment:created&lt;/code>&lt;/td>
 &lt;td>a deployment is created for the repository&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>comment&lt;/code>&lt;/td>
+&lt;td>&lt;code>comment:created&lt;/code>&lt;/td>
 &lt;td>a comment has been made on a pull request&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>comment:edited&lt;/code>&lt;/td>
+&lt;td>a comment has been edited on a pull request&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>delete:branch&lt;/code>&lt;/td>
+&lt;td>a repository branch has been deleted&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>delete:tag&lt;/code>&lt;/td>
+&lt;td>a repository tag has been deleted&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;p>Pipelines can be written to behave differently based on which event triggered the build (see &lt;a href="https://go-vela.github.io/docs/docs/tour/rulesets">rulesets&lt;/a>).&lt;/p>
+&lt;div class="alert alert-info" role="alert">
+&lt;p>Event scoping (&lt;code>event:action&lt;/code>) was included in Vela release &lt;code>v0.23.0&lt;/code>. As such, general &lt;code>event&lt;/code> rulesets in pipelines are mapped as following:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>pull_request&lt;/code> -&amp;gt; [ &lt;code>pull_request:opened&lt;/code>, &lt;code>pull_request:synchronize&lt;/code>, &lt;code>pull_request:reopened&lt;/code> ]&lt;/li>
+&lt;li>&lt;code>comment&lt;/code> -&amp;gt; [ &lt;code>comment:created&lt;/code>, &lt;code>comment:edited&lt;/code> ]&lt;/li>
+&lt;li>&lt;code>deployment&lt;/code> -&amp;gt; [ &lt;code>deployment:created&lt;/code> ]&lt;/li>
+&lt;/ul>
+&lt;/div>
 &lt;p>Updating webhook events for a Vela repository &lt;em>must&lt;/em> be done through Vela (API/CLI/UI) in order to preserve the signature integrity of the webhook. Otherwise, users will experience a &lt;a href="https://go-vela.github.io/docs/docs/faq/usage/#payload-signature-check-failed">webhook signature error&lt;/a>.&lt;/p>
 &lt;h3 id="access">Access&lt;/h3>
 &lt;p>Vela supports two options for visibility: &lt;strong>private&lt;/strong> or &lt;strong>any&lt;/strong>. This determines who can view the Vela builds.&lt;/p>

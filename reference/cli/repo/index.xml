@@ -137,6 +137,7 @@ For more information, you can run &lt;code>vela add repo --help&lt;/code>.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>allowdeploy: &lt;span style="color:#204a87">false&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>allowtag: &lt;span style="color:#204a87">false&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>allowcomment: &lt;span style="color:#204a87">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>allowevents: &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>push pull_request:opened pull_request:synchronize &lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pipelinetype: yaml
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Reference: Chown</title><link>https://go-vela.github.io/docs/reference/cli/repo/chown/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/cli/repo/chown/</guid><description>
 &lt;h2 id="command">Command&lt;/h2>
@@ -563,6 +564,11 @@ For more information, you can run &lt;code>vela update repo --help&lt;/code>.
 &lt;/ul>
 &lt;p>For more information, please review the &lt;a href="https://go-vela.github.io/docs/docs/reference/cli/config/">CLI config documentation&lt;/a>.&lt;/p>
 &lt;/div>
+&lt;div class="alert alert-warning" role="alert">
+&lt;p>As of Vela &lt;code>v0.23.0&lt;/code>, the &lt;code>event&lt;/code> flag is an overwrite/clobber operation.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>$ vela update repo --org github --repo octocat --event tag
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The above will set the allowed events to only &lt;code>tag&lt;/code>. Be sure to specify &lt;em>all&lt;/em> events when updating a repo via the CLI.&lt;/p>
+&lt;/div>
 &lt;h2 id="permissions">Permissions&lt;/h2>
 &lt;p>COMING SOON!&lt;/p>
 &lt;h2 id="sample">Sample&lt;/h2>
@@ -598,6 +604,7 @@ For more information, you can run &lt;code>vela update repo --help&lt;/code>.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>allowdeploy: &lt;span style="color:#204a87">false&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>allowtag: &lt;span style="color:#204a87">true&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>allowcomment: &lt;span style="color:#204a87">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>allowevents: &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>tag&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pipelinetype: yaml
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Reference: View</title><link>https://go-vela.github.io/docs/reference/cli/repo/view/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/cli/repo/view/</guid><description>
 &lt;h2 id="command">Command&lt;/h2>

@@ -744,7 +744,20 @@ This method is intended for &lt;strong>developers and advanced users only&lt;/st
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic"># Note: specifying pull_request is the same as [pull_request:opened, pull_request:synchronized]. &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic"># Specifying comment is the same as [comment:created, comment:edited]. &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">---&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="alert alert-info" role="alert">
+&lt;p>Event scoping (&lt;code>event:action&lt;/code>) was included in Vela release &lt;code>v0.23.0&lt;/code>. As such, general &lt;code>event&lt;/code> rulesets in pipelines are mapped as following:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>pull_request&lt;/code> -&amp;gt; [ &lt;code>pull_request:opened&lt;/code>, &lt;code>pull_request:synchronize&lt;/code>, &lt;code>pull_request:reopened&lt;/code> ]&lt;/li>
+&lt;li>&lt;code>comment&lt;/code> -&amp;gt; [ &lt;code>comment:created&lt;/code>, &lt;code>comment:edited&lt;/code> ]&lt;/li>
+&lt;li>&lt;code>deployment&lt;/code> -&amp;gt; [ &lt;code>deployment:created&lt;/code> ]&lt;/li>
+&lt;/ul>
+&lt;p>If you wish to include &lt;em>all&lt;/em> event types from an event, you can specify a wildcard at the end:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">ruleset&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">event&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">pull_request* &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic"># will run on opened, reopened, synchronize, and edited&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;/div>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">---&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">steps&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">ruleset&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic"># As shown below this step will execute if file README.md, any file of type *.md&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
@@ -2364,6 +2377,7 @@ For more information, you can run &lt;code>vela add repo --help&lt;/code>.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>allowdeploy: &lt;span style="color:#204a87">false&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>allowtag: &lt;span style="color:#204a87">false&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>allowcomment: &lt;span style="color:#204a87">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>allowevents: &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>push pull_request:opened pull_request:synchronize &lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pipelinetype: yaml
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Reference: Add</title><link>https://go-vela.github.io/docs/reference/cli/schedule/add/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/cli/schedule/add/</guid><description>
 &lt;h2 id="command">Command&lt;/h2>
