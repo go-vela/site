@@ -168,6 +168,21 @@ steps:
       # Specifying comment is the same as [comment:created, comment:edited]. 
 ```
 
+{{% alert color="info" %}}
+Event scoping (`event:action`) was included in Vela release `v0.23.0`. As such, general `event` rulesets in pipelines are mapped as following:
+
+- `pull_request` -> [ `pull_request:opened`, `pull_request:synchronize`, `pull_request:reopened` ]
+- `comment` -> [ `comment:created`, `comment:edited` ]
+- `deployment` -> [ `deployment:created` ]
+
+If you wish to include _all_ event types from an event, you can specify a wildcard at the end:
+
+```yaml
+    ruleset:
+      event: pull_request*  # will run on opened, reopened, synchronize, and edited
+```
+{{% /alert %}}
+
 ```yaml
 ---
 steps:
