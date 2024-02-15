@@ -30,7 +30,7 @@ The CLI workflow that was mentioned above has a variety of methods for local and
 Available Methods:
 
 ```sh
-# this will continue to validate only the file
+# this will continue to validate the file and its nested template(s)
 vela validate pipeline
 
 # this will continue to validate via the pipeline endpoints on the server
