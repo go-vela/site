@@ -19,14 +19,14 @@ For more information, you can run `vela get secret --help`.
 
 The following parameters are used to configure the command:
 
-| Name            | Description                            | Environment Variables          |
-| --------------- | -------------------------------------- | ------------------------------ |
-| `org`           | name of organization for the secrets   | `VELA_ORG`, `SECRET_ORG`       |
-| `repo`          | name of repository for the secrets     | `VELA_REPO`, `SECRET_REPO`     |
-| `secret.engine` | name of engine that stores the secrets | `VELA_ENGINE`. `SECRET_ENGINE` |
-| `secret.type`   | name of type of secrets being stored   | `VELA_TYPE`, `SECRET_TYPE`     |
-| `team`          | name of team for the secrets           | `VELA_TEAM`, `SECRET_TEAM`     |
-| `output`        | format the output for the secrets      | `VELA_OUTPUT`, `SECRET_OUTPUT` |
+| Name            | Description                                         | Environment Variables          |
+| --------------- | --------------------------------------------------- | ------------------------------ |
+| `org`           | name of organization for the secrets                | `VELA_ORG`, `SECRET_ORG`       |
+| `repo`          | name of repository for the secrets                  | `VELA_REPO`, `SECRET_REPO`     |
+| `secret.engine` | name of engine that stores the secrets              | `VELA_ENGINE`. `SECRET_ENGINE` |
+| `secret.type`   | name of type of secrets being stored                | `VELA_TYPE`, `SECRET_TYPE`     |
+| `team`          | name of team for the secrets, or '\*' for all teams | `VELA_TEAM`, `SECRET_TEAM`     |
+| `output`        | format the output for the secrets                   | `VELA_OUTPUT`, `SECRET_OUTPUT` |
 
 {{% alert color="info" %}}
 This command also supports setting the following parameters via a configuration file:
@@ -59,7 +59,7 @@ To setup the CLI, please review the [authentication documentation](/docs/referen
 ```sh
 $ pwd
 ~/github/octocat
-$ vela get secret --secret.engine native --secret.type repo 
+$ vela get secret --secret.engine native --secret.type repo
 ```
 
 #### Targeted Request
