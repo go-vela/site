@@ -19,12 +19,12 @@ metadata:
 
 ## Tags
 
-| Tag             | Required | Type        | Description                                                        |
-|-----------------|----------|-------------|--------------------------------------------------------------------|
-| `template`      | Y        | bool        | Enables compiling the pipeline as a template.                      |
-| `clone`         | N        | bool        | Enables injecting the default clone process.                       |
-| `render_inline` | N        | bool        | Enables rendering without explicitly calling within the pipeline.  |
-| `auto_cancel`   | N        | (see below) | Auto canceling settings for pipelines.                             | 
+| Tag             | Required | Type        | Description                                                       |
+| --------------- | -------- | ----------- | ----------------------------------------------------------------- |
+| `template`      | Y        | bool        | Enables compiling the pipeline as a template.                     |
+| `clone`         | N        | bool        | Enables injecting the default clone process.                      |
+| `render_inline` | N        | bool        | Enables rendering without explicitly calling within the pipeline. |
+| `auto_cancel`   | N        | (see below) | Auto canceling settings for pipelines.                            |
 
 ### Usage
 
@@ -37,8 +37,8 @@ To learn how to write templates, see the [template documentation](/docs/template
 ```yaml
 ---
 metadata:
-  # Enables compiling the pipeline as a template. This value 
-  # is defaulted during the compile phase to "false" if not 
+  # Enables compiling the pipeline as a template. This value
+  # is defaulted during the compile phase to "false" if not
   # explicitly provided by the user.
   template: true
 ```
@@ -60,7 +60,7 @@ metadata:
   # By default, the below is populated into every pipeline with
   # services, steps, and secrets. But, when the block exists the
   # configuration specified is used during compile phase.
-  environment: [ steps, services, secrets ]
+  environment: [steps, services, secrets]
 ```
 
 #### The `render_inline:` tag
@@ -69,24 +69,24 @@ metadata:
 ---
 metadata:
   # By default, the below is populated into every pipeline with
-  # false. But, when set to "true" a user can render a template 
+  # false. But, when set to "true" a user can render a template
   # in the resulting pipeline without referencing it in stages
-  # or steps. 
+  # or steps.
   render_inline: false
 ```
 
 #### The `auto_cancel` tag
 
-| Tag              | Default  | Type  | Description                                                                                  |
-|------------------|----------|-------|----------------------------------------------------------------------------------------------|
-| `pending`        | True     | bool  | Pending builds will be auto canceled if qualifying build is triggered                        |
-| `running`        | False    | bool  | Currently running builds will be auto canceled if qualifying build is triggered              |
-| `default_branch` | False    | bool  | Pushes to the default branch will also be auto canceled if a qualifying build is triggered.  |
+| Tag              | Default | Type | Description                                                                                 |
+| ---------------- | ------- | ---- | ------------------------------------------------------------------------------------------- |
+| `pending`        | True    | bool | Pending builds will be auto canceled if qualifying build is triggered                       |
+| `running`        | False   | bool | Currently running builds will be auto canceled if qualifying build is triggered             |
+| `default_branch` | False   | bool | Pushes to the default branch will also be auto canceled if a qualifying build is triggered. |
 
 A **qualifying build** is defined as either:
-  * a _push_ build with the same _branch_ as another running/pending _push_ build
-  * a _pull request_ build with the same _head ref_ as another running/pending _pull request_ build
-      * Note: the initial pr build (_pull_request:opened_ event) will not be canceled; only subsequent (_pull_request:synchronized_ event) builds will be canceled.
+
+- a _push_ build with the same _branch_ as another running/pending _push_ build
+- a _pull request_ build with the same _head ref_ as another running/pending _pull request_ build
 
 These builds most often happen when a user pushes a commit to a branch and quickly pushes another commit, both of which kick off new builds. Using the `auto_cancel` block can help free up build space and eliminate pointless builds.
 
@@ -97,7 +97,7 @@ By default, auto canceling is disabled altogether. However, if `running` or `def
 # pending & running will auto cancel, but not pushes to the default branch.
 metadata:
   auto_cancel:
-    running: true 
+    running: true
 ```
 
 ```yaml
