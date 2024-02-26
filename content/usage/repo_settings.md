@@ -60,11 +60,14 @@ The three settings are:
 
 - **Always Require Approval**: regardless of user, if the webhook event is a pull request from a fork, the build will need to be approved by a repository admin.
 - **Require Approval For Read-Only**: some teams prefer the fork contribution workflow even if users have write permission to the repo. This setting allows those users to not need approval, but read-only users will.
+- **Require Admin Approval for First Time Contributors**: users that have contributed to the repository before will be able to run pull request builds without admin approval. Note: it may take a few hours for a user to be marked as a prior contributor after they have contributed to the repository.
 - **Never Require Approval**: any user will be able to run pull request builds by opening a PR against the repository.
 
 When a build is awaiting approval, the SCM will be updated with the status `pending` with the description `build needs approval from repo admin to run`. 
 
 Repository admins can approve a build in the UI or by using the [CLI](/docs/reference/cli/build/approve).
+
+PR builds that are marked as `pending approval` will auto cancel any previous PR build from the same source (if one exists). This is to prevent a build up of builds pending approval from the same source.
 
 ### Build Limit
 
