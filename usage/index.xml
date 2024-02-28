@@ -1384,7 +1384,7 @@ If you&amp;rsquo;re coming from another CI platform you can set a starting build
 &lt;p>By default, a newly enabled repository will inherit the visibility setting it has with the source control manager. However, if a user wishes for the visbility to differ between the source code repository and the CI repository, they can do so by changing this setting.&lt;/p>
 &lt;h3 id="outside-contributor-permissions">Outside Contributor Permissions&lt;/h3>
 &lt;p>This setting allows repository admins to further safeguard their repositories by requiring approval for builds, specifically pull requests from forks.&lt;/p>
-&lt;p>The three settings are:&lt;/p>
+&lt;p>The four settings are:&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>Always Require Approval&lt;/strong>: regardless of user, if the webhook event is a pull request from a fork, the build will need to be approved by a repository admin.&lt;/li>
 &lt;li>&lt;strong>Require Approval For Read-Only&lt;/strong>: some teams prefer the fork contribution workflow even if users have write permission to the repo. This setting allows those users to not need approval, but read-only users will.&lt;/li>
