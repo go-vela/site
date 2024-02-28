@@ -56,7 +56,7 @@ By default, a newly enabled repository will inherit the visibility setting it ha
 
 This setting allows repository admins to further safeguard their repositories by requiring approval for builds, specifically pull requests from forks.
 
-The three settings are:
+The four settings are:
 
 - **Always Require Approval**: regardless of user, if the webhook event is a pull request from a fork, the build will need to be approved by a repository admin.
 - **Require Approval For Read-Only**: some teams prefer the fork contribution workflow even if users have write permission to the repo. This setting allows those users to not need approval, but read-only users will.
