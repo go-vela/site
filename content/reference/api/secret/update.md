@@ -46,7 +46,7 @@ To authenticate to the API, please review the [authentication documentation](/do
 
 ```json
 {
-  "events": ["push", "tag"]
+  "allow_command": false
 }
 ```
 
@@ -75,6 +75,31 @@ curl \
   "images": ["alpine"],
   "events": ["push", "tag"],
   "allow_command": true,
+  "allow_substitution": true,
+  "allow_events": {
+    "push": {
+      "branch": true,
+      "tag": true,
+      "delete_branch": false,
+      "delete_tag": false
+    },
+    "pull_request": {
+      "opened": false,
+      "edited": false,
+      "synchronize": false,
+      "reopened": false
+    },
+    "deployment": {
+      "created": true
+    },
+    "comment": {
+      "created": false,
+      "edited": false
+    },
+    "schedule": {
+      "run": false
+    }
+  },
   "created_at": 1641314085,
   "created_by": "octokitty",
   "updated_at": 1641314500,

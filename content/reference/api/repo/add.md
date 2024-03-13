@@ -76,6 +76,30 @@ curl \
   "allow_deploy": false,
   "allow_tag": false,
   "allow_comment": false,
+  "allow_events": {
+    "push": {
+      "branch": true,
+      "tag": true,
+      "delete_branch": false,
+      "delete_tag": false
+    },
+    "pull_request": {
+      "opened": false,
+      "edited": false,
+      "synchronize": false,
+      "reopened": false
+    },
+    "deployment": {
+      "created": true
+    },
+    "comment": {
+      "created": false,
+      "edited": false
+    },
+    "schedule": {
+      "run": false
+    }
+  },
   "pipeline_type": "yaml"
 }
 ```
