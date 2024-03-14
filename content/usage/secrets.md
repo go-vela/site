@@ -126,12 +126,12 @@ Secrets by default do not have the `pull request` event enabled, as this event c
 
 Defaults for various secret types
 
-| Setting              | Repo               | Org                    | Shared                 |       
-|--------------------- |------------------- |----------------------- |----------------------- |
-| `Allow Command`      | Yes                | Yes                    | No                     |
-| `Allow Substitution` | Yes                | Yes                    | No                     |
-| `Images`             | Any                | Any                    | Any                    |
-| `Allow Events`       | Push, Tag, Deploy  | Push, Tag, Deployment  | Push, Tag, Deployment  |
+| Setting              | Repo                   | Org                    | Shared                 |       
+|--------------------- |----------------------- |----------------------- |----------------------- |
+| `Allow Command`      | Yes                    | Yes                    | No                     |
+| `Allow Substitution` | Yes                    | Yes                    | No                     |
+| `Images`             | Any                    | Any                    | Any                    |
+| `Allow Events`       | Push, Tag, Deployment  | Push, Tag, Deployment  | Push, Tag, Deployment  |
 
 **Allow Command**: 
 
