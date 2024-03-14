@@ -120,7 +120,7 @@ The masking routine simply looks for logs that exactly match the content of a st
 
 #### Pull Request Event + Build Approval
 
-Secrets by default do not have the `pull request` event enabled, as this event can be triggered by users without `write` access to the repository. Therefore, if users do require secrets for `pull request` events, it is best practice to adopt a [build approval policy](/docs/usage/repo_settings.md#outside-contributor-permissions), which will allow repository admins to validate the safety of the pipeline.
+Secrets by default do not have the `pull request` event enabled, as this event can be triggered by users without `write` access to the repository. Therefore, if users do require secrets for `pull request` events, it is best practice to adopt a [build approval policy](/docs/usage/repo_settings/#outside-contributor-permissions), which will allow repository admins to validate the safety of the pipeline.
 
 #### Other Secret Settings
 
