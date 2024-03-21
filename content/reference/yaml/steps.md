@@ -179,7 +179,7 @@ If you wish to include _all_ event types from an event, you can specify a wildca
 
 ```yaml
     ruleset:
-      event: pull_request*  # will run on opened, reopened, synchronize, and edited
+      event: pull_request*  # will run on opened, reopened, synchronize, edited, labeled, and unlabeled
 ```
 {{% /alert %}}
 
