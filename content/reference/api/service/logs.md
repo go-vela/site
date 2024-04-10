@@ -61,3 +61,9 @@ curl \
   "data": "SGVsbG8sIFdvcmxkIQ=="
 }
 ```
+
+The `data` field is base64 encoded. To decode the data, you can use the following command:
+
+```sh
+echo "SGVsbG8sIFdvcmxkIQ==" | base64 --decode
+```
