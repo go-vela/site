@@ -3740,6 +3740,13 @@ Context-Type options are as follow:&lt;/p>
 &lt;td>&lt;code>PARAMETER_REPO_TOPICS_FILTER&lt;/code>&lt;br>&lt;code>KANIKO_REPO_TOPICS_FILTER&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
+&lt;td>&lt;code>ignore_var_run&lt;/code>&lt;/td>
+&lt;td>sets &lt;code>--ignore-var-run&lt;/code> kaniko flag to control whether /var/run is included in image snapshot&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>PARAMETER_IGNORE_VAR_RUN&lt;/code>&lt;br>&lt;code>KANIKO_IGNORE_VAR_RUN&lt;/code>&lt;br>&lt;code>VELA_IGNORE_VAR_RUN&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>&lt;code>labels&lt;/code>&lt;/td>
 &lt;td>unique labels to add to the image&lt;/td>
 &lt;td>&lt;code>false&lt;/code>&lt;/td>
