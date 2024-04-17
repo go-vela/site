@@ -5,84 +5,107 @@
 &lt;thead>
 &lt;tr>
 &lt;th>Syntax&lt;/th>
+&lt;th>Example with Output&lt;/th>
 &lt;th>Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>${var^}&lt;/code>&lt;/td>
-&lt;td>var substitution with uppercase first char&lt;/td>
+&lt;td>&lt;code>${VAR^}&lt;/code>&lt;/td>
+&lt;td>&lt;code>VAR=example; echo ${VAR^}&lt;/code>&lt;br>► &lt;code>Example&lt;/code>&lt;/td>
+&lt;td>Converts the first character of the variable to uppercase&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>${var^^}&lt;/code>&lt;/td>
-&lt;td>var substitution with all uppercase&lt;/td>
+&lt;td>&lt;code>${VAR^^}&lt;/code>&lt;/td>
+&lt;td>&lt;code>VAR=example; echo ${VAR^^}&lt;/code>&lt;br>► &lt;code>EXAMPLE&lt;/code>&lt;/td>
+&lt;td>Converts all characters of the variable to uppercase&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>${var,}&lt;/code>&lt;/td>
-&lt;td>var substitution with lowercase first char&lt;/td>
+&lt;td>&lt;code>${VAR,}&lt;/code>&lt;/td>
+&lt;td>&lt;code>VAR=EXAMPLE; echo ${VAR,}&lt;/code>&lt;br>► &lt;code>eXAMPLE&lt;/code>&lt;/td>
+&lt;td>Converts the first character of the variable to lowercase&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>${var,,}&lt;/code>&lt;/td>
-&lt;td>var substitution with all lowercase&lt;/td>
+&lt;td>&lt;code>${VAR,,}&lt;/code>&lt;/td>
+&lt;td>&lt;code>VAR=EXAMPLE; echo ${VAR,,}&lt;/code>&lt;br>► &lt;code>example&lt;/code>&lt;/td>
+&lt;td>Converts all characters of the variable to lowercase&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>${var:position}&lt;/code>&lt;/td>
-&lt;td>var substitution with substring&lt;/td>
+&lt;td>&lt;code>${VAR:position}&lt;/code>&lt;/td>
+&lt;td>&lt;code>VAR=example; echo ${VAR:1}&lt;/code>&lt;br>► &lt;code>xample&lt;/code>&lt;/td>
+&lt;td>Extracts a substring from the variable starting at the position&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>${var:position:length}&lt;/code>&lt;/td>
-&lt;td>var substitution with substring and length&lt;/td>
+&lt;td>&lt;code>${VAR:position:length}&lt;/code>&lt;/td>
+&lt;td>&lt;code>VAR=example; echo ${VAR:2:3}&lt;/code>&lt;br>► &lt;code>amp&lt;/code>&lt;/td>
+&lt;td>Extracts a substring from the variable starting at the position with the specified length&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>${var#substring}&lt;/code>&lt;/td>
-&lt;td>var substitution with find and replace&lt;/td>
+&lt;td>&lt;code>${VAR#substring}&lt;/code>&lt;/td>
+&lt;td>&lt;code>VAR=exampleexample; echo ${VAR#exa}&lt;/code>&lt;br>► &lt;code>mpleexample&lt;/code>&lt;/td>
+&lt;td>Removes the shortest match of substring from the start of the variable&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>${var##substring}&lt;/code>&lt;/td>
-&lt;td>var substitution with find and replace&lt;/td>
+&lt;td>&lt;code>${VAR##substring}&lt;/code>&lt;/td>
+&lt;td>&lt;code>VAR=exampleexample; echo ${VAR##*exa}&lt;/code>&lt;br>► &lt;code>mple&lt;/code>&lt;/td>
+&lt;td>Removes the longest match of substring from the start of the variable&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>${var%substring}&lt;/code>&lt;/td>
-&lt;td>var substitution with find and replace&lt;/td>
+&lt;td>&lt;code>${VAR%substring}&lt;/code>&lt;/td>
+&lt;td>&lt;code>VAR=exampleexample; echo ${VAR%mple}&lt;/code>&lt;br>► &lt;code>exampleexa&lt;/code>&lt;/td>
+&lt;td>Removes the shortest match of substring from the end of the variable&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>${var%%substring}&lt;/code>&lt;/td>
-&lt;td>var substitution with suffix removal&lt;/td>
+&lt;td>&lt;code>${VAR%%substring}&lt;/code>&lt;/td>
+&lt;td>&lt;code>VAR=exampleexample; echo ${VAR%%mple*}&lt;/code>&lt;br>► &lt;code>exa&lt;/code>&lt;/td>
+&lt;td>Removes the longest match of substring from the end of the variable&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>${var/substring/replacement}&lt;/code>&lt;/td>
-&lt;td>var substitution with find and replace&lt;/td>
+&lt;td>&lt;code>${VAR/substring/replacement}&lt;/code>&lt;/td>
+&lt;td>&lt;code>VAR=exampleexample; echo ${VAR/exam/ap}&lt;/code>&lt;br>► &lt;code>appleexample&lt;/code>&lt;/td>
+&lt;td>Replaces the first match of substring with replacement in the variable&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>${var//substring/replacement}&lt;/code>&lt;/td>
-&lt;td>var substitution with find and replace&lt;/td>
+&lt;td>&lt;code>${VAR//substring/replacement}&lt;/code>&lt;/td>
+&lt;td>&lt;code>VAR=exampleexample; echo ${VAR//exam/ap}&lt;/code>&lt;br>► &lt;code>appleapple&lt;/code>&lt;/td>
+&lt;td>Replaces all matches of substring with replacement in the variable&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>${var/#substring/replacement}&lt;/code>&lt;/td>
-&lt;td>var substitution with find and replace&lt;/td>
+&lt;td>&lt;code>${VAR/#substring/replacement}&lt;/code>&lt;/td>
+&lt;td>&lt;code>VAR=example; echo ${VAR/#exam/ap}&lt;/code>&lt;br>► &lt;code>apple&lt;/code>&lt;/td>
+&lt;td>If the variable starts with substring, replace it with replacement&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>${var/%substring/replacement}&lt;/code>&lt;/td>
-&lt;td>var substitution with find and replace&lt;/td>
+&lt;td>&lt;code>${VAR/%substring/replacement}&lt;/code>&lt;/td>
+&lt;td>&lt;code>VAR=example; echo ${VAR/%mple/ctly}&lt;/code>&lt;br>► &lt;code>exactly&lt;/code>&lt;/td>
+&lt;td>If the variable ends with substring, replace it with replacement&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>${#var}&lt;/code>&lt;/td>
-&lt;td>var substitution&lt;/td>
+&lt;td>&lt;code>${#VAR}&lt;/code>&lt;/td>
+&lt;td>&lt;code>VAR=example; echo ${#VAR}&lt;/code>&lt;br>► &lt;code>7&lt;/code>&lt;/td>
+&lt;td>Returns the length of the variable&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>${var=default}&lt;/code>&lt;/td>
-&lt;td>var substitution with default&lt;/td>
+&lt;td>&lt;code>${VAR=default}&lt;/code>&lt;/td>
+&lt;td>&lt;code>unset VAR; echo ${VAR=default}&lt;/code>&lt;br>► &lt;code>default&lt;/code>&lt;/td>
+&lt;td>If the variable is unset or null, it will be set to &lt;code>default&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>${var:=default}&lt;/code>&lt;/td>
-&lt;td>var substitution with default&lt;/td>
+&lt;td>&lt;code>${VAR:=default}&lt;/code>&lt;/td>
+&lt;td>&lt;code>unset VAR; echo ${VAR:=default}&lt;/code>&lt;br>► &lt;code>default&lt;/code>&lt;/td>
+&lt;td>If the variable is unset or null, it will be set to &lt;code>default&lt;/code> and the assignment is exported&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>${var:-default}&lt;/code>&lt;/td>
-&lt;td>var substitution with default&lt;/td>
+&lt;td>&lt;code>${VAR:-default}&lt;/code>&lt;/td>
+&lt;td>&lt;code>unset VAR; echo ${VAR:-default}&lt;/code>&lt;br>► &lt;code>default&lt;/code>&lt;/td>
+&lt;td>If the variable is unset or null, it will be replaced with &lt;code>default&lt;/code> without changing the value of &lt;code>VAR&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;div class="alert alert-info" role="alert">
+&lt;h4 class="alert-heading">Note&lt;/h4>
+If you want to play with the examples above in a terminal, make sure you are in a &lt;code>bash&lt;/code> shell.
+&lt;/div>
 &lt;h3 id="escaping">Escaping&lt;/h3>
 &lt;div class="alert alert-info" role="alert">
 &lt;h4 class="alert-heading">Tip:&lt;/h4>
