@@ -130,6 +130,10 @@ stages:
           - echo $VELA_REPO_FULL_NAME
 ```
 
+{{% alert title="Note:" color="info" %}}
+Be aware that `needs:` references stages by their name, which can be overridden by the `name` tag in the stage definition.
+{{% /alert %}}
+
 Consider a Vela build triggered by a `push` to `main`. We know that `run-first` will indeed run first, followed by `runtime-ruleset-stage` since it cannot be pruned due to its runtime rule. However, if we recall from our first example, when the _entirety_ of a stage's step collection is pruned at compile-time, the stage disappears completely:
 
 ```yaml

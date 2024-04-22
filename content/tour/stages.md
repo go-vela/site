@@ -60,6 +60,10 @@ stages:
           - echo "Goodbye, World"
 ```
 
+{{% alert title="Note:" color="info" %}}
+Be aware that `needs:` references stages by their name, which can be overridden by the `name` tag in the stage definition.
+{{% /alert %}}
+
 ```sh
 $ vela exec pipeline
 ...
