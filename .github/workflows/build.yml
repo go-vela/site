@@ -16,18 +16,18 @@ jobs:
 
     steps:
     - name: clone
-      uses: actions/checkout@v3
+      uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
       with:
         submodules: recursive
         fetch-depth: 0
 
     - name: node
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@1a4442cacd436585916779262731d5b162bc6ec7 # v3
       with:
         node-version: '18'
 
     - name: hugo
-      uses: peaceiris/actions-hugo@v2
+      uses: peaceiris/actions-hugo@16361eb4acea8698b220b76c0d4e84e1fd22c61d # v2
       with:
         hugo-version: '0.108.0'
         extended: true
