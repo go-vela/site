@@ -8,7 +8,7 @@ description: >
 ## Endpoint
 
 ```
-GET  /api/v1/admin/service
+PUT  /api/v1/admin/service
 ```
 
 ## Permissions
