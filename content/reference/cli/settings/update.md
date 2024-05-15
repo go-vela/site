@@ -51,13 +51,7 @@ To setup the CLI, please review the [authentication documentation](/docs/referen
 ```sh
 $ pwd
 ~/github/octocat
-$ vela update settings --secret.engine native
-```
-
-#### Targeted Request
-
-```sh
-$ vela update settings --secret.engine native
+$ vela update settings --compiler.clone-image target/vela-git:abc123  --queue.add-route large
 ```
 
 #### Response
