@@ -2835,7 +2835,7 @@ For more information, you can run &lt;code>vela approve build --help&lt;/code>.
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4e9a06">&amp;#34;successfully approved build github/octocat/1&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Reference: Build</title><link>https://go-vela.github.io/docs/reference/api/admin/build/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/api/admin/build/</guid><description>
 &lt;h2 id="endpoint">Endpoint&lt;/h2>
-&lt;pre tabindex="0">&lt;code>GET /api/v1/admin/build
+&lt;pre tabindex="0">&lt;code>PUT /api/v1/admin/build
 &lt;/code>&lt;/pre>&lt;h2 id="permissions">Permissions&lt;/h2>
 &lt;p>COMING SOON!&lt;/p>
 &lt;h2 id="responses">Responses&lt;/h2>

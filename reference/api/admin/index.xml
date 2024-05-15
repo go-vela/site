@@ -1,6 +1,6 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Admin</title><link>https://go-vela.github.io/docs/reference/api/admin/</link><description>Recent content in Admin on Vela</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://go-vela.github.io/docs/reference/api/admin/index.xml" rel="self" type="application/rss+xml"/><item><title>Reference: Build</title><link>https://go-vela.github.io/docs/reference/api/admin/build/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/api/admin/build/</guid><description>
 &lt;h2 id="endpoint">Endpoint&lt;/h2>
-&lt;pre tabindex="0">&lt;code>GET /api/v1/admin/build
+&lt;pre tabindex="0">&lt;code>PUT /api/v1/admin/build
 &lt;/code>&lt;/pre>&lt;h2 id="permissions">Permissions&lt;/h2>
 &lt;p>COMING SOON!&lt;/p>
 &lt;h2 id="responses">Responses&lt;/h2>
@@ -252,7 +252,7 @@ existing entry for the build.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;42 builds cleaned. 42 services cleaned. 42 steps cleaned.&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Reference: Hook</title><link>https://go-vela.github.io/docs/reference/api/admin/hook/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/api/admin/hook/</guid><description>
 &lt;h2 id="endpoint">Endpoint&lt;/h2>
-&lt;pre tabindex="0">&lt;code>GET /api/v1/admin/hook
+&lt;pre tabindex="0">&lt;code>PUT /api/v1/admin/hook
 &lt;/code>&lt;/pre>&lt;h2 id="permissions">Permissions&lt;/h2>
 &lt;p>COMING SOON!&lt;/p>
 &lt;h2 id="responses">Responses&lt;/h2>
@@ -320,7 +320,7 @@ existing entry for the hook.&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Reference: Repo</title><link>https://go-vela.github.io/docs/reference/api/admin/repo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/api/admin/repo/</guid><description>
 &lt;h2 id="endpoint">Endpoint&lt;/h2>
-&lt;pre tabindex="0">&lt;code>GET /api/v1/admin/repo
+&lt;pre tabindex="0">&lt;code>PUT /api/v1/admin/repo
 &lt;/code>&lt;/pre>&lt;h2 id="permissions">Permissions&lt;/h2>
 &lt;p>COMING SOON!&lt;/p>
 &lt;h2 id="responses">Responses&lt;/h2>
@@ -406,7 +406,7 @@ existing entry for the repo.&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Reference: Secret</title><link>https://go-vela.github.io/docs/reference/api/admin/secret/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/api/admin/secret/</guid><description>
 &lt;h2 id="endpoint">Endpoint&lt;/h2>
-&lt;pre tabindex="0">&lt;code>GET /api/v1/admin/secret
+&lt;pre tabindex="0">&lt;code>PUT /api/v1/admin/secret
 &lt;/code>&lt;/pre>&lt;h2 id="permissions">Permissions&lt;/h2>
 &lt;p>COMING SOON!&lt;/p>
 &lt;h2 id="responses">Responses&lt;/h2>
@@ -528,7 +528,7 @@ existing entry for the secret.&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Reference: Service</title><link>https://go-vela.github.io/docs/reference/api/admin/service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/api/admin/service/</guid><description>
 &lt;h2 id="endpoint">Endpoint&lt;/h2>
-&lt;pre tabindex="0">&lt;code>GET /api/v1/admin/service
+&lt;pre tabindex="0">&lt;code>PUT /api/v1/admin/service
 &lt;/code>&lt;/pre>&lt;h2 id="permissions">Permissions&lt;/h2>
 &lt;p>COMING SOON!&lt;/p>
 &lt;h2 id="responses">Responses&lt;/h2>
@@ -594,7 +594,7 @@ existing entry for the service.&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Reference: Step</title><link>https://go-vela.github.io/docs/reference/api/admin/step/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/api/admin/step/</guid><description>
 &lt;h2 id="endpoint">Endpoint&lt;/h2>
-&lt;pre tabindex="0">&lt;code>GET /api/v1/admin/step
+&lt;pre tabindex="0">&lt;code>PUT /api/v1/admin/step
 &lt;/code>&lt;/pre>&lt;h2 id="permissions">Permissions&lt;/h2>
 &lt;p>COMING SOON!&lt;/p>
 &lt;h2 id="responses">Responses&lt;/h2>
@@ -666,7 +666,7 @@ existing entry for the step.&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Reference: User</title><link>https://go-vela.github.io/docs/reference/api/admin/user/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/api/admin/user/</guid><description>
 &lt;h2 id="endpoint">Endpoint&lt;/h2>
-&lt;pre tabindex="0">&lt;code>GET /api/v1/admin/user
+&lt;pre tabindex="0">&lt;code>PUT /api/v1/admin/user
 &lt;/code>&lt;/pre>&lt;h2 id="permissions">Permissions&lt;/h2>
 &lt;p>COMING SOON!&lt;/p>
 &lt;h2 id="responses">Responses&lt;/h2>
