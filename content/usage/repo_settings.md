@@ -27,8 +27,8 @@ Vela can subscribe to any of the following webhook events:
 | `pull_request:reopened`       |  a pull request is reopened                                                |
 | `pull_request:synchronize`    |  a pull request source branch has been updated with a new commit           |
 | `pull_request:edited`         |  a pull request has been edited (title, description, target branch, etc)   |
-| `pull_request:labeled`        |  a pull request has been labeled (enhancement, documentation, etc)         |
-| `pull_request:unlabeled`      |  a pull request has been unlabeled (enhancement, documentation, etc)       |
+| `pull_request:labeled`        |  a pull request has been labeled                                           |
+| `pull_request:unlabeled`      |  a pull request has been unlabeled                                         |
 | `deployment:created`          |  a deployment is created for the repository                                |
 | `comment:created`             |  a comment has been made on a pull request                                 |
 | `comment:edited`              |  a comment has been edited on a pull request                               |
