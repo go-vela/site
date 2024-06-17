@@ -503,6 +503,11 @@ For more information, please run &lt;code>vela validate pipeline --help&lt;/code
 &lt;td>github url, used by compiler, for pulling registry templates&lt;/td>
 &lt;td>&lt;code>VELA_COMPILER_GITHUB_URL&lt;/code>, &lt;code>COMPILER_GITHUB_URL&lt;/code>&lt;/td>
 &lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>pipeline-type&lt;/code>&lt;/td>
+&lt;td>provide the repository pipeline type&lt;/td>
+&lt;td>&lt;code>VELA_PIPELINE_TYPE&lt;/code>, &lt;code>PIPELINE_TYPE&lt;/code>&lt;/td>
+&lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;h2 id="permissions">Permissions&lt;/h2>
