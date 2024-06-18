@@ -11,14 +11,14 @@ description: >
 
 The server is made up of several components, responsible for specific tasks, necessary for the service to operate:
 
-| Name       | Description                                                                                                         |
-| ---------- | ------------------------------------------------------------------------------------------------------------------- |
-| `settings` | keeps track of updated runtime properties for the [server](/docs/installation/server/)     |
+| Name       | Description                                                                                                       |
+| ---------- | ----------------------------------------------------------------------------------------------------------------- |
+| `settings` | keeps track of updated runtime properties for the [server](/docs/installation/server/)                            |
 | `compiler` | transforms a [pipeline](/docs/tour/) into an executable workload for the [worker](/docs/installation/worker/)     |
-| `database` | integrates with a database provider for storing application data at rest                                            |
+| `database` | integrates with a database provider for storing application data at rest                                          |
 | `queue`    | integrates with a queue provider for pushing workloads that will be run by a [worker](/docs/installation/worker/) |
-| `secret`   | integrates with a secret provider for storing sensitive application data at rest                                    |
-| `source`   | integrates with a source control management (SCM) provider for authentication and authorization                     |
+| `secret`   | integrates with a secret provider for storing sensitive application data at rest                                  |
+| `source`   | integrates with a source control management (SCM) provider for authentication and authorization                   |
 
 ## Required
 
