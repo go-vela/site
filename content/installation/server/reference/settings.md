@@ -21,9 +21,9 @@ The following properties are available to be updated:
 
 The following options are used to configure the component:
 
-| Name                   | Description                                                                     | Required | Default               | Environment Variables                                   |
-| ---------------------- | ------------------------------------------------------------------------------- | -------- | --------------------- | ------------------------------------------------------- |
-| `settings-refresh-interval`          | the interval at which the server syncs with the database                         | `true`   | `5s` | `VELA_PLATFORM_SETTINGS_REFRESH_INTERVAL`, `VELA_SETTINGS_REFRESH_INTERVAL`                                      |
+| Name                        | Description                                              | Required | Default | Environment Variables                                                       |
+| --------------------------- | -------------------------------------------------------- | -------- | ------- | --------------------------------------------------------------------------- |
+| `settings-refresh-interval` | the interval at which the server syncs with the database | `true`   | `5s`    | `VELA_PLATFORM_SETTINGS_REFRESH_INTERVAL`, `VELA_SETTINGS_REFRESH_INTERVAL` |
 
 {{% alert title="Note:" color="primary" %}}
 For more information on how the runtime properties are consumed, please see the [server reference](/docs/installation/server/reference/).
