@@ -108,6 +108,8 @@ By default, Vela will use the latest available release of the clone image at the
 
 This variable should be provided as a `string`.
 
+This property can be updated while the server is running using the [settings component](/docs/installation/server/reference/settings).
+
 ### VELA_COMPILER_GITHUB
 
 This configuration variable is used by the [compiler component](/docs/installation/server/reference/compiler/) for the server.
