@@ -29,6 +29,7 @@ The following parameters are used to configure the command:
 | `remote`                | enables validating a pipeline on a remote server             | `VELA_REMOTE`, `PIPELINE_REMOTE`                      |
 | `compiler.github.token` | github compiler token                                        | `VELA_COMPILER_GITHUB_TOKEN`, `COMPILER_GITHUB_TOKEN` |
 | `compiler.github.url`   | github url, used by compiler, for pulling registry templates | `VELA_COMPILER_GITHUB_URL`, `COMPILER_GITHUB_URL`     |
+| `pipeline-type`         | provide the repository pipeline type                         | `VELA_PIPELINE_TYPE`, `PIPELINE_TYPE`  |
 
 ## Permissions
 
