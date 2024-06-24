@@ -178,6 +178,8 @@ This variable sets the unique channels or topics to pull workloads from.
 
 The variable can be provided as a comma-separated `list` (i.e. `myRoute1,myRoute2`).
 
+The worker will update its own database record using the provided queue routes. If you wish to control worker routes solely using API / Database, supply `""` or `"NONE"`.
+
 {{% alert title="Note:" color="primary" %}}
 This variable has a default value of `vela`.
 {{% /alert %}}
