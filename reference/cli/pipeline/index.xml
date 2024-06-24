@@ -464,9 +464,34 @@ For more information, please run &lt;code>vela validate pipeline --help&lt;/code
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
+&lt;td>&lt;code>org&lt;/code>&lt;/td>
+&lt;td>name of organization for the builds&lt;/td>
+&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>BUILD_ORG&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>pipeline-type&lt;/code>&lt;/td>
+&lt;td>provide the repository pipeline type&lt;/td>
+&lt;td>&lt;code>VELA_PIPELINE_TYPE&lt;/code>, &lt;code>PIPELINE_TYPE&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>repo&lt;/code>&lt;/td>
+&lt;td>name of repository for the builds&lt;/td>
+&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>BUILD_REPO&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>compiler-starlark-exec-limit&lt;/code>&lt;/td>
+&lt;td>set the starlark execution step limit for compiling starlark pipelines (default 7500)&lt;/td>
+&lt;td>&lt;code>VELA_COMPILER_STARLARK_EXEC_LIMIT&lt;/code>, &lt;code>COMPILER_STARLARK_EXEC_LIMIT&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>&lt;code>file&lt;/code>&lt;/td>
 &lt;td>name of the file for the pipeline&lt;/td>
 &lt;td>&lt;code>VELA_FILE&lt;/code>, &lt;code>PIPELINE_FILE&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>max-template-depth&lt;/code>&lt;/td>
+&lt;td>set the maximum depth for nested templates (default: 3)&lt;/td>
+&lt;td>&lt;code>VELA_MAX_TEMPLATE_DEPTH&lt;/code>, &lt;code>MAX_TEMPLATE_DEPTH&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;code>path&lt;/code>&lt;/td>
@@ -479,6 +504,11 @@ For more information, please run &lt;code>vela validate pipeline --help&lt;/code
 &lt;td>&lt;code>VELA_REF&lt;/code>, &lt;code>PIPELINE_REF&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
+&lt;td>&lt;code>remote&lt;/code>&lt;/td>
+&lt;td>enables validating a pipeline on a remote server&lt;/td>
+&lt;td>&lt;code>VELA_REMOTE&lt;/code>, &lt;code>PIPELINE_REMOTE&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>&lt;code>template&lt;/code>&lt;/td>
 &lt;td>enables templates to be included in pipeline validation&lt;/td>
 &lt;td>&lt;code>VELA_TEMPLATE&lt;/code>, &lt;code>PIPELINE_TEMPLATE&lt;/code>&lt;/td>
@@ -489,9 +519,44 @@ For more information, please run &lt;code>vela validate pipeline --help&lt;/code
 &lt;td>&lt;code>VELA_TEMPLATE_FILE&lt;/code>, &lt;code>PIPELINE_TEMPLATE_FILE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>remote&lt;/code>&lt;/td>
-&lt;td>enables validating a pipeline on a remote server&lt;/td>
-&lt;td>&lt;code>VELA_REMOTE&lt;/code>, &lt;code>PIPELINE_REMOTE&lt;/code>&lt;/td>
+&lt;td>&lt;code>branch&lt;/code>&lt;/td>
+&lt;td>provide the build branch for the pipeline&lt;/td>
+&lt;td>&lt;code>VELA_BRANCH&lt;/code>, &lt;code>PIPELINE_BRANCH&lt;/code>, &lt;code>VELA_BUILD_BRANCH&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>comment&lt;/code>&lt;/td>
+&lt;td>provide the build comment for the pipeline&lt;/td>
+&lt;td>&lt;code>VELA_COMMENT&lt;/code>, &lt;code>PIPELINE_COMMENT&lt;/code>, &lt;code>VELA_BUILD_COMMENT&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>event&lt;/code>&lt;/td>
+&lt;td>provide the build event for the pipeline&lt;/td>
+&lt;td>&lt;code>VELA_EVENT&lt;/code>, &lt;code>PIPELINE_EVENT&lt;/code>, &lt;code>VELA_BUILD_EVENT&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>file-changeset&lt;/code>&lt;/td>
+&lt;td>provide a list of files changed for ruleset matching&lt;/td>
+&lt;td>&lt;code>VELA_FILE_CHANGESET&lt;/code>, &lt;code>FILE_CHANGESET&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>status&lt;/code>&lt;/td>
+&lt;td>provide the expected build status for the local validation (default: &amp;ldquo;success&amp;rdquo;)&lt;/td>
+&lt;td>&lt;code>VELA_STATUS&lt;/code>, &lt;code>PIPELINE_STATUS&lt;/code>, &lt;code>VELA_BUILD_STATUS&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>tag&lt;/code>&lt;/td>
+&lt;td>provide the build tag for the pipeline&lt;/td>
+&lt;td>&lt;code>VELA_TAG&lt;/code>, &lt;code>PIPELINE_TAG&lt;/code>, &lt;code>VELA_BUILD_TAG&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>target&lt;/code>&lt;/td>
+&lt;td>provide the build target for the pipeline&lt;/td>
+&lt;td>&lt;code>VELA_TARGET&lt;/code>, &lt;code>PIPELINE_TARGET&lt;/code>, &lt;code>VELA_BUILD_TARGET&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>clone-image&lt;/code>&lt;/td>
+&lt;td>the clone image to use for the injected clone step&lt;/td>
+&lt;td>&lt;code>VELA_CLONE_IMAGE&lt;/code>, &lt;code>COMPILER_CLONE_IMAGE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;code>compiler.github.token&lt;/code>&lt;/td>
@@ -502,11 +567,6 @@ For more information, please run &lt;code>vela validate pipeline --help&lt;/code
 &lt;td>&lt;code>compiler.github.url&lt;/code>&lt;/td>
 &lt;td>github url, used by compiler, for pulling registry templates&lt;/td>
 &lt;td>&lt;code>VELA_COMPILER_GITHUB_URL&lt;/code>, &lt;code>COMPILER_GITHUB_URL&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>pipeline-type&lt;/code>&lt;/td>
-&lt;td>provide the repository pipeline type&lt;/td>
-&lt;td>&lt;code>VELA_PIPELINE_TYPE&lt;/code>, &lt;code>PIPELINE_TYPE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
