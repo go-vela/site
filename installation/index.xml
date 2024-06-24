@@ -252,6 +252,34 @@ Any sensitive data stored in the database will be encrypted using the &lt;a href
 &lt;td>&lt;code>false&lt;/code>&lt;/td>
 &lt;td>&lt;code>DATABASE_SKIP_CREATION&lt;/code>&lt;br>&lt;code>VELA_DATABASE_SKIP_CREATION&lt;/code>&lt;/td>
 &lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>database.log.level&lt;/code>&lt;/td>
+&lt;td>log level for database&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>warn&lt;/code>&lt;/td>
+&lt;td>&lt;code>DATABASE_LOG_LEVEL&lt;/code> &lt;br> &lt;code>VELA_DATABASE_LOG_LEVEL&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>database.log.show_sql&lt;/code>&lt;/td>
+&lt;td>show sql query in logs&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>DATABASE_LOG_SHOW_SQL&lt;/code> &lt;br> &lt;code>VELA_DATABASE_LOG_SHOW_SQL&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>database.log.skip_notfound&lt;/code>&lt;/td>
+&lt;td>skip logging not found errors&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>DATABASE_LOG_SKIP_NOTFOUND&lt;/code> &lt;br> &lt;code>VELA_DATABASE_LOG_SKIP_NOTFOUND&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>database.log.slow_threshold&lt;/code>&lt;/td>
+&lt;td>queries higher than this value are considered slow and logged&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>200ms&lt;/code>&lt;/td>
+&lt;td>&lt;code>DATABASE_LOG_SLOW_THRESHOLD&lt;/code> &lt;br> &lt;code>VELA_DATABASE_LOG_SLOW_THRESHOLD&lt;/code>&lt;/td>
+&lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;div class="alert alert-primary" role="alert">
