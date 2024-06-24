@@ -256,6 +256,54 @@ The variable can be provided as a `boolean`.
 This variable has a default value of `false`.
 {{% /alert %}}
 
+### VELA_DATABASE_LOG_LEVEL
+
+This configuration variable is used by the [database component](/docs/installation/server/reference/database/) for the server.
+
+This variable controls the log level to use in the database system. This can be different than the log level for the rest of the application.
+
+The variable can be provided as a `string` (trace, debug, info, warn, error, fatal, panic).
+
+{{% alert title="Note:" color="primary" %}}
+This variable has a default value of `warn`.
+{{% /alert %}}
+
+### VELA_DATABASE_LOG_SHOW_SQL
+
+This configuration variable is used by the [database component](/docs/installation/server/reference/database/) for the server.
+
+This variable controls whether to show the SQL query in the logs for the database system.
+
+The variable can be provided as a `boolean`.
+
+{{% alert title="Note:" color="primary" %}}
+This variable has a default value of `false`.
+{{% /alert %}}
+
+### VELA_DATABASE_LOG_SKIP_NOTFOUND
+
+This configuration variable is used by the [database component](/docs/installation/server/reference/database/) for the server.
+
+This variable controls whether to skip showing record not found errors in the logs for the in the database system.
+
+The variable can be provided as a `boolean`.
+
+{{% alert title="Note:" color="primary" %}}
+This variable has a default value of `true`.
+{{% /alert %}}
+
+### VELA_DATABASE_LOG_SLOW_THRESHOLD
+
+This configuration variable is used by the [database component](/docs/installation/server/reference/database/) for the server.
+
+This variable controls the threshold that determines which queries are considered slow and logged in the database system.
+
+The variable can be provided as a `duration`.
+
+{{% alert title="Note:" color="primary" %}}
+This variable has a default value of `200ms`.
+{{% /alert %}}
+
 ### VELA_DEFAULT_BUILD_LIMIT
 
 This variable sets the default amount of concurrent builds a repo is allowed to run.
