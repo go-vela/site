@@ -11,17 +11,20 @@ description: >
 
 The server is made up of several components, responsible for specific tasks, necessary for the service to operate:
 
-| Name       | Description                                                                                                         |
-| ---------- | ------------------------------------------------------------------------------------------------------------------- |
+| Name       | Description                                                                                                       |
+| ---------- | ----------------------------------------------------------------------------------------------------------------- |
+| `settings` | keeps track of updated runtime properties for the [server](/docs/installation/server/)                            |
 | `compiler` | transforms a [pipeline](/docs/tour/) into an executable workload for the [worker](/docs/installation/worker/)     |
-| `database` | integrates with a database provider for storing application data at rest                                            |
+| `database` | integrates with a database provider for storing application data at rest                                          |
 | `queue`    | integrates with a queue provider for pushing workloads that will be run by a [worker](/docs/installation/worker/) |
-| `secret`   | integrates with a secret provider for storing sensitive application data at rest                                    |
-| `source`   | integrates with a source control management (SCM) provider for authentication and authorization                     |
+| `secret`   | integrates with a secret provider for storing sensitive application data at rest                                  |
+| `source`   | integrates with a source control management (SCM) provider for authentication and authorization                   |
 
 ## Required
 
 This section contains a list of all variables that must be provided to the server.
+
+Some properties can be updated while the server is running using the [settings component](/docs/installation/server/reference/settings).
 
 ### VELA_ADDR
 
@@ -93,6 +96,8 @@ The variable should be provided as a `string`.
 
 This section contains a list of all variables that can be provided to the server.
 
+Some properties can be updated while the server is running using the [settings component](/docs/installation/server/reference/settings).
+
 ### VELA_CLONE_IMAGE
 
 This configuration variable is used by the [compiler component](/docs/installation/server/reference/compiler) for the server.
@@ -102,6 +107,8 @@ The clone image sets the clone image to use for the Vela injected clone step in 
 By default, Vela will use the latest available release of the clone image at the time of a server release.
 
 This variable should be provided as a `string`.
+
+This property can be updated while the server is running using the [settings component](/docs/installation/server/reference/settings).
 
 ### VELA_COMPILER_GITHUB
 
@@ -256,6 +263,54 @@ The variable can be provided as a `boolean`.
 This variable has a default value of `false`.
 {{% /alert %}}
 
+### VELA_DATABASE_LOG_LEVEL
+
+This configuration variable is used by the [database component](/docs/installation/server/reference/database/) for the server.
+
+This variable controls the log level to use in the database system. This can be different than the log level for the rest of the application.
+
+The variable can be provided as a `string` (trace, debug, info, warn, error, fatal, panic).
+
+{{% alert title="Note:" color="primary" %}}
+This variable has a default value of `warn`.
+{{% /alert %}}
+
+### VELA_DATABASE_LOG_SHOW_SQL
+
+This configuration variable is used by the [database component](/docs/installation/server/reference/database/) for the server.
+
+This variable controls whether to show the SQL query in the logs for the database system.
+
+The variable can be provided as a `boolean`.
+
+{{% alert title="Note:" color="primary" %}}
+This variable has a default value of `false`.
+{{% /alert %}}
+
+### VELA_DATABASE_LOG_SKIP_NOTFOUND
+
+This configuration variable is used by the [database component](/docs/installation/server/reference/database/) for the server.
+
+This variable controls whether to skip showing record not found errors in the logs for the in the database system.
+
+The variable can be provided as a `boolean`.
+
+{{% alert title="Note:" color="primary" %}}
+This variable has a default value of `true`.
+{{% /alert %}}
+
+### VELA_DATABASE_LOG_SLOW_THRESHOLD
+
+This configuration variable is used by the [database component](/docs/installation/server/reference/database/) for the server.
+
+This variable controls the threshold that determines which queries are considered slow and logged in the database system.
+
+The variable can be provided as a `duration`.
+
+{{% alert title="Note:" color="primary" %}}
+This variable has a default value of `200ms`.
+{{% /alert %}}
+
 ### VELA_DEFAULT_BUILD_LIMIT
 
 This variable sets the default amount of concurrent builds a repo is allowed to run.
@@ -392,6 +447,22 @@ The variable can be provided as an `integer`.
 This variable has a default value of `3`.
 {{% /alert %}}
 
+This property can be updated while the server is running using the [settings component](/docs/installation/server/reference/settings).
+
+### VELA_COMPILER_STARLARK_EXEC_LIMIT
+
+This configuration variable is used by the [compiler component](/docs/installation/server/reference/compiler) for the server.
+
+This variable sets the starlark execution step limit for compiling starlark pipelines.
+
+The variable can be provided as an `integer`.
+
+{{% alert title="Note:" color="primary" %}}
+This variable has a default value of `7500`.
+{{% /alert %}}
+
+This property can be updated while the server is running using the [settings component](/docs/installation/server/reference/settings).
+
 ### VELA_PORT
 
 This variable sets the port the server API responds on for HTTP requests.
@@ -438,6 +509,8 @@ The variable can be provided as a comma-separated `list` (i.e. `myRoute1,myRoute
 This variable has a default value of `vela`.
 {{% /alert %}}
 
+This property can be updated while the server is running using the [settings component](/docs/installation/server/reference/settings).
+
 ### VELA_QUEUE_PRIVATE_KEY
 
 This variable sets a private key secret for signing queue items that will be opened by the worker's <signing-public-key>.
@@ -460,6 +533,8 @@ The variable can be provided as a comma-separated `list` (i.e. `myOrg1/myRepo1,m
 By default, no repositories are allowed to be enabled. To allow any repository to be enabled, provide a single value of `*`.
 {{% /alert %}}
 
+This property can be updated while the server is running using the [settings component](/docs/installation/server/reference/settings).
+
 ### VELA_SCHEDULE_ALLOWLIST
 
 This variable sets a group of repositories, from the SCM, that can create a schedule for a repo on the server.
@@ -469,6 +544,8 @@ The variable can be provided as a comma-separated `list` (i.e. `myOrg1/myRepo1,m
 {{% alert title="Note:" color="primary" %}}
 By default, no repositories are allowed to create a schedule. To allow any repository to create a schedule, provide a single value of `*`.
 {{% /alert %}}
+
+This property can be updated while the server is running using the [settings component](/docs/installation/server/reference/settings).
 
 ### VELA_SCHEDULE_MINIMUM_FREQUENCY
 

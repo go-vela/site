@@ -52,5 +52,5 @@ curl \
 #### Response
 
 ```sh
-schedule "hourly" deleted
+"schedule hourly deleted"
 ```

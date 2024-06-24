@@ -63,9 +63,9 @@ $ vela get schedule --org github --repo octocat
 
 #### Response
 ```sh
-NAME   	ENTRY    	ACTIVE	SCHEDULED_AT
-nightly	0 0 * * *	true  	a second ago
-hourly 	0 * * * *	true  	a second ago
+NAME   	ENTRY    	ACTIVE	SCHEDULED_AT    	BRANCH
+nightly	0 0 * * *	true  	a long while ago	main  
+hourly 	0 * * * *	true  	a long while ago	main  
 ```
 
 ## Examples
