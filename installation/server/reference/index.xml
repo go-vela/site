@@ -1,4 +1,54 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Reference</title><link>https://go-vela.github.io/docs/installation/server/reference/</link><description>Recent content in Reference on Vela</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://go-vela.github.io/docs/installation/server/reference/index.xml" rel="self" type="application/rss+xml"/><item><title>Installation: Compiler</title><link>https://go-vela.github.io/docs/installation/server/reference/compiler/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/server/reference/compiler/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Reference</title><link>https://go-vela.github.io/docs/installation/server/reference/</link><description>Recent content in Reference on Vela</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://go-vela.github.io/docs/installation/server/reference/index.xml" rel="self" type="application/rss+xml"/><item><title>Installation: Settings</title><link>https://go-vela.github.io/docs/installation/server/reference/settings/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/server/reference/settings/</guid><description>
+&lt;p>Platform Administrators can update certain properties during runtime to change how the platform behaves in real time.&lt;/p>
+&lt;p>The following properties are available to be updated:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference#vela_repo_allowlist">&lt;code>VELA_REPO_ALLOWLIST&lt;/code>&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference#vela_schedule_allowlist">&lt;code>VELA_SCHEDULE_ALLOWLIST&lt;/code>&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference#vela_max_template_depth">&lt;code>VELA_MAX_TEMPLATE_DEPTH&lt;/code>&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference#vela_compiler_starlark_exec_limit">&lt;code>VELA_COMPILER_STARLARK_EXEC_LIMIT&lt;/code>&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference#vela_clone_image">&lt;code>VELA_CLONE_IMAGE&lt;/code>&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="configuration">Configuration&lt;/h2>
+&lt;p>The following options are used to configure the component:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Environment Variables&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>settings-refresh-interval&lt;/code>&lt;/td>
+&lt;td>the interval at which the server syncs with the database&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>5s&lt;/code>&lt;/td>
+&lt;td>&lt;code>VELA_PLATFORM_SETTINGS_REFRESH_INTERVAL&lt;/code>, &lt;code>VELA_SETTINGS_REFRESH_INTERVAL&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+For more information on how the runtime properties are consumed, please see the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/">server reference&lt;/a>.
+&lt;/div>
+&lt;h2 id="permissions">Permissions&lt;/h2>
+&lt;p>This functionality only exists for &lt;a href="https://go-vela.github.io/docs/docs/usage/roles/">Platform Administrators&lt;/a>.&lt;/p>
+&lt;h2 id="usage">Usage&lt;/h2>
+&lt;h3 id="initializing">Initializing&lt;/h3>
+&lt;p>The server will ensure shared settings are first initialized using the variables provided in the environment. For more information on how the runtime properties are configured, please see the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/">server reference&lt;/a>.&lt;/p>
+&lt;p>On subsequent server startups, the properties controlled by the &lt;code>settings&lt;/code> component will be retrieved from the database.&lt;/p>
+&lt;p>If the database settings record is deleted then the server will fail. On the next startup the server will re-initialize the settings record using the values provided in the environment.&lt;/p>
+&lt;h3 id="server-synchronization">Server Synchronization&lt;/h3>
+&lt;p>The server will keep its own &lt;code>settings&lt;/code> in sync with the database according to the &lt;code>settings-refresh-interval&lt;/code> set in the environment.&lt;/p>
+&lt;h3 id="viewing-and-updating-properties">Viewing and Updating Properties&lt;/h3>
+&lt;p>To view or update settings via the user interface, log into your Vela instance and click the &lt;code>site admin&lt;/code> link in the top right corner or navigate to &lt;code>https://vela-server.example.com/admin/settings&lt;/code>.&lt;/p>
+&lt;p>Check the &lt;a href="https://go-vela.github.io/docs/docs/reference/cli/settings">CLI docs&lt;/a> for instructions on modifying runtime properties via the command line.&lt;/p>
+&lt;p>Updated properties will propagate to all server instances depending on the &lt;code>settings-refresh-interval&lt;/code> set in the environment on startup.&lt;/p>
+&lt;h3 id="restoring-default-properties">Restoring Default Properties&lt;/h3>
+&lt;p>The &lt;a href="https://go-vela.github.io/docs/docs/reference/api/admin/settings/restore">&lt;code>DELETE /api/v1/admin/settings&lt;/code>&lt;/a> API endpoint can be used to &amp;ldquo;restore&amp;rdquo; the server to its original environment-provided configurations. Acting as a way for platform admins to undo any current modifications to the platform without restarting or modifying the database.&lt;/p></description></item><item><title>Installation: Compiler</title><link>https://go-vela.github.io/docs/installation/server/reference/compiler/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/server/reference/compiler/</guid><description>
 &lt;div class="alert alert-primary" role="alert">
 &lt;h4 class="alert-heading">Note:&lt;/h4>
 The compiler is embedded directly in the server and can only be accessed through the server.
@@ -91,6 +141,13 @@ The compiler is embedded directly in the server and can only be accessed through
 &lt;td>&lt;code>true&lt;/code>&lt;/td>
 &lt;td>&lt;code>3&lt;/code>&lt;/td>
 &lt;td>&lt;code>MAX_TEMPLATE_DEPTH&lt;/code>&lt;br>&lt;code>VELA_MAX_TEMPLATE_DEPTH&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>compiler-starlark-exec-limit&lt;/code>&lt;/td>
+&lt;td>execution step limit for compiling starlark pipelines&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>7500&lt;/code>&lt;/td>
+&lt;td>&lt;code>COMPILER_STARLARK_EXEC_LIMIT&lt;/code>&lt;br>&lt;code>VELA_COMPILER_STARLARK_EXEC_LIMIT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

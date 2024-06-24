@@ -118,6 +118,10 @@ Both keys are provided to the server.
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
+&lt;td>&lt;code>settings&lt;/code>&lt;/td>
+&lt;td>keeps track of updated runtime properties for the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/">server&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>&lt;code>compiler&lt;/code>&lt;/td>
 &lt;td>transforms a &lt;a href="https://go-vela.github.io/docs/docs/tour/">pipeline&lt;/a> into an executable workload for the &lt;a href="https://go-vela.github.io/docs/docs/installation/worker/">worker&lt;/a>&lt;/td>
 &lt;/tr>
@@ -141,6 +145,7 @@ Both keys are provided to the server.
 &lt;/table>
 &lt;h2 id="required">Required&lt;/h2>
 &lt;p>This section contains a list of all variables that must be provided to the server.&lt;/p>
+&lt;p>Some properties can be updated while the server is running using the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/settings">settings component&lt;/a>.&lt;/p>
 &lt;h3 id="vela_addr">VELA_ADDR&lt;/h3>
 &lt;p>This variable sets a fully qualified URL to the Vela &lt;a href="https://go-vela.github.io/docs/docs/installation/server/">server&lt;/a> address.&lt;/p>
 &lt;p>The variable should be provided as a &lt;code>string&lt;/code>.&lt;/p>
@@ -180,11 +185,13 @@ Both keys are provided to the server.
 &lt;p>The variable should be provided as a &lt;code>string&lt;/code>.&lt;/p>
 &lt;h2 id="optional">Optional&lt;/h2>
 &lt;p>This section contains a list of all variables that can be provided to the server.&lt;/p>
+&lt;p>Some properties can be updated while the server is running using the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/settings">settings component&lt;/a>.&lt;/p>
 &lt;h3 id="vela_clone_image">VELA_CLONE_IMAGE&lt;/h3>
 &lt;p>This configuration variable is used by the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/compiler">compiler component&lt;/a> for the server.&lt;/p>
 &lt;p>The clone image sets the clone image to use for the Vela injected clone step in a pipeline.&lt;/p>
 &lt;p>By default, Vela will use the latest available release of the clone image at the time of a server release.&lt;/p>
 &lt;p>This variable should be provided as a &lt;code>string&lt;/code>.&lt;/p>
+&lt;p>This property can be updated while the server is running using the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/settings">settings component&lt;/a>.&lt;/p>
 &lt;h3 id="vela_compiler_github">VELA_COMPILER_GITHUB&lt;/h3>
 &lt;p>This configuration variable is used by the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/compiler/">compiler component&lt;/a> for the server.&lt;/p>
 &lt;p>Examples using this configuration variable are provided in the above reference documentation.&lt;/p>
@@ -407,6 +414,16 @@ This variable has a default value of &lt;code>8s&lt;/code>.
 &lt;h4 class="alert-heading">Note:&lt;/h4>
 This variable has a default value of &lt;code>3&lt;/code>.
 &lt;/div>
+&lt;p>This property can be updated while the server is running using the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/settings">settings component&lt;/a>.&lt;/p>
+&lt;h3 id="vela_compiler_starlark_exec_limit">VELA_COMPILER_STARLARK_EXEC_LIMIT&lt;/h3>
+&lt;p>This configuration variable is used by the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/compiler">compiler component&lt;/a> for the server.&lt;/p>
+&lt;p>This variable sets the starlark execution step limit for compiling starlark pipelines.&lt;/p>
+&lt;p>The variable can be provided as an &lt;code>integer&lt;/code>.&lt;/p>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+This variable has a default value of &lt;code>7500&lt;/code>.
+&lt;/div>
+&lt;p>This property can be updated while the server is running using the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/settings">settings component&lt;/a>.&lt;/p>
 &lt;h3 id="vela_port">VELA_PORT&lt;/h3>
 &lt;p>This variable sets the port the server API responds on for HTTP requests.&lt;/p>
 &lt;p>The variable can be provided as a &lt;code>string&lt;/code>.&lt;/p>
@@ -438,6 +455,7 @@ This variable has a default value of &lt;code>60s&lt;/code>.
 &lt;h4 class="alert-heading">Note:&lt;/h4>
 This variable has a default value of &lt;code>vela&lt;/code>.
 &lt;/div>
+&lt;p>This property can be updated while the server is running using the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/settings">settings component&lt;/a>.&lt;/p>
 &lt;h3 id="vela_queue_private_key">VELA_QUEUE_PRIVATE_KEY&lt;/h3>
 &lt;p>This variable sets a private key secret for signing queue items that will be opened by the worker&amp;rsquo;s &lt;signing-public-key>.&lt;/p>
 &lt;p>The variable should be provided as a base64 encoded &lt;code>string&lt;/code>.&lt;/p>
@@ -451,6 +469,7 @@ This variable has a default value of &lt;code>vela&lt;/code>.
 &lt;h4 class="alert-heading">Note:&lt;/h4>
 By default, no repositories are allowed to be enabled. To allow any repository to be enabled, provide a single value of &lt;code>*&lt;/code>.
 &lt;/div>
+&lt;p>This property can be updated while the server is running using the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/settings">settings component&lt;/a>.&lt;/p>
 &lt;h3 id="vela_schedule_allowlist">VELA_SCHEDULE_ALLOWLIST&lt;/h3>
 &lt;p>This variable sets a group of repositories, from the SCM, that can create a schedule for a repo on the server.&lt;/p>
 &lt;p>The variable can be provided as a comma-separated &lt;code>list&lt;/code> (i.e. &lt;code>myOrg1/myRepo1,myOrg1/myRepo2,myOrg2/*&lt;/code>).&lt;/p>
@@ -458,6 +477,7 @@ By default, no repositories are allowed to be enabled. To allow any repository t
 &lt;h4 class="alert-heading">Note:&lt;/h4>
 By default, no repositories are allowed to create a schedule. To allow any repository to create a schedule, provide a single value of &lt;code>*&lt;/code>.
 &lt;/div>
+&lt;p>This property can be updated while the server is running using the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/settings">settings component&lt;/a>.&lt;/p>
 &lt;h3 id="vela_schedule_minimum_frequency">VELA_SCHEDULE_MINIMUM_FREQUENCY&lt;/h3>
 &lt;p>This variable sets the minimum frequency allowed to be set for a schedule.&lt;/p>
 &lt;p>The variable can be provided as a &lt;code>duration&lt;/code> (i.e. &lt;code>5s&lt;/code>, &lt;code>10m&lt;/code>).&lt;/p>
