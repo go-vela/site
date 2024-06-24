@@ -122,6 +122,7 @@ The following rules can be used to configure a ruleset:
 | `branch`  | name of branch for a build.                        |
 | `comment` | pull request comment body.                         |
 | `event`   | name of an event for a build.                      |
+| `label`   | pull request label.                                |
 | `path`    | path to workspace files for a build.               |
 | `repo`    | name of the  repo for a build.                     |
 | `status`  | name of status for a build.                        |
@@ -164,7 +165,8 @@ steps:
       # edited for comment. To specify an action, use a ":" as shown below.
       event: [pull_request:opened, comment:created]
 
-      # Note: specifying pull_request is the same as [pull_request:opened, pull_request:synchronized]. 
+      # Note: specifying pull_request is the same as 
+      # [pull_request:opened, pull_request:synchronized, pull_request:reopened]. 
       # Specifying comment is the same as [comment:created, comment:edited]. 
 ```
 
@@ -179,9 +181,25 @@ If you wish to include _all_ event types from an event, you can specify a wildca
 
 ```yaml
     ruleset:
-      event: pull_request*  # will run on opened, reopened, synchronize, and edited
+      event: pull_request*  # will run on opened, reopened, synchronize, edited, labeled, and unlabeled
 ```
 {{% /alert %}}
+
+```yaml
+---
+steps:
+  - name: Labeling a pull request
+    ruleset:
+      # This step will execute if a pull request has been labeled enhancement.
+      event: [ 'pull_request:labeled' ]
+      label: [ 'enhancement' ]
+  - name: Editing a pull request with labels
+    ruleset:
+      # This step will execute if a pull request has been edited AND 
+      # has the labels enhancement or documentation.
+      event: [ 'pull_request:edited' ]
+      label: [ 'enhancement', 'documentation' ]
+```
 
 ```yaml
 ---
