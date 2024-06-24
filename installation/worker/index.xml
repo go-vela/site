@@ -392,6 +392,7 @@ This variable has a default value of &lt;code>60s&lt;/code>.
 &lt;p>This configuration variable is used by the &lt;a href="https://go-vela.github.io/docs/docs/installation/worker/reference/queue/">queue component&lt;/a> for the worker.&lt;/p>
 &lt;p>This variable sets the unique channels or topics to pull workloads from.&lt;/p>
 &lt;p>The variable can be provided as a comma-separated &lt;code>list&lt;/code> (i.e. &lt;code>myRoute1,myRoute2&lt;/code>).&lt;/p>
+&lt;p>The worker will update its own database record using the provided queue routes. If you wish to control worker routes solely using API / Database, supply &lt;code>&amp;quot;&amp;quot;&lt;/code> or &lt;code>&amp;quot;NONE&amp;quot;&lt;/code>.&lt;/p>
 &lt;div class="alert alert-primary" role="alert">
 &lt;h4 class="alert-heading">Note:&lt;/h4>
 This variable has a default value of &lt;code>vela&lt;/code>.
