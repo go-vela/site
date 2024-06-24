@@ -59,7 +59,9 @@ existing entry for the secret.
       "opened": false,
       "edited": false,
       "synchronize": false,
-      "reopened": false
+      "reopened": false,
+      "labeled": false,
+      "unlabeled": false
     },
     "deployment": {
       "created": true
@@ -116,7 +118,9 @@ curl \
       "opened": false,
       "edited": false,
       "synchronize": false,
-      "reopened": false
+      "reopened": false,
+      "labeled": false,
+      "unlabeled": false
     },
     "deployment": {
       "created": true

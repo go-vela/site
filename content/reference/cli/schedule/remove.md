@@ -69,7 +69,7 @@ $ vela remove schedule --org github --repo octocat --schedule hourly
 #### Response
 
 ```sh
-schedule "hourly" was deleted
+schedule hourly deleted
 ```
 
 ## Examples
