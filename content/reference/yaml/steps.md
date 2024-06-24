@@ -367,6 +367,19 @@ steps:
           build: "go build ./..."  
 ```
 
+#### The `report_as` tag
+
+```yaml
+---
+steps:
+  # publish custom status for commit with `test suite` as the context
+  - report_as: test suite
+```
+
+{{% alert color="info" %}}
+A pipeline can have up to 10 steps that report their own status.
+{{% /alert %}}
+
 #### The `entrypoint:` tag
 
 ```yaml
