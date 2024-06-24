@@ -1,0 +1,425 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Dashboard</title><link>https://go-vela.github.io/docs/reference/cli/dashboard/</link><description>Recent content in Dashboard on Vela</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://go-vela.github.io/docs/reference/cli/dashboard/index.xml" rel="self" type="application/rss+xml"/><item><title>Reference: Add</title><link>https://go-vela.github.io/docs/reference/cli/dashboard/add/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/cli/dashboard/add/</guid><description>
+&lt;h2 id="command">Command&lt;/h2>
+&lt;pre tabindex="0">&lt;code>$ vela add dashboard &amp;lt;parameters...&amp;gt; &amp;lt;arguments...&amp;gt;
+&lt;/code>&lt;/pre>
+&lt;div class="alert alert-info" role="alert">
+For more information, you can run &lt;code>vela add dashboard --help&lt;/code>.
+&lt;/div>
+&lt;h2 id="parameters">Parameters&lt;/h2>
+&lt;p>The following parameters are used to configure the command:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Environment Variables&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>name&lt;/code>&lt;/td>
+&lt;td>name for the dashboard&lt;/td>
+&lt;td>&lt;code>VELA_DASHBOARD_NAME&lt;/code>, &lt;code>DASHBOARD_NAME&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>repos&lt;/code>&lt;/td>
+&lt;td>list of repositories (org/repo) for the dashboard&lt;/td>
+&lt;td>&lt;code>VELA_DASHBOARD_REPOS&lt;/code>, &lt;code>DASHBOARD_REPOS&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>branches&lt;/code>&lt;/td>
+&lt;td>filter builds in all repositories by branch&lt;/td>
+&lt;td>&lt;code>VELA_DASHBOARD_REPOS_BRANCH&lt;/code>, &lt;code>DASHBOARD_REPOS_BRANCH&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>events&lt;/code>&lt;/td>
+&lt;td>filter builds in all repositories by event&lt;/td>
+&lt;td>&lt;code>VELA_DASHBOARD_REPOS_EVENT&lt;/code>, &lt;code>DASHBOARD_REPOS_EVENT&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>admins&lt;/code>&lt;/td>
+&lt;td>provide the list of admins for the dashboard&lt;/td>
+&lt;td>&lt;code>VELA_DASHBOARD_ADMINS&lt;/code>, &lt;code>DASHBOARD_ADMINS&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>output&lt;/code>&lt;/td>
+&lt;td>format the output for the dashboard&lt;/td>
+&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>REPO_OUTPUT&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;div class="alert alert-info" role="alert">
+&lt;p>This command also supports setting the following parameters via a configuration file:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>output&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>For more information, please review the &lt;a href="https://go-vela.github.io/docs/docs/reference/cli/config/">CLI config documentation&lt;/a>.&lt;/p>
+&lt;/div>
+&lt;h2 id="sample">Sample&lt;/h2>
+&lt;div class="alert alert-warning" role="alert">
+&lt;p>This section assumes you have already installed and setup the CLI.&lt;/p>
+&lt;p>To install the CLI, please review the &lt;a href="https://go-vela.github.io/docs/docs/reference/cli/install/">installation documentation&lt;/a>.&lt;/p>
+&lt;p>To setup the CLI, please review the &lt;a href="https://go-vela.github.io/docs/docs/reference/cli/authentication/">authentication documentation&lt;/a>.&lt;/p>
+&lt;/div>
+&lt;h4 id="request">Request&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>$ vela add dashboard --name &lt;span style="color:#4e9a06">&amp;#39;Octocat Main Branches&amp;#39;&lt;/span> --repos octocat/Hello-World,octocat/Spoon-Knife --branches main
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="response">Response&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Name: Octocat Main Branches,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ID: d3040cd7-9bb6-45d1-a2a1-d794483a902c,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Admins: &lt;span style="color:#ce5c00;font-weight:bold">[{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Active: true,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Admin: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Dashboards: &lt;span style="color:#ce5c00;font-weight:bold">[]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Favorites: &lt;span style="color:#ce5c00;font-weight:bold">[]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ID: 1,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Name: octokitty,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Token: ,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> CreatedAt: 1716572402,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> CreatedBy: octokitty,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> UpdatedAt: 1716572402,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> UpdatedBy: octokitty,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Repos: &lt;span style="color:#ce5c00;font-weight:bold">[{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Name: octocat/Hello-World,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ID: 1,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Branches: &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>main&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Events: &lt;span style="color:#ce5c00;font-weight:bold">[]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Name: octocat/Spoon-Knife,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ID: 2,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Branches: &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>main&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Events: &lt;span style="color:#ce5c00;font-weight:bold">[]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="examples">Examples&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>EXAMPLES:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1. Add a dashboard.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $ vela add dashboard --name my-dashboard
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2. Add a dashboard with repositories.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $ vela add dashboard --name my-dashboard --repos Org-1/Repo-1,Org-2/Repo-2
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3. Add a dashboard with repositories filtering builds by pushes to main.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $ vela add dashboard --name my-dashboard --repos Org-1/Repo-1,Org-2/Repo-2 --branch main --event push
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4. Add a dashboard with multiple admins.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $ vela add dashboard --name my-dashboard --admins JohnDoe,JaneDoe
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Reference: Get</title><link>https://go-vela.github.io/docs/reference/cli/dashboard/get/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/cli/dashboard/get/</guid><description>
+&lt;h2 id="command">Command&lt;/h2>
+&lt;pre tabindex="0">&lt;code>$ vela get dashboard &amp;lt;parameters...&amp;gt; &amp;lt;arguments...&amp;gt;
+&lt;/code>&lt;/pre>
+&lt;div class="alert alert-info" role="alert">
+For more information, you can run &lt;code>vela get dashboard --help&lt;/code>.
+&lt;/div>
+&lt;h2 id="parameters">Parameters&lt;/h2>
+&lt;p>The following parameters are used to configure the command:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Environment Variables&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>full&lt;/code>&lt;/td>
+&lt;td>output the repo and build information for the dashboard&lt;/td>
+&lt;td>&lt;code>VELA_FULL&lt;/code>, &lt;code>DASHBOARD_FULL&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>output&lt;/code>&lt;/td>
+&lt;td>format the output for dashboards&lt;/td>
+&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>DASHBOARD_OUTPUT&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;div class="alert alert-info" role="alert">
+&lt;p>This command also supports setting the following parameters via a configuration file:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>output&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>For more information, please review the &lt;a href="https://go-vela.github.io/docs/docs/reference/cli/config/">CLI config documentation&lt;/a>.&lt;/p>
+&lt;/div>
+&lt;h2 id="sample">Sample&lt;/h2>
+&lt;div class="alert alert-warning" role="alert">
+&lt;p>This section assumes you have already installed and setup the CLI.&lt;/p>
+&lt;p>To install the CLI, please review the &lt;a href="https://go-vela.github.io/docs/docs/reference/cli/install/">installation documentation&lt;/a>.&lt;/p>
+&lt;p>To setup the CLI, please review the &lt;a href="https://go-vela.github.io/docs/docs/reference/cli/authentication/">authentication documentation&lt;/a>.&lt;/p>
+&lt;/div>
+&lt;h4 id="request">Request&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>$ vela get dashboard
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="response">Response&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">[{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Name: Octocat Main Branches,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ID: 59376e53-879f-478e-b6d2-b8aefe219c6d,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Admins: &lt;span style="color:#ce5c00;font-weight:bold">[{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Active: true,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Admin: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Dashboards: &lt;span style="color:#ce5c00;font-weight:bold">[]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Favorites: &lt;span style="color:#ce5c00;font-weight:bold">[]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ID: 1,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Name: octokitty,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Token: ,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> CreatedAt: 1715117480,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> CreatedBy: octokitty,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> UpdatedAt: 1715117480,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> UpdatedBy: octokitty,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Repos: &lt;span style="color:#ce5c00;font-weight:bold">[{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Name: octocat/Hello-World,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ID: 1,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Branches: &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>main&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Events: &lt;span style="color:#ce5c00;font-weight:bold">[]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Name: octocat/Spoon-Knife,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ID: 2,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Branches: &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>main&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Events: &lt;span style="color:#ce5c00;font-weight:bold">[]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Name: Octocat PR Events,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ID: 0ebb9f01-389c-4a0f-b301-6bf2f9a0fe3b,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Admins: &lt;span style="color:#ce5c00;font-weight:bold">[{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Active: true,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Admin: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Dashboards: &lt;span style="color:#ce5c00;font-weight:bold">[]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Favorites: &lt;span style="color:#ce5c00;font-weight:bold">[]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ID: 1,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Name: octokitty,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Token: ,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> CreatedAt: 1716397739,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> CreatedBy: octokitty,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> UpdatedAt: 1716397739,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> UpdatedBy: octokitty,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Repos: &lt;span style="color:#ce5c00;font-weight:bold">[{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Name: octocat/Hello-World,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ID: 1,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Branches: &lt;span style="color:#ce5c00;font-weight:bold">[]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Events: &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>pull_request&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Name: octocat/Spoon-Knife,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ID: 2,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Branches: &lt;span style="color:#ce5c00;font-weight:bold">[]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Events: &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>pull_request&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}]&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="examples">Examples&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>EXAMPLES:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1. Get user dashboards.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $ vela get dashboard
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2. Get user dashboards with repo and build information.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $ vela get dashboard --full
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Reference: Update</title><link>https://go-vela.github.io/docs/reference/cli/dashboard/update/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/cli/dashboard/update/</guid><description>
+&lt;h2 id="command">Command&lt;/h2>
+&lt;pre tabindex="0">&lt;code>$ vela update dashboard &amp;lt;parameters...&amp;gt; &amp;lt;arguments...&amp;gt;
+&lt;/code>&lt;/pre>
+&lt;div class="alert alert-info" role="alert">
+For more information, you can run &lt;code>vela update dashboard --help&lt;/code>.
+&lt;/div>
+&lt;h2 id="parameters">Parameters&lt;/h2>
+&lt;p>The following parameters are used to configure the command:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Environment Variables&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>id&lt;/code>&lt;/td>
+&lt;td>uuid for the dashboard&lt;/td>
+&lt;td>&lt;code>VELA_DASHBOARD_ID&lt;/code>, &lt;code>DASHBOARD_ID&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>name&lt;/code>&lt;/td>
+&lt;td>name for the dashboard&lt;/td>
+&lt;td>&lt;code>VELA_DASHBOARD_NAME&lt;/code>, &lt;code>DASHBOARD_NAME&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>add-repos&lt;/code>&lt;/td>
+&lt;td>list of repositories to add for the dashboard&lt;/td>
+&lt;td>&lt;code>VELA_DASHBOARD_ADD_REPOS&lt;/code>, &lt;code>DASHBOARD_ADD_REPOS&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>drop-repos&lt;/code>&lt;/td>
+&lt;td>list of repositories to remove from the dashboard&lt;/td>
+&lt;td>&lt;code>VELA_DASHBOARD_DROP_REPOS&lt;/code>, &lt;code>DASHBOARD_DROP_REPOS&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>target-repos&lt;/code>&lt;/td>
+&lt;td>list of repositories to target for updates for the dashboard&lt;/td>
+&lt;td>&lt;code>VELA_DASHBOARD_TARGET_REPOS&lt;/code>, &lt;code>DASHBOARD_TARGET_REPOS&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>add-admins&lt;/code>&lt;/td>
+&lt;td>list of admins to add for the dashboard&lt;/td>
+&lt;td>&lt;code>VELA_DASHBOARD_ADD_ADMINS&lt;/code>, &lt;code>DASHBOARD_ADD_ADMINS&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>drop-admins&lt;/code>&lt;/td>
+&lt;td>list of admins to remove from the dashboard&lt;/td>
+&lt;td>&lt;code>VELA_DASHBOARD_DROP_ADMINS&lt;/code>, &lt;code>DASHBOARD_DROP_ADMINS&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>branches&lt;/code>&lt;/td>
+&lt;td>filter builds in all repositories by branch&lt;/td>
+&lt;td>&lt;code>VELA_DASHBOARD_REPOS_BRANCH&lt;/code>, &lt;code>DASHBOARD_REPOS_BRANCH&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>events&lt;/code>&lt;/td>
+&lt;td>filter builds in all repositories by event&lt;/td>
+&lt;td>&lt;code>VELA_DASHBOARD_REPOS_EVENT&lt;/code>, &lt;code>DASHBOARD_REPOS_EVENT&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>output&lt;/code>&lt;/td>
+&lt;td>format the output for the dashboard&lt;/td>
+&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>DASHBOARD_OUTPUT&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;div class="alert alert-info" role="alert">
+&lt;p>This command also supports setting the following parameters via a configuration file:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>output&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>For more information, please review the &lt;a href="https://go-vela.github.io/docs/docs/reference/cli/config/">CLI config documentation&lt;/a>.&lt;/p>
+&lt;/div>
+&lt;h2 id="sample">Sample&lt;/h2>
+&lt;div class="alert alert-warning" role="alert">
+&lt;p>This section assumes you have already installed and setup the CLI.&lt;/p>
+&lt;p>To install the CLI, please review the &lt;a href="https://go-vela.github.io/docs/docs/reference/cli/install/">installation documentation&lt;/a>.&lt;/p>
+&lt;p>To setup the CLI, please review the &lt;a href="https://go-vela.github.io/docs/docs/reference/cli/authentication/">authentication documentation&lt;/a>.&lt;/p>
+&lt;/div>
+&lt;h4 id="request">Request&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>$ vela update dashboard --id d3040cd7-9bb6-45d1-a2a1-d794483a902c --name &lt;span style="color:#4e9a06">&amp;#39;Octocat Dev Branches&amp;#39;&lt;/span> --target-repos octocat/Hello-world,octocat/Spoon-Knife --branches dev
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="response">Response&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Name: Octocat Dev Branches,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ID: d3040cd7-9bb6-45d1-a2a1-d794483a902c,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Admins: &lt;span style="color:#ce5c00;font-weight:bold">[{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Active: true,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Admin: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Dashboards: &lt;span style="color:#ce5c00;font-weight:bold">[]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Favorites: &lt;span style="color:#ce5c00;font-weight:bold">[]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ID: 1,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Name: octokitty,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Token: ,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> CreatedAt: 1716572402,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> CreatedBy: octokitty,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> UpdatedAt: 1716572402,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> UpdatedBy: octokitty,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Repos: &lt;span style="color:#ce5c00;font-weight:bold">[{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Name: octocat/Hello-World,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ID: 1,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Branches: &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>dev&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Events: &lt;span style="color:#ce5c00;font-weight:bold">[]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Name: octocat/Spoon-Knife,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ID: 2,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Branches: &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>dev&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Events: &lt;span style="color:#ce5c00;font-weight:bold">[]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="examples">Examples&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>EXAMPLES:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1. Update a dashboard to add a repository.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $ vela update dashboard --id c8da1302-07d6-11ea-882f-4893bca275b8 --add-repos Org-1/Repo-1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2. Update a dashboard to remove a repository.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $ vela update dashboard --id c8da1302-07d6-11ea-882f-4893bca275b8 --drop-repos Org-1/Repo-1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3. Update a dashboard to add event and branch filters to specific repositories.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $ vela update dashboard --id c8da1302-07d6-11ea-882f-4893bca275b8 --target-repos Org-1/Repo-1,Org-2/Repo-2 --branches main --events push
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4. Update a dashboard to change the name.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $ vela update dashboard --id c8da1302-07d6-11ea-882f-4893bca275b8 --name MyDashboard
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5. Update a dashboard to add an admin.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $ vela update dashboard --id c8da1302-07d6-11ea-882f-4893bca275b8 --add-admins JohnDoe
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 6. Update a dashboard to remove an admin.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $ vela update dashboard --id c8da1302-07d6-11ea-882f-4893bca275b8 --drop-admins JohnDoe
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Reference: View</title><link>https://go-vela.github.io/docs/reference/cli/dashboard/view/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/cli/dashboard/view/</guid><description>
+&lt;h2 id="command">Command&lt;/h2>
+&lt;pre tabindex="0">&lt;code>$ vela view dashboard &amp;lt;parameters...&amp;gt; &amp;lt;arguments...&amp;gt;
+&lt;/code>&lt;/pre>
+&lt;div class="alert alert-info" role="alert">
+For more information, you can run &lt;code>vela view dashboard --help&lt;/code>.
+&lt;/div>
+&lt;h2 id="parameters">Parameters&lt;/h2>
+&lt;p>The following parameters are used to configure the command:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Environment Variables&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>id&lt;/code>&lt;/td>
+&lt;td>uuid for the dashboard&lt;/td>
+&lt;td>&lt;code>VELA_DASHBOARD_ID&lt;/code>, &lt;code>DASHBOARD_ID&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>full&lt;/code>&lt;/td>
+&lt;td>output the repo and build information for the dashboard&lt;/td>
+&lt;td>&lt;code>VELA_FULL&lt;/code>, &lt;code>DASHBOARD_FULL&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>output&lt;/code>&lt;/td>
+&lt;td>format the output for the dashboard&lt;/td>
+&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>REPO_OUTPUT&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;div class="alert alert-info" role="alert">
+&lt;p>This command also supports setting the following parameters via a configuration file:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>output&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>For more information, please review the &lt;a href="https://go-vela.github.io/docs/docs/reference/cli/config/">CLI config documentation&lt;/a>.&lt;/p>
+&lt;/div>
+&lt;h2 id="sample">Sample&lt;/h2>
+&lt;div class="alert alert-warning" role="alert">
+&lt;p>This section assumes you have already installed and setup the CLI.&lt;/p>
+&lt;p>To install the CLI, please review the &lt;a href="https://go-vela.github.io/docs/docs/reference/cli/install/">installation documentation&lt;/a>.&lt;/p>
+&lt;p>To setup the CLI, please review the &lt;a href="https://go-vela.github.io/docs/docs/reference/cli/authentication/">authentication documentation&lt;/a>.&lt;/p>
+&lt;/div>
+&lt;h4 id="request">Request&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>$ vela view dashboard --id d3040cd7-9bb6-45d1-a2a1-d794483a902c
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="response">Response&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Name: Octocat Main Branches,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ID: d3040cd7-9bb6-45d1-a2a1-d794483a902c,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Admins: &lt;span style="color:#ce5c00;font-weight:bold">[{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Active: true,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Admin: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Dashboards: &lt;span style="color:#ce5c00;font-weight:bold">[]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Favorites: &lt;span style="color:#ce5c00;font-weight:bold">[]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ID: 1,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Name: octokitty,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Token: ,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> CreatedAt: 1716572402,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> CreatedBy: octokitty,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> UpdatedAt: 1716572402,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> UpdatedBy: octokitty,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Repos: &lt;span style="color:#ce5c00;font-weight:bold">[{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Name: octocat/Hello-World,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ID: 1,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Branches: &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>main&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Events: &lt;span style="color:#ce5c00;font-weight:bold">[]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Name: octocat/Spoon-Knife,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ID: 2,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Branches: &lt;span style="color:#ce5c00;font-weight:bold">[&lt;/span>main&lt;span style="color:#ce5c00;font-weight:bold">]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Events: &lt;span style="color:#ce5c00;font-weight:bold">[]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="examples">Examples&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>EXAMPLES:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1. View a dashboard.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $ vela view dashboard --id c8da1302-07d6-11ea-882f-4893bca275b8
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2. View a dashboard with repo and build information.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $ vela view dashboard --id c8da1302-07d6-11ea-882f-4893bca275b8 --full
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>
