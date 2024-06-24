@@ -68,19 +68,72 @@ For more information, you can run &lt;code>vela add schedule --help&lt;/code>.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>~/github/octocat
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ vela add schedule --schedule hourly --entry &lt;span style="color:#4e9a06">&amp;#39;0 * * * *&amp;#39;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="targeted-request">Targeted Request&lt;/h4>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>$ vela add schedule --org github --repo octocat --schedule hourly --entry &lt;span style="color:#4e9a06">&amp;#39;0 * * * *&amp;#39;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>$ vela add schedule --org github --repo octocat --schedule hourly --entry &lt;span style="color:#4e9a06">&amp;#39;0 * * * *&amp;#39;&lt;/span> --output json
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="response">Response&lt;/h4>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Active: true,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> CreatedAt: 1641314085,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> CreatedBy: octokitty,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Entry: &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span> * * * *,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ID: 1,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Name: hourly,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> RepoID: 1,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ScheduledAt: 0,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> UpdatedAt: 1641314085,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> UpdatedBy: octokitty,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;id&amp;#34;&lt;/span>: 1,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;repo&amp;#34;&lt;/span>: &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;id&amp;#34;&lt;/span>: 1,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;owner&amp;#34;&lt;/span>: &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;id&amp;#34;&lt;/span>: 1,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;octokitty&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;active&amp;#34;&lt;/span>: &lt;span style="color:#204a87">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;org&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;github&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;octokitty&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;full_name&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;github/octokitty&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;link&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;https://github.com/github/octokitty&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;clone&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;https://github.com/github/octokitty.git&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;branch&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;main&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;topics&amp;#34;&lt;/span>: &lt;span style="color:#ce5c00;font-weight:bold">[]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;build_limit&amp;#34;&lt;/span>: 10,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;timeout&amp;#34;&lt;/span>: 30,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;counter&amp;#34;&lt;/span>: 0,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;visibility&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;public&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;private&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;trusted&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;active&amp;#34;&lt;/span>: true,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;allow_events&amp;#34;&lt;/span>: &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;push&amp;#34;&lt;/span>: &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;branch&amp;#34;&lt;/span>: true,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;tag&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;delete_branch&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;delete_tag&amp;#34;&lt;/span>: &lt;span style="color:#204a87">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;pull_request&amp;#34;&lt;/span>: &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;opened&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;edited&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;synchronize&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;reopened&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;labeled&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;unlabeled&amp;#34;&lt;/span>: &lt;span style="color:#204a87">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;deployment&amp;#34;&lt;/span>: &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;created&amp;#34;&lt;/span>: &lt;span style="color:#204a87">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;comment&amp;#34;&lt;/span>: &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;created&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;edited&amp;#34;&lt;/span>: &lt;span style="color:#204a87">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;schedule&amp;#34;&lt;/span>: &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;run&amp;#34;&lt;/span>: &lt;span style="color:#204a87">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;pipeline_type&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;yaml&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;previous_name&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;approve_build&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;fork-always&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;active&amp;#34;&lt;/span>: true,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;hourly&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;entry&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;0 * * * *&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;created_at&amp;#34;&lt;/span>: 1716495910,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;created_by&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;octokitty&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;updated_at&amp;#34;&lt;/span>: 1716495910,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;updated_by&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;octokitty&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;scheduled_at&amp;#34;&lt;/span>: 0,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;branch&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;main&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;error&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;next_run&amp;#34;&lt;/span>: &lt;span style="color:#0000cf;font-weight:bold">1716499800&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="examples">Examples&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>EXAMPLES:
@@ -159,9 +212,9 @@ For more information, you can run &lt;code>vela get schedule --help&lt;/code>.
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="targeted-request">Targeted Request&lt;/h4>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>$ vela get schedule --org github --repo octocat
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="response">Response&lt;/h4>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>NAME ENTRY ACTIVE SCHEDULED_AT
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nightly &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span> * * * &lt;span style="color:#204a87">true&lt;/span> a second ago
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hourly &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span> * * * * &lt;span style="color:#204a87">true&lt;/span> a second ago
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>NAME ENTRY ACTIVE SCHEDULED_AT BRANCH
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nightly &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span> * * * &lt;span style="color:#204a87">true&lt;/span> a long &lt;span style="color:#204a87;font-weight:bold">while&lt;/span> ago main
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>hourly &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span> * * * * &lt;span style="color:#204a87">true&lt;/span> a long &lt;span style="color:#204a87;font-weight:bold">while&lt;/span> ago main
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="examples">Examples&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>EXAMPLES:
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1. Get a list of schedules &lt;span style="color:#204a87;font-weight:bold">for&lt;/span> a repository.
@@ -240,7 +293,7 @@ For more information, you can run &lt;code>vela remove schedule --help&lt;/code>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>~/github/octocat
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ vela remove schedule --org github --repo octocat --schedule hourly
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="response">Response&lt;/h4>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>schedule &lt;span style="color:#4e9a06">&amp;#34;hourly&amp;#34;&lt;/span> was deleted
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>schedule hourly deleted
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="examples">Examples&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>EXAMPLES:
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1. Remove a schedule from a repository.
@@ -321,19 +374,72 @@ For more information, you can run &lt;code>vela update schedule --help&lt;/code>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>~/github/octocat
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ vela update schedule --name hourly --active &lt;span style="color:#204a87">false&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="targeted-request">Targeted Request&lt;/h4>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>$ vela update schedule --org github --repo octocat --name hourly --active &lt;span style="color:#204a87">false&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>$ vela update schedule --org github --repo octocat --name hourly --active &lt;span style="color:#204a87">false&lt;/span> --output json
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="response">Response&lt;/h4>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Active: false,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> CreatedAt: 1641314085,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> CreatedBy: octokitty,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Entry: &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span> * * * *,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ID: 1,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Name: hourly,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> RepoID: 1,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ScheduledAt: 0,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> UpdatedAt: 1641314086,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> UpdatedBy: octokitty,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;id&amp;#34;&lt;/span>: 1,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;repo&amp;#34;&lt;/span>: &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;id&amp;#34;&lt;/span>: 1,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;owner&amp;#34;&lt;/span>: &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;id&amp;#34;&lt;/span>: 1,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;octokitty&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;active&amp;#34;&lt;/span>: &lt;span style="color:#204a87">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;org&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;github&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;octokitty&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;full_name&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;github/octokitty&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;link&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;https://github.com/github/octokitty&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;clone&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;https://github.com/github/octokitty.git&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;branch&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;main&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;topics&amp;#34;&lt;/span>: &lt;span style="color:#ce5c00;font-weight:bold">[]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;build_limit&amp;#34;&lt;/span>: 10,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;timeout&amp;#34;&lt;/span>: 30,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;counter&amp;#34;&lt;/span>: 0,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;visibility&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;public&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;private&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;trusted&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;active&amp;#34;&lt;/span>: true,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;allow_events&amp;#34;&lt;/span>: &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;push&amp;#34;&lt;/span>: &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;branch&amp;#34;&lt;/span>: true,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;tag&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;delete_branch&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;delete_tag&amp;#34;&lt;/span>: &lt;span style="color:#204a87">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;pull_request&amp;#34;&lt;/span>: &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;opened&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;edited&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;synchronize&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;reopened&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;labeled&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;unlabeled&amp;#34;&lt;/span>: &lt;span style="color:#204a87">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;deployment&amp;#34;&lt;/span>: &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;created&amp;#34;&lt;/span>: &lt;span style="color:#204a87">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;comment&amp;#34;&lt;/span>: &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;created&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;edited&amp;#34;&lt;/span>: &lt;span style="color:#204a87">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;schedule&amp;#34;&lt;/span>: &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;run&amp;#34;&lt;/span>: &lt;span style="color:#204a87">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;pipeline_type&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;yaml&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;previous_name&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;approve_build&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;fork-always&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;active&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;hourly&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;entry&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;0 * * * *&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;created_at&amp;#34;&lt;/span>: 1716495910,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;created_by&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;octokitty&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;updated_at&amp;#34;&lt;/span>: 1716495910,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;updated_by&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;octokitty&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;scheduled_at&amp;#34;&lt;/span>: 0,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;branch&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;main&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;error&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;next_run&amp;#34;&lt;/span>: &lt;span style="color:#0000cf;font-weight:bold">1716499800&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="examples">Examples&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>EXAMPLES:
@@ -403,19 +509,72 @@ For more information, you can run &lt;code>vela view schedule --help&lt;/code>.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>~/github/octocat
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ vela view schedule --schedule hourly
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="targeted-request">Targeted Request&lt;/h4>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>$ vela view schedule --org github --repo octocat --schedule hourly
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>$ vela view schedule --org github --repo octocat --schedule hourly --output json
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="response">Response&lt;/h4>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Active: true,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> CreatedAt: 1641314085,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> CreatedBy: octokitty,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Entry: &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span> * * * *,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ID: 1,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Name: hourly,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> RepoID: 1,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ScheduledAt: 0,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> UpdatedAt: 1641314085,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> UpdatedBy: octokitty,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;id&amp;#34;&lt;/span>: 1,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;repo&amp;#34;&lt;/span>: &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;id&amp;#34;&lt;/span>: 1,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;owner&amp;#34;&lt;/span>: &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;id&amp;#34;&lt;/span>: 1,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;octokitty&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;active&amp;#34;&lt;/span>: &lt;span style="color:#204a87">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;org&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;github&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;octokitty&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;full_name&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;github/octokitty&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;link&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;https://github.com/github/octokitty&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;clone&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;https://github.com/github/octokitty.git&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;branch&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;main&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;topics&amp;#34;&lt;/span>: &lt;span style="color:#ce5c00;font-weight:bold">[]&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;build_limit&amp;#34;&lt;/span>: 10,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;timeout&amp;#34;&lt;/span>: 30,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;counter&amp;#34;&lt;/span>: 0,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;visibility&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;public&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;private&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;trusted&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;active&amp;#34;&lt;/span>: true,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;allow_events&amp;#34;&lt;/span>: &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;push&amp;#34;&lt;/span>: &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;branch&amp;#34;&lt;/span>: true,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;tag&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;delete_branch&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;delete_tag&amp;#34;&lt;/span>: &lt;span style="color:#204a87">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;pull_request&amp;#34;&lt;/span>: &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;opened&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;edited&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;synchronize&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;reopened&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;labeled&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;unlabeled&amp;#34;&lt;/span>: &lt;span style="color:#204a87">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;deployment&amp;#34;&lt;/span>: &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;created&amp;#34;&lt;/span>: &lt;span style="color:#204a87">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;comment&amp;#34;&lt;/span>: &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;created&amp;#34;&lt;/span>: false,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;edited&amp;#34;&lt;/span>: &lt;span style="color:#204a87">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;schedule&amp;#34;&lt;/span>: &lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;run&amp;#34;&lt;/span>: &lt;span style="color:#204a87">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;pipeline_type&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;yaml&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;previous_name&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;approve_build&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;fork-always&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;active&amp;#34;&lt;/span>: true,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;hourly&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;entry&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;0 * * * *&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;created_at&amp;#34;&lt;/span>: 1716495910,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;created_by&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;octokitty&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;updated_at&amp;#34;&lt;/span>: 1716495910,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;updated_by&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;octokitty&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;scheduled_at&amp;#34;&lt;/span>: 0,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;branch&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;main&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;error&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4e9a06">&amp;#34;next_run&amp;#34;&lt;/span>: &lt;span style="color:#0000cf;font-weight:bold">1716499800&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="examples">Examples&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>EXAMPLES:
