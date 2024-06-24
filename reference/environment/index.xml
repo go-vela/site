@@ -638,6 +638,11 @@ The following table includes variables only available during the &lt;strong>tag&
 &lt;td>number of the step executed within the pipeline&lt;/td>
 &lt;/tr>
 &lt;tr>
+&lt;td>&lt;code>VELA_STEP_REPORT_AS&lt;/code>&lt;/td>
+&lt;td>&lt;code>cypress tests&lt;/code>&lt;/td>
+&lt;td>context to which to publish for the commit that reflects step status&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>&lt;code>VELA_STEP_RUNTIME&lt;/code>&lt;/td>
 &lt;td>&lt;code>docker&lt;/code>&lt;/td>
 &lt;td>runtime where the step was executed&lt;/td>
