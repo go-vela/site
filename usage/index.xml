@@ -1348,6 +1348,14 @@ If you&amp;rsquo;re coming from another CI platform you can set a starting build
 &lt;td>a pull request has been edited (title, description, target branch, etc)&lt;/td>
 &lt;/tr>
 &lt;tr>
+&lt;td>&lt;code>pull_request:labeled&lt;/code>&lt;/td>
+&lt;td>a pull request has been labeled&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>pull_request:unlabeled&lt;/code>&lt;/td>
+&lt;td>a pull request has been unlabeled&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>&lt;code>deployment:created&lt;/code>&lt;/td>
 &lt;td>a deployment is created for the repository&lt;/td>
 &lt;/tr>
