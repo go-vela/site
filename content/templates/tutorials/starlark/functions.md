@@ -32,6 +32,8 @@ twice("two")            # "twotwo"
 
 > Finally, there may be an optional parameter name preceded by **. This is called the keyword arguments parameter, and accumulates in a dictionary any surplus name=value arguments that do not match a prior parameter.
 
+The limitation on _how many_ steps can be used is determined by the `VELA_COMPILER_STARLARK_EXEC_LIMIT` flag set by platform administrators.
+
 ## Sample
 
 Let's take a look at using a function within a template:

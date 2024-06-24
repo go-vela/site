@@ -144,19 +144,20 @@ The following table includes variables only available during the **tag** event.
 
 The following environment variables are **only** injected into every step container.
 
-| Key                      | Value                    | Explanation                                                        |
-| ------------------------ | ------------------------ | ------------------------------------------------------------------ |
-| `VELA_STEP_CREATED`      | `1556720958`             | unix timestamp representing step creation time                     |
-| `VELA_STEP_DISTRIBUTION` | `linux`                  | distribution where the step was executed                           |
-| `VELA_STEP_EXIT_CODE`    | `0`                      | exit code of the step when container starts                        |
-| `VELA_STEP_HOST`         | `vela-worker-1`          | fully qualified domain name of the worker the step was executed on |
-| `VELA_STEP_IMAGE`        | `target/vela-git:latest` | name of the image executed                                         |
-| `VELA_STEP_NAME`         | `clone`                  | name of the step                                                   |
-| `VELA_STEP_NUMBER`       | `1`                      | number of the step executed within the pipeline                    |
-| `VELA_STEP_RUNTIME`      | `docker`                 | runtime where the step was executed                               |
-| `VELA_STEP_STAGE`        | `clone`                  | name of the stage the step belongs to within the pipeline          |
-| `VELA_STEP_STARTED`      | `1556730001`             | unix timestamp representing step start time                       |
-| `VELA_STEP_STATUS`       | `success`                | status of the step                                                 |
+| Key                      | Value                    | Explanation                                                          |
+| ------------------------ | ------------------------ | ------------------------------------------------------------------- |
+| `VELA_STEP_CREATED`      | `1556720958`             | unix timestamp representing step creation time                       |
+| `VELA_STEP_DISTRIBUTION` | `linux`                  | distribution where the step was executed                             |
+| `VELA_STEP_EXIT_CODE`    | `0`                      | exit code of the step when container starts                          |
+| `VELA_STEP_HOST`         | `vela-worker-1`          | fully qualified domain name of the worker the step was executed on   |
+| `VELA_STEP_IMAGE`        | `target/vela-git:latest` | name of the image executed                                           |
+| `VELA_STEP_NAME`         | `clone`                  | name of the step                                                     |
+| `VELA_STEP_NUMBER`       | `1`                      | number of the step executed within the pipeline                      |
+| `VELA_STEP_REPORT_AS`    | `cypress tests`          | context to which to publish for the commit that reflects step status |
+| `VELA_STEP_RUNTIME`      | `docker`                 | runtime where the step was executed                                  |
+| `VELA_STEP_STAGE`        | `clone`                  | name of the stage the step belongs to within the pipeline            |
+| `VELA_STEP_STARTED`      | `1556730001`             | unix timestamp representing step start time                          |
+| `VELA_STEP_STATUS`       | `success`                | status of the step                                                   |
 
 ## Service Only Defaults
 
