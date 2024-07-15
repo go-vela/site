@@ -49,7 +49,7 @@ steps:
       commands:
         - >
             AUTH_TOKEN=$(curl -H "Authorization: Bearer $VELA_ID_TOKEN_REQUEST_TOKEN"
-            "$VELA_ID_TOKEN_REQUEST_URL&audience=artifactory" |
+            "$VELA_ID_TOKEN_REQUEST_URL?audience=artifactory" |
             jq -r '.value')
         - >
             REQ=$(curl -s -X POST -H "Token: $AUTH_TOKEN"
