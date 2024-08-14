@@ -2319,6 +2319,9 @@ Users should refrain from configuring sensitive information in their pipeline in
 &lt;blockquote>
 &lt;p>&lt;strong>NOTE:&lt;/strong> Users should refrain from configuring sensitive information in your pipeline in plain text.&lt;/p>
 &lt;/blockquote>
+&lt;p>A personal access token for the related source control manager (GitHub, GitLab, etc.) is required.&lt;/p>
+&lt;p>The token must be tied to a user that exists in Vela, that is, the user has logged into Vela at least once.
+Additionally, the user must have &lt;code>write&lt;/code> access to both the origin repo as well as any downstream repos.&lt;/p>
 &lt;h3 id="internal">Internal&lt;/h3>
 &lt;p>Users can use &lt;a href="https://go-vela.github.io/docs/tour/secrets/">Vela internal secrets&lt;/a> to substitute these sensitive values at runtime:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-diff" data-lang="diff">&lt;span style="display:flex;">&lt;span>steps:
@@ -2428,7 +2431,7 @@ Users should refrain from configuring sensitive information in their pipeline in
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;code>token&lt;/code>&lt;/td>
-&lt;td>token for communication with Vela&lt;/td>
+&lt;td>SCM (GitHub, GitLab, etc.) personal access token of an existing Vela user&lt;/td>
 &lt;td>&lt;code>true&lt;/code>&lt;/td>
 &lt;td>&lt;code>N/A&lt;/code>&lt;/td>
 &lt;td>&lt;code>PARAMETER_TOKEN&lt;/code>&lt;br>&lt;code>DOWNSTREAM_TOKEN&lt;/code>&lt;/td>
@@ -2476,7 +2479,14 @@ Users should refrain from configuring sensitive information in their pipeline in
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">&lt;/span> repos:
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - octocat/hello-world
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> server: https://vela-server.localhost
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Below are a list of common problems and how to solve them:&lt;/p></description></item><item><title>Plugins: Email</title><link>https://go-vela.github.io/docs/plugins/registry/pipeline/email/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/plugins/registry/pipeline/email/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Below are a list of common problems and how to solve them:&lt;/p>
+&lt;h3 id="unable-to-authenticate-user--not-found">&lt;code>unable to authenticate: user not found&lt;/code>&lt;/h3>
+&lt;p>Vela does not have a record of the user that owns the token, even if the user exists in the source control management system and the token may be valid.&lt;/p>
+&lt;p>Log into Vela as this user once to fix the issue.&lt;/p>
+&lt;h3 id="unable-to-restart-build-myorgmyrepo1234">&lt;code>unable to restart build myorg/myrepo/1234&lt;/code>&lt;/h3>
+&lt;p>Vela does not have permission to restart the build with the given token.&lt;/p>
+&lt;p>Make sure the user that owns the token has write access to the repo that this .vela.yml is inside as well as any repos you want to trigger builds for.&lt;/p>
+&lt;p>Admin access on these repos is not required.&lt;/p></description></item><item><title>Plugins: Email</title><link>https://go-vela.github.io/docs/plugins/registry/pipeline/email/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/plugins/registry/pipeline/email/</guid><description>
 &lt;h2 id="description">Description&lt;/h2>
 &lt;p>This plugin enables you to send data to an email.&lt;/p>
 &lt;p>Source Code: &lt;a href="https://github.com/go-vela/vela-email">https://github.com/go-vela/vela-email&lt;/a>&lt;/p>
