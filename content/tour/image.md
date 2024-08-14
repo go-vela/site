@@ -7,13 +7,13 @@ description: >
 ---
 All Vela steps will require an image declaration to be provided.
 
-The `image:` tag is a key component that defines the [Docker Image](https://docs.docker.com/engine/docker-overview/#images) you want to be executed during the step.
+The `image:` key is a key component that defines the [Docker Image](https://docs.docker.com/engine/docker-overview/#images) you want to be executed during the step.
 
 The default behavior is for a Vela worker to pull an image if it is not present on the host. Docker daemon's cache image layers locally, by allowing the default behavior to use the cache you can get the advantage of faster build start up times.
 
 Sometimes this isn't the desired behavior and you want the image to always be pulled or pulled at a specific point in the pipeline lifecycle.
 
-That's when you can use the `pull:` tag to set the policy for how/when the image pull interaction should be treated.
+That's when you can use the `pull:` key to set the policy for how/when the image pull interaction should be treated.
 
 **Expand your knowledge with an example!**
 
@@ -49,6 +49,7 @@ image: index.docker.io/library/alpine:3
 
 <!-- section break -->
 
-**Tag references:**
+**Key references:**
 
-[`name:`](/docs/reference/yaml/steps/#the-name-tag), [`image:`](/docs/reference/yaml/steps/#the-image-tag), [`pull:`](/docs/reference/yaml/steps/#the-commands-tag),  [`commands:`](/docs/reference/yaml/steps/#the-commands-tag), 
+[`name:`](/docs/reference/yaml/steps/#the-name-key), [`image:`](/docs/reference/yaml/steps/#the-image-key), [`pull:`](/docs/reference/yaml/steps/#the-commands-key),  [`commands:`](/docs/reference/yaml/steps/#the-commands-key),
+

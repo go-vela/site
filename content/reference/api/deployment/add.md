@@ -77,7 +77,7 @@ curl \
 
 #### File with Parameters
 
-If you would like to pass parameters, which can be referenced in the pipeline as `$DEPLOYMENT_PARAMETER_<KEY>`, include them as a map inside the `payload` tag.
+If you would like to pass parameters, which can be referenced in the pipeline as `$DEPLOYMENT_PARAMETER_<KEY>`, include them as a map inside the `payload` key.
 
 ```json
 {

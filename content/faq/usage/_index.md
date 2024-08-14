@@ -159,18 +159,21 @@ This can be accomplished by using the [`docker pull` CLI command](https://docs.d
 
 ![Invalid Secret Path](invalid_secret_path.png)
 
-This behavior indicates [the `key` property](/docs/reference/yaml/secrets/#the-key-tag) provided for a secret in the pipeline is invalid.
+This behavior indicates [the `key` property](/docs/reference/yaml/secrets/#the-key-key) provided for a secret in the pipeline is invalid.
 
 To resolve the issue, explicitly define the secret depending on the type as outlined in the [secret usage docs](/docs/usage/secrets/) with all of the expected fields.
 
 If you are using a secret that only defines `name` as the property and are receiving this error, you will need add the missing properties as this way of referencing a secret was deprecated in an older version of Vela.
 
 For example:
+
 ```yaml
 secrets:
   - name: foo
 ```
-and even 
+
+and even
+
 ```yaml
 secrets:
   - name: foo
@@ -193,7 +196,7 @@ secrets:
 Make sure to replace `<org>` and `<repo>` for the `key` property with the appropriate values from your source code provider.
 
 If you're using GitHub and using the secret for a pipeline at `https://github.com/octocat/hello`, your `org` would be `octocat` and `repo` would be `hello`.
-{{% /alert %}} 
+{{% /alert %}}
 
 ### Repo is not trusted
 
@@ -201,4 +204,4 @@ If you're using GitHub and using the secret for a pipeline at `https://github.co
 
 This behavior indicates [the `vela_executor_enforce_trusted_repos` flag](/docs/installation/worker/reference/#vela_executor_enforce_trusted_repos) has been set by the Vela platform administrators, which allows only certain repositories to run privileged images.
 
-To resolve the issue, identify the step attempting to run a privileged image and consider a workaround. Otherwise, work with your Vela platform administrators to add your repository to the allowlist. 
+To resolve the issue, identify the step attempting to run a privileged image and consider a workaround. Otherwise, work with your Vela platform administrators to add your repository to the allowlist.

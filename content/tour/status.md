@@ -10,7 +10,7 @@ Vela will always publish build statuses to the source control management system.
 
 These statuses can be used to define various branch protection policies.
 
-Vela also supports up to 10 step-level statuses. These statuses will reflect the success or failure of the _step_ rather than the build. The name of this status will match the value of the `report_as` tag.
+Vela also supports up to 10 step-level statuses. These statuses will reflect the success or failure of the _step_ rather than the build. The name of this status will match the value of the `report_as` key.
 
 <!-- section break -->
 
@@ -35,6 +35,7 @@ Vela also supports up to 10 step-level statuses. These statuses will reflect the
 
 <!-- section break -->
 
-**Tag references:**
+**Key references:**
 
-[`name:`](/docs/reference/yaml/steps/#the-name-tag), [`image:`](/docs/reference/yaml/steps/#the-image-tag), [`commands:`](/docs/reference/yaml/steps/#the-commands-tag), [`report_as:`](/docs/reference/yaml/steps/#the-report_as-tag)
+[`name:`](/docs/reference/yaml/steps/#the-name-key), [`image:`](/docs/reference/yaml/steps/#the-image-key), [`commands:`](/docs/reference/yaml/steps/#the-commands-key), [`report_as:`](/docs/reference/yaml/steps/#the-report_as-key)
+

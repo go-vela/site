@@ -3,14 +3,14 @@ title: "Secrets"
 linkTitle: "Secrets"
 weight: 8
 description: >
-  YAML tags for secret block
+  YAML keys for secret block
 ---
 
-The secret tag is intended to be used to pull secrets from the Vela server or execute plugins to write the external secrets to the build volume.
+The secret key is intended to be used to pull secrets from the Vela server or execute plugins to write the external secrets to the build volume.
 
 ```yaml
 ---
-# This document is displaying all the required tags
+# This document is displaying all the required keys
 # to pull various secret types.
 secrets:
   # Below is displaying the declarative secret definitions.
@@ -46,9 +46,9 @@ secrets:
            path: user
 ```
 
-## Tags
+## Keys
 
-| Tag      | Required | Type   | Description                                                     |
+| Key      | Required | Type   | Description                                                     |
 | -------- | -------- | ------ | --------------------------------------------------------------- |
 | `name`   | Y        | string | Name of secret to reference in the pipeline.                    |
 | `key`    | N        | string | Path to secret to fetch from storage backend.                   |
@@ -57,7 +57,7 @@ secrets:
 | `pull`   | N        | string | When to pull in secrets from storage backend.                   |
 | `origin` | N        | struct | Declaration to pull secrets from non-internal secret providers. |
 
-#### The `name:` tag
+#### The `name:` key
 
 ```yaml
 ---
@@ -66,7 +66,7 @@ secrets:
   - name: postgres
 ```
 
-#### The `key:` tag
+#### The `key:` key
 
 {{% alert title="Tip:" color="info" %}}
 The key is unique
@@ -94,7 +94,7 @@ secrets:
   - key: go-vela/admins/foo1
 ```
 
-#### The `engine:` tag
+#### The `engine:` key
 
 {{% alert title="Tip:" color="info" %}}
 To know what engines are available for your Vela installation, we recommend consulting your system administrators.
@@ -108,7 +108,7 @@ secrets:
   - engine: native
 ```
 
-#### The `type:` tag
+#### The `type:` key
 
 ```yaml
 ---
@@ -119,7 +119,7 @@ secrets:
   - type: repo
 ```
 
-#### The `pull:` tag
+#### The `pull:` key
 
 ```yaml
 ---
@@ -132,12 +132,12 @@ secrets:
 
 {{% alert title="Important:" color="warning" %}} `step_start` or lazy loading secrets
 is not currently available for the [Kubernetes-based workers](/docs/installation/worker/kubernetes/) and does not work with secrets
-originating from plugins loaded via [`origin:` tag](/docs/reference/yaml/secrets/#the-pull-tag) (see below).
+originating from plugins loaded via [`origin:`](/docs/reference/yaml/secrets/#the-pull-key) (see below).
 {{% /alert %}}
 
-#### The `origin:` tag
+#### The `origin:` key
 
-| Tag           | Required | Type     | Description                                                      |
+| Key           | Required | Type     | Description                                                      |
 | ------------- | -------- | -------- | ---------------------------------------------------------------- |
 | `name`        | Y        | string   | Unique identifier for the container in the pipeline.             |
 | `image`       | Y        | []string | Docker image used to create an ephemeral container.              |
@@ -149,11 +149,11 @@ originating from plugins loaded via [`origin:` tag](/docs/reference/yaml/secrets
 
 {{% alert title="Note:" color="info" %}} The `pull:` option under `origin:`
 allows for different values than the
-[Secrets `pull:` tag](/docs/reference/yaml/secrets/#the-pull-tag). It mimics the
-[Steps version of the `pull:` tag](/docs/reference/yaml/steps/#the-pull-tag).
+[Secrets `pull:` key](/docs/reference/yaml/secrets/#the-pull-key). It mimics the
+[Steps version of the `pull:` key](/docs/reference/yaml/steps/#the-pull-key).
 {{% /alert %}}
 
 {{% alert title="Tip:" color="success" %}} In an effort to reduce duplicate
 documentation, see the comparable
-[step tags documentation](/docs/reference/yaml/steps/#tags) to learn how tags
+[step keys documentation](/docs/reference/yaml/steps/#keys) to learn how keys
 can be set and details on behavior. {{% /alert %}}

@@ -27,7 +27,7 @@ See YAML [design goals](https://yaml.org/spec/1.2/spec.html#Introduction) from s
 Whether you are a YAML expert or a novice, here is some quick terminology that you should be aware of:
 
 {{% alert title="Tip:" color="info" %}}
-You can get feedback directly on your `.vela.yml` or `.vela.yaml` pipelines in your IDE with the available [JSON Schema](/docs/usage/schema/). 
+You can get feedback directly on your `.vela.yml` or `.vela.yaml` pipelines in your IDE with the available [JSON Schema](/docs/usage/schema/).
 {{% /alert %}}
 
 ### Document
@@ -41,9 +41,9 @@ Example:
 key: value
 ```
 
-### Tags
+### Keys
 
-A YAML document is compose of one to many key-value pairs where the key is called the tag and the value is evaluated to an explicit type (Int, Float, string, bool, etc), see [YAML 1.2 spec for full details](https://yaml.org/spec/1.2/spec.html#id2761292).
+A YAML document is compose of one to many key-value pairs where the value is evaluated to an explicit type (Int, Float, string, bool, etc), see [YAML 1.2 spec for full details](https://yaml.org/spec/1.2/spec.html#id2761292).
 
 Example:
 
@@ -61,3 +61,4 @@ canonical: "Hello, World"
 # a bool
 canonical: true
 ```
+

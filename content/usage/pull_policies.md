@@ -76,4 +76,5 @@ The following [pipeline concepts](/docs/tour) are being used in the pipeline bel
 * [Secrets](/docs/tour/secrets/)
   * [Origin](/docs/tour/secrets/)
 
-* [`Pull` YAML Tag](/docs/reference/yaml/steps/#the-pull-tag)
+* [`Pull` YAML Key](/docs/reference/yaml/steps/#the-pull-key)
+

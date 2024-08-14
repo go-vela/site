@@ -12,7 +12,7 @@ When you push your code to a source control management system a payload is sent 
 
 Within that payload contains characteristics about what just happened. Maybe it was a push to the main branch, feature branch or tag on any specific commit.
 
-The ruleset tag gives you the ability to add conditions on the step to tell Vela when this step should be executed.
+The ruleset key gives you the ability to add conditions on the step to tell Vela when this step should be executed.
 
 <!-- section break -->
 
@@ -43,6 +43,6 @@ The ruleset tag gives you the ability to add conditions on the step to tell Vela
 
 <!-- section break -->
 
-**Tag references:**
+**Key references:**
 
-[`name:`](/docs/reference/yaml/steps/#the-name-tag), [`ruleset:`](/docs/reference/yaml/steps/#the-ruleset-tag),[`image:`](/docs/reference/yaml/steps/#the-image-tag), [`commands:`](/docs/reference/yaml/steps/#the-commands-tag),
+[`name:`](/docs/reference/yaml/steps/#the-name-key), [`ruleset:`](/docs/reference/yaml/steps/#the-ruleset-key),[`image:`](/docs/reference/yaml/steps/#the-image-key), [`commands:`](/docs/reference/yaml/steps/#the-commands-key),

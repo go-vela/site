@@ -6,7 +6,7 @@ description: >
   Learn about environment.
 ---
 
-To define environment variables you can add an `environment:` YAML tag. Environment variables can be scoped to be global, within a stage, or within a step.
+To define environment variables you can add an `environment:` YAML key. Environment variables can be scoped to be global, within a stage, or within a step.
 
 All platform variables get injected with a custom `VELA_` prefix pattern.
 
@@ -60,6 +60,6 @@ stages:
 
 <!-- section break -->
 
-**Tag references:**
+**Key references:**
 
-[`name:`](/docs/reference/yaml/steps/#the-name-tag), [`image:`](/docs/reference/yaml/steps/#the-image-tag), [`environment:`](/docs/reference/yaml/steps/#the-environment-tag), [`commands:`](/docs/reference/yaml/steps/#the-commands-tag), 
+[`name:`](/docs/reference/yaml/steps/#the-name-key), [`image:`](/docs/reference/yaml/steps/#the-image-key), [`environment:`](/docs/reference/yaml/steps/#the-environment-key), [`commands:`](/docs/reference/yaml/steps/#the-commands-key),

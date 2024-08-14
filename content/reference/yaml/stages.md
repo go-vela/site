@@ -3,14 +3,14 @@ title: "Stages"
 linkTitle: "Stages"
 weight: 7
 description: >
-  YAML stages for stages block
+  YAML keys for stages block
 ---
 
-The `stages` tag is intended to be used to parallelize one-to-many sets of step tasks.
+The `stages` key is intended to be used to parallelize one-to-many sets of step tasks.
 
 ```yaml
 ---
-# This document is displaying all the required tags
+# This document is displaying all the required keys
 # to run two stages with one step task in parallel.
 stages:
   hello:
@@ -28,9 +28,9 @@ stages:
           - echo "Welcome to Vela!"
 ```
 
-## Tags
+## Keys
 
-| Tag           | Required | Type     | Description                                                               |
+| Key           | Required | Type     | Description                                                               |
 |---------------|----------|----------|---------------------------------------------------------------------------|
 | `name`        | Y        | string   | Unique identifier for the stage in the pipeline                           |
 | `steps`       | Y        | []string | Sequential execution instructions for the stage                           |
@@ -39,7 +39,7 @@ stages:
 
 ### Usage
 
-#### The `name:` tag
+#### The `name:` key
 
 ```yaml
 ---
@@ -48,7 +48,7 @@ stages:
     welcome:
 ```
 
-#### The `steps:` tag
+#### The `steps:` key
 
 ```yaml
 ---
@@ -60,10 +60,10 @@ stages:
 ```
 
 {{% alert title="Tip:" color="info" %}}
-For more details on steps tags, see the [step tags documentation](/docs/reference/yaml/steps/#tags)
+For more details on steps keys, see the [step keys documentation](/docs/reference/yaml/steps/#keys)
 {{% /alert %}}
 
-#### The `needs:` tag
+#### The `needs:` key
 
 ```yaml
 ---
@@ -76,7 +76,7 @@ stages:
       needs: [ greeting ]
 ```
 
-#### The `independent:` tag
+#### The `independent:` key
 
 ```yaml
 ---

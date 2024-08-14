@@ -3,14 +3,14 @@ title: "Templates"
 linkTitle: "Templates"
 weight: 4
 description: >
-  YAML tags for templates block
+  YAML keys for templates block
 ---
 
-The template tag is intended to be used to identify where to retrieve templates during the compiler phase of the pipeline.
+The template key is intended to be used to identify where to retrieve templates during the compiler phase of the pipeline.
 
 ```yaml
 ---
-# This document is displaying all the required tags
+# This document is displaying all the required keys
 # to pull a template from a remote system.
 templates:
   - name: example
@@ -18,9 +18,9 @@ templates:
     type: github    
 ```
 
-## Tags
+## Keys
 
-| Tag      | Required | Type   | Description                                           |
+| Key      | Required | Type   | Description                                           |
 |----------|----------|--------|-------------------------------------------------------|
 | `name`   | Y        | string | indicates a unique identifier for the template.       |
 | `source` | Y        | string | indicates a path to a template in remote system.      |
@@ -33,7 +33,7 @@ templates:
 To learn how to write templates, see the [template documentation](/docs/templates)
 {{% /alert %}}
 
-#### The `name:` tag
+#### The `name:` key
 
 ```yaml
 templates:
@@ -42,7 +42,7 @@ templates:
   - name: example
 ```
 
-#### The `source:` tag
+#### The `source:` key
 
 ```yaml
 templates:
@@ -61,7 +61,7 @@ templates:
     source: path/to/template.yml
 ```
 
-#### The `type:` tag
+#### The `type:` key
 
 ```yaml
 templates:
@@ -75,7 +75,7 @@ templates:
     type: file
 ```
 
-#### The `format:` tag
+#### The `format:` key
 
 ```yaml
 templates:

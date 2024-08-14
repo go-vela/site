@@ -82,7 +82,7 @@ secrets:
 By default global injection affects all containers ran within the pipeline. However, if you only want some container types to receive the configuration you can limit which types get them by adding the `environment` declaration into the metadata.
 
 {{% alert title="Note:" color="primary" %}}
-Valid values for metadata `environment:` YAML tag are `steps`, `services` and `secrets`.
+Valid values for metadata `environment:` YAML key are `steps`, `services` and `secrets`.
 {{% /alert %}}
 
 ```diff

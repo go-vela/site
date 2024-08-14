@@ -3,23 +3,23 @@ title: "Metadata"
 linkTitle: "Metadata"
 weight: 2
 description: >
-  YAML tags for metadata block
+  YAML keys for metadata block
 ---
 
-The metadata tag is intended to be used during the compile phase to signal how to treat the YAML document.
+The metadata key is intended to be used during the compile phase to signal how to treat the YAML document.
 
 ```yaml
 ---
-# This document is displaying all the available tags
+# This document is displaying all the available keys
 # in their default state for the compile process.
 metadata:
   template: false
   clone: true
 ```
 
-## Tags
+## Keys
 
-| Tag             | Required | Type        | Description                                                       |
+| Key             | Required | Type        | Description                                                       |
 | --------------- | -------- | ----------- | ----------------------------------------------------------------- |
 | `template`      | Y        | bool        | Enables compiling the pipeline as a template.                     |
 | `clone`         | N        | bool        | Enables injecting the default clone process.                      |
@@ -28,7 +28,7 @@ metadata:
 
 ### Usage
 
-#### The `template:` tag
+#### The `template:` key
 
 {{% alert title="Tip:" color="info" %}}
 To learn how to write templates, see the [template documentation](/docs/templates).
@@ -43,7 +43,7 @@ metadata:
   template: true
 ```
 
-#### The `clone:` tag
+#### The `clone:` key
 
 ```yaml
 ---
@@ -52,7 +52,7 @@ metadata:
   clone: true
 ```
 
-#### The `environment:` tag
+#### The `environment:` key
 
 ```yaml
 ---
@@ -63,7 +63,7 @@ metadata:
   environment: [steps, services, secrets]
 ```
 
-#### The `render_inline:` tag
+#### The `render_inline:` key
 
 ```yaml
 ---
@@ -75,9 +75,9 @@ metadata:
   render_inline: false
 ```
 
-#### The `auto_cancel` tag
+#### The `auto_cancel` key
 
-| Tag              | Default | Type | Description                                                                                 |
+| Key              | Default | Type | Description                                                                                 |
 | ---------------- | ------- | ---- | ------------------------------------------------------------------------------------------- |
 | `pending`        | True    | bool | Pending builds will be auto canceled if qualifying build is triggered                       |
 | `running`        | False   | bool | Currently running builds will be auto canceled if qualifying build is triggered             |

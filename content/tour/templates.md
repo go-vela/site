@@ -10,7 +10,7 @@ Templates help to create reusable workflows in order to make grouping tasks like
 
 Templates can solve duplicative tasks in a single workflow or be leveraged by any number of pipelines to make reusable tasks across multiple workflows.
 
-In this pipeline each step is shown with the minimum required YAML tags to execute a step. 
+In this pipeline each step is shown with the minimum required YAML keys to execute a step.
 
 Both steps are pulling a [Alpine Linux](https://alpinelinux.org/) image from [Docker Hub](https://hub.docker.com/) and executing echo statements.  
 
@@ -41,6 +41,7 @@ steps:
 
 <!-- section break -->
 
-**Tag references:**
+**Key references:**
 
-[`templates:`](/docs/reference/yaml/templates), [`vars:`](/docs/reference/yaml/steps/#the-template-tag), 
+[`templates:`](/docs/reference/yaml/templates), [`vars:`](/docs/reference/yaml/steps/#the-template-key),
+
