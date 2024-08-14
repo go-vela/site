@@ -5,10 +5,11 @@ description: >
   Learn how to orchestrate pipelines with stages.
 ---
 
-This page will focus on [`stages`](/docs/tour/stages) and how to effectively leverage the orchestration options given to users. These options are: the [`ruleset`](/docs/tour/rulesets) tag, the [`needs`](/docs/reference/yaml/stages/#the-needs-tag) tag, and the [`independent`](/docs/reference/yaml/stages/#the-independent-tag) tag.
+This page will focus on [`stages`](/docs/tour/stages) and how to effectively leverage the orchestration options given to users. These options are: the [`ruleset`](/docs/tour/rulesets) key, the [`needs`](/docs/reference/yaml/stages/#the-needs-key) key, and the [`independent`](/docs/reference/yaml/stages/#the-independent-key) key.
 
 ### Step Rulesets in Stages
-To begin, let's focus on the `ruleset` tag. While this is not a tag at the stages level, each stage has a collection of steps, which can all be given rulesets. There are two kinds of rules within Vela: compile-time rules (path, event, branch, comment, tag, target, and repo) and a runtime rule (status). When Vela compiles a pipeline, it will purge any steps that do not meet the compile-time rules.
+
+To begin, let's focus on the `ruleset` key. While this is not a key at the stages level, each stage has a collection of steps, which can all be given rulesets. There are two kinds of rules within Vela: compile-time rules (path, event, branch, comment, tag, target, and repo) and a runtime rule (status). When Vela compiles a pipeline, it will purge any steps that do not meet the compile-time rules.
 
 For example, let's consider a pipeline written as such:
 
@@ -75,9 +76,9 @@ stages:
 
 Notice how the `deploy` stage has been pruned completely, rather than being a stage with empty steps. Further, since the `notify` stage normally waits on both `build` and `deploy`, in this situation, it only waits on `build`. The `notify` stage is still part of the build since its ruleset consists of only a runtime rule.
 
-### Understanding the `needs` tag
+### Understanding the `needs` key
 
-While there isn't a sure-fire way of running stages in order, the `needs` tag introduces a level of dependency that can be used to order stages. However the `needs` tag can become tricky when combined with pruning, as shown in the example above. Let's take a look at a theoretical pipeline:
+While there isn't a sure-fire way of running stages in order, the `needs` key introduces a level of dependency that can be used to order stages. However the `needs` key can become tricky when combined with pruning, as shown in the example above. Let's take a look at a theoretical pipeline:
 
 ```yaml
 version: "1"
@@ -131,7 +132,7 @@ stages:
 ```
 
 {{% alert title="Note:" color="info" %}}
-Be aware that `needs:` references stages by their name, which can be overridden by the `name` tag in the stage definition.
+Be aware that `needs:` references stages by their name, which can be overridden by the `name` key in the stage definition.
 {{% /alert %}}
 
 Consider a Vela build triggered by a `push` to `main`. We know that `run-first` will indeed run first, followed by `runtime-ruleset-stage` since it cannot be pruned due to its runtime rule. However, if we recall from our first example, when the _entirety_ of a stage's step collection is pruned at compile-time, the stage disappears completely:
@@ -177,13 +178,13 @@ stages:
           - echo $VELA_REPO_FULL_NAME
 ```
 
-So in fact, in this scenario, the `run-first` stage and the `y-stage` begin simultaneously, even though `y-stage` "needed" `compile-time-ruleset-stage` which "needed" `run-first` in the original pipeline. 
+So in fact, in this scenario, the `run-first` stage and the `y-stage` begin simultaneously, even though `y-stage` "needed" `compile-time-ruleset-stage` which "needed" `run-first` in the original pipeline.
 
 ### Leveraging Stage independence
 
 With the increasing popularity of monorepos, some Vela pipelines may want to simultaneously execute very different build flows based on modules within the repository. Since by nature Vela stages will skip the remainder of the build if a single stage fails its pipeline, this could potentially cause issues, such as half-done deployments.
 
-For example, say we have a repo that has back-end _and_ front-end code written together. Let's assume all the back-end code is in `org/repo/back-end` and the front-end code is in `org/repo/front-end`. We can leverage the [`path`](/docs/reference/yaml/steps/#the-ruleset-tag) ruleset with the [`independent`](/docs/reference/yaml/stages/#the-independent-tag) stage tag to compartmentalize Vela builds:
+For example, say we have a repo that has back-end _and_ front-end code written together. Let's assume all the back-end code is in `org/repo/back-end` and the front-end code is in `org/repo/front-end`. We can leverage the [`path`](/docs/reference/yaml/steps/#the-ruleset-key) ruleset with the [`independent`](/docs/reference/yaml/stages/#the-independent-key) stage key to compartmentalize Vela builds:
 
 ```yaml
 version: "1"
@@ -259,7 +260,7 @@ stages:
           - node build
 ```
 
-We can extend this example to deployments, and it's easy to see where a team may want one module to complete its build flow even if there's a failure in another module. 
+We can extend this example to deployments, and it's easy to see where a team may want one module to complete its build flow even if there's a failure in another module.
 
 ### In Summary
 

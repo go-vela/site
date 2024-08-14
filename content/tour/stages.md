@@ -8,7 +8,7 @@ description: >
 
 A stages pipelines are designed to parallelize one-to-many sets of step tasks.
 
-By design all of the stages will run at the same time unless the user uses a `needs:` YAML tag to control the flow of stage executions (see example).
+By design all of the stages will run at the same time unless the user uses a `needs:` YAML key to control the flow of stage executions (see example).
 
 Stages will also stop executing their steps if the build fails as a whole, by default. In other words, if stage 1 fails, the steps that have yet to execute in stage 2 will be skipped. The user can declare `independent: true` for any stage to change this behavior.
 
@@ -61,7 +61,7 @@ stages:
 ```
 
 {{% alert title="Note:" color="info" %}}
-Be aware that `needs:` references stages by their name, which can be overridden by the `name` tag in the stage definition.
+Be aware that `needs:` references stages by their name, which can be overridden by the `name` key in the stage definition.
 {{% /alert %}}
 
 ```sh
@@ -77,6 +77,6 @@ $ vela exec pipeline
 
 <!-- section break -->
 
-**Tag references:**
+**Key references:**
 
-[`name:`](/docs/reference/yaml/steps/#the-name-tag), [`image:`](/docs/reference/yaml/steps/#the-image-tag), [`commands:`](/docs/reference/yaml/steps/#the-commands-tag),
+[`name:`](/docs/reference/yaml/steps/#the-name-key), [`image:`](/docs/reference/yaml/steps/#the-image-key), [`commands:`](/docs/reference/yaml/steps/#the-commands-key),

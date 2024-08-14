@@ -3,14 +3,14 @@ title: "Worker"
 linkTitle: "Worker"
 weight: 3
 description: >
-  YAML tags for worker block
+  YAML keys for worker block
 ---
 
-The worker tag is intended to be used to route a build to a specific worker pool of workers available with the Vela queue.
+The worker key is intended to be used to route a build to a specific worker pool of workers available with the Vela queue.
 
 ```yaml
 ---
-# This document is displaying all the available tags
+# This document is displaying all the available keys
 # and routing the build to a specific worker "sm:docker".
 worker:
   flavor: sm
@@ -21,9 +21,9 @@ worker:
 Routes are defined by the Vela system administrators during installation. To know what routes are available for your Vela installation, we recommend consulting your system administrators.
 {{% /alert %}}
 
-## Tags
+## Keys
 
-| Tag        | Required | Type   | Description                                          |
+| Key        | Required | Type   | Description                                          |
 |------------|----------|--------|------------------------------------------------------|
 | `flavor`   | N        | string | Indicates what flavor of a worker. (i.e. sm, m, lg)    |
 | `platform` | N        | string | Indicates the platform of a worker. (i.e. docker, k8s) |
@@ -34,7 +34,7 @@ Routes are defined by the Vela system administrators during installation. To kno
 See an [example](/docs/usage/examples/route/) on how to route a build.
 {{% /alert %}}
 
-#### The `flavor:` tag
+#### The `flavor:` key
 
 ```yaml
 ---
@@ -44,7 +44,7 @@ worker:
   flavor: sm
 ```
 
-#### The `platform:` tag
+#### The `platform:` key
 
 ```yaml
 ---
@@ -53,3 +53,4 @@ worker:
   # will be scheduled in the generic "vela" queue.
   platform: docker
 ```
+

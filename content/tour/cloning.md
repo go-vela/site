@@ -32,7 +32,6 @@ steps:
       - cat .vela.yml
 ```
 
-
 ```yaml
 # Below is displaying how to turn off the clone behavior.
 metadata:
@@ -54,6 +53,7 @@ steps:
 
 <!-- section break -->
 
-**Tag references:**
+**Key references:**
 
-[`clone:`](/docs/reference/yaml/metadata/#the-clone-tag), [`name:`](/docs/reference/yaml/steps/#the-name-tag), [`image:`](/docs/reference/yaml/steps/#the-image-tag), [`parameters:`](/docs/reference/yaml/steps/#the-parameters-tag),
+[`clone:`](/docs/reference/yaml/metadata/#the-clone-key), [`name:`](/docs/reference/yaml/steps/#the-name-key), [`image:`](/docs/reference/yaml/steps/#the-image-key), [`parameters:`](/docs/reference/yaml/steps/#the-parameters-key),
+

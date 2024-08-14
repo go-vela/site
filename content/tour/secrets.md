@@ -16,7 +16,7 @@ Let's go back to our Docker image used within the plugin tutorial and focus only
 
 The pipeline we are looking at shows a few different patterns on how you can leverage adding and aliasing secrets in your pipeline.
 
-However, this time we are going to remove the `username:` and `password:` YAML tags in the `parameter:` block and replace them with secrets within the container environment.
+However, this time we are going to remove the `username:` and `password:` YAML keys in the `parameter:` block and replace them with secrets within the container environment.
 
 **See it in action with examples!**
 
@@ -71,6 +71,6 @@ secrets:
 
 <!-- section break -->
 
-**Tag references:**
+**Key references:**
 
-[(step) `secrets:`](/docs/reference/yaml/steps/#the-secrets-tag), [(parent)  `secrets:`](/docs/reference/yaml/secrets),
+[(step) `secrets:`](/docs/reference/yaml/steps/#the-secrets-key), [(parent)  `secrets:`](/docs/reference/yaml/secrets),

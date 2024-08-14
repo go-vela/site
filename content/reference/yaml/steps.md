@@ -3,15 +3,15 @@ title: "Steps"
 linkTitle: "Steps"
 weight: 6
 description: >
-  YAML tags for steps block
+  YAML keys for steps block
 ---
 
-The steps tag is intended to be used to run sequential tasks in a pipeline.
+The steps key is intended to be used to run sequential tasks in a pipeline.
 
 ```yaml
 ---
-# This document is displaying all the required tags
-# to run a postgre database for the duration of a pipeline.
+# This document is displaying all the required keys
+# to run a postgres database for the duration of a pipeline.
 steps: 
   - name: Hello World
     image: alpine:latest
@@ -19,9 +19,9 @@ steps:
       - echo "Hello, Vela User"
 ```
 
-## Tags
+## Keys
 
-| Tag           | Required | Type            | Description                                                      |
+| Key           | Required | Type            | Description                                                      |
 |---------------|----------|-----------------|------------------------------------------------------------------|
 | `name`        | Y        | string          | Unique identifier for the container in the pipeline.             |
 | `image`       | Y        | string          | Docker image used to create ephemeral container.                 |
@@ -37,10 +37,9 @@ steps:
 | `ulimits`     | N        | string          | Set the user limits for the container.                           |                        |
 | `user`        | N        | string          | Set the user for the container. |
 
-
 ### Usage
 
-#### The `name:` tag
+#### The `name:` key
 
 ```yaml
 ---
@@ -49,7 +48,7 @@ steps:
   - name: Hello World
 ```
 
-#### The `image:` tag
+#### The `image:` key
 
 ```yaml
 ---
@@ -58,7 +57,7 @@ steps:
   - image: alpine:latest
 ```
 
-#### The `pull:` tag
+#### The `pull:` key
 
 ```yaml
 ---
@@ -69,7 +68,7 @@ steps:
   - pull: always
 ```
 
-#### The `secrets:` tag
+#### The `secrets:` key
 
 ```yaml
 ---
@@ -86,14 +85,14 @@ steps:
     # environment as upper case env. i.e. GIT_USERNAME=<secret_value> 
   - secrets: 
       # The source is the "name:" of a secret within the
-      # parent "secrets:" yaml tag
+      # parent "secrets:" yaml key
       - source: username
       # The target is the desired environment key accessible during
       # the container runtime.
         target: git_username
 ```
 
-#### The `environment:` tag
+#### The `environment:` key
 
 ```yaml
 ---
@@ -113,7 +112,7 @@ steps:
       - DB_NAME=vela
 ```
 
-#### The `ruleset:` tag
+#### The `ruleset:` key
 
 The following rules can be used to configure a ruleset:
 
@@ -183,6 +182,7 @@ If you wish to include _all_ event types from an event, you can specify a wildca
     ruleset:
       event: pull_request*  # will run on opened, reopened, synchronize, edited, labeled, and unlabeled
 ```
+
 {{% /alert %}}
 
 ```yaml
@@ -240,7 +240,7 @@ steps:
 steps:
   - ruleset:
       # As shown below this step will execute if the build target is stage or production.
-      # This tag is only compatible with deployment and schedule events.
+      # This key is only compatible with deployment and schedule events.
       target: [ dev/*, test/* ]
 ```
 
@@ -308,14 +308,14 @@ steps:
         event: push
 ```
 
-#### The `parameters:` tag
+#### The `parameters:` key
 
 ```yaml
 ---
 steps:
-    # Extra configuration variables specific to a plugin. All tags within the 
-    # parameters tag are injected environment variables into the
-    # container as PARAMETER_<TAG_NAME>.
+    # Extra configuration variables specific to a plugin. All keys within the 
+    # parameters key are injected environment variables into the
+    # container as PARAMETER_<KEY_NAME>.
     # As shown below this step will execute a plugin that needs two fields:
     # PARAMETER_REGISTRY=index.docker.io
     # PARAMETER_REPO=octocat/hello-world,go-vela/docs
@@ -324,7 +324,7 @@ steps:
       repo: [ go-vela/hello-world,  go-vela/docs ]
 ```
 
-#### The `commands:` tag
+#### The `commands:` key
 
 ```yaml
 ---
@@ -334,9 +334,9 @@ steps:
       - echo "Hello, World"
 ```
 
-#### The `template:` tag
+#### The `template:` key
 
-The following tags can be used to configure a template injection:
+The following keys can be used to configure a template injection:
 
 | Name   | Description                            |
 |--------| ---------------------------------------|
@@ -348,7 +348,7 @@ The following tags can be used to configure a template injection:
 steps:
   - template:
       # Name of template to inject in the step. The name must map
-      # to an existing template in the parent "template" tag.
+      # to an existing template in the parent "template" key.
       name: example
 ```
 
@@ -367,7 +367,7 @@ steps:
           build: "go build ./..."  
 ```
 
-#### The `report_as` tag
+#### The `report_as` key
 
 ```yaml
 ---
@@ -380,7 +380,7 @@ steps:
 A pipeline can have up to 10 steps that report their own status.
 {{% /alert %}}
 
-#### The `entrypoint:` tag
+#### The `entrypoint:` key
 
 ```yaml
 ---
@@ -391,18 +391,18 @@ steps:
       - /bin/ls
 ```
 
-#### The `detach:` tag
+#### The `detach:` key
 
 ```yaml
 ---
 steps:
     # Run the container in a detached (headless) state. Similar to the 
-    # "services:" tag this will create a container that can be used throughout
+    # "services:" key this will create a container that can be used throughout
     # the duration of the pipeline.
   - detach: true
 ```
 
-#### The `ulimits:` tag
+#### The `ulimits:` key
 
 ```yaml
 ---
@@ -416,7 +416,7 @@ steps:
         hard: 2048
 ```
 
-#### The `user:` tag
+#### The `user:` key
 
 ```yaml
 ---
@@ -424,3 +424,4 @@ steps:
     # Run the container with the foo user.
   - user: foo
 ```
+

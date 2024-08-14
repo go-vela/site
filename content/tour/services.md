@@ -71,7 +71,6 @@ $ vela exec pipeline
 
 <!-- section break -->
 
-**Tag references:**
+**Key references:**
 
-[`name:`](/docs/reference/yaml/services/#the-name-tag), [`image:`](/docs/reference/yaml/services/#the-image-tag), [`detach:`](/docs/reference/yaml/steps/#the-detach-tag),
-
+[`name:`](/docs/reference/yaml/services/#the-name-key), [`image:`](/docs/reference/yaml/services/#the-image-key), [`detach:`](/docs/reference/yaml/steps/#the-detach-key),
