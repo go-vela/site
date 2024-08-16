@@ -68,7 +68,7 @@ steps:
 
 In this example, the `get credentials` step is using the Vela environment values of `VELA_ID_TOKEN_REQUEST_TOKEN` and `VELA_ID_TOKEN_REQUEST_URL` to retrieve a short-lived ID token that can be used to authenticate with the cloud service, so long as that service has an OpenID processing layer.
 
-The `id_request` tag being set to _anything_ will result in the injection of the request environment variables. The value of `id_request` becomes a claim in the eventual ID token.
+The `id_request` key being set to _anything_ will result in the injection of the request environment variables. The value of `id_request` becomes a claim in the eventual ID token.
 
 ### ID Token Claims
 

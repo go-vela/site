@@ -10,7 +10,7 @@ A step declaration allows you to provide execution instructions for a pipeline.
 
 The following step is displaying an example of a minimal configuration for executing a simple echo linux command.
 
-The `name:` tag is the unique identifier for the step throughout the lifecycle of the execution.
+The `name:` key is the unique identifier for the step throughout the lifecycle of the execution.
 
 When `commands:` are provided they are converted to a shell script and executed as the Docker entrypoint for the container.
 
@@ -37,6 +37,7 @@ docker run --entrypoint=build.sh alpine:latest
 
 <!-- section break -->
 
-**Tag references:**
+**Key references:**
 
-[`name:`](/docs/reference/yaml/steps/#the-name-tag), [`image:`](/docs/reference/yaml/steps/#the-image-tag), [`commands:`](/docs/reference/yaml/steps/#the-commands-tag), 
+[`name:`](/docs/reference/yaml/steps/#the-name-key), [`image:`](/docs/reference/yaml/steps/#the-image-key), [`commands:`](/docs/reference/yaml/steps/#the-commands-key),
+

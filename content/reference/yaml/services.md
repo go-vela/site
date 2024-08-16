@@ -3,23 +3,23 @@ title: "Services"
 linkTitle: "Services"
 weight: 5
 description: >
-  YAML tags for services block
+  YAML keys for services block
 ---
 
-The `services` tag is intended to be used to run applications alongside the pipeline.
+The `services` key is intended to be used to run applications alongside the pipeline.
 
 ```yaml
 ---
-# This document is displaying all the required tags
+# This document is displaying all the required keys
 # to run a postgres database for the duration of a pipeline.
 services: 
   - name: postgres
     image: postgres:latest
 ```
 
-## Tags
+## Keys
 
-| Tag           | Required | Type            | Description                                                     |
+| Key           | Required | Type            | Description                                                     |
 |---------------|----------|-----------------|-----------------------------------------------------------------|
 | `name`        | Y        | string          | Unique identifier for the container in the pipeline             |
 | `image`       | Y        | string          | Docker image used to create an ephemeral container              |
@@ -32,7 +32,7 @@ services:
 
 ### Usage
 
-#### The `name:` tag
+#### The `name:` key
 
 ```yaml
 ---
@@ -41,7 +41,7 @@ services:
   - name: postgres
 ```
 
-#### The `image:` tag
+#### The `image:` key
 
 ```yaml
 ---
@@ -50,7 +50,7 @@ services:
   - image: postgres:latest
 ```
 
-#### The `pull:` tag
+#### The `pull:` key
 
 ```yaml
 ---
@@ -61,7 +61,7 @@ services:
   - pull: always
 ```
 
-#### The `environment:` tag
+#### The `environment:` key
 
 ```yaml
 ---
@@ -81,7 +81,7 @@ services:
       - DB_NAME=vela
 ```
 
-#### The `entrypoint:` tag
+#### The `entrypoint:` key
 
 ```yaml
 ---
@@ -92,7 +92,7 @@ services:
       - /some/binary/postgres
 ```
 
-#### The `ports:` tag
+#### The `ports:` key
 
 ```yaml
 ---
@@ -102,7 +102,7 @@ services:
       - "8080:5432"
 ```
 
-#### The `ulimits:` tag
+#### The `ulimits:` key
 
 ```yaml
 ---
@@ -116,7 +116,7 @@ services:
         hard: 2048
 ```
 
-#### The `user:` tag
+#### The `user:` key
 
 ```yaml
 ---

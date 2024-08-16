@@ -65,7 +65,7 @@ The four settings are:
 - **Require Admin Approval for First Time Contributors**: users that have contributed to the repository before will be able to run pull request builds without admin approval. Note: it may take a few hours for a user to be marked as a prior contributor after they have contributed to the repository.
 - **Never Require Approval**: any user will be able to run pull request builds by opening a PR against the repository.
 
-When a build is awaiting approval, the SCM will be updated with the status `pending` with the description `build needs approval from repo admin to run`. 
+When a build is awaiting approval, the SCM will be updated with the status `pending` with the description `build needs approval from repo admin to run`.
 
 Repository admins can approve a build in the UI or by using the [CLI](/docs/reference/cli/build/approve).
 
@@ -83,7 +83,7 @@ The Build Timeout setting determines the time limit for any given build for a re
 
 ### Build Counter
 
-This number is a tally of all builds that have ran for the repository. This number can be adjusted to be larger but _NOT_ smaller. 
+This number is a tally of all builds that have ran for the repository. This number can be adjusted to be larger but _NOT_ smaller.
 
 Occasionally, due to various compilation errors, this counter can fall behind resulting in a SQL collision error found in the audit page for new builds. To fix this, ensure the counter matches the actual build count.
 
@@ -111,7 +111,7 @@ Note: by default, templates are treated with `Go` syntax. In order to match that
 
 ## Pipeline Settings
 
-Below are high-level pipeline settings that are pulled directly from the `metadata` tag.
+Below are high-level pipeline settings that are pulled directly from the `metadata` key.
 
 ### Auto Cancel
 
@@ -122,7 +122,7 @@ metadata:
         default_branch: true
 ```
 
-Auto canceling builds is a build strategy that will prioritize the most recent status of the source code by canceling obsolete running/pending builds. More information can be found [here](/docs/reference/yaml/metadata/#the-auto_cancel-tag).
+Auto canceling builds is a build strategy that will prioritize the most recent status of the source code by canceling obsolete running/pending builds. More information can be found [here](/docs/reference/yaml/metadata/#the-auto_cancel-key).
 
 ### Render Inline
 
@@ -145,4 +145,4 @@ metadata:
     clone: false
 ```
 
-Setting the `clone` tag to `false` will override Vela's default behavior of cloning the repository at the start of the build. More information can be found [here](/docs/tour/cloning/).
+Setting the `clone` key to `false` will override Vela's default behavior of cloning the repository at the start of the build. More information can be found [here](/docs/tour/cloning/).

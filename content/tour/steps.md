@@ -8,9 +8,9 @@ description: >
 
 A steps pipeline is designed to run a sequential set of tasks.
 
-These pipelines do not have a minimum defined length and steps will always execute in the order defined. 
+These pipelines do not have a minimum defined length and steps will always execute in the order defined.
 
-In this pipeline each step is shown with the minimum required YAML tags to execute a step. 
+In this pipeline each step is shown with the minimum required YAML keys to execute a step.
 
 Both steps are pulling a [Alpine Linux](https://alpinelinux.org/) image from [Docker Hub](https://hub.docker.com/) and executing echo statements.  
 
@@ -21,7 +21,6 @@ Both steps are pulling a [Alpine Linux](https://alpinelinux.org/) image from [Do
 * [Gradle](/docs/usage/examples/java_gradle/)
 * [Maven](/docs/usage/examples/java_maven/)
 * [Node](/docs/usage/examples/node/)
-
 
 <!-- section break -->
 
@@ -53,6 +52,6 @@ $ vela exec pipeline
 ```
 <!-- section break -->
 
-**Tag references:**
+**Key references:**
 
-[`name:`](/docs/reference/yaml/steps/#the-name-tag), [`image:`](/docs/reference/yaml/steps/#the-image-tag), [`commands:`](/docs/reference/yaml/steps/#the-commands-tag),
+[`name:`](/docs/reference/yaml/steps/#the-name-key), [`image:`](/docs/reference/yaml/steps/#the-image-key), [`commands:`](/docs/reference/yaml/steps/#the-commands-key),
