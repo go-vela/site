@@ -19,8 +19,8 @@ More information for ansible-playbook can be found at: &lt;a href="https://ansib
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">action&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">lint&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">playbook&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#4e9a06">&amp;#34;abox/main.yml&amp;#34;&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">lint_skip&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#0000cf;font-weight:bold">403&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#0000cf;font-weight:bold">201&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">no&lt;/span>-&lt;span style="color:#000">changed-when&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#000">key-order&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">name&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">ansible-playbook&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">image&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">target/vela-ansible:latest&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
@@ -3966,6 +3966,13 @@ Context-Type options are as follow:&lt;/p>
 &lt;td>&lt;code>PARAMETER_COMPRESSION_LEVEL&lt;/code>&lt;br>&lt;code>KANIKO_COMPRESSION_LEVEL&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
+&lt;td>&lt;code>compressed_caching&lt;/code>&lt;/td>
+&lt;td>set this to false in order to prevent tar compression for cached layers&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>PARAMETER_COMPRESSED_CACHING&lt;/code>&lt;br>&lt;code>KANIKO_COMPRESSED_CACHING&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>&lt;code>context&lt;/code>&lt;/td>
 &lt;td>path to context for building the image&lt;/td>
 &lt;td>&lt;code>true&lt;/code>&lt;/td>
@@ -4008,6 +4015,13 @@ Context-Type options are as follow:&lt;/p>
 &lt;td>&lt;code>PARAMETER_REPO_TOPICS_FILTER&lt;/code>&lt;br>&lt;code>KANIKO_REPO_TOPICS_FILTER&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
+&lt;td>&lt;code>ignore_path&lt;/code>&lt;/td>
+&lt;td>ignore path when taking an image snapshot&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>empty slice&lt;/code>&lt;/td>
+&lt;td>&lt;code>PARAMETER_IGNORE_PATH&lt;/code>&lt;br>&lt;code>KANIKO_IGNORE_PATH&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>&lt;code>ignore_var_run&lt;/code>&lt;/td>
 &lt;td>sets &lt;code>--ignore-var-run&lt;/code> kaniko flag to control whether /var/run is included in image snapshot&lt;/td>
 &lt;td>&lt;code>false&lt;/code>&lt;/td>
@@ -4027,6 +4041,13 @@ Context-Type options are as follow:&lt;/p>
 &lt;td>&lt;code>true&lt;/code>&lt;/td>
 &lt;td>&lt;code>info&lt;/code>&lt;/td>
 &lt;td>&lt;code>PARAMETER_LOG_LEVEL&lt;/code>&lt;br>&lt;code>KANIKO_LOG_LEVEL&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>log_timestamps&lt;/code>&lt;/td>
+&lt;td>add timestamps to log lines&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>PARAMETER_LOG_TIMESTAMPS&lt;/code>&lt;br>&lt;code>KANIKO_LOG_TIMESTAMPS&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>&lt;code>mirror&lt;/code>&lt;/td>
