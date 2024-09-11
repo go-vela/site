@@ -27,12 +27,13 @@ steps:
 
     - name: test
       image: my-organization/${image}:latest
+      pull: on_start
       commands:
         - go test ./...
 
 ```
 
-This is not a valid pipeline configuration. However, being able to dynamically update environment variables for substitution or for plugin parameters can be an important part of a CI build.
+This is not a valid pipeline configuration because `image` will not persist from the first step to the second. However, being able to dynamically update environment variables for substitution or for plugin parameters can be an important part of a CI build.
 
 This is where `outputs` can improve your pipeline configurations.
 
@@ -50,6 +51,7 @@ steps:
 
     - name: test
       image: my-organization/${image}:latest
+      pull: on_start
       commands:
         - go test ./...
 ```
