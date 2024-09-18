@@ -1,6 +1,7 @@
 ---
 title: "Secret"
 linkTitle: "Secret"
+weight: 5
 description: >
   This section contains information on the secret component for the Vela server.
 ---

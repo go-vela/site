@@ -1,6 +1,7 @@
 ---
 title: "Token Manager"
 linkTitle: "Token Manager"
+weight: 6
 description: >
   This section contains information on the token manager component for the Vela server.
 ---
