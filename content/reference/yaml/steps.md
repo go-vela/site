@@ -116,17 +116,18 @@ steps:
 
 The following rules can be used to configure a ruleset:
 
-| Name      | Description                                        |
-|-----------|----------------------------------------------------|
-| `branch`  | name of branch for a build.                        |
-| `comment` | pull request comment body.                         |
-| `event`   | name of an event for a build.                      |
-| `label`   | pull request label.                                |
-| `path`    | path to workspace files for a build.               |
-| `repo`    | name of the  repo for a build.                     |
-| `status`  | name of status for a build.                        |
-| `tag`     | name of reference for a build.                     |
-| `target`  | name of deployment or schedule target for a build. |
+| Name       | Description                                        |
+|------------|----------------------------------------------------|
+| `branch`   | name of branch for a build.                        |
+| `comment`  | pull request comment body.                         |
+| `event`    | name of an event for a build.                      |
+| `instance` | FQDN of backend server instance.                   |
+| `label`    | pull request label.                                |
+| `path`     | path to workspace files for a build.               |
+| `repo`     | name of the  repo for a build.                     |
+| `status`   | name of status for a build.                        |
+| `tag`      | name of reference for a build.                     |
+| `target`   | name of deployment or schedule target for a build. |
 
 ```yaml
 ---
@@ -183,6 +184,20 @@ If you wish to include _all_ event types from an event, you can specify a wildca
       event: pull_request*  # will run on opened, reopened, synchronize, edited, labeled, and unlabeled
 ```
 
+{{% /alert %}}
+
+```yaml
+---
+steps:
+  - name: Limiting execution to an instance
+    ruleset:
+      # This step will execute if the FQDN of the 
+      # server backend instance matches the supplied value.
+      instance: https://vela-server.example.com
+```
+
+{{% alert color="info" %}}
+Ensure you are supplying the address of the configured backend server and not the web UI.
 {{% /alert %}}
 
 ```yaml
