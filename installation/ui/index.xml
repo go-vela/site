@@ -72,7 +72,8 @@ This variable has a default value of &lt;code>production&lt;/code>.
 &lt;p>The variable can be provided as a &lt;code>string&lt;/code>.&lt;/p>
 &lt;div class="alert alert-primary" role="alert">
 &lt;h4 class="alert-heading">Note:&lt;/h4>
-This variable has a default value of &lt;code>https://go-vela.github.io/docs/&lt;/code>.
+&lt;p>This variable has a default value of &lt;code>https://go-vela.github.io/docs/&lt;/code>.&lt;/p>
+&lt;p>Please note that this variable is used in deep links throughout the UI. Customizing this value assumes the target location utilizes the same URL structure as the official docs at the default location.&lt;/p>
 &lt;/div>
 &lt;h3 id="vela_feedback_url">VELA_FEEDBACK_URL&lt;/h3>
 &lt;p>This variable sets a fully qualified URL to the feedback website for Vela.&lt;/p>
