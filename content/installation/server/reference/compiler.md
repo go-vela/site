@@ -1,6 +1,7 @@
 ---
 title: "Compiler"
 linkTitle: "Compiler"
+weight: 2
 description: >
   This section contains information on the compiler component for the Vela server.
 ---

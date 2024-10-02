@@ -19,6 +19,7 @@ The server is made up of several components, responsible for specific tasks, nec
 | `queue`    | integrates with a queue provider for pushing workloads that will be run by a [worker](/docs/installation/worker/) |
 | `secret`   | integrates with a secret provider for storing sensitive application data at rest                                  |
 | `source`   | integrates with a source control management (SCM) provider for authentication and authorization                   |
+| `tracing`  | implements OpenTelemetry tracing instrumentation for the [server](/docs/installation/server/) |
 
 ## Required
 
@@ -805,4 +806,102 @@ The variable can be provided as a `duration` (i.e. `5s`, `10m`).
 This variable has a default value of `5m`.\
 \
 The value should coordinate with the [`VELA_CHECK_IN`](/docs/installation/worker/reference/#vela_check_in) setting provided to the [worker](/docs/installation/worker/).
+{{% /alert %}}
+
+### VELA_OTEL_TRACING_ENABLE
+
+This variable enables [OpenTelemetry tracing](https://opentelemetry.io/docs/concepts/signals/traces/) for the Vela server. You must provide `VELA_OTEL_EXPORTER_OTLP_ENDPOINT` **when tracing is enabled**.
+
+{{% alert title="Notes:" color="primary" %}}
+This variable has a default value of `false`.
+{{% /alert %}}
+
+### VELA_OTEL_TRACING_SERVICE_NAME
+
+This variable sets the [service name](https://opentelemetry.io/docs/languages/sdk-configuration/general/) applied to [traces](https://opentelemetry.io/docs/concepts/signals/traces/).
+
+{{% alert title="Notes:" color="primary" %}}
+This variable has a default value of `vela-server`.
+{{% /alert %}}
+
+### VELA_OTEL_EXPORTER_OTLP_ENDPOINT
+
+This variable sets the [OTel exporter](https://opentelemetry.io/docs/languages/sdk-configuration/otlp-exporter/) endpoint (ex. scheme://host:port).
+
+{{% alert title="Note:" color="primary" %}}
+This variable has no default value.\
+\
+When tracing is enabled this variable is **required**.
+{{% /alert %}}
+
+### VELA_OTEL_TRACING_EXPORTER_SSL_CERT_PATH
+
+This variable sets the path to certs used for communicating with the [OTel exporter](https://opentelemetry.io/docs/specs/OTel/protocol/exporter/). If nothing is provided, will use insecure communication.
+
+{{% alert title="Note:" color="primary" %}}
+This variable has no default value.\
+\
+Providing no value for this variable instructs the server to export traces insecurely (no SSL).
+{{% /alert %}}
+
+### VELA_OTEL_TRACING_TLS_MIN_VERSION
+
+This optional variable sets a TLS minimum version used when exporting traces to the [OTel exporter](https://opentelemetry.io/docs/specs/OTel/protocol/exporter/).
+
+{{% alert title="Note:" color="primary" %}}
+This variable has a default value of `1.2`.
+{{% /alert %}}
+
+### VELA_OTEL_TRACING_SAMPLER_RATELIMIT_PER_SECOND
+
+This variable sets OTel [tracing head-sampler](https://opentelemetry.io/docs/concepts/sampling/) rate-limiting to N per second.
+
+{{% alert title="Note:" color="primary" %}}
+This variable has a default value of `100`, meaning the server can record a maximum of `100 traces per second`.
+{{% /alert %}}
+
+### VELA_OTEL_TRACING_SAMPLER_TASKS_CONFIG_FILEPATH
+
+This variable sets an (optional) filepath to the OTel tracing head-sampler configurations json to alter how certain tasks (endpoints, queries, etc) are sampled.
+
+A `task` is basically the "span name" based on the work being performed. A `task` can be an API endpoint interaction, a gorm query, etc.
+
+See: https://opentelemetry.io/docs/specs/OTel/trace/api/#span
+
+{{% alert title="Note:" color="primary" %}}
+This variable has no default value.\
+\
+When no path is provided all tasks are recorded using provided shared parameters.
+{{% /alert %}}
+
+### VELA_OTEL_TRACING_RESOURCE_ATTRIBUTES
+
+This variable sets OTel resource [(span) attributes](https://opentelemetry.io/docs/languages/go/instrumentation/#span-attributes) as a list of key=value pairs. each one will be attached to each span as a 'process' attribute.
+
+{{% alert title="Note:" color="primary" %}}
+This variable has no default value.
+{{% /alert %}}
+
+### VELA_OTEL_TRACING_RESOURCE_ENV_ATTRIBUTES
+
+This variable sets OTel resource [(span) attributes](https://opentelemetry.io/docs/languages/go/instrumentation/#span-attributes) as a list of key=env_variable_key pairs. each one will be attached to each [span](https://opentelemetry.io/docs/languages/go/instrumentation/#span-attributes) as a 'process' attribute where the value is retrieved from the environment using the pair value.
+
+{{% alert title="Note:" color="primary" %}}
+This variable has no default value.
+{{% /alert %}}
+
+### VELA_OTEL_TRACING_SPAN_ATTRIBUTES
+
+This variable sets trace [span attributes](https://opentelemetry.io/docs/languages/go/instrumentation/#span-attributes) as a list of key=value pairs. Each pair will be attached to each [span](https://opentelemetry.io/docs/languages/go/instrumentation/#span-attributes) as a 'tag' attribute.
+
+{{% alert title="Note:" color="primary" %}}
+This variable has no default value.
+{{% /alert %}}
+
+### VELA_OTEL_TRACING_TRACESTATE_ATTRIBUTES
+
+This variable sets OTel tracestate [(span) attributes](https://www.w3.org/TR/trace-context) as a list of key=value pairs. Each pair will be inserted into the tracestate for each sampled span.
+
+{{% alert title="Note:" color="primary" %}}
+This variable has no default value.
 {{% /alert %}}

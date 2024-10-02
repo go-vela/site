@@ -1,6 +1,7 @@
 ---
 title: "Database"
 linkTitle: "Database"
+weight: 3
 description: >
   This section contains information on the database component for the Vela server.
 ---
