@@ -420,99 +420,7 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;div class="alert alert-primary" role="alert">
 &lt;h4 class="alert-heading">Note:&lt;/h4>
 This Sqlite configuration is enabled by default and is not necessary to provide in order for Vela to operate.
-&lt;/div></description></item><item><title>Installation: Executor</title><link>https://go-vela.github.io/docs/installation/worker/reference/executor/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/worker/reference/executor/</guid><description>
-&lt;p>This component is responsible for coordinating with &lt;a href="https://go-vela.github.io/docs/docs/installation/worker/runtime/">the runtime&lt;/a> to manage workload resources.&lt;/p>
-&lt;p>Throughout the lifecycle of these resources, this component will track and report results back to the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/">server&lt;/a>.&lt;/p>
-&lt;h2 id="configuration">Configuration&lt;/h2>
-&lt;p>The following options are used to configure the component:&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Default&lt;/th>
-&lt;th>Environment Variables&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>&lt;code>executor.driver&lt;/code>&lt;/td>
-&lt;td>type of client to control and operate executor&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>linux&lt;/code>&lt;/td>
-&lt;td>&lt;code>EXECUTOR_DRIVER&lt;/code>&lt;br>&lt;code>VELA_EXECUTOR_DRIVER&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>executor.max_log_size&lt;/code>&lt;/td>
-&lt;td>maximum log size (in bytes)&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>0&lt;/code> (no limit)&lt;/td>
-&lt;td>&lt;code>EXECUTOR_MAX_LOG_SIZE&lt;/code>&lt;br>&lt;code>VELA_EXECUTOR_MAX_LOG_SIZE&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>executor.log_streaming_timeout&lt;/code>&lt;/td>
-&lt;td>maximum time to wait, after build completion, for logs to finish streaming&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>5m&lt;/code>&lt;/td>
-&lt;td>&lt;code>EXECUTOR_LOG_STREAMING_TIMEOUT&lt;/code>&lt;br>&lt;code>VELA_EXECUTOR_LOG_STREAMING_TIMEOUT&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;div class="alert alert-primary" role="alert">
-&lt;h4 class="alert-heading">Note:&lt;/h4>
-For more information on these configuration options, please see the &lt;a href="https://go-vela.github.io/docs/docs/installation/worker/reference/">worker reference&lt;/a>.
-&lt;/div>
-&lt;h2 id="drivers">Drivers&lt;/h2>
-&lt;p>The following drivers are available to configure the component:&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Documentation&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>&lt;code>linux&lt;/code>&lt;/td>
-&lt;td>uses a Linux executor for running workloads&lt;/td>
-&lt;td>&lt;a href="https://www.linux.com/">https://www.linux.com/&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>local&lt;/code>&lt;/td>
-&lt;td>uses a Local executor for running workloads (CLI only)&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;h3 id="linux">Linux&lt;/h3>
-&lt;p>From the &lt;a href="https://www.linux.com/what-is-linux/">Linux official website&lt;/a>:&lt;/p>
-&lt;blockquote>
-&lt;p>Linux has been around since the mid-1990s and has since reached a user-base that spans the globe. Just like Windows, iOS, and Mac OS, Linux is an operating system. In fact, one of the most popular platforms on the planet, Android, is powered by the Linux operating system.&lt;/p>
-&lt;/blockquote>
-&lt;p>The below configuration displays an example of starting the Vela worker that will use a Linux executor:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-diff" data-lang="diff">&lt;span style="display:flex;">&lt;span>$ docker run \
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --detach=true \
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_EXECUTOR_DRIVER=linux \
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">&lt;/span> --env=VELA_QUEUE_DRIVER=redis \
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SERVER_ADDR=https://vela-server.example.com \
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SERVER_SECRET=&amp;lt;shared-secret&amp;gt; \
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_WORKER_ADDR=https://vela-worker.example.com \
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --name=worker \
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --publish=80:80 \
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --publish=443:443 \
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --restart=always \
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --volume=/var/run/docker.sock:/var/run/docker.sock \
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> target/vela-worker:latest
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;div class="alert alert-primary" role="alert">
-&lt;h4 class="alert-heading">Note:&lt;/h4>
-This Linux configuration is enabled by default and is not necessary to provide in order for Vela to operate.
-&lt;/div>
-&lt;h3 id="local">Local&lt;/h3>
-&lt;p>The &lt;code>local&lt;/code> executor driver is only intended for use with the &lt;a href="https://go-vela.github.io/docs/docs/reference/cli/">Vela CLI&lt;/a>.&lt;/p>
-&lt;p>It&amp;rsquo;s not recommended to run any workloads on a worker configured with this driver.&lt;/p></description></item><item><title>Installation: Queue</title><link>https://go-vela.github.io/docs/installation/server/reference/queue/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/server/reference/queue/</guid><description>
+&lt;/div></description></item><item><title>Installation: Queue</title><link>https://go-vela.github.io/docs/installation/server/reference/queue/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/server/reference/queue/</guid><description>
 &lt;p>This component is responsible for integrating with a queue system based off the configuration provided.&lt;/p>
 &lt;p>The queue system is used by the Vela server for pushing workloads that will be run by a &lt;a href="https://go-vela.github.io/docs/docs/installation/worker/">worker&lt;/a>.&lt;/p>
 &lt;p>Workloads published to the queue are managed with a &lt;a href="https://en.wikipedia.org/wiki/FIFO_(computing_and_electronics)">first in, first out (FIFO)&lt;/a> strategy.&lt;/p>
@@ -627,7 +535,588 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --publish=443:443 \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --restart=always \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> target/vela-server:latest
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Installation: Queue</title><link>https://go-vela.github.io/docs/installation/worker/reference/queue/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/worker/reference/queue/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Installation: Secret</title><link>https://go-vela.github.io/docs/installation/server/reference/secret/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/server/reference/secret/</guid><description>
+&lt;p>This component is optional and is responsible for integrating with an external secret system based off the configuration provided.&lt;/p>
+&lt;p>The secret system is used by Vela for storing sensitive application &lt;a href="https://en.wikipedia.org/wiki/Data_at_rest">data at rest&lt;/a>.&lt;/p>
+&lt;p>By default, Vela will use &lt;a href="https://go-vela.github.io/docs/docs/installation/server/database/">the database&lt;/a> to store the sensitive data if no other secret system is configured.&lt;/p>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+Any sensitive data stored in the database will be encrypted using the &lt;a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard">Advanced Encryption Standard (AES)&lt;/a>.
+&lt;/div>
+&lt;h2 id="configuration">Configuration&lt;/h2>
+&lt;p>The following options are used to configure the component:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Environment Variables&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>secret.vault.addr&lt;/code>&lt;/td>
+&lt;td>fully qualified url to the HashiCorp Vault instance&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>SECRET_VAULT_ADDR&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_ADDR&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>secret.vault.auth-method&lt;/code>&lt;/td>
+&lt;td>authentication method used to obtain token from the HashiCorp Vault instance&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>SECRET_VAULT_AUTH_METHOD&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_AUTH_METHOD&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>secret.vault.aws-role&lt;/code>&lt;/td>
+&lt;td>HashiCorp Vault role used to connect to the auth/aws/login endpoint&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>SECRET_VAULT_AWS_ROLE&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_AWS_ROLE&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>secret.vault.driver&lt;/code>&lt;/td>
+&lt;td>enables HashiCorp Vault as a secret engine&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>SECRET_VAULT&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>secret.vault.prefix&lt;/code>&lt;/td>
+&lt;td>prefix for k/v secrets in the HashiCorp Vault instance&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>SECRET_VAULT_PREFIX&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_PREFIX&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>secret.vault.renewal&lt;/code>&lt;/td>
+&lt;td>frequency to renew the token for the HashiCorp Vault instance&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>30m&lt;/code>&lt;/td>
+&lt;td>&lt;code>SECRET_VAULT_RENEWAL&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_RENEWAL&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>secret.vault.token&lt;/code>&lt;/td>
+&lt;td>token required to access the HashiCorp Vault instance&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>SECRET_VAULT_TOKEN&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_TOKEN&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>secret.vault.version&lt;/code>&lt;/td>
+&lt;td>version for the k/v backend for the HashiCorp Vault instance&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>2&lt;/code>&lt;/td>
+&lt;td>&lt;code>SECRET_VAULT_VERSION&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_VERSION&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+For more information on these configuration options, please see the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/">server reference&lt;/a>.
+&lt;/div>
+&lt;h2 id="drivers">Drivers&lt;/h2>
+&lt;p>The following drivers are available to configure the component:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Documentation&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>vault&lt;/code>&lt;/td>
+&lt;td>uses a HashiCorp Vault instance for storing sensitive data at rest&lt;/td>
+&lt;td>&lt;a href="https://www.vaultproject.io/">https://www.vaultproject.io/&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="hashicorp-vault">HashiCorp Vault&lt;/h3>
+&lt;p>From the &lt;a href="https://www.vaultproject.io/">HashiCorp Vault official website&lt;/a>:&lt;/p>
+&lt;blockquote>
+&lt;p>HashiCorp Vault enables you to secure, store and tightly control access to tokens, passwords, certificates, encryption keys for protecting secrets and other sensitive data using a UI, CLI, or HTTP API.&lt;/p>
+&lt;/blockquote>
+&lt;p>The below configuration displays an example of starting the Vela server that will connect to a HashiCorp Vault instance:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-diff" data-lang="diff">&lt;span style="display:flex;">&lt;span>$ docker run \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --detach=true \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_ADDR=https://vela-server.example.com \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_DATABASE_ENCRYPTION_KEY=&amp;lt;encryption-key&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_QUEUE_DRIVER=redis \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_QUEUE_ADDR=redis://&amp;lt;password&amp;gt;@&amp;lt;hostname&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;database&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_PORT=443 \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SECRET=&amp;lt;shared-secret&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SERVER_PRIVATE_KEY=&amp;lt;private_key&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_SECRET_VAULT=true \
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_SECRET_VAULT_ADDR=https://vault.example.com \
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_SECRET_VAULT_TOKEN=&amp;lt;vault-token&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">&lt;/span> --env=VELA_SCM_CLIENT=&amp;lt;oauth-client-id&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SCM_SECRET=&amp;lt;oauth-client-secret&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_WEBUI_ADDR=https://vela.example.com \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --name=server \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --publish=80:80 \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --publish=443:443 \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --restart=always \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> target/vela-server:latest
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Installation: SCM</title><link>https://go-vela.github.io/docs/installation/server/reference/scm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/server/reference/scm/</guid><description>
+&lt;p>This component is responsible for integrating with a source control management (SCM) system based off the configuration provided.&lt;/p>
+&lt;p>The SCM system is used by Vela for both authentication and authorization of interactions performed within the application.&lt;/p>
+&lt;p>&lt;img src="https://go-vela.github.io/docs/docs/installation/server/reference/authentication_workflow.png" alt="Authentication Workflow">&lt;/p>
+&lt;h2 id="configuration">Configuration&lt;/h2>
+&lt;p>The following options are used to configure the component:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Environment Variables&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>scm.addr&lt;/code>&lt;/td>
+&lt;td>fully qualified url for the SCM&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>https://github.com&lt;/code>&lt;/td>
+&lt;td>&lt;code>SCM_ADDR&lt;/code>&lt;br>&lt;code>VELA_SCM_ADDR&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>scm.client&lt;/code>&lt;/td>
+&lt;td>client ID from the generated OAuth application on the SCM&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>SCM_CLIENT&lt;/code>&lt;br>&lt;code>VELA_SCM_CLIENT&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>scm.context&lt;/code>&lt;/td>
+&lt;td>message to set in commit status on the SCM&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>continuous-integration/vela&lt;/code>&lt;/td>
+&lt;td>&lt;code>SCM_CONTEXT&lt;/code>&lt;br>&lt;code>VELA_SCM_CONTEXT&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>scm.driver&lt;/code>&lt;/td>
+&lt;td>type of client to control and operate SCM&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>github&lt;/code>&lt;/td>
+&lt;td>&lt;code>SCM_DRIVER&lt;/code>&lt;br>&lt;code>VELA_SCM_DRIVER&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>scm.scopes&lt;/code>&lt;/td>
+&lt;td>permission scopes to apply for the OAuth credentials on the SCM&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>[ repo, repo:status, user:email, read:user, read:org ]&lt;/code>&lt;/td>
+&lt;td>&lt;code>SCM_SCOPES&lt;/code>&lt;br>&lt;code>VELA_SCM_SCOPES&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>scm.secret&lt;/code>&lt;/td>
+&lt;td>client secret from the generated OAuth application on the SCM&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>SCM_SECRET&lt;/code>&lt;br>&lt;code>VELA_SCM_SECRET&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>scm.webhook.addr&lt;/code>&lt;/td>
+&lt;td>url for webhooks on the SCM to send requests to&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>the address of the Vela server (&lt;code>$VELA_ADDR&lt;/code>)&lt;/td>
+&lt;td>&lt;code>SCM_WEBHOOK_ADDR&lt;/code>&lt;br>&lt;code>VELA_SCM_WEBHOOK_ADDR&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+For more information on these configuration options, please see the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/">server reference&lt;/a>.
+&lt;/div>
+&lt;h2 id="drivers">Drivers&lt;/h2>
+&lt;p>The following drivers are available to configure the component:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Documentation&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>github&lt;/code>&lt;/td>
+&lt;td>uses a GitHub or GitHug Enterprise Server for the SCM&lt;/td>
+&lt;td>&lt;a href="https://github.com/about/">https://github.com/about/&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="github">GitHub&lt;/h3>
+&lt;p>From the &lt;a href="https://github.com/about/">GitHub official website&lt;/a>:&lt;/p>
+&lt;blockquote>
+&lt;p>GitHub is where the world builds software. Millions of developers and companies build, ship, and maintain their software on GitHub—the largest and most advanced development platform in the world.&lt;/p>
+&lt;/blockquote>
+&lt;p>The below configuration displays an example of creating a &lt;a href="https://docs.github.com/developers/apps/building-oauth-apps/creating-an-oauth-app">GitHub OAuth application&lt;/a>:&lt;/p>
+&lt;p>&lt;img src="https://go-vela.github.io/docs/docs/installation/server/github_oauth.png" alt="OAuth Application">&lt;/p>
+&lt;div class="alert alert-secondary" role="alert">
+&lt;h4 class="alert-heading">Warning:&lt;/h4>
+&lt;p>The &lt;code>Homepage URL&lt;/code> should match &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/#vela_addr">the &lt;code>VELA_ADDR&lt;/code> environment variable&lt;/a> provided to the server for clusters without a UI.&lt;/p>
+&lt;p>Otherwise, the &lt;code>Homepage URL&lt;/code> should match &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/#vela_webui_addr">the &lt;code>VELA_WEBUI_ADDR&lt;/code> environment variable&lt;/a> provided to the server.&lt;/p>
+&lt;p>The &lt;code>Authorization callback URL&lt;/code> should contain &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/#vela_addr">the &lt;code>VELA_ADDR&lt;/code> environment variable&lt;/a> with a &lt;code>/authenticate&lt;/code> suffix.&lt;/p>
+&lt;/div>
+&lt;h3 id="github-enterprise-server">GitHub Enterprise Server&lt;/h3>
+&lt;p>From the &lt;a href="https://docs.github.com/en/enterprise-server/admin/overview/system-overview">GitHub Enterprise official website&lt;/a>:&lt;/p>
+&lt;blockquote>
+&lt;p>GitHub Enterprise Server is your organization&amp;rsquo;s private copy of GitHub contained within a virtual appliance, hosted on premises or in the cloud, that you configure and control.&lt;/p>
+&lt;/blockquote>
+&lt;p>The below configuration displays an example of creating a &lt;a href="https://docs.github.com/enterprise-server@3.3/developers/apps/building-oauth-apps/creating-an-oauth-app">GitHub Enterprise Server OAuth application&lt;/a>:&lt;/p>
+&lt;p>&lt;img src="https://go-vela.github.io/docs/docs/installation/server/github_enterprise_oauth.png" alt="OAuth Application">&lt;/p>
+&lt;div class="alert alert-secondary" role="alert">
+&lt;h4 class="alert-heading">Warning:&lt;/h4>
+&lt;p>The &lt;code>Homepage URL&lt;/code> should match &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/#vela_addr">the &lt;code>VELA_ADDR&lt;/code> environment variable&lt;/a> provided to the server for clusters without a UI.&lt;/p>
+&lt;p>Otherwise, the &lt;code>Homepage URL&lt;/code> should match &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/#vela_webui_addr">the &lt;code>VELA_WEBUI_ADDR&lt;/code> environment variable&lt;/a> provided to the server.&lt;/p>
+&lt;p>The &lt;code>Authorization callback URL&lt;/code> should contain &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/#vela_addr">the &lt;code>VELA_ADDR&lt;/code> environment variable&lt;/a> with a &lt;code>/authenticate&lt;/code> suffix.&lt;/p>
+&lt;/div></description></item><item><title>Installation: Token Manager</title><link>https://go-vela.github.io/docs/installation/server/reference/token_manager/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/server/reference/token_manager/</guid><description>
+&lt;p>This component is responsible for generating and validating JWT tokens shared between the Vela server, workers, and users based off the configuration provided.&lt;/p>
+&lt;p>The token manager is designed to ensure secure interactions with the server and protect build resources.&lt;/p>
+&lt;h2 id="configuration">Configuration&lt;/h2>
+&lt;p>The following options are used to configure the component:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Environment Variables&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>vela-server-private-key&lt;/code>&lt;/td>
+&lt;td>private key used for signing and validating all JWT tokens&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>VELA_SERVER_PRIVATE_KEY&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>user-access-token-duration&lt;/code>&lt;/td>
+&lt;td>maximum duration of time a Vela access token for a user is valid on the server&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>15m&lt;/code>&lt;/td>
+&lt;td>&lt;code>VELA_USER_ACCESS_TOKEN_DURATION&lt;/code>&lt;br>&lt;code>USER_ACCESS_TOKEN_DURATION&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>user-refresh-token-duration&lt;/code>&lt;/td>
+&lt;td>maximum duration of time a Vela refresh token for a user is valid on the server&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>8h&lt;/code>&lt;/td>
+&lt;td>&lt;code>VELA_USER_ACCESS_TOKEN_DURATION&lt;/code>&lt;br>&lt;code>USER_ACCESS_TOKEN_DURATION&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>build-token-buffer-duration&lt;/code>&lt;/td>
+&lt;td>maximum duration of time a Vela build token for a build extends beyond the repo build limit to maintain validity on the server&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>5m&lt;/code>&lt;/td>
+&lt;td>&lt;code>VELA_BUILD_TOKEN_BUFFER_DURATION&lt;/code>&lt;br>&lt;code>BUILD_TOKEN_BUFFER_DURATION&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>worker-auth-token-duration&lt;/code>&lt;/td>
+&lt;td>maximum duration of time an auth token for a worker is valid on the server&lt;/td>
+&lt;td>&lt;code>false&lt;/code>*&lt;/td>
+&lt;td>&lt;code>20m&lt;/code>&lt;/td>
+&lt;td>&lt;code>VELA_WORKER_AUTH_TOKEN_DURATION&lt;/code>&lt;br>&lt;code>WORKER_AUTH_TOKEN_DURATION&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>worker-register-token-duration&lt;/code>&lt;/td>
+&lt;td>maximum duration of time a registration token for a worker is valid on the server&lt;/td>
+&lt;td>&lt;code>false&lt;/code>*&lt;/td>
+&lt;td>&lt;code>1m&lt;/code>&lt;/td>
+&lt;td>&lt;code>VELA_WORKER_REGISTER_TOKEN_DURATION&lt;/code>&lt;br>&lt;code>WORKER_REGISTER_TOKEN_DURATION&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Notes:&lt;/h4>
+&lt;p>* &lt;code>worker-auth-token-duration&lt;/code> and &lt;code>worker-register-token-duration&lt;/code> are required if you intend to register workers.&lt;/p>
+&lt;p>For more information on these configuration options, please see the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/">server reference&lt;/a>.&lt;/p>
+&lt;/div></description></item><item><title>Installation: Tracing</title><link>https://go-vela.github.io/docs/installation/server/reference/tracing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/server/reference/tracing/</guid><description>
+&lt;p>This component is responsible for instrumenting &lt;a href="https://opentelemetry.io/docs/concepts/signals/traces/">OpenTelemetry traces&lt;/a> based off the configuration provided.&lt;/p>
+&lt;h2 id="configuration">Configuration&lt;/h2>
+&lt;p>The following options are used to configure the component:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Environment Variables&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>tracing.enable&lt;/code>&lt;/td>
+&lt;td>This variable enables &lt;a href="https://opentelemetry.io/docs/concepts/signals/traces/">OpenTelemetry tracing&lt;/a> for the Vela server. You must provide &lt;code>VELA_OTEL_EXPORTER_OTLP_ENDPOINT&lt;/code> &lt;strong>when tracing is enabled&lt;/strong>.&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>VELA_OTEL_TRACING_ENABLE&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>tracing.service.name&lt;/code>&lt;/td>
+&lt;td>This variable sets the &lt;a href="https://opentelemetry.io/docs/languages/sdk-configuration/general/">service name&lt;/a> applied to &lt;a href="https://opentelemetry.io/docs/concepts/signals/traces/">traces&lt;/a>.&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>vela-server&lt;/code>&lt;/td>
+&lt;td>&lt;code>VELA_OTEL_TRACING_SERVICE_NAME&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>tracing.exporter.endpoint&lt;/code>&lt;/td>
+&lt;td>This variable sets the &lt;a href="https://opentelemetry.io/docs/languages/sdk-configuration/otlp-exporter/">OTel exporter&lt;/a> endpoint (ex. scheme://host:port).&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>VELA_OTEL_EXPORTER_OTLP_ENDPOINT&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>tracing.exporter.cert_path&lt;/code>&lt;/td>
+&lt;td>This variable sets the path to certs used for communicating with the &lt;a href="https://opentelemetry.io/docs/specs/OTel/protocol/exporter/">OTel exporter&lt;/a>. If nothing is provided the server will use insecure communication.&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>VELA_OTEL_TRACING_EXPORTER_SSL_CERT_PATH&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>tracing.exporter.tls-min-version&lt;/code>&lt;/td>
+&lt;td>This optional variable sets a TLS minimum version used when exporting traces to the &lt;a href="https://opentelemetry.io/docs/specs/OTel/protocol/exporter/">OTel exporter&lt;/a>.&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>1.2&lt;/code>&lt;/td>
+&lt;td>&lt;code>VELA_OTEL_TRACING_TLS_MIN_VERSION&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>tracing.sampler.persecond&lt;/code>&lt;/td>
+&lt;td>This variable sets OTel &lt;a href="https://opentelemetry.io/docs/concepts/sampling/">tracing head-sampler&lt;/a> rate-limiting to N per second.&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>100&lt;/code>&lt;/td>
+&lt;td>&lt;code>VELA_OTEL_TRACING_SAMPLER_RATELIMIT_PER_SECOND&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>tracing.sampler.tasks&lt;/code>&lt;/td>
+&lt;td>This variable sets an (optional) filepath to the OTel tracing head-sampler configurations json to alter how certain tasks (API endpoints, queries, etc) are sampled.&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>VELA_OTEL_TRACING_SAMPLER_TASKS_CONFIG_FILEPATH&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>tracing.resource.attributes&lt;/code>&lt;/td>
+&lt;td>This variable sets OTel resource &lt;a href="https://opentelemetry.io/docs/languages/go/instrumentation/#span-attributes">(span) attributes&lt;/a> as a list of &lt;code>key=value&lt;/code> pairs. each one will be attached to each span as a &amp;lsquo;process&amp;rsquo; attribute.&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>VELA_OTEL_TRACING_RESOURCE_ATTRIBUTES&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>tracing.resource.env_attributes&lt;/code>&lt;/td>
+&lt;td>This variable sets OTel resource &lt;a href="https://opentelemetry.io/docs/languages/go/instrumentation/#span-attributes">(span) attributes&lt;/a> as a list of &lt;code>key=env_variable_key&lt;/code> pairs. each one will be attached to each &lt;a href="https://opentelemetry.io/docs/languages/go/instrumentation/#span-attributes">span&lt;/a> as a &amp;lsquo;process&amp;rsquo; attribute where the value is retrieved from the environment using the pair value.&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>VELA_OTEL_TRACING_RESOURCE_ENV_ATTRIBUTES&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>tracing.span.attributes&lt;/code>&lt;/td>
+&lt;td>This variable sets trace &lt;a href="https://opentelemetry.io/docs/languages/go/instrumentation/#span-attributes">span attributes&lt;/a> as a list of &lt;code>key=value&lt;/code> pairs. Each pair will be attached to each &lt;a href="https://opentelemetry.io/docs/languages/go/instrumentation/#span-attributes">span&lt;/a> as a &amp;rsquo;tag&amp;rsquo; attribute.&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>VELA_OTEL_TRACING_SPAN_ATTRIBUTES&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>tracing.tracestate.attributes&lt;/code>&lt;/td>
+&lt;td>This variable sets OTel tracestate &lt;a href="https://www.w3.org/TR/trace-context">(span) attributes&lt;/a> as a list of &lt;code>key=value&lt;/code> pairs. Each pair will be inserted into the tracestate for each sampled span.&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td>&lt;code>VELA_OTEL_TRACING_TRACESTATE_ATTRIBUTES&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+For more information on how the runtime properties are consumed, please see the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/">server reference&lt;/a>.
+&lt;/div>
+&lt;h2 id="exporter">Exporter&lt;/h2>
+&lt;p>To start using tracing you first need to set &lt;code>VELA_OTEL_TRACING_ENABLE=true&lt;/code> in the runtime environment.&lt;/p>
+&lt;p>Enabling tracing requires that &lt;code>VELA_OTEL_EXPORTER_OTLP_ENDPOINT&lt;/code> be set to an &lt;a href="https://opentelemetry.io/docs/specs/OTel/protocol/exporter/">exporter&lt;/a> host that is reachable over HTTP.&lt;/p>
+&lt;p>If the exporter requires SSL then &lt;code>VELA_OTEL_TRACING_EXPORTER_SSL_CERT_PATH&lt;/code> must be set to a filepath that contains valid certificates. If no certificate filepath is set, then the server will communicate with the exporter over HTTP (insecure).&lt;/p>
+&lt;p>The Vela local stack is configured to export traces to Jaeger using their &amp;ldquo;all-in-one&amp;rdquo; Docker image, making it easy to view traces out of the box.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-diff" data-lang="diff">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ jaeger:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ image: jaegertracing/all-in-one:latest
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">&lt;/span>...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ docker run \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --detach=true \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_ADDR=https://vela-server.example.com \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_OTEL_TRACING_ENABLE: true \
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_OTEL_EXPORTER_OTLP_ENDPOINT: http://jaeger:4318 \
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">&lt;/span>...
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>From the &lt;a href="https://www.jaegertracing.io/docs/1.6/getting-started/">Jaeger official website&lt;/a>:&lt;/p>
+&lt;blockquote>
+&lt;p>This image, designed for quick local testing, launches the Jaeger UI, collector, query, and agent, with an in memory storage component.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="sampling">Sampling&lt;/h2>
+&lt;p>The server uses a combination of &amp;ldquo;shared&amp;rdquo; and &amp;ldquo;per-task&amp;rdquo; &lt;a href="https://opentelemetry.io/docs/concepts/sampling/">head sampling&lt;/a> to control how traces are recorded or dropped.&lt;/p>
+&lt;h3 id="shared-samplers">&amp;ldquo;Shared&amp;rdquo; Samplers&lt;/h3>
+&lt;p>The following samplers are utilized by all traces produced by the server.&lt;/p>
+&lt;h4 id="global-rate-limiting">Global Rate-limiting&lt;/h4>
+&lt;p>All traces share a global rate limit controlled by &lt;code>VELA_OTEL_TRACING_SAMPLER_RATELIMIT_PER_SECOND&lt;/code>.&lt;/p>
+&lt;p>Use &lt;code>VELA_OTEL_TRACING_SAMPLER_RATELIMIT_PER_SECOND&lt;/code> to set a maximum threshold of &amp;ldquo;N traces per second&amp;rdquo;. The default is &lt;code>100&lt;/code> traces per second.&lt;/p>
+&lt;h3 id="task-samplers">&amp;ldquo;Task&amp;rdquo; Samplers&lt;/h3>
+&lt;p>Set &lt;code>VELA_OTEL_TRACING_SAMPLER_TASKS_CONFIG_FILEPATH&lt;/code> to point to a JSON filepath to control sampler configurations on a per-task basis.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#a40000">tracing.json&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;task-name&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;active&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#a40000">bool&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>A &lt;code>task&lt;/code> is basically the &amp;ldquo;span name&amp;rdquo; based on the work being performed. A &lt;code>task&lt;/code> can be an API endpoint interaction, a &lt;a href="https://gorm.io/docs/index.html">Gorm&lt;/a> query, etc. See &lt;a href="https://opentelemetry.io/docs/specs/otel/trace/api/#span">OTel span docs&lt;/a> for more information.&lt;/p>
+&lt;p>If a &lt;code>task&lt;/code> is &lt;strong>not&lt;/strong> represented in the configuration file then the task will be treated normally, &lt;strong>with tracing enabled&lt;/strong> using the &amp;ldquo;shared&amp;rdquo; samplers.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Field&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>active&lt;/code>&lt;/td>
+&lt;td>bool&lt;/td>
+&lt;td>Set to &lt;code>false&lt;/code> to completely disable traces for a particular task.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Examples of trace tasks include API endpoints, gorm queries, etc. The list of tasks will change as functionality is added to the server.&lt;/p>
+&lt;blockquote>
+&lt;p>See the configuration file examples below.&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="example---no-tasks">Example - No Tasks&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">{}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Because tasks that do not exist in the configuration file will be treated as enabled, this file will &lt;strong>enable all tracing&lt;/strong>.&lt;/p>
+&lt;h4 id="example---disable-health-endpoint">Example - Disable /health Endpoint&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;/health&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;active&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#204a87;font-weight:bold">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Because &lt;code>active&lt;/code> can be used to disable tracing, this configuration file will enable tracing for all tasks &lt;strong>except for the &lt;code>/health&lt;/code> endpoint&lt;/strong>.&lt;/p>
+&lt;h4 id="example---mixed-tasks">Example - Mixed Tasks&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;/health&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;active&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#204a87;font-weight:bold">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;/api/v1/deployments/:org/:repo&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;active&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#204a87;font-weight:bold">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;/api/v1/:worker&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;active&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#204a87;font-weight:bold">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;gorm.query&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87;font-weight:bold">&amp;#34;active&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#204a87;font-weight:bold">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The task &lt;code>/health&lt;/code> with &lt;code>active: false&lt;/code> will &lt;strong>disable&lt;/strong> tracing on &lt;code>/health&lt;/code>.&lt;/p>
+&lt;p>&lt;code>/api/v1/deployments/:org/:repo&lt;/code> with &lt;code>active: false&lt;/code> will &lt;strong>disable&lt;/strong> tracing on &lt;code>/api/v1/deployments/:org/:repo&lt;/code> for &lt;strong>ALL&lt;/strong> &lt;code>:org&lt;/code> and &lt;code>:repo&lt;/code> parameters.&lt;/p>
+&lt;p>&lt;code>/api/v1/:worker&lt;/code> with &lt;code>active: true&lt;/code> &lt;strong>will do nothing&lt;/strong> at this point, because any tasks that are not present in the configuration file will automatically be sampled normally. For now this is slightly confusing, but in the future there will be more configuration fields that will determine how an &lt;code>active: true&lt;/code> task is sampled.&lt;/p>
+&lt;p>The task &lt;code>gorm.query&lt;/code> with &lt;code>active: false&lt;/code> would disable tracing for raw gorm queries. This is meant to show that the config applies to &lt;strong>all trace tasks&lt;/strong> and not just API endpoints.&lt;/p>
+&lt;p>&lt;strong>All other tasks&lt;/strong> will be sampled as normal using the global shared samplers (like rate limiting)! This includes all API endpoints and gorm queries.&lt;/p></description></item><item><title>Installation: Executor</title><link>https://go-vela.github.io/docs/installation/worker/reference/executor/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/worker/reference/executor/</guid><description>
+&lt;p>This component is responsible for coordinating with &lt;a href="https://go-vela.github.io/docs/docs/installation/worker/runtime/">the runtime&lt;/a> to manage workload resources.&lt;/p>
+&lt;p>Throughout the lifecycle of these resources, this component will track and report results back to the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/">server&lt;/a>.&lt;/p>
+&lt;h2 id="configuration">Configuration&lt;/h2>
+&lt;p>The following options are used to configure the component:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Environment Variables&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>executor.driver&lt;/code>&lt;/td>
+&lt;td>type of client to control and operate executor&lt;/td>
+&lt;td>&lt;code>true&lt;/code>&lt;/td>
+&lt;td>&lt;code>linux&lt;/code>&lt;/td>
+&lt;td>&lt;code>EXECUTOR_DRIVER&lt;/code>&lt;br>&lt;code>VELA_EXECUTOR_DRIVER&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>executor.max_log_size&lt;/code>&lt;/td>
+&lt;td>maximum log size (in bytes)&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>0&lt;/code> (no limit)&lt;/td>
+&lt;td>&lt;code>EXECUTOR_MAX_LOG_SIZE&lt;/code>&lt;br>&lt;code>VELA_EXECUTOR_MAX_LOG_SIZE&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>executor.log_streaming_timeout&lt;/code>&lt;/td>
+&lt;td>maximum time to wait, after build completion, for logs to finish streaming&lt;/td>
+&lt;td>&lt;code>false&lt;/code>&lt;/td>
+&lt;td>&lt;code>5m&lt;/code>&lt;/td>
+&lt;td>&lt;code>EXECUTOR_LOG_STREAMING_TIMEOUT&lt;/code>&lt;br>&lt;code>VELA_EXECUTOR_LOG_STREAMING_TIMEOUT&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+For more information on these configuration options, please see the &lt;a href="https://go-vela.github.io/docs/docs/installation/worker/reference/">worker reference&lt;/a>.
+&lt;/div>
+&lt;h2 id="drivers">Drivers&lt;/h2>
+&lt;p>The following drivers are available to configure the component:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Documentation&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>linux&lt;/code>&lt;/td>
+&lt;td>uses a Linux executor for running workloads&lt;/td>
+&lt;td>&lt;a href="https://www.linux.com/">https://www.linux.com/&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>local&lt;/code>&lt;/td>
+&lt;td>uses a Local executor for running workloads (CLI only)&lt;/td>
+&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="linux">Linux&lt;/h3>
+&lt;p>From the &lt;a href="https://www.linux.com/what-is-linux/">Linux official website&lt;/a>:&lt;/p>
+&lt;blockquote>
+&lt;p>Linux has been around since the mid-1990s and has since reached a user-base that spans the globe. Just like Windows, iOS, and Mac OS, Linux is an operating system. In fact, one of the most popular platforms on the planet, Android, is powered by the Linux operating system.&lt;/p>
+&lt;/blockquote>
+&lt;p>The below configuration displays an example of starting the Vela worker that will use a Linux executor:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-diff" data-lang="diff">&lt;span style="display:flex;">&lt;span>$ docker run \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --detach=true \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_EXECUTOR_DRIVER=linux \
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">&lt;/span> --env=VELA_QUEUE_DRIVER=redis \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SERVER_ADDR=https://vela-server.example.com \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SERVER_SECRET=&amp;lt;shared-secret&amp;gt; \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_WORKER_ADDR=https://vela-worker.example.com \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --name=worker \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --publish=80:80 \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --publish=443:443 \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --restart=always \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --volume=/var/run/docker.sock:/var/run/docker.sock \
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> target/vela-worker:latest
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Note:&lt;/h4>
+This Linux configuration is enabled by default and is not necessary to provide in order for Vela to operate.
+&lt;/div>
+&lt;h3 id="local">Local&lt;/h3>
+&lt;p>The &lt;code>local&lt;/code> executor driver is only intended for use with the &lt;a href="https://go-vela.github.io/docs/docs/reference/cli/">Vela CLI&lt;/a>.&lt;/p>
+&lt;p>It&amp;rsquo;s not recommended to run any workloads on a worker configured with this driver.&lt;/p></description></item><item><title>Installation: Queue</title><link>https://go-vela.github.io/docs/installation/worker/reference/queue/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/worker/reference/queue/</guid><description>
 &lt;p>This component is responsible for integrating with a queue system based off the configuration provided.&lt;/p>
 &lt;p>The queue system is used by Vela for pulling workloads, provided by the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/">server&lt;/a>, that will be run.&lt;/p>
 &lt;p>Workloads fetched from the queue are managed with a &lt;a href="https://en.wikipedia.org/wiki/FIFO_(computing_and_electronics)">first in, first out (FIFO)&lt;/a> strategy.&lt;/p>
@@ -861,310 +1350,4 @@ This Docker configuration is enabled by default and is not necessary to provide 
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --volume=/var/run/docker.sock:/var/run/docker.sock \
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --volume=/root/.kube/config:/root/.kube/config \
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">&lt;/span> target/vela-worker:latest
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Installation: SCM</title><link>https://go-vela.github.io/docs/installation/server/reference/scm/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/server/reference/scm/</guid><description>
-&lt;p>This component is responsible for integrating with a source control management (SCM) system based off the configuration provided.&lt;/p>
-&lt;p>The SCM system is used by Vela for both authentication and authorization of interactions performed within the application.&lt;/p>
-&lt;p>&lt;img src="https://go-vela.github.io/docs/docs/installation/server/reference/authentication_workflow.png" alt="Authentication Workflow">&lt;/p>
-&lt;h2 id="configuration">Configuration&lt;/h2>
-&lt;p>The following options are used to configure the component:&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Default&lt;/th>
-&lt;th>Environment Variables&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>&lt;code>scm.addr&lt;/code>&lt;/td>
-&lt;td>fully qualified url for the SCM&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>https://github.com&lt;/code>&lt;/td>
-&lt;td>&lt;code>SCM_ADDR&lt;/code>&lt;br>&lt;code>VELA_SCM_ADDR&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>scm.client&lt;/code>&lt;/td>
-&lt;td>client ID from the generated OAuth application on the SCM&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>SCM_CLIENT&lt;/code>&lt;br>&lt;code>VELA_SCM_CLIENT&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>scm.context&lt;/code>&lt;/td>
-&lt;td>message to set in commit status on the SCM&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>continuous-integration/vela&lt;/code>&lt;/td>
-&lt;td>&lt;code>SCM_CONTEXT&lt;/code>&lt;br>&lt;code>VELA_SCM_CONTEXT&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>scm.driver&lt;/code>&lt;/td>
-&lt;td>type of client to control and operate SCM&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>github&lt;/code>&lt;/td>
-&lt;td>&lt;code>SCM_DRIVER&lt;/code>&lt;br>&lt;code>VELA_SCM_DRIVER&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>scm.scopes&lt;/code>&lt;/td>
-&lt;td>permission scopes to apply for the OAuth credentials on the SCM&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>[ repo, repo:status, user:email, read:user, read:org ]&lt;/code>&lt;/td>
-&lt;td>&lt;code>SCM_SCOPES&lt;/code>&lt;br>&lt;code>VELA_SCM_SCOPES&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>scm.secret&lt;/code>&lt;/td>
-&lt;td>client secret from the generated OAuth application on the SCM&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>SCM_SECRET&lt;/code>&lt;br>&lt;code>VELA_SCM_SECRET&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>scm.webhook.addr&lt;/code>&lt;/td>
-&lt;td>url for webhooks on the SCM to send requests to&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>the address of the Vela server (&lt;code>$VELA_ADDR&lt;/code>)&lt;/td>
-&lt;td>&lt;code>SCM_WEBHOOK_ADDR&lt;/code>&lt;br>&lt;code>VELA_SCM_WEBHOOK_ADDR&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;div class="alert alert-primary" role="alert">
-&lt;h4 class="alert-heading">Note:&lt;/h4>
-For more information on these configuration options, please see the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/">server reference&lt;/a>.
-&lt;/div>
-&lt;h2 id="drivers">Drivers&lt;/h2>
-&lt;p>The following drivers are available to configure the component:&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Documentation&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>&lt;code>github&lt;/code>&lt;/td>
-&lt;td>uses a GitHub or GitHug Enterprise Server for the SCM&lt;/td>
-&lt;td>&lt;a href="https://github.com/about/">https://github.com/about/&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;h3 id="github">GitHub&lt;/h3>
-&lt;p>From the &lt;a href="https://github.com/about/">GitHub official website&lt;/a>:&lt;/p>
-&lt;blockquote>
-&lt;p>GitHub is where the world builds software. Millions of developers and companies build, ship, and maintain their software on GitHub—the largest and most advanced development platform in the world.&lt;/p>
-&lt;/blockquote>
-&lt;p>The below configuration displays an example of creating a &lt;a href="https://docs.github.com/developers/apps/building-oauth-apps/creating-an-oauth-app">GitHub OAuth application&lt;/a>:&lt;/p>
-&lt;p>&lt;img src="https://go-vela.github.io/docs/docs/installation/server/github_oauth.png" alt="OAuth Application">&lt;/p>
-&lt;div class="alert alert-secondary" role="alert">
-&lt;h4 class="alert-heading">Warning:&lt;/h4>
-&lt;p>The &lt;code>Homepage URL&lt;/code> should match &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/#vela_addr">the &lt;code>VELA_ADDR&lt;/code> environment variable&lt;/a> provided to the server for clusters without a UI.&lt;/p>
-&lt;p>Otherwise, the &lt;code>Homepage URL&lt;/code> should match &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/#vela_webui_addr">the &lt;code>VELA_WEBUI_ADDR&lt;/code> environment variable&lt;/a> provided to the server.&lt;/p>
-&lt;p>The &lt;code>Authorization callback URL&lt;/code> should contain &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/#vela_addr">the &lt;code>VELA_ADDR&lt;/code> environment variable&lt;/a> with a &lt;code>/authenticate&lt;/code> suffix.&lt;/p>
-&lt;/div>
-&lt;h3 id="github-enterprise-server">GitHub Enterprise Server&lt;/h3>
-&lt;p>From the &lt;a href="https://docs.github.com/en/enterprise-server/admin/overview/system-overview">GitHub Enterprise official website&lt;/a>:&lt;/p>
-&lt;blockquote>
-&lt;p>GitHub Enterprise Server is your organization&amp;rsquo;s private copy of GitHub contained within a virtual appliance, hosted on premises or in the cloud, that you configure and control.&lt;/p>
-&lt;/blockquote>
-&lt;p>The below configuration displays an example of creating a &lt;a href="https://docs.github.com/enterprise-server@3.3/developers/apps/building-oauth-apps/creating-an-oauth-app">GitHub Enterprise Server OAuth application&lt;/a>:&lt;/p>
-&lt;p>&lt;img src="https://go-vela.github.io/docs/docs/installation/server/github_enterprise_oauth.png" alt="OAuth Application">&lt;/p>
-&lt;div class="alert alert-secondary" role="alert">
-&lt;h4 class="alert-heading">Warning:&lt;/h4>
-&lt;p>The &lt;code>Homepage URL&lt;/code> should match &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/#vela_addr">the &lt;code>VELA_ADDR&lt;/code> environment variable&lt;/a> provided to the server for clusters without a UI.&lt;/p>
-&lt;p>Otherwise, the &lt;code>Homepage URL&lt;/code> should match &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/#vela_webui_addr">the &lt;code>VELA_WEBUI_ADDR&lt;/code> environment variable&lt;/a> provided to the server.&lt;/p>
-&lt;p>The &lt;code>Authorization callback URL&lt;/code> should contain &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/#vela_addr">the &lt;code>VELA_ADDR&lt;/code> environment variable&lt;/a> with a &lt;code>/authenticate&lt;/code> suffix.&lt;/p>
-&lt;/div></description></item><item><title>Installation: Secret</title><link>https://go-vela.github.io/docs/installation/server/reference/secret/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/server/reference/secret/</guid><description>
-&lt;p>This component is optional and is responsible for integrating with an external secret system based off the configuration provided.&lt;/p>
-&lt;p>The secret system is used by Vela for storing sensitive application &lt;a href="https://en.wikipedia.org/wiki/Data_at_rest">data at rest&lt;/a>.&lt;/p>
-&lt;p>By default, Vela will use &lt;a href="https://go-vela.github.io/docs/docs/installation/server/database/">the database&lt;/a> to store the sensitive data if no other secret system is configured.&lt;/p>
-&lt;div class="alert alert-primary" role="alert">
-&lt;h4 class="alert-heading">Note:&lt;/h4>
-Any sensitive data stored in the database will be encrypted using the &lt;a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard">Advanced Encryption Standard (AES)&lt;/a>.
-&lt;/div>
-&lt;h2 id="configuration">Configuration&lt;/h2>
-&lt;p>The following options are used to configure the component:&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Default&lt;/th>
-&lt;th>Environment Variables&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>&lt;code>secret.vault.addr&lt;/code>&lt;/td>
-&lt;td>fully qualified url to the HashiCorp Vault instance&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>SECRET_VAULT_ADDR&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_ADDR&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>secret.vault.auth-method&lt;/code>&lt;/td>
-&lt;td>authentication method used to obtain token from the HashiCorp Vault instance&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>SECRET_VAULT_AUTH_METHOD&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_AUTH_METHOD&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>secret.vault.aws-role&lt;/code>&lt;/td>
-&lt;td>HashiCorp Vault role used to connect to the auth/aws/login endpoint&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>SECRET_VAULT_AWS_ROLE&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_AWS_ROLE&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>secret.vault.driver&lt;/code>&lt;/td>
-&lt;td>enables HashiCorp Vault as a secret engine&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>SECRET_VAULT&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>secret.vault.prefix&lt;/code>&lt;/td>
-&lt;td>prefix for k/v secrets in the HashiCorp Vault instance&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>SECRET_VAULT_PREFIX&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_PREFIX&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>secret.vault.renewal&lt;/code>&lt;/td>
-&lt;td>frequency to renew the token for the HashiCorp Vault instance&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>30m&lt;/code>&lt;/td>
-&lt;td>&lt;code>SECRET_VAULT_RENEWAL&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_RENEWAL&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>secret.vault.token&lt;/code>&lt;/td>
-&lt;td>token required to access the HashiCorp Vault instance&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>SECRET_VAULT_TOKEN&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_TOKEN&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>secret.vault.version&lt;/code>&lt;/td>
-&lt;td>version for the k/v backend for the HashiCorp Vault instance&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>2&lt;/code>&lt;/td>
-&lt;td>&lt;code>SECRET_VAULT_VERSION&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_VERSION&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;div class="alert alert-primary" role="alert">
-&lt;h4 class="alert-heading">Note:&lt;/h4>
-For more information on these configuration options, please see the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/">server reference&lt;/a>.
-&lt;/div>
-&lt;h2 id="drivers">Drivers&lt;/h2>
-&lt;p>The following drivers are available to configure the component:&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Documentation&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>&lt;code>vault&lt;/code>&lt;/td>
-&lt;td>uses a HashiCorp Vault instance for storing sensitive data at rest&lt;/td>
-&lt;td>&lt;a href="https://www.vaultproject.io/">https://www.vaultproject.io/&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;h3 id="hashicorp-vault">HashiCorp Vault&lt;/h3>
-&lt;p>From the &lt;a href="https://www.vaultproject.io/">HashiCorp Vault official website&lt;/a>:&lt;/p>
-&lt;blockquote>
-&lt;p>HashiCorp Vault enables you to secure, store and tightly control access to tokens, passwords, certificates, encryption keys for protecting secrets and other sensitive data using a UI, CLI, or HTTP API.&lt;/p>
-&lt;/blockquote>
-&lt;p>The below configuration displays an example of starting the Vela server that will connect to a HashiCorp Vault instance:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-diff" data-lang="diff">&lt;span style="display:flex;">&lt;span>$ docker run \
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --detach=true \
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_ADDR=https://vela-server.example.com \
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_DATABASE_ENCRYPTION_KEY=&amp;lt;encryption-key&amp;gt; \
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_QUEUE_DRIVER=redis \
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_QUEUE_ADDR=redis://&amp;lt;password&amp;gt;@&amp;lt;hostname&amp;gt;:&amp;lt;port&amp;gt;/&amp;lt;database&amp;gt; \
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_PORT=443 \
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SECRET=&amp;lt;shared-secret&amp;gt; \
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SERVER_PRIVATE_KEY=&amp;lt;private_key&amp;gt; \
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_SECRET_VAULT=true \
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_SECRET_VAULT_ADDR=https://vault.example.com \
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">+ --env=VELA_SECRET_VAULT_TOKEN=&amp;lt;vault-token&amp;gt;
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a000">&lt;/span> --env=VELA_SCM_CLIENT=&amp;lt;oauth-client-id&amp;gt; \
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_SCM_SECRET=&amp;lt;oauth-client-secret&amp;gt; \
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --env=VELA_WEBUI_ADDR=https://vela.example.com \
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --name=server \
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --publish=80:80 \
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --publish=443:443 \
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --restart=always \
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> target/vela-server:latest
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Installation: Token Manager</title><link>https://go-vela.github.io/docs/installation/server/reference/token_manager/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/server/reference/token_manager/</guid><description>
-&lt;p>This component is responsible for generating and validating JWT tokens shared between the Vela server, workers, and users based off the configuration provided.&lt;/p>
-&lt;p>The token manager is designed to ensure secure interactions with the server and protect build resources.&lt;/p>
-&lt;h2 id="configuration">Configuration&lt;/h2>
-&lt;p>The following options are used to configure the component:&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Default&lt;/th>
-&lt;th>Environment Variables&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>&lt;code>vela-server-private-key&lt;/code>&lt;/td>
-&lt;td>private key used for signing and validating all JWT tokens&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>VELA_SERVER_PRIVATE_KEY&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>user-access-token-duration&lt;/code>&lt;/td>
-&lt;td>maximum duration of time a Vela access token for a user is valid on the server&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>15m&lt;/code>&lt;/td>
-&lt;td>&lt;code>VELA_USER_ACCESS_TOKEN_DURATION&lt;/code>&lt;br>&lt;code>USER_ACCESS_TOKEN_DURATION&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>user-refresh-token-duration&lt;/code>&lt;/td>
-&lt;td>maximum duration of time a Vela refresh token for a user is valid on the server&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>8h&lt;/code>&lt;/td>
-&lt;td>&lt;code>VELA_USER_ACCESS_TOKEN_DURATION&lt;/code>&lt;br>&lt;code>USER_ACCESS_TOKEN_DURATION&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>build-token-buffer-duration&lt;/code>&lt;/td>
-&lt;td>maximum duration of time a Vela build token for a build extends beyond the repo build limit to maintain validity on the server&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>5m&lt;/code>&lt;/td>
-&lt;td>&lt;code>VELA_BUILD_TOKEN_BUFFER_DURATION&lt;/code>&lt;br>&lt;code>BUILD_TOKEN_BUFFER_DURATION&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>worker-auth-token-duration&lt;/code>&lt;/td>
-&lt;td>maximum duration of time an auth token for a worker is valid on the server&lt;/td>
-&lt;td>&lt;code>false&lt;/code>*&lt;/td>
-&lt;td>&lt;code>20m&lt;/code>&lt;/td>
-&lt;td>&lt;code>VELA_WORKER_AUTH_TOKEN_DURATION&lt;/code>&lt;br>&lt;code>WORKER_AUTH_TOKEN_DURATION&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code>worker-register-token-duration&lt;/code>&lt;/td>
-&lt;td>maximum duration of time a registration token for a worker is valid on the server&lt;/td>
-&lt;td>&lt;code>false&lt;/code>*&lt;/td>
-&lt;td>&lt;code>1m&lt;/code>&lt;/td>
-&lt;td>&lt;code>VELA_WORKER_REGISTER_TOKEN_DURATION&lt;/code>&lt;br>&lt;code>WORKER_REGISTER_TOKEN_DURATION&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;div class="alert alert-primary" role="alert">
-&lt;h4 class="alert-heading">Notes:&lt;/h4>
-&lt;p>* &lt;code>worker-auth-token-duration&lt;/code> and &lt;code>worker-register-token-duration&lt;/code> are required if you intend to register workers.&lt;/p>
-&lt;p>For more information on these configuration options, please see the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/reference/">server reference&lt;/a>.&lt;/p>
-&lt;/div></description></item></channel></rss>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>
