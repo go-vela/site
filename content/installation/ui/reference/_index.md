@@ -44,6 +44,8 @@ The variable can be provided as a `string`.
 
 {{% alert title="Note:" color="primary" %}}
 This variable has a default value of `https://go-vela.github.io/docs/`.
+
+Please note that this variable is used in deep links throughout the UI. Customizing this value assumes the target location utilizes the same URL structure as the official docs at the default location.
 {{% /alert %}}
 
 ### VELA_FEEDBACK_URL
