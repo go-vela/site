@@ -1,6 +1,7 @@
 ---
 title: "SCM"
 linkTitle: "SCM"
+weight: 6
 description: >
   This section contains information on the scm component for the Vela server.
 ---

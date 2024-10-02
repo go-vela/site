@@ -1,6 +1,7 @@
 ---
 title: "Queue"
 linkTitle: "Queue"
+weight: 4
 description: >
   This section contains information on the queue component for the Vela server.
 ---
