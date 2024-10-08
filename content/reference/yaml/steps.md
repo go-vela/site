@@ -27,15 +27,16 @@ steps:
 | `image`       | Y        | string          | Docker image used to create ephemeral container.                 |
 | `pull`        | N        | string          | Declaration to configure if and when the Docker image is pulled. |
 | `secrets`     | N        | struct          | Sensitive variables injected into the container environment.     |
-| `environment` | N        | map || []string | Variables to inject into the container environment.              |
+| `environment` | N        | map OR []string | Variables to inject into the container environment.              |
 | `ruleset`     | N        | struct          | Conditions to limit the execution of the container.              |
 | `parameters`  | N        | map             | Extra configuration variables specific to a plugin.              |
 | `commands`    | N        | []string        | Execution instructions to run inside the container.              |
-| `template`    | N        | struct          | Name of a template to expand in the pipeline.                      |
+| `template`    | N        | struct          | Name of a template to expand in the pipeline.                    |
+| `id_request`  | N        | string          | Injects `VELA_ID_TOKEN_REQUEST_TOKEN` into step environment.     |
 | `entrypoint`  | N        | []string        | Commands to execute inside the container.                        |
-| `detach`      | N        | []string        | Run the container in a detached (headless) state.                |                                |
-| `ulimits`     | N        | string          | Set the user limits for the container.                           |                        |
-| `user`        | N        | string          | Set the user for the container. |
+| `detach`      | N        | []string        | Run the container in a detached (headless) state.                |
+| `ulimits`     | N        | string          | Set the user limits for the container.                           | 
+| `user`        | N        | string          | Set the user for the container.                                  |
 
 ### Usage
 
@@ -394,6 +395,17 @@ steps:
 {{% alert color="info" %}}
 A pipeline can have up to 10 steps that report their own status.
 {{% /alert %}}
+
+#### The `id_request` key
+
+```yaml
+steps:
+  # inject $VELA_ID_TOKEN_REQUEST_TOKEN into step environment. Value of `id_request` becomes one of the claims in the token.
+  - name: OIDC 
+    id_request: write
+```
+
+More info can be found in the [OpenID Connect usage docs](usage/open_id_connect/).
 
 #### The `entrypoint:` key
 
