@@ -40,6 +40,8 @@ If you want to play with the examples above in a terminal, make sure you are in 
 var expressions are evaluated before the yaml is parsed. If you do not want the system to evaluate an expression it must be escaped.
 {{% /alert %}}
 
+This can come in handy particularly when dealing with [runtime build environment variables](/docs/reference/environment/variables/#using-substitution-for-platform-variables).
+
 ```diff
 version: "1"
 steps:
