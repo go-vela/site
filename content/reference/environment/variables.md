@@ -91,22 +91,35 @@ The following table includes variables only available during the **tag** event.
 | ---------------- | -------- | ------------------------------------------ |
 | `VELA_BUILD_TAG` | `v1.0.0` | tag is populated from the source reference |
 
+##### OpenID Connect only
+
+{{% alert color="info" %}}
+The following table includes variables only available when the step `id_request` field has a value.
+{{% /alert %}}
+
+| Key                            | Value                                                                   | Explanation                           |
+| ------------------------------ | ----------------------------------------------------------------------- | ------------------------------------- |
+| `VELA_ID_TOKEN_REQUEST_URL`    | `<VELA_SERVER_ADDR>/api/v1/repos/<ORG>/<REPO>/builds/<BUILD>/id_token`  | URL to request an ID token            |
+| `VELA_ID_TOKEN_REQUEST_TOKEN`  | `ey123abc...`                                                           | bearer token for requesting ID token  |
+
 
 #### Vela Environment Variables
 
-| Key              | Value                                             | Explanation                                                         |
-| ---------------- |---------------------------------------------------|---------------------------------------------------------------------|
-| `VELA`           | `true`                                            | environment is Vela                                                 |
-| `VELA_ADDR`      | `vela.example.com`                           | fully qualified domain name of the Vela server                      |
-| `VELA_CHANNEL`   | `vela`                                            | queue channel the build was published to                            |
-| `VELA_DATABASE`  | `postgres`                                        | database Vela is connected to                                       |
-| `VELA_HOST`      | `vela-worker-1`                                   | fully qualified domain name of the worker the build was executed on |
-| `VELA_QUEUE`     | `redis`                                           | queue build was published to                                        |
-| `VELA_RUNTIME`   | `docker`                                          | runtime environment build was executed in                           |
-| `VELA_SOURCE`    | `github`                                          | queue channel the build was published to                            |
-| `VELA_VERSION`   | `v0.1.0`                                          | Vela version                                                        |
-| `VELA_WORKSPACE` | `/vela/src/github.com/github/octocat/hello-world` | working directory the build is executed in                          |
-| `CI`             | `true`                                            | Indicates this is a CI environment                                  |
+| Key                    | Value                                             | Explanation                                                         |
+| ---------------------- |---------------------------------------------------|---------------------------------------------------------------------|
+| `VELA`                 | `true`                                            | environment is Vela                                                 |
+| `VELA_ADDR`            | `vela.example.com`                                | fully qualified domain name of the Vela server                      |
+| `VELA_CHANNEL`         | `vela`                                            | queue channel the build was published to                            |
+| `VELA_DATABASE`        | `postgres`                                        | database Vela is connected to                                       |
+| `VELA_HOST`            | `vela-worker-1`                                   | fully qualified domain name of the worker the build was executed on |
+| `VELA_QUEUE`           | `redis`                                           | queue build was published to                                        |
+| `VELA_RUNTIME`         | `docker`                                          | runtime environment build was executed in                           |
+| `VELA_SOURCE`          | `github`                                          | queue channel the build was published to                            |
+| `VELA_VERSION`         | `v0.1.0`                                          | Vela version                                                        |
+| `VELA_WORKSPACE`       | `/vela/src/github.com/github/octocat/hello-world` | working directory the build is executed in                          |
+| `CI`                   | `true`                                            | Indicates this is a CI environment                                  |
+| `VELA_OUTPUTS`         | `/vela/outputs/.env`                              | file path for dynamic environment                                   |
+| `VELA_MASKED_OUTPUTS`  | `/vela/outputs/masked.env`                        | file path for dynamic environment for sensitive values              |
 
 #### Repository Environment Variables
 
@@ -136,8 +149,6 @@ The following table includes variables only available during the **tag** event.
 | Key                    | Value                       | Explanation                        |
 | ---------------------- | --------------------------- | ---------------------------------- |
 | `VELA_USER_ACTIVE`     | `true`                      | active setting for the user        |
-| `VELA_USER_ADMIN`      | `true`                      | admin platform status for the user |
-| `VELA_USER_FAVORITES`  | `[ "octocat/hello-world" ]` | favorites starred for the user     |
 | `VELA_USER_NAME`       | `Octocat`                   | user handle setting for the user   |
 
 ## Step Only Defaults
@@ -175,3 +186,18 @@ The following environment variables are **only** injected into every step contai
 | `VELA_SERVICE_RUNTIME`      | `docker`                 | runtime where the service was executed                                  |
 | `VELA_SERVICE_STARTED`      | `1556730001`             | unix timestamp representing service start time                          |
 | `VELA_SERVICE_STATUS`       | `success`                | status of the service                                                 |
+
+## Using Substitution For Platform Variables
+
+There are a few default environment variables that need to be [escaped](/docs/reference/environment/substitution/#escaping) when attempting to substitute, as they are not available or not accurate at compile time.
+
+| Key                        | Compile Time  | Build Time Example  |
+| -------------------------- | ------------- | ------------------- |
+| `VELA_BUILD_STARTED`       | `0`           | `1556730001`        |
+| `VELA_BUILD_STATUS`        | `pending`     | `running`           |
+| `VELA_BUILD_APPROVED_AT`   | `0`           | `1556730001`        |
+| `VELA_BUILD_APPROVED_BY`   | `''`          | `Octocat`           |
+| `VELA_BUILD_ENQUEUED`      | `0`           | `1556730001`        |
+| `VELA_BUILD_RUNTIME`       | `''`          | `docker`            |
+| `VELA_BUILD_DISTRIBUTION`  | `''`          | `linux`             |
+| `VELA_BUILD_HOST`          | `''`          | `vela-worker-42`    |
