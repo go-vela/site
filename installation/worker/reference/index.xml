@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Reference</title><link>https://go-vela.github.io/docs/installation/worker/reference/</link><description>Recent content in Reference on Vela</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://go-vela.github.io/docs/installation/worker/reference/index.xml" rel="self" type="application/rss+xml"/><item><title>Installation: Executor</title><link>https://go-vela.github.io/docs/installation/worker/reference/executor/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/worker/reference/executor/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Reference</title><link>https://go-vela.github.io/docs/installation/worker/reference/</link><description>Recent content in Reference on Vela</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://go-vela.github.io/docs/installation/worker/reference/index.xml" rel="self" type="application/rss+xml"/><item><title>Installation: Executor</title><link>https://go-vela.github.io/docs/installation/worker/reference/executor/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/worker/reference/executor/</guid><description>
 &lt;p>This component is responsible for coordinating with &lt;a href="https://go-vela.github.io/docs/docs/installation/worker/runtime/">the runtime&lt;/a> to manage workload resources.&lt;/p>
 &lt;p>Throughout the lifecycle of these resources, this component will track and report results back to the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/">server&lt;/a>.&lt;/p>
 &lt;h2 id="configuration">Configuration&lt;/h2>
@@ -6,34 +6,34 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Default&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Required&lt;/th>
+&lt;th style="text-align: left">Default&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>executor.driver&lt;/code>&lt;/td>
-&lt;td>type of client to control and operate executor&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>linux&lt;/code>&lt;/td>
-&lt;td>&lt;code>EXECUTOR_DRIVER&lt;/code>&lt;br>&lt;code>VELA_EXECUTOR_DRIVER&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>executor.driver&lt;/code>&lt;/td>
+&lt;td style="text-align: left">type of client to control and operate executor&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>linux&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>EXECUTOR_DRIVER&lt;/code>&lt;br>&lt;code>VELA_EXECUTOR_DRIVER&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>executor.max_log_size&lt;/code>&lt;/td>
-&lt;td>maximum log size (in bytes)&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>0&lt;/code> (no limit)&lt;/td>
-&lt;td>&lt;code>EXECUTOR_MAX_LOG_SIZE&lt;/code>&lt;br>&lt;code>VELA_EXECUTOR_MAX_LOG_SIZE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>executor.max_log_size&lt;/code>&lt;/td>
+&lt;td style="text-align: left">maximum log size (in bytes)&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>0&lt;/code> (no limit)&lt;/td>
+&lt;td style="text-align: left">&lt;code>EXECUTOR_MAX_LOG_SIZE&lt;/code>&lt;br>&lt;code>VELA_EXECUTOR_MAX_LOG_SIZE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>executor.log_streaming_timeout&lt;/code>&lt;/td>
-&lt;td>maximum time to wait, after build completion, for logs to finish streaming&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>5m&lt;/code>&lt;/td>
-&lt;td>&lt;code>EXECUTOR_LOG_STREAMING_TIMEOUT&lt;/code>&lt;br>&lt;code>VELA_EXECUTOR_LOG_STREAMING_TIMEOUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>executor.log_streaming_timeout&lt;/code>&lt;/td>
+&lt;td style="text-align: left">maximum time to wait, after build completion, for logs to finish streaming&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>5m&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>EXECUTOR_LOG_STREAMING_TIMEOUT&lt;/code>&lt;br>&lt;code>VELA_EXECUTOR_LOG_STREAMING_TIMEOUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -46,21 +46,21 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Documentation&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Documentation&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>linux&lt;/code>&lt;/td>
-&lt;td>uses a Linux executor for running workloads&lt;/td>
-&lt;td>&lt;a href="https://www.linux.com/">https://www.linux.com/&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;code>linux&lt;/code>&lt;/td>
+&lt;td style="text-align: left">uses a Linux executor for running workloads&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://www.linux.com/">https://www.linux.com/&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>local&lt;/code>&lt;/td>
-&lt;td>uses a Local executor for running workloads (CLI only)&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>local&lt;/code>&lt;/td>
+&lt;td style="text-align: left">uses a Local executor for running workloads (CLI only)&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -99,41 +99,41 @@ This Linux configuration is enabled by default and is not necessary to provide i
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Default&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Required&lt;/th>
+&lt;th style="text-align: left">Default&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>queue.cluster&lt;/code>&lt;/td>
-&lt;td>configures the client for a queue cluster&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>QUEUE_CLUSTER&lt;/code>&lt;br>&lt;code>VELA_QUEUE_CLUSTER&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>queue.cluster&lt;/code>&lt;/td>
+&lt;td style="text-align: left">configures the client for a queue cluster&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>QUEUE_CLUSTER&lt;/code>&lt;br>&lt;code>VELA_QUEUE_CLUSTER&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>queue.driver&lt;/code>&lt;/td>
-&lt;td>type of client to control and operate queue&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>QUEUE_DRIVER&lt;/code>&lt;br>&lt;code>VELA_QUEUE_DRIVER&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>queue.driver&lt;/code>&lt;/td>
+&lt;td style="text-align: left">type of client to control and operate queue&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>QUEUE_DRIVER&lt;/code>&lt;br>&lt;code>VELA_QUEUE_DRIVER&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>queue.pop.timeout&lt;/code>&lt;/td>
-&lt;td>timeout for requests that pop items off the queue&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>60s&lt;/code>&lt;/td>
-&lt;td>&lt;code>QUEUE_POP_TIMEOUT&lt;/code>&lt;br>&lt;code>VELA_QUEUE_POP_TIMEOUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>queue.pop.timeout&lt;/code>&lt;/td>
+&lt;td style="text-align: left">timeout for requests that pop items off the queue&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>60s&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>QUEUE_POP_TIMEOUT&lt;/code>&lt;br>&lt;code>VELA_QUEUE_POP_TIMEOUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>queue.routes&lt;/code>&lt;/td>
-&lt;td>unique channels or topics for pulling workloads&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>[ vela ]&lt;/code>&lt;/td>
-&lt;td>&lt;code>QUEUE_ROUTES&lt;/code>&lt;br>&lt;code>VELA_QUEUE_ROUTES&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>queue.routes&lt;/code>&lt;/td>
+&lt;td style="text-align: left">unique channels or topics for pulling workloads&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>[ vela ]&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>QUEUE_ROUTES&lt;/code>&lt;br>&lt;code>VELA_QUEUE_ROUTES&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -146,16 +146,16 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Documentation&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Documentation&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>redis&lt;/code>&lt;/td>
-&lt;td>uses a Redis queue for managing workloads&lt;/td>
-&lt;td>&lt;a href="https://redis.io/">https://redis.io/&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;code>redis&lt;/code>&lt;/td>
+&lt;td style="text-align: left">uses a Redis queue for managing workloads&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://redis.io/">https://redis.io/&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -185,69 +185,69 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Default&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Required&lt;/th>
+&lt;th style="text-align: left">Default&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>runtime.config&lt;/code>&lt;/td>
-&lt;td>path to configuration file for the runtime&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>RUNTIME_CONFIG&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_CONFIG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>runtime.config&lt;/code>&lt;/td>
+&lt;td style="text-align: left">path to configuration file for the runtime&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>RUNTIME_CONFIG&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_CONFIG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>runtime.driver&lt;/code>&lt;/td>
-&lt;td>type of client to control and operate runtime&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>docker&lt;/code>&lt;/td>
-&lt;td>&lt;code>RUNTIME_DRIVER&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_DRIVER&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>runtime.driver&lt;/code>&lt;/td>
+&lt;td style="text-align: left">type of client to control and operate runtime&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>docker&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>RUNTIME_DRIVER&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_DRIVER&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>runtime.namespace&lt;/code>&lt;/td>
-&lt;td>namespace to use for the runtime (only for kubernetes)&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>RUNTIME_NAMESPACE&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_NAMESPACE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>runtime.namespace&lt;/code>&lt;/td>
+&lt;td style="text-align: left">namespace to use for the runtime (only for kubernetes)&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>RUNTIME_NAMESPACE&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_NAMESPACE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>runtime.pods-template-name&lt;/code>&lt;/td>
-&lt;td>name of the PipelinePodsTemplate to retrieve from the &lt;code>runtime.namespace&lt;/code> (only for kubernetes)&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>RUNTIME_PODS_TEMPLATE_NAME&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_PODS_TEMPLATE_NAME&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>runtime.pods-template-name&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of the PipelinePodsTemplate to retrieve from the &lt;code>runtime.namespace&lt;/code> (only for kubernetes)&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>RUNTIME_PODS_TEMPLATE_NAME&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_PODS_TEMPLATE_NAME&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>runtime.pods-template-file&lt;/code>&lt;/td>
-&lt;td>path to local fallback file containing a PipelinePodsTemplate in YAML (only for kubernetes)&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>RUNTIME_PODS_TEMPLATE_FILE&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_PODS_TEMPLATE_FILE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>runtime.pods-template-file&lt;/code>&lt;/td>
+&lt;td style="text-align: left">path to local fallback file containing a PipelinePodsTemplate in YAML (only for kubernetes)&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>RUNTIME_PODS_TEMPLATE_FILE&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_PODS_TEMPLATE_FILE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>runtime.privileged-images&lt;/code>&lt;/td>
-&lt;td>images allowed to run in privileged mode for the runtime&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>[ ]&lt;/code>&lt;/td>
-&lt;td>&lt;code>RUNTIME_PRIVILEGED_IMAGES&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_PRIVILEGED_IMAGES&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>runtime.privileged-images&lt;/code>&lt;/td>
+&lt;td style="text-align: left">images allowed to run in privileged mode for the runtime&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>[ ]&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>RUNTIME_PRIVILEGED_IMAGES&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_PRIVILEGED_IMAGES&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>runtime.drop-capabilities&lt;/code>&lt;/td>
-&lt;td>kernel capabilities to be dropped from each running container&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>RUNTIME_DROP_CAPABILITIES&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_DROP_CAPABILITIES&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>runtime.drop-capabilities&lt;/code>&lt;/td>
+&lt;td style="text-align: left">kernel capabilities to be dropped from each running container&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>RUNTIME_DROP_CAPABILITIES&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_DROP_CAPABILITIES&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>runtime.volumes&lt;/code>&lt;/td>
-&lt;td>path to host volumes to mount into resources for the runtime&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>RUNTIME_VOLUMES&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_VOLUMES&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>runtime.volumes&lt;/code>&lt;/td>
+&lt;td style="text-align: left">path to host volumes to mount into resources for the runtime&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>RUNTIME_VOLUMES&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_VOLUMES&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -260,21 +260,21 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Documentation&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Documentation&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>docker&lt;/code>&lt;/td>
-&lt;td>uses a Docker daemon for creating and managing runtime resources&lt;/td>
-&lt;td>&lt;a href="https://docker.io/">https://docker.io/&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;code>docker&lt;/code>&lt;/td>
+&lt;td style="text-align: left">uses a Docker daemon for creating and managing runtime resources&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://docker.io/">https://docker.io/&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>kubernetes&lt;/code>&lt;/td>
-&lt;td>uses a Kubernetes cluster for creating and managing runtime resources&lt;/td>
-&lt;td>&lt;a href="https://kubernetes.io/">https://kubernetes.io/&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;code>kubernetes&lt;/code>&lt;/td>
+&lt;td style="text-align: left">uses a Kubernetes cluster for creating and managing runtime resources&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://kubernetes.io/">https://kubernetes.io/&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

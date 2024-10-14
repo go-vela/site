@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Step</title><link>https://go-vela.github.io/docs/reference/api/step/</link><description>Recent content in Step on Vela</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://go-vela.github.io/docs/reference/api/step/index.xml" rel="self" type="application/rss+xml"/><item><title>Reference: Add</title><link>https://go-vela.github.io/docs/reference/api/step/add/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/api/step/add/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Step</title><link>https://go-vela.github.io/docs/reference/api/step/</link><description>Recent content in Step on Vela</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://go-vela.github.io/docs/reference/api/step/index.xml" rel="self" type="application/rss+xml"/><item><title>Reference: Add</title><link>https://go-vela.github.io/docs/reference/api/step/add/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/api/step/add/</guid><description>
 &lt;h2 id="endpoint">Endpoint&lt;/h2>
 &lt;pre tabindex="0">&lt;code>POST /api/v1/repos/:org/:repo/builds/:build/steps
 &lt;/code>&lt;/pre>&lt;h2 id="parameters">Parameters&lt;/h2>
@@ -6,22 +6,22 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>build&lt;/code>&lt;/td>
-&lt;td>number of build&lt;/td>
+&lt;td style="text-align: left">&lt;code>build&lt;/code>&lt;/td>
+&lt;td style="text-align: left">number of build&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -31,18 +31,18 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -88,22 +88,22 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>build&lt;/code>&lt;/td>
-&lt;td>number of build&lt;/td>
+&lt;td style="text-align: left">&lt;code>build&lt;/code>&lt;/td>
+&lt;td style="text-align: left">number of build&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -113,18 +113,18 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -181,26 +181,26 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>build&lt;/code>&lt;/td>
-&lt;td>number of build&lt;/td>
+&lt;td style="text-align: left">&lt;code>build&lt;/code>&lt;/td>
+&lt;td style="text-align: left">number of build&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>step&lt;/code>&lt;/td>
-&lt;td>number of step&lt;/td>
+&lt;td style="text-align: left">&lt;code>step&lt;/code>&lt;/td>
+&lt;td style="text-align: left">number of step&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -210,18 +210,18 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -253,26 +253,26 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>build&lt;/code>&lt;/td>
-&lt;td>number of build&lt;/td>
+&lt;td style="text-align: left">&lt;code>build&lt;/code>&lt;/td>
+&lt;td style="text-align: left">number of build&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>step&lt;/code>&lt;/td>
-&lt;td>number of step&lt;/td>
+&lt;td style="text-align: left">&lt;code>step&lt;/code>&lt;/td>
+&lt;td style="text-align: left">number of step&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -282,18 +282,18 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -317,26 +317,26 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>build&lt;/code>&lt;/td>
-&lt;td>number of build&lt;/td>
+&lt;td style="text-align: left">&lt;code>build&lt;/code>&lt;/td>
+&lt;td style="text-align: left">number of build&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>step&lt;/code>&lt;/td>
-&lt;td>number of step&lt;/td>
+&lt;td style="text-align: left">&lt;code>step&lt;/code>&lt;/td>
+&lt;td style="text-align: left">number of step&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -346,18 +346,18 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -402,26 +402,26 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>build&lt;/code>&lt;/td>
-&lt;td>number of build&lt;/td>
+&lt;td style="text-align: left">&lt;code>build&lt;/code>&lt;/td>
+&lt;td style="text-align: left">number of build&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>step&lt;/code>&lt;/td>
-&lt;td>number of step&lt;/td>
+&lt;td style="text-align: left">&lt;code>step&lt;/code>&lt;/td>
+&lt;td style="text-align: left">number of step&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -431,18 +431,18 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

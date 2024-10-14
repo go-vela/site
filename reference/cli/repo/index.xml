@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Repo</title><link>https://go-vela.github.io/docs/reference/cli/repo/</link><description>Recent content in Repo on Vela</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://go-vela.github.io/docs/reference/cli/repo/index.xml" rel="self" type="application/rss+xml"/><item><title>Reference: Add</title><link>https://go-vela.github.io/docs/reference/cli/repo/add/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/cli/repo/add/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Repo</title><link>https://go-vela.github.io/docs/reference/cli/repo/</link><description>Recent content in Repo on Vela</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://go-vela.github.io/docs/reference/cli/repo/index.xml" rel="self" type="application/rss+xml"/><item><title>Reference: Add</title><link>https://go-vela.github.io/docs/reference/cli/repo/add/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/cli/repo/add/</guid><description>
 &lt;h2 id="command">Command&lt;/h2>
 &lt;pre tabindex="0">&lt;code>$ vela add repo &amp;lt;parameters...&amp;gt; &amp;lt;arguments...&amp;gt;
 &lt;/code>&lt;/pre>
@@ -10,86 +10,86 @@ For more information, you can run &lt;code>vela add repo --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization for the repository&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>REPO_ORG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ORG&lt;/code>, &lt;code>REPO_ORG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>REPO_NAME&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REPO&lt;/code>, &lt;code>REPO_NAME&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>branch&lt;/code>&lt;/td>
-&lt;td>default branch for the repository&lt;/td>
-&lt;td>&lt;code>VELA_BRANCH&lt;/code>, &lt;code>REPO_BRANCH&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>branch&lt;/code>&lt;/td>
+&lt;td style="text-align: left">default branch for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_BRANCH&lt;/code>, &lt;code>REPO_BRANCH&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>link&lt;/code>&lt;/td>
-&lt;td>full URL for the repository&lt;/td>
-&lt;td>&lt;code>VELA_LINK&lt;/code>, &lt;code>REPO_LINK&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>link&lt;/code>&lt;/td>
+&lt;td style="text-align: left">full URL for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_LINK&lt;/code>, &lt;code>REPO_LINK&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>clone&lt;/code>&lt;/td>
-&lt;td>clone URL for the repository&lt;/td>
-&lt;td>&lt;code>VELA_CLONE&lt;/code>, &lt;code>REPO_CLONE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>clone&lt;/code>&lt;/td>
+&lt;td style="text-align: left">clone URL for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_CLONE&lt;/code>, &lt;code>REPO_CLONE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>visibility&lt;/code>&lt;/td>
-&lt;td>access level required to view the repository&lt;/td>
-&lt;td>&lt;code>VELA_VISIBILITY&lt;/code>, &lt;code>REPO_VISIBILITY&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>visibility&lt;/code>&lt;/td>
+&lt;td style="text-align: left">access level required to view the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_VISIBILITY&lt;/code>, &lt;code>REPO_VISIBILITY&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>build.limit&lt;/code>&lt;/td>
-&lt;td>limit of concurrent builds allowed for repository&lt;/td>
-&lt;td>&lt;code>VELA_BUILD_LIMIT&lt;/code>, &lt;code>REPO_BUILD_LIMIT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>build.limit&lt;/code>&lt;/td>
+&lt;td style="text-align: left">limit of concurrent builds allowed for repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_BUILD_LIMIT&lt;/code>, &lt;code>REPO_BUILD_LIMIT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>timeout&lt;/code>&lt;/td>
-&lt;td>max time allowed per build&lt;/td>
-&lt;td>&lt;code>VELA_TIMEOUT&lt;/code>, &lt;code>REPO_TIMEOUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>timeout&lt;/code>&lt;/td>
+&lt;td style="text-align: left">max time allowed per build&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_TIMEOUT&lt;/code>, &lt;code>REPO_TIMEOUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>counter&lt;/code>&lt;/td>
-&lt;td>set a value for a new build number&lt;/td>
-&lt;td>&lt;code>VELA_COUNTER&lt;/code>, &lt;code>REPO_COUNTER&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>counter&lt;/code>&lt;/td>
+&lt;td style="text-align: left">set a value for a new build number&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_COUNTER&lt;/code>, &lt;code>REPO_COUNTER&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>private&lt;/code>&lt;/td>
-&lt;td>disables public access to the repository&lt;/td>
-&lt;td>&lt;code>VELA_PRIVATE&lt;/code>, &lt;code>REPO_PRIVATE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>private&lt;/code>&lt;/td>
+&lt;td style="text-align: left">disables public access to the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_PRIVATE&lt;/code>, &lt;code>REPO_PRIVATE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>trusted&lt;/code>&lt;/td>
-&lt;td>elevates permissions for builds for the repository&lt;/td>
-&lt;td>&lt;code>VELA_TRUSTED&lt;/code>, &lt;code>REPO_TRUSTED&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>trusted&lt;/code>&lt;/td>
+&lt;td style="text-align: left">elevates permissions for builds for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_TRUSTED&lt;/code>, &lt;code>REPO_TRUSTED&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>active&lt;/code>&lt;/td>
-&lt;td>enables/disables the repository&lt;/td>
-&lt;td>&lt;code>VELA_ACTIVE&lt;/code>, &lt;code>REPO_ACTIVE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>active&lt;/code>&lt;/td>
+&lt;td style="text-align: left">enables/disables the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ACTIVE&lt;/code>, &lt;code>REPO_ACTIVE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>event&lt;/code>&lt;/td>
-&lt;td>events to trigger builds for the repository&lt;/td>
-&lt;td>&lt;code>VELA_EVENTS&lt;/code>, &lt;code>REPO_EVENTS&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>event&lt;/code>&lt;/td>
+&lt;td style="text-align: left">events to trigger builds for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_EVENTS&lt;/code>, &lt;code>REPO_EVENTS&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pipeline-type&lt;/code>&lt;/td>
-&lt;td>type of base pipeline for the compiler to render&lt;/td>
-&lt;td>&lt;code>VELA_PIPELINE_TYPE&lt;/code>, &lt;code>PIPELINE_TYPE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>pipeline-type&lt;/code>&lt;/td>
+&lt;td style="text-align: left">type of base pipeline for the compiler to render&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_PIPELINE_TYPE&lt;/code>, &lt;code>PIPELINE_TYPE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the repository&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>REPO_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>REPO_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -151,26 +151,26 @@ For more information, you can run &lt;code>vela chown repo --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization for the repository&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>REPO_ORG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ORG&lt;/code>, &lt;code>REPO_ORG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>REPO_NAME&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REPO&lt;/code>, &lt;code>REPO_NAME&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the repository&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>REPO_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>REPO_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -213,36 +213,36 @@ For more information, you can run &lt;code>vela get repo --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization for the repository&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>REPO_ORG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ORG&lt;/code>, &lt;code>REPO_ORG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>REPO_NAME&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REPO&lt;/code>, &lt;code>REPO_NAME&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the repository&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>REPO_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>REPO_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>page&lt;/code>&lt;/td>
-&lt;td>prints a specific page of repositories&lt;/td>
-&lt;td>&lt;code>VELA_PAGE&lt;/code>, &lt;code>REPO_PAGE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>page&lt;/code>&lt;/td>
+&lt;td style="text-align: left">prints a specific page of repositories&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_PAGE&lt;/code>, &lt;code>REPO_PAGE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>per.page&lt;/code>&lt;/td>
-&lt;td>number of repositories to print per page&lt;/td>
-&lt;td>&lt;code>VELA_PER_PAGE&lt;/code>, &lt;code>REPO_PER_PAGE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>per.page&lt;/code>&lt;/td>
+&lt;td style="text-align: left">number of repositories to print per page&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_PER_PAGE&lt;/code>, &lt;code>REPO_PER_PAGE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -280,26 +280,26 @@ For more information, you can run &lt;code>vela remove repo --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization for the repository&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>REPO_ORG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ORG&lt;/code>, &lt;code>REPO_ORG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>REPO_NAME&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REPO&lt;/code>, &lt;code>REPO_NAME&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the repository&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>REPO_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>REPO_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -342,26 +342,26 @@ For more information, you can run &lt;code>vela repair repo --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization for the repository&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>REPO_ORG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ORG&lt;/code>, &lt;code>REPO_ORG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>REPO_NAME&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REPO&lt;/code>, &lt;code>REPO_NAME&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the repository&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>REPO_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>REPO_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -402,26 +402,26 @@ For more information, you can run &lt;code>vela sync repo --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization for the repository&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>REPO_ORG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ORG&lt;/code>, &lt;code>REPO_ORG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>REPO_NAME&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REPO&lt;/code>, &lt;code>REPO_NAME&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>all&lt;/code>&lt;/td>
-&lt;td>bool flag to sync all repos in an org&lt;/td>
-&lt;td>&lt;code>VELA_SYNC_ALL&lt;/code>, &lt;code>SYNC_ALL&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>all&lt;/code>&lt;/td>
+&lt;td style="text-align: left">bool flag to sync all repos in an org&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_SYNC_ALL&lt;/code>, &lt;code>SYNC_ALL&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -472,86 +472,86 @@ For more information, you can run &lt;code>vela update repo --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization for the repository&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>REPO_ORG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ORG&lt;/code>, &lt;code>REPO_ORG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>REPO_NAME&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REPO&lt;/code>, &lt;code>REPO_NAME&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>branch&lt;/code>&lt;/td>
-&lt;td>default branch for the repository&lt;/td>
-&lt;td>&lt;code>VELA_BRANCH&lt;/code>, &lt;code>REPO_BRANCH&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>branch&lt;/code>&lt;/td>
+&lt;td style="text-align: left">default branch for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_BRANCH&lt;/code>, &lt;code>REPO_BRANCH&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>link&lt;/code>&lt;/td>
-&lt;td>full URL for the repository&lt;/td>
-&lt;td>&lt;code>VELA_LINK&lt;/code>, &lt;code>REPO_LINK&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>link&lt;/code>&lt;/td>
+&lt;td style="text-align: left">full URL for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_LINK&lt;/code>, &lt;code>REPO_LINK&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>clone&lt;/code>&lt;/td>
-&lt;td>clone URL for the repository&lt;/td>
-&lt;td>&lt;code>VELA_CLONE&lt;/code>, &lt;code>REPO_CLONE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>clone&lt;/code>&lt;/td>
+&lt;td style="text-align: left">clone URL for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_CLONE&lt;/code>, &lt;code>REPO_CLONE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>visibility&lt;/code>&lt;/td>
-&lt;td>access level required to view the repository&lt;/td>
-&lt;td>&lt;code>VELA_VISIBILITY&lt;/code>, &lt;code>REPO_VISIBILITY&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>visibility&lt;/code>&lt;/td>
+&lt;td style="text-align: left">access level required to view the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_VISIBILITY&lt;/code>, &lt;code>REPO_VISIBILITY&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>build.limit&lt;/code>&lt;/td>
-&lt;td>limit of concurrent builds allowed for repository&lt;/td>
-&lt;td>&lt;code>VELA_BUILD_LIMIT&lt;/code>, &lt;code>REPO_BUILD_LIMIT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>build.limit&lt;/code>&lt;/td>
+&lt;td style="text-align: left">limit of concurrent builds allowed for repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_BUILD_LIMIT&lt;/code>, &lt;code>REPO_BUILD_LIMIT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>timeout&lt;/code>&lt;/td>
-&lt;td>max time allowed per build&lt;/td>
-&lt;td>&lt;code>VELA_TIMEOUT&lt;/code>, &lt;code>REPO_TIMEOUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>timeout&lt;/code>&lt;/td>
+&lt;td style="text-align: left">max time allowed per build&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_TIMEOUT&lt;/code>, &lt;code>REPO_TIMEOUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>counter&lt;/code>&lt;/td>
-&lt;td>set a value for a new build number&lt;/td>
-&lt;td>&lt;code>VELA_COUNTER&lt;/code>, &lt;code>REPO_COUNTER&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>counter&lt;/code>&lt;/td>
+&lt;td style="text-align: left">set a value for a new build number&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_COUNTER&lt;/code>, &lt;code>REPO_COUNTER&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>private&lt;/code>&lt;/td>
-&lt;td>disables public access to the repository&lt;/td>
-&lt;td>&lt;code>VELA_PRIVATE&lt;/code>, &lt;code>REPO_PRIVATE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>private&lt;/code>&lt;/td>
+&lt;td style="text-align: left">disables public access to the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_PRIVATE&lt;/code>, &lt;code>REPO_PRIVATE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>trusted&lt;/code>&lt;/td>
-&lt;td>elevates permissions for builds for the repository&lt;/td>
-&lt;td>&lt;code>VELA_TRUSTED&lt;/code>, &lt;code>REPO_TRUSTED&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>trusted&lt;/code>&lt;/td>
+&lt;td style="text-align: left">elevates permissions for builds for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_TRUSTED&lt;/code>, &lt;code>REPO_TRUSTED&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>active&lt;/code>&lt;/td>
-&lt;td>enables/disables the repository&lt;/td>
-&lt;td>&lt;code>VELA_ACTIVE&lt;/code>, &lt;code>REPO_ACTIVE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>active&lt;/code>&lt;/td>
+&lt;td style="text-align: left">enables/disables the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ACTIVE&lt;/code>, &lt;code>REPO_ACTIVE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>event&lt;/code>&lt;/td>
-&lt;td>events to trigger builds for the repository&lt;/td>
-&lt;td>&lt;code>VELA_EVENTS&lt;/code>, &lt;code>REPO_EVENTS&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>event&lt;/code>&lt;/td>
+&lt;td style="text-align: left">events to trigger builds for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_EVENTS&lt;/code>, &lt;code>REPO_EVENTS&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pipeline-type&lt;/code>&lt;/td>
-&lt;td>type of base pipeline for the compiler to render&lt;/td>
-&lt;td>&lt;code>VELA_PIPELINE_TYPE&lt;/code>, &lt;code>PIPELINE_TYPE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>pipeline-type&lt;/code>&lt;/td>
+&lt;td style="text-align: left">type of base pipeline for the compiler to render&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_PIPELINE_TYPE&lt;/code>, &lt;code>PIPELINE_TYPE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the repository&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>REPO_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>REPO_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -618,26 +618,26 @@ For more information, you can run &lt;code>vela view repo --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization for the repository&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>REPO_ORG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ORG&lt;/code>, &lt;code>REPO_ORG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>REPO_NAME&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REPO&lt;/code>, &lt;code>REPO_NAME&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the repository&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>REPO_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>REPO_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

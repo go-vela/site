@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Usage</title><link>https://go-vela.github.io/docs/usage/</link><description>Recent content in Usage on Vela</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://go-vela.github.io/docs/usage/index.xml" rel="self" type="application/rss+xml"/><item><title>Usage: External Secrets</title><link>https://go-vela.github.io/docs/usage/examples/secrets_external/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/usage/examples/secrets_external/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Usage</title><link>https://go-vela.github.io/docs/usage/</link><description>Recent content in Usage on Vela</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://go-vela.github.io/docs/usage/index.xml" rel="self" type="application/rss+xml"/><item><title>Usage: External Secrets</title><link>https://go-vela.github.io/docs/usage/examples/secrets_external/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/usage/examples/secrets_external/</guid><description>
 &lt;p>Example &lt;a href="https://yaml.org/spec/">Yaml&lt;/a> configuration for a project requiring a secrets to be used within a step&lt;/p>
 &lt;h2 id="scenario">Scenario&lt;/h2>
 &lt;p>User is looking to create a pipeline that can integrate with a private Vault to inject secrets that can not be used with pushing a Docker image to a registry.&lt;/p>
@@ -1362,26 +1362,26 @@ Outputs functionality is only available in the Docker runtime.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Policy&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Policy&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>always&lt;/code>&lt;/td>
-&lt;td>Always attempt to pull image from registry, even if it exists locally. Best used when leveraging a mutable tag, such as &lt;code>latest&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>always&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Always attempt to pull image from registry, even if it exists locally. Best used when leveraging a mutable tag, such as &lt;code>latest&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>not_present&lt;/code>&lt;/td>
-&lt;td>Only attempt to pull image from registry if it does not already exist locally. This is the default behavior and is recommended for immutably tagged images.&lt;/td>
+&lt;td style="text-align: left">&lt;code>not_present&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Only attempt to pull image from registry if it does not already exist locally. This is the default behavior and is recommended for immutably tagged images.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>on_start&lt;/code>&lt;/td>
-&lt;td>Pull image from registry right before the step is to be executed. Can speed up build times if the step or service does not run on every build (e.g. failed build notifying plugins), can be leveraged when dealing with password rotation mid-build (e.g. Vault plugin), or can be used to pull an image that was created and published earlier in the build.&lt;/td>
+&lt;td style="text-align: left">&lt;code>on_start&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Pull image from registry right before the step is to be executed. Can speed up build times if the step or service does not run on every build (e.g. failed build notifying plugins), can be leveraged when dealing with password rotation mid-build (e.g. Vault plugin), or can be used to pull an image that was created and published earlier in the build.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>never&lt;/code>&lt;/td>
-&lt;td>Only use images that exist locally.&lt;/td>
+&lt;td style="text-align: left">&lt;code>never&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Only use images that exist locally.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1463,62 +1463,62 @@ Outputs functionality is only available in the Docker runtime.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Event&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Event&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>push&lt;/code>&lt;/td>
-&lt;td>a commit pushed to a repository branch&lt;/td>
+&lt;td style="text-align: left">&lt;code>push&lt;/code>&lt;/td>
+&lt;td style="text-align: left">a commit pushed to a repository branch&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>tag&lt;/code>&lt;/td>
-&lt;td>a commit pushed to a repository branch&lt;/td>
+&lt;td style="text-align: left">&lt;code>tag&lt;/code>&lt;/td>
+&lt;td style="text-align: left">a commit pushed to a repository branch&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pull_request:opened&lt;/code>&lt;/td>
-&lt;td>a pull request is opened&lt;/td>
+&lt;td style="text-align: left">&lt;code>pull_request:opened&lt;/code>&lt;/td>
+&lt;td style="text-align: left">a pull request is opened&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pull_request:reopened&lt;/code>&lt;/td>
-&lt;td>a pull request is reopened&lt;/td>
+&lt;td style="text-align: left">&lt;code>pull_request:reopened&lt;/code>&lt;/td>
+&lt;td style="text-align: left">a pull request is reopened&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pull_request:synchronize&lt;/code>&lt;/td>
-&lt;td>a pull request source branch has been updated with a new commit&lt;/td>
+&lt;td style="text-align: left">&lt;code>pull_request:synchronize&lt;/code>&lt;/td>
+&lt;td style="text-align: left">a pull request source branch has been updated with a new commit&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pull_request:edited&lt;/code>&lt;/td>
-&lt;td>a pull request has been edited (title, description, target branch, etc)&lt;/td>
+&lt;td style="text-align: left">&lt;code>pull_request:edited&lt;/code>&lt;/td>
+&lt;td style="text-align: left">a pull request has been edited (title, description, target branch, etc)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pull_request:labeled&lt;/code>&lt;/td>
-&lt;td>a pull request has been labeled&lt;/td>
+&lt;td style="text-align: left">&lt;code>pull_request:labeled&lt;/code>&lt;/td>
+&lt;td style="text-align: left">a pull request has been labeled&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pull_request:unlabeled&lt;/code>&lt;/td>
-&lt;td>a pull request has been unlabeled&lt;/td>
+&lt;td style="text-align: left">&lt;code>pull_request:unlabeled&lt;/code>&lt;/td>
+&lt;td style="text-align: left">a pull request has been unlabeled&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>deployment:created&lt;/code>&lt;/td>
-&lt;td>a deployment is created for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>deployment:created&lt;/code>&lt;/td>
+&lt;td style="text-align: left">a deployment is created for the repository&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>comment:created&lt;/code>&lt;/td>
-&lt;td>a comment has been made on a pull request&lt;/td>
+&lt;td style="text-align: left">&lt;code>comment:created&lt;/code>&lt;/td>
+&lt;td style="text-align: left">a comment has been made on a pull request&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>comment:edited&lt;/code>&lt;/td>
-&lt;td>a comment has been edited on a pull request&lt;/td>
+&lt;td style="text-align: left">&lt;code>comment:edited&lt;/code>&lt;/td>
+&lt;td style="text-align: left">a comment has been edited on a pull request&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>delete:branch&lt;/code>&lt;/td>
-&lt;td>a repository branch has been deleted&lt;/td>
+&lt;td style="text-align: left">&lt;code>delete:branch&lt;/code>&lt;/td>
+&lt;td style="text-align: left">a repository branch has been deleted&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>delete:tag&lt;/code>&lt;/td>
-&lt;td>a repository tag has been deleted&lt;/td>
+&lt;td style="text-align: left">&lt;code>delete:tag&lt;/code>&lt;/td>
+&lt;td style="text-align: left">a repository tag has been deleted&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1565,22 +1565,22 @@ Outputs functionality is only available in the Docker runtime.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Type&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Type&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>YAML&lt;/code>&lt;/td>
-&lt;td>Default pipeline syntax (&lt;a href="https://go-vela.github.io/docs/docs/reference/yaml/">Reference Documentation&lt;/a>)&lt;/td>
+&lt;td style="text-align: left">&lt;code>YAML&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Default pipeline syntax (&lt;a href="https://go-vela.github.io/docs/docs/reference/yaml/">Reference Documentation&lt;/a>)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>Go&lt;/code>&lt;/td>
-&lt;td>Standard YAML with Go inline functionality (&lt;a href="https://go-vela.github.io/docs/docs/templates/tutorials/go/">Reference Documentation&lt;/a>)&lt;/td>
+&lt;td style="text-align: left">&lt;code>Go&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Standard YAML with Go inline functionality (&lt;a href="https://go-vela.github.io/docs/docs/templates/tutorials/go/">Reference Documentation&lt;/a>)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>Starlark&lt;/code>&lt;/td>
-&lt;td>YAML generation using Starlark (&lt;a href="https://go-vela.github.io/docs/docs/templates/tutorials/starlark/">Reference Documentation&lt;/a>)&lt;/td>
+&lt;td style="text-align: left">&lt;code>Starlark&lt;/code>&lt;/td>
+&lt;td style="text-align: left">YAML generation using Starlark (&lt;a href="https://go-vela.github.io/docs/docs/templates/tutorials/starlark/">Reference Documentation&lt;/a>)&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1630,33 +1630,33 @@ At this time the only Source Control Provider is GitHub. So this documentation i
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">Access&lt;/th>
-&lt;th style="text-align:center">Repo&lt;/th>
-&lt;th style="text-align:center">Build&lt;/th>
-&lt;th style="text-align:center">Step&lt;/th>
-&lt;th style="text-align:center">Service&lt;/th>
-&lt;th style="text-align:center">Log&lt;/th>
-&lt;th style="text-align:center">Secret&lt;/th>
+&lt;th style="text-align: center">Access&lt;/th>
+&lt;th style="text-align: center">Repo&lt;/th>
+&lt;th style="text-align: center">Build&lt;/th>
+&lt;th style="text-align: center">Step&lt;/th>
+&lt;th style="text-align: center">Service&lt;/th>
+&lt;th style="text-align: center">Log&lt;/th>
+&lt;th style="text-align: center">Secret&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">Write&lt;/td>
-&lt;td style="text-align:center">Y&lt;/td>
-&lt;td style="text-align:center">N&lt;/td>
-&lt;td style="text-align:center">N&lt;/td>
-&lt;td style="text-align:center">N&lt;/td>
-&lt;td style="text-align:center">N&lt;/td>
-&lt;td style="text-align:center">Y&lt;/td>
+&lt;td style="text-align: center">Write&lt;/td>
+&lt;td style="text-align: center">Y&lt;/td>
+&lt;td style="text-align: center">N&lt;/td>
+&lt;td style="text-align: center">N&lt;/td>
+&lt;td style="text-align: center">N&lt;/td>
+&lt;td style="text-align: center">N&lt;/td>
+&lt;td style="text-align: center">Y&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">Read&lt;/td>
-&lt;td style="text-align:center">Y&lt;/td>
-&lt;td style="text-align:center">Y&lt;/td>
-&lt;td style="text-align:center">Y&lt;/td>
-&lt;td style="text-align:center">Y&lt;/td>
-&lt;td style="text-align:center">Y&lt;/td>
-&lt;td style="text-align:center">Y&lt;/td>
+&lt;td style="text-align: center">Read&lt;/td>
+&lt;td style="text-align: center">Y&lt;/td>
+&lt;td style="text-align: center">Y&lt;/td>
+&lt;td style="text-align: center">Y&lt;/td>
+&lt;td style="text-align: center">Y&lt;/td>
+&lt;td style="text-align: center">Y&lt;/td>
+&lt;td style="text-align: center">Y&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1665,33 +1665,33 @@ At this time the only Source Control Provider is GitHub. So this documentation i
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">Access&lt;/th>
-&lt;th style="text-align:center">Repo&lt;/th>
-&lt;th style="text-align:center">Build&lt;/th>
-&lt;th style="text-align:center">Step&lt;/th>
-&lt;th style="text-align:center">Service&lt;/th>
-&lt;th style="text-align:center">Log&lt;/th>
-&lt;th style="text-align:center">Secret&lt;/th>
+&lt;th style="text-align: center">Access&lt;/th>
+&lt;th style="text-align: center">Repo&lt;/th>
+&lt;th style="text-align: center">Build&lt;/th>
+&lt;th style="text-align: center">Step&lt;/th>
+&lt;th style="text-align: center">Service&lt;/th>
+&lt;th style="text-align: center">Log&lt;/th>
+&lt;th style="text-align: center">Secret&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">Write&lt;/td>
-&lt;td style="text-align:center">Y&lt;/td>
-&lt;td style="text-align:center">N&lt;/td>
-&lt;td style="text-align:center">N&lt;/td>
-&lt;td style="text-align:center">N&lt;/td>
-&lt;td style="text-align:center">N&lt;/td>
-&lt;td style="text-align:center">N&lt;/td>
+&lt;td style="text-align: center">Write&lt;/td>
+&lt;td style="text-align: center">Y&lt;/td>
+&lt;td style="text-align: center">N&lt;/td>
+&lt;td style="text-align: center">N&lt;/td>
+&lt;td style="text-align: center">N&lt;/td>
+&lt;td style="text-align: center">N&lt;/td>
+&lt;td style="text-align: center">N&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">Read&lt;/td>
-&lt;td style="text-align:center">Y&lt;/td>
-&lt;td style="text-align:center">Y&lt;/td>
-&lt;td style="text-align:center">Y&lt;/td>
-&lt;td style="text-align:center">Y&lt;/td>
-&lt;td style="text-align:center">Y&lt;/td>
-&lt;td style="text-align:center">N&lt;/td>
+&lt;td style="text-align: center">Read&lt;/td>
+&lt;td style="text-align: center">Y&lt;/td>
+&lt;td style="text-align: center">Y&lt;/td>
+&lt;td style="text-align: center">Y&lt;/td>
+&lt;td style="text-align: center">Y&lt;/td>
+&lt;td style="text-align: center">Y&lt;/td>
+&lt;td style="text-align: center">N&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1700,33 +1700,33 @@ At this time the only Source Control Provider is GitHub. So this documentation i
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:center">Access&lt;/th>
-&lt;th style="text-align:center">Repo&lt;/th>
-&lt;th style="text-align:center">Build&lt;/th>
-&lt;th style="text-align:center">Step&lt;/th>
-&lt;th style="text-align:center">Service&lt;/th>
-&lt;th style="text-align:center">Log&lt;/th>
-&lt;th style="text-align:center">Secret&lt;/th>
+&lt;th style="text-align: center">Access&lt;/th>
+&lt;th style="text-align: center">Repo&lt;/th>
+&lt;th style="text-align: center">Build&lt;/th>
+&lt;th style="text-align: center">Step&lt;/th>
+&lt;th style="text-align: center">Service&lt;/th>
+&lt;th style="text-align: center">Log&lt;/th>
+&lt;th style="text-align: center">Secret&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">Write&lt;/td>
-&lt;td style="text-align:center">N&lt;/td>
-&lt;td style="text-align:center">N&lt;/td>
-&lt;td style="text-align:center">N&lt;/td>
-&lt;td style="text-align:center">N&lt;/td>
-&lt;td style="text-align:center">N&lt;/td>
-&lt;td style="text-align:center">N&lt;/td>
+&lt;td style="text-align: center">Write&lt;/td>
+&lt;td style="text-align: center">N&lt;/td>
+&lt;td style="text-align: center">N&lt;/td>
+&lt;td style="text-align: center">N&lt;/td>
+&lt;td style="text-align: center">N&lt;/td>
+&lt;td style="text-align: center">N&lt;/td>
+&lt;td style="text-align: center">N&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:center">Read&lt;/td>
-&lt;td style="text-align:center">Y&lt;/td>
-&lt;td style="text-align:center">Y&lt;/td>
-&lt;td style="text-align:center">Y&lt;/td>
-&lt;td style="text-align:center">Y&lt;/td>
-&lt;td style="text-align:center">Y&lt;/td>
-&lt;td style="text-align:center">N&lt;/td>
+&lt;td style="text-align: center">Read&lt;/td>
+&lt;td style="text-align: center">Y&lt;/td>
+&lt;td style="text-align: center">Y&lt;/td>
+&lt;td style="text-align: center">Y&lt;/td>
+&lt;td style="text-align: center">Y&lt;/td>
+&lt;td style="text-align: center">Y&lt;/td>
+&lt;td style="text-align: center">N&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table></description></item><item><title>Usage: Scheduling a Build</title><link>https://go-vela.github.io/docs/usage/schedule_build/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/usage/schedule_build/</guid><description>
@@ -1881,36 +1881,36 @@ The masking routine simply looks for logs that exactly match the content of a st
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Setting&lt;/th>
-&lt;th>Repo&lt;/th>
-&lt;th>Org&lt;/th>
-&lt;th>Shared&lt;/th>
+&lt;th style="text-align: left">Setting&lt;/th>
+&lt;th style="text-align: left">Repo&lt;/th>
+&lt;th style="text-align: left">Org&lt;/th>
+&lt;th style="text-align: left">Shared&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>Allow Command&lt;/code>&lt;/td>
-&lt;td>Yes&lt;/td>
-&lt;td>Yes&lt;/td>
-&lt;td>No&lt;/td>
+&lt;td style="text-align: left">&lt;code>Allow Command&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Yes&lt;/td>
+&lt;td style="text-align: left">Yes&lt;/td>
+&lt;td style="text-align: left">No&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>Allow Substitution&lt;/code>&lt;/td>
-&lt;td>Yes&lt;/td>
-&lt;td>Yes&lt;/td>
-&lt;td>No&lt;/td>
+&lt;td style="text-align: left">&lt;code>Allow Substitution&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Yes&lt;/td>
+&lt;td style="text-align: left">Yes&lt;/td>
+&lt;td style="text-align: left">No&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>Images&lt;/code>&lt;/td>
-&lt;td>Any&lt;/td>
-&lt;td>Any&lt;/td>
-&lt;td>Any&lt;/td>
+&lt;td style="text-align: left">&lt;code>Images&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Any&lt;/td>
+&lt;td style="text-align: left">Any&lt;/td>
+&lt;td style="text-align: left">Any&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>Allow Events&lt;/code>&lt;/td>
-&lt;td>Push, Tag, Deployment&lt;/td>
-&lt;td>Push, Tag, Deployment&lt;/td>
-&lt;td>Push, Tag, Deployment&lt;/td>
+&lt;td style="text-align: left">&lt;code>Allow Events&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Push, Tag, Deployment&lt;/td>
+&lt;td style="text-align: left">Push, Tag, Deployment&lt;/td>
+&lt;td style="text-align: left">Push, Tag, Deployment&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Pipeline</title><link>https://go-vela.github.io/docs/reference/cli/pipeline/</link><description>Recent content in Pipeline on Vela</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://go-vela.github.io/docs/reference/cli/pipeline/index.xml" rel="self" type="application/rss+xml"/><item><title>Reference: Exec</title><link>https://go-vela.github.io/docs/reference/cli/pipeline/exec/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/cli/pipeline/exec/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Pipeline</title><link>https://go-vela.github.io/docs/reference/cli/pipeline/</link><description>Recent content in Pipeline on Vela</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://go-vela.github.io/docs/reference/cli/pipeline/index.xml" rel="self" type="application/rss+xml"/><item><title>Reference: Exec</title><link>https://go-vela.github.io/docs/reference/cli/pipeline/exec/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/cli/pipeline/exec/</guid><description>
 &lt;h2 id="command">Command&lt;/h2>
 &lt;pre tabindex="0">&lt;code>$ vela exec pipeline &amp;lt;parameters...&amp;gt; &amp;lt;arguments...&amp;gt;
 &lt;/code>&lt;/pre>
@@ -11,41 +11,41 @@ For more information, you can run &lt;code>vela exec pipeline --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>branch&lt;/code>&lt;/td>
-&lt;td>the build branch for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_BRANCH&lt;/code>, &lt;code>PIPELINE_BRANCH&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>branch&lt;/code>&lt;/td>
+&lt;td style="text-align: left">the build branch for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_BRANCH&lt;/code>, &lt;code>PIPELINE_BRANCH&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>comment&lt;/code>&lt;/td>
-&lt;td>the build comment for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_COMMENT&lt;/code>, &lt;code>PIPELINE_COMMENT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>comment&lt;/code>&lt;/td>
+&lt;td style="text-align: left">the build comment for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_COMMENT&lt;/code>, &lt;code>PIPELINE_COMMENT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>event&lt;/code>&lt;/td>
-&lt;td>the build event for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_EVENT&lt;/code>, &lt;code>PIPELINE_EVENT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>event&lt;/code>&lt;/td>
+&lt;td style="text-align: left">the build event for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_EVENT&lt;/code>, &lt;code>PIPELINE_EVENT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>tag&lt;/code>&lt;/td>
-&lt;td>the build tag for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_TAG&lt;/code>, &lt;code>PIPELINE_TAG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>tag&lt;/code>&lt;/td>
+&lt;td style="text-align: left">the build tag for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_TAG&lt;/code>, &lt;code>PIPELINE_TAG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>target&lt;/code>&lt;/td>
-&lt;td>the build target for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_TARGET&lt;/code>, &lt;code>PIPELINE_TARGET&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>target&lt;/code>&lt;/td>
+&lt;td style="text-align: left">the build target for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_TARGET&lt;/code>, &lt;code>PIPELINE_TARGET&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>file-changeset&lt;/code>&lt;/td>
-&lt;td>the build file changeset for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_FILE_CHANGESET&lt;/code>, &lt;code>FILE_CHANGESET&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>file-changeset&lt;/code>&lt;/td>
+&lt;td style="text-align: left">the build file changeset for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_FILE_CHANGESET&lt;/code>, &lt;code>FILE_CHANGESET&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -53,26 +53,26 @@ For more information, you can run &lt;code>vela exec pipeline --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>provide the organization for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>PIPELINE_ORG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">provide the organization for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ORG&lt;/code>, &lt;code>PIPELINE_ORG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>provide the repository for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>PIPELINE_REPO&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">provide the repository for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REPO&lt;/code>, &lt;code>PIPELINE_REPO&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pipeline-type&lt;/code>&lt;/td>
-&lt;td>provide the repository pipeline type&lt;/td>
-&lt;td>&lt;code>VELA_PIPELINE_TYPE&lt;/code>, &lt;code>PIPELINE_TYPE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>pipeline-type&lt;/code>&lt;/td>
+&lt;td style="text-align: left">provide the repository pipeline type&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_PIPELINE_TYPE&lt;/code>, &lt;code>PIPELINE_TYPE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -80,31 +80,31 @@ For more information, you can run &lt;code>vela exec pipeline --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>compiler.github.token&lt;/code>&lt;/td>
-&lt;td>PAT for accessing GitHub sourced templates&lt;/td>
-&lt;td>&lt;code>VELA_COMPILER_GITHUB_TOKEN&lt;/code>, &lt;code>COMPILER_GITHUB_TOKEN&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>compiler.github.token&lt;/code>&lt;/td>
+&lt;td style="text-align: left">PAT for accessing GitHub sourced templates&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_COMPILER_GITHUB_TOKEN&lt;/code>, &lt;code>COMPILER_GITHUB_TOKEN&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>compiler.github.url&lt;/code>&lt;/td>
-&lt;td>URL for accessing GitHub sourced templates&lt;/td>
-&lt;td>&lt;code>VELA_COMPILER_GITHUB_URL&lt;/code>, &lt;code>COMPILER_GITHUB_URL&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>compiler.github.url&lt;/code>&lt;/td>
+&lt;td style="text-align: left">URL for accessing GitHub sourced templates&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_COMPILER_GITHUB_URL&lt;/code>, &lt;code>COMPILER_GITHUB_URL&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>template-file&lt;/code>&lt;/td>
-&lt;td>list of local templates in form of &lt;name>:&lt;path>&lt;/td>
-&lt;td>&lt;code>VELA_TEMPLATE_FILE&lt;/code>, &lt;code>PIPELINE_TEMPLATE_FILE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>template-file&lt;/code>&lt;/td>
+&lt;td style="text-align: left">list of local templates in form of &lt;name>:&lt;path>&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_TEMPLATE_FILE&lt;/code>, &lt;code>PIPELINE_TEMPLATE_FILE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>max-template-depth&lt;/code>&lt;/td>
-&lt;td>maximum depth for requesting nested templates&lt;/td>
-&lt;td>&lt;code>VELA_MAX_TEMPLATE_DEPTH&lt;/code>, &lt;code>MAX_TEMPLATE_DEPTH&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>max-template-depth&lt;/code>&lt;/td>
+&lt;td style="text-align: left">maximum depth for requesting nested templates&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_MAX_TEMPLATE_DEPTH&lt;/code>, &lt;code>MAX_TEMPLATE_DEPTH&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -112,31 +112,31 @@ For more information, you can run &lt;code>vela exec pipeline --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>env-file&lt;/code>&lt;/td>
-&lt;td>Bool value for whether or not to source from an env file (default &lt;code>.env&lt;/code>)&lt;/td>
-&lt;td>&lt;code>VELA_ENV_FILE&lt;/code>, &lt;code>ENV_FILE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>env-file&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Bool value for whether or not to source from an env file (default &lt;code>.env&lt;/code>)&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ENV_FILE&lt;/code>, &lt;code>ENV_FILE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>env-file-path&lt;/code>&lt;/td>
-&lt;td>Path to override default &lt;code>.env&lt;/code> sourcing of environment&lt;/td>
-&lt;td>&lt;code>VELA_ENV_FILE_PATH&lt;/code>, &lt;code>ENV_FILE_PATH&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>env-file-path&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Path to override default &lt;code>.env&lt;/code> sourcing of environment&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ENV_FILE_PATH&lt;/code>, &lt;code>ENV_FILE_PATH&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>local-env&lt;/code>&lt;/td>
-&lt;td>Bool value for whether or not to onboard your local environment&lt;/td>
-&lt;td>&lt;code>ONBOARD_LOCAL_ENV&lt;/code>, &lt;code>LOCAL_ENV&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>local-env&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Bool value for whether or not to onboard your local environment&lt;/td>
+&lt;td style="text-align: left">&lt;code>ONBOARD_LOCAL_ENV&lt;/code>, &lt;code>LOCAL_ENV&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>env-vars&lt;/code>&lt;/td>
-&lt;td>list of environment variables to include in form of &lt;KEY>=&lt;VAL>&lt;/td>
-&lt;td>&lt;code>VELA_ENV_VARS&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>env-vars&lt;/code>&lt;/td>
+&lt;td style="text-align: left">list of environment variables to include in form of &lt;KEY>=&lt;VAL>&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ENV_VARS&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -144,36 +144,36 @@ For more information, you can run &lt;code>vela exec pipeline --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output in json, spew or yaml&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>PIPELINE_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output in json, spew or yaml&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>PIPELINE_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>file&lt;/code>&lt;/td>
-&lt;td>name of the file for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_FILE&lt;/code>, &lt;code>PIPELINE_FILE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>file&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of the file for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_FILE&lt;/code>, &lt;code>PIPELINE_FILE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>path&lt;/code>&lt;/td>
-&lt;td>path to the file for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_PATH&lt;/code>, &lt;code>PIPELINE_PATH&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>path&lt;/code>&lt;/td>
+&lt;td style="text-align: left">path to the file for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_PATH&lt;/code>, &lt;code>PIPELINE_PATH&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>local&lt;/code>&lt;/td>
-&lt;td>enables mounting local directory to pipeline&lt;/td>
-&lt;td>&lt;code>VELA_LOCAL&lt;/code>, &lt;code>PIPELINE_LOCAL&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>local&lt;/code>&lt;/td>
+&lt;td style="text-align: left">enables mounting local directory to pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_LOCAL&lt;/code>, &lt;code>PIPELINE_LOCAL&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>volume&lt;/code>&lt;/td>
-&lt;td>provide list of local volumes to mount&lt;/td>
-&lt;td>&lt;code>VELA_VOLUMES&lt;/code>, &lt;code>PIPELINE_VOLUMES&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>volume&lt;/code>&lt;/td>
+&lt;td style="text-align: left">provide list of local volumes to mount&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_VOLUMES&lt;/code>, &lt;code>PIPELINE_VOLUMES&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -333,31 +333,31 @@ For more information, you can run &lt;code>vela generate pipeline --help&lt;/cod
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>file&lt;/code>&lt;/td>
-&lt;td>name of the file for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_FILE&lt;/code>, &lt;code>PIPELINE_FILE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>file&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of the file for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_FILE&lt;/code>, &lt;code>PIPELINE_FILE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>path&lt;/code>&lt;/td>
-&lt;td>path to the file for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_PATH&lt;/code>, &lt;code>PIPELINE_PATH&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>path&lt;/code>&lt;/td>
+&lt;td style="text-align: left">path to the file for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_PATH&lt;/code>, &lt;code>PIPELINE_PATH&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>stages&lt;/code>&lt;/td>
-&lt;td>generates the pipeline with stages&lt;/td>
-&lt;td>&lt;code>VELA_STAGES&lt;/code>, &lt;code>PIPELINE_STAGES&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>stages&lt;/code>&lt;/td>
+&lt;td style="text-align: left">generates the pipeline with stages&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_STAGES&lt;/code>, &lt;code>PIPELINE_STAGES&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>type&lt;/code>&lt;/td>
-&lt;td>type of pipeline being generated&lt;/td>
-&lt;td>&lt;code>VELA_TYPE&lt;/code>, &lt;code>PIPELINE_TYPE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>type&lt;/code>&lt;/td>
+&lt;td style="text-align: left">type of pipeline being generated&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_TYPE&lt;/code>, &lt;code>PIPELINE_TYPE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -385,36 +385,36 @@ For more information, you can run &lt;code>vela get pipeline --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization for the pipelines&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>HOOK_ORG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization for the pipelines&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ORG&lt;/code>, &lt;code>HOOK_ORG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository for the pipelines&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>HOOK_REPO&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository for the pipelines&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REPO&lt;/code>, &lt;code>HOOK_REPO&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the pipelines&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>HOOK_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the pipelines&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>HOOK_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>page&lt;/code>&lt;/td>
-&lt;td>prints a specific page of pipelines&lt;/td>
-&lt;td>&lt;code>VELA_PAGE&lt;/code>, &lt;code>HOOK_PAGE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>page&lt;/code>&lt;/td>
+&lt;td style="text-align: left">prints a specific page of pipelines&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_PAGE&lt;/code>, &lt;code>HOOK_PAGE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>per.page&lt;/code>&lt;/td>
-&lt;td>number of pipelines to print per page&lt;/td>
-&lt;td>&lt;code>VELA_PER_PAGE&lt;/code>, &lt;code>HOOK_PER_PAGE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>per.page&lt;/code>&lt;/td>
+&lt;td style="text-align: left">number of pipelines to print per page&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_PER_PAGE&lt;/code>, &lt;code>HOOK_PER_PAGE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -457,116 +457,116 @@ For more information, please run &lt;code>vela validate pipeline --help&lt;/code
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization for the builds&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>BUILD_ORG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization for the builds&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ORG&lt;/code>, &lt;code>BUILD_ORG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pipeline-type&lt;/code>&lt;/td>
-&lt;td>provide the repository pipeline type&lt;/td>
-&lt;td>&lt;code>VELA_PIPELINE_TYPE&lt;/code>, &lt;code>PIPELINE_TYPE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>pipeline-type&lt;/code>&lt;/td>
+&lt;td style="text-align: left">provide the repository pipeline type&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_PIPELINE_TYPE&lt;/code>, &lt;code>PIPELINE_TYPE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository for the builds&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>BUILD_REPO&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository for the builds&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REPO&lt;/code>, &lt;code>BUILD_REPO&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>compiler-starlark-exec-limit&lt;/code>&lt;/td>
-&lt;td>set the starlark execution step limit for compiling starlark pipelines (default 7500)&lt;/td>
-&lt;td>&lt;code>VELA_COMPILER_STARLARK_EXEC_LIMIT&lt;/code>, &lt;code>COMPILER_STARLARK_EXEC_LIMIT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>compiler-starlark-exec-limit&lt;/code>&lt;/td>
+&lt;td style="text-align: left">set the starlark execution step limit for compiling starlark pipelines (default 7500)&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_COMPILER_STARLARK_EXEC_LIMIT&lt;/code>, &lt;code>COMPILER_STARLARK_EXEC_LIMIT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>file&lt;/code>&lt;/td>
-&lt;td>name of the file for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_FILE&lt;/code>, &lt;code>PIPELINE_FILE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>file&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of the file for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_FILE&lt;/code>, &lt;code>PIPELINE_FILE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>max-template-depth&lt;/code>&lt;/td>
-&lt;td>set the maximum depth for nested templates (default: 3)&lt;/td>
-&lt;td>&lt;code>VELA_MAX_TEMPLATE_DEPTH&lt;/code>, &lt;code>MAX_TEMPLATE_DEPTH&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>max-template-depth&lt;/code>&lt;/td>
+&lt;td style="text-align: left">set the maximum depth for nested templates (default: 3)&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_MAX_TEMPLATE_DEPTH&lt;/code>, &lt;code>MAX_TEMPLATE_DEPTH&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>path&lt;/code>&lt;/td>
-&lt;td>path to the file for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_PATH&lt;/code>, &lt;code>PIPELINE_PATH&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>path&lt;/code>&lt;/td>
+&lt;td style="text-align: left">path to the file for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_PATH&lt;/code>, &lt;code>PIPELINE_PATH&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>ref&lt;/code>&lt;/td>
-&lt;td>repository reference for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_REF&lt;/code>, &lt;code>PIPELINE_REF&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>ref&lt;/code>&lt;/td>
+&lt;td style="text-align: left">repository reference for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REF&lt;/code>, &lt;code>PIPELINE_REF&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>remote&lt;/code>&lt;/td>
-&lt;td>enables validating a pipeline on a remote server&lt;/td>
-&lt;td>&lt;code>VELA_REMOTE&lt;/code>, &lt;code>PIPELINE_REMOTE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>remote&lt;/code>&lt;/td>
+&lt;td style="text-align: left">enables validating a pipeline on a remote server&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REMOTE&lt;/code>, &lt;code>PIPELINE_REMOTE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>template&lt;/code>&lt;/td>
-&lt;td>enables templates to be included in pipeline validation&lt;/td>
-&lt;td>&lt;code>VELA_TEMPLATE&lt;/code>, &lt;code>PIPELINE_TEMPLATE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>template&lt;/code>&lt;/td>
+&lt;td style="text-align: left">enables templates to be included in pipeline validation&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_TEMPLATE&lt;/code>, &lt;code>PIPELINE_TEMPLATE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>template-file&lt;/code>&lt;/td>
-&lt;td>enables using a local template file for expansion&lt;/td>
-&lt;td>&lt;code>VELA_TEMPLATE_FILE&lt;/code>, &lt;code>PIPELINE_TEMPLATE_FILE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>template-file&lt;/code>&lt;/td>
+&lt;td style="text-align: left">enables using a local template file for expansion&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_TEMPLATE_FILE&lt;/code>, &lt;code>PIPELINE_TEMPLATE_FILE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>branch&lt;/code>&lt;/td>
-&lt;td>provide the build branch for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_BRANCH&lt;/code>, &lt;code>PIPELINE_BRANCH&lt;/code>, &lt;code>VELA_BUILD_BRANCH&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>branch&lt;/code>&lt;/td>
+&lt;td style="text-align: left">provide the build branch for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_BRANCH&lt;/code>, &lt;code>PIPELINE_BRANCH&lt;/code>, &lt;code>VELA_BUILD_BRANCH&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>comment&lt;/code>&lt;/td>
-&lt;td>provide the build comment for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_COMMENT&lt;/code>, &lt;code>PIPELINE_COMMENT&lt;/code>, &lt;code>VELA_BUILD_COMMENT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>comment&lt;/code>&lt;/td>
+&lt;td style="text-align: left">provide the build comment for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_COMMENT&lt;/code>, &lt;code>PIPELINE_COMMENT&lt;/code>, &lt;code>VELA_BUILD_COMMENT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>event&lt;/code>&lt;/td>
-&lt;td>provide the build event for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_EVENT&lt;/code>, &lt;code>PIPELINE_EVENT&lt;/code>, &lt;code>VELA_BUILD_EVENT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>event&lt;/code>&lt;/td>
+&lt;td style="text-align: left">provide the build event for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_EVENT&lt;/code>, &lt;code>PIPELINE_EVENT&lt;/code>, &lt;code>VELA_BUILD_EVENT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>file-changeset&lt;/code>&lt;/td>
-&lt;td>provide a list of files changed for ruleset matching&lt;/td>
-&lt;td>&lt;code>VELA_FILE_CHANGESET&lt;/code>, &lt;code>FILE_CHANGESET&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>file-changeset&lt;/code>&lt;/td>
+&lt;td style="text-align: left">provide a list of files changed for ruleset matching&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_FILE_CHANGESET&lt;/code>, &lt;code>FILE_CHANGESET&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>status&lt;/code>&lt;/td>
-&lt;td>provide the expected build status for the local validation (default: &amp;ldquo;success&amp;rdquo;)&lt;/td>
-&lt;td>&lt;code>VELA_STATUS&lt;/code>, &lt;code>PIPELINE_STATUS&lt;/code>, &lt;code>VELA_BUILD_STATUS&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>status&lt;/code>&lt;/td>
+&lt;td style="text-align: left">provide the expected build status for the local validation (default: &amp;ldquo;success&amp;rdquo;)&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_STATUS&lt;/code>, &lt;code>PIPELINE_STATUS&lt;/code>, &lt;code>VELA_BUILD_STATUS&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>tag&lt;/code>&lt;/td>
-&lt;td>provide the build tag for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_TAG&lt;/code>, &lt;code>PIPELINE_TAG&lt;/code>, &lt;code>VELA_BUILD_TAG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>tag&lt;/code>&lt;/td>
+&lt;td style="text-align: left">provide the build tag for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_TAG&lt;/code>, &lt;code>PIPELINE_TAG&lt;/code>, &lt;code>VELA_BUILD_TAG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>target&lt;/code>&lt;/td>
-&lt;td>provide the build target for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_TARGET&lt;/code>, &lt;code>PIPELINE_TARGET&lt;/code>, &lt;code>VELA_BUILD_TARGET&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>target&lt;/code>&lt;/td>
+&lt;td style="text-align: left">provide the build target for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_TARGET&lt;/code>, &lt;code>PIPELINE_TARGET&lt;/code>, &lt;code>VELA_BUILD_TARGET&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>clone-image&lt;/code>&lt;/td>
-&lt;td>the clone image to use for the injected clone step&lt;/td>
-&lt;td>&lt;code>VELA_CLONE_IMAGE&lt;/code>, &lt;code>COMPILER_CLONE_IMAGE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>clone-image&lt;/code>&lt;/td>
+&lt;td style="text-align: left">the clone image to use for the injected clone step&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_CLONE_IMAGE&lt;/code>, &lt;code>COMPILER_CLONE_IMAGE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>compiler.github.token&lt;/code>&lt;/td>
-&lt;td>github compiler token&lt;/td>
-&lt;td>&lt;code>VELA_COMPILER_GITHUB_TOKEN&lt;/code>, &lt;code>COMPILER_GITHUB_TOKEN&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>compiler.github.token&lt;/code>&lt;/td>
+&lt;td style="text-align: left">github compiler token&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_COMPILER_GITHUB_TOKEN&lt;/code>, &lt;code>COMPILER_GITHUB_TOKEN&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>compiler.github.url&lt;/code>&lt;/td>
-&lt;td>github url, used by compiler, for pulling registry templates&lt;/td>
-&lt;td>&lt;code>VELA_COMPILER_GITHUB_URL&lt;/code>, &lt;code>COMPILER_GITHUB_URL&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>compiler.github.url&lt;/code>&lt;/td>
+&lt;td style="text-align: left">github url, used by compiler, for pulling registry templates&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_COMPILER_GITHUB_URL&lt;/code>, &lt;code>COMPILER_GITHUB_URL&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

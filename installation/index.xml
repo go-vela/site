@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Overview</title><link>https://go-vela.github.io/docs/installation/</link><description>Recent content in Overview on Vela</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://go-vela.github.io/docs/installation/index.xml" rel="self" type="application/rss+xml"/><item><title>Installation: Settings</title><link>https://go-vela.github.io/docs/installation/server/reference/settings/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/server/reference/settings/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Overview</title><link>https://go-vela.github.io/docs/installation/</link><description>Recent content in Overview on Vela</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://go-vela.github.io/docs/installation/index.xml" rel="self" type="application/rss+xml"/><item><title>Installation: Settings</title><link>https://go-vela.github.io/docs/installation/server/reference/settings/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/server/reference/settings/</guid><description>
 &lt;p>Platform Administrators can update certain properties during runtime to change how the platform behaves in real time.&lt;/p>
 &lt;p>The following properties are available to be updated:&lt;/p>
 &lt;ul>
@@ -13,20 +13,20 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Default&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Required&lt;/th>
+&lt;th style="text-align: left">Default&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>settings-refresh-interval&lt;/code>&lt;/td>
-&lt;td>the interval at which the server syncs with the database&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>5s&lt;/code>&lt;/td>
-&lt;td>&lt;code>VELA_PLATFORM_SETTINGS_REFRESH_INTERVAL&lt;/code>, &lt;code>VELA_SETTINGS_REFRESH_INTERVAL&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>settings-refresh-interval&lt;/code>&lt;/td>
+&lt;td style="text-align: left">the interval at which the server syncs with the database&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>5s&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_PLATFORM_SETTINGS_REFRESH_INTERVAL&lt;/code>, &lt;code>VELA_SETTINGS_REFRESH_INTERVAL&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -71,83 +71,83 @@ The compiler is embedded directly in the server and can only be accessed through
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Default&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Required&lt;/th>
+&lt;th style="text-align: left">Default&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>clone-image&lt;/code>&lt;/td>
-&lt;td>default clone image to use for Vela injected clone step&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>target/vela-git&lt;/code> (1)&lt;/td>
-&lt;td>&lt;code>VELA_CLONE_IMAGE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>clone-image&lt;/code>&lt;/td>
+&lt;td style="text-align: left">default clone image to use for Vela injected clone step&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>target/vela-git&lt;/code> (1)&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_CLONE_IMAGE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>github-driver&lt;/code>&lt;/td>
-&lt;td>enables using Github or GitHub Enterprise Server as a registry for templates&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>COMPILER_GITHUB&lt;/code>&lt;br>&lt;code>VELA_COMPILER_GITHUB&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>github-driver&lt;/code>&lt;/td>
+&lt;td style="text-align: left">enables using Github or GitHub Enterprise Server as a registry for templates&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>COMPILER_GITHUB&lt;/code>&lt;br>&lt;code>VELA_COMPILER_GITHUB&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>github-url&lt;/code>&lt;/td>
-&lt;td>fully qualified url to GitHub or GitHub Enterprise Server for templates&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>COMPILER_GITHUB_URL&lt;/code>&lt;br>&lt;code>VELA_COMPILER_GITHUB_URL&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>github-url&lt;/code>&lt;/td>
+&lt;td style="text-align: left">fully qualified url to GitHub or GitHub Enterprise Server for templates&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>COMPILER_GITHUB_URL&lt;/code>&lt;br>&lt;code>VELA_COMPILER_GITHUB_URL&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>github-token&lt;/code>&lt;/td>
-&lt;td>token used for authentication when fetching registry templates&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>COMPILER_GITHUB_TOKEN&lt;/code>&lt;br>&lt;code>VELA_COMPILER_GITHUB_TOKEN&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>github-token&lt;/code>&lt;/td>
+&lt;td style="text-align: left">token used for authentication when fetching registry templates&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>COMPILER_GITHUB_TOKEN&lt;/code>&lt;br>&lt;code>VELA_COMPILER_GITHUB_TOKEN&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>modification-addr&lt;/code>&lt;/td>
-&lt;td>fully qualified url to endpoint for modifying pipelines&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>MODIFICATION_ADDR&lt;/code>&lt;br>&lt;code>VELA_MODIFICATION_ADDR&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>modification-addr&lt;/code>&lt;/td>
+&lt;td style="text-align: left">fully qualified url to endpoint for modifying pipelines&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>MODIFICATION_ADDR&lt;/code>&lt;br>&lt;code>VELA_MODIFICATION_ADDR&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>modification-retries&lt;/code>&lt;/td>
-&lt;td>number of times to resend failed requests to the modification endpoint&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>5&lt;/code>&lt;/td>
-&lt;td>&lt;code>MODIFICATION_RETRIES&lt;/code>&lt;br>&lt;code>VELA_MODIFICATION_RETRIES&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>modification-retries&lt;/code>&lt;/td>
+&lt;td style="text-align: left">number of times to resend failed requests to the modification endpoint&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>5&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>MODIFICATION_RETRIES&lt;/code>&lt;br>&lt;code>VELA_MODIFICATION_RETRIES&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>modification-secret&lt;/code>&lt;/td>
-&lt;td>authenticates communication between compiler and the modification endpoint&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>MODIFICATION_SECRET&lt;/code>&lt;br>&lt;code>VELA_MODIFICATION_SECRET&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>modification-secret&lt;/code>&lt;/td>
+&lt;td style="text-align: left">authenticates communication between compiler and the modification endpoint&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>MODIFICATION_SECRET&lt;/code>&lt;br>&lt;code>VELA_MODIFICATION_SECRET&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>modification-timeout&lt;/code>&lt;/td>
-&lt;td>timeout for requests sent to the modification endpoint&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>8s&lt;/code>&lt;/td>
-&lt;td>&lt;code>MODIFICATION_TIMEOUT&lt;/code>&lt;br>&lt;code>VELA_MODIFICATION_TIMEOUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>modification-timeout&lt;/code>&lt;/td>
+&lt;td style="text-align: left">timeout for requests sent to the modification endpoint&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>8s&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>MODIFICATION_TIMEOUT&lt;/code>&lt;br>&lt;code>VELA_MODIFICATION_TIMEOUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>max-template-depth&lt;/code>&lt;/td>
-&lt;td>max depth for calling nested templates during compilation&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>3&lt;/code>&lt;/td>
-&lt;td>&lt;code>MAX_TEMPLATE_DEPTH&lt;/code>&lt;br>&lt;code>VELA_MAX_TEMPLATE_DEPTH&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>max-template-depth&lt;/code>&lt;/td>
+&lt;td style="text-align: left">max depth for calling nested templates during compilation&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>3&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>MAX_TEMPLATE_DEPTH&lt;/code>&lt;br>&lt;code>VELA_MAX_TEMPLATE_DEPTH&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>compiler-starlark-exec-limit&lt;/code>&lt;/td>
-&lt;td>execution step limit for compiling starlark pipelines&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>7500&lt;/code>&lt;/td>
-&lt;td>&lt;code>COMPILER_STARLARK_EXEC_LIMIT&lt;/code>&lt;br>&lt;code>VELA_COMPILER_STARLARK_EXEC_LIMIT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>compiler-starlark-exec-limit&lt;/code>&lt;/td>
+&lt;td style="text-align: left">execution step limit for compiling starlark pipelines&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>7500&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>COMPILER_STARLARK_EXEC_LIMIT&lt;/code>&lt;br>&lt;code>VELA_COMPILER_STARLARK_EXEC_LIMIT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -161,16 +161,16 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Documentation&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Documentation&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>github&lt;/code>&lt;/td>
-&lt;td>uses GitHub or GitHug Enterprise Server as a template registry&lt;/td>
-&lt;td>&lt;a href="https://docs.github.com/en/enterprise-server/admin/overview/system-overview">https://docs.github.com/en/enterprise-server/admin/overview/system-overview&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;code>github&lt;/code>&lt;/td>
+&lt;td style="text-align: left">uses GitHub or GitHug Enterprise Server as a template registry&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://docs.github.com/en/enterprise-server/admin/overview/system-overview">https://docs.github.com/en/enterprise-server/admin/overview/system-overview&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -245,97 +245,97 @@ Any sensitive data stored in the database will be encrypted using the &lt;a href
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Default&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Required&lt;/th>
+&lt;th style="text-align: left">Default&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>database.addr&lt;/code>&lt;/td>
-&lt;td>full connection string to the database&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>sqlite3&lt;/code>&lt;/td>
-&lt;td>&lt;code>DATABASE_ADDR&lt;/code>&lt;br>&lt;code>VELA_DATABASE_ADDR&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>database.addr&lt;/code>&lt;/td>
+&lt;td style="text-align: left">full connection string to the database&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>sqlite3&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>DATABASE_ADDR&lt;/code>&lt;br>&lt;code>VELA_DATABASE_ADDR&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>database.driver&lt;/code>&lt;/td>
-&lt;td>type of client to control and operate the database&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>vela.sqlite&lt;/code>&lt;/td>
-&lt;td>&lt;code>DATABASE_DRIVER&lt;/code>&lt;br>&lt;code>VELA_DATABASE_DRIVER&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>database.driver&lt;/code>&lt;/td>
+&lt;td style="text-align: left">type of client to control and operate the database&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>vela.sqlite&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>DATABASE_DRIVER&lt;/code>&lt;br>&lt;code>VELA_DATABASE_DRIVER&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>database.compression.level&lt;/code>&lt;/td>
-&lt;td>level of compression for logs stored in the database&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>3&lt;/code>&lt;/td>
-&lt;td>&lt;code>DATABASE_COMPRESSION_LEVEL&lt;/code>&lt;br>&lt;code>VELA_DATABASE_COMPRESSION_LEVEL&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>database.compression.level&lt;/code>&lt;/td>
+&lt;td style="text-align: left">level of compression for logs stored in the database&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>3&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>DATABASE_COMPRESSION_LEVEL&lt;/code>&lt;br>&lt;code>VELA_DATABASE_COMPRESSION_LEVEL&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>database.connection.idle&lt;/code>&lt;/td>
-&lt;td>maximum number of idle connections to the database&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>2&lt;/code>&lt;/td>
-&lt;td>&lt;code>DATABASE_CONNECTION_IDLE&lt;/code>&lt;br>&lt;code>VELA_DATABASE_CONNECTION_IDLE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>database.connection.idle&lt;/code>&lt;/td>
+&lt;td style="text-align: left">maximum number of idle connections to the database&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>2&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>DATABASE_CONNECTION_IDLE&lt;/code>&lt;br>&lt;code>VELA_DATABASE_CONNECTION_IDLE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>database.connection.life&lt;/code>&lt;/td>
-&lt;td>duration of time a connection is reusable&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>30m&lt;/code>&lt;/td>
-&lt;td>&lt;code>DATABASE_CONNECTION_LIFE&lt;/code>&lt;br>&lt;code>VELA_DATABASE_CONNECTION_LIFE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>database.connection.life&lt;/code>&lt;/td>
+&lt;td style="text-align: left">duration of time a connection is reusable&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>30m&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>DATABASE_CONNECTION_LIFE&lt;/code>&lt;br>&lt;code>VELA_DATABASE_CONNECTION_LIFE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>database.connection.open&lt;/code>&lt;/td>
-&lt;td>maximum number of open connections to the database&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>0&lt;/code>&lt;/td>
-&lt;td>&lt;code>DATABASE_CONNECTION_OPEN&lt;/code>&lt;br>&lt;code>VELA_DATABASE_CONNECTION_OPEN&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>database.connection.open&lt;/code>&lt;/td>
+&lt;td style="text-align: left">maximum number of open connections to the database&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>0&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>DATABASE_CONNECTION_OPEN&lt;/code>&lt;br>&lt;code>VELA_DATABASE_CONNECTION_OPEN&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>database.encryption.key&lt;/code>&lt;/td>
-&lt;td>AES-256 key for encrypting/decrypting values in the database&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>DATABASE_ENCRYPTION_KEY&lt;/code>&lt;br>&lt;code>VELA_DATABASE_ENCRYPTION_KEY&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>database.encryption.key&lt;/code>&lt;/td>
+&lt;td style="text-align: left">AES-256 key for encrypting/decrypting values in the database&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>DATABASE_ENCRYPTION_KEY&lt;/code>&lt;br>&lt;code>VELA_DATABASE_ENCRYPTION_KEY&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>database.skip_creation&lt;/code>&lt;/td>
-&lt;td>skips the creation of tables and indexes in the database&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>DATABASE_SKIP_CREATION&lt;/code>&lt;br>&lt;code>VELA_DATABASE_SKIP_CREATION&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>database.skip_creation&lt;/code>&lt;/td>
+&lt;td style="text-align: left">skips the creation of tables and indexes in the database&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>DATABASE_SKIP_CREATION&lt;/code>&lt;br>&lt;code>VELA_DATABASE_SKIP_CREATION&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>database.log.level&lt;/code>&lt;/td>
-&lt;td>log level for database&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>warn&lt;/code>&lt;/td>
-&lt;td>&lt;code>DATABASE_LOG_LEVEL&lt;/code> &lt;br> &lt;code>VELA_DATABASE_LOG_LEVEL&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>database.log.level&lt;/code>&lt;/td>
+&lt;td style="text-align: left">log level for database&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>warn&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>DATABASE_LOG_LEVEL&lt;/code> &lt;br> &lt;code>VELA_DATABASE_LOG_LEVEL&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>database.log.show_sql&lt;/code>&lt;/td>
-&lt;td>show sql query in logs&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>DATABASE_LOG_SHOW_SQL&lt;/code> &lt;br> &lt;code>VELA_DATABASE_LOG_SHOW_SQL&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>database.log.show_sql&lt;/code>&lt;/td>
+&lt;td style="text-align: left">show sql query in logs&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>DATABASE_LOG_SHOW_SQL&lt;/code> &lt;br> &lt;code>VELA_DATABASE_LOG_SHOW_SQL&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>database.log.skip_notfound&lt;/code>&lt;/td>
-&lt;td>skip logging not found errors&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>DATABASE_LOG_SKIP_NOTFOUND&lt;/code> &lt;br> &lt;code>VELA_DATABASE_LOG_SKIP_NOTFOUND&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>database.log.skip_notfound&lt;/code>&lt;/td>
+&lt;td style="text-align: left">skip logging not found errors&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>DATABASE_LOG_SKIP_NOTFOUND&lt;/code> &lt;br> &lt;code>VELA_DATABASE_LOG_SKIP_NOTFOUND&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>database.log.slow_threshold&lt;/code>&lt;/td>
-&lt;td>queries higher than this value are considered slow and logged&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>200ms&lt;/code>&lt;/td>
-&lt;td>&lt;code>DATABASE_LOG_SLOW_THRESHOLD&lt;/code> &lt;br> &lt;code>VELA_DATABASE_LOG_SLOW_THRESHOLD&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>database.log.slow_threshold&lt;/code>&lt;/td>
+&lt;td style="text-align: left">queries higher than this value are considered slow and logged&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>200ms&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>DATABASE_LOG_SLOW_THRESHOLD&lt;/code> &lt;br> &lt;code>VELA_DATABASE_LOG_SLOW_THRESHOLD&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -348,21 +348,21 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Documentation&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Documentation&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>postgres&lt;/code>&lt;/td>
-&lt;td>uses a PostgreSQL database for storing data at rest&lt;/td>
-&lt;td>&lt;a href="https://www.postgresql.org/">https://www.postgresql.org/&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;code>postgres&lt;/code>&lt;/td>
+&lt;td style="text-align: left">uses a PostgreSQL database for storing data at rest&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://www.postgresql.org/">https://www.postgresql.org/&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>sqlite3&lt;/code>&lt;/td>
-&lt;td>uses a SQLite database for storing data at rest&lt;/td>
-&lt;td>&lt;a href="https://www.sqlite.org/">https://www.sqlite.org/&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;code>sqlite3&lt;/code>&lt;/td>
+&lt;td style="text-align: left">uses a SQLite database for storing data at rest&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://www.sqlite.org/">https://www.sqlite.org/&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -429,62 +429,62 @@ This Sqlite configuration is enabled by default and is not necessary to provide 
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Default&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Required&lt;/th>
+&lt;th style="text-align: left">Default&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>queue.addr&lt;/code>&lt;/td>
-&lt;td>full connection string to the queue&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>QUEUE_ADDR&lt;/code>&lt;br>&lt;code>VELA_QUEUE_ADDR&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>queue.addr&lt;/code>&lt;/td>
+&lt;td style="text-align: left">full connection string to the queue&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>QUEUE_ADDR&lt;/code>&lt;br>&lt;code>VELA_QUEUE_ADDR&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>queue.cluster&lt;/code>&lt;/td>
-&lt;td>configures the client for a queue cluster&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>QUEUE_CLUSTER&lt;/code>&lt;br>&lt;code>VELA_QUEUE_CLUSTER&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>queue.cluster&lt;/code>&lt;/td>
+&lt;td style="text-align: left">configures the client for a queue cluster&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>QUEUE_CLUSTER&lt;/code>&lt;br>&lt;code>VELA_QUEUE_CLUSTER&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>queue.driver&lt;/code>&lt;/td>
-&lt;td>type of client to control and operate queue&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>QUEUE_DRIVER&lt;/code>&lt;br>&lt;code>VELA_QUEUE_DRIVER&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>queue.driver&lt;/code>&lt;/td>
+&lt;td style="text-align: left">type of client to control and operate queue&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>QUEUE_DRIVER&lt;/code>&lt;br>&lt;code>VELA_QUEUE_DRIVER&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>queue.pop.timeout&lt;/code>&lt;/td>
-&lt;td>timeout for requests that pop items off the queue&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>60s&lt;/code>&lt;/td>
-&lt;td>&lt;code>QUEUE_POP_TIMEOUT&lt;/code>&lt;br>&lt;code>VELA_QUEUE_POP_TIMEOUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>queue.pop.timeout&lt;/code>&lt;/td>
+&lt;td style="text-align: left">timeout for requests that pop items off the queue&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>60s&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>QUEUE_POP_TIMEOUT&lt;/code>&lt;br>&lt;code>VELA_QUEUE_POP_TIMEOUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>queue.routes&lt;/code>&lt;/td>
-&lt;td>unique channels or topics for pushing workloads&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>[ vela ]&lt;/code>&lt;/td>
-&lt;td>&lt;code>QUEUE_ROUTES&lt;/code>&lt;br>&lt;code>VELA_QUEUE_ROUTES&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>queue.routes&lt;/code>&lt;/td>
+&lt;td style="text-align: left">unique channels or topics for pushing workloads&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>[ vela ]&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>QUEUE_ROUTES&lt;/code>&lt;br>&lt;code>VELA_QUEUE_ROUTES&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>queue.private-key&lt;/code>&lt;/td>
-&lt;td>private key for signing items prior to push&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>QUEUE_PRIVATE_KEY&lt;/code>&lt;br>&lt;code>VELA_QUEUE_PRIVATE_KEY&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>queue.private-key&lt;/code>&lt;/td>
+&lt;td style="text-align: left">private key for signing items prior to push&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>QUEUE_PRIVATE_KEY&lt;/code>&lt;br>&lt;code>VELA_QUEUE_PRIVATE_KEY&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>queue.public-key&lt;/code>&lt;/td>
-&lt;td>public key for opening items after popping them off the queue&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>QUEUE_PUBLIC_KEY&lt;/code>&lt;br>&lt;code>VELA_QUEUE_PUBLIC_KEY&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>queue.public-key&lt;/code>&lt;/td>
+&lt;td style="text-align: left">public key for opening items after popping them off the queue&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>QUEUE_PUBLIC_KEY&lt;/code>&lt;br>&lt;code>VELA_QUEUE_PUBLIC_KEY&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -497,16 +497,16 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Documentation&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Documentation&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>redis&lt;/code>&lt;/td>
-&lt;td>uses a Redis queue for managing workloads&lt;/td>
-&lt;td>&lt;a href="https://redis.io/">https://redis.io/&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;code>redis&lt;/code>&lt;/td>
+&lt;td style="text-align: left">uses a Redis queue for managing workloads&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://redis.io/">https://redis.io/&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -548,69 +548,69 @@ Any sensitive data stored in the database will be encrypted using the &lt;a href
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Default&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Required&lt;/th>
+&lt;th style="text-align: left">Default&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>secret.vault.addr&lt;/code>&lt;/td>
-&lt;td>fully qualified url to the HashiCorp Vault instance&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>SECRET_VAULT_ADDR&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_ADDR&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>secret.vault.addr&lt;/code>&lt;/td>
+&lt;td style="text-align: left">fully qualified url to the HashiCorp Vault instance&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>SECRET_VAULT_ADDR&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_ADDR&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>secret.vault.auth-method&lt;/code>&lt;/td>
-&lt;td>authentication method used to obtain token from the HashiCorp Vault instance&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>SECRET_VAULT_AUTH_METHOD&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_AUTH_METHOD&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>secret.vault.auth-method&lt;/code>&lt;/td>
+&lt;td style="text-align: left">authentication method used to obtain token from the HashiCorp Vault instance&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>SECRET_VAULT_AUTH_METHOD&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_AUTH_METHOD&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>secret.vault.aws-role&lt;/code>&lt;/td>
-&lt;td>HashiCorp Vault role used to connect to the auth/aws/login endpoint&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>SECRET_VAULT_AWS_ROLE&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_AWS_ROLE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>secret.vault.aws-role&lt;/code>&lt;/td>
+&lt;td style="text-align: left">HashiCorp Vault role used to connect to the auth/aws/login endpoint&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>SECRET_VAULT_AWS_ROLE&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_AWS_ROLE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>secret.vault.driver&lt;/code>&lt;/td>
-&lt;td>enables HashiCorp Vault as a secret engine&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>SECRET_VAULT&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>secret.vault.driver&lt;/code>&lt;/td>
+&lt;td style="text-align: left">enables HashiCorp Vault as a secret engine&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>SECRET_VAULT&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>secret.vault.prefix&lt;/code>&lt;/td>
-&lt;td>prefix for k/v secrets in the HashiCorp Vault instance&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>SECRET_VAULT_PREFIX&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_PREFIX&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>secret.vault.prefix&lt;/code>&lt;/td>
+&lt;td style="text-align: left">prefix for k/v secrets in the HashiCorp Vault instance&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>SECRET_VAULT_PREFIX&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_PREFIX&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>secret.vault.renewal&lt;/code>&lt;/td>
-&lt;td>frequency to renew the token for the HashiCorp Vault instance&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>30m&lt;/code>&lt;/td>
-&lt;td>&lt;code>SECRET_VAULT_RENEWAL&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_RENEWAL&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>secret.vault.renewal&lt;/code>&lt;/td>
+&lt;td style="text-align: left">frequency to renew the token for the HashiCorp Vault instance&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>30m&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>SECRET_VAULT_RENEWAL&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_RENEWAL&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>secret.vault.token&lt;/code>&lt;/td>
-&lt;td>token required to access the HashiCorp Vault instance&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>SECRET_VAULT_TOKEN&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_TOKEN&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>secret.vault.token&lt;/code>&lt;/td>
+&lt;td style="text-align: left">token required to access the HashiCorp Vault instance&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>SECRET_VAULT_TOKEN&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_TOKEN&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>secret.vault.version&lt;/code>&lt;/td>
-&lt;td>version for the k/v backend for the HashiCorp Vault instance&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>2&lt;/code>&lt;/td>
-&lt;td>&lt;code>SECRET_VAULT_VERSION&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_VERSION&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>secret.vault.version&lt;/code>&lt;/td>
+&lt;td style="text-align: left">version for the k/v backend for the HashiCorp Vault instance&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>2&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>SECRET_VAULT_VERSION&lt;/code>&lt;br>&lt;code>VELA_SECRET_VAULT_VERSION&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -623,16 +623,16 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Documentation&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Documentation&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>vault&lt;/code>&lt;/td>
-&lt;td>uses a HashiCorp Vault instance for storing sensitive data at rest&lt;/td>
-&lt;td>&lt;a href="https://www.vaultproject.io/">https://www.vaultproject.io/&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;code>vault&lt;/code>&lt;/td>
+&lt;td style="text-align: left">uses a HashiCorp Vault instance for storing sensitive data at rest&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://www.vaultproject.io/">https://www.vaultproject.io/&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -671,62 +671,62 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Default&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Required&lt;/th>
+&lt;th style="text-align: left">Default&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>scm.addr&lt;/code>&lt;/td>
-&lt;td>fully qualified url for the SCM&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>https://github.com&lt;/code>&lt;/td>
-&lt;td>&lt;code>SCM_ADDR&lt;/code>&lt;br>&lt;code>VELA_SCM_ADDR&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>scm.addr&lt;/code>&lt;/td>
+&lt;td style="text-align: left">fully qualified url for the SCM&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>https://github.com&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>SCM_ADDR&lt;/code>&lt;br>&lt;code>VELA_SCM_ADDR&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>scm.client&lt;/code>&lt;/td>
-&lt;td>client ID from the generated OAuth application on the SCM&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>SCM_CLIENT&lt;/code>&lt;br>&lt;code>VELA_SCM_CLIENT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>scm.client&lt;/code>&lt;/td>
+&lt;td style="text-align: left">client ID from the generated OAuth application on the SCM&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>SCM_CLIENT&lt;/code>&lt;br>&lt;code>VELA_SCM_CLIENT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>scm.context&lt;/code>&lt;/td>
-&lt;td>message to set in commit status on the SCM&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>continuous-integration/vela&lt;/code>&lt;/td>
-&lt;td>&lt;code>SCM_CONTEXT&lt;/code>&lt;br>&lt;code>VELA_SCM_CONTEXT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>scm.context&lt;/code>&lt;/td>
+&lt;td style="text-align: left">message to set in commit status on the SCM&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>continuous-integration/vela&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>SCM_CONTEXT&lt;/code>&lt;br>&lt;code>VELA_SCM_CONTEXT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>scm.driver&lt;/code>&lt;/td>
-&lt;td>type of client to control and operate SCM&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>github&lt;/code>&lt;/td>
-&lt;td>&lt;code>SCM_DRIVER&lt;/code>&lt;br>&lt;code>VELA_SCM_DRIVER&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>scm.driver&lt;/code>&lt;/td>
+&lt;td style="text-align: left">type of client to control and operate SCM&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>github&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>SCM_DRIVER&lt;/code>&lt;br>&lt;code>VELA_SCM_DRIVER&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>scm.scopes&lt;/code>&lt;/td>
-&lt;td>permission scopes to apply for the OAuth credentials on the SCM&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>[ repo, repo:status, user:email, read:user, read:org ]&lt;/code>&lt;/td>
-&lt;td>&lt;code>SCM_SCOPES&lt;/code>&lt;br>&lt;code>VELA_SCM_SCOPES&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>scm.scopes&lt;/code>&lt;/td>
+&lt;td style="text-align: left">permission scopes to apply for the OAuth credentials on the SCM&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>[ repo, repo:status, user:email, read:user, read:org ]&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>SCM_SCOPES&lt;/code>&lt;br>&lt;code>VELA_SCM_SCOPES&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>scm.secret&lt;/code>&lt;/td>
-&lt;td>client secret from the generated OAuth application on the SCM&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>SCM_SECRET&lt;/code>&lt;br>&lt;code>VELA_SCM_SECRET&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>scm.secret&lt;/code>&lt;/td>
+&lt;td style="text-align: left">client secret from the generated OAuth application on the SCM&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>SCM_SECRET&lt;/code>&lt;br>&lt;code>VELA_SCM_SECRET&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>scm.webhook.addr&lt;/code>&lt;/td>
-&lt;td>url for webhooks on the SCM to send requests to&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>the address of the Vela server (&lt;code>$VELA_ADDR&lt;/code>)&lt;/td>
-&lt;td>&lt;code>SCM_WEBHOOK_ADDR&lt;/code>&lt;br>&lt;code>VELA_SCM_WEBHOOK_ADDR&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>scm.webhook.addr&lt;/code>&lt;/td>
+&lt;td style="text-align: left">url for webhooks on the SCM to send requests to&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">the address of the Vela server (&lt;code>$VELA_ADDR&lt;/code>)&lt;/td>
+&lt;td style="text-align: left">&lt;code>SCM_WEBHOOK_ADDR&lt;/code>&lt;br>&lt;code>VELA_SCM_WEBHOOK_ADDR&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -739,16 +739,16 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Documentation&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Documentation&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>github&lt;/code>&lt;/td>
-&lt;td>uses a GitHub or GitHug Enterprise Server for the SCM&lt;/td>
-&lt;td>&lt;a href="https://github.com/about/">https://github.com/about/&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;code>github&lt;/code>&lt;/td>
+&lt;td style="text-align: left">uses a GitHub or GitHug Enterprise Server for the SCM&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://github.com/about/">https://github.com/about/&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -785,55 +785,55 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Default&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Required&lt;/th>
+&lt;th style="text-align: left">Default&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>vela-server-private-key&lt;/code>&lt;/td>
-&lt;td>private key used for signing and validating all JWT tokens&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>VELA_SERVER_PRIVATE_KEY&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>vela-server-private-key&lt;/code>&lt;/td>
+&lt;td style="text-align: left">private key used for signing and validating all JWT tokens&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_SERVER_PRIVATE_KEY&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>user-access-token-duration&lt;/code>&lt;/td>
-&lt;td>maximum duration of time a Vela access token for a user is valid on the server&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>15m&lt;/code>&lt;/td>
-&lt;td>&lt;code>VELA_USER_ACCESS_TOKEN_DURATION&lt;/code>&lt;br>&lt;code>USER_ACCESS_TOKEN_DURATION&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>user-access-token-duration&lt;/code>&lt;/td>
+&lt;td style="text-align: left">maximum duration of time a Vela access token for a user is valid on the server&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>15m&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_USER_ACCESS_TOKEN_DURATION&lt;/code>&lt;br>&lt;code>USER_ACCESS_TOKEN_DURATION&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>user-refresh-token-duration&lt;/code>&lt;/td>
-&lt;td>maximum duration of time a Vela refresh token for a user is valid on the server&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>8h&lt;/code>&lt;/td>
-&lt;td>&lt;code>VELA_USER_ACCESS_TOKEN_DURATION&lt;/code>&lt;br>&lt;code>USER_ACCESS_TOKEN_DURATION&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>user-refresh-token-duration&lt;/code>&lt;/td>
+&lt;td style="text-align: left">maximum duration of time a Vela refresh token for a user is valid on the server&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>8h&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_USER_ACCESS_TOKEN_DURATION&lt;/code>&lt;br>&lt;code>USER_ACCESS_TOKEN_DURATION&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>build-token-buffer-duration&lt;/code>&lt;/td>
-&lt;td>maximum duration of time a Vela build token for a build extends beyond the repo build limit to maintain validity on the server&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>5m&lt;/code>&lt;/td>
-&lt;td>&lt;code>VELA_BUILD_TOKEN_BUFFER_DURATION&lt;/code>&lt;br>&lt;code>BUILD_TOKEN_BUFFER_DURATION&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>build-token-buffer-duration&lt;/code>&lt;/td>
+&lt;td style="text-align: left">maximum duration of time a Vela build token for a build extends beyond the repo build limit to maintain validity on the server&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>5m&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_BUILD_TOKEN_BUFFER_DURATION&lt;/code>&lt;br>&lt;code>BUILD_TOKEN_BUFFER_DURATION&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>worker-auth-token-duration&lt;/code>&lt;/td>
-&lt;td>maximum duration of time an auth token for a worker is valid on the server&lt;/td>
-&lt;td>&lt;code>false&lt;/code>*&lt;/td>
-&lt;td>&lt;code>20m&lt;/code>&lt;/td>
-&lt;td>&lt;code>VELA_WORKER_AUTH_TOKEN_DURATION&lt;/code>&lt;br>&lt;code>WORKER_AUTH_TOKEN_DURATION&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>worker-auth-token-duration&lt;/code>&lt;/td>
+&lt;td style="text-align: left">maximum duration of time an auth token for a worker is valid on the server&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>*&lt;/td>
+&lt;td style="text-align: left">&lt;code>20m&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_WORKER_AUTH_TOKEN_DURATION&lt;/code>&lt;br>&lt;code>WORKER_AUTH_TOKEN_DURATION&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>worker-register-token-duration&lt;/code>&lt;/td>
-&lt;td>maximum duration of time a registration token for a worker is valid on the server&lt;/td>
-&lt;td>&lt;code>false&lt;/code>*&lt;/td>
-&lt;td>&lt;code>1m&lt;/code>&lt;/td>
-&lt;td>&lt;code>VELA_WORKER_REGISTER_TOKEN_DURATION&lt;/code>&lt;br>&lt;code>WORKER_REGISTER_TOKEN_DURATION&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>worker-register-token-duration&lt;/code>&lt;/td>
+&lt;td style="text-align: left">maximum duration of time a registration token for a worker is valid on the server&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>*&lt;/td>
+&lt;td style="text-align: left">&lt;code>1m&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_WORKER_REGISTER_TOKEN_DURATION&lt;/code>&lt;br>&lt;code>WORKER_REGISTER_TOKEN_DURATION&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -848,90 +848,90 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Default&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Required&lt;/th>
+&lt;th style="text-align: left">Default&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>tracing.enable&lt;/code>&lt;/td>
-&lt;td>This variable enables &lt;a href="https://opentelemetry.io/docs/concepts/signals/traces/">OpenTelemetry tracing&lt;/a> for the Vela server. You must provide &lt;code>VELA_OTEL_EXPORTER_OTLP_ENDPOINT&lt;/code> &lt;strong>when tracing is enabled&lt;/strong>.&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>VELA_OTEL_TRACING_ENABLE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>tracing.enable&lt;/code>&lt;/td>
+&lt;td style="text-align: left">This variable enables &lt;a href="https://opentelemetry.io/docs/concepts/signals/traces/">OpenTelemetry tracing&lt;/a> for the Vela server. You must provide &lt;code>VELA_OTEL_EXPORTER_OTLP_ENDPOINT&lt;/code> &lt;strong>when tracing is enabled&lt;/strong>.&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OTEL_TRACING_ENABLE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>tracing.service.name&lt;/code>&lt;/td>
-&lt;td>This variable sets the &lt;a href="https://opentelemetry.io/docs/languages/sdk-configuration/general/">service name&lt;/a> applied to &lt;a href="https://opentelemetry.io/docs/concepts/signals/traces/">traces&lt;/a>.&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>vela-server&lt;/code>&lt;/td>
-&lt;td>&lt;code>VELA_OTEL_TRACING_SERVICE_NAME&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>tracing.service.name&lt;/code>&lt;/td>
+&lt;td style="text-align: left">This variable sets the &lt;a href="https://opentelemetry.io/docs/languages/sdk-configuration/general/">service name&lt;/a> applied to &lt;a href="https://opentelemetry.io/docs/concepts/signals/traces/">traces&lt;/a>.&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>vela-server&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OTEL_TRACING_SERVICE_NAME&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>tracing.exporter.endpoint&lt;/code>&lt;/td>
-&lt;td>This variable sets the &lt;a href="https://opentelemetry.io/docs/languages/sdk-configuration/otlp-exporter/">OTel exporter&lt;/a> endpoint (ex. scheme://host:port).&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>VELA_OTEL_EXPORTER_OTLP_ENDPOINT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>tracing.exporter.endpoint&lt;/code>&lt;/td>
+&lt;td style="text-align: left">This variable sets the &lt;a href="https://opentelemetry.io/docs/languages/sdk-configuration/otlp-exporter/">OTel exporter&lt;/a> endpoint (ex. scheme://host:port).&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OTEL_EXPORTER_OTLP_ENDPOINT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>tracing.exporter.cert_path&lt;/code>&lt;/td>
-&lt;td>This variable sets the path to certs used for communicating with the &lt;a href="https://opentelemetry.io/docs/specs/OTel/protocol/exporter/">OTel exporter&lt;/a>. If nothing is provided the server will use insecure communication.&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>VELA_OTEL_TRACING_EXPORTER_SSL_CERT_PATH&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>tracing.exporter.cert_path&lt;/code>&lt;/td>
+&lt;td style="text-align: left">This variable sets the path to certs used for communicating with the &lt;a href="https://opentelemetry.io/docs/specs/OTel/protocol/exporter/">OTel exporter&lt;/a>. If nothing is provided the server will use insecure communication.&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OTEL_TRACING_EXPORTER_SSL_CERT_PATH&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>tracing.exporter.tls-min-version&lt;/code>&lt;/td>
-&lt;td>This optional variable sets a TLS minimum version used when exporting traces to the &lt;a href="https://opentelemetry.io/docs/specs/OTel/protocol/exporter/">OTel exporter&lt;/a>.&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>1.2&lt;/code>&lt;/td>
-&lt;td>&lt;code>VELA_OTEL_TRACING_TLS_MIN_VERSION&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>tracing.exporter.tls-min-version&lt;/code>&lt;/td>
+&lt;td style="text-align: left">This optional variable sets a TLS minimum version used when exporting traces to the &lt;a href="https://opentelemetry.io/docs/specs/OTel/protocol/exporter/">OTel exporter&lt;/a>.&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>1.2&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OTEL_TRACING_TLS_MIN_VERSION&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>tracing.sampler.persecond&lt;/code>&lt;/td>
-&lt;td>This variable sets OTel &lt;a href="https://opentelemetry.io/docs/concepts/sampling/">tracing head-sampler&lt;/a> rate-limiting to N per second.&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>100&lt;/code>&lt;/td>
-&lt;td>&lt;code>VELA_OTEL_TRACING_SAMPLER_RATELIMIT_PER_SECOND&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>tracing.sampler.persecond&lt;/code>&lt;/td>
+&lt;td style="text-align: left">This variable sets OTel &lt;a href="https://opentelemetry.io/docs/concepts/sampling/">tracing head-sampler&lt;/a> rate-limiting to N per second.&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>100&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OTEL_TRACING_SAMPLER_RATELIMIT_PER_SECOND&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>tracing.sampler.tasks&lt;/code>&lt;/td>
-&lt;td>This variable sets an (optional) filepath to the OTel tracing head-sampler configurations json to alter how certain tasks (API endpoints, queries, etc) are sampled.&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>VELA_OTEL_TRACING_SAMPLER_TASKS_CONFIG_FILEPATH&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>tracing.sampler.tasks&lt;/code>&lt;/td>
+&lt;td style="text-align: left">This variable sets an (optional) filepath to the OTel tracing head-sampler configurations json to alter how certain tasks (API endpoints, queries, etc) are sampled.&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OTEL_TRACING_SAMPLER_TASKS_CONFIG_FILEPATH&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>tracing.resource.attributes&lt;/code>&lt;/td>
-&lt;td>This variable sets OTel resource &lt;a href="https://opentelemetry.io/docs/languages/go/instrumentation/#span-attributes">(span) attributes&lt;/a> as a list of &lt;code>key=value&lt;/code> pairs. each one will be attached to each span as a &amp;lsquo;process&amp;rsquo; attribute.&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>VELA_OTEL_TRACING_RESOURCE_ATTRIBUTES&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>tracing.resource.attributes&lt;/code>&lt;/td>
+&lt;td style="text-align: left">This variable sets OTel resource &lt;a href="https://opentelemetry.io/docs/languages/go/instrumentation/#span-attributes">(span) attributes&lt;/a> as a list of &lt;code>key=value&lt;/code> pairs. each one will be attached to each span as a &amp;lsquo;process&amp;rsquo; attribute.&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OTEL_TRACING_RESOURCE_ATTRIBUTES&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>tracing.resource.env_attributes&lt;/code>&lt;/td>
-&lt;td>This variable sets OTel resource &lt;a href="https://opentelemetry.io/docs/languages/go/instrumentation/#span-attributes">(span) attributes&lt;/a> as a list of &lt;code>key=env_variable_key&lt;/code> pairs. each one will be attached to each &lt;a href="https://opentelemetry.io/docs/languages/go/instrumentation/#span-attributes">span&lt;/a> as a &amp;lsquo;process&amp;rsquo; attribute where the value is retrieved from the environment using the pair value.&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>VELA_OTEL_TRACING_RESOURCE_ENV_ATTRIBUTES&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>tracing.resource.env_attributes&lt;/code>&lt;/td>
+&lt;td style="text-align: left">This variable sets OTel resource &lt;a href="https://opentelemetry.io/docs/languages/go/instrumentation/#span-attributes">(span) attributes&lt;/a> as a list of &lt;code>key=env_variable_key&lt;/code> pairs. each one will be attached to each &lt;a href="https://opentelemetry.io/docs/languages/go/instrumentation/#span-attributes">span&lt;/a> as a &amp;lsquo;process&amp;rsquo; attribute where the value is retrieved from the environment using the pair value.&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OTEL_TRACING_RESOURCE_ENV_ATTRIBUTES&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>tracing.span.attributes&lt;/code>&lt;/td>
-&lt;td>This variable sets trace &lt;a href="https://opentelemetry.io/docs/languages/go/instrumentation/#span-attributes">span attributes&lt;/a> as a list of &lt;code>key=value&lt;/code> pairs. Each pair will be attached to each &lt;a href="https://opentelemetry.io/docs/languages/go/instrumentation/#span-attributes">span&lt;/a> as a &amp;rsquo;tag&amp;rsquo; attribute.&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>VELA_OTEL_TRACING_SPAN_ATTRIBUTES&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>tracing.span.attributes&lt;/code>&lt;/td>
+&lt;td style="text-align: left">This variable sets trace &lt;a href="https://opentelemetry.io/docs/languages/go/instrumentation/#span-attributes">span attributes&lt;/a> as a list of &lt;code>key=value&lt;/code> pairs. Each pair will be attached to each &lt;a href="https://opentelemetry.io/docs/languages/go/instrumentation/#span-attributes">span&lt;/a> as a &amp;rsquo;tag&amp;rsquo; attribute.&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OTEL_TRACING_SPAN_ATTRIBUTES&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>tracing.tracestate.attributes&lt;/code>&lt;/td>
-&lt;td>This variable sets OTel tracestate &lt;a href="https://www.w3.org/TR/trace-context">(span) attributes&lt;/a> as a list of &lt;code>key=value&lt;/code> pairs. Each pair will be inserted into the tracestate for each sampled span.&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>VELA_OTEL_TRACING_TRACESTATE_ATTRIBUTES&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>tracing.tracestate.attributes&lt;/code>&lt;/td>
+&lt;td style="text-align: left">This variable sets OTel tracestate &lt;a href="https://www.w3.org/TR/trace-context">(span) attributes&lt;/a> as a list of &lt;code>key=value&lt;/code> pairs. Each pair will be inserted into the tracestate for each sampled span.&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OTEL_TRACING_TRACESTATE_ATTRIBUTES&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -978,16 +978,16 @@ For more information on how the runtime properties are consumed, please see the 
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Field&lt;/th>
-&lt;th>Type&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Field&lt;/th>
+&lt;th style="text-align: left">Type&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>active&lt;/code>&lt;/td>
-&lt;td>bool&lt;/td>
-&lt;td>Set to &lt;code>false&lt;/code> to completely disable traces for a particular task.&lt;/td>
+&lt;td style="text-align: left">&lt;code>active&lt;/code>&lt;/td>
+&lt;td style="text-align: left">bool&lt;/td>
+&lt;td style="text-align: left">Set to &lt;code>false&lt;/code> to completely disable traces for a particular task.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1032,34 +1032,34 @@ For more information on how the runtime properties are consumed, please see the 
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Default&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Required&lt;/th>
+&lt;th style="text-align: left">Default&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>executor.driver&lt;/code>&lt;/td>
-&lt;td>type of client to control and operate executor&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>linux&lt;/code>&lt;/td>
-&lt;td>&lt;code>EXECUTOR_DRIVER&lt;/code>&lt;br>&lt;code>VELA_EXECUTOR_DRIVER&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>executor.driver&lt;/code>&lt;/td>
+&lt;td style="text-align: left">type of client to control and operate executor&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>linux&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>EXECUTOR_DRIVER&lt;/code>&lt;br>&lt;code>VELA_EXECUTOR_DRIVER&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>executor.max_log_size&lt;/code>&lt;/td>
-&lt;td>maximum log size (in bytes)&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>0&lt;/code> (no limit)&lt;/td>
-&lt;td>&lt;code>EXECUTOR_MAX_LOG_SIZE&lt;/code>&lt;br>&lt;code>VELA_EXECUTOR_MAX_LOG_SIZE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>executor.max_log_size&lt;/code>&lt;/td>
+&lt;td style="text-align: left">maximum log size (in bytes)&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>0&lt;/code> (no limit)&lt;/td>
+&lt;td style="text-align: left">&lt;code>EXECUTOR_MAX_LOG_SIZE&lt;/code>&lt;br>&lt;code>VELA_EXECUTOR_MAX_LOG_SIZE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>executor.log_streaming_timeout&lt;/code>&lt;/td>
-&lt;td>maximum time to wait, after build completion, for logs to finish streaming&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>5m&lt;/code>&lt;/td>
-&lt;td>&lt;code>EXECUTOR_LOG_STREAMING_TIMEOUT&lt;/code>&lt;br>&lt;code>VELA_EXECUTOR_LOG_STREAMING_TIMEOUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>executor.log_streaming_timeout&lt;/code>&lt;/td>
+&lt;td style="text-align: left">maximum time to wait, after build completion, for logs to finish streaming&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>5m&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>EXECUTOR_LOG_STREAMING_TIMEOUT&lt;/code>&lt;br>&lt;code>VELA_EXECUTOR_LOG_STREAMING_TIMEOUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1072,21 +1072,21 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Documentation&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Documentation&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>linux&lt;/code>&lt;/td>
-&lt;td>uses a Linux executor for running workloads&lt;/td>
-&lt;td>&lt;a href="https://www.linux.com/">https://www.linux.com/&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;code>linux&lt;/code>&lt;/td>
+&lt;td style="text-align: left">uses a Linux executor for running workloads&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://www.linux.com/">https://www.linux.com/&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>local&lt;/code>&lt;/td>
-&lt;td>uses a Local executor for running workloads (CLI only)&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>local&lt;/code>&lt;/td>
+&lt;td style="text-align: left">uses a Local executor for running workloads (CLI only)&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1125,41 +1125,41 @@ This Linux configuration is enabled by default and is not necessary to provide i
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Default&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Required&lt;/th>
+&lt;th style="text-align: left">Default&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>queue.cluster&lt;/code>&lt;/td>
-&lt;td>configures the client for a queue cluster&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>QUEUE_CLUSTER&lt;/code>&lt;br>&lt;code>VELA_QUEUE_CLUSTER&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>queue.cluster&lt;/code>&lt;/td>
+&lt;td style="text-align: left">configures the client for a queue cluster&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>QUEUE_CLUSTER&lt;/code>&lt;br>&lt;code>VELA_QUEUE_CLUSTER&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>queue.driver&lt;/code>&lt;/td>
-&lt;td>type of client to control and operate queue&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>QUEUE_DRIVER&lt;/code>&lt;br>&lt;code>VELA_QUEUE_DRIVER&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>queue.driver&lt;/code>&lt;/td>
+&lt;td style="text-align: left">type of client to control and operate queue&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>QUEUE_DRIVER&lt;/code>&lt;br>&lt;code>VELA_QUEUE_DRIVER&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>queue.pop.timeout&lt;/code>&lt;/td>
-&lt;td>timeout for requests that pop items off the queue&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>60s&lt;/code>&lt;/td>
-&lt;td>&lt;code>QUEUE_POP_TIMEOUT&lt;/code>&lt;br>&lt;code>VELA_QUEUE_POP_TIMEOUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>queue.pop.timeout&lt;/code>&lt;/td>
+&lt;td style="text-align: left">timeout for requests that pop items off the queue&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>60s&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>QUEUE_POP_TIMEOUT&lt;/code>&lt;br>&lt;code>VELA_QUEUE_POP_TIMEOUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>queue.routes&lt;/code>&lt;/td>
-&lt;td>unique channels or topics for pulling workloads&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>[ vela ]&lt;/code>&lt;/td>
-&lt;td>&lt;code>QUEUE_ROUTES&lt;/code>&lt;br>&lt;code>VELA_QUEUE_ROUTES&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>queue.routes&lt;/code>&lt;/td>
+&lt;td style="text-align: left">unique channels or topics for pulling workloads&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>[ vela ]&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>QUEUE_ROUTES&lt;/code>&lt;br>&lt;code>VELA_QUEUE_ROUTES&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1172,16 +1172,16 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Documentation&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Documentation&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>redis&lt;/code>&lt;/td>
-&lt;td>uses a Redis queue for managing workloads&lt;/td>
-&lt;td>&lt;a href="https://redis.io/">https://redis.io/&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;code>redis&lt;/code>&lt;/td>
+&lt;td style="text-align: left">uses a Redis queue for managing workloads&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://redis.io/">https://redis.io/&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1211,69 +1211,69 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Default&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Required&lt;/th>
+&lt;th style="text-align: left">Default&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>runtime.config&lt;/code>&lt;/td>
-&lt;td>path to configuration file for the runtime&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>RUNTIME_CONFIG&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_CONFIG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>runtime.config&lt;/code>&lt;/td>
+&lt;td style="text-align: left">path to configuration file for the runtime&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>RUNTIME_CONFIG&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_CONFIG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>runtime.driver&lt;/code>&lt;/td>
-&lt;td>type of client to control and operate runtime&lt;/td>
-&lt;td>&lt;code>true&lt;/code>&lt;/td>
-&lt;td>&lt;code>docker&lt;/code>&lt;/td>
-&lt;td>&lt;code>RUNTIME_DRIVER&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_DRIVER&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>runtime.driver&lt;/code>&lt;/td>
+&lt;td style="text-align: left">type of client to control and operate runtime&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>docker&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>RUNTIME_DRIVER&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_DRIVER&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>runtime.namespace&lt;/code>&lt;/td>
-&lt;td>namespace to use for the runtime (only for kubernetes)&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>RUNTIME_NAMESPACE&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_NAMESPACE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>runtime.namespace&lt;/code>&lt;/td>
+&lt;td style="text-align: left">namespace to use for the runtime (only for kubernetes)&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>RUNTIME_NAMESPACE&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_NAMESPACE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>runtime.pods-template-name&lt;/code>&lt;/td>
-&lt;td>name of the PipelinePodsTemplate to retrieve from the &lt;code>runtime.namespace&lt;/code> (only for kubernetes)&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>RUNTIME_PODS_TEMPLATE_NAME&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_PODS_TEMPLATE_NAME&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>runtime.pods-template-name&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of the PipelinePodsTemplate to retrieve from the &lt;code>runtime.namespace&lt;/code> (only for kubernetes)&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>RUNTIME_PODS_TEMPLATE_NAME&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_PODS_TEMPLATE_NAME&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>runtime.pods-template-file&lt;/code>&lt;/td>
-&lt;td>path to local fallback file containing a PipelinePodsTemplate in YAML (only for kubernetes)&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>RUNTIME_PODS_TEMPLATE_FILE&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_PODS_TEMPLATE_FILE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>runtime.pods-template-file&lt;/code>&lt;/td>
+&lt;td style="text-align: left">path to local fallback file containing a PipelinePodsTemplate in YAML (only for kubernetes)&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>RUNTIME_PODS_TEMPLATE_FILE&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_PODS_TEMPLATE_FILE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>runtime.privileged-images&lt;/code>&lt;/td>
-&lt;td>images allowed to run in privileged mode for the runtime&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>[ ]&lt;/code>&lt;/td>
-&lt;td>&lt;code>RUNTIME_PRIVILEGED_IMAGES&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_PRIVILEGED_IMAGES&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>runtime.privileged-images&lt;/code>&lt;/td>
+&lt;td style="text-align: left">images allowed to run in privileged mode for the runtime&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>[ ]&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>RUNTIME_PRIVILEGED_IMAGES&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_PRIVILEGED_IMAGES&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>runtime.drop-capabilities&lt;/code>&lt;/td>
-&lt;td>kernel capabilities to be dropped from each running container&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>RUNTIME_DROP_CAPABILITIES&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_DROP_CAPABILITIES&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>runtime.drop-capabilities&lt;/code>&lt;/td>
+&lt;td style="text-align: left">kernel capabilities to be dropped from each running container&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>RUNTIME_DROP_CAPABILITIES&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_DROP_CAPABILITIES&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>runtime.volumes&lt;/code>&lt;/td>
-&lt;td>path to host volumes to mount into resources for the runtime&lt;/td>
-&lt;td>&lt;code>false&lt;/code>&lt;/td>
-&lt;td>&lt;code>N/A&lt;/code>&lt;/td>
-&lt;td>&lt;code>RUNTIME_VOLUMES&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_VOLUMES&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>runtime.volumes&lt;/code>&lt;/td>
+&lt;td style="text-align: left">path to host volumes to mount into resources for the runtime&lt;/td>
+&lt;td style="text-align: left">&lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>N/A&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>RUNTIME_VOLUMES&lt;/code>&lt;br>&lt;code>VELA_RUNTIME_VOLUMES&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1286,21 +1286,21 @@ For more information on these configuration options, please see the &lt;a href="
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Documentation&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Documentation&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>docker&lt;/code>&lt;/td>
-&lt;td>uses a Docker daemon for creating and managing runtime resources&lt;/td>
-&lt;td>&lt;a href="https://docker.io/">https://docker.io/&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;code>docker&lt;/code>&lt;/td>
+&lt;td style="text-align: left">uses a Docker daemon for creating and managing runtime resources&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://docker.io/">https://docker.io/&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>kubernetes&lt;/code>&lt;/td>
-&lt;td>uses a Kubernetes cluster for creating and managing runtime resources&lt;/td>
-&lt;td>&lt;a href="https://kubernetes.io/">https://kubernetes.io/&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;code>kubernetes&lt;/code>&lt;/td>
+&lt;td style="text-align: left">uses a Kubernetes cluster for creating and managing runtime resources&lt;/td>
+&lt;td style="text-align: left">&lt;a href="https://kubernetes.io/">https://kubernetes.io/&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

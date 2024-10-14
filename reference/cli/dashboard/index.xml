@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Dashboard</title><link>https://go-vela.github.io/docs/reference/cli/dashboard/</link><description>Recent content in Dashboard on Vela</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://go-vela.github.io/docs/reference/cli/dashboard/index.xml" rel="self" type="application/rss+xml"/><item><title>Reference: Add</title><link>https://go-vela.github.io/docs/reference/cli/dashboard/add/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/cli/dashboard/add/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Dashboard</title><link>https://go-vela.github.io/docs/reference/cli/dashboard/</link><description>Recent content in Dashboard on Vela</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://go-vela.github.io/docs/reference/cli/dashboard/index.xml" rel="self" type="application/rss+xml"/><item><title>Reference: Add</title><link>https://go-vela.github.io/docs/reference/cli/dashboard/add/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/cli/dashboard/add/</guid><description>
 &lt;h2 id="command">Command&lt;/h2>
 &lt;pre tabindex="0">&lt;code>$ vela add dashboard &amp;lt;parameters...&amp;gt; &amp;lt;arguments...&amp;gt;
 &lt;/code>&lt;/pre>
@@ -10,41 +10,41 @@ For more information, you can run &lt;code>vela add dashboard --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>name&lt;/code>&lt;/td>
-&lt;td>name for the dashboard&lt;/td>
-&lt;td>&lt;code>VELA_DASHBOARD_NAME&lt;/code>, &lt;code>DASHBOARD_NAME&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>name&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name for the dashboard&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_DASHBOARD_NAME&lt;/code>, &lt;code>DASHBOARD_NAME&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repos&lt;/code>&lt;/td>
-&lt;td>list of repositories (org/repo) for the dashboard&lt;/td>
-&lt;td>&lt;code>VELA_DASHBOARD_REPOS&lt;/code>, &lt;code>DASHBOARD_REPOS&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repos&lt;/code>&lt;/td>
+&lt;td style="text-align: left">list of repositories (org/repo) for the dashboard&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_DASHBOARD_REPOS&lt;/code>, &lt;code>DASHBOARD_REPOS&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>branches&lt;/code>&lt;/td>
-&lt;td>filter builds in all repositories by branch&lt;/td>
-&lt;td>&lt;code>VELA_DASHBOARD_REPOS_BRANCH&lt;/code>, &lt;code>DASHBOARD_REPOS_BRANCH&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>branches&lt;/code>&lt;/td>
+&lt;td style="text-align: left">filter builds in all repositories by branch&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_DASHBOARD_REPOS_BRANCH&lt;/code>, &lt;code>DASHBOARD_REPOS_BRANCH&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>events&lt;/code>&lt;/td>
-&lt;td>filter builds in all repositories by event&lt;/td>
-&lt;td>&lt;code>VELA_DASHBOARD_REPOS_EVENT&lt;/code>, &lt;code>DASHBOARD_REPOS_EVENT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>events&lt;/code>&lt;/td>
+&lt;td style="text-align: left">filter builds in all repositories by event&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_DASHBOARD_REPOS_EVENT&lt;/code>, &lt;code>DASHBOARD_REPOS_EVENT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>admins&lt;/code>&lt;/td>
-&lt;td>provide the list of admins for the dashboard&lt;/td>
-&lt;td>&lt;code>VELA_DASHBOARD_ADMINS&lt;/code>, &lt;code>DASHBOARD_ADMINS&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>admins&lt;/code>&lt;/td>
+&lt;td style="text-align: left">provide the list of admins for the dashboard&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_DASHBOARD_ADMINS&lt;/code>, &lt;code>DASHBOARD_ADMINS&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the dashboard&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>REPO_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the dashboard&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>REPO_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -114,21 +114,21 @@ For more information, you can run &lt;code>vela get dashboard --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>full&lt;/code>&lt;/td>
-&lt;td>output the repo and build information for the dashboard&lt;/td>
-&lt;td>&lt;code>VELA_FULL&lt;/code>, &lt;code>DASHBOARD_FULL&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>full&lt;/code>&lt;/td>
+&lt;td style="text-align: left">output the repo and build information for the dashboard&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_FULL&lt;/code>, &lt;code>DASHBOARD_FULL&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for dashboards&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>DASHBOARD_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for dashboards&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>DASHBOARD_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -221,61 +221,61 @@ For more information, you can run &lt;code>vela update dashboard --help&lt;/code
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>id&lt;/code>&lt;/td>
-&lt;td>uuid for the dashboard&lt;/td>
-&lt;td>&lt;code>VELA_DASHBOARD_ID&lt;/code>, &lt;code>DASHBOARD_ID&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>id&lt;/code>&lt;/td>
+&lt;td style="text-align: left">uuid for the dashboard&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_DASHBOARD_ID&lt;/code>, &lt;code>DASHBOARD_ID&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>name&lt;/code>&lt;/td>
-&lt;td>name for the dashboard&lt;/td>
-&lt;td>&lt;code>VELA_DASHBOARD_NAME&lt;/code>, &lt;code>DASHBOARD_NAME&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>name&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name for the dashboard&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_DASHBOARD_NAME&lt;/code>, &lt;code>DASHBOARD_NAME&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>add-repos&lt;/code>&lt;/td>
-&lt;td>list of repositories to add for the dashboard&lt;/td>
-&lt;td>&lt;code>VELA_DASHBOARD_ADD_REPOS&lt;/code>, &lt;code>DASHBOARD_ADD_REPOS&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>add-repos&lt;/code>&lt;/td>
+&lt;td style="text-align: left">list of repositories to add for the dashboard&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_DASHBOARD_ADD_REPOS&lt;/code>, &lt;code>DASHBOARD_ADD_REPOS&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>drop-repos&lt;/code>&lt;/td>
-&lt;td>list of repositories to remove from the dashboard&lt;/td>
-&lt;td>&lt;code>VELA_DASHBOARD_DROP_REPOS&lt;/code>, &lt;code>DASHBOARD_DROP_REPOS&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>drop-repos&lt;/code>&lt;/td>
+&lt;td style="text-align: left">list of repositories to remove from the dashboard&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_DASHBOARD_DROP_REPOS&lt;/code>, &lt;code>DASHBOARD_DROP_REPOS&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>target-repos&lt;/code>&lt;/td>
-&lt;td>list of repositories to target for updates for the dashboard&lt;/td>
-&lt;td>&lt;code>VELA_DASHBOARD_TARGET_REPOS&lt;/code>, &lt;code>DASHBOARD_TARGET_REPOS&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>target-repos&lt;/code>&lt;/td>
+&lt;td style="text-align: left">list of repositories to target for updates for the dashboard&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_DASHBOARD_TARGET_REPOS&lt;/code>, &lt;code>DASHBOARD_TARGET_REPOS&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>add-admins&lt;/code>&lt;/td>
-&lt;td>list of admins to add for the dashboard&lt;/td>
-&lt;td>&lt;code>VELA_DASHBOARD_ADD_ADMINS&lt;/code>, &lt;code>DASHBOARD_ADD_ADMINS&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>add-admins&lt;/code>&lt;/td>
+&lt;td style="text-align: left">list of admins to add for the dashboard&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_DASHBOARD_ADD_ADMINS&lt;/code>, &lt;code>DASHBOARD_ADD_ADMINS&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>drop-admins&lt;/code>&lt;/td>
-&lt;td>list of admins to remove from the dashboard&lt;/td>
-&lt;td>&lt;code>VELA_DASHBOARD_DROP_ADMINS&lt;/code>, &lt;code>DASHBOARD_DROP_ADMINS&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>drop-admins&lt;/code>&lt;/td>
+&lt;td style="text-align: left">list of admins to remove from the dashboard&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_DASHBOARD_DROP_ADMINS&lt;/code>, &lt;code>DASHBOARD_DROP_ADMINS&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>branches&lt;/code>&lt;/td>
-&lt;td>filter builds in all repositories by branch&lt;/td>
-&lt;td>&lt;code>VELA_DASHBOARD_REPOS_BRANCH&lt;/code>, &lt;code>DASHBOARD_REPOS_BRANCH&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>branches&lt;/code>&lt;/td>
+&lt;td style="text-align: left">filter builds in all repositories by branch&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_DASHBOARD_REPOS_BRANCH&lt;/code>, &lt;code>DASHBOARD_REPOS_BRANCH&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>events&lt;/code>&lt;/td>
-&lt;td>filter builds in all repositories by event&lt;/td>
-&lt;td>&lt;code>VELA_DASHBOARD_REPOS_EVENT&lt;/code>, &lt;code>DASHBOARD_REPOS_EVENT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>events&lt;/code>&lt;/td>
+&lt;td style="text-align: left">filter builds in all repositories by event&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_DASHBOARD_REPOS_EVENT&lt;/code>, &lt;code>DASHBOARD_REPOS_EVENT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the dashboard&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>DASHBOARD_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the dashboard&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>DASHBOARD_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -349,26 +349,26 @@ For more information, you can run &lt;code>vela view dashboard --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>id&lt;/code>&lt;/td>
-&lt;td>uuid for the dashboard&lt;/td>
-&lt;td>&lt;code>VELA_DASHBOARD_ID&lt;/code>, &lt;code>DASHBOARD_ID&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>id&lt;/code>&lt;/td>
+&lt;td style="text-align: left">uuid for the dashboard&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_DASHBOARD_ID&lt;/code>, &lt;code>DASHBOARD_ID&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>full&lt;/code>&lt;/td>
-&lt;td>output the repo and build information for the dashboard&lt;/td>
-&lt;td>&lt;code>VELA_FULL&lt;/code>, &lt;code>DASHBOARD_FULL&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>full&lt;/code>&lt;/td>
+&lt;td style="text-align: left">output the repo and build information for the dashboard&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_FULL&lt;/code>, &lt;code>DASHBOARD_FULL&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the dashboard&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>REPO_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the dashboard&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>REPO_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

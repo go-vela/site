@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – YAML</title><link>https://go-vela.github.io/docs/reference/yaml/</link><description>Recent content in YAML on Vela</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://go-vela.github.io/docs/reference/yaml/index.xml" rel="self" type="application/rss+xml"/><item><title>Reference: Environment</title><link>https://go-vela.github.io/docs/reference/yaml/environment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/yaml/environment/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – YAML</title><link>https://go-vela.github.io/docs/reference/yaml/</link><description>Recent content in YAML on Vela</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://go-vela.github.io/docs/reference/yaml/index.xml" rel="self" type="application/rss+xml"/><item><title>Reference: Environment</title><link>https://go-vela.github.io/docs/reference/yaml/environment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/yaml/environment/</guid><description>
 &lt;p>The environment key is intended to be used to inject a global environment configuration into steps, services and secret containers. Control of which container types get the injected environment settings is available via the metadata block.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">---&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#8f5902;font-style:italic"># This document is displaying using the environment key with a map syntax.&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
@@ -23,36 +23,36 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Key&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Type&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Key&lt;/th>
+&lt;th style="text-align: left">Required&lt;/th>
+&lt;th style="text-align: left">Type&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>template&lt;/code>&lt;/td>
-&lt;td>Y&lt;/td>
-&lt;td>bool&lt;/td>
-&lt;td>Enables compiling the pipeline as a template.&lt;/td>
+&lt;td style="text-align: left">&lt;code>template&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Y&lt;/td>
+&lt;td style="text-align: left">bool&lt;/td>
+&lt;td style="text-align: left">Enables compiling the pipeline as a template.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>clone&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>bool&lt;/td>
-&lt;td>Enables injecting the default clone process.&lt;/td>
+&lt;td style="text-align: left">&lt;code>clone&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">bool&lt;/td>
+&lt;td style="text-align: left">Enables injecting the default clone process.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>render_inline&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>bool&lt;/td>
-&lt;td>Enables rendering without explicitly calling within the pipeline.&lt;/td>
+&lt;td style="text-align: left">&lt;code>render_inline&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">bool&lt;/td>
+&lt;td style="text-align: left">Enables rendering without explicitly calling within the pipeline.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>auto_cancel&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>(see below)&lt;/td>
-&lt;td>Auto canceling settings for pipelines.&lt;/td>
+&lt;td style="text-align: left">&lt;code>auto_cancel&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">(see below)&lt;/td>
+&lt;td style="text-align: left">Auto canceling settings for pipelines.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -92,30 +92,30 @@ To learn how to write templates, see the &lt;a href="https://go-vela.github.io/d
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Key&lt;/th>
-&lt;th>Default&lt;/th>
-&lt;th>Type&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Key&lt;/th>
+&lt;th style="text-align: left">Default&lt;/th>
+&lt;th style="text-align: left">Type&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>pending&lt;/code>&lt;/td>
-&lt;td>True&lt;/td>
-&lt;td>bool&lt;/td>
-&lt;td>Pending builds will be auto canceled if qualifying build is triggered&lt;/td>
+&lt;td style="text-align: left">&lt;code>pending&lt;/code>&lt;/td>
+&lt;td style="text-align: left">True&lt;/td>
+&lt;td style="text-align: left">bool&lt;/td>
+&lt;td style="text-align: left">Pending builds will be auto canceled if qualifying build is triggered&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>running&lt;/code>&lt;/td>
-&lt;td>False&lt;/td>
-&lt;td>bool&lt;/td>
-&lt;td>Currently running builds will be auto canceled if qualifying build is triggered&lt;/td>
+&lt;td style="text-align: left">&lt;code>running&lt;/code>&lt;/td>
+&lt;td style="text-align: left">False&lt;/td>
+&lt;td style="text-align: left">bool&lt;/td>
+&lt;td style="text-align: left">Currently running builds will be auto canceled if qualifying build is triggered&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>default_branch&lt;/code>&lt;/td>
-&lt;td>False&lt;/td>
-&lt;td>bool&lt;/td>
-&lt;td>Pushes to the default branch will also be auto canceled if a qualifying build is triggered.&lt;/td>
+&lt;td style="text-align: left">&lt;code>default_branch&lt;/code>&lt;/td>
+&lt;td style="text-align: left">False&lt;/td>
+&lt;td style="text-align: left">bool&lt;/td>
+&lt;td style="text-align: left">Pushes to the default branch will also be auto canceled if a qualifying build is triggered.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -155,24 +155,24 @@ Routes are defined by the Vela system administrators during installation. To kno
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Key&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Type&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Key&lt;/th>
+&lt;th style="text-align: left">Required&lt;/th>
+&lt;th style="text-align: left">Type&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>flavor&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Indicates what flavor of a worker. (i.e. sm, m, lg)&lt;/td>
+&lt;td style="text-align: left">&lt;code>flavor&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Indicates what flavor of a worker. (i.e. sm, m, lg)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>platform&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Indicates the platform of a worker. (i.e. docker, k8s)&lt;/td>
+&lt;td style="text-align: left">&lt;code>platform&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Indicates the platform of a worker. (i.e. docker, k8s)&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -206,36 +206,36 @@ See an &lt;a href="https://go-vela.github.io/docs/docs/usage/examples/route/">ex
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Key&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Type&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Key&lt;/th>
+&lt;th style="text-align: left">Required&lt;/th>
+&lt;th style="text-align: left">Type&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>name&lt;/code>&lt;/td>
-&lt;td>Y&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>indicates a unique identifier for the template.&lt;/td>
+&lt;td style="text-align: left">&lt;code>name&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Y&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">indicates a unique identifier for the template.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>source&lt;/code>&lt;/td>
-&lt;td>Y&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>indicates a path to a template in remote system.&lt;/td>
+&lt;td style="text-align: left">&lt;code>source&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Y&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">indicates a path to a template in remote system.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>type&lt;/code>&lt;/td>
-&lt;td>Y&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>indicates to the compiler which version to use.&lt;/td>
+&lt;td style="text-align: left">&lt;code>type&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Y&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">indicates to the compiler which version to use.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>format&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>indicates the language used within the template file.&lt;/td>
+&lt;td style="text-align: left">&lt;code>format&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">indicates the language used within the template file.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -289,60 +289,60 @@ To learn how to write templates, see the &lt;a href="https://go-vela.github.io/d
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Key&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Type&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Key&lt;/th>
+&lt;th style="text-align: left">Required&lt;/th>
+&lt;th style="text-align: left">Type&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>name&lt;/code>&lt;/td>
-&lt;td>Y&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Unique identifier for the container in the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>name&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Y&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Unique identifier for the container in the pipeline&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>image&lt;/code>&lt;/td>
-&lt;td>Y&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Docker image used to create an ephemeral container&lt;/td>
+&lt;td style="text-align: left">&lt;code>image&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Y&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Docker image used to create an ephemeral container&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pull&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Declaration to configure if and when the Docker image is pulled&lt;/td>
+&lt;td style="text-align: left">&lt;code>pull&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Declaration to configure if and when the Docker image is pulled&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>environment&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>map&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: left">&lt;code>environment&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">map&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>entrypoint&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>[]string&lt;/td>
-&lt;td>Commands to execute inside the container&lt;/td>
+&lt;td style="text-align: left">&lt;code>entrypoint&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">[]string&lt;/td>
+&lt;td style="text-align: left">Commands to execute inside the container&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>ports&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>List of ports to map for the container in the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>ports&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">List of ports to map for the container in the pipeline&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>ulimits&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>[]string&lt;/td>
-&lt;td>Set the user limits for the container&lt;/td>
+&lt;td style="text-align: left">&lt;code>ulimits&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">[]string&lt;/td>
+&lt;td style="text-align: left">Set the user limits for the container&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>user&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Set the user for the container.&lt;/td>
+&lt;td style="text-align: left">&lt;code>user&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Set the user for the container.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -419,90 +419,96 @@ To learn how to write templates, see the &lt;a href="https://go-vela.github.io/d
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Key&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Type&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Key&lt;/th>
+&lt;th style="text-align: left">Required&lt;/th>
+&lt;th style="text-align: left">Type&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>name&lt;/code>&lt;/td>
-&lt;td>Y&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Unique identifier for the container in the pipeline.&lt;/td>
+&lt;td style="text-align: left">&lt;code>name&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Y&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Unique identifier for the container in the pipeline.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>image&lt;/code>&lt;/td>
-&lt;td>Y&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Docker image used to create ephemeral container.&lt;/td>
+&lt;td style="text-align: left">&lt;code>image&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Y&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Docker image used to create ephemeral container.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pull&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Declaration to configure if and when the Docker image is pulled.&lt;/td>
+&lt;td style="text-align: left">&lt;code>pull&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Declaration to configure if and when the Docker image is pulled.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>secrets&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>struct&lt;/td>
-&lt;td>Sensitive variables injected into the container environment.&lt;/td>
+&lt;td style="text-align: left">&lt;code>secrets&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">struct&lt;/td>
+&lt;td style="text-align: left">Sensitive variables injected into the container environment.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>environment&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>map&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: left">&lt;code>environment&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">map OR []string&lt;/td>
+&lt;td style="text-align: left">Variables to inject into the container environment.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>ruleset&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>struct&lt;/td>
-&lt;td>Conditions to limit the execution of the container.&lt;/td>
+&lt;td style="text-align: left">&lt;code>ruleset&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">struct&lt;/td>
+&lt;td style="text-align: left">Conditions to limit the execution of the container.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>parameters&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>map&lt;/td>
-&lt;td>Extra configuration variables specific to a plugin.&lt;/td>
+&lt;td style="text-align: left">&lt;code>parameters&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">map&lt;/td>
+&lt;td style="text-align: left">Extra configuration variables specific to a plugin.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>commands&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>[]string&lt;/td>
-&lt;td>Execution instructions to run inside the container.&lt;/td>
+&lt;td style="text-align: left">&lt;code>commands&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">[]string&lt;/td>
+&lt;td style="text-align: left">Execution instructions to run inside the container.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>template&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>struct&lt;/td>
-&lt;td>Name of a template to expand in the pipeline.&lt;/td>
+&lt;td style="text-align: left">&lt;code>template&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">struct&lt;/td>
+&lt;td style="text-align: left">Name of a template to expand in the pipeline.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>entrypoint&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>[]string&lt;/td>
-&lt;td>Commands to execute inside the container.&lt;/td>
+&lt;td style="text-align: left">&lt;code>id_request&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Injects &lt;code>VELA_ID_TOKEN_REQUEST_TOKEN&lt;/code> into step environment.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>detach&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>[]string&lt;/td>
-&lt;td>Run the container in a detached (headless) state.&lt;/td>
+&lt;td style="text-align: left">&lt;code>entrypoint&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">[]string&lt;/td>
+&lt;td style="text-align: left">Commands to execute inside the container.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>ulimits&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Set the user limits for the container.&lt;/td>
+&lt;td style="text-align: left">&lt;code>detach&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">[]string&lt;/td>
+&lt;td style="text-align: left">Run the container in a detached (headless) state.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>user&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Set the user for the container.&lt;/td>
+&lt;td style="text-align: left">&lt;code>ulimits&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Set the user limits for the container.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;code>user&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Set the user for the container.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -559,50 +565,50 @@ To learn how to write templates, see the &lt;a href="https://go-vela.github.io/d
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>branch&lt;/code>&lt;/td>
-&lt;td>name of branch for a build.&lt;/td>
+&lt;td style="text-align: left">&lt;code>branch&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of branch for a build.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>comment&lt;/code>&lt;/td>
-&lt;td>pull request comment body.&lt;/td>
+&lt;td style="text-align: left">&lt;code>comment&lt;/code>&lt;/td>
+&lt;td style="text-align: left">pull request comment body.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>event&lt;/code>&lt;/td>
-&lt;td>name of an event for a build.&lt;/td>
+&lt;td style="text-align: left">&lt;code>event&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of an event for a build.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>instance&lt;/code>&lt;/td>
-&lt;td>FQDN of backend server instance.&lt;/td>
+&lt;td style="text-align: left">&lt;code>instance&lt;/code>&lt;/td>
+&lt;td style="text-align: left">FQDN of backend server instance.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>label&lt;/code>&lt;/td>
-&lt;td>pull request label.&lt;/td>
+&lt;td style="text-align: left">&lt;code>label&lt;/code>&lt;/td>
+&lt;td style="text-align: left">pull request label.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>path&lt;/code>&lt;/td>
-&lt;td>path to workspace files for a build.&lt;/td>
+&lt;td style="text-align: left">&lt;code>path&lt;/code>&lt;/td>
+&lt;td style="text-align: left">path to workspace files for a build.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of the repo for a build.&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of the repo for a build.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>status&lt;/code>&lt;/td>
-&lt;td>name of status for a build.&lt;/td>
+&lt;td style="text-align: left">&lt;code>status&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of status for a build.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>tag&lt;/code>&lt;/td>
-&lt;td>name of reference for a build.&lt;/td>
+&lt;td style="text-align: left">&lt;code>tag&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of reference for a build.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>target&lt;/code>&lt;/td>
-&lt;td>name of deployment or schedule target for a build.&lt;/td>
+&lt;td style="text-align: left">&lt;code>target&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of deployment or schedule target for a build.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -707,36 +713,36 @@ Ensure you are supplying the address of the configured backend server and not th
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Options&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Options&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>continue&lt;/code>&lt;/td>
-&lt;td>enables continuing the build if the step fails.&lt;/td>
-&lt;td>&lt;code>true&lt;/code>, &lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>continue&lt;/code>&lt;/td>
+&lt;td style="text-align: left">enables continuing the build if the step fails.&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>, &lt;code>false&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>matcher&lt;/code>&lt;/td>
-&lt;td>matcher to use when evaluating the ruleset.&lt;/td>
-&lt;td>&lt;code>filepath&lt;/code>, &lt;code>regexp&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>matcher&lt;/code>&lt;/td>
+&lt;td style="text-align: left">matcher to use when evaluating the ruleset.&lt;/td>
+&lt;td style="text-align: left">&lt;code>filepath&lt;/code>, &lt;code>regexp&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>operator&lt;/code>&lt;/td>
-&lt;td>operator to use when evaluating the ruleset.&lt;/td>
-&lt;td>&lt;code>and&lt;/code>, &lt;code>or&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>operator&lt;/code>&lt;/td>
+&lt;td style="text-align: left">operator to use when evaluating the ruleset.&lt;/td>
+&lt;td style="text-align: left">&lt;code>and&lt;/code>, &lt;code>or&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>if&lt;/code>&lt;/td>
-&lt;td>limits the step execution to all rules must match.&lt;/td>
-&lt;td>&lt;code>branch&lt;/code>, &lt;code>comment&lt;/code>, &lt;code>event&lt;/code>, &lt;code>path&lt;/code>, &lt;code>repo&lt;/code>, &lt;code>status&lt;/code>, &lt;code>tag&lt;/code>, &lt;code>target&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>if&lt;/code>&lt;/td>
+&lt;td style="text-align: left">limits the step execution to all rules must match.&lt;/td>
+&lt;td style="text-align: left">&lt;code>branch&lt;/code>, &lt;code>comment&lt;/code>, &lt;code>event&lt;/code>, &lt;code>path&lt;/code>, &lt;code>repo&lt;/code>, &lt;code>status&lt;/code>, &lt;code>tag&lt;/code>, &lt;code>target&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>unless&lt;/code>&lt;/td>
-&lt;td>limits the step execution to no rules can match.&lt;/td>
-&lt;td>&lt;code>branch&lt;/code>, &lt;code>comment&lt;/code>, &lt;code>event&lt;/code>, &lt;code>path&lt;/code>, &lt;code>repo&lt;/code>, &lt;code>status&lt;/code>, &lt;code>tag&lt;/code>, &lt;code>target&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>unless&lt;/code>&lt;/td>
+&lt;td style="text-align: left">limits the step execution to no rules can match.&lt;/td>
+&lt;td style="text-align: left">&lt;code>branch&lt;/code>, &lt;code>comment&lt;/code>, &lt;code>event&lt;/code>, &lt;code>path&lt;/code>, &lt;code>repo&lt;/code>, &lt;code>status&lt;/code>, &lt;code>tag&lt;/code>, &lt;code>target&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -802,18 +808,18 @@ Ensure you are supplying the address of the configured backend server and not th
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>name&lt;/code>&lt;/td>
-&lt;td>Name of template to inject in the step&lt;/td>
+&lt;td style="text-align: left">&lt;code>name&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Name of template to inject in the step&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>vars&lt;/code>&lt;/td>
-&lt;td>Variables injected into the template&lt;/td>
+&lt;td style="text-align: left">&lt;code>vars&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Variables injected into the template&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -844,6 +850,12 @@ Ensure you are supplying the address of the configured backend server and not th
 &lt;div class="alert alert-info" role="alert">
 A pipeline can have up to 10 steps that report their own status.
 &lt;/div>
+&lt;h4 id="the-id_request-key">The &lt;code>id_request&lt;/code> key&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">steps&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic"># inject $VELA_ID_TOKEN_REQUEST_TOKEN into step environment. Value of `id_request` becomes one of the claims in the token.&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">name&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">OIDC &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">id_request&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">write&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>More info can be found in the &lt;a href="usage/open_id_connect/">OpenID Connect usage docs&lt;/a>.&lt;/p>
 &lt;h4 id="the-entrypoint-key">The &lt;code>entrypoint:&lt;/code> key&lt;/h4>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">---&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">steps&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
@@ -896,36 +908,36 @@ A pipeline can have up to 10 steps that report their own status.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Key&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Type&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Key&lt;/th>
+&lt;th style="text-align: left">Required&lt;/th>
+&lt;th style="text-align: left">Type&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>name&lt;/code>&lt;/td>
-&lt;td>Y&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Unique identifier for the stage in the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>name&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Y&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Unique identifier for the stage in the pipeline&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>steps&lt;/code>&lt;/td>
-&lt;td>Y&lt;/td>
-&lt;td>[]string&lt;/td>
-&lt;td>Sequential execution instructions for the stage&lt;/td>
+&lt;td style="text-align: left">&lt;code>steps&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Y&lt;/td>
+&lt;td style="text-align: left">[]string&lt;/td>
+&lt;td style="text-align: left">Sequential execution instructions for the stage&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>needs&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>[]string&lt;/td>
-&lt;td>Stages that must complete before starting the current one&lt;/td>
+&lt;td style="text-align: left">&lt;code>needs&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">[]string&lt;/td>
+&lt;td style="text-align: left">Stages that must complete before starting the current one&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>independent&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>bool&lt;/td>
-&lt;td>Stage will execute its steps and ignore failures from other stages&amp;rsquo; steps&lt;/td>
+&lt;td style="text-align: left">&lt;code>independent&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">bool&lt;/td>
+&lt;td style="text-align: left">Stage will execute its steps and ignore failures from other stages&amp;rsquo; steps&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1006,48 +1018,48 @@ For more details on steps keys, see the &lt;a href="https://go-vela.github.io/do
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Key&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Type&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Key&lt;/th>
+&lt;th style="text-align: left">Required&lt;/th>
+&lt;th style="text-align: left">Type&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>name&lt;/code>&lt;/td>
-&lt;td>Y&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Name of secret to reference in the pipeline.&lt;/td>
+&lt;td style="text-align: left">&lt;code>name&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Y&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Name of secret to reference in the pipeline.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>key&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Path to secret to fetch from storage backend.&lt;/td>
+&lt;td style="text-align: left">&lt;code>key&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Path to secret to fetch from storage backend.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>engine&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Name of storage backend to fetch secret from.&lt;/td>
+&lt;td style="text-align: left">&lt;code>engine&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Name of storage backend to fetch secret from.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>type&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Type of secret to fetch from storage backend.&lt;/td>
+&lt;td style="text-align: left">&lt;code>type&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Type of secret to fetch from storage backend.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pull&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>When to pull in secrets from storage backend.&lt;/td>
+&lt;td style="text-align: left">&lt;code>pull&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">When to pull in secrets from storage backend.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>origin&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>struct&lt;/td>
-&lt;td>Declaration to pull secrets from non-internal secret providers.&lt;/td>
+&lt;td style="text-align: left">&lt;code>origin&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">struct&lt;/td>
+&lt;td style="text-align: left">Declaration to pull secrets from non-internal secret providers.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1115,54 +1127,54 @@ originating from plugins loaded via &lt;a href="https://go-vela.github.io/docs/d
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Key&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Type&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Key&lt;/th>
+&lt;th style="text-align: left">Required&lt;/th>
+&lt;th style="text-align: left">Type&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>name&lt;/code>&lt;/td>
-&lt;td>Y&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Unique identifier for the container in the pipeline.&lt;/td>
+&lt;td style="text-align: left">&lt;code>name&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Y&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Unique identifier for the container in the pipeline.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>image&lt;/code>&lt;/td>
-&lt;td>Y&lt;/td>
-&lt;td>[]string&lt;/td>
-&lt;td>Docker image used to create an ephemeral container.&lt;/td>
+&lt;td style="text-align: left">&lt;code>image&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Y&lt;/td>
+&lt;td style="text-align: left">[]string&lt;/td>
+&lt;td style="text-align: left">Docker image used to create an ephemeral container.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pull&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Declaration to configure if and when the Docker image is pulled.&lt;/td>
+&lt;td style="text-align: left">&lt;code>pull&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Declaration to configure if and when the Docker image is pulled.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>secrets&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>struct&lt;/td>
-&lt;td>Sensitive variables injected into the container environment.&lt;/td>
+&lt;td style="text-align: left">&lt;code>secrets&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">struct&lt;/td>
+&lt;td style="text-align: left">Sensitive variables injected into the container environment.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>environment&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>map&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: left">&lt;code>environment&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">map&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>ruleset&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>struct&lt;/td>
-&lt;td>Conditions to limit the execution of the container.&lt;/td>
+&lt;td style="text-align: left">&lt;code>ruleset&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">struct&lt;/td>
+&lt;td style="text-align: left">Conditions to limit the execution of the container.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>parameters&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>map&lt;/td>
-&lt;td>Extra configuration variables specific to a plugin.&lt;/td>
+&lt;td style="text-align: left">&lt;code>parameters&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">map&lt;/td>
+&lt;td style="text-align: left">Extra configuration variables specific to a plugin.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

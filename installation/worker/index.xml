@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Worker Overview</title><link>https://go-vela.github.io/docs/installation/worker/</link><description>Recent content in Worker Overview on Vela</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://go-vela.github.io/docs/installation/worker/index.xml" rel="self" type="application/rss+xml"/><item><title>Installation: Docker</title><link>https://go-vela.github.io/docs/installation/worker/docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/worker/docker/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Worker Overview</title><link>https://go-vela.github.io/docs/installation/worker/</link><description>Recent content in Worker Overview on Vela</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://go-vela.github.io/docs/installation/worker/index.xml" rel="self" type="application/rss+xml"/><item><title>Installation: Docker</title><link>https://go-vela.github.io/docs/installation/worker/docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/installation/worker/docker/</guid><description>
 &lt;h2 id="prerequisites">Prerequisites&lt;/h2>
 &lt;p>This section provides all required dependencies to install and start the worker with Docker.&lt;/p>
 &lt;h3 id="dependency-1-docker">Dependency 1: Docker&lt;/h3>
@@ -265,22 +265,22 @@ for pods that start with &lt;code>vela-worker-&lt;/code>:&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>executor&lt;/code>&lt;/td>
-&lt;td>coordinates with the runtime to manage workload resources and reports results back to the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/">server&lt;/a>&lt;/td>
+&lt;td style="text-align: left">&lt;code>executor&lt;/code>&lt;/td>
+&lt;td style="text-align: left">coordinates with the runtime to manage workload resources and reports results back to the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/">server&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>queue&lt;/code>&lt;/td>
-&lt;td>integrates with a queue provider for pulling workloads, provided by the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/">server&lt;/a>, that will be run&lt;/td>
+&lt;td style="text-align: left">&lt;code>queue&lt;/code>&lt;/td>
+&lt;td style="text-align: left">integrates with a queue provider for pulling workloads, provided by the &lt;a href="https://go-vela.github.io/docs/docs/installation/server/">server&lt;/a>, that will be run&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>runtime&lt;/code>&lt;/td>
-&lt;td>integrates with a runtime environment for executing workload resources&lt;/td>
+&lt;td style="text-align: left">&lt;code>runtime&lt;/code>&lt;/td>
+&lt;td style="text-align: left">integrates with a runtime environment for executing workload resources&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

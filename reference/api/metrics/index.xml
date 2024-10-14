@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Metrics</title><link>https://go-vela.github.io/docs/reference/api/metrics/</link><description>Recent content in Metrics on Vela</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://go-vela.github.io/docs/reference/api/metrics/index.xml" rel="self" type="application/rss+xml"/><item><title>Reference: Metrics</title><link>https://go-vela.github.io/docs/reference/api/metrics/metrics/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/api/metrics/metrics/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Metrics</title><link>https://go-vela.github.io/docs/reference/api/metrics/</link><description>Recent content in Metrics on Vela</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://go-vela.github.io/docs/reference/api/metrics/index.xml" rel="self" type="application/rss+xml"/><item><title>Reference: Metrics</title><link>https://go-vela.github.io/docs/reference/api/metrics/metrics/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/api/metrics/metrics/</guid><description>
 &lt;h2 id="endpoint">Endpoint&lt;/h2>
 &lt;pre tabindex="0">&lt;code>GET /metrics
 &lt;/code>&lt;/pre>&lt;h2 id="query-parameters">Query Parameters&lt;/h2>
@@ -6,94 +6,94 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Query Parameter&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Query Parameter&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>user_count&lt;/code>&lt;/td>
-&lt;td>count of total users&lt;/td>
+&lt;td style="text-align: left">&lt;code>user_count&lt;/code>&lt;/td>
+&lt;td style="text-align: left">count of total users&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo_count&lt;/code>&lt;/td>
-&lt;td>count of total repos&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo_count&lt;/code>&lt;/td>
+&lt;td style="text-align: left">count of total repos&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>build_count&lt;/code>&lt;/td>
-&lt;td>count of total builds&lt;/td>
+&lt;td style="text-align: left">&lt;code>build_count&lt;/code>&lt;/td>
+&lt;td style="text-align: left">count of total builds&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>running_build_count&lt;/code>&lt;/td>
-&lt;td>count of builds with status &amp;lsquo;running&amp;rsquo;&lt;/td>
+&lt;td style="text-align: left">&lt;code>running_build_count&lt;/code>&lt;/td>
+&lt;td style="text-align: left">count of builds with status &amp;lsquo;running&amp;rsquo;&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>failure_build_count&lt;/code>&lt;/td>
-&lt;td>count of builds with status &amp;lsquo;failure&amp;rsquo;&lt;/td>
+&lt;td style="text-align: left">&lt;code>failure_build_count&lt;/code>&lt;/td>
+&lt;td style="text-align: left">count of builds with status &amp;lsquo;failure&amp;rsquo;&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pending_build_count&lt;/code>&lt;/td>
-&lt;td>count of builds with status &amp;lsquo;pending&amp;rsquo;&lt;/td>
+&lt;td style="text-align: left">&lt;code>pending_build_count&lt;/code>&lt;/td>
+&lt;td style="text-align: left">count of builds with status &amp;lsquo;pending&amp;rsquo;&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>queued_build_count&lt;/code>&lt;/td>
-&lt;td>count of builds inside the queue&lt;/td>
+&lt;td style="text-align: left">&lt;code>queued_build_count&lt;/code>&lt;/td>
+&lt;td style="text-align: left">count of builds inside the queue&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>killed_build_count&lt;/code>&lt;/td>
-&lt;td>count of builds with status &amp;lsquo;killed&amp;rsquo;&lt;/td>
+&lt;td style="text-align: left">&lt;code>killed_build_count&lt;/code>&lt;/td>
+&lt;td style="text-align: left">count of builds with status &amp;lsquo;killed&amp;rsquo;&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>success_build_count&lt;/code>&lt;/td>
-&lt;td>count of builds with status &amp;lsquo;success&amp;rsquo;&lt;/td>
+&lt;td style="text-align: left">&lt;code>success_build_count&lt;/code>&lt;/td>
+&lt;td style="text-align: left">count of builds with status &amp;lsquo;success&amp;rsquo;&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>error_build_count&lt;/code>&lt;/td>
-&lt;td>count of builds with status &amp;rsquo;error'&lt;/td>
+&lt;td style="text-align: left">&lt;code>error_build_count&lt;/code>&lt;/td>
+&lt;td style="text-align: left">count of builds with status &amp;rsquo;error'&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>step_image_count&lt;/code>&lt;/td>
-&lt;td>count of total steps executed with each unique image&lt;/td>
+&lt;td style="text-align: left">&lt;code>step_image_count&lt;/code>&lt;/td>
+&lt;td style="text-align: left">count of total steps executed with each unique image&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>step_status_count&lt;/code>&lt;/td>
-&lt;td>count of total steps with each status&lt;/td>
+&lt;td style="text-align: left">&lt;code>step_status_count&lt;/code>&lt;/td>
+&lt;td style="text-align: left">count of total steps with each status&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>service_image_count&lt;/code>&lt;/td>
-&lt;td>count of total services executed with each unique image&lt;/td>
+&lt;td style="text-align: left">&lt;code>service_image_count&lt;/code>&lt;/td>
+&lt;td style="text-align: left">count of total services executed with each unique image&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>service_status_count&lt;/code>&lt;/td>
-&lt;td>count of total services with each status&lt;/td>
+&lt;td style="text-align: left">&lt;code>service_status_count&lt;/code>&lt;/td>
+&lt;td style="text-align: left">count of total services with each status&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>worker_build_limit&lt;/code>&lt;/td>
-&lt;td>count of worker build limits&lt;/td>
+&lt;td style="text-align: left">&lt;code>worker_build_limit&lt;/code>&lt;/td>
+&lt;td style="text-align: left">count of worker build limits&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>active_worker_count&lt;/code>&lt;/td>
-&lt;td>count of active workers&lt;/td>
+&lt;td style="text-align: left">&lt;code>active_worker_count&lt;/code>&lt;/td>
+&lt;td style="text-align: left">count of active workers&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>inactive_worker_count&lt;/code>&lt;/td>
-&lt;td>count of inactive workers&lt;/td>
+&lt;td style="text-align: left">&lt;code>inactive_worker_count&lt;/code>&lt;/td>
+&lt;td style="text-align: left">count of inactive workers&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>idle_worker_count&lt;/code>&lt;/td>
-&lt;td>count of workers with a status of idle (no running builds)&lt;/td>
+&lt;td style="text-align: left">&lt;code>idle_worker_count&lt;/code>&lt;/td>
+&lt;td style="text-align: left">count of workers with a status of idle (no running builds)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>available_worker_count&lt;/code>&lt;/td>
-&lt;td>count of workers with a status of available (one or more available executors)&lt;/td>
+&lt;td style="text-align: left">&lt;code>available_worker_count&lt;/code>&lt;/td>
+&lt;td style="text-align: left">count of workers with a status of available (one or more available executors)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>busy_worker_count&lt;/code>&lt;/td>
-&lt;td>count of workers with a status of busy (no available executors)&lt;/td>
+&lt;td style="text-align: left">&lt;code>busy_worker_count&lt;/code>&lt;/td>
+&lt;td style="text-align: left">count of workers with a status of busy (no available executors)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>error_worker_count&lt;/code>&lt;/td>
-&lt;td>count of workers with a status of error&lt;/td>
+&lt;td style="text-align: left">&lt;code>error_worker_count&lt;/code>&lt;/td>
+&lt;td style="text-align: left">count of workers with a status of error&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -103,18 +103,18 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>500&lt;/code>&lt;/td>
-&lt;td>indicates a server failure while processing the request&lt;/td>
+&lt;td style="text-align: left">&lt;code>500&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates a server failure while processing the request&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

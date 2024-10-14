@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Deployment</title><link>https://go-vela.github.io/docs/reference/cli/deployment/</link><description>Recent content in Deployment on Vela</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://go-vela.github.io/docs/reference/cli/deployment/index.xml" rel="self" type="application/rss+xml"/><item><title>Reference: Add</title><link>https://go-vela.github.io/docs/reference/cli/deployment/add/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/cli/deployment/add/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Deployment</title><link>https://go-vela.github.io/docs/reference/cli/deployment/</link><description>Recent content in Deployment on Vela</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://go-vela.github.io/docs/reference/cli/deployment/index.xml" rel="self" type="application/rss+xml"/><item><title>Reference: Add</title><link>https://go-vela.github.io/docs/reference/cli/deployment/add/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/cli/deployment/add/</guid><description>
 &lt;h2 id="command">Command&lt;/h2>
 &lt;pre tabindex="0">&lt;code>$ vela add deployment &amp;lt;parameters...&amp;gt; &amp;lt;arguments...&amp;gt;
 &lt;/code>&lt;/pre>
@@ -10,51 +10,51 @@ For more information, you can run &lt;code>vela add deployment --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization for the deployment&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>DEPLOYMENT_ORG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization for the deployment&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ORG&lt;/code>, &lt;code>DEPLOYMENT_ORG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository for the deployment&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>DEPLOYMENT_REPO&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository for the deployment&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REPO&lt;/code>, &lt;code>DEPLOYMENT_REPO&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>ref&lt;/code>&lt;/td>
-&lt;td>name of branch, commit, or tag for the deployment&lt;/td>
-&lt;td>&lt;code>VELA_DEPLOYMENT&lt;/code>, &lt;code>DEPLOYMENT_NUMBER&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>ref&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of branch, commit, or tag for the deployment&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_DEPLOYMENT&lt;/code>, &lt;code>DEPLOYMENT_NUMBER&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>target&lt;/code>&lt;/td>
-&lt;td>name of target environment for the deployment&lt;/td>
-&lt;td>&lt;code>VELA_TARGET&lt;/code>, &lt;code>DEPLOYMENT_TARGET&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>target&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of target environment for the deployment&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_TARGET&lt;/code>, &lt;code>DEPLOYMENT_TARGET&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>description&lt;/code>&lt;/td>
-&lt;td>short description for the deployment&lt;/td>
-&lt;td>&lt;code>VELA_DESCRIPTION&lt;/code>, &lt;code>DEPLOYMENT_DESCRIPTION&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>description&lt;/code>&lt;/td>
+&lt;td style="text-align: left">short description for the deployment&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_DESCRIPTION&lt;/code>, &lt;code>DEPLOYMENT_DESCRIPTION&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>parameter&lt;/code>&lt;/td>
-&lt;td>parameter(s) in key=value format for the deployment&lt;/td>
-&lt;td>&lt;code>VELA_PARAMETERS,&lt;/code>, &lt;code>DEPLOYMENT_PARAMETERS&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>parameter&lt;/code>&lt;/td>
+&lt;td style="text-align: left">parameter(s) in key=value format for the deployment&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_PARAMETERS,&lt;/code>, &lt;code>DEPLOYMENT_PARAMETERS&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>task&lt;/code>&lt;/td>
-&lt;td>name of task for the deployment&lt;/td>
-&lt;td>&lt;code>VELA_TASK&lt;/code>, &lt;code>DEPLOYMENT_TASK&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>task&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of task for the deployment&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_TASK&lt;/code>, &lt;code>DEPLOYMENT_TASK&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the deployment&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>DEPLOYMENT_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the deployment&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>DEPLOYMENT_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -111,36 +111,36 @@ For more information, you can run &lt;code>vela get deployment --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization for the deployments&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>DEPLOYMENT_ORG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization for the deployments&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ORG&lt;/code>, &lt;code>DEPLOYMENT_ORG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository for the deployments&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>DEPLOYMENT_REPO&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository for the deployments&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REPO&lt;/code>, &lt;code>DEPLOYMENT_REPO&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the deployments&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>DEPLOYMENT_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the deployments&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>DEPLOYMENT_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>page&lt;/code>&lt;/td>
-&lt;td>prints a specific page of deployments&lt;/td>
-&lt;td>&lt;code>VELA_PAGE&lt;/code>, &lt;code>DEPLOYMENT_PAGE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>page&lt;/code>&lt;/td>
+&lt;td style="text-align: left">prints a specific page of deployments&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_PAGE&lt;/code>, &lt;code>DEPLOYMENT_PAGE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>per.page&lt;/code>&lt;/td>
-&lt;td>number of deployments to print per page&lt;/td>
-&lt;td>&lt;code>VELA_PER_PAGE&lt;/code>, &lt;code>DEPLOYMENT_PER_PAGE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>per.page&lt;/code>&lt;/td>
+&lt;td style="text-align: left">number of deployments to print per page&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_PER_PAGE&lt;/code>, &lt;code>DEPLOYMENT_PER_PAGE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -193,31 +193,31 @@ For more information, you can run &lt;code>vela view deployment --help&lt;/code>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization for the deployment&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>DEPLOYMENT_ORG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization for the deployment&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ORG&lt;/code>, &lt;code>DEPLOYMENT_ORG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository for the deployment&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>DEPLOYMENT_REPO&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository for the deployment&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REPO&lt;/code>, &lt;code>DEPLOYMENT_REPO&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>deployment&lt;/code>&lt;/td>
-&lt;td>number of the deployment&lt;/td>
-&lt;td>&lt;code>VELA_DEPLOYMENT&lt;/code>, &lt;code>DEPLOYMENT_NUMBER&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>deployment&lt;/code>&lt;/td>
+&lt;td style="text-align: left">number of the deployment&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_DEPLOYMENT&lt;/code>, &lt;code>DEPLOYMENT_NUMBER&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the deployment&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>DEPLOYMENT_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the deployment&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>DEPLOYMENT_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

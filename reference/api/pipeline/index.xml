@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Pipeline</title><link>https://go-vela.github.io/docs/reference/api/pipeline/</link><description>Recent content in Pipeline on Vela</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://go-vela.github.io/docs/reference/api/pipeline/index.xml" rel="self" type="application/rss+xml"/><item><title>Reference: Add</title><link>https://go-vela.github.io/docs/reference/api/pipeline/add/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/api/pipeline/add/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Pipeline</title><link>https://go-vela.github.io/docs/reference/api/pipeline/</link><description>Recent content in Pipeline on Vela</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://go-vela.github.io/docs/reference/api/pipeline/index.xml" rel="self" type="application/rss+xml"/><item><title>Reference: Add</title><link>https://go-vela.github.io/docs/reference/api/pipeline/add/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/api/pipeline/add/</guid><description>
 &lt;h2 id="endpoint">Endpoint&lt;/h2>
 &lt;pre tabindex="0">&lt;code>POST /api/v1/pipelines/:org/:repo
 &lt;/code>&lt;/pre>&lt;h2 id="parameters">Parameters&lt;/h2>
@@ -6,18 +6,18 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -27,18 +27,18 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -89,26 +89,26 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pipeline&lt;/code>&lt;/td>
-&lt;td>commit SHA for pipeline from repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>pipeline&lt;/code>&lt;/td>
+&lt;td style="text-align: left">commit SHA for pipeline from repository&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the compiled pipeline configuration&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the compiled pipeline configuration&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -118,30 +118,30 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>400&lt;/code>&lt;/td>
-&lt;td>unable to retrieve or compile the pipeline configuration and templates&lt;/td>
+&lt;td style="text-align: left">&lt;code>400&lt;/code>&lt;/td>
+&lt;td style="text-align: left">unable to retrieve or compile the pipeline configuration and templates&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>404&lt;/code>&lt;/td>
-&lt;td>unable to retrieve or compile the pipeline configuration or templates&lt;/td>
+&lt;td style="text-align: left">&lt;code>404&lt;/code>&lt;/td>
+&lt;td style="text-align: left">unable to retrieve or compile the pipeline configuration or templates&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>500&lt;/code>&lt;/td>
-&lt;td>system error while retrieving or compiling the pipeline configuration templates&lt;/td>
+&lt;td style="text-align: left">&lt;code>500&lt;/code>&lt;/td>
+&lt;td style="text-align: left">system error while retrieving or compiling the pipeline configuration templates&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -313,26 +313,26 @@ Notice, when compiling a pipeline configuration step fields such as &lt;code>ima
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pipeline&lt;/code>&lt;/td>
-&lt;td>commit SHA for pipeline from repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>pipeline&lt;/code>&lt;/td>
+&lt;td style="text-align: left">commit SHA for pipeline from repository&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the compiled pipeline configuration&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the compiled pipeline configuration&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -342,30 +342,30 @@ Notice, when compiling a pipeline configuration step fields such as &lt;code>ima
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>400&lt;/code>&lt;/td>
-&lt;td>unable to retrieve or expand the pipeline configuration and templates&lt;/td>
+&lt;td style="text-align: left">&lt;code>400&lt;/code>&lt;/td>
+&lt;td style="text-align: left">unable to retrieve or expand the pipeline configuration and templates&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>404&lt;/code>&lt;/td>
-&lt;td>unable to retrieve or expand the pipeline configuration or templates&lt;/td>
+&lt;td style="text-align: left">&lt;code>404&lt;/code>&lt;/td>
+&lt;td style="text-align: left">unable to retrieve or expand the pipeline configuration or templates&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>500&lt;/code>&lt;/td>
-&lt;td>system error while retrieving or expanding the pipeline configuration templates&lt;/td>
+&lt;td style="text-align: left">&lt;code>500&lt;/code>&lt;/td>
+&lt;td style="text-align: left">system error while retrieving or expanding the pipeline configuration templates&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -493,18 +493,18 @@ Notice, when expanding a pipeline configuration step fields such as &lt;code>ima
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -514,30 +514,30 @@ Notice, when expanding a pipeline configuration step fields such as &lt;code>ima
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>400&lt;/code>&lt;/td>
-&lt;td>unable to retrieve the pipeline configuration&lt;/td>
+&lt;td style="text-align: left">&lt;code>400&lt;/code>&lt;/td>
+&lt;td style="text-align: left">unable to retrieve the pipeline configuration&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>404&lt;/code>&lt;/td>
-&lt;td>unable to retrieve the pipeline configuration&lt;/td>
+&lt;td style="text-align: left">&lt;code>404&lt;/code>&lt;/td>
+&lt;td style="text-align: left">unable to retrieve the pipeline configuration&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>500&lt;/code>&lt;/td>
-&lt;td>system error while retrieving the pipeline configuration&lt;/td>
+&lt;td style="text-align: left">&lt;code>500&lt;/code>&lt;/td>
+&lt;td style="text-align: left">system error while retrieving the pipeline configuration&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -596,22 +596,22 @@ Notice, when expanding a pipeline configuration step fields such as &lt;code>ima
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pipeline&lt;/code>&lt;/td>
-&lt;td>commit SHA for pipeline from repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>pipeline&lt;/code>&lt;/td>
+&lt;td style="text-align: left">commit SHA for pipeline from repository&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -621,18 +621,18 @@ Notice, when expanding a pipeline configuration step fields such as &lt;code>ima
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -656,26 +656,26 @@ Notice, when expanding a pipeline configuration step fields such as &lt;code>ima
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pipeline&lt;/code>&lt;/td>
-&lt;td>commit SHA for pipeline from repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>pipeline&lt;/code>&lt;/td>
+&lt;td style="text-align: left">commit SHA for pipeline from repository&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the compiled pipeline configuration&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the compiled pipeline configuration&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -685,30 +685,30 @@ Notice, when expanding a pipeline configuration step fields such as &lt;code>ima
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>400&lt;/code>&lt;/td>
-&lt;td>unable to retrieve the pipeline configuration templates&lt;/td>
+&lt;td style="text-align: left">&lt;code>400&lt;/code>&lt;/td>
+&lt;td style="text-align: left">unable to retrieve the pipeline configuration templates&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>404&lt;/code>&lt;/td>
-&lt;td>unable to retrieve the pipeline configuration or templates&lt;/td>
+&lt;td style="text-align: left">&lt;code>404&lt;/code>&lt;/td>
+&lt;td style="text-align: left">unable to retrieve the pipeline configuration or templates&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>500&lt;/code>&lt;/td>
-&lt;td>system error while retrieving the pipeline configuration templates&lt;/td>
+&lt;td style="text-align: left">&lt;code>500&lt;/code>&lt;/td>
+&lt;td style="text-align: left">system error while retrieving the pipeline configuration templates&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -744,22 +744,22 @@ Notice, when expanding a pipeline configuration step fields such as &lt;code>ima
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pipeline&lt;/code>&lt;/td>
-&lt;td>commit SHA for pipeline from repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>pipeline&lt;/code>&lt;/td>
+&lt;td style="text-align: left">commit SHA for pipeline from repository&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -769,18 +769,18 @@ Notice, when expanding a pipeline configuration step fields such as &lt;code>ima
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -826,26 +826,26 @@ Notice, when expanding a pipeline configuration step fields such as &lt;code>ima
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pipeline&lt;/code>&lt;/td>
-&lt;td>commit SHA for pipeline from repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>pipeline&lt;/code>&lt;/td>
+&lt;td style="text-align: left">commit SHA for pipeline from repository&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the compiled pipeline configuration&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the compiled pipeline configuration&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -855,30 +855,30 @@ Notice, when expanding a pipeline configuration step fields such as &lt;code>ima
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>400&lt;/code>&lt;/td>
-&lt;td>unable to retrieve or validate the pipeline configuration and templates&lt;/td>
+&lt;td style="text-align: left">&lt;code>400&lt;/code>&lt;/td>
+&lt;td style="text-align: left">unable to retrieve or validate the pipeline configuration and templates&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>404&lt;/code>&lt;/td>
-&lt;td>unable to retrieve or validate the pipeline configuration or templates&lt;/td>
+&lt;td style="text-align: left">&lt;code>404&lt;/code>&lt;/td>
+&lt;td style="text-align: left">unable to retrieve or validate the pipeline configuration or templates&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>500&lt;/code>&lt;/td>
-&lt;td>system error while retrieving or validating the pipeline configuration templates&lt;/td>
+&lt;td style="text-align: left">&lt;code>500&lt;/code>&lt;/td>
+&lt;td style="text-align: left">system error while retrieving or validating the pipeline configuration templates&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -902,22 +902,22 @@ Notice, when expanding a pipeline configuration step fields such as &lt;code>ima
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pipeline&lt;/code>&lt;/td>
-&lt;td>commit SHA for pipeline from repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>pipeline&lt;/code>&lt;/td>
+&lt;td style="text-align: left">commit SHA for pipeline from repository&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -927,26 +927,26 @@ Notice, when expanding a pipeline configuration step fields such as &lt;code>ima
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>400&lt;/code>&lt;/td>
-&lt;td>unable to retrieve the pipeline configuration&lt;/td>
+&lt;td style="text-align: left">&lt;code>400&lt;/code>&lt;/td>
+&lt;td style="text-align: left">unable to retrieve the pipeline configuration&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>404&lt;/code>&lt;/td>
-&lt;td>unable to retrieve the pipeline configuration&lt;/td>
+&lt;td style="text-align: left">&lt;code>404&lt;/code>&lt;/td>
+&lt;td style="text-align: left">unable to retrieve the pipeline configuration&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

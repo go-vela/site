@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Build</title><link>https://go-vela.github.io/docs/reference/cli/build/</link><description>Recent content in Build on Vela</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://go-vela.github.io/docs/reference/cli/build/index.xml" rel="self" type="application/rss+xml"/><item><title>Reference: Approve</title><link>https://go-vela.github.io/docs/reference/cli/build/approve/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/cli/build/approve/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Build</title><link>https://go-vela.github.io/docs/reference/cli/build/</link><description>Recent content in Build on Vela</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://go-vela.github.io/docs/reference/cli/build/index.xml" rel="self" type="application/rss+xml"/><item><title>Reference: Approve</title><link>https://go-vela.github.io/docs/reference/cli/build/approve/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/cli/build/approve/</guid><description>
 &lt;h2 id="command">Command&lt;/h2>
 &lt;pre tabindex="0">&lt;code>$ vela approve build &amp;lt;parameters...&amp;gt; &amp;lt;arguments...&amp;gt;
 &lt;/code>&lt;/pre>
@@ -10,31 +10,31 @@ For more information, you can run &lt;code>vela approve build --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization for the build&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>BUILD_ORG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization for the build&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ORG&lt;/code>, &lt;code>BUILD_ORG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository for the build&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>BUILD_REPO&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository for the build&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REPO&lt;/code>, &lt;code>BUILD_REPO&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>build&lt;/code>&lt;/td>
-&lt;td>number of the build&lt;/td>
-&lt;td>&lt;code>VELA_BUILD&lt;/code>, &lt;code>BUILD_NUMBER&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>build&lt;/code>&lt;/td>
+&lt;td style="text-align: left">number of the build&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_BUILD&lt;/code>, &lt;code>BUILD_NUMBER&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the build&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>BUILD_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the build&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>BUILD_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -75,31 +75,31 @@ For more information, you can run &lt;code>vela cancel build --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization for the build&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>BUILD_ORG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization for the build&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ORG&lt;/code>, &lt;code>BUILD_ORG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository for the build&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>BUILD_REPO&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository for the build&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REPO&lt;/code>, &lt;code>BUILD_REPO&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>build&lt;/code>&lt;/td>
-&lt;td>number of the build&lt;/td>
-&lt;td>&lt;code>VELA_BUILD&lt;/code>, &lt;code>BUILD_NUMBER&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>build&lt;/code>&lt;/td>
+&lt;td style="text-align: left">number of the build&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_BUILD&lt;/code>, &lt;code>BUILD_NUMBER&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the build&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>BUILD_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the build&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>BUILD_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -140,51 +140,51 @@ For more information, you can run &lt;code>vela get build --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization for the builds&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>BUILD_ORG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization for the builds&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ORG&lt;/code>, &lt;code>BUILD_ORG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository for the builds&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>BUILD_REPO&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository for the builds&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REPO&lt;/code>, &lt;code>BUILD_REPO&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>event&lt;/code>&lt;/td>
-&lt;td>name of event filter for the builds&lt;/td>
-&lt;td>&lt;code>VELA_EVENT&lt;/code>, &lt;code>BUILD_EVENT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>event&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of event filter for the builds&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_EVENT&lt;/code>, &lt;code>BUILD_EVENT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>status&lt;/code>&lt;/td>
-&lt;td>name of status filter for the builds&lt;/td>
-&lt;td>&lt;code>VELA_STATUS&lt;/code>, &lt;code>BUILD_STATUS&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>status&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of status filter for the builds&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_STATUS&lt;/code>, &lt;code>BUILD_STATUS&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>branch&lt;/code>&lt;/td>
-&lt;td>name of branch filter for the builds&lt;/td>
-&lt;td>&lt;code>VELA_BRANCH&lt;/code>, &lt;code>BUILD_BRANCH&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>branch&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of branch filter for the builds&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_BRANCH&lt;/code>, &lt;code>BUILD_BRANCH&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the builds&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>BUILD_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the builds&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>BUILD_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>page&lt;/code>&lt;/td>
-&lt;td>prints a specific page of builds&lt;/td>
-&lt;td>&lt;code>VELA_PAGE&lt;/code>, &lt;code>BUILD_PAGE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>page&lt;/code>&lt;/td>
+&lt;td style="text-align: left">prints a specific page of builds&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_PAGE&lt;/code>, &lt;code>BUILD_PAGE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>per.page&lt;/code>&lt;/td>
-&lt;td>number of builds to print per page&lt;/td>
-&lt;td>&lt;code>VELA_PER_PAGE&lt;/code>, &lt;code>BUILD_PER_PAGE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>per.page&lt;/code>&lt;/td>
+&lt;td style="text-align: left">number of builds to print per page&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_PER_PAGE&lt;/code>, &lt;code>BUILD_PER_PAGE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -230,31 +230,31 @@ For more information, you can run &lt;code>vela restart build --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization for the build&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>BUILD_ORG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization for the build&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ORG&lt;/code>, &lt;code>BUILD_ORG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository for the build&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>BUILD_REPO&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository for the build&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REPO&lt;/code>, &lt;code>BUILD_REPO&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>build&lt;/code>&lt;/td>
-&lt;td>number of the build&lt;/td>
-&lt;td>&lt;code>VELA_BUILD&lt;/code>, &lt;code>BUILD_NUMBER&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>build&lt;/code>&lt;/td>
+&lt;td style="text-align: left">number of the build&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_BUILD&lt;/code>, &lt;code>BUILD_NUMBER&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the build&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>BUILD_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the build&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>BUILD_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -319,31 +319,31 @@ For more information, you can run &lt;code>vela view build --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization for the build&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>BUILD_ORG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization for the build&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ORG&lt;/code>, &lt;code>BUILD_ORG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository for the build&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>BUILD_REPO&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository for the build&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REPO&lt;/code>, &lt;code>BUILD_REPO&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>build&lt;/code>&lt;/td>
-&lt;td>number of the build&lt;/td>
-&lt;td>&lt;code>VELA_BUILD&lt;/code>, &lt;code>BUILD_NUMBER&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>build&lt;/code>&lt;/td>
+&lt;td style="text-align: left">number of the build&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_BUILD&lt;/code>, &lt;code>BUILD_NUMBER&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the build&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>BUILD_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the build&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>BUILD_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

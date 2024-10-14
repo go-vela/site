@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Reference</title><link>https://go-vela.github.io/docs/reference/</link><description>Recent content in Reference on Vela</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://go-vela.github.io/docs/reference/index.xml" rel="self" type="application/rss+xml"/><item><title>Reference: Environment</title><link>https://go-vela.github.io/docs/reference/yaml/environment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/yaml/environment/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Reference</title><link>https://go-vela.github.io/docs/reference/</link><description>Recent content in Reference on Vela</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://go-vela.github.io/docs/reference/index.xml" rel="self" type="application/rss+xml"/><item><title>Reference: Environment</title><link>https://go-vela.github.io/docs/reference/yaml/environment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/yaml/environment/</guid><description>
 &lt;p>The environment key is intended to be used to inject a global environment configuration into steps, services and secret containers. Control of which container types get the injected environment settings is available via the metadata block.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">---&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#8f5902;font-style:italic"># This document is displaying using the environment key with a map syntax.&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
@@ -23,36 +23,36 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Key&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Type&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Key&lt;/th>
+&lt;th style="text-align: left">Required&lt;/th>
+&lt;th style="text-align: left">Type&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>template&lt;/code>&lt;/td>
-&lt;td>Y&lt;/td>
-&lt;td>bool&lt;/td>
-&lt;td>Enables compiling the pipeline as a template.&lt;/td>
+&lt;td style="text-align: left">&lt;code>template&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Y&lt;/td>
+&lt;td style="text-align: left">bool&lt;/td>
+&lt;td style="text-align: left">Enables compiling the pipeline as a template.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>clone&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>bool&lt;/td>
-&lt;td>Enables injecting the default clone process.&lt;/td>
+&lt;td style="text-align: left">&lt;code>clone&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">bool&lt;/td>
+&lt;td style="text-align: left">Enables injecting the default clone process.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>render_inline&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>bool&lt;/td>
-&lt;td>Enables rendering without explicitly calling within the pipeline.&lt;/td>
+&lt;td style="text-align: left">&lt;code>render_inline&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">bool&lt;/td>
+&lt;td style="text-align: left">Enables rendering without explicitly calling within the pipeline.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>auto_cancel&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>(see below)&lt;/td>
-&lt;td>Auto canceling settings for pipelines.&lt;/td>
+&lt;td style="text-align: left">&lt;code>auto_cancel&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">(see below)&lt;/td>
+&lt;td style="text-align: left">Auto canceling settings for pipelines.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -92,30 +92,30 @@ To learn how to write templates, see the &lt;a href="https://go-vela.github.io/d
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Key&lt;/th>
-&lt;th>Default&lt;/th>
-&lt;th>Type&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Key&lt;/th>
+&lt;th style="text-align: left">Default&lt;/th>
+&lt;th style="text-align: left">Type&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>pending&lt;/code>&lt;/td>
-&lt;td>True&lt;/td>
-&lt;td>bool&lt;/td>
-&lt;td>Pending builds will be auto canceled if qualifying build is triggered&lt;/td>
+&lt;td style="text-align: left">&lt;code>pending&lt;/code>&lt;/td>
+&lt;td style="text-align: left">True&lt;/td>
+&lt;td style="text-align: left">bool&lt;/td>
+&lt;td style="text-align: left">Pending builds will be auto canceled if qualifying build is triggered&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>running&lt;/code>&lt;/td>
-&lt;td>False&lt;/td>
-&lt;td>bool&lt;/td>
-&lt;td>Currently running builds will be auto canceled if qualifying build is triggered&lt;/td>
+&lt;td style="text-align: left">&lt;code>running&lt;/code>&lt;/td>
+&lt;td style="text-align: left">False&lt;/td>
+&lt;td style="text-align: left">bool&lt;/td>
+&lt;td style="text-align: left">Currently running builds will be auto canceled if qualifying build is triggered&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>default_branch&lt;/code>&lt;/td>
-&lt;td>False&lt;/td>
-&lt;td>bool&lt;/td>
-&lt;td>Pushes to the default branch will also be auto canceled if a qualifying build is triggered.&lt;/td>
+&lt;td style="text-align: left">&lt;code>default_branch&lt;/code>&lt;/td>
+&lt;td style="text-align: left">False&lt;/td>
+&lt;td style="text-align: left">bool&lt;/td>
+&lt;td style="text-align: left">Pushes to the default branch will also be auto canceled if a qualifying build is triggered.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -155,24 +155,24 @@ Routes are defined by the Vela system administrators during installation. To kno
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Key&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Type&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Key&lt;/th>
+&lt;th style="text-align: left">Required&lt;/th>
+&lt;th style="text-align: left">Type&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>flavor&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Indicates what flavor of a worker. (i.e. sm, m, lg)&lt;/td>
+&lt;td style="text-align: left">&lt;code>flavor&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Indicates what flavor of a worker. (i.e. sm, m, lg)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>platform&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Indicates the platform of a worker. (i.e. docker, k8s)&lt;/td>
+&lt;td style="text-align: left">&lt;code>platform&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Indicates the platform of a worker. (i.e. docker, k8s)&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -206,36 +206,36 @@ See an &lt;a href="https://go-vela.github.io/docs/docs/usage/examples/route/">ex
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Key&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Type&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Key&lt;/th>
+&lt;th style="text-align: left">Required&lt;/th>
+&lt;th style="text-align: left">Type&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>name&lt;/code>&lt;/td>
-&lt;td>Y&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>indicates a unique identifier for the template.&lt;/td>
+&lt;td style="text-align: left">&lt;code>name&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Y&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">indicates a unique identifier for the template.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>source&lt;/code>&lt;/td>
-&lt;td>Y&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>indicates a path to a template in remote system.&lt;/td>
+&lt;td style="text-align: left">&lt;code>source&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Y&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">indicates a path to a template in remote system.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>type&lt;/code>&lt;/td>
-&lt;td>Y&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>indicates to the compiler which version to use.&lt;/td>
+&lt;td style="text-align: left">&lt;code>type&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Y&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">indicates to the compiler which version to use.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>format&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>indicates the language used within the template file.&lt;/td>
+&lt;td style="text-align: left">&lt;code>format&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">indicates the language used within the template file.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -401,60 +401,60 @@ This method is intended for &lt;strong>developers and advanced users only&lt;/st
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Key&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Type&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Key&lt;/th>
+&lt;th style="text-align: left">Required&lt;/th>
+&lt;th style="text-align: left">Type&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>name&lt;/code>&lt;/td>
-&lt;td>Y&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Unique identifier for the container in the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>name&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Y&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Unique identifier for the container in the pipeline&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>image&lt;/code>&lt;/td>
-&lt;td>Y&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Docker image used to create an ephemeral container&lt;/td>
+&lt;td style="text-align: left">&lt;code>image&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Y&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Docker image used to create an ephemeral container&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pull&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Declaration to configure if and when the Docker image is pulled&lt;/td>
+&lt;td style="text-align: left">&lt;code>pull&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Declaration to configure if and when the Docker image is pulled&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>environment&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>map&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: left">&lt;code>environment&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">map&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>entrypoint&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>[]string&lt;/td>
-&lt;td>Commands to execute inside the container&lt;/td>
+&lt;td style="text-align: left">&lt;code>entrypoint&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">[]string&lt;/td>
+&lt;td style="text-align: left">Commands to execute inside the container&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>ports&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>List of ports to map for the container in the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>ports&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">List of ports to map for the container in the pipeline&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>ulimits&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>[]string&lt;/td>
-&lt;td>Set the user limits for the container&lt;/td>
+&lt;td style="text-align: left">&lt;code>ulimits&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">[]string&lt;/td>
+&lt;td style="text-align: left">Set the user limits for the container&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>user&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Set the user for the container.&lt;/td>
+&lt;td style="text-align: left">&lt;code>user&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Set the user for the container.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -531,90 +531,96 @@ This method is intended for &lt;strong>developers and advanced users only&lt;/st
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Key&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Type&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Key&lt;/th>
+&lt;th style="text-align: left">Required&lt;/th>
+&lt;th style="text-align: left">Type&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>name&lt;/code>&lt;/td>
-&lt;td>Y&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Unique identifier for the container in the pipeline.&lt;/td>
+&lt;td style="text-align: left">&lt;code>name&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Y&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Unique identifier for the container in the pipeline.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>image&lt;/code>&lt;/td>
-&lt;td>Y&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Docker image used to create ephemeral container.&lt;/td>
+&lt;td style="text-align: left">&lt;code>image&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Y&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Docker image used to create ephemeral container.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pull&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Declaration to configure if and when the Docker image is pulled.&lt;/td>
+&lt;td style="text-align: left">&lt;code>pull&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Declaration to configure if and when the Docker image is pulled.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>secrets&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>struct&lt;/td>
-&lt;td>Sensitive variables injected into the container environment.&lt;/td>
+&lt;td style="text-align: left">&lt;code>secrets&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">struct&lt;/td>
+&lt;td style="text-align: left">Sensitive variables injected into the container environment.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>environment&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>map&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: left">&lt;code>environment&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">map OR []string&lt;/td>
+&lt;td style="text-align: left">Variables to inject into the container environment.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>ruleset&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>struct&lt;/td>
-&lt;td>Conditions to limit the execution of the container.&lt;/td>
+&lt;td style="text-align: left">&lt;code>ruleset&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">struct&lt;/td>
+&lt;td style="text-align: left">Conditions to limit the execution of the container.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>parameters&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>map&lt;/td>
-&lt;td>Extra configuration variables specific to a plugin.&lt;/td>
+&lt;td style="text-align: left">&lt;code>parameters&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">map&lt;/td>
+&lt;td style="text-align: left">Extra configuration variables specific to a plugin.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>commands&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>[]string&lt;/td>
-&lt;td>Execution instructions to run inside the container.&lt;/td>
+&lt;td style="text-align: left">&lt;code>commands&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">[]string&lt;/td>
+&lt;td style="text-align: left">Execution instructions to run inside the container.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>template&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>struct&lt;/td>
-&lt;td>Name of a template to expand in the pipeline.&lt;/td>
+&lt;td style="text-align: left">&lt;code>template&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">struct&lt;/td>
+&lt;td style="text-align: left">Name of a template to expand in the pipeline.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>entrypoint&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>[]string&lt;/td>
-&lt;td>Commands to execute inside the container.&lt;/td>
+&lt;td style="text-align: left">&lt;code>id_request&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Injects &lt;code>VELA_ID_TOKEN_REQUEST_TOKEN&lt;/code> into step environment.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>detach&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>[]string&lt;/td>
-&lt;td>Run the container in a detached (headless) state.&lt;/td>
+&lt;td style="text-align: left">&lt;code>entrypoint&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">[]string&lt;/td>
+&lt;td style="text-align: left">Commands to execute inside the container.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>ulimits&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Set the user limits for the container.&lt;/td>
+&lt;td style="text-align: left">&lt;code>detach&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">[]string&lt;/td>
+&lt;td style="text-align: left">Run the container in a detached (headless) state.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>user&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Set the user for the container.&lt;/td>
+&lt;td style="text-align: left">&lt;code>ulimits&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Set the user limits for the container.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: left">&lt;code>user&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Set the user for the container.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -671,50 +677,50 @@ This method is intended for &lt;strong>developers and advanced users only&lt;/st
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>branch&lt;/code>&lt;/td>
-&lt;td>name of branch for a build.&lt;/td>
+&lt;td style="text-align: left">&lt;code>branch&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of branch for a build.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>comment&lt;/code>&lt;/td>
-&lt;td>pull request comment body.&lt;/td>
+&lt;td style="text-align: left">&lt;code>comment&lt;/code>&lt;/td>
+&lt;td style="text-align: left">pull request comment body.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>event&lt;/code>&lt;/td>
-&lt;td>name of an event for a build.&lt;/td>
+&lt;td style="text-align: left">&lt;code>event&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of an event for a build.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>instance&lt;/code>&lt;/td>
-&lt;td>FQDN of backend server instance.&lt;/td>
+&lt;td style="text-align: left">&lt;code>instance&lt;/code>&lt;/td>
+&lt;td style="text-align: left">FQDN of backend server instance.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>label&lt;/code>&lt;/td>
-&lt;td>pull request label.&lt;/td>
+&lt;td style="text-align: left">&lt;code>label&lt;/code>&lt;/td>
+&lt;td style="text-align: left">pull request label.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>path&lt;/code>&lt;/td>
-&lt;td>path to workspace files for a build.&lt;/td>
+&lt;td style="text-align: left">&lt;code>path&lt;/code>&lt;/td>
+&lt;td style="text-align: left">path to workspace files for a build.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of the repo for a build.&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of the repo for a build.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>status&lt;/code>&lt;/td>
-&lt;td>name of status for a build.&lt;/td>
+&lt;td style="text-align: left">&lt;code>status&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of status for a build.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>tag&lt;/code>&lt;/td>
-&lt;td>name of reference for a build.&lt;/td>
+&lt;td style="text-align: left">&lt;code>tag&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of reference for a build.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>target&lt;/code>&lt;/td>
-&lt;td>name of deployment or schedule target for a build.&lt;/td>
+&lt;td style="text-align: left">&lt;code>target&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of deployment or schedule target for a build.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -819,36 +825,36 @@ Ensure you are supplying the address of the configured backend server and not th
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Options&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Options&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>continue&lt;/code>&lt;/td>
-&lt;td>enables continuing the build if the step fails.&lt;/td>
-&lt;td>&lt;code>true&lt;/code>, &lt;code>false&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>continue&lt;/code>&lt;/td>
+&lt;td style="text-align: left">enables continuing the build if the step fails.&lt;/td>
+&lt;td style="text-align: left">&lt;code>true&lt;/code>, &lt;code>false&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>matcher&lt;/code>&lt;/td>
-&lt;td>matcher to use when evaluating the ruleset.&lt;/td>
-&lt;td>&lt;code>filepath&lt;/code>, &lt;code>regexp&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>matcher&lt;/code>&lt;/td>
+&lt;td style="text-align: left">matcher to use when evaluating the ruleset.&lt;/td>
+&lt;td style="text-align: left">&lt;code>filepath&lt;/code>, &lt;code>regexp&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>operator&lt;/code>&lt;/td>
-&lt;td>operator to use when evaluating the ruleset.&lt;/td>
-&lt;td>&lt;code>and&lt;/code>, &lt;code>or&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>operator&lt;/code>&lt;/td>
+&lt;td style="text-align: left">operator to use when evaluating the ruleset.&lt;/td>
+&lt;td style="text-align: left">&lt;code>and&lt;/code>, &lt;code>or&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>if&lt;/code>&lt;/td>
-&lt;td>limits the step execution to all rules must match.&lt;/td>
-&lt;td>&lt;code>branch&lt;/code>, &lt;code>comment&lt;/code>, &lt;code>event&lt;/code>, &lt;code>path&lt;/code>, &lt;code>repo&lt;/code>, &lt;code>status&lt;/code>, &lt;code>tag&lt;/code>, &lt;code>target&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>if&lt;/code>&lt;/td>
+&lt;td style="text-align: left">limits the step execution to all rules must match.&lt;/td>
+&lt;td style="text-align: left">&lt;code>branch&lt;/code>, &lt;code>comment&lt;/code>, &lt;code>event&lt;/code>, &lt;code>path&lt;/code>, &lt;code>repo&lt;/code>, &lt;code>status&lt;/code>, &lt;code>tag&lt;/code>, &lt;code>target&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>unless&lt;/code>&lt;/td>
-&lt;td>limits the step execution to no rules can match.&lt;/td>
-&lt;td>&lt;code>branch&lt;/code>, &lt;code>comment&lt;/code>, &lt;code>event&lt;/code>, &lt;code>path&lt;/code>, &lt;code>repo&lt;/code>, &lt;code>status&lt;/code>, &lt;code>tag&lt;/code>, &lt;code>target&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>unless&lt;/code>&lt;/td>
+&lt;td style="text-align: left">limits the step execution to no rules can match.&lt;/td>
+&lt;td style="text-align: left">&lt;code>branch&lt;/code>, &lt;code>comment&lt;/code>, &lt;code>event&lt;/code>, &lt;code>path&lt;/code>, &lt;code>repo&lt;/code>, &lt;code>status&lt;/code>, &lt;code>tag&lt;/code>, &lt;code>target&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -914,18 +920,18 @@ Ensure you are supplying the address of the configured backend server and not th
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>name&lt;/code>&lt;/td>
-&lt;td>Name of template to inject in the step&lt;/td>
+&lt;td style="text-align: left">&lt;code>name&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Name of template to inject in the step&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>vars&lt;/code>&lt;/td>
-&lt;td>Variables injected into the template&lt;/td>
+&lt;td style="text-align: left">&lt;code>vars&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Variables injected into the template&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -956,6 +962,12 @@ Ensure you are supplying the address of the configured backend server and not th
 &lt;div class="alert alert-info" role="alert">
 A pipeline can have up to 10 steps that report their own status.
 &lt;/div>
+&lt;h4 id="the-id_request-key">The &lt;code>id_request&lt;/code> key&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87;font-weight:bold">steps&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#8f5902;font-style:italic"># inject $VELA_ID_TOKEN_REQUEST_TOKEN into step environment. Value of `id_request` becomes one of the claims in the token.&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>- &lt;span style="color:#204a87;font-weight:bold">name&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">OIDC &lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#204a87;font-weight:bold">id_request&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline"> &lt;/span>&lt;span style="color:#000">write&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>More info can be found in the &lt;a href="usage/open_id_connect/">OpenID Connect usage docs&lt;/a>.&lt;/p>
 &lt;h4 id="the-entrypoint-key">The &lt;code>entrypoint:&lt;/code> key&lt;/h4>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#000">---&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f8f8f8;text-decoration:underline">&lt;/span>&lt;span style="color:#204a87;font-weight:bold">steps&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#f8f8f8;text-decoration:underline">
@@ -1008,36 +1020,36 @@ A pipeline can have up to 10 steps that report their own status.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Key&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Type&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Key&lt;/th>
+&lt;th style="text-align: left">Required&lt;/th>
+&lt;th style="text-align: left">Type&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>name&lt;/code>&lt;/td>
-&lt;td>Y&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Unique identifier for the stage in the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>name&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Y&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Unique identifier for the stage in the pipeline&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>steps&lt;/code>&lt;/td>
-&lt;td>Y&lt;/td>
-&lt;td>[]string&lt;/td>
-&lt;td>Sequential execution instructions for the stage&lt;/td>
+&lt;td style="text-align: left">&lt;code>steps&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Y&lt;/td>
+&lt;td style="text-align: left">[]string&lt;/td>
+&lt;td style="text-align: left">Sequential execution instructions for the stage&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>needs&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>[]string&lt;/td>
-&lt;td>Stages that must complete before starting the current one&lt;/td>
+&lt;td style="text-align: left">&lt;code>needs&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">[]string&lt;/td>
+&lt;td style="text-align: left">Stages that must complete before starting the current one&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>independent&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>bool&lt;/td>
-&lt;td>Stage will execute its steps and ignore failures from other stages&amp;rsquo; steps&lt;/td>
+&lt;td style="text-align: left">&lt;code>independent&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">bool&lt;/td>
+&lt;td style="text-align: left">Stage will execute its steps and ignore failures from other stages&amp;rsquo; steps&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1118,48 +1130,48 @@ For more details on steps keys, see the &lt;a href="https://go-vela.github.io/do
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Key&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Type&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Key&lt;/th>
+&lt;th style="text-align: left">Required&lt;/th>
+&lt;th style="text-align: left">Type&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>name&lt;/code>&lt;/td>
-&lt;td>Y&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Name of secret to reference in the pipeline.&lt;/td>
+&lt;td style="text-align: left">&lt;code>name&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Y&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Name of secret to reference in the pipeline.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>key&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Path to secret to fetch from storage backend.&lt;/td>
+&lt;td style="text-align: left">&lt;code>key&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Path to secret to fetch from storage backend.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>engine&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Name of storage backend to fetch secret from.&lt;/td>
+&lt;td style="text-align: left">&lt;code>engine&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Name of storage backend to fetch secret from.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>type&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Type of secret to fetch from storage backend.&lt;/td>
+&lt;td style="text-align: left">&lt;code>type&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Type of secret to fetch from storage backend.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pull&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>When to pull in secrets from storage backend.&lt;/td>
+&lt;td style="text-align: left">&lt;code>pull&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">When to pull in secrets from storage backend.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>origin&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>struct&lt;/td>
-&lt;td>Declaration to pull secrets from non-internal secret providers.&lt;/td>
+&lt;td style="text-align: left">&lt;code>origin&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">struct&lt;/td>
+&lt;td style="text-align: left">Declaration to pull secrets from non-internal secret providers.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1227,54 +1239,54 @@ originating from plugins loaded via &lt;a href="https://go-vela.github.io/docs/d
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Key&lt;/th>
-&lt;th>Required&lt;/th>
-&lt;th>Type&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Key&lt;/th>
+&lt;th style="text-align: left">Required&lt;/th>
+&lt;th style="text-align: left">Type&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>name&lt;/code>&lt;/td>
-&lt;td>Y&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Unique identifier for the container in the pipeline.&lt;/td>
+&lt;td style="text-align: left">&lt;code>name&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Y&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Unique identifier for the container in the pipeline.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>image&lt;/code>&lt;/td>
-&lt;td>Y&lt;/td>
-&lt;td>[]string&lt;/td>
-&lt;td>Docker image used to create an ephemeral container.&lt;/td>
+&lt;td style="text-align: left">&lt;code>image&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Y&lt;/td>
+&lt;td style="text-align: left">[]string&lt;/td>
+&lt;td style="text-align: left">Docker image used to create an ephemeral container.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pull&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>Declaration to configure if and when the Docker image is pulled.&lt;/td>
+&lt;td style="text-align: left">&lt;code>pull&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">string&lt;/td>
+&lt;td style="text-align: left">Declaration to configure if and when the Docker image is pulled.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>secrets&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>struct&lt;/td>
-&lt;td>Sensitive variables injected into the container environment.&lt;/td>
+&lt;td style="text-align: left">&lt;code>secrets&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">struct&lt;/td>
+&lt;td style="text-align: left">Sensitive variables injected into the container environment.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>environment&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>map&lt;/td>
-&lt;td>&lt;/td>
+&lt;td style="text-align: left">&lt;code>environment&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">map&lt;/td>
+&lt;td style="text-align: left">&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>ruleset&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>struct&lt;/td>
-&lt;td>Conditions to limit the execution of the container.&lt;/td>
+&lt;td style="text-align: left">&lt;code>ruleset&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">struct&lt;/td>
+&lt;td style="text-align: left">Conditions to limit the execution of the container.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>parameters&lt;/code>&lt;/td>
-&lt;td>N&lt;/td>
-&lt;td>map&lt;/td>
-&lt;td>Extra configuration variables specific to a plugin.&lt;/td>
+&lt;td style="text-align: left">&lt;code>parameters&lt;/code>&lt;/td>
+&lt;td style="text-align: left">N&lt;/td>
+&lt;td style="text-align: left">map&lt;/td>
+&lt;td style="text-align: left">Extra configuration variables specific to a plugin.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1375,18 +1387,18 @@ To setup the CLI, please review the &lt;a href="https://go-vela.github.io/docs/d
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1396,18 +1408,18 @@ To setup the CLI, please review the &lt;a href="https://go-vela.github.io/docs/d
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1473,26 +1485,26 @@ To setup the CLI, please review the &lt;a href="https://go-vela.github.io/docs/d
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>201&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>201&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>400&lt;/code>&lt;/td>
-&lt;td>indicates a bad request&lt;/td>
+&lt;td style="text-align: left">&lt;code>400&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates a bad request&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>500&lt;/code>&lt;/td>
-&lt;td>indicates a server error&lt;/td>
+&lt;td style="text-align: left">&lt;code>500&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates a server error&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1558,18 +1570,18 @@ To setup the CLI, please review the &lt;a href="https://go-vela.github.io/docs/d
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1579,18 +1591,18 @@ To setup the CLI, please review the &lt;a href="https://go-vela.github.io/docs/d
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1664,18 +1676,18 @@ To setup the CLI, please review the &lt;a href="https://go-vela.github.io/docs/d
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1685,18 +1697,18 @@ To setup the CLI, please review the &lt;a href="https://go-vela.github.io/docs/d
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1820,18 +1832,18 @@ To setup the CLI, please review the &lt;a href="https://go-vela.github.io/docs/d
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1841,18 +1853,18 @@ To setup the CLI, please review the &lt;a href="https://go-vela.github.io/docs/d
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1904,18 +1916,18 @@ To setup the CLI, please review the &lt;a href="https://go-vela.github.io/docs/d
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1996,18 +2008,18 @@ To setup the CLI, please review the &lt;a href="https://go-vela.github.io/docs/d
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -2017,18 +2029,18 @@ To setup the CLI, please review the &lt;a href="https://go-vela.github.io/docs/d
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -2124,26 +2136,26 @@ To setup the CLI, please review the &lt;a href="https://go-vela.github.io/docs/d
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>engine&lt;/code>&lt;/td>
-&lt;td>name of engine&lt;/td>
+&lt;td style="text-align: left">&lt;code>engine&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of engine&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>type&lt;/code>&lt;/td>
-&lt;td>name of type of secret&lt;/td>
+&lt;td style="text-align: left">&lt;code>type&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of type of secret&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>name&lt;/code>&lt;/td>
-&lt;td>name of repository or team&lt;/td>
+&lt;td style="text-align: left">&lt;code>name&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository or team&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -2153,18 +2165,18 @@ To setup the CLI, please review the &lt;a href="https://go-vela.github.io/docs/d
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -2239,22 +2251,22 @@ To setup the CLI, please review the &lt;a href="https://go-vela.github.io/docs/d
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>build&lt;/code>&lt;/td>
-&lt;td>number of build&lt;/td>
+&lt;td style="text-align: left">&lt;code>build&lt;/code>&lt;/td>
+&lt;td style="text-align: left">number of build&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -2264,18 +2276,18 @@ To setup the CLI, please review the &lt;a href="https://go-vela.github.io/docs/d
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -2318,22 +2330,22 @@ To setup the CLI, please review the &lt;a href="https://go-vela.github.io/docs/d
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>build&lt;/code>&lt;/td>
-&lt;td>number of build&lt;/td>
+&lt;td style="text-align: left">&lt;code>build&lt;/code>&lt;/td>
+&lt;td style="text-align: left">number of build&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -2343,18 +2355,18 @@ To setup the CLI, please review the &lt;a href="https://go-vela.github.io/docs/d
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -2401,18 +2413,18 @@ To setup the CLI, please review the &lt;a href="https://go-vela.github.io/docs/d
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -2456,41 +2468,41 @@ For more information, you can run &lt;code>vela add dashboard --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>name&lt;/code>&lt;/td>
-&lt;td>name for the dashboard&lt;/td>
-&lt;td>&lt;code>VELA_DASHBOARD_NAME&lt;/code>, &lt;code>DASHBOARD_NAME&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>name&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name for the dashboard&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_DASHBOARD_NAME&lt;/code>, &lt;code>DASHBOARD_NAME&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repos&lt;/code>&lt;/td>
-&lt;td>list of repositories (org/repo) for the dashboard&lt;/td>
-&lt;td>&lt;code>VELA_DASHBOARD_REPOS&lt;/code>, &lt;code>DASHBOARD_REPOS&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repos&lt;/code>&lt;/td>
+&lt;td style="text-align: left">list of repositories (org/repo) for the dashboard&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_DASHBOARD_REPOS&lt;/code>, &lt;code>DASHBOARD_REPOS&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>branches&lt;/code>&lt;/td>
-&lt;td>filter builds in all repositories by branch&lt;/td>
-&lt;td>&lt;code>VELA_DASHBOARD_REPOS_BRANCH&lt;/code>, &lt;code>DASHBOARD_REPOS_BRANCH&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>branches&lt;/code>&lt;/td>
+&lt;td style="text-align: left">filter builds in all repositories by branch&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_DASHBOARD_REPOS_BRANCH&lt;/code>, &lt;code>DASHBOARD_REPOS_BRANCH&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>events&lt;/code>&lt;/td>
-&lt;td>filter builds in all repositories by event&lt;/td>
-&lt;td>&lt;code>VELA_DASHBOARD_REPOS_EVENT&lt;/code>, &lt;code>DASHBOARD_REPOS_EVENT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>events&lt;/code>&lt;/td>
+&lt;td style="text-align: left">filter builds in all repositories by event&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_DASHBOARD_REPOS_EVENT&lt;/code>, &lt;code>DASHBOARD_REPOS_EVENT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>admins&lt;/code>&lt;/td>
-&lt;td>provide the list of admins for the dashboard&lt;/td>
-&lt;td>&lt;code>VELA_DASHBOARD_ADMINS&lt;/code>, &lt;code>DASHBOARD_ADMINS&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>admins&lt;/code>&lt;/td>
+&lt;td style="text-align: left">provide the list of admins for the dashboard&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_DASHBOARD_ADMINS&lt;/code>, &lt;code>DASHBOARD_ADMINS&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the dashboard&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>REPO_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the dashboard&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>REPO_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -2560,51 +2572,51 @@ For more information, you can run &lt;code>vela add deployment --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization for the deployment&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>DEPLOYMENT_ORG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization for the deployment&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ORG&lt;/code>, &lt;code>DEPLOYMENT_ORG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository for the deployment&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>DEPLOYMENT_REPO&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository for the deployment&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REPO&lt;/code>, &lt;code>DEPLOYMENT_REPO&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>ref&lt;/code>&lt;/td>
-&lt;td>name of branch, commit, or tag for the deployment&lt;/td>
-&lt;td>&lt;code>VELA_DEPLOYMENT&lt;/code>, &lt;code>DEPLOYMENT_NUMBER&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>ref&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of branch, commit, or tag for the deployment&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_DEPLOYMENT&lt;/code>, &lt;code>DEPLOYMENT_NUMBER&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>target&lt;/code>&lt;/td>
-&lt;td>name of target environment for the deployment&lt;/td>
-&lt;td>&lt;code>VELA_TARGET&lt;/code>, &lt;code>DEPLOYMENT_TARGET&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>target&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of target environment for the deployment&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_TARGET&lt;/code>, &lt;code>DEPLOYMENT_TARGET&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>description&lt;/code>&lt;/td>
-&lt;td>short description for the deployment&lt;/td>
-&lt;td>&lt;code>VELA_DESCRIPTION&lt;/code>, &lt;code>DEPLOYMENT_DESCRIPTION&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>description&lt;/code>&lt;/td>
+&lt;td style="text-align: left">short description for the deployment&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_DESCRIPTION&lt;/code>, &lt;code>DEPLOYMENT_DESCRIPTION&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>parameter&lt;/code>&lt;/td>
-&lt;td>parameter(s) in key=value format for the deployment&lt;/td>
-&lt;td>&lt;code>VELA_PARAMETERS,&lt;/code>, &lt;code>DEPLOYMENT_PARAMETERS&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>parameter&lt;/code>&lt;/td>
+&lt;td style="text-align: left">parameter(s) in key=value format for the deployment&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_PARAMETERS,&lt;/code>, &lt;code>DEPLOYMENT_PARAMETERS&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>task&lt;/code>&lt;/td>
-&lt;td>name of task for the deployment&lt;/td>
-&lt;td>&lt;code>VELA_TASK&lt;/code>, &lt;code>DEPLOYMENT_TASK&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>task&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of task for the deployment&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_TASK&lt;/code>, &lt;code>DEPLOYMENT_TASK&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the deployment&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>DEPLOYMENT_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the deployment&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>DEPLOYMENT_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -2661,86 +2673,86 @@ For more information, you can run &lt;code>vela add repo --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization for the repository&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>REPO_ORG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ORG&lt;/code>, &lt;code>REPO_ORG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>REPO_NAME&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REPO&lt;/code>, &lt;code>REPO_NAME&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>branch&lt;/code>&lt;/td>
-&lt;td>default branch for the repository&lt;/td>
-&lt;td>&lt;code>VELA_BRANCH&lt;/code>, &lt;code>REPO_BRANCH&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>branch&lt;/code>&lt;/td>
+&lt;td style="text-align: left">default branch for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_BRANCH&lt;/code>, &lt;code>REPO_BRANCH&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>link&lt;/code>&lt;/td>
-&lt;td>full URL for the repository&lt;/td>
-&lt;td>&lt;code>VELA_LINK&lt;/code>, &lt;code>REPO_LINK&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>link&lt;/code>&lt;/td>
+&lt;td style="text-align: left">full URL for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_LINK&lt;/code>, &lt;code>REPO_LINK&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>clone&lt;/code>&lt;/td>
-&lt;td>clone URL for the repository&lt;/td>
-&lt;td>&lt;code>VELA_CLONE&lt;/code>, &lt;code>REPO_CLONE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>clone&lt;/code>&lt;/td>
+&lt;td style="text-align: left">clone URL for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_CLONE&lt;/code>, &lt;code>REPO_CLONE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>visibility&lt;/code>&lt;/td>
-&lt;td>access level required to view the repository&lt;/td>
-&lt;td>&lt;code>VELA_VISIBILITY&lt;/code>, &lt;code>REPO_VISIBILITY&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>visibility&lt;/code>&lt;/td>
+&lt;td style="text-align: left">access level required to view the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_VISIBILITY&lt;/code>, &lt;code>REPO_VISIBILITY&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>build.limit&lt;/code>&lt;/td>
-&lt;td>limit of concurrent builds allowed for repository&lt;/td>
-&lt;td>&lt;code>VELA_BUILD_LIMIT&lt;/code>, &lt;code>REPO_BUILD_LIMIT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>build.limit&lt;/code>&lt;/td>
+&lt;td style="text-align: left">limit of concurrent builds allowed for repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_BUILD_LIMIT&lt;/code>, &lt;code>REPO_BUILD_LIMIT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>timeout&lt;/code>&lt;/td>
-&lt;td>max time allowed per build&lt;/td>
-&lt;td>&lt;code>VELA_TIMEOUT&lt;/code>, &lt;code>REPO_TIMEOUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>timeout&lt;/code>&lt;/td>
+&lt;td style="text-align: left">max time allowed per build&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_TIMEOUT&lt;/code>, &lt;code>REPO_TIMEOUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>counter&lt;/code>&lt;/td>
-&lt;td>set a value for a new build number&lt;/td>
-&lt;td>&lt;code>VELA_COUNTER&lt;/code>, &lt;code>REPO_COUNTER&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>counter&lt;/code>&lt;/td>
+&lt;td style="text-align: left">set a value for a new build number&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_COUNTER&lt;/code>, &lt;code>REPO_COUNTER&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>private&lt;/code>&lt;/td>
-&lt;td>disables public access to the repository&lt;/td>
-&lt;td>&lt;code>VELA_PRIVATE&lt;/code>, &lt;code>REPO_PRIVATE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>private&lt;/code>&lt;/td>
+&lt;td style="text-align: left">disables public access to the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_PRIVATE&lt;/code>, &lt;code>REPO_PRIVATE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>trusted&lt;/code>&lt;/td>
-&lt;td>elevates permissions for builds for the repository&lt;/td>
-&lt;td>&lt;code>VELA_TRUSTED&lt;/code>, &lt;code>REPO_TRUSTED&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>trusted&lt;/code>&lt;/td>
+&lt;td style="text-align: left">elevates permissions for builds for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_TRUSTED&lt;/code>, &lt;code>REPO_TRUSTED&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>active&lt;/code>&lt;/td>
-&lt;td>enables/disables the repository&lt;/td>
-&lt;td>&lt;code>VELA_ACTIVE&lt;/code>, &lt;code>REPO_ACTIVE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>active&lt;/code>&lt;/td>
+&lt;td style="text-align: left">enables/disables the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ACTIVE&lt;/code>, &lt;code>REPO_ACTIVE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>event&lt;/code>&lt;/td>
-&lt;td>events to trigger builds for the repository&lt;/td>
-&lt;td>&lt;code>VELA_EVENTS&lt;/code>, &lt;code>REPO_EVENTS&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>event&lt;/code>&lt;/td>
+&lt;td style="text-align: left">events to trigger builds for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_EVENTS&lt;/code>, &lt;code>REPO_EVENTS&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pipeline-type&lt;/code>&lt;/td>
-&lt;td>type of base pipeline for the compiler to render&lt;/td>
-&lt;td>&lt;code>VELA_PIPELINE_TYPE&lt;/code>, &lt;code>PIPELINE_TYPE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>pipeline-type&lt;/code>&lt;/td>
+&lt;td style="text-align: left">type of base pipeline for the compiler to render&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_PIPELINE_TYPE&lt;/code>, &lt;code>PIPELINE_TYPE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the repository&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>REPO_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>REPO_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -2802,41 +2814,41 @@ For more information, you can run &lt;code>vela add schedule --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization for the schedule&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>SCHEDULE_ORG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization for the schedule&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ORG&lt;/code>, &lt;code>SCHEDULE_ORG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository for the schedule&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>SCHEDULE_REPO&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository for the schedule&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REPO&lt;/code>, &lt;code>SCHEDULE_REPO&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>schedule&lt;/code>&lt;/td>
-&lt;td>name of the schedule&lt;/td>
-&lt;td>&lt;code>VELA_SCHEDULE&lt;/code>, &lt;code>SCHEDULE_NAME&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>schedule&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of the schedule&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_SCHEDULE&lt;/code>, &lt;code>SCHEDULE_NAME&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>entry&lt;/code>&lt;/td>
-&lt;td>frequency for the schedule&lt;/td>
-&lt;td>&lt;code>VELA_ENTRY&lt;/code>, &lt;code>SCHEDULE_ENTRY&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>entry&lt;/code>&lt;/td>
+&lt;td style="text-align: left">frequency for the schedule&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ENTRY&lt;/code>, &lt;code>SCHEDULE_ENTRY&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>active&lt;/code>&lt;/td>
-&lt;td>enables/disables the schedule&lt;/td>
-&lt;td>&lt;code>VELA_ACTIVE&lt;/code>, &lt;code>SCHEDULE_ACTIVE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>active&lt;/code>&lt;/td>
+&lt;td style="text-align: left">enables/disables the schedule&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ACTIVE&lt;/code>, &lt;code>SCHEDULE_ACTIVE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the schedule&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>SCHEDULE_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the schedule&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>SCHEDULE_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -2954,76 +2966,76 @@ For more information, you can run &lt;code>vela add secret --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization for the secret&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>SECRET_ORG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization for the secret&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ORG&lt;/code>, &lt;code>SECRET_ORG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository for the secret&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>SECRET_REPO&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository for the secret&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REPO&lt;/code>, &lt;code>SECRET_REPO&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>secret.engine&lt;/code>&lt;/td>
-&lt;td>name of engine that stores the secret&lt;/td>
-&lt;td>&lt;code>VELA_ENGINE&lt;/code>. &lt;code>SECRET_ENGINE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>secret.engine&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of engine that stores the secret&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ENGINE&lt;/code>. &lt;code>SECRET_ENGINE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>secret.type&lt;/code>&lt;/td>
-&lt;td>name of type of secret being stored&lt;/td>
-&lt;td>&lt;code>VELA_TYPE&lt;/code>, &lt;code>SECRET_TYPE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>secret.type&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of type of secret being stored&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_TYPE&lt;/code>, &lt;code>SECRET_TYPE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>team&lt;/code>&lt;/td>
-&lt;td>name of team for the secret&lt;/td>
-&lt;td>&lt;code>VELA_TEAM&lt;/code>, &lt;code>SECRET_TEAM&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>team&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of team for the secret&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_TEAM&lt;/code>, &lt;code>SECRET_TEAM&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>name&lt;/code>&lt;/td>
-&lt;td>name of the secret&lt;/td>
-&lt;td>&lt;code>VELA_NAME&lt;/code>, &lt;code>SECRET_NAME&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>name&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of the secret&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_NAME&lt;/code>, &lt;code>SECRET_NAME&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>value&lt;/code>&lt;/td>
-&lt;td>value of the secret&lt;/td>
-&lt;td>&lt;code>VELA_VALUE&lt;/code>, &lt;code>SECRET_VALUE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>value&lt;/code>&lt;/td>
+&lt;td style="text-align: left">value of the secret&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_VALUE&lt;/code>, &lt;code>SECRET_VALUE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>image&lt;/code>&lt;/td>
-&lt;td>build image(s) that can access the secret&lt;/td>
-&lt;td>&lt;code>VELA_IMAGES&lt;/code>, &lt;code>SECRET_IMAGES&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>image&lt;/code>&lt;/td>
+&lt;td style="text-align: left">build image(s) that can access the secret&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_IMAGES&lt;/code>, &lt;code>SECRET_IMAGES&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>event&lt;/code>&lt;/td>
-&lt;td>build event(s) that can access the secret&lt;/td>
-&lt;td>&lt;code>VELA_EVENTS&lt;/code>, &lt;code>SECRET_EVENTS&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>event&lt;/code>&lt;/td>
+&lt;td style="text-align: left">build event(s) that can access the secret&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_EVENTS&lt;/code>, &lt;code>SECRET_EVENTS&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>commands&lt;/code>&lt;/td>
-&lt;td>allows a step with commands to access the secret&lt;/td>
-&lt;td>&lt;code>VELA_COMMANDS&lt;/code>, &lt;code>SECRET_COMMANDS&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>commands&lt;/code>&lt;/td>
+&lt;td style="text-align: left">allows a step with commands to access the secret&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_COMMANDS&lt;/code>, &lt;code>SECRET_COMMANDS&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>substitution&lt;/code>&lt;/td>
-&lt;td>allows substitution of secret using ${KEY} format&lt;/td>
-&lt;td>&lt;code>VELA_SUBSTITUTION&lt;/code>, &lt;code>SECRET_SUBSTITUTION&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>substitution&lt;/code>&lt;/td>
+&lt;td style="text-align: left">allows substitution of secret using ${KEY} format&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_SUBSTITUTION&lt;/code>, &lt;code>SECRET_SUBSTITUTION&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>file&lt;/code>&lt;/td>
-&lt;td>name of file used to add the secret(s)&lt;/td>
-&lt;td>&lt;code>VELA_FILE&lt;/code>, &lt;code>SECRET_FILE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>file&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of file used to add the secret(s)&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_FILE&lt;/code>, &lt;code>SECRET_FILE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the secret&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>SECRET_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the secret&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>SECRET_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -3135,26 +3147,26 @@ For more information, you can run &lt;code>vela add worker --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>worker.address&lt;/code>&lt;/td>
-&lt;td>address of the worker&lt;/td>
-&lt;td>&lt;code>VELA_WORKER_ADDRESS&lt;/code>, &lt;code>WORKER_ADDRESS&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>worker.address&lt;/code>&lt;/td>
+&lt;td style="text-align: left">address of the worker&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_WORKER_ADDRESS&lt;/code>, &lt;code>WORKER_ADDRESS&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>worker.hostname&lt;/code>&lt;/td>
-&lt;td>hostname of the worker&lt;/td>
-&lt;td>&lt;code>VELA_WORKER_HOSTNAME&lt;/code>, &lt;code>WORKER_HOSTNAME&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>worker.hostname&lt;/code>&lt;/td>
+&lt;td style="text-align: left">hostname of the worker&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_WORKER_HOSTNAME&lt;/code>, &lt;code>WORKER_HOSTNAME&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the worker&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>WORKER_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the worker&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>WORKER_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -3199,31 +3211,31 @@ For more information, you can run &lt;code>vela approve build --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization for the build&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>BUILD_ORG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization for the build&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ORG&lt;/code>, &lt;code>BUILD_ORG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository for the build&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>BUILD_REPO&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository for the build&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REPO&lt;/code>, &lt;code>BUILD_REPO&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>build&lt;/code>&lt;/td>
-&lt;td>number of the build&lt;/td>
-&lt;td>&lt;code>VELA_BUILD&lt;/code>, &lt;code>BUILD_NUMBER&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>build&lt;/code>&lt;/td>
+&lt;td style="text-align: left">number of the build&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_BUILD&lt;/code>, &lt;code>BUILD_NUMBER&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the build&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>BUILD_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the build&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>BUILD_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -3261,18 +3273,18 @@ For more information, you can run &lt;code>vela approve build --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -3355,18 +3367,18 @@ existing entry for the build.&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -3446,26 +3458,26 @@ existing entry for the build.&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>404&lt;/code>&lt;/td>
-&lt;td>indicates that the server was unable to cancel the build&lt;/td>
+&lt;td style="text-align: left">&lt;code>404&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates that the server was unable to cancel the build&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>500&lt;/code>&lt;/td>
-&lt;td>indicates there was an error trying to cancel the build&lt;/td>
+&lt;td style="text-align: left">&lt;code>500&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates there was an error trying to cancel the build&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -3493,31 +3505,31 @@ For more information, you can run &lt;code>vela cancel build --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization for the build&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>BUILD_ORG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization for the build&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ORG&lt;/code>, &lt;code>BUILD_ORG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository for the build&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>BUILD_REPO&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository for the build&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REPO&lt;/code>, &lt;code>BUILD_REPO&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>build&lt;/code>&lt;/td>
-&lt;td>number of the build&lt;/td>
-&lt;td>&lt;code>VELA_BUILD&lt;/code>, &lt;code>BUILD_NUMBER&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>build&lt;/code>&lt;/td>
+&lt;td style="text-align: left">number of the build&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_BUILD&lt;/code>, &lt;code>BUILD_NUMBER&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the build&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>BUILD_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the build&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>BUILD_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -3554,18 +3566,18 @@ For more information, you can run &lt;code>vela cancel build --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -3575,18 +3587,18 @@ For more information, you can run &lt;code>vela cancel build --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -3614,26 +3626,26 @@ For more information, you can run &lt;code>vela chown repo --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization for the repository&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>REPO_ORG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ORG&lt;/code>, &lt;code>REPO_ORG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>REPO_NAME&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REPO&lt;/code>, &lt;code>REPO_NAME&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the repository&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>REPO_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>REPO_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -3672,14 +3684,14 @@ For more information, you can run &lt;code>vela chown repo --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>before&lt;/code>&lt;/td>
-&lt;td>clean resources created before a certain time (UNIX Epoch, default = &amp;ldquo;now&amp;rdquo; minus repo timeout + 5 minutes)&lt;/td>
+&lt;td style="text-align: left">&lt;code>before&lt;/code>&lt;/td>
+&lt;td style="text-align: left">clean resources created before a certain time (UNIX Epoch, default = &amp;ldquo;now&amp;rdquo; minus repo timeout + 5 minutes)&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -3689,26 +3701,26 @@ For more information, you can run &lt;code>vela chown repo --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>400&lt;/code>&lt;/td>
-&lt;td>indicates bad request&lt;/td>
+&lt;td style="text-align: left">&lt;code>400&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates bad request&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>500&lt;/code>&lt;/td>
-&lt;td>indicates internal server issue while cleaning&lt;/td>
+&lt;td style="text-align: left">&lt;code>500&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates internal server issue while cleaning&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -3739,26 +3751,26 @@ For more information, you can run &lt;code>vela chown repo --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pipeline&lt;/code>&lt;/td>
-&lt;td>commit SHA for pipeline from repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>pipeline&lt;/code>&lt;/td>
+&lt;td style="text-align: left">commit SHA for pipeline from repository&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the compiled pipeline configuration&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the compiled pipeline configuration&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -3768,30 +3780,30 @@ For more information, you can run &lt;code>vela chown repo --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>400&lt;/code>&lt;/td>
-&lt;td>unable to retrieve or compile the pipeline configuration and templates&lt;/td>
+&lt;td style="text-align: left">&lt;code>400&lt;/code>&lt;/td>
+&lt;td style="text-align: left">unable to retrieve or compile the pipeline configuration and templates&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>404&lt;/code>&lt;/td>
-&lt;td>unable to retrieve or compile the pipeline configuration or templates&lt;/td>
+&lt;td style="text-align: left">&lt;code>404&lt;/code>&lt;/td>
+&lt;td style="text-align: left">unable to retrieve or compile the pipeline configuration or templates&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>500&lt;/code>&lt;/td>
-&lt;td>system error while retrieving or compiling the pipeline configuration templates&lt;/td>
+&lt;td style="text-align: left">&lt;code>500&lt;/code>&lt;/td>
+&lt;td style="text-align: left">system error while retrieving or compiling the pipeline configuration templates&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -3964,26 +3976,26 @@ Notice, when compiling a pipeline configuration step fields such as &lt;code>ima
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>400&lt;/code>&lt;/td>
-&lt;td>indicates a bad request&lt;/td>
+&lt;td style="text-align: left">&lt;code>400&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates a bad request&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>500&lt;/code>&lt;/td>
-&lt;td>indicates a server error&lt;/td>
+&lt;td style="text-align: left">&lt;code>500&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates a server error&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -4014,41 +4026,41 @@ For more information, you can run &lt;code>vela exec pipeline --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>branch&lt;/code>&lt;/td>
-&lt;td>the build branch for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_BRANCH&lt;/code>, &lt;code>PIPELINE_BRANCH&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>branch&lt;/code>&lt;/td>
+&lt;td style="text-align: left">the build branch for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_BRANCH&lt;/code>, &lt;code>PIPELINE_BRANCH&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>comment&lt;/code>&lt;/td>
-&lt;td>the build comment for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_COMMENT&lt;/code>, &lt;code>PIPELINE_COMMENT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>comment&lt;/code>&lt;/td>
+&lt;td style="text-align: left">the build comment for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_COMMENT&lt;/code>, &lt;code>PIPELINE_COMMENT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>event&lt;/code>&lt;/td>
-&lt;td>the build event for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_EVENT&lt;/code>, &lt;code>PIPELINE_EVENT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>event&lt;/code>&lt;/td>
+&lt;td style="text-align: left">the build event for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_EVENT&lt;/code>, &lt;code>PIPELINE_EVENT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>tag&lt;/code>&lt;/td>
-&lt;td>the build tag for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_TAG&lt;/code>, &lt;code>PIPELINE_TAG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>tag&lt;/code>&lt;/td>
+&lt;td style="text-align: left">the build tag for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_TAG&lt;/code>, &lt;code>PIPELINE_TAG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>target&lt;/code>&lt;/td>
-&lt;td>the build target for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_TARGET&lt;/code>, &lt;code>PIPELINE_TARGET&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>target&lt;/code>&lt;/td>
+&lt;td style="text-align: left">the build target for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_TARGET&lt;/code>, &lt;code>PIPELINE_TARGET&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>file-changeset&lt;/code>&lt;/td>
-&lt;td>the build file changeset for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_FILE_CHANGESET&lt;/code>, &lt;code>FILE_CHANGESET&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>file-changeset&lt;/code>&lt;/td>
+&lt;td style="text-align: left">the build file changeset for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_FILE_CHANGESET&lt;/code>, &lt;code>FILE_CHANGESET&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -4056,26 +4068,26 @@ For more information, you can run &lt;code>vela exec pipeline --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>provide the organization for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>PIPELINE_ORG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">provide the organization for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ORG&lt;/code>, &lt;code>PIPELINE_ORG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>provide the repository for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>PIPELINE_REPO&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">provide the repository for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REPO&lt;/code>, &lt;code>PIPELINE_REPO&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pipeline-type&lt;/code>&lt;/td>
-&lt;td>provide the repository pipeline type&lt;/td>
-&lt;td>&lt;code>VELA_PIPELINE_TYPE&lt;/code>, &lt;code>PIPELINE_TYPE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>pipeline-type&lt;/code>&lt;/td>
+&lt;td style="text-align: left">provide the repository pipeline type&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_PIPELINE_TYPE&lt;/code>, &lt;code>PIPELINE_TYPE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -4083,31 +4095,31 @@ For more information, you can run &lt;code>vela exec pipeline --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>compiler.github.token&lt;/code>&lt;/td>
-&lt;td>PAT for accessing GitHub sourced templates&lt;/td>
-&lt;td>&lt;code>VELA_COMPILER_GITHUB_TOKEN&lt;/code>, &lt;code>COMPILER_GITHUB_TOKEN&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>compiler.github.token&lt;/code>&lt;/td>
+&lt;td style="text-align: left">PAT for accessing GitHub sourced templates&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_COMPILER_GITHUB_TOKEN&lt;/code>, &lt;code>COMPILER_GITHUB_TOKEN&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>compiler.github.url&lt;/code>&lt;/td>
-&lt;td>URL for accessing GitHub sourced templates&lt;/td>
-&lt;td>&lt;code>VELA_COMPILER_GITHUB_URL&lt;/code>, &lt;code>COMPILER_GITHUB_URL&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>compiler.github.url&lt;/code>&lt;/td>
+&lt;td style="text-align: left">URL for accessing GitHub sourced templates&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_COMPILER_GITHUB_URL&lt;/code>, &lt;code>COMPILER_GITHUB_URL&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>template-file&lt;/code>&lt;/td>
-&lt;td>list of local templates in form of &lt;name>:&lt;path>&lt;/td>
-&lt;td>&lt;code>VELA_TEMPLATE_FILE&lt;/code>, &lt;code>PIPELINE_TEMPLATE_FILE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>template-file&lt;/code>&lt;/td>
+&lt;td style="text-align: left">list of local templates in form of &lt;name>:&lt;path>&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_TEMPLATE_FILE&lt;/code>, &lt;code>PIPELINE_TEMPLATE_FILE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>max-template-depth&lt;/code>&lt;/td>
-&lt;td>maximum depth for requesting nested templates&lt;/td>
-&lt;td>&lt;code>VELA_MAX_TEMPLATE_DEPTH&lt;/code>, &lt;code>MAX_TEMPLATE_DEPTH&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>max-template-depth&lt;/code>&lt;/td>
+&lt;td style="text-align: left">maximum depth for requesting nested templates&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_MAX_TEMPLATE_DEPTH&lt;/code>, &lt;code>MAX_TEMPLATE_DEPTH&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -4115,31 +4127,31 @@ For more information, you can run &lt;code>vela exec pipeline --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>env-file&lt;/code>&lt;/td>
-&lt;td>Bool value for whether or not to source from an env file (default &lt;code>.env&lt;/code>)&lt;/td>
-&lt;td>&lt;code>VELA_ENV_FILE&lt;/code>, &lt;code>ENV_FILE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>env-file&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Bool value for whether or not to source from an env file (default &lt;code>.env&lt;/code>)&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ENV_FILE&lt;/code>, &lt;code>ENV_FILE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>env-file-path&lt;/code>&lt;/td>
-&lt;td>Path to override default &lt;code>.env&lt;/code> sourcing of environment&lt;/td>
-&lt;td>&lt;code>VELA_ENV_FILE_PATH&lt;/code>, &lt;code>ENV_FILE_PATH&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>env-file-path&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Path to override default &lt;code>.env&lt;/code> sourcing of environment&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ENV_FILE_PATH&lt;/code>, &lt;code>ENV_FILE_PATH&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>local-env&lt;/code>&lt;/td>
-&lt;td>Bool value for whether or not to onboard your local environment&lt;/td>
-&lt;td>&lt;code>ONBOARD_LOCAL_ENV&lt;/code>, &lt;code>LOCAL_ENV&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>local-env&lt;/code>&lt;/td>
+&lt;td style="text-align: left">Bool value for whether or not to onboard your local environment&lt;/td>
+&lt;td style="text-align: left">&lt;code>ONBOARD_LOCAL_ENV&lt;/code>, &lt;code>LOCAL_ENV&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>env-vars&lt;/code>&lt;/td>
-&lt;td>list of environment variables to include in form of &lt;KEY>=&lt;VAL>&lt;/td>
-&lt;td>&lt;code>VELA_ENV_VARS&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>env-vars&lt;/code>&lt;/td>
+&lt;td style="text-align: left">list of environment variables to include in form of &lt;KEY>=&lt;VAL>&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ENV_VARS&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -4147,36 +4159,36 @@ For more information, you can run &lt;code>vela exec pipeline --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output in json, spew or yaml&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>PIPELINE_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output in json, spew or yaml&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>PIPELINE_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>file&lt;/code>&lt;/td>
-&lt;td>name of the file for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_FILE&lt;/code>, &lt;code>PIPELINE_FILE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>file&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of the file for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_FILE&lt;/code>, &lt;code>PIPELINE_FILE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>path&lt;/code>&lt;/td>
-&lt;td>path to the file for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_PATH&lt;/code>, &lt;code>PIPELINE_PATH&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>path&lt;/code>&lt;/td>
+&lt;td style="text-align: left">path to the file for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_PATH&lt;/code>, &lt;code>PIPELINE_PATH&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>local&lt;/code>&lt;/td>
-&lt;td>enables mounting local directory to pipeline&lt;/td>
-&lt;td>&lt;code>VELA_LOCAL&lt;/code>, &lt;code>PIPELINE_LOCAL&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>local&lt;/code>&lt;/td>
+&lt;td style="text-align: left">enables mounting local directory to pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_LOCAL&lt;/code>, &lt;code>PIPELINE_LOCAL&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>volume&lt;/code>&lt;/td>
-&lt;td>provide list of local volumes to mount&lt;/td>
-&lt;td>&lt;code>VELA_VOLUMES&lt;/code>, &lt;code>PIPELINE_VOLUMES&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>volume&lt;/code>&lt;/td>
+&lt;td style="text-align: left">provide list of local volumes to mount&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_VOLUMES&lt;/code>, &lt;code>PIPELINE_VOLUMES&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -4332,26 +4344,26 @@ VELA_BUILD_COMMIT=1a2b3c
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>pipeline&lt;/code>&lt;/td>
-&lt;td>commit SHA for pipeline from repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>pipeline&lt;/code>&lt;/td>
+&lt;td style="text-align: left">commit SHA for pipeline from repository&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the compiled pipeline configuration&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the compiled pipeline configuration&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -4361,30 +4373,30 @@ VELA_BUILD_COMMIT=1a2b3c
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>400&lt;/code>&lt;/td>
-&lt;td>unable to retrieve or expand the pipeline configuration and templates&lt;/td>
+&lt;td style="text-align: left">&lt;code>400&lt;/code>&lt;/td>
+&lt;td style="text-align: left">unable to retrieve or expand the pipeline configuration and templates&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>404&lt;/code>&lt;/td>
-&lt;td>unable to retrieve or expand the pipeline configuration or templates&lt;/td>
+&lt;td style="text-align: left">&lt;code>404&lt;/code>&lt;/td>
+&lt;td style="text-align: left">unable to retrieve or expand the pipeline configuration or templates&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>500&lt;/code>&lt;/td>
-&lt;td>system error while retrieving or expanding the pipeline configuration templates&lt;/td>
+&lt;td style="text-align: left">&lt;code>500&lt;/code>&lt;/td>
+&lt;td style="text-align: left">system error while retrieving or expanding the pipeline configuration templates&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -4516,21 +4528,21 @@ For more information, you can run &lt;code>vela generate completion --help&lt;/c
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>bash&lt;/code>&lt;/td>
-&lt;td>generate a Bash auto-completion script&lt;/td>
-&lt;td>&lt;code>VELA_BASH&lt;/code>, &lt;code>COMPLETION_BASH&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>bash&lt;/code>&lt;/td>
+&lt;td style="text-align: left">generate a Bash auto-completion script&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_BASH&lt;/code>, &lt;code>COMPLETION_BASH&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>zsh&lt;/code>&lt;/td>
-&lt;td>generate a Zsh auto-completion script&lt;/td>
-&lt;td>&lt;code>VELA_ZSH&lt;/code>, &lt;code>COMPLETION_ZSH&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>zsh&lt;/code>&lt;/td>
+&lt;td style="text-align: left">generate a Zsh auto-completion script&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ZSH&lt;/code>, &lt;code>COMPLETION_ZSH&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -4618,71 +4630,71 @@ For more information, you can run &lt;code>vela generate config --help&lt;/code>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>api.addr&lt;/code>&lt;/td>
-&lt;td>full URL to API server&lt;/td>
-&lt;td>&lt;code>VELA_ADDR&lt;/code>, &lt;code>CONFIG_ADDR&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>api.addr&lt;/code>&lt;/td>
+&lt;td style="text-align: left">full URL to API server&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ADDR&lt;/code>, &lt;code>CONFIG_ADDR&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>api.token.access&lt;/code>&lt;/td>
-&lt;td>API access token&lt;/td>
-&lt;td>&lt;code>VELA_ACCESS_TOKEN&lt;/code>, &lt;code>CONFIG_ACCESS_TOKEN&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>api.token.access&lt;/code>&lt;/td>
+&lt;td style="text-align: left">API access token&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ACCESS_TOKEN&lt;/code>, &lt;code>CONFIG_ACCESS_TOKEN&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>api.token.refresh&lt;/code>&lt;/td>
-&lt;td>API refresh token&lt;/td>
-&lt;td>&lt;code>VELA_REFRESH_TOKEN&lt;/code>, &lt;code>CONFIG_REFRESH_TOKEN&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>api.token.refresh&lt;/code>&lt;/td>
+&lt;td style="text-align: left">API refresh token&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REFRESH_TOKEN&lt;/code>, &lt;code>CONFIG_REFRESH_TOKEN&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>api.token&lt;/code>&lt;/td>
-&lt;td>PAT for API server&lt;/td>
-&lt;td>&lt;code>VELA_TOKEN&lt;/code>, &lt;code>CONFIG_TOKEN&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>api.token&lt;/code>&lt;/td>
+&lt;td style="text-align: left">PAT for API server&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_TOKEN&lt;/code>, &lt;code>CONFIG_TOKEN&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>api.version&lt;/code>&lt;/td>
-&lt;td>version of API for server&lt;/td>
-&lt;td>&lt;code>VELA_API_VERSION&lt;/code>, &lt;code>CONFIG_API_VERSION&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>api.version&lt;/code>&lt;/td>
+&lt;td style="text-align: left">version of API for server&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_API_VERSION&lt;/code>, &lt;code>CONFIG_API_VERSION&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>log.level&lt;/code>&lt;/td>
-&lt;td>set the level of logging&lt;/td>
-&lt;td>&lt;code>VELA_LOG_LEVEL&lt;/code>, &lt;code>CONFIG_LOG_LEVEL&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>log.level&lt;/code>&lt;/td>
+&lt;td style="text-align: left">set the level of logging&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_LOG_LEVEL&lt;/code>, &lt;code>CONFIG_LOG_LEVEL&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>no-git&lt;/code>&lt;/td>
-&lt;td>set whether CLI finds repo of cwd automatically&lt;/td>
-&lt;td>&lt;code>VELA_NO_GIT&lt;/code>, &lt;code>CONFIG_NO_GIT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>no-git&lt;/code>&lt;/td>
+&lt;td style="text-align: left">set whether CLI finds repo of cwd automatically&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_NO_GIT&lt;/code>, &lt;code>CONFIG_NO_GIT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for API results&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>CONFIG_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for API results&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>CONFIG_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization for API calls&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>CONFIG_ORG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization for API calls&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ORG&lt;/code>, &lt;code>CONFIG_ORG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository for API calls&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>CONFIG_REPO&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository for API calls&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REPO&lt;/code>, &lt;code>CONFIG_REPO&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>secret.engine&lt;/code>&lt;/td>
-&lt;td>name of secret engine for API calls&lt;/td>
-&lt;td>&lt;code>VELA_ENGINE&lt;/code>, &lt;code>CONFIG_ENGINE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>secret.engine&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of secret engine for API calls&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ENGINE&lt;/code>, &lt;code>CONFIG_ENGINE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>secret.type&lt;/code>&lt;/td>
-&lt;td>name of secret type for API calls&lt;/td>
-&lt;td>&lt;code>VELA_TYPE&lt;/code>, &lt;code>CONFIG_TYPE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>secret.type&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of secret type for API calls&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_TYPE&lt;/code>, &lt;code>CONFIG_TYPE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -4715,31 +4727,31 @@ For more information, you can run &lt;code>vela generate pipeline --help&lt;/cod
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>file&lt;/code>&lt;/td>
-&lt;td>name of the file for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_FILE&lt;/code>, &lt;code>PIPELINE_FILE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>file&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of the file for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_FILE&lt;/code>, &lt;code>PIPELINE_FILE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>path&lt;/code>&lt;/td>
-&lt;td>path to the file for the pipeline&lt;/td>
-&lt;td>&lt;code>VELA_PATH&lt;/code>, &lt;code>PIPELINE_PATH&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>path&lt;/code>&lt;/td>
+&lt;td style="text-align: left">path to the file for the pipeline&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_PATH&lt;/code>, &lt;code>PIPELINE_PATH&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>stages&lt;/code>&lt;/td>
-&lt;td>generates the pipeline with stages&lt;/td>
-&lt;td>&lt;code>VELA_STAGES&lt;/code>, &lt;code>PIPELINE_STAGES&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>stages&lt;/code>&lt;/td>
+&lt;td style="text-align: left">generates the pipeline with stages&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_STAGES&lt;/code>, &lt;code>PIPELINE_STAGES&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>type&lt;/code>&lt;/td>
-&lt;td>type of pipeline being generated&lt;/td>
-&lt;td>&lt;code>VELA_TYPE&lt;/code>, &lt;code>PIPELINE_TYPE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>type&lt;/code>&lt;/td>
+&lt;td style="text-align: left">type of pipeline being generated&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_TYPE&lt;/code>, &lt;code>PIPELINE_TYPE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -4763,18 +4775,18 @@ For more information, you can run &lt;code>vela generate pipeline --help&lt;/cod
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -4783,42 +4795,42 @@ For more information, you can run &lt;code>vela generate pipeline --help&lt;/cod
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>branch&lt;/code>&lt;/td>
-&lt;td>name of branch to filter to&lt;/td>
+&lt;td style="text-align: left">&lt;code>branch&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of branch to filter to&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>commit&lt;/code>&lt;/td>
-&lt;td>commit hash to filter to&lt;/td>
+&lt;td style="text-align: left">&lt;code>commit&lt;/code>&lt;/td>
+&lt;td style="text-align: left">commit hash to filter to&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>event&lt;/code>&lt;/td>
-&lt;td>name of event to filter to&lt;/td>
+&lt;td style="text-align: left">&lt;code>event&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of event to filter to&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>page&lt;/code>&lt;/td>
-&lt;td>page number for results (default 1)&lt;/td>
+&lt;td style="text-align: left">&lt;code>page&lt;/code>&lt;/td>
+&lt;td style="text-align: left">page number for results (default 1)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>per_page&lt;/code>&lt;/td>
-&lt;td>number of results in a page (default 10, max 100)&lt;/td>
+&lt;td style="text-align: left">&lt;code>per_page&lt;/code>&lt;/td>
+&lt;td style="text-align: left">number of results in a page (default 10, max 100)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>status&lt;/code>&lt;/td>
-&lt;td>name of status to filter to&lt;/td>
+&lt;td style="text-align: left">&lt;code>status&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of status to filter to&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>before&lt;/code>&lt;/td>
-&lt;td>return builds created before a certain time (UNIX Epoch, default &amp;ldquo;now&amp;rdquo;)&lt;/td>
+&lt;td style="text-align: left">&lt;code>before&lt;/code>&lt;/td>
+&lt;td style="text-align: left">return builds created before a certain time (UNIX Epoch, default &amp;ldquo;now&amp;rdquo;)&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>after&lt;/code>&lt;/td>
-&lt;td>return builds created after a certain time (UNIX Epoch, default 0)&lt;/td>
+&lt;td style="text-align: left">&lt;code>after&lt;/code>&lt;/td>
+&lt;td style="text-align: left">return builds created after a certain time (UNIX Epoch, default 0)&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -4828,18 +4840,18 @@ For more information, you can run &lt;code>vela generate pipeline --help&lt;/cod
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -4924,30 +4936,30 @@ For more information, you can run &lt;code>vela generate pipeline --help&lt;/cod
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>400&lt;/code>&lt;/td>
-&lt;td>indicates a bad request&lt;/td>
+&lt;td style="text-align: left">&lt;code>400&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates a bad request&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>404&lt;/code>&lt;/td>
-&lt;td>indicates the resource does not exist&lt;/td>
+&lt;td style="text-align: left">&lt;code>404&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the resource does not exist&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>500&lt;/code>&lt;/td>
-&lt;td>indicates a server error&lt;/td>
+&lt;td style="text-align: left">&lt;code>500&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates a server error&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -5052,18 +5064,18 @@ For more information, you can run &lt;code>vela generate pipeline --help&lt;/cod
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -5073,18 +5085,18 @@ For more information, you can run &lt;code>vela generate pipeline --help&lt;/cod
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -5191,18 +5203,18 @@ For more information, you can run &lt;code>vela generate pipeline --help&lt;/cod
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -5212,18 +5224,18 @@ For more information, you can run &lt;code>vela generate pipeline --help&lt;/cod
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Status Code&lt;/th>
-&lt;th>Description&lt;/th>
+&lt;th style="text-align: left">Status Code&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>200&lt;/code>&lt;/td>
-&lt;td>indicates the request has succeeded&lt;/td>
+&lt;td style="text-align: left">&lt;code>200&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the request has succeeded&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>401&lt;/code>&lt;/td>
-&lt;td>indicates the user does not have proper permissions&lt;/td>
+&lt;td style="text-align: left">&lt;code>401&lt;/code>&lt;/td>
+&lt;td style="text-align: left">indicates the user does not have proper permissions&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

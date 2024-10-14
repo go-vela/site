@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Service</title><link>https://go-vela.github.io/docs/reference/cli/service/</link><description>Recent content in Service on Vela</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://go-vela.github.io/docs/reference/cli/service/index.xml" rel="self" type="application/rss+xml"/><item><title>Reference: Get</title><link>https://go-vela.github.io/docs/reference/cli/service/get/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/cli/service/get/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vela – Service</title><link>https://go-vela.github.io/docs/reference/cli/service/</link><description>Recent content in Service on Vela</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://go-vela.github.io/docs/reference/cli/service/index.xml" rel="self" type="application/rss+xml"/><item><title>Reference: Get</title><link>https://go-vela.github.io/docs/reference/cli/service/get/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://go-vela.github.io/docs/reference/cli/service/get/</guid><description>
 &lt;h2 id="command">Command&lt;/h2>
 &lt;pre tabindex="0">&lt;code>$ vela get service &amp;lt;parameters...&amp;gt; &amp;lt;arguments...&amp;gt;
 &lt;/code>&lt;/pre>
@@ -10,41 +10,41 @@ For more information, you can run &lt;code>vela get service --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization for the services&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>SERVICE_ORG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization for the services&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ORG&lt;/code>, &lt;code>SERVICE_ORG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository for the services&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>SERVICE_REPO&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository for the services&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REPO&lt;/code>, &lt;code>SERVICE_REPO&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>build&lt;/code>&lt;/td>
-&lt;td>number of build for the services&lt;/td>
-&lt;td>&lt;code>VELA_BUILD&lt;/code>, &lt;code>SERVICE_BUILD&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>build&lt;/code>&lt;/td>
+&lt;td style="text-align: left">number of build for the services&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_BUILD&lt;/code>, &lt;code>SERVICE_BUILD&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the services&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>SERVICE_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the services&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>SERVICE_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>page&lt;/code>&lt;/td>
-&lt;td>prints a specific page of services&lt;/td>
-&lt;td>&lt;code>VELA_PAGE&lt;/code>, &lt;code>SERVICE_PAGE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>page&lt;/code>&lt;/td>
+&lt;td style="text-align: left">prints a specific page of services&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_PAGE&lt;/code>, &lt;code>SERVICE_PAGE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>per.page&lt;/code>&lt;/td>
-&lt;td>number of services to print per page&lt;/td>
-&lt;td>&lt;code>VELA_PER_PAGE&lt;/code>, &lt;code>SERVICE_PER_PAGE&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>per.page&lt;/code>&lt;/td>
+&lt;td style="text-align: left">number of services to print per page&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_PER_PAGE&lt;/code>, &lt;code>SERVICE_PER_PAGE&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -89,36 +89,36 @@ For more information, you can run &lt;code>vela view service --help&lt;/code>.
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>Name&lt;/th>
-&lt;th>Description&lt;/th>
-&lt;th>Environment Variables&lt;/th>
+&lt;th style="text-align: left">Name&lt;/th>
+&lt;th style="text-align: left">Description&lt;/th>
+&lt;th style="text-align: left">Environment Variables&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>&lt;code>org&lt;/code>&lt;/td>
-&lt;td>name of organization for the service&lt;/td>
-&lt;td>&lt;code>VELA_ORG&lt;/code>, &lt;code>SERVICE_ORG&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>org&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of organization for the service&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_ORG&lt;/code>, &lt;code>SERVICE_ORG&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>repo&lt;/code>&lt;/td>
-&lt;td>name of repository for the service&lt;/td>
-&lt;td>&lt;code>VELA_REPO&lt;/code>, &lt;code>SERVICE_REPO&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>repo&lt;/code>&lt;/td>
+&lt;td style="text-align: left">name of repository for the service&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_REPO&lt;/code>, &lt;code>SERVICE_REPO&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>build&lt;/code>&lt;/td>
-&lt;td>number of build for the service&lt;/td>
-&lt;td>&lt;code>VELA_BUILD&lt;/code>, &lt;code>SERVICE_BUILD&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>build&lt;/code>&lt;/td>
+&lt;td style="text-align: left">number of build for the service&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_BUILD&lt;/code>, &lt;code>SERVICE_BUILD&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>service&lt;/code>&lt;/td>
-&lt;td>number of the service&lt;/td>
-&lt;td>&lt;code>VELA_SERVICE&lt;/code>, &lt;code>SERVICE_NUMBER&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>service&lt;/code>&lt;/td>
+&lt;td style="text-align: left">number of the service&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_SERVICE&lt;/code>, &lt;code>SERVICE_NUMBER&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&lt;code>output&lt;/code>&lt;/td>
-&lt;td>format the output for the service&lt;/td>
-&lt;td>&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>SERVICE_OUTPUT&lt;/code>&lt;/td>
+&lt;td style="text-align: left">&lt;code>output&lt;/code>&lt;/td>
+&lt;td style="text-align: left">format the output for the service&lt;/td>
+&lt;td style="text-align: left">&lt;code>VELA_OUTPUT&lt;/code>, &lt;code>SERVICE_OUTPUT&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
