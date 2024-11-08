@@ -21,22 +21,28 @@ The following parameters are used to configure the command:
 
 ### Ruleset Parameters
 
-| Name             | Description                                   | Environment Variables                  |
-| ---------------- | --------------------------------------------- | -------------------------------------- |
-| `branch`         | the build branch for the pipeline             | `VELA_BRANCH`, `PIPELINE_BRANCH`       |
-| `comment`        | the build comment for the pipeline            | `VELA_COMMENT`, `PIPELINE_COMMENT`     |
-| `event`          | the build event for the pipeline              | `VELA_EVENT`, `PIPELINE_EVENT`         |
-| `tag`            | the build tag for the pipeline                | `VELA_TAG`, `PIPELINE_TAG`             |
-| `target`         | the build target for the pipeline             | `VELA_TARGET`, `PIPELINE_TARGET`       |
-| `file-changeset` | the build file changeset for the pipeline     | `VELA_FILE_CHANGESET`, `FILE_CHANGESET`|
+| Name             | Description                               | Environment Variables                   |
+| ---------------- | ----------------------------------------- | --------------------------------------- |
+| `branch`         | the build branch for the pipeline         | `VELA_BRANCH`, `PIPELINE_BRANCH`        |
+| `comment`        | the build comment for the pipeline        | `VELA_COMMENT`, `PIPELINE_COMMENT`      |
+| `event`          | the build event for the pipeline          | `VELA_EVENT`, `PIPELINE_EVENT`          |
+| `tag`            | the build tag for the pipeline            | `VELA_TAG`, `PIPELINE_TAG`              |
+| `target`         | the build target for the pipeline         | `VELA_TARGET`, `PIPELINE_TARGET`        |
+| `file-changeset` | the build file changeset for the pipeline | `VELA_FILE_CHANGESET`, `FILE_CHANGESET` |
 
 ### Repo Settings Parameters
 
-| Name            | Description                                   | Environment Variables                  |
-| --------------- | --------------------------------------------- | -------------------------------------- |
-| `org`           | provide the organization for the pipeline     | `VELA_ORG`, `PIPELINE_ORG`             |
-| `repo`          | provide the repository for the pipeline       | `VELA_REPO`, `PIPELINE_REPO`           |
-| `pipeline-type` | provide the repository pipeline type          | `VELA_PIPELINE_TYPE`, `PIPELINE_TYPE`  |
+| Name            | Description                               | Environment Variables                 |
+| --------------- | ----------------------------------------- | ------------------------------------- |
+| `org`           | provide the organization for the pipeline | `VELA_ORG`, `PIPELINE_ORG`            |
+| `repo`          | provide the repository for the pipeline   | `VELA_REPO`, `PIPELINE_REPO`          |
+| `pipeline-type` | provide the repository pipeline type      | `VELA_PIPELINE_TYPE`, `PIPELINE_TYPE` |
+
+### Step Parameters
+
+| Name        | Description                   | Environment Variables         |
+| ----------- | ----------------------------- | ----------------------------- |
+| `skip-step` | skip a step during local exec | `VELA_SKIP_STEP`, `SKIP_STEP` |
 
 ### Template Parameters
 
@@ -58,17 +64,17 @@ The following parameters are used to configure the command:
 
 ### Other Parameters
 
-| Name     | Description                                   | Environment Variables             |
-| -------- | --------------------------------------------- | --------------------------------- |
-| `output` | format the output in json, spew or yaml       | `VELA_OUTPUT`, `PIPELINE_OUTPUT`  |
-| `file`   | name of the file for the pipeline             | `VELA_FILE`, `PIPELINE_FILE`      |
-| `path`   | path to the file for the pipeline             | `VELA_PATH`, `PIPELINE_PATH`      |
-| `local`  | enables mounting local directory to pipeline  | `VELA_LOCAL`, `PIPELINE_LOCAL`    |
-| `volume` | provide list of local volumes to mount        | `VELA_VOLUMES`, `PIPELINE_VOLUMES`|
+| Name     | Description                                  | Environment Variables              |
+| -------- | -------------------------------------------- | ---------------------------------- |
+| `output` | format the output in json, spew or yaml      | `VELA_OUTPUT`, `PIPELINE_OUTPUT`   |
+| `file`   | name of the file for the pipeline            | `VELA_FILE`, `PIPELINE_FILE`       |
+| `path`   | path to the file for the pipeline            | `VELA_PATH`, `PIPELINE_PATH`       |
+| `local`  | enables mounting local directory to pipeline | `VELA_LOCAL`, `PIPELINE_LOCAL`     |
+| `volume` | provide list of local volumes to mount       | `VELA_VOLUMES`, `PIPELINE_VOLUMES` |
 
 ## Environment
 
-Unless the `local-env` flag is supplied, the `vela exec pipeline` command will execute without any set environment. Instead, users are encouraged to supply their own environment variables in the form of an env file (e.g. `--env-file` OR `--env-file-path custom.env`). 
+Unless the `local-env` flag is supplied, the `vela exec pipeline` command will execute without any set environment. Instead, users are encouraged to supply their own environment variables in the form of an env file (e.g. `--env-file` OR `--env-file-path custom.env`).
 
 Many plugins, Starlark/Go templates, and other build resources depend on Vela-injected environment variables, such as `VELA_BUILD_COMMIT`. These variables will have to be supplied by the user, as there is no way for the compiler to determine these values locally.
 
@@ -90,7 +96,7 @@ To install the CLI, please review the [installation documentation](/docs/referen
 To setup the CLI, please review the [authentication documentation](/docs/reference/cli/authentication/).
 {{% /alert %}}
 
-#### Request
+#### Simple Request
 
 ```sh
 vela exec pipeline
@@ -153,11 +159,25 @@ sha256:6dbb9cc54074106d46d4ccb330f2a40a682d49dda5f4844962b7dce9fe44aaec
 [step: hello Vela] hello Vela!
 ```
 
+#### Skip Steps Request
+
+Things of note:
+
+- Stages: across all stages, any steps with the provided name will be skipped.
+- Templates and nested templates: prepend the template name(s) to the step name.
+- Step names with spaces: wrap in quotes, including prepended template name(s).
+
+```sh
+$ vela exec pipeline --skip-step echo_hello --skip-step 'echo goodbye'
+$ vela exec pipeline --sk echo_hi --sk child_echo_hi --sk 'child_my favorite grandchild_echo_hi'
+```
+
 ## Complex Samples
 
 Below are several examples using the following Vela pipeline + template
 
 ### .vela.yml
+
 ```yaml
 version: "1"
 
@@ -165,18 +185,18 @@ templates:
   - name: tmpl
     source: git.example.com/cloud/vela-templates/kaniko.yml@main
     type: github
-  
+
 steps:
   - name: testing
     image: alpine:latest
     commands:
       - echo hello
-      
+
   - name: file path ruleset
     image: alpine:latest
     ruleset:
       matcher: regexp
-      path: [ src/* ]
+      path: [src/*]
     commands:
       - echo ran
 
@@ -188,6 +208,7 @@ steps:
 ```
 
 ### kaniko.yml Template
+
 ```yaml
 version: "1"
 
@@ -195,14 +216,14 @@ metadata:
   template: true
 
 environment:
-  REPO: {{ .repo }}
+  REPO: { { .repo } }
 
 secrets:
   - name: docker_username
     key: octocat/docker_username
     engine: native
     type: org
-  
+
   - name: docker_password
     key: octocat/docker_password
     engine: native
@@ -211,7 +232,7 @@ secrets:
 steps:
   - name: Build and Publish
     image: target/vela-kaniko:latest
-    secrets: [ docker_username, docker_password ]
+    secrets: [docker_username, docker_password]
     parameters:
       registry: docker.example.com
       repo: ${REPO}
@@ -238,6 +259,7 @@ $ vela exec pipeline --template-file tmpl:path/to/template.yml --env-vars DOCKER
 ### Environment File
 
 `.env`
+
 ```
 DOCKER_USERNAME=octocat
 DOCKER_PASSWORD=abc123
@@ -249,6 +271,7 @@ $ vela exec pipeline --ct <GITHUB_PAT> --cgu https://git.example.com --env-file
 ```
 
 `vela_exec.env`
+
 ```
 DOCKER_USERNAME=octocat
 DOCKER_PASSWORD=abc123
@@ -268,4 +291,3 @@ $ vela exec pipeline --ct <GITHUB_PAT> --cgu https://git.example.com --env-file 
 ```
 
 Other rules: `--branch`, `--event`, `--comment`, `--tag`, `--target`
-
